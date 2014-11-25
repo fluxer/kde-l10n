@@ -1,0 +1,5 @@
+add_subdirectory( dolphin )
+add_subdirectory( kdepasswd )
+add_subdirectory( kfind )
+add_subdirectory( konqueror )
+add_subdirectory( konsole )

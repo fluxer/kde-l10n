@@ -1,0 +1,165 @@
+<appendix id="appendix-accounting-template">
+<title
+>Primer šablona za obračun troškova poziva</title>
+
+<para
+>Ako ne možete da nađete pravilo za svoju regiju, moraćete da ga napišete sledeći naredni šablon. Ne plašite se, zaista je lako.</para>
+
+<para
+>Ne zaboravite da novostvoreni fajl s pravilima predate održavaocu <application
+>KPPP‑a</application
+>. Pravilnost sintakse fajla s pravilima može se proveriti pokretanjem <application
+>KPPP‑a</application
+> uz opciju komandne linije <userinput
+><option
+>-r</option
+> <replaceable
+>fajl‑s‑pravilima</replaceable
+></userinput
+>. Fajl mora biti instaliran u <filename class="directory"
+>${KDEDIR}/share/apps/kppp/Rules</filename
+> ili <filename class="directory"
+>${HOME}/.kde/share/apps/kppp/Rules</filename
+> da bi se pravila mogla izabrati u ovom dijalogu.</para>
+
+<programlisting
+>################################################################
+#
+# Odricanje i licenca
+# © Mario Vajlguni &lt;mweilguni@kde.org&gt;
+# Licencirano pod istim uslovima kao KPPP, čiji je deo.
+#
+################################################################
+#
+# Ovo je uzorak skupa pravila za KPPP. Možete ga koristiti
+# kao šablon kad želite da napravite sopstveni skup pravila.
+# Ako tako postupite, uklonite sve komentare i dodajte svoje,
+# kako bi drugi mogli lakše da provere definisana pravila.
+# 
+# Potpišite tarifni fajl svojim imenom i adresom e‑pošte,
+# da bi održavalac mogao da vas kontaktira po potrebi.
+# Komentare obavezno pišite na engleskom.
+#
+# NAPOMENA:
+#     Pravila u ovom skupu nemaju mnogo smisla,
+#     data su samo radi demonstracije.
+#
+# NAPOMENA O IMENIMA FAJLOVA:
+#     Kad sastavite svoj skup pravila, u imenu fajla koristite „_“
+#     umesto razmaka, a nastavak treba da bude „.rst“. Na primer,
+#     za pravila „Neverland city calls“, fajl treba sačuvati kao
+#     „Neverland_city_calls.rst“.
+#
+# Zahvalan, Bernd Johanes Viben
+# wuebben@math.cornell.edu / wuebben@kde.org
+################################################################
+
+
+################################################################
+#
+# IME SKUPA PRAVILA. Ovo je NEOPHODNO radi obračunavanja.
+#
+################################################################
+name=default
+
+################################################################
+# Postavke valute
+################################################################
+
+# Simbol valute, ovde RSD (srpski dinar).
+# (Nije neophodno, podrazumeva se „$“.)
+currency_symbol=RSD
+
+# Položaj simbola valute.
+# (Nije neophodno, podrazumeva se „right“.)
+currency_position=right
+
+# Broj značajnih cifara.
+# (Nije neophodno, podrazuveva se „2“.)
+currency_digits=2
+
+
+
+################################################################
+# Postavke veze
+################################################################
+
+# NAPOMENA:
+#     Pravila se primenjuju odozgo nadole.
+#     Za obračun troškova uzima se POSLEDNJE poklopljeno pravilo.
+
+# Ovoliko se naplaćuje za svako uspostavljanje veze.
+# Ako ne plaćate uspostavu, zadajte „0“ ili zakomentarišite.
+per_connection=0.0
+
+
+# Najmanji trošak po vezi. Ako trošak datog telefonskog poziva
+# bude manji od ove vrednosti, ona se uzima umesto njega.
+minimum_costs=0.0
+
+
+# Plaćate 0.74 za prvih 180 sekundi (3 minuta) bez obzira
+# da li ste na vezi 1 sekundu ili 180 sekundi.
+# Ovo pravilo imaće prioritet nad svim drugim za prvih 180 sekundi,
+# a posebno nad pravilom „default“.
+# Pogledajte „costgraphs.gif“ u fascikli dokumentacije <application
+>KPPP‑a</application>
+# za grafičku ilustraciju.
+flat_init_costs=(0.74,180)
+
+# Podrazumevano pravilo, koristi se kad nijedno drugo ne odgovara.
+# Prva komponenta, „0.1“, cena je jednog „impulsa“, a druga, „72“,
+# trajanje impulsa u sekundama.
+# Stoga ovo pravilo znači:
+# „Svake 72 sekunde na račun dodaj 0,1 dinara.“
+default=(0.1, 72)
+
+#
+# Složenija pravila:
+#
+
+# Od ponedeljka do nedelje, od 00:00 do 23:59, troši 0.2 svake 72 sekunde.
+on () between () use (0.2, 2)
+
+# Isto kao prethodno.
+on (monday..sunday) between () use (0.2, 2)
+
+# Isto kao prethodno. Obavezno se koristi 24‑časovna notacija.
+on (monday..sunday) between (0:00..23:59) use (0.2, 2)
+
+# Primenjuje se petkom, subotom, nedeljom i ponedeljkom, između 8 i 13.
+on (friday..monday) between (8:00..13:00) use(0.3, 72)
+
+# PAŽNJA:
+on (monday..friday) between (21:00..5:00) use (0.4, 2)
+# NE uključuje subotu od 0:00 do 5:00, već samo kraj petka.
+
+# Primenjuje se na tačno zadati datum (Božić).
+on (07/01) between () use (0.3, 72)
+
+# Opseg datuma i jedan dan u sedmici.
+on (12/25..12/27, 12/31, 07/04, monday) between () use (0.4, 72)
+
+# Na Uskrs.
+on (easter) between () use (0.3, 72).
+
+# 50 dana po Uskrsu.
+on (easter+50) between () use (0.3, 72)
+
+on (thursday) between (20:00..21:52) use (8.2, 1)
+
+
+# Sva pravila „on()“ iznad odnose se samo na tekuće vreme. Možete
+# napraviti i pravilo koje zavisi od broja sekundi tokom kojih ste
+# bili povezani, zadavši ovo vreme kao treći argument u „use()“.
+# Na primer, neka je normalna tarifa 0,20 po minutu, i pada
+# za 20% posle jednog sata na vezi. Pravilo tada može biti:
+
+on () between (19:30..08:00) use (0.20, 60)
+on () between (19:30..08:00) use (0.16, 60, 3600)
+
+# Imajte na umu da je za ova pravila, kao i za sva druga, bitan
+# redosled kojim se javljaju.
+</programlisting>
+
+</appendix>

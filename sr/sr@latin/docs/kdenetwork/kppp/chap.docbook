@@ -1,0 +1,289 @@
+<chapter id="chap-and-pap">
+<title
+>PAP i CHAP</title>
+
+<para
+>Počev od izdanja 0.9.1, <application
+>KPPP</application
+> neposredno podržava najčešći oblik autentifikacije preko PAP‑a. </para>
+
+<sect1 id="pap-with-kppp">
+<title
+>PAP sa <application
+>KPPP‑om</application
+></title>
+
+<para
+>Postoje dva načina korišćenja PAP‑a.</para>
+
+<sect2 id="client-side-authentication">
+<title
+>Autentifikacija na strani klijenta</title>
+
+<para
+>Ovu varijantu koriste mnogi komercijalni provajderi. U osnovi, ovde se vi (ili bolje rečeno vaš računar) morate autentifikovati provajderovom PPP serveru, dok PPP server ne mora da se autentifikuje vašem računaru. Ovo nije bezbednosni problem, pošto se podrazumeva da znate na koji se računar povezujete.</para>
+
+<para
+>Ako vam je provajder dao korisničko ime i lozinku i rekao vam da koristite autentifikaciju PAP‑om, ovo je varijanta koju treba da izaberete.</para>
+
+</sect2>
+
+<sect2 id="two-way-authentication">
+<title
+>Obostrana autentifikacija</title>
+
+<para
+>Slično kao i prethodno, samo što u ovom slučaju vaš računar traži od provajderovog PPP servera da se autentifikuje. Da biste uspostavili vezu, morate izabrati metod autentifikacije <guilabel
+>skriptom</guilabel
+> (umesto <guilabel
+>PAP</guilabel
+>) i ručno urediti <filename
+>/etc/ppp/pap-secrets</filename
+>. Iako <application
+>KPPP</application
+> ne poseduje ugrađenu podršku za ovu varijantu, vezu je ipak lako uspostaviti.</para>
+
+</sect2>
+
+<sect2 id="preparing-kppp-for-pap">
+<title
+>Pripremanje <application
+>KPPP‑a</application
+> za PAP</title>
+
+<procedure>
+<step>
+<para
+>Pobrinite se da fajl <filename
+>/etc/ppp/options</filename
+> (i <filename
+>~/.ppprc</filename
+> ako postoji) <emphasis
+>ne</emphasis
+> sadrži nijedan od sledećih argumenata:</para>
+
+<itemizedlist>
+<listitem>
+<para
+><option
+>+pap</option
+></para>
+</listitem>
+<listitem>
+<para
+><option
+>-pap</option
+></para>
+</listitem>
+<listitem>
+<para
+><option
+>papcrypt</option
+></para>
+</listitem>
+<listitem>
+<para
+><option
+>+chap</option
+></para>
+</listitem>
+<listitem>
+<para
+><option
+>+chap</option
+></para>
+</listitem>
+<listitem>
+<para
+><option
+>+ua</option
+></para>
+</listitem>
+<listitem>
+<para
+><option
+>remotename</option
+></para>
+</listitem>
+</itemizedlist>
+
+<para
+>Malo je verovatno da su neke od ovih opcija upisane tamo, ali proverite da biste bili sigurni.</para>
+</step>
+<step>
+<para
+>Pokrenite <application
+>KPPP</application
+>.</para>
+</step>
+<step>
+<para
+>Kliknite na <guibutton
+>Podesi...</guibutton
+>.</para>
+</step>
+<step>
+<para
+>Izaberite nalog za koji želite da koristite PAP i kliknite na <guibutton
+>Uredi...</guibutton
+>.</para>
+</step>
+<step>
+<para
+>Idite pod jezičak <guilabel
+>Pozovi</guilabel
+>.</para>
+</step>
+<step>
+<para
+>Izaberite PAP iz padajućeg spiska <guilabel
+>Autentifikacija:</guilabel
+>.</para>
+</step>
+<step>
+<para
+>Ako ne želite da unosite lozinku pri svakom povezivanju, popunite <guilabel
+>Skladišti lozinku</guilabel
+>. To će sačuvati lozinku u fajl, što znači da treba da budete sigurni da niko drugi nema pristup vašem nalogu.</para>
+</step>
+<step>
+<para
+>To je sve. Zatvorite dijaloge, unesite korisničko ime i lozinku koje vam je dao provajder, pa kliknite na <guibutton
+>Poveži se</guibutton
+>.</para>
+</step>
+</procedure>
+
+
+</sect2>
+
+</sect1>
+
+<sect1 id="pap-and-chap-alternate-method">
+<title
+>Alternativni metod korišćenja PAP‑a i CHAP‑a sa <application
+>KPPP‑om</application
+></title>
+
+<para
+>Ova sekcija (zasnovana je na poruci <personname
+><firstname
+>Kita</firstname
+> <surname
+>Brauna</surname
+></personname
+> <email
+>kbrown@pdq.net</email
+>) objašnjava kako da podesite <application
+>KPPP</application
+> da radi sa generičkim PAP ili CHAP nalogom. Ako vam je provajder dao samo korisničko ime i lozinku za nalog, verovatno možete da preskočite ovu sekciju, jer je sve što vam treba opisano u prethodnoj.</para>
+
+<para
+>Na prvi pogled PAP deluje znatno složenije nego što zaista jeste. Server (računar na koji se povezujete) u osnovi govori klijentu (vašem računaru) da se autentifikuje koristeći PAP. Klijent (<command
+>pppd</command
+>) u određenom fajlu traži stavku koja poklapa ime servera i ime klijenta za ovu vezu, a zatim šalje lozinku koju tamo nađe. To je otprilike sve.</para>
+
+<para
+>Evo onda kako to da izvedemo. Pretpostavi da je izdanje <command
+>pppd</command
+> 2.2.h ili novije, i standardnu instalaciju postavnih fajlova pod <filename class="directory"
+>/etc/ppp</filename
+>.</para>
+
+<para
+>Radi ilustracije, zamislite da imate internet nalog na <systemitem
+>nedodjija.net</systemitem
+>, sa korisničkim imenom <systemitem
+>peraperic</systemitem
+> i lozinkom <literal
+>blabla</literal
+>.</para>
+
+<para
+>Prvo treba da upišete ovo u fajl po imenu <filename
+>/etc/ppp/pap-secrets</filename
+>. Za naše potrebe, format unos je:</para>
+
+<screen
+><userinput
+>KORISNIK    IMESERVERA     LOZINKA</userinput
+></screen>
+
+<para
+>Odnosno, dodajte sledeći red u <filename
+>/etc/ppp/pap-secrets</filename
+>, pa ga sačuvajte:</para>
+
+<screen
+><userinput
+>peraperic    nedodjija    blabla</userinput
+></screen>
+
+<note>
+<para
+>Server možete imenovati kako god želite pod uslovom da zadate isto ime u argumentima uz <command
+>pppd</command
+>, kao što ćemo ubrzo videti. Gore je ono skraćeno na <userinput
+>nedodjija</userinput
+>, jer se koristi samo radi nalaženja prave lozinke.</para>
+</note>
+
+<para
+>Sledeće treba da postavite vezu u <application
+>KPPP‑u</application
+>. Osnovno postavljanje je isto kao sa svakom drugom vezom, pa ovde nećemo ulaziti u detalje. Jedino treba reći da se pobrinite da je fajl <filename
+>/etc/ppp/options</filename
+> prazan, i da vam ne treba prijavna skripta.</para>
+
+<para
+>U dijalogu za podešavanje <application
+>KPPP‑a</application
+>, pri dnu jezička <guilabel
+>Pozovi</guilabel
+> stoji dugme <guibutton
+>Prilagodi argumente za pppd...</guibutton
+>. Ono poziva dijalog za uređivanje, u kojem unosite vrednosti koje se šalju <command
+>pppd</command
+> kao argumenti komandne linije. U slučaju viševrednosnih argumenata, treba da unesete svaku vrednost zasebno na spisak, pravilnim redosledom.</para>
+
+<para
+>Prvo navedite bilo koje druge željene argumente. Zatim dodajte argumente koje <command
+>pppd</command
+> koristi za rukovanje PAP autentifikacijom. U ovom primeru, dodaćemo <userinput
+>user</userinput
+>, <userinput
+>peraperic</userinput
+>, <userinput
+>remotename</userinput
+> i <userinput
+>nedodjija</userinput
+>, tim redom.</para>
+
+<para
+>Opcija <option
+>user</option
+> određuje koje ime <command
+>pppd</command
+> prvo traži u fajlu <filename
+>pap-secrets</filename
+>, a zatim šalje serveru. <command
+>pppd</command
+> koristi <literal
+>remotename</literal
+> da poklopi unos u <filename
+>pap-secrets</filename
+>, što znači da ono može biti kakvo god sve dok je usaglašeno sa unosom u <filename
+>pap-secrets</filename
+>.</para>
+
+<para
+>To je ceo postupak, i sada bi trebalo da možete da postavite svoju vezu ka serveru sa PAP autentifikacijom. CHAP se ne razlikuje mnogo. Možete pogledati <foreignphrase lang="en"
+>Linux Network Administrators Guide</foreignphrase
+> za format fajla <filename
+>chap-secrets</filename
+> i argumente za <command
+>pppd</command
+>, a ostalo bi trebalo da bude jednostavno.</para>
+
+</sect1>
+</chapter>

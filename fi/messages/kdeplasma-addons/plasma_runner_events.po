@@ -1,0 +1,255 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lliehu@kolumbus.fi>, 2011, 2013.
+#
+# KDE Finnish translation sprint participants:
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_events\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-08-21 01:41+0000\n"
+"PO-Revision-Date: 2013-08-30 21:32+0300\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:25:26+0000\n"
+"X-Generator: Lokalize 1.5\n"
+
+# Ongelma: käyttäjä voi kirjoittaa esim. ”in 5 minutes after 13:30” Miten suomeksi? Tämänhetkinen suomennos ei ota sitä huomioon ja sallii muodot ”5 minuutin kuluttua 13:30”, ”5 minuutin päästä 13:30” ja ”5 minuutissa 13:30”. Koskee myös seuraavia.
+#: datetime_parser.cpp:27
+#, kde-format
+msgctxt "In number of minutes phrase (may contain regexp symbols)"
+msgid "in %1 minutes (after)?"
+msgstr "(%1 minuutin (kuluttua|päästä)|%1 minuutissa)"
+
+#: datetime_parser.cpp:28
+#, kde-format
+msgctxt "In number of hours phrase (may contain regexp symbols)"
+msgid "in %1 hours (after)?"
+msgstr "(%1 tunnin (kuluttua|päästä)|%1 tunnissa)"
+
+# Ongelma: käyttäjä voi yhdistää tämän ja ”tomorrow”-jonon kirjoittamalla esim. ”in 5 days after tomorrow” Miten suomeksi? Nykyinen suomennos ei ota sitä huomioon ja sallii harhaanjohtavat muodot ”5 päivän kuluttua huomenna”, ”5 päivän päästä huomenna” ja ”5 päivässä huomenna”. Huom: tomorrow’n tilalla voi olla myös now, yesterday ja päivämäärä ja kaikki ne on perusmuodossa (niitä ei saa taivutettua mitenkään). Koskee myös seuraavia.
+#: datetime_parser.cpp:29
+#, kde-format
+msgctxt "In number of days phrase (may contain regexp symbols)"
+msgid "in %1 days (after)?"
+msgstr "(%1 päivän (kuluttua|päästä)|%1 päivässä)"
+
+#: datetime_parser.cpp:30
+#, kde-format
+msgctxt "In number of weeks phrase (may contain regexp symbols)"
+msgid "in %1 weeks (after)?"
+msgstr "(%1 viikon (kuluttua|päästä)|%1 viikossa)"
+
+#: datetime_parser.cpp:31
+#, kde-format
+msgctxt "In number of months phrase (may contain regexp symbols)"
+msgid "in %1 months (after)?"
+msgstr "(%1 kuukauden (kuluttua|päästä)|%1 kuukaudessa)"
+
+#: datetime_parser.cpp:32
+#, kde-format
+msgctxt "In number of years phrase (may contain regexp symbols)"
+msgid "in %1 years (after)?"
+msgstr "(%1 vuoden (kuluttua|päästä)|%1 vuodessa)"
+
+#: datetime_parser.cpp:35
+msgctxt "Current time keyword"
+msgid "now"
+msgstr "nyt"
+
+#: datetime_parser.cpp:36
+msgctxt "Current day keyword"
+msgid "today"
+msgstr "tänään"
+
+#: datetime_parser.cpp:37
+msgctxt "Next day keyword"
+msgid "tomorrow"
+msgstr "huomenna"
+
+#: datetime_parser.cpp:38
+msgctxt "Previous day keyword"
+msgid "yesterday"
+msgstr "eilen"
+
+#: datetime_parser.cpp:40
+msgctxt "Keyword for start datetime"
+msgid "from"
+msgstr "alkaen"
+
+#: datetime_parser.cpp:41
+msgctxt "Keyword for finish datetime"
+msgid "to"
+msgstr "päättyen"
+
+#: events.cpp:47
+msgctxt "Event creation keyword"
+msgid "event"
+msgstr "tapahtuma"
+
+#: events.cpp:48
+msgctxt "Todo creation keyword"
+msgid "todo"
+msgstr "tehtävä"
+
+#: events.cpp:49
+msgctxt "Todo completion keyword"
+msgid "complete"
+msgstr "merkitse valmiiksi"
+
+#: events.cpp:50
+msgctxt "Event comment keyword"
+msgid "comment"
+msgstr "kommentoi"
+
+#: events.cpp:51
+msgctxt "Event list keyword"
+msgid "events"
+msgstr "tapahtumat"
+
+#: events.cpp:52
+msgctxt "Todo list keyword"
+msgid "todos"
+msgstr "tehtävät"
+
+#: events.cpp:207
+msgid ""
+"Creates event in calendar by its description in :q:, which consists of parts "
+"divided by semicolons. The first two parts (both obligatory) are the event "
+"summary and its start date. The third, optional, is list of event "
+"categories, divided by commas."
+msgstr ""
+"Luo :q::lla kuvatun tapahtuman kalenteriin. Se koostuu puolipisteillä "
+"erotelluista osista, joista ensimmäinen on tapahtuman kuvaus ja toinen sen "
+"alkamispäivä. Kolmas on vapaaehtoinen pilkuilla eroteltu luettelo "
+"tapahtumaluokista."
+
+#: events.cpp:208
+msgid "event description"
+msgstr "tapahtuman kuvaus"
+
+#: events.cpp:211
+msgid ""
+"Creates todo in calendar by its description in :q:, which consists of parts "
+"divided by semicolons. The first two parts (both obligatory) are a summary "
+"of the todo, and its due date. The third, optional, is list of todo "
+"categories, divided by commas."
+msgstr ""
+"Luo :q::lla kuvatun tehtävän kalenteriin. Se koostuu puolipisteillä "
+"erotelluista osista, joista ensimmäinen on tehtävän kuvaus ja toinen sen "
+"määräpäivä. Kolmas on vapaaehtoinen pilkuilla eroteltu luettelo "
+"tehtäväluokista."
+
+#: events.cpp:212
+msgid "todo description"
+msgstr "tehtävän kuvaus"
+
+#: events.cpp:215
+msgid ""
+"Selects todo from calendar by its summary in :q: and marks it as completed."
+msgstr "Merkitsee tehdyksi tehtävän, jonka yhteenveto vastaa :q::ta."
+
+#: events.cpp:216
+msgctxt "The command syntax description for complete"
+msgid "complete todo description"
+msgstr "valmiiksi merkittävän tehtävän kuvaus"
+
+#: events.cpp:219
+msgid ""
+"Selects event from calendar by its summary in :q: and append <comment> to "
+"its body."
+msgstr "Lisää <kommentin> tapahtumaan, jonka yhteenveto vastaa :q::ta."
+
+#: events.cpp:220
+msgctxt "The command syntax description for comment"
+msgid "comment todo description"
+msgstr "kommentoitavan tehtävän kuvaus"
+
+#: events.cpp:223
+msgid "Shows events from calendar by its date in :q:."
+msgstr "Näyttää tapahtumia kalenterista ajan :q: perusteella."
+
+#: events.cpp:224
+msgctxt "The command syntax description for event"
+msgid "event date/time"
+msgstr "tapahtuman päivä tai aika"
+
+#: events.cpp:227
+msgid "Shows todos from calendar by its date in :q:."
+msgstr "Näyttää tehtäviä kalenterista ajan :q: perusteella."
+
+#: events.cpp:228
+msgctxt "The command syntax description for todo"
+msgid "todo date/time"
+msgstr "tehtävän päivä tai aika"
+
+#: events.cpp:269
+#, kde-format
+msgctxt "%1 is the summary of event, %2 is the start time of event"
+msgid "Create event \"%1\" at %2"
+msgstr "Luo tapahtuma ”%1” aikaan %2"
+
+#: events.cpp:271
+#, kde-format
+msgctxt ""
+"%1 is the summary of event, %2 is the start time of event, %3 is the end "
+"time of event"
+msgid "Create event \"%1\" from %2 to %3"
+msgstr "Luo tapahtuma ”%1”, joka alkaa %2 ja päättyy %3"
+
+#: events.cpp:276
+#, kde-format
+msgctxt "%1 is the summary of todo, %2 is the due time of todo"
+msgid "Create todo \"%1\" due to %2"
+msgstr "Luo tehtävä ”%1”, jonka määräaika on %2"
+
+#: events.cpp:278
+#, kde-format
+msgctxt ""
+"%1 is the summary of todo, %2 is the start time of todo, %3 is the due time "
+"of todo"
+msgid "Create todo \"%1\" due to %3 starting at %2"
+msgstr "Luo tehtävä ”%1”, jonka määräaika on %3 ja alkaa %2"
+
+#: events.cpp:290
+#, kde-format
+msgid "Categories: %1"
+msgstr "Luokat: %1"
+
+#: events.cpp:313
+#, kde-format
+msgctxt "The todo is complete"
+msgid "Complete todo \"%1\""
+msgstr "Merkitse tehtävä ”%1” valmiiksi"
+
+#: events.cpp:314 events.cpp:327 events.cpp:329 events.cpp:361 events.cpp:373
+#: events.cpp:375
+#, kde-format
+msgid "Date: %1"
+msgstr "Päivämäärä: %1"
+
+#: events.cpp:324
+#, kde-format
+msgid "Comment incidence \"%1\""
+msgstr "Kommentoi merkintää ”%1”"
+
+#. i18n: ectx: property (title), widget (QGroupBox, akonadiGroup)
+#: events_config.ui:17
+msgid "Akonadi collections"
+msgstr "Akonadi-kokoelmat"
+
+#. i18n: ectx: property (text), widget (QLabel, eventCollectionLabel)
+#: events_config.ui:33
+msgid "Insert events into:"
+msgstr "Lisää tapahtumat kokoelmaan:"
+
+#. i18n: ectx: property (text), widget (QLabel, todoCollectionLabel)
+#: events_config.ui:43
+msgid "Insert tasks into:"
+msgstr "Lisää tehtävät kokoelmaan:"

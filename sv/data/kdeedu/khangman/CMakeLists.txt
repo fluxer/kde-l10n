@@ -1,0 +1,3 @@
+FILE(GLOB datafiles *.kvtml)
+install( FILES ${datafiles} DESTINATION  ${DATA_INSTALL_DIR}/kvtml/sv )
+install( FILES  sv.txt  DESTINATION ${DATA_INSTALL_DIR}/khangman )

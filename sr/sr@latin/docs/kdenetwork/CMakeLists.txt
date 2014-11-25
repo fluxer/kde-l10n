@@ -1,0 +1,5 @@
+add_subdirectory( kget )
+add_subdirectory( kopete )
+add_subdirectory( kppp )
+add_subdirectory( krdc )
+add_subdirectory( krfb )

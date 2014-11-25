@@ -1,0 +1,834 @@
+<chapter id="faq">
+<title
+>Pitanja i odgovori</title>
+&reporting.bugs; <qandaset id="faqlist">
+
+<qandadiv id="faq-dialing">
+<title
+>Pitanja o pozivanju</title>
+<qandaentry>
+<question
+><para
+>Ne mogu da nateram <application
+>KPPP</application
+> da radi. Stalno mi govori da se <command
+>pppd</command
+> srušio ili da je isteklo prekovreme. Šta se događa?</para
+></question>
+
+<answer
+><para
+>Da li ste pažljivo pročitali ovo uputstvo? Evo još jednom najčešćih problema:</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>Kliknite na dugme <guibutton
+>Detalji</guibutton
+> da bi vam <application
+>KPPP</application
+> ispostavio izvod iz dnevničkih poruka PPP‑a (možda neće raditi na sistemima koji nisu Linux, pa čak ni na nekim distribucijama Linuxa). Dnevnik će pomoći da otkrijete grešku.</para
+></listitem>
+
+<listitem
+><para
+>Uverite se da je <command
+>pppd</command
+> zaista izvršni fajl, a ne skripta.</para
+></listitem>
+
+<listitem
+><para
+>Uverite se da <command
+>pppd</command
+> radi sa korenim sUID‑om. Ovaj režim možete postaviti izvršavanjem <userinput
+><command
+>chmod</command
+> u+s /putanja/do/pppd</userinput
+> pod korenim nalogom. </para
+></listitem>
+
+<listitem
+><para
+>Uverite se da postoji fajl <filename
+>/etc/ppp/options</filename
+> i da ne sadrži sukobljene stavke. Ako niste sigurni, ostavite ovaj fajl praznim. </para
+></listitem>
+
+<listitem
+><para
+>Uverite se da <emphasis
+>nije</emphasis
+> zadata opcija <option
+>lock</option
+> kao argument za <command
+>pppd</command
+> (<application
+>KPPP</application
+> se sam stara o zaključavanju uređaja).</para
+></listitem>
+
+<listitem
+><para
+>Uklonite opciju <option
+>lock</option
+> iz <emphasis
+>oba</emphasis
+> moguća fajla, i <filename
+>/etc/ppp/options</filename
+> i <filename
+>~/.ppprc</filename
+>.</para
+></listitem>
+<listitem
+><para
+>Korišćenje simboličke veze <filename class="symlink"
+>/dev/modem</filename
+> može dovesti do nekih sukoba. Eliminišite ovaj izvor nevolja zadavanjem stvarnog uređaja, tj. <filename
+>/dev/cuaX</filename
+> ili <filename
+>/dev/ttySX</filename
+>. </para>
+<note
+><para
+>COM 1 jednako je <filename
+>ttyS0</filename
+>, COM 2 je <filename
+>ttyS1</filename
+>, itd. </para
+></note
+></listitem>
+
+<listitem
+><para
+>Uverite se da ste postavili odgovarajuće dozvole. U slučaju problema možete pokušati sa izvršavanjem <application
+>KPPP‑a</application
+> pod korenom, pa kad sve lepo proradi da postavite manje opasne dozvole, ako već ne možete da priuštite izvršavanje pod korenim sUID‑om. Verovatno bi najbolje bilo da napravite grupu <systemitem
+>modem</systemitem
+>.</para
+></listitem>
+
+<listitem
+><para
+>Možda se <command
+>pppd</command
+> prerano pokreće, pre nego što je udaljeni server spreman da pregovara o PPP vezi. Ako koristite prijavnu skriptu, upotrebite ugrađeni terminal da overite postupak prijave. Neki provajderi će tražiti da izdate jednostavno <command
+>Send</command
+> ili <command
+>Send ppp</command
+> za uspostavljanje PPP‑a. Neki korisnici prijavili su da su morali da dodaju <command
+>Pause 1</command
+> ili <command
+>Pause 2</command
+> da bi rešili vremenske sukobe.</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Ako ništa ne pomogne, možda možete pronaći nešto ispravljačkih podataka u sistemskom dnevniku, izvršivši:</para>
+
+<screen
+><prompt
+>#</prompt
+> <userinput
+><command
+>tail</command
+> <filename
+>/var/log/messages</filename
+></userinput
+></screen>
+
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+><command
+>pppd</command
+> se ruši — od udaljenog sistema se traži da se autentifikuje...</para
+></question>
+
+<answer>
+<para
+>Tipična poruka o grešci u sistemskom dnevniku:</para>
+<screen
+>pppd[699]: The remote system is required to authenticate itself
+pppd[699]: but I couldn't find any suitable secret (password) for it to use to do so.
+pppd[699]: (None of the available passwords would let it use an IP address.)
+</screen>
+<para
+>Koliko sam ja uočio, postoje dva uzroka za ovaj problem: </para>
+<itemizedlist>
+<listitem
+><para
+><filename
+>/etc/ppp/options</filename
+> sadrži opciju <option
+>auth</option
+>. Jednostavno je zakomentarišite (stavite <literal
+>#</literal
+> ispred) i pokušajte ponovo. </para
+></listitem
+> <listitem
+><para
+>Vaš sistem već ima podrazumevanu rutu. Da li ste uspostavili lokalnu mrežu? U tom slučaju, novije verzije <command
+>pppd</command
+> ponašaće se kao da je zadata opcija <option
+>auth</option
+>. Ovo možete potisnuti tako što dodate opciju <option
+>noauth</option
+> u argumente za <command
+>pppd</command
+> u dijalogu za podešavanje <application
+>KPPP‑a</application
+>. Alternativno, možete se otkačiti sa lokalne mreže pre pozivanja. Bio bih zahvalan ako bi neko mogao da priloži instrukcije za skladno kombinovanje dve mrežne veze. </para
+></listitem>
+</itemizedlist>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+><command
+>pppd</command
+> se ruši pod Linuxom 2.4.x</para
+></question>
+<answer>
+<para
+>Tipična poruka o grešci u sistemskom dnevniku:</para>
+
+<screen
+>pppd[1182]: pppd 2.3.11 started by user, uid 500 
+pppd[1182]: ioctl(PPPIOCGFLAGS): Invalid argument 
+pppd[1182]: tcsetattr: Invalid argument 
+pppd[1182]: Exit. 
+</screen>
+<para
+>Instalirajte <command
+>pppd</command
+> 2.4.0b1 ili noviji. Za više informacija pogledajte <filename
+>Documentation/Changes</filename
+> u izvoru jezgra.</para
+> 
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Zašto mi <application
+>KPPP</application
+> kaže <errorname
+>Ne mogu da otvorim modem.</errorname
+>?</para
+></question>
+
+<answer
+><para
+>Ovo znači da <application
+>KPPP</application
+> nema dozvole da otvori modemski uređaj, ili da ste izabrali loš modemski uređaj u dijalogu pod jezičkom <guilabel
+>Modem</guilabel
+>. Prvo proverite da li ste izabrali pravi modemski uređaj. Pošto se uverite u to, morate <application
+>KPPP‑u</application
+> dati potrebne dozvole za pristup modemskom uređaju, kao i da može da menja <filename
+>/etc/resolv.conf</filename
+> ako da želite da pravilno podešava DNS za vas. Ako možete da priuštite izvršavanje pod korenim sUID‑om, to će rešiti sve probleme pristupa, a ako ne možete, moraćete da pronađete odgovarajuće dozvole za svoje potrebe. <application
+>KPPP‑u</application
+> dajete koreni sUID izvršavanjem sledećeg:</para>
+
+<screen
+><prompt
+>%</prompt
+> <userinput
+><command
+>su</command
+> <option
+>root</option
+></userinput>
+<prompt
+>#</prompt
+> <userinput
+><command
+>chown</command
+> <option
+>root:root $KDEDIR/bin/kppp</option
+></userinput>
+<prompt
+>#</prompt
+> <userinput
+><command
+>chmod</command
+> <option
+>+s $KDEDIR/bin/kppp</option
+></userinput>
+<prompt
+>#</prompt
+> <userinput
+><command
+>exit</command
+></userinput
+>
+</screen>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Zašto mi <application
+>KPPP</application
+> kaže da ne može da stvori zabravni fajl modema?</para
+></question>
+
+<answer
+><para
+>Ovo u većini slučajeva znači da ste instalirali <application
+>KPPP</application
+> bez postavljenog sUID bita, a vaš korisnički nalog nema dozvolu za pisanje u fasciklu zabravnog fajla. Podrazumevano to je često <filename class="directory"
+>/var/lock</filename
+> (na primer, na RedHatovim sistemima). Proverite tačnu lokaciju u dijalogu modema. Rešenje je jednostavno — ili postavite da se <application
+>KPPP</application
+> pokreće sa korenim sUID‑om, ili dajte običnim korisnicima pristup za pisanje u <filename class="directory"
+>/var/lock</filename
+>, ili napravite grupu <systemitem
+>modem</systemitem
+> koja će imati pristup u <filename class="directory"
+>/var/lock</filename
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Zašto je <application
+>KPPP</application
+> instaliran bez sUID bita?</para
+></question>
+
+<answer
+><para
+>SUID bit nije potreban ako se malo razumete u administraciju Unix sistema. Jednostavno napravite grupu <systemitem
+>modem</systemitem
+>, dodajte sve korisnike koji treba da pristupaju modemu u tu grupu, i postavite da ta grupa može da čita i piše u modemski uređaj. Takođe, ako želite da postava DNS‑a radi sa <application
+>KPPP‑om</application
+>, <filename
+>/etc/resolv.conf</filename
+> mora biti čitljiv i upisiv za članove grupe <systemitem
+>modem</systemitem
+>. Isto važi za <filename
+>/etc/ppp/pap-secrets</filename
+> i <filename
+>/etc/ppp/chap-secrets</filename
+> ako želite da koristite ugrađenu podršku za PAP i CHAP.</para>
+
+<para
+>Tim <application
+>KPPP‑a</application
+> je u poslednje vreme poradio na tome da učini <application
+>KPPP</application
+> bezbednim za sUID. Ipak, na vama je da odlučite na koji način ćete instalirati <application
+>KPPP</application
+>.</para>
+
+<para
+>Mogli biste da pročitate i sekciju <link linkend="security"
+>o bezbednosti</link
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Šta da radim kad <application
+>KPPP</application
+> samo stoji i čeka, s porukom <computeroutput
+>Očekujem OK</computeroutput
+>?</para
+></question>
+
+<answer
+><para
+>Jeste li isprobali postavku CR/LF? Pokušajte sa CR, LF ili CR/LF.</para>
+
+<para
+>Alternativno, možda modemu treba neko vreme da odgovori na uspostavljanje. Otvorite dijalog naredbi modema pod jezičkom <guilabel
+>Modem</guilabel
+> i podesite pauze <guilabel
+>Pauza pred pripremanje (stotinki):</guilabel
+> i <guilabel
+>Pauza po pripremanju (stotinki):</guilabel
+>. Pogledajte ima li efekta ako znatno smanjite njihove vrednosti, pa ako ima, potom ih fino naštelujte.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Veza fino radi, ali ne mogu da pokrenem nijedan program!</para
+></question>
+
+<answer
+><para
+>Verovatno ste izabrali opciju <link linkend="auto-configure-hostname"
+>Automatski podesi ime domaćina sa ovog IP‑a</link
+> i X server ima problema da se poveže na novoimenovani domaćin. Ako vam zaista treba ova opcija (verovatno je da vam zapravo ne treba), nažalost prepušteni ste sami sebi da postavite odgovarajuća ovlašćenja. Jednog grubo rešenje je da izvršite <userinput
+><command
+>xhost</command
+> <option
+>+</option
+></userinput
+> pre uspostavljanja veze, ali vas upozoravamo na bezbednosne rizike — ovim svakome dajete pristup vašem X serveru.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+><application
+>KPPP</application
+> prijavljuje uspešno povezivanje, ali <application
+>K‑osvajač</application
+> kaže samo <errorname
+>Nepoznat domaćin</errorname
+>, dok Netscapeov Navigator prijavljuje <errorname
+>The server does not have a DNS entry</errorname
+>.</para
+></question>
+
+<answer
+><para
+>Pokušajte da pingujete neki server po njegovoj IP adresi, npr. <userinput
+><command
+>ping</command
+> <option
+>195.0.254.76</option
+></userinput
+>. Ako ovo radi, možete pokušati sledeće:</para>
+
+<itemizedlist>
+<listitem
+><para
+>Proverite da li ste dali <application
+>KPPP‑u</application
+> bar jednu DNS adresu.</para
+></listitem>
+
+<listitem
+><para
+>Proverite sadržaj <filename
+>/etc/host.conf</filename
+>. Treba da postoji red koji glasi nešto poput <literal
+>order hosts, bind</literal
+>. Ključna reč <option
+>bind</option
+> savetuje biblioteci razrešivača da uključi upit servera imena kad traži adresu. Ako nema takvog reda, pokušajte da ga dodate.</para
+></listitem>
+</itemizedlist
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kako da kažem <application
+>KPPP‑u</application
+> da pošalje <keysym
+>\n</keysym
+> ili <keysym
+>\r</keysym
+>?</para
+></question>
+
+<answer
+><para
+>Jednostavno pošaljite praznu nisku, kao u sledećoj skripti:</para>
+
+<informalexample>
+<screen
+>Send                            # pošalji praznu nisku
+Expect           ID:            
+Send             itsme
+Expect           word:
+Send             forgot
+Expect           granted
+Send             ppp
+</screen>
+</informalexample>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Kako da sprečim <application
+>KPPP</application
+> da se žali da ne može da stvori zabravni fajl?</para
+></question>
+<answer
+><para
+>Do ovoga dolazi zato što nemate dozvole za stvaranje zabravnog fajla. Ako ste izabrali korišćenje zabravnog fajla, morate imati dozvolu upisa u fasciklu <filename class="directory"
+>/var/lock</filename
+> (tipično). Ovo naravno nije problem ako ste dali <application
+>KPPP‑u</application
+> sUID dozvole. Pročitate sekciju <link linkend="lock-files"
+>o zabravnim fajlovima</link
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Zašto je modem tako bučan pri pozivanju?</para
+></question>
+
+<answer
+><para
+>Kliknite na <guibutton
+>Podesi...</guibutton
+>, zatim na <guilabel
+>Modem</guilabel
+>. Ovde možete upravljati glasnošću modema, u tri koraka: isključeno, srednje i najjače. Kod većine modema srednje i najjače su jedno te isto. Ako izmena ove postavke ne radi, proverite da li ste dobro zadali postavke pod <guibutton
+>Podesi...</guibutton
+>, <guilabel
+>Modem</guilabel
+>, <guibutton
+>Naredbe modema...</guibutton
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Postavio sam glasnost modema na isključeno i proverio naredbe modema, ali još uvek imam nesnosnu buku tokom pozivanja. Zašto?</para
+></question>
+
+<answer
+><para
+>Pripremna niska za glasnost može da se izgubi ako modem ne može da se izbori sa brzinom kojom mu <application
+>KPPP</application
+> šalje naredbe. Povećajte vrednost <guilabel
+>Pauza po pripremanju (stotinki):</guilabel
+> pod <guibutton
+>Podesi...</guibutton
+>, <guilabel
+>Modem</guilabel
+>, <guibutton
+>Naredbe modema...</guibutton
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+><application
+>KPPP</application
+> stalno prijavljuje neobične brzine modema, poput 115200 ili 57600.</para
+></question>
+
+<answer
+><para
+>Mnogi modemi podrazumevanu prijavljuju samo brzinu serijske linije, a ne brzinu preko telefonske veze. Ovakve modeme morate podesiti da prijavljuju stvarnu brzinu veze dodavanjem nekih naredbi u niske za uspostavljanje ili pozivanje. Za mnoge modeme ova naredba je <literal
+>ATW2</literal
+>. Ako želite da je dodate u nisku za pozivanje, koja obično počinje sa <literal
+>ATD</literal
+>, nova niska bi glasila <literal
+>ATW2D</literal
+>.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Zašto <application
+>KPPP</application
+> prijavljuje da je brzina nepoznata?</para
+></question>
+
+<answer
+><para
+>Novi modemi često imaju veoma složene poruke povezivanja, poput <computeroutput
+>CONNECT LAP.M/V42.bis/115000:RX/31200:TX</computeroutput
+>, što <application
+>KPPP</application
+> ne može pravilno da raščlani. Uključite <guibutton
+>Dnevnik povezivanja</guibutton
+> i videćete brzinu veze.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Dobijam sporu brzinu veze.</para
+></question>
+
+<answer
+><para
+>Ako niste zadovoljni brzinom modema, postavite brzinu veze (do koje dolazite klikom na <guibutton
+>Podesi...</guibutton
+>, <guilabel
+>Uređaj</guilabel
+>, <guibutton
+>Brzina veze:</guibutton
+>) na 57600 ili veću. Proverite da li serijski portovi podržavaju veće brzine. Mnogi stariji sistemi zasnovani na Intelu 486 ne rade ispravno ako postavite brzinu na 115200. Ako imate stari UART čip <hardware
+>8250</hardware
+>, neće raditi. <hardware
+>16550</hardware
+> i <hardware
+>16550A</hardware
+> bi trebalo da rade bez problema.</para>
+
+<para
+>Dodatno, možete u uputstvu modema potražiti uspostavne niske koje aktiviraju režim visoke brzine.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Veza mi je <emphasis
+>stvarno</emphasis
+> spora!</para
+></question>
+
+<answer
+><para
+>Ako podaci kaplju protokom od samo nekoliko bajtova u sekundi, proverite hardverski sklop. Ako pomeranje miša ubrzava prenos, zasigurno je do hardvera!</para>
+
+<para
+>Nešto podataka o serijskom portu možete dobiti izvršavanjem <userinput
+><command
+>setserial</command
+> <option
+>-a <replaceable
+>/dev/ttySx</replaceable
+></option
+></userinput
+> i proveriti sukobe u prekidima s drugim komponentama sistema.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Moja telefonska linija traži pulsno umesto tonskog biranja (ili obratno). Kako ovo da izmenim?</para
+></question>
+<answer
+><para
+>Morate izmeniti nisku za pozivanje u modemu. Skoro svi modemi podržavaju sledeće AT naredbe:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><command
+>ATDT</command
+></term>
+<listitem
+><para
+><action
+>Zadaje tonsko biranje.</action
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><command
+>ATDP</command
+></term>
+<listitem
+><para
+><action
+>Zadaje pulsno biranje.</action
+></para
+></listitem>
+</varlistentry>
+</variablelist>
+</answer>
+
+</qandaentry>
+
+</qandadiv>
+
+<qandadiv id="faq-telephone-cost-rules">
+<title
+>Pitanja o pravilima telefonskih troškova</title>
+<qandaentry>
+<question
+><para
+>Kako da napišem fajl pravila telefonskih troškova?</para
+></question>
+<answer
+><para
+>Samo sledite fajl pravila <filename
+>TEMPLATE</filename
+>, koji dolazi uz <application
+>KPPP</application
+>. Trebalo bi da možete da nađete primerak u <filename class="directory"
+>$KDEDIR/doc/HTML/<replaceable
+>vaš‑jezik</replaceable
+>/kppp/</filename
+>. Upotrebite opciju komandne linije <option
+>-r</option
+> uz <command
+>kppp</command
+> da proverite sintaksu fajla pravila koji sastavite.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Napisao sam fajl pravila telefonskih troškova za moju regiju. Gde mogu da ga predam tako da i drugi mogu da ga koriste?</para
+></question>
+<answer
+><!-- LW: Find out -->
+<!-- lukas: the answer is: send it to the kppp maintainer, Harri Porten --></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Može li fajl pravila telefonskih troškova da sadrži decimalne jedinice vremena poput „(0.17, 45.5)“?</para
+></question>
+<answer
+><para
+>Da, može. Ali ne bi trebalo da koristite premale jedinice vremena, ispod desetinke, jer će to povećati opterećenje procesora (mada se verovatno neće osetiti na novijim procesorima).</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Moja država ima neke druge pokretne praznike umesto Uskrsa.</para
+></question>
+<answer
+><para
+>U tom slučaju treba da napišete novi kod koji omogućava računanje tog praznika. Pogledajte <filename
+>ruleset.cpp</filename
+> i proučite primer <literal
+>easter</literal
+>. Zatim nam pošaljite zakrpu!</para
+></answer>
+</qandaentry>
+</qandadiv>
+
+<qandadiv id="faq-system-logs">
+<title
+>Pitanja o sistemskim dnevnicima</title>
+<qandaentry>
+<question
+><para
+>Vidim poruku <errorname
+>Serial line is looped back</errorname
+>. Šta to znači?</para
+></question>
+
+<answer
+><para
+>Kratak odgovor: niste pokrenuli PPP softver na parnjačkom sistemu.</para>
+
+<!-- this doc doesn't exist.. help -->
+<!-- http://www.dejanews.com/getdoc.xp?AN="184945314" -->
+
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>Dnevnici prikazuju <errorname
+>Signal 15</errorname
+>.</para
+></question>
+<answer
+><para
+>Ako vidite sledeće redove, verovatno ste dobili grešku prekovremena od <application
+>KPPP‑a</application
+>, koji je čekao da se pojavi PPP sučelje i odustao posle isteka vremena. <command
+>pppd</command
+> je dobio signal 15 (gašenje), tj. SIGTERM.</para>
+
+<informalexample>
+<screen
+><computeroutput>
+pppd[26921]: pppd 2.3.5 started by me, uid 500
+pppd[26921]: Using interface ppp0
+pppd[26921]: Connect: ppp0 &lt;--&gt; /dev/ttyS0
+pppd[26921]: Terminating on signal 15.
+pppd[26921]: Connection terminated.
+pppd[26921]: Exit.
+</computeroutput
+></screen>
+</informalexample>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>A greška <errorname
+>Receive serial link is not 8-bit clean</errorname
+>?</para
+></question>
+<answer
+><para
+>PPP demon se buni zato što svi podaci koje prima imaju bit 8 postavljen na nulu. U većini slučajeva ovo prosto znači da udaljeni PPP server još uvek nije u pogonu. Možda ste i dalje suočeni sa prijavnim odzivnikom koji reflektuje sve podatke koji mu <command
+>pppd</command
+> šalje.</para
+></answer>
+</qandaentry>
+
+<qandaentry>
+<question
+><para
+>A šta znači <errorname
+>can't locate module ppp-compress</errorname
+>?</para
+></question>
+<answer
+><para
+>Ako vidite sledeće poruke:</para>
+
+<informalexample>
+<screen
+><computeroutput>
+modprobe: can't locate module ppp-compress-21 
+modprobe: can't locate module ppp-compress-26 
+modprobe: can't locate module ppp-compress-24
+</computeroutput
+></screen>
+</informalexample>
+
+<para
+>samo dodajte redove:</para>
+
+<screen
+><userinput>
+alias ppp-compress-21 bsd_comp 
+alias ppp-compress-24 ppp_deflate 
+alias ppp-compress-26 ppp_deflate </userinput
+></screen>
+
+<para
+>u fajl <filename
+>/etc/conf.modules</filename
+>.</para>
+</answer>
+</qandaentry>
+
+</qandadiv>
+
+</qandaset>
+
+</chapter>

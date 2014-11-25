@@ -1,0 +1,1149 @@
+<chapter id="dialog-setup">
+<title
+>Ručno postavljanje veze putem dijaloga</title>
+
+<para
+>Ručno postaviti vezu preko dijaloga nije mnogo teže od korišćenja čarobnjaka.</para>
+
+<para
+>Postavnom dijalogu možete pristupiti isto kao i čarobnjaku. Pokrenite <application
+>KPPP</application
+> preko K‑menija, u kategoriji <guisubmenu
+>Internet</guisubmenu
+> stavka <guimenuitem
+>Alatka za modemski pristup Internetu</guimenuitem
+>.</para>
+
+<para
+>Pojaviće se sledeći dijalog:</para>
+
+<screenshot>
+<screeninfo
+>Početni ekran <application
+>KPPP‑a</application
+></screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kppp-dialler-tab.png" format="PNG"/>
+</imageobject>
+<textobject
+><phrase
+>Početni ekran <application
+>KPPP‑a</application
+></phrase>
+</textobject>
+<caption
+><para
+>Početni ekran <application
+>KPPP‑a</application
+></para
+></caption>
+</mediaobject>
+</screenshot>
+
+<para
+>U njemu verovatno neće biti nikakvih stavki, pa ćemo ih sada dodati.</para>
+
+<para
+>Kliknite na dugme <guibutton
+>Podesi...</guibutton
+> da otvorite <application
+>KPPP‑ov</application
+> dijalog za podešavanje. Pod jezičkom <guilabel
+>Nalozi</guilabel
+> izaberite <guilabel
+>Novi...</guilabel
+> da započnete postavljanje nove veze sa Internetom.</para>
+
+<para
+>Ovaj put izaberite <guilabel
+>Ručno postavljanje</guilabel
+>, na šta će se pojaviti sledeći dijalog:</para>
+
+<screenshot>
+<screeninfo
+>Dijalog novog naloga.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kppp-account-dial-tab.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Dijalog novog naloga.</phrase>
+</textobject>
+<caption>
+<para
+>Dijalog novog naloga.</para>
+</caption>
+</mediaobject>
+</screenshot>
+
+<!-- Make a screenshot of the actual new Account Dialog with no entries -->
+
+<para
+>Dijalog novog naloga podeljen je na sledeće sekcije:</para>
+
+<itemizedlist>
+<listitem>
+<para
+><link linkend="account-dial"
+><guilabel
+>Pozovi</guilabel
+></link
+></para>
+</listitem>
+<listitem>
+<para
+><link linkend="account-ip"
+><guilabel
+>IP</guilabel
+></link
+></para>
+</listitem>
+<listitem>
+<para
+><link linkend="account-gateway"
+><guilabel
+>Mrežni izlaz</guilabel
+></link
+></para>
+</listitem>
+<listitem>
+<para
+><link linkend="account-dns"
+><guilabel
+>DNS</guilabel
+></link
+></para>
+</listitem>
+<listitem>
+<para
+><link linkend="account-login-script"
+><guilabel
+>Prijavna skripta</guilabel
+></link
+></para>
+</listitem>
+<listitem>
+<para
+><link linkend="account-execute"
+><guilabel
+>Izvršavanje</guilabel
+></link
+></para>
+</listitem>
+<listitem>
+<para
+><link
+linkend="account-accounting"
+><guilabel
+>Obračun</guilabel
+></link
+></para>
+</listitem>
+</itemizedlist>
+
+<para
+>Obično ne morate da popunjavate sve sekcije, mada je svaka opisana u narednom.</para>
+
+<sect1 id="account-dial">
+<title
+>Jezičak <guilabel
+>Pozovi</guilabel
+></title>
+
+<screenshot>
+<screeninfo
+>Jezičak <guilabel
+>Pozovi</guilabel
+> u nalogu.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kppp-account-dial-tab.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Jezičak <guilabel
+>Pozovi</guilabel
+> u nalogu.</phrase>
+</textobject>
+<caption
+><para
+>Jezičak <guilabel
+>Pozovi</guilabel
+> u nalogu.</para>
+</caption>
+</mediaobject>
+</screenshot>
+
+<para
+>Jezičak <guilabel
+>Pozovi</guilabel
+> ima sledeće opcije:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ime veze:</guilabel
+></term>
+<listitem>
+<para
+>Morate dati ime nalogu. Ono može biti kakvo god želite, ali ako imate više od jednog naloga, svako ime mora biti jedinstveno.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Broj telefona:</guilabel
+></term>
+<listitem>
+<para
+>Zadajte broj telefona za pozivanje. Možete koristiti znakove poput „-“ da bi broj bio čitljiviji. Ako unesete niz brojeva razdvojenih dvotačkom (npr. <userinput
+>1111111:2222222:3333333</userinput
+>, <application
+>KPPP</application
+> će pozivati jedan po jedan broj sve dok dobija signal zauzeća. Za dodavanje još jednog broja možete koristiti dugme <guibutton
+>Dodaj</guibutton
+>, za uklanjanje broja sa spiska dugme <guibutton
+>Ukloni</guibutton
+>. Strelice nagore i nadole služe za izmenu redosleda na spisku.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Autentifikacija:</guilabel
+></term>
+<listitem>
+<para
+>Izaberite prikladan metod autentifikacije koji <application
+>KPPP</application
+> treba da koristi za prijavljivanje na server. Obratite se provajderu za detaljnije informacije. Korišćenje PAP‑a i CHAP‑a opisano je u poglavlju <xref linkend="chap-and-pap"/>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Skladišti lozinku</guilabel
+></term>
+<listitem>
+<para
+>Uključite ovu opciju ako želite <application
+>KPPP</application
+> pamti lozinku između sesija.</para>
+</listitem>
+</varlistentry>
+<!-- missing
+Callback type None, Administrator-defined, User-defined
+Callback number
+ -->
+<varlistentry>
+<term
+><guibutton
+>Prilagodi argumente za pppd...</guibutton
+></term>
+<listitem>
+<para
+>Poziva dijalog za argumente programa <command
+>pppd</command
+>. Kroz njega možete zadati sve opcije koje želite da <application
+>KPPP</application
+> prosleđuje uz <command
+>pppd</command
+>. Spisak raspoloživih opcija potražite na uputnoj stranici <command
+>pppd</command
+>, mada je najbolje da ne koristite ovo ako tačno ne znate šta radite.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="account-ip">
+<title
+>Jezičak <guilabel
+>IP</guilabel
+></title>
+
+<screenshot>
+<screeninfo
+>Jezičak <guilabel
+>IP</guilabel
+> u nalogu.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kppp-account-ip-tab.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Jezičak <guilabel
+>IP</guilabel
+> u nalogu.</phrase>
+</textobject>
+<caption
+><para
+>Jezičak <guilabel
+>IP</guilabel
+> u nalogu.</para>
+</caption>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Dinamička IP adresa</guilabel
+></term>
+<listitem>
+<para
+>Uključite ovo ako vam provajder dodeljuje dinamičku IP adresu. To znači da dobijate drugu IP adresu svaki put kad uspostavite vezu.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Statička IP adresa</guilabel
+></term>
+<listitem>
+<para
+>Uključite ovo ako vam je provajder dodelio statičku IP adresu. U tom slučaju, IP adresu treba još da unesete u polje <guilabel
+>IP adresa:</guilabel
+>, i popunite potrebna polja <guilabel
+>Maska podmreže:</guilabel
+>. Ako niste sigurni, pitajte provajdera. Velika većina provajdera dinamički dodeljuje adrese, pa će najverovatnije pravi izbor biti da to uključite.</para>
+</listitem>
+</varlistentry>
+<varlistentry id="auto-configure-hostname">
+<term
+><guilabel
+>Automatski podesi ime domaćina sa ovog IP‑a</guilabel
+></term>
+<listitem>
+<para
+>Izaberite ovu opciju ako želite da <application
+>KPPP</application
+> postavi ime domaćina i domen za vaš računar nakon uspešnog PPP povezivanja.</para>
+<para
+>Ovo se radi slanjem upita definisanom serveru imena domena, sa IP adresom dodeljenom PPP vezi.</para>
+<para
+>Ova opcija služi za samostalne računare na kojima se koriste protokoli poput razgovora glasom, koji zahtevaju da ime domaćina odgovara onom pod kojim je računar poznat na Internetu. Potiskuje opciju <guilabel
+>Naziv domena:</guilabel
+> u sekciji <guilabel
+>DNS</guilabel
+>, a podrazumevane vrednosti računara vraćaju se čim se prekine PPP veza.</para>
+<para
+>Ova opcija <emphasis
+>nije</emphasis
+> korisna ako samo želite da se povežete na Internet radi pregledanja, proveravanja pošte ili ćaskanja. Dovodi do sporednog efekta da nisu dopuštene nove veze na X server na ovom računaru, drugim rečima, da više ne možete da otvarate GUI programe.</para>
+<para
+>Uključite ovo samo ako ste potpuno sigurni da vam treba.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="account-gateway">
+<title
+>Jezičak <guilabel
+>Mrežni izlaz</guilabel
+></title>
+
+<screenshot>
+<screeninfo
+>Jezičak <guilabel
+>Mrežni izlaz</guilabel
+> u nalogu.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kppp-account-gateway-tab.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Jezičak <guilabel
+>Mrežni izlaz</guilabel
+> u nalogu.</phrase>
+</textobject>
+<caption
+><para
+>Jezičak <guilabel
+>Mrežni izlaz</guilabel
+> u nalogu.</para>
+</caption>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Podrazumevani mrežni izlaz</guilabel
+></term>
+<listitem>
+<para
+>Uključite ovo ako želite da <command
+>pppd</command
+> koristi podrazumevani mrežni izlaz na računaru. Ovo je podrazumevano.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Statički mrežni izlaz</guilabel
+></term>
+<listitem>
+<para
+>Uključite ovo ako želite da zadate mrežni izlaz koji će se koristiti umesto podrazumevanog.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Dodeli podrazumevanu rutu ovom mrežnom izlazu</guilabel
+></term>
+<listitem>
+<para
+>Ovo skoro sigurno treba da bude uključeno (podrazumevano).</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="account-dns">
+<title
+>Jezičak <guilabel
+>DNS</guilabel
+></title>
+
+<screenshot>
+<screeninfo
+>Jezičak <guilabel
+>DNS</guilabel
+> u nalogu.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kppp-account-dns-tab.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Jezičak <guilabel
+>DNS</guilabel
+> u nalogu.</phrase>
+</textobject>
+<caption
+><para
+>Jezičak <guilabel
+>DNS</guilabel
+> u nalogu.</para>
+</caption>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Naziv domena:</guilabel
+></term>
+<listitem>
+<para
+>Zadajte ime domena za ovaj računar. Kao kod DNS adresa, ime se vraća na ono zadato u fajlu <filename
+>/etc/resolv.conf</filename
+> čim se veza prekine. Ako se ostavi prazno, ništa se ne menja u odnosu na ime domena u <filename
+>/etc/resolv.conf</filename
+>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Podešavanje:</guilabel
+></term>
+<listitem>
+<para
+>Izaberite <guilabel
+>automatsko</guilabel
+> (provajder automatski izdaje adrese DNS servera čim se povežete) ili <guilabel
+>ručno</guilabel
+>. Ako izaberete ručno, aktivira se sekcija <guilabel
+>IP adresa DNS‑a:</guilabel
+>.</para
+> 
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>IP adresa DNS‑a:</guilabel
+></term>
+<listitem>
+<para
+>Ova sekcija je aktivna ako ste u prethodnoj opciji izabrali <guilabel
+>ručno</guilabel
+>. Unesite servere imena domena koje vam je ispostavio provajder. Morate zadati bar jedan server da bi operativni sistem mogao da razrešava ljudski čitljive adrese poput <systemitem
+>ftp.kde.org</systemitem
+> u IP adrese. Adrese DNS servera moraju biti u numeričkom obliku, npr. <systemitem
+>128.231.231.233</systemitem
+>. Biće dodate pri izvršavanju onima iz fajla <filename
+>/etc/resolv.conf</filename
+>.</para
+> 
+<para
+>Kliknite na dugme <guibutton
+>Dodaj</guibutton
+> da na spisak ispod dodate novu adresu DNS servera. Stavku uklanjate sa spiska dugmetom <guibutton
+>Ukloni</guibutton
+>.</para
+> 
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Isključi postojeće DNS servere tokom povezivanja</guilabel
+></term>
+<listitem>
+<para
+>Ako popunite ovu kućicu, svi DNS serveri navedeni u <filename
+>/etc/resolv.conf</filename
+> biće ignorisani tokom trajanja veze.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="account-login-script">
+<title
+>Jezičak <guilabel
+>Prijavna skripta</guilabel
+></title>
+
+<screenshot>
+<screeninfo
+>Jezičak <guilabel
+>Prijavna skripta</guilabel
+> u nalogu.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kppp-account-login-script-tab.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Jezičak <guilabel
+>Prijavna skripta</guilabel
+> u nalogu.</phrase>
+</textobject>
+<caption
+><para
+>Jezičak <guilabel
+>Prijavna skripta</guilabel
+> u nalogu.</para>
+</caption>
+</mediaobject>
+</screenshot>
+
+<para
+>Ovaj dijalog služi za stvaranje skripte za uspostavljanje modemske veze sa provajderom. Za utvrđivanje niza radnji koje treba izvršiti možete koristiti mini‑terminal i podatke koje vam je dao provajder.</para>
+
+<para
+>Izaberite neku opciju iz padajućeg spiska levo, a zatim dodajte potrebne parametre za tu radnju u polje desno. Koristite <guibutton
+>Dodaj</guibutton
+> za dodavanje stavke na <emphasis
+>dno</emphasis
+> skripte, prikazane u donjem delu dijaloga. Dugmetom <guibutton
+>Umetni</guibutton
+> umećete stavke bilo gde u skripti, a dugmetom <guibutton
+>Ukloni</guibutton
+> brišete red iz skripte.</para>
+
+<para
+>Dostupne opcije su:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Expect</guilabel
+></term>
+<listitem>
+<para
+><application
+>KPPP</application
+> će čekati na prijem zadate niske.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Send</guilabel
+></term>
+<listitem>
+<para
+><application
+>KPPP</application
+> će poslati zadatu nisku.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Scan</guilabel
+></term>
+<listitem>
+<para
+><application
+>KPPP</application
+> će pretražiti ulazni tok da nađe zadatu nisku, i sačuvaće u unutrašnjem baferu sve znakove od kraja niske do novog reda. Prateće i vodeće praznine biće uklonjene.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Save</guilabel
+></term>
+<listitem>
+<para
+>Trajno skladišti prethodno nađenu nisku u zadatom registru. Jedini dozvoljen registar trenutno je <varname
+>password</varname
+>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pause (sec)</guilabel
+></term>
+<listitem>
+<para
+>Pauzira tokom zadatog broja sekundi.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Hangup</guilabel
+></term>
+<listitem>
+<para
+><application
+>KPPP</application
+> će modemu poslati naredbu <command
+>hangup</command
+>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Answer</guilabel
+></term>
+<listitem>
+<para
+><application
+>KPPP</application
+> će staviti modem u režim odgovora.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Timeout (sec)</guilabel
+></term>
+<listitem>
+<para
+>Izmenite podrazumevano prekovreme na broj sekundi zadat dinamički tokom izvršavanja skripte. Prekovreme se može izmeniti i nekoliko puta tokom izvršenja ako je potrebno.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Prompt</guilabel
+></term>
+<listitem>
+<para
+>Korisniku <application
+>KPPP‑a</application
+> traži se da unese nisku, gde mu se zadata niska ispostavlja kao podsetnik. Korisnik će videti šta kuca. Svako <userinput
+>##</userinput
+> u zadatoj niski biće zamenjeno tekućim sadržajem unutrašnjeg bafera pretrage, prethodno popunjenim naredbom <command
+>scan</command
+>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>PWPrompt</guilabel
+></term>
+<listitem>
+<para
+>Traži korisniku <application
+>KPPP‑a</application
+> da unese nisku, gde mu se zadata niska ispostavlja kao podsetnik. Za svaki znak koji korisnik ukuca prikazuje se zvezdica.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>ID</guilabel
+></term>
+<listitem>
+<para
+>Ako je ispunjeno polje <guilabel
+>Korisničko ime:</guilabel
+> u glavnom dijalogu <application
+>KPPP‑a</application
+>, šalje se taj ID. Ako <guilabel
+>Korisničko ime:</guilabel
+> nije ispunjeno, korisniku <application
+>KPPP‑a</application
+> traži se da unese ID, a zadata niska mu se ispostavlja kao podsetnik. Korisnik će videti šta kuca. U drugom prolazu, kao u drugoj iteraciji petlje ili tokom autentifikacije povratnog poziva, upit će biti prikazan bez obzira na polje <guilabel
+>Korisničko ime:</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Password</guilabel
+></term>
+<listitem>
+<para
+>Ako je ispunjeno polje <guilabel
+>Lozinka:</guilabel
+> u glavnom dijalogu <application
+>KPPP‑a</application
+>, šalje se ta lozinka. Ako <guilabel
+>Lozinka:</guilabel
+> nije ispunjeno, korisniku <application
+>KPPP‑a</application
+> traži se da unese lozinku, a zadata niska mu se ispostavlja kao podsetnik. Za svaki otkucani znak prikazuje se zvezdica. U drugom prolazu, kao u drugoj iteraciji petlje ili tokom autentifikacije povratnog poziva, upit će biti prikazan bez obzira na polje <guilabel
+>Lozinka:</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>LoopStart</guilabel
+></term>
+<listitem>
+<para
+><application
+>KPPP</application
+> će sačekati da bude primljena zadata niska, koju će potom sačuvati za kasniju upotrebu na kraju petlje (<varname
+>LoopEnd</varname
+>).</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>LoopEnd</guilabel
+></term>
+<listitem>
+<para
+><application
+>KPPP</application
+> će sačekati da primi zadatu nisku pre nego što napusti petlju. Ako se prvo primi niska zadata odgovarajućim početkom petlje (<varname
+>LoopStart</varname
+>), doći će do skoka na red posle početka petlje, što omogućava ponavljanje para dijaloga za korisničko ime i lozinku.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect2>
+<title
+>Primeri skripti</title>
+
+<example>
+<title
+>Primer jednostavne prijavne skripte</title>
+<para
+>Evo jednostavnog primera skripte koju biste mogli upotrebiti za povezivanje sa provajderom.</para>
+
+<screen
+>Expect      ID:                        <lineannotation
+># čekaj na reč ‘ID:’</lineannotation>
+ Send        mojid                      <lineannotation
+># (zamenite mojid stvarnim ID‑om)</lineannotation>
+ Expect      word:                      <lineannotation
+># čekaj na reč ‘password’</lineannotation>
+ Send        4u3fjkl                    <lineannotation
+># pošalji korisnikovu lozinku ‘4u3fjkl’</lineannotation>
+ Expect      granted                    <lineannotation
+># provajder šalje ‘Permission granted’ po uspešnoj prijavi</lineannotation>
+ Send        ppp                        <lineannotation
+># započni PPP vezu na strani provajdera</lineannotation
+>
+</screen>
+
+</example>
+
+<example>
+<title
+>Prijavna skripta koja traži ID i lozinku, i ima petlje.</title>
+
+<para
+>Evo skripte za isti nalog sa upitom za ID i lozinku. Tražiće ID i lozinku svaki put, bez obzira na unose u poljima <guilabel
+>Korisničko ime:</guilabel
+> i <guilabel
+>Lozinka:</guilabel
+> u glavnom prozoru <application
+>KPPP‑a</application
+>.</para>
+
+<para
+>Ova skripta takođe ilustruje korišćenje strukture početka i kraja petlje. Ako tokom izvršavanja postupka prijave nešto pođe naopako — na primer, unesete pogrešnu lozinku — provajder može ispisati poruku o grešci i ponovo započeti petlju ID‑a i lozinke, izdavanjem niske <computeroutput
+>ID:</computeroutput
+>. Ako se niska <computeroutput
+>ID:</computeroutput
+> uoči pre kraja petlje (ključna reč <varname
+>LoopEnd</varname
+>), <application
+>KPPP</application
+> će iznova pokrenuti skriptu od reda po početku petlje (ključna reč <varname
+>LoopStart</varname
+>).</para>
+
+<screen
+>LoopStart   ID:                        <lineannotation
+># čekaj na reč ‘ID:’</lineannotation>
+ Prompt      Enter ID:                  <lineannotation
+># traži ID korisniku i pošalji ga</lineannotation>
+ Expect      word:                      <lineannotation
+># čekaj na reč ‘password:’</lineannotation>
+ PWPrompt    Enter Password:            <lineannotation
+># traži lozinku korisniku i pošalji je</lineannotation>
+ LoopEnd     granted                    <lineannotation
+># provajder šalje ‘Permission granted’ po uspešnoj prijavi</lineannotation>
+ Send        ppp                        <lineannotation
+># započni PPP vezu</lineannotation
+>
+</screen>
+</example>
+
+<example>
+<title
+>Upiti za podatke koji nisu ispunjeni u glavnom dijalogu.</title>
+
+<para
+>Evo skripte kojom se ja zaista povezujem sa svojim provajderom. Tražiće mi ID i lozinku samo ako nisam ispunio odgovarajuća polja u glavnom dijalogu <application
+>KPPP‑a</application
+>. </para>
+
+<screen
+>LoopStart   ID:                        <lineannotation
+># čekaj na ~/‘ID:’/</lineannotation>
+ ID          Enter ID:                  <lineannotation
+># traži korisniku ID i pošalji ga</lineannotation>
+ Expect      word:                      <lineannotation
+># čekaj na ~/’password:’/</lineannotation>
+ Password    Enter Password             <lineannotation
+># traži korisniku lozinku i pošalji je</lineannotation>
+ LoopEnd     granted                    <lineannotation
+># provajder šalje ‘Permission granted’ po uspešnoj prijavi</lineannotation>
+ Send        ppp                        <lineannotation
+># pokreni PPP vezu na strani provajdera</lineannotation
+>
+</screen>
+
+</example>
+
+<example>
+<title
+>Skripta za provajdera koji koristi autentifikaciju tipa pitanje–odgovor.</title>
+
+<para
+>Evo skripte koju možete upotrebiti za povezivanje sa provajderom koji koristi neku autentifikaciju tipa pitanje–odgovor. Obično od provajdera dobijete hardverski token (smart-karticu s ekranom i tastature nalik na kalkulator). Da biste upotrebili token morate znati lozinku. Nakon pozivanja, provajder izdaje pitanje, koje upišete u token da dobijete dinamičku lozinku. Zatim unesete tu lozinku kao odgovor.</para>
+
+<screen
+>LoopStart   ID:                        <lineannotation
+># čekaj na ‘ID:’</lineannotation>
+ ID          Enter ID:                  <lineannotation
+># traži korisniku ID i pošalji ga</lineannotation>
+ Scan        Challenge:                 <lineannotation
+># nađi ‘Challenge:’ i sačuvaj sve iza do novog reda</lineannotation>
+ Expect      Password:                  <lineannotation
+># čekaj na ‘Password:’</lineannotation>
+ Prompt      Your token is ## - Enter password <lineannotation
+># traži korisniku lozinku i pošalji je.</lineannotation>
+ LoopEnd     granted                    <lineannotation
+># provajder šalje ‘Permission granted’ po uspešnoj prijavi</lineannotation>
+ Send        ppp                        <lineannotation
+># pokreni PPP vezu na strani provajdera</lineannotation
+>
+</screen>
+</example>
+
+<example>
+<title
+>Upotreba „skeniraj i sačuvaj“ u skriptama</title>
+
+<para
+>Sledeći dnevnik prikazuje prijavnu proceduru fiktivnog provajdera koji obezbeđuje novu lozinku pri svakom prijavljivanju. Nova lozinka mora biti overena i zapamćena za sledeću sesiju. </para>
+
+<screen
+>Univerzitet u Nedodjiji
+ 
+ Prijava:mojaprijava
+ Lozinka: 
+ Lozinka za sledecu sesiju: YLeLfkZb
+ Zabelezite je i unesite na overu.
+ Overa:YLeLfkZb
+ 
+ 1 = telnet
+ 2 = SLIP
+ 3 = PPP
+ 
+ Izbor:
+</screen>
+
+<para
+><application
+>KPPP</application
+> se može upotrebiti za ovaj nezgodan zadatak, čime ukidate i rizik gubitka onog malog parčeta papira na kome ste zapisali tekuću lozinku. Glavni deo sledeće skripte je kombinacija ključnih reči <varname
+>Scan</varname
+> i <varname
+>Save</varname
+>.</para>
+
+<screen
+>7 Expect      Prijava:                  <lineannotation
+># čekaj na prijavni upit</lineannotation>
+ ID                                     <lineannotation
+># pošalji ID</lineannotation>
+ Expect      Lozinka:                   <lineannotation
+># čekaj na upit za lozinku</lineannotation>
+ Password                               <lineannotation
+># pošalji lozinku</lineannotation>
+ Scan        sesiju:                    <lineannotation
+># čekaj na ‘...sledecu sesiju:’ i
+                                        # pokupi novu lozinku</lineannotation>
+ Save        password                   <lineannotation
+># sačuvaj novu lozinku za sledeću prijavu</lineannotation>
+ Expect      Overa:                     <lineannotation
+># čekaj na ‘Overa:’</lineannotation>
+ Password                               <lineannotation
+># pošalji novu lozinku</lineannotation>
+ Expect      Izbor:                     <lineannotation
+># čekaj na upit koji traži izbor
+                                        # jedne od nekoliko opcija</lineannotation>
+ Send        3                          <lineannotation
+># izaberi opciju 3, tj. PPP</lineannotation
+>
+</screen>
+</example>
+
+</sect2>
+
+</sect1>
+
+<sect1 id="account-execute">
+<title
+>Jezičak <guilabel
+>Izvršavanje</guilabel
+></title>
+
+<screenshot>
+<screeninfo
+>Jezičak <guilabel
+>Izvršavanje</guilabel
+> u nalogu.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kppp-account-execute-tab.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Jezičak <guilabel
+>Izvršavanje</guilabel
+> u nalogu.</phrase>
+</textobject>
+<caption
+><para
+>Jezičak <guilabel
+>Izvršavanje</guilabel
+> u nalogu.</para>
+</caption>
+</mediaobject>
+</screenshot>
+
+<para
+>Ovde možete zadati naredbe koje se izvršavaju na određenim stupnjevima povezivanja. Izvršavaju se s vašim stvarnim korisničkim ID‑om, tako da nijedna naredba ne može tražiti korena ovlašćenja. Osim ako se, naravno, niste povezali kao koren — što je loše iz mnogih razloga!</para>
+
+<para
+>Proverite da li ste uneli celu putanju programa, inače <application
+>KPPP</application
+> neće moći da ga pronađe.</para>
+
+<para
+>Naredbe za izvršavanje možete dodati u četiri različite faze procesa povezivanja:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Pre povezivanja:</guilabel
+></term>
+<listitem>
+<para
+>Naredba se izvršava pre nego što počne okretanje broja, tako da je već u radu kada počne povezivanje sa provajderom.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Nakon povezivanja:</guilabel
+></term>
+<listitem>
+<para
+>Naredba se izvršava nakon što se veza uspešno ostvari.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pre prekidanja veze:</guilabel
+></term>
+<listitem>
+<para
+>Naredba se izvršava dok veza još traje, pre nego što je modem prekine.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Nakon prekida veze:</guilabel
+></term>
+<listitem>
+<para
+>Naredba se izvršava po okončanju veze.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Na primer, možda želite da pokrenete <command
+>leafnode</command
+> čim se povežete, ili da proverite poštu. Možda želite da obezbedite da je sva pripravna pošta poslata pre nego što okončate vezu. Možda po prekidanju veze želite da izvršite skriptu za čišćenje, koja će pospremiti dnevnike i očistiti keš.</para>
+
+</sect1>
+
+<sect1 id="account-accounting">
+<title
+>Jezičak <guilabel
+>Obračun</guilabel
+></title>
+
+<screenshot>
+<screeninfo
+>Jezičak <guilabel
+>Obračun</guilabel
+> u nalogu.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="kppp-account-accounting-tab.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Jezičak <guilabel
+>Obračun</guilabel
+> u nalogu.</phrase>
+</textobject>
+<caption
+><para
+>Jezičak <guilabel
+>Obračun</guilabel
+> u nalogu.</para>
+</caption>
+</mediaobject>
+</screenshot>
+
+<para
+>Popunite kućicu <guilabel
+>Uključi obračunavanje</guilabel
+> da aktivirate obračun telefonskih troškova za ovaj nalog.</para>
+
+<para
+>Izaberite sa spiska pravilo koje važi za vašeg telefonskog operatera.</para>
+
+<para
+>Ako nijedno ne odgovara, možete sami napisati novo pravilo tako što kopirate šablon koji se nalazi u <link linkend="appendix-accounting-template"
+>dodatku</link
+>.</para>
+
+<para
+>Poslednja opcija na ovoj stranici je <guilabel
+>Obračun protoka:</guilabel
+>, opisana ispod.</para>
+
+<sect2>
+<title
+>Obračun protoka</title>
+
+<sect3>
+<title
+>Šta je obračun protoka?</title>
+
+<para
+>U osnovi, broji se koliko ste bajtova poslali i primili sa Interneta. <application
+>KPPP</application
+> može da broji dolazne bajtove, odlazne bajtove, ili i jedno i drugo. Od vas zavisi šta želite (ili morate) da koristite. </para>
+
+</sect3>
+
+<sect3>
+<title
+>Čemu mi služi obračun protoka?</title>
+
+<para
+>Mnogi internet provajderi naplaćuju mušterijama po broju prenesenih bajtova. Još češće, provajderi nude paketnu cenu do nekog proizvoljnog ograničenja, a zatim naplaćuju dodatno svaki megabajt iznad toga. <application
+>KPPP</application
+> prikazuje vaš trenutni protok i može da vam pomogne da držite račun pod kontrolom. Naravno, čak i kada ne plaćate po protoku, obračun možete uključiti iz radoznalosti.</para>
+
+</sect3>
+
+<sect3>
+<title
+>Koju vrstu obračuna protoka da izaberem?</title>
+
+<para
+>To uglavnom zavisi od vašeg provajdera. Mnogi broje koliko ste megabajta preuzeli sa Interneta, a ignorišu koliko šaljete. U tom slučaju treba da izaberete <guilabel
+>primljeno</guilabel
+>. Ako plaćate i jedno i drugo, izaberite <guilabel
+>ukupno</guilabel
+>. <guilabel
+>poslato</guilabel
+> dato je samo radi potpunosti, pošto nismo čuli ni za jednog provajdera koji ovo koristi kao obračunsku osnovicu. Doduše, moglo bi vam koristiti ako držite veb ili FTP server u kući.</para>
+
+</sect3>
+
+<sect3>
+<title
+>Mane</title>
+
+<para
+>Nažalost, obračun protoka ima jednu manu. <application
+>KPPP</application
+> će brojati sve bajtove, bez obzira na njihovo poreklo. Mnogi provajderi postavljaju ograničenje samo na pristup Internetu, a ne i na podatke na njihovoj sopstvenoj mreži. Drugi pak imaju različita ograničenja za podatke na svojoj mreži, u istoj državi, i one koji pristižu iz inostranstva. Na primer, ako mnogo pregledate po Internetu, može biti da većinu veb stranica dobijate iz keša provajderovog proksija, što vam verovatno neće biti uračunato u potrošnju. <application
+>KPPP</application
+> ne zna da li IP paketi stižu iz proksija, te će ih brojati. Dakle, ako ovo važi za vas (ili nešto slično, poput provajdera koji koristi keširajući server vesti poput <command
+>nntpcached</command
+>), protok koji prijavljuje <application
+>KPPP</application
+> može biti veći od onog koji će vam biti naplaćen. S vedrije strane, <application
+>KPPP</application
+> barem nikad neće potceniti vaše račune.</para>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</chapter>

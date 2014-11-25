@@ -1,0 +1,285 @@
+<chapter id="modem-tricks">
+<title
+>Trikovi i saveti za modem</title>
+
+<para
+>Ova sekcija treba da približi bojažljivima (ne tako) volšebnu veštinu štelovanja modema. Sve naredbe ovde su po Hayesovom AT standardu, ali nisu svi modemi isti, tako da vam uspešnost može varirati.</para>
+
+<sect1 id="modem-sessions">
+<title
+>Modemske sesije</title>
+
+<para
+>Modemska sesija omogućava vam neposrednu interakciju sa modemom. Vi upisujete naredbe, a modem odgovara. Da biste dobili modemsku sesiju, dok nije aktivna nijedna veza idite u dijalog za podešavanje <application
+>KPPP‑a</application
+>, izaberite uređivanje modema, pa kliknite na dugme <guibutton
+>Terminal...</guibutton
+> pod jezičkom <guilabel
+>Modem</guilabel
+>. Dobićete prozor za interaktivno podešavanje modema. Dobićete prozor za interaktivno podešavanje modema. Probajte da upišete <userinput
+>ATZ<command
+></command
+></userinput
+> (resetovanje modema), na šta treba da dobijete potvrdan odgovor. Za okončanje sesije upotrebite <menuchoice
+><guimenu
+>Fajl</guimenu
+><guimenuitem
+>Zatvori</guimenuitem
+></menuchoice
+>.</para>
+
+</sect1>
+
+<sect1 id="modem-profiles">
+<title
+>Modemski profili</title>
+<para
+>Jedan razlog zašto biste neposredno slali naredbe modemu može biti taj što imate skup modemskih postava koje želite da zadržite, a da ne morate da ih navodite za svako povezivanje. Modemski profili su jedan dobar način da se ovo izvede. Modemi mogu imati nekoliko uskladištenih profila, numerisanih sa 0, 1, itd. Svi se mogu pogledati naredbom <command
+>AT&amp;V</command
+>. Podrazumevani profil je obično 0 (ovo se može izmeniti pomoću <command
+>AT&amp;Y</command
+>). Trenutno korišćeni profil naziva se <emphasis
+>aktivnim</emphasis
+>.</para>
+
+<para
+>Kad promenite neku postavku, i aktivni profil biva izmenjen. Naredba <command
+>ATZ</command
+> govori modemu da učita podrazumevani profil, brišući sve izmene koje ste načinili. Da biste sačuvali izmene, učitajte željeni profil preko <command
+>ATZ<replaceable
+>n</replaceable
+></command
+> (gde je <replaceable
+>n</replaceable
+> broj profila). Načinite izmene, a zatim ih sačuvajte pomoću <command
+>AT&amp;W<replaceable
+>n</replaceable
+></command
+>. <application
+>KPPP‑u</application
+> zadajete da koristi određeni profil tako što izmenite pripremnu nisku modema (<guibutton
+>Naredbe modema...</guibutton
+> <guilabel
+>Pripremna niska n:</guilabel
+> pod jezičkom <guilabel
+>Modem</guilabel
+>). Na primer, <command
+>ATZ1</command
+> reći će <application
+>KPPP‑u</application
+> da resetuje modem i učita uskladišteni profil br. 1.</para>
+
+<para
+>Ako želite da resetujete modem nazad na neku poznatu polaznu tačku, upotrebite <command
+>AT&amp;F&amp;W</command
+> da postavite aktivni profil na fabrički podrazumevano i te postavke sačuvate kao podrazumevani profil.</para>
+
+<para
+>Primeri izmena profila su u sledećoj sekciji.</para>
+
+</sect1>
+
+<sect1 id="modem-hangup">
+<title
+>Kako naterati modem da prekine vezu</title>
+
+<para
+>Ponekad vam se može dogoditi da <application
+>KPPP</application
+> neće da prekine modemsku vezu. Uzrok ovome je verovatno nepoklapanje postavki <application
+>KPPP‑a</application
+> i modema. Postoje dva metoda za saopštavanje standardnom modemu da prekine vezu: <link linkend="hangup-command-method"
+>naredbom</link
+> i <link linkend="hangup-dtr-method"
+>DTR‑om</link
+>. U metodu naredbe, modemu se šalje izbegavačka sekvenca koja ga prebacuje u naredbeni režim, a potom se izdaje naredba za prekid veze (<command
+>ATH</command
+>).</para>
+
+<para
+>Kad ručno podešavate <command
+>pppd</command
+>, izvan <application
+>KPPP‑a</application
+>, metod naredbe često je koristan jer možete da izađete iz terminalske sesije i pokrenete <command
+>pppd</command
+> bez prekidanja modemske veze. U većini drugih slučajeva poželjniji je metod DTR‑a, pošto je jednostavniji.</para>
+
+<sect2 id="hangup-dtr-method">
+<title
+>Metod DTR‑a (<command
+>AT&amp;Dn</command
+>) </title>
+
+<para
+>Po metodu DTR‑a, modem će prekinuti vezu čim <application
+>KPPP</application
+> prestane da ga koristi. Ako uđete modemsku u sesiju i izvršite upit stanja pomoću <command
+>AT&amp;V</command
+>, i među prikazanim postavkama aktivnog profila vidite <command
+>&amp;D0</command
+>, onda je metod prekidanja veze DTR‑om isključen. Da biste ga uključili, kliknite na dugme <guibutton
+>Terminal...</guibutton
+> da dobijete modemsku sesiju, a zatim:</para>
+
+<screen
+><userinput
+><command
+>ATZ</command
+></userinput
+> <lineannotation
+># resetuj na podrazumevani profil</lineannotation>
+<userinput
+><command
+>AT&amp;D2</command
+></userinput
+>  <lineannotation
+># postavi prekid na ispuštanje DTR‑a</lineannotation>
+<userinput
+><command
+>AT&amp;W</command
+></userinput
+>  <lineannotation
+># upiši u podrazumevani profil</lineannotation
+>
+</screen>
+
+<sect3>
+<title
+>Kako radi metod DTR‑a</title>
+
+<para
+>Kad god se izdigne DTR linija („terminal podataka spreman“) na serijskoj vezi između računara domaćina i modema, modem prekida vezu. Kad <application
+>KPPP</application
+> otvara serijski port DTR linija se spušta, što na spoljašnjem modemu možete videti po paljenju DTR (ili TR) lampice. Kad se TR lampica ugasi (zbog toga što je <application
+>KPPP</application
+> zatvorio serijski port, ili nečeg goreg!), modem će prekinuti vezu.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="hangup-command-method">
+<title
+>Metod naredbe</title>
+
+<para
+>Drugi način da naterate modem da prekine vezu (koji se koristi pri <command
+>AT&amp;D<replaceable
+>n</replaceable
+></command
+> gde <replaceable
+>n</replaceable
+> nije <returnvalue
+>2</returnvalue
+>) jeste da modem prihvati naredbu dok je sesija u toku. Za pravilno prekidanje veze, otvorite modemsku sesiju i postavite zaštitno vreme na kratak interval, ovako:</para>
+
+<screen
+><userinput
+><command
+>ATZ</command
+></userinput>
+<userinput
+><command
+>ATS12=5</command
+></userinput>
+<userinput
+><command
+>AT&amp;W</command
+></userinput
+>
+</screen>
+
+<para
+>Zatim postavite klizač <guilabel
+>Zaštitno vreme (sek./50):</guilabel
+> u sekciji modemskih naredbi da poklapa registar (<varname
+>S12</varname
+> na vrednost <returnvalue
+>5</returnvalue
+>). Tada bi modem trebalo da pravilno prekine vezu.</para>
+
+<sect3>
+<title
+>Kako radi metod naredbe</title>
+
+<para
+>Kad je lokalni modem povezan na udaljeni modem, tj. kad je u stanju „povezanosti“, sve znakove koje prima prosleđuje udaljenom modemu bez tumačenja. Da bi se modem naterao da prihvati neke znakove kao naredbe sebi, mora se prebaciti u naredbeno stanje. Ovo se izvodi izbegavačkim kodom.</para>
+
+<para
+>Izbegavački kod se definiše kao tri vremenska intervala, čija je dužina (u pedesetinkama sekunde) zadata u <varname
+>S12</varname
+>.</para>
+
+<itemizedlist>
+<listitem>
+<para
+>tišina (mora trajati duže od <varname
+>S12</varname
+>/50 sekundi)</para>
+</listitem>
+<listitem>
+<para
+>Izbegavački znak (definisan registrom <varname
+>S2</varname
+>, podrazumevani je <quote
+>+</quote
+>), koji se ponavlja triput (manje od <varname
+>S12</varname
+>/50 sekundi između ponavljanja).</para>
+</listitem>
+<listitem>
+<para
+>tišina (mora trajati duže od <varname
+>S12</varname
+>/50 sekundi)</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Kad se modem prebaci u stanje naredbi, možete mu slati naredbe. Za prekidanje veze pošaljite naredbu <command
+>ATH</command
+>. Izbegavački kodovi i niska za prekid veze koje koristi <application
+>KPPP</application
+> prikazani su u dijalogu <link linkend="modem-commands"
+><guilabel
+>Naredbe modema...</guilabel
+></link
+>. Treba da odgovaraju vašem modemu.</para>
+
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tone-dialing-speedup">
+<title
+>Brže tonsko pozivanje</title>
+
+<para
+>Ako vam je na raspolaganju tonsko pozivanje, potrebno vreme za pozivanje može se izmeniti preko registra <varname
+>S11</varname
+>. On navodi trajanje (u stotinkama sekunde) slanja svakog tona tokom pozivanja. Podrazumevano je obično 95 (skoro sekunda). Najveća brzina pozivanja zavisi od opreme telefonske centrale koja obrađuje vašu liniju. Minimalno trajanje je 50, skoro dvaput brže, i ta brzina je često moguća. </para>
+
+<screen
+><userinput
+><command
+>ATZ</command
+></userinput
+>        <lineannotation
+># resetuj na podrazumevani profil</lineannotation>
+<userinput
+><command
+>ATS11=50</command
+></userinput
+>   <lineannotation
+># najbrže moguće biranje, zadajte veći broj ako ne radi</lineannotation>
+<userinput
+><command
+>AT&amp;W</command
+></userinput
+>   <lineannotation
+># upiši u podrazumevani profil</lineannotation
+>
+</screen>
+
+</sect1>
+</chapter>

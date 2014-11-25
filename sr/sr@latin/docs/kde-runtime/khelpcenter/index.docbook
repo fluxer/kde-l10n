@@ -1,0 +1,1288 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" 
+"customization/dtd/kdex.dtd" [
+  <!ENTITY kappname-n '<application>K‑centar-pomoći</application>'>
+  <!ENTITY kappname-g '<application>K‑centra-pomoći</application>'>
+  <!ENTITY kappname-d '<application>K‑centru-pomoći</application>'>
+  <!ENTITY kappname-a '<application>K‑centar-pomoći</application>'>
+  <!ENTITY kappname-i '<application>K‑centrom-pomoći</application>'>
+  <!ENTITY kappname-l '<application>K‑centru-pomoći</application>'>
+  <!ENTITY % Serbian-Latin "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE">
+]>
+
+<book id="khelpcenter" lang="&language;">
+<bookinfo>
+<title
+><application
+>K‑centar-pomoći</application
+></title>
+<authorgroup>
+<corpauthor
+>Tim KDE‑a</corpauthor>
+<othercredit role="translator"
+><firstname
+>Časlav</firstname
+><surname
+>Ilić</surname
+><affiliation
+><address
+><email
+>caslav.ilic@gmx.net</email
+></address
+></affiliation
+><contrib
+>prevod</contrib
+></othercredit
+> 
+</authorgroup>
+<legalnotice
+>&FDLNotice;</legalnotice>
+<date
+>22. 5. 2013.</date>
+<releaseinfo
+>KDE 4.11</releaseinfo>
+
+<abstract>
+<para
+><acronym
+>KDE</acronym
+> je međunarodni tehnološki tim koji razvija <ulink url="http://www.gnu.org/philosophy/free-sw.html"
+>slobodni softver</ulink
+> za stono i prenosno računarstvo. U proizvode <acronym
+>KDE‑a</acronym
+> spadaju moderni sistem radne površi za Linux i Unix, sveobuhvatne kancelarijske i grupverske svite, kao i stotine drugih softverskih naslova raznih kategorija: Internet i veb, multimedija, razonoda, obrazovanje, grafika i razvoj softvera. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>K‑centar-pomoći</keyword>
+<keyword
+>KDE pomoć</keyword>
+<keyword
+>pomoć</keyword>
+<keyword
+>centar pomoći</keyword>
+<keyword
+>Centar pomoći KDE‑a</keyword>
+</keywordset>
+</bookinfo>
+
+<!-- ui-catalogs: khelpcenter desktop_kdebase kdelibs4 -->
+
+<chapter id="help-system-handbook">
+<title
+>Priručnik za <acronym
+>KDE‑ov</acronym
+> sistem pomoći</title>
+<anchor id="help"/>
+
+<sect1 id="help-introduction">
+<title
+><acronym
+>KDE‑ov</acronym
+> sistem pomoći</title>
+	
+<para
+><acronym
+>KDE‑ov</acronym
+> sistem pomoći projektovan je da obezbedi jednostavan pristup kako uobičajenim Unix sistemima pomoći (uputne i info stranice), tako i samosvojnoj dokumentaciji <acronym
+>KDE‑a</acronym
+> (XML). </para>
+
+<para
+>Svi osnovni programi u <acronym
+>KDE‑u</acronym
+> potpuno su dokumentovani zahvaljujući naporima dokumentacionog tima. Ako ste zainteresovani da pomognete u ovome, pridružite se <ulink url="https://mail.kde.org/mailman/listinfo/kde-doc-english"
+>poštanskoj listi</ulink
+> i pišite timu na <email
+>kde-doc-english@kde.org</email
+>. Nije potrebno prethodno iskustvo, samo polet i strpljenje. </para>
+
+<para
+>Ako želite da pomognete u prevođenju dokumentacije <acronym
+>KDE‑a</acronym
+> na svoj maternji jezik, pregledajte informacije (posebno o koordinatorima jezičkih timova) na <ulink url="http://l10n.kde.org"
+>veb sajtu lokalizacije</ulink
+>. </para>
+
+<sect2 id="installation">
+<title
+>Instaliranje</title>
+
+<para
+><application
+>K‑centar-pomoći</application
+> je sastavni deo osnovne instalacije <acronym
+>KDE‑a</acronym
+>, tj. dolazi sa svakom kopijom <acronym
+>KDE‑a</acronym
+>. Nalazi se u izvornom paketu <literal
+>kdebase-runtime</literal
+> dostupnom na <ulink url="ftp://ftp.kde.org/pub/kde/"
+>ftp://ftp.kde.org/pub/kde/</ulink
+>, kao i u istoimenom binarnom paketu vašeg operativnog sistema. </para>
+
+</sect2>
+</sect1>
+
+<sect1 id="invoking-help">
+<title
+>Pozivanje pomoći</title>
+
+<para
+><application
+>K‑centar-pomoći</application
+> možete pozvati na nekoliko načina: </para>
+
+<variablelist
+> 
+<varlistentry
+> 
+<term
+>preko menija <guimenu
+>Pomoć</guimenu
+></term
+> 
+<listitem>
+<para
+>Najuobičajenije je verovatno iz programa u kojem radite. Izaberite <menuchoice
+> <shortcut
+> <keycombo action="simul"
+><keycap
+>F1</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Pomoć</guimenu
+> <guimenuitem
+>Priručnik za <replaceable
+>program</replaceable
+></guimenuitem
+></menuchoice
+> da otvorite priručnik tog programa. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>preko pokretača programa <application
+>Odskok</application
+></term>
+<listitem>
+<para
+>Kliknite na veliko dugme K na panelu, idite na jezičak <guimenuitem
+>Programi</guimenuitem
+>, pa na <guimenuitem
+>Pomoć</guimenuitem
+>, da otvorite <application
+>K‑centar-pomoći</application
+>. Ovim ćete dobiti podrazumevanu početnu stranicu. </para>
+</listitem
+> 
+</varlistentry>
+
+<varlistentry>
+<term
+>preko komandne linije</term>
+<listitem>
+<para
+><application
+>K‑centar-pomoći</application
+> možete pokrenuti zadavanjem URL‑a fajla koji treba prikazati. Postoje URL‑ovi i za uputne i info stranice. Koristite ih ovako: </para
+> 
+
+<variablelist>
+<varlistentry>
+<term
+>fajl pomoći programa</term>
+<listitem>
+<para
+><command
+>khelpcenter</command
+> <option
+>help:/<replaceable
+>kwrite</replaceable
+></option
+> </para>
+<para
+>Otvara fajl pomoći <application
+>K‑pisanja</application
+>, na stranici sadržaja. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>lokalni URL</term>
+<listitem
+><para
+><command
+>khelpcenter</command
+> <option
+>file:/<replaceable
+>usr/local/src/qt/html/index.html</replaceable
+></option
+> </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>uputna stranica</term>
+<listitem>
+<para
+><command
+>khelpcenter</command
+> <option
+>man:/<replaceable
+>strcpy</replaceable
+></option
+> </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>info stranica</term>
+<listitem>
+<para
+><command
+>khelpcenter</command
+> <option
+>info:/<replaceable
+>gcc</replaceable
+></option
+> </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Izvršavanje <command
+>khelpcenter</command
+> bez argumenata otvara podrazumevanu početnu stranicu. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="interface-basics">
+<title
+>Sučelje <application
+>K‑centra-pomoći</application
+></title>
+
+<para
+>Sučelje <application
+>K‑centra-pomoći</application
+> sastoji se od dva okna sa podacima. </para>
+
+<para
+>Traka alatki i meniji pobliže su objašnjeni pod <xref linkend="menu-and-toolbar-ref"/>. </para>
+
+<para
+>Dokumenti imaju sopstvene alatke za kretanje, tako da se možete ili kretati redom kroz dokument, preko veza <guilabel
+>Sledeće</guilabel
+>, <guilabel
+>Prethodno</guilabel
+> i <guilabel
+>Sadržaj</guilabel
+>, ili skakati okolo koristeći hiperveze. </para>
+
+<para
+>Veze vas odvode u druge delove istog dokumenta, ili u druge dokumente. Možete kliktati na ikone strelice ulevo i strelice udesno na traci alatki za kretanje unazad i unapred kroz dokument koje ste posetili u ovoj sesiji. </para
+> 
+
+<para
+>Dva okna prikazuju sadržaj sistema pomoći (levo) i same fajlove pomoći (desno). </para>
+
+<sect2 id="contents-pane">
+<title
+>Okno <guilabel
+>Sadržaj</guilabel
+></title>
+
+<para
+>Okno sadržaja stoji na levo strani prozora <application
+>K‑centra-pomoći</application
+>. Kao što biste očekivali, možete pomerati razdvajačku traku tako da namestite udobnu širinu za čitanje bilo kojeg od dva okna. </para
+> 
+
+<para
+>Okno sadržaja je dalje podeljeno u dva jezička, od kojih jedan sadrži <link linkend="contents-tab"
+>prikaz stabla</link
+> svih delova pomoći za koje <application
+>K‑centar-pomoći</application
+> zna, a drugi <acronym
+>KDE‑ov</acronym
+> <link linkend="kde-glossary"
+>pojmovnik</link
+>. </para>
+
+<sect3 id="contents-tab">
+<title
+>Jezičak <guilabel
+>Sadržaj</guilabel
+></title>
+
+<para
+>Jezičak <guilabel
+>Sadržaj</guilabel
+> sadrži sledeće podrazumevane stavke najvišeg nivoa u prikazu stabla: </para
+> 
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Osnove KDE‑a</guilabel
+></term>
+<listitem>
+<para
+><emphasis
+>Osnove</emphasis
+> uvode mnoge mogućnosti Softverske kompilacije KDE‑a i opisuju uobičajene zadatke koji se mogu izvršiti u svim <acronym
+>KDE</acronym
+> programima. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Uputstvo za Plasmu</guilabel
+></term>
+<listitem>
+<para
+>Uputstvo za Plasmu dokumentuje najvidljivije stubove <acronym
+>KDE‑a</acronym
+>, središnje sučelje ka površi. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Pomoć na vezi</guilabel
+></term>
+<listitem>
+<para
+>Stranica sa vezama ka pomoći na vezi i dodatnim informacijama koje je priredila zajednica <acronym
+>KDE‑a</acronym
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Uputstva za programe</guilabel
+></term>
+<listitem>
+<para
+>Samosvojna <acronym
+>KDE</acronym
+> dokumentacija programâ̂. Svi programi iz Softverske kompilacije KDE‑a imaju dokumentaciju u XML formatu, koja se pretvara u HTML da biste je čitali. Ovaj odeljak nabraja sve <acronym
+>KDE</acronym
+> programe, uz kratak opis i vezu do njegove pune dokumentacije. </para>
+<para
+>Programi su prikazani u stablolikoj strukturi, koja odražava podrazumevanu strukturu menija u pokretaču programa, čime vam olakšava pronalaženje programa koji tražite. </para>
+</listitem
+> 
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Moduli kontrolnog centra</guilabel
+></term>
+<listitem>
+<para
+>Spisak veze ka različitim modulima koji se nalaze u <acronym
+>KDE</acronym
+> programu Sistemske postavke. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Moduli K‑infocentra</guilabel
+></term>
+<listitem>
+<para
+>Spisak veza ka dokumentaciji različitih modula <application
+>K‑infocentra</application
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>U/I zahvati</guilabel
+></term>
+<listitem>
+<para
+>Spisak veza ka dokumentaciji različitih U/I zahvata. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Uputne stranice naredbi</guilabel
+></term>
+<listitem>
+<para
+>Unix uputne stranice su tradicionalni format dokumentacije na vezi za Unix sisteme. Većina programa na sistemu ima uputnu stranicu. Pored toga, uputne stranice postoje i za programerske funkcije i formate fajlova. </para>
+</listitem
+> 
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Čuvar svitaka</guilabel
+></term>
+<listitem>
+<para
+>Dodatna, ne-<acronym
+>KDE</acronym
+> dokumentacija instalirana na sistemu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Pregledanje info stranica</guilabel
+></term>
+<listitem>
+<para
+>TeXinfo dokumentacija, koju koriste mnogi GNU‑ovi programi. Tu spadaju GCC (kompilator C‑a i C++a), Emacs (uređivač teksta), i mnogi drugi. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+<!-- 
+<sect3 id="search">
+<title
+>The <guilabel
+>Search</guilabel
+> tab</title>
+
+<para>
+Searching requires you have the <application
+>ht://Dig</application>
+application installed.  Information on installing and configuring the
+search index is available in the document.  Configuration of the search
+index is performed in the &kcontrol;, by choosing
+<menuchoice
+><guisubmenu
+>Help</guisubmenu
+><guimenuitem
+>Index</guimenuitem
+></menuchoice
+>,
+and detailed help is available from this module.
+</para>
+
+<para>
+For the purposes of this document, we'll assume you already have this set
+up and configured.
+</para>
+
+<para>
+Searching the help files is fairly intuitive, enter the word(s) you wish
+to search for in the text box, choose your options (if any), and press
+<guibutton
+>Search</guibutton
+>.  The results display in the viewer pane
+to the right.
+</para>
+
+<para
+>The options available are:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Method</guilabel
+></term>
+<listitem>
+<para>
+Choose how to search for multiple words.  If you choose
+<guilabel
+>and</guilabel
+>, results are returned only if all your search
+terms are included in the page. <guilabel
+>or</guilabel
+> returns results
+if <emphasis
+>any</emphasis
+> of the search terms are found, and
+<guilabel
+>boolean</guilabel
+> lets you search using a combination.
+</para
+> 
+<para>
+Boolean syntax lets you use the operators <literal
+>AND</literal
+>,
+<literal
+>OR</literal
+> and <literal
+>NOT</literal
+> to create complex
+searches. Some examples:</para>
+<variablelist>
+<varlistentry>
+<term
+><userinput
+>cat and dog</userinput
+></term>
+<listitem
+><para
+>Searches for pages which have both the words
+<userinput
+>cat</userinput
+> and <userinput
+>dog</userinput
+> in them.  Pages with
+only one or the other will not be returned.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><userinput
+>cat not dog</userinput
+></term>
+<listitem
+><para
+>Searches for pages with <userinput
+>cat</userinput
+> in them, but
+only returns the ones that don't have the word <userinput
+>dog</userinput
+> in
+them.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><userinput
+>cat or (dog not nose)</userinput
+></term>
+<listitem
+><para
+>Searches for pages which contain <userinput
+>cat</userinput
+>, and
+for pages which contain <userinput
+>dog</userinput
+> but don't contain
+<userinput
+>nose</userinput
+>.  Pages which contain both
+<userinput
+>cat</userinput
+> and <userinput
+>nose</userinput
+> would be returned,
+pages containing all three words would not.</para
+></listitem
+> 
+</varlistentry>
+</variablelist>
+<para
+>If your searches are not returning the results you expect, check
+carefully you haven't excluded the wrong search term with an errand
+<literal
+>NOT</literal
+> or a stray brace.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Max. results</guilabel
+></term>
+<listitem
+><para
+>Determines the maximum number of results returned from your
+search.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Format</guilabel
+></term>
+<listitem
+><para
+>Decide if you want just a short link to the page
+containing your search terms, or do you want a longer
+summary.</para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Sort</guilabel
+></term>
+<listitem
+><para
+>Sort the results in order of <guilabel
+>Score</guilabel
+> (how
+closely your search terms were matched,) alphabetically by
+<guilabel
+>Title</guilabel
+> or by <guilabel
+>Date</guilabel
+>.  Selecting the
+<guilabel
+>Reverse order</guilabel
+> check box, naturally enough, reverses the
+sort order of the results.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Update index</guilabel
+></term>
+<listitem
+><para
+>Update the search index, to incorporate new documents,
+or if you think your database is incomplete or damaged.  This may take
+some time.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+-->
+
+</sect2>
+
+<sect2 id="man-and-info">
+<title
+>Odeljci uputnih i info stranica</title>
+
+<para
+>Uputne stranice su standard na Unixima, i već dugo godina se koriste na mnogim operativnim sistemima. Često su vrlo detaljne, i najbolji izvor informacija za većinu Unix naredbi i programa. Kada ljudi kažu <foreignphrase lang='en'
+>RTFM</foreignphrase
+>, uputstvo na koje misle često je uputna stranica.</para>
+
+<para
+>Uputne stranice nisu savršene. Ne samo što su detaljne, već su često i preterano tehničke, jer ih obično pišu programeri za programere. Ovo znači da ponekad ne samo da nisu predusretljive, već su i potpuno nerazumljive mnogim korisnicima. One su, međutim, najbolji izvor proverenih informacija o većini naredbi komandne linije, a ponekad i jedini.</para>
+
+<para
+>Možda ste se pitali šta označava broj kada ljudi napišu nešto poput <literal
+>man(1)</literal
+>. To je broj odeljka uputnih stranica u kojem je stavka opisana. Primetićete da <application
+>K‑centar-pomoći</application
+> koristi ove brojeve da razdeli mnoštvo uputnih stranica po odeljcima, čime vam olakšava da nađete informacije kad ih tražite prostim pregledanjem okolo.</para>
+
+<para
+>Postoje i tzv. info stranice, koje su zamišljene kao zamena za uputne stranice. Održavaoci nekih programa više ne dopunjuju uputne stranice, tako da ako je na raspolaganju i uputna i info stranica, obično info stranica sadrži ažurnije podatke. Većina programa pak ima ili jednu ili drugu, retko obe. Ako je program za koji tražite uputstvo neka GNU‑ova alatka, najverovatnije će imati info stranicu umesto uputne.</para>
+
+<sect3 id="navigation">
+<title
+>Kretanje unutar info stranica</title>
+
+<para
+>Info dokumenti su uređeni hijerarhijski. Pojedine stranice nazivaju se čvorovima, i svi dokumenti imaju najviši čvor, tj. početnu stranicu. Na početak dokumenta možete se vratiti pritiskom na <guilabel
+>Vrh</guilabel
+>.</para>
+
+<para
+><guibutton
+>Prethodno</guibutton
+> i <guibutton
+>Sledeće</guibutton
+> koriste se za prelazak ne prethodnu ili sledeću stranicu na trenutnom nivou hijerarhije.</para>
+
+<para
+>Klikom na stavku menija u okviru dokumenta prelazite na niži nivo u hijerarhiji. Nagore u hijerarhiji vraćate se klikom na <guibutton
+>Gore</guibutton
+>.</para>
+
+<para
+>Uputne su date slično kao info stranice, tako da je indeks odeljka najviši čvor, a svaka uputna stranica nivo ispod. Jednoj uputnoj stranici odgovara tačno jedna stranica pomoći.</para>
+
+</sect3>
+</sect2>
+
+<sect2 id="kde-glossary">
+<title
+>Pojmovnik <acronym
+>KDE‑a</acronym
+></title>
+
+<para
+>Pojmovnik služi brzim upitima za definicije pojmova iza reči koje su vam nepoznate. Kreću se od programa i tehnologija posebnih za <acronym
+>KDE</acronym
+>, do opštih termina u Unix računarstvu. </para>
+
+<para
+>U levom oknu možete videti prikaz stabla, u jednom od dva oblika: <guilabel
+>Abecedno</guilabel
+> ili <guilabel
+>Po temi</guilabel
+>. Oba navode iste stavke, ali drugačije poređane, kako biste brzo našli ono što vas zanima. </para>
+
+<para
+>Dok se krećete prikazom stabla levo, stavke koje budete birali prikazivaće se desno. </para>
+
+</sect2>
+
+<sect2 id="menu-and-toolbar-ref">
+<title
+>Meniji i trake alatki</title>
+
+<para
+><application
+>K‑centar-pomoći</application
+> ima minimalističko sučelje, kako biste mogli da se usredsredite na pomoć, a ne na upotrebu samog pregledača pomoći. </para>
+
+<para
+>Traka alatki sadrži sledeće ikone: </para>
+
+<variablelist>
+<title
+>Ikone u traci alatki</title>
+
+<varlistentry>
+<term
+><guiicon
+>Sadržaj</guiicon
+></term>
+<listitem>
+<para
+>Ide na početnu stranicu <application
+>K‑centra-pomoći</application
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guiicon
+>Nazad</guiicon
+></term>
+<listitem>
+<para
+>Ide na prethodnu stranicu koju ste gledali. Kliknite na štiklu desno od ikone da dobijete spisak prethodno prikazanih stranica, odakle možete izabrati stranicu da direktno odete na nju. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guiicon
+>Napred</guiicon
+></term>
+<listitem>
+<para
+>Prelazak na narednu stranicu. Ova je ikona aktivna samo kada ste već upotrebili <guiicon
+>Nazad</guiicon
+>. </para>
+</listitem>
+</varlistentry>
+<!--
+<varlistentry>
+<term
+><guiicon
+>Print Frame</guiicon
+></term>
+<listitem>
+<para>
+Print the contents of the currently visible page.
+</para>
+</listitem>
+</varlistentry>
+-->
+<varlistentry>
+<term
+><guiicon
+>Kopiraj</guiicon
+></term>
+<listitem>
+<para
+>Kopira tekst u klipbord, radi nalepljivanja u drugi program. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guiicon
+>Nađi</guiicon
+></term>
+<listitem>
+<para
+>Traži reč na trenutno vidljivoj stranici. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guiicon
+>Povećaj font</guiicon
+></term>
+<listitem>
+<para
+>Uvećava tekst u oknu prikazivača. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guiicon
+>Smanji font</guiicon
+></term>
+<listitem>
+<para
+>Smanjuje tekst u oknu prikazivača. Ova ikona je aktivna samo ako ste prethodno uvećavali tekst. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Meniji sadrže sledeće stavke: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guimenu
+>Fajl</guimenu
+></term>
+<listitem>
+
+<variablelist>
+
+<varlistentry>
+<term>
+<menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Ctrl</keycap
+><keycap
+>P</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Fajl</guimenu
+> <guimenuitem
+>Štampaj</guimenuitem
+> </menuchoice>
+</term>
+<listitem>
+<para
+>Štampa sadržaj trenutno vidljive stranice. Priručnike u PDF formatu možete naći na <ulink url="http://docs.kde.org/index.php?language=en"
+><acronym
+>KDE‑ovom</acronym
+> serveru dokumentacije</ulink
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Ctrl</keycap
+><keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Fajl</guimenu
+> <guimenuitem
+>Napusti</guimenuitem
+> </menuchoice>
+</term>
+<listitem>
+<para
+>Zatvara i napušta <application
+>K‑centar-pomoći</application
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guimenu
+>Uređivanje</guimenu
+></term>
+<listitem>
+
+<variablelist>
+<varlistentry>
+<term>
+<menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Ctrl</keycap
+><keycap
+>C</keycap
+></keycombo
+> </shortcut
+><guimenuitem
+>Kopiraj</guimenuitem
+> </menuchoice>
+</term>
+<listitem>
+<para
+>Kopira izabrani tekst u klipbord. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Ctrl</keycap
+><keycap
+>A</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Uređivanje</guimenu
+> <guimenuitem
+>Izaberi sve</guimenuitem
+> </menuchoice>
+</term>
+<listitem>
+<para
+>Izabira sav tekst na tekućoj stranici. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Ctrl</keycap
+><keycap
+>F</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Uređivanje</guimenu
+> <guimenuitem
+>Nađi...</guimenuitem
+> </menuchoice>
+</term>
+<listitem>
+<para
+>Traži reč na trenutno vidljivoj stranici. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guimenu
+>Prikaz</guimenu
+></term>
+<listitem>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Prikaz</guimenu
+> <guisubmenu
+>Postavi kodiranje</guisubmenu
+> </menuchoice>
+</term>
+<listitem>
+<para
+>Menja kodiranje tekuće stranice. Obično je podrazumevana postavka <guimenuitem
+>automatski</guimenuitem
+> zadovoljavajuća, ali ako tekst ipak nije ispravno prikazan, izbor određenog kodiranja ga može popraviti. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guimenu
+>Kretanje</guimenu
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Alt</keycap
+><keycap
+>Home</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Kretanje</guimenu
+> <guimenuitem
+>Sadržaj</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Ide na početnu stranicu <application
+>K‑centra-pomoći</application
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Ctrl</keycap
+><keycap
+>PgUp</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Kretanje</guimenu
+> <guimenuitem
+>Prethodna stranica</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Ide na prethodnu stranicu u tekućem dokumentu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Ctrl</keycap
+><keycap
+>PgDown</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Kretanje</guimenu
+> <guimenuitem
+>Naredna stranica</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Ide na sledeću stranicu u tekućem dokumentu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Alt</keycap
+><keycap
+>Levo</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Kretanje</guimenu
+> <guimenuitem
+>Nazad</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Ide na stranicu koju ste prethodno čitali.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+><keycap
+>Alt</keycap
+><keycap
+>Desno</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Kretanje</guimenu
+> <guimenuitem
+>Napred</guimenuitem
+> </menuchoice
+></term>
+<listitem>
+<para
+>Ako ste išli unazad putem ikone ili stavke u meniju, ovom stavkom možete se ponovo vraćati unapred.</para>
+</listitem>
+</varlistentry>
+<!--
+Last Search Result
+-->
+</variablelist>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guimenu
+>Postavke</guimenu
+></term>
+<listitem>
+
+<variablelist>
+<varlistentry>
+<term>
+<menuchoice
+><guimenu
+>Postavke</guimenu
+> <guimenuitem
+>Podešavanje fonta...</guimenuitem
+> </menuchoice>
+</term>
+<listitem>
+<para
+>Ovde možete podesiti porodicu i veličinu fontova u <application
+>K‑centru-pomoći</application
+>. </para>
+</listitem>
+</varlistentry>
+<!--
+<varlistentry>
+<term>
+<menuchoice>
+<guimenu
+>Settings</guimenu>
+<guimenuitem
+>Build Search Index...</guimenuitem>
+</menuchoice>
+</term>
+<listitem>
+<para>
+If your distribution support this, you can build an index of search terms.
+</para>
+</listitem>
+</varlistentry>
+-->
+</variablelist>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+><application
+>K‑centar-pomoći</application
+> ima još i uobičajene menije <guimenu
+>Postavke</guimenu
+> i <guimenu
+>Pomoć</guimenu
+>, više o njima pročitajte u odeljcima <ulink url="help:/fundamentals/ui.html#menus-settings"
+>o meniju za podešavanje</ulink
+> i <ulink url="help:/fundamentals/ui.html#menus-help"
+>meniju pomoći</ulink
+> iz Osnova KDE‑a. </para>
+
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+<title
+>Zasluge i licenca</title>
+
+<para
+><application
+>K‑centar-pomoći</application
+></para>
+
+<para
+>Prvobitno razvio <personname
+><firstname
+>Matijas</firstname
+> <firstname
+>Elter</firstname
+></personname
+> &Matthias.Elter.mail;</para>
+<para
+>Tekući održavalac je <personname
+><firstname
+>Kornelijus</firstname
+> <surname
+>Šumaher</surname
+></personname
+> &Cornelius.Schumacher.mail;</para>
+
+<para
+>Preveo Časlav Ilić <email
+>caslav.ilic@gmx.net</email
+>.</para
+> 
+&underFDL; &underGPL; </sect1>
+</chapter>
+
+
+</book>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:nil
+sgml-namecase-general:t
+sgml-general-insert-case:lower
+sgml-always-quote-attributes:t
+End:
+-->
+
