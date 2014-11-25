@@ -1,5 +1,3 @@
-add_subdirectory(kdeedu)
-add_subdirectory(kdegames)
 add_subdirectory(kde-runtime)
 add_subdirectory(kdesdk)
 add_subdirectory(qt)
