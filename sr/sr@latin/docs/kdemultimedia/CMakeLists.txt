@@ -1,5 +1,0 @@
-add_subdirectory( dragonplayer )
-add_subdirectory( juk )
-add_subdirectory( kcontrol )
-add_subdirectory( kioslave )
-add_subdirectory( kmix )

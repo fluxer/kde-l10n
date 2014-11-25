@@ -1,5 +1,0 @@
-add_subdirectory( autostart )
-add_subdirectory( bell )
-add_subdirectory( clock )
-add_subdirectory( desktop )
-add_subdirectory( paths )

@@ -1,8 +1,0 @@
-add_subdirectory( documentationnotfound )
-add_subdirectory( kcontrol )
-add_subdirectory( kdebugdialog )
-add_subdirectory( kdesu )
-add_subdirectory( khelpcenter )
-add_subdirectory( kioslave )
-add_subdirectory( knetattach )
-add_subdirectory( onlinehelp )
