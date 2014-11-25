@@ -17,5 +17,4 @@ endif (NOT GETTEXT_MSGFMT_EXECUTABLE)
 set(CURRENT_LANG ar)
 
 macro_optional_add_subdirectory( messages )
-macro_optional_add_subdirectory( data )
 macro_optional_add_subdirectory( scripts )
