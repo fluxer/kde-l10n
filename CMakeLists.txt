@@ -19,7 +19,6 @@ add_definitions (-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS -DKTEXT
 # global include directories
 include_directories (${CMAKE_CURRENT_BINARY_DIR} ${KDE4_INCLUDES})
 
-macro_optional_add_subdirectory ( CMakeLists.txt )
 macro_optional_add_subdirectory ( ar )
 macro_optional_add_subdirectory ( ast )
 macro_optional_add_subdirectory ( bg )
