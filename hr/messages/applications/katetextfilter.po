@@ -3,18 +3,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: katetextfilter\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-02 05:15+0200\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2007-03-05 01:29+0100\n"
 "Last-Translator: Renato Pavicic <renato@translator-shop.org>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
 "X-Generator: KBabel 0.9.5\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -23,7 +23,14 @@ msgstr ""
 msgid "Filter Te&xt..."
 msgstr "Filtriraj te&kst …"
 
-#: plugin_katetextfilter.cpp:158
+#: plugin_katetextfilter.cpp:129
+msgctxt "@info"
+msgid ""
+"<title>Result of:</title><nl /><pre><code>$ %1\n"
+"<nl />%2</code></pre>"
+msgstr ""
+
+#: plugin_katetextfilter.cpp:188
 msgid ""
 "You are not allowed to execute arbitrary external applications. If you want "
 "to be able to do this, contact your system administrator."
@@ -31,11 +38,11 @@ msgstr ""
 "Nemate dopuštenja za izvršavanje vanjskih arbitrarnih aplikacija. Ako želite "
 "imati ovu mogućnost kontaktirajte vašeg administrator sustava."
 
-#: plugin_katetextfilter.cpp:160
+#: plugin_katetextfilter.cpp:190
 msgid "Access Restrictions"
 msgstr "Ograničenja pristupa"
 
-#: plugin_katetextfilter.cpp:229
+#: plugin_katetextfilter.cpp:270
 msgid ""
 "<qt><p>Usage: <code>textfilter COMMAND</code></p><p>Replace the selection "
 "with the output of the specified shell command.</p></qt>"
@@ -43,7 +50,7 @@ msgstr ""
 "<qt><p>Upotreba: <code>textfilter NAREDBA</code></p><p>Zamjena odabira "
 "ispisom navedene naredbe ljuske.</p></qt>"
 
-#: plugin_katetextfilter.cpp:239
+#: plugin_katetextfilter.cpp:280
 msgid "Usage: textfilter COMMAND"
 msgstr "Upotreba: textfilter NAREDBA"
 
@@ -53,22 +60,43 @@ msgstr "Upotreba: textfilter NAREDBA"
 msgid "&Tools"
 msgstr "&Alati"
 
-#. i18n: file: textfilterwidget.ui:14
+#. i18n: file: textfilterwidget.ui:6
 #. i18n: ectx: property (windowTitle), widget (QWidget, TextFilterWidget)
 #: rc.cpp:6
 msgid "Filter"
 msgstr "Filtar"
 
-#. i18n: file: textfilterwidget.ui:29
+#. i18n: file: textfilterwidget.ui:21
 #. i18n: ectx: property (text), widget (QLabel, lblFilter)
 #: rc.cpp:9
 msgid "Enter command to pipe selected text through:"
 msgstr "Unesite naredbu za provlačenje odabranog teksta kroz cjevovod:"
 
-#. i18n: file: textfilterwidget.ui:49
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#. i18n: file: textfilterwidget.ui:41
+#. i18n: ectx: property (toolTip), widget (QCheckBox, copyResult)
 #: rc.cpp:12
+msgid "Copy the result to clipboard leaving a document unchanged."
+msgstr ""
+
+#. i18n: file: textfilterwidget.ui:44
+#. i18n: ectx: property (text), widget (QCheckBox, copyResult)
+#: rc.cpp:15
 msgid "Copy the result instead of pasting it"
+msgstr ""
+
+#. i18n: file: textfilterwidget.ui:52
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mergeOutput)
+#: rc.cpp:18
+msgid ""
+"If checked, an output from STDOUT and STDERR will be merged and no errors "
+"will be reported.\n"
+"Otherwise, STDERR will be displayed as a passive message."
+msgstr ""
+
+#. i18n: file: textfilterwidget.ui:55
+#. i18n: ectx: property (text), widget (QCheckBox, mergeOutput)
+#: rc.cpp:22
+msgid "Merge STDOUT and STDERR"
 msgstr ""
 
 #~ msgid "You need to have a selection to use textfilter"

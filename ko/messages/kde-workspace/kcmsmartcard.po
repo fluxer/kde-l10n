@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmartcard\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-05 11:50+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2009-12-06 18:06+0900\n"
 "Last-Translator: Park Shinjo <kde@peremen.name>\n"
 "Language-Team: Korean <cho.sungjae@gmail.com>\n"
@@ -21,26 +21,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Park Shinjo"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde@peremen.name"
-
+#. i18n: file: nosmartcardbase.ui:24
 #. i18n: ectx: property (text), widget (QLabel)
-#: nosmartcardbase.ui:24
+#: rc.cpp:3
 msgid "<b>Unable to contact the KDE smartcard service.</b>"
 msgstr "<b>KDE 스마트카드 서비스를 시작할 수 없습니다.</b>"
 
+#. i18n: file: nosmartcardbase.ui:35
 #. i18n: ectx: property (title), widget (QGroupBox)
-#: nosmartcardbase.ui:35
+#: rc.cpp:6
 msgid "Possible Reasons"
 msgstr "가능한 이유"
 
+#. i18n: file: nosmartcardbase.ui:49
 #. i18n: ectx: property (text), widget (QLabel)
-#: nosmartcardbase.ui:49
+#: rc.cpp:9
 msgid ""
 "\n"
 "1) The KDE daemon, 'kded' is not running. You can restart it by running the "
@@ -58,55 +53,151 @@ msgstr ""
 "2) KDE 라이브러리에서 스마트카드를 지원하지 않는 것 같습니다. libpcslite를 사"
 "용하셔서 kdelibs 패키지를 다시 컴파일하십시오."
 
-#: smartcard.cpp:65
+#. i18n: file: smartcardbase.ui:31
+#. i18n: ectx: attribute (title), widget (QWidget)
+#: rc.cpp:15
+msgid "Smartcard Support"
+msgstr "스마트카드 지원"
+
+#. i18n: file: smartcardbase.ui:42
+#. i18n: ectx: property (text), widget (QCheckBox)
+#: rc.cpp:18
+msgid "&Enable smartcard support"
+msgstr "스마트카드 지원 사용(&E)"
+
+#. i18n: file: smartcardbase.ui:61
+#. i18n: ectx: property (text), widget (QCheckBox)
+#: rc.cpp:21
+msgid "Enable &polling to autodetect card events"
+msgstr "카드 이벤트를 검색하기 위하여 폴링 사용(&E)"
+
+#. i18n: file: smartcardbase.ui:64
+#. i18n: ectx: property (whatsThis), widget (QCheckBox)
+#: rc.cpp:24
+msgid ""
+"In most cases you should have this enabled. It allows KDE to automatically "
+"detect card insertion and reader hotplug events."
+msgstr ""
+"대부분 경우에 이 설정을 사용합니다. 이 설정을 사용하면 KDE에서 자동으로 카드"
+"를 검색하고 리더의 핫플러그 이벤트를 감지합니다."
+
+#. i18n: file: smartcardbase.ui:92
+#. i18n: ectx: property (text), widget (QCheckBox)
+#: rc.cpp:27
+msgid "Automatically &launch card manager if inserted card is unclaimed"
+msgstr "알 수 없는 카드가 삽입되면 카드 관리자 자동으로 실행하기(&L)"
+
+#. i18n: file: smartcardbase.ui:95
+#. i18n: ectx: property (whatsThis), widget (QCheckBox)
+#: rc.cpp:30
+msgid ""
+"When you insert a smartcard, KDE can automatically launch a management tool "
+"if no other application attempts to use the card."
+msgstr ""
+"스마트카드를 삽입하고 카드를 사용하려는 시도를 하지 않았을 때 KDE에서 카드 관"
+"리 도구를 실행할 지 설정합니다."
+
+#. i18n: file: smartcardbase.ui:106
+#. i18n: ectx: property (text), widget (QCheckBox)
+#: rc.cpp:33
+msgid "&Beep on card insert and removal"
+msgstr "카드 삽입/제거 시 소리로 알리기(&B)"
+
+#. i18n: file: smartcardbase.ui:135
+#. i18n: ectx: attribute (title), widget (QWidget)
+#: rc.cpp:36
+msgid "Readers"
+msgstr "리더"
+
+#. i18n: file: smartcardbase.ui:152
+#. i18n: ectx: property (text), widget (K3ListView)
+#: rc.cpp:39
+msgid "Reader"
+msgstr "리더"
+
+#. i18n: file: smartcardbase.ui:163
+#. i18n: ectx: property (text), widget (K3ListView)
+#: rc.cpp:42
+msgid "Type"
+msgstr "종류"
+
+#. i18n: file: smartcardbase.ui:174
+#. i18n: ectx: property (text), widget (K3ListView)
+#: rc.cpp:45
+msgid "Subtype"
+msgstr "하위형식"
+
+#. i18n: file: smartcardbase.ui:185
+#. i18n: ectx: property (text), widget (K3ListView)
+#: rc.cpp:48
+msgid "SubSubtype"
+msgstr "하위 하위형식"
+
+#. i18n: file: smartcardbase.ui:228
+#. i18n: ectx: property (title), widget (QGroupBox)
+#: rc.cpp:51
+msgid "PCSCLite Configuration"
+msgstr "PCSCLite 설정"
+
+#. i18n: file: smartcardbase.ui:251
+#. i18n: ectx: property (text), widget (QLabel)
+#: rc.cpp:54
+msgid ""
+"To add new readers you have to modify /etc/readers.conf file and re-start "
+"pcscd"
+msgstr ""
+"새 리더를 추가하시려면 /etc/readers.conf 파일을 수정하시고 pcscd를 다시 시작"
+"하십시오."
+
+#: smartcard.cpp:64
 msgid "kcmsmartcard"
 msgstr "kcmsmartcard"
 
-#: smartcard.cpp:65
+#: smartcard.cpp:64
 msgid "KDE Smartcard Control Module"
 msgstr "KDE 스마트카드 제어 모듈"
 
-#: smartcard.cpp:67
+#: smartcard.cpp:66
 msgid "(c) 2001 George Staikos"
 msgstr "(c) 2001 George Staikos"
 
-#: smartcard.cpp:69
+#: smartcard.cpp:68
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: smartcard.cpp:79
+#: smartcard.cpp:78
 msgid "Change Module..."
 msgstr "모듈 변경..."
 
-#: smartcard.cpp:134
+#: smartcard.cpp:133
 msgid "Unable to launch KCardChooser"
 msgstr "KCardChooser를 실행할 수 없습니다."
 
-#: smartcard.cpp:183
+#: smartcard.cpp:182
 msgid "No card inserted"
 msgstr "카드가 삽입되지 않았습니다."
 
-#: smartcard.cpp:224
+#: smartcard.cpp:223
 msgid "Smart card support disabled"
 msgstr "스마트카드 지원을 사용할 수 없습니다"
 
-#: smartcard.cpp:235
+#: smartcard.cpp:234
 msgid "No readers found. Check 'pcscd' is running"
 msgstr "리더가 없습니다. pcscd 가 실행 중인지 확인하십시오."
 
-#: smartcard.cpp:260 smartcard.cpp:280
+#: smartcard.cpp:259 smartcard.cpp:279
 msgid "NO ATR or no card inserted"
 msgstr "ATR이 없거나 카드가 삽입되지 않았습니다"
 
-#: smartcard.cpp:292
+#: smartcard.cpp:291
 msgid "Managed by: "
 msgstr "관리자: "
 
-#: smartcard.cpp:302
+#: smartcard.cpp:301
 msgid "No module managing this card"
 msgstr "이 카드를 관리할 모듈이 없습니다."
 
-#: smartcard.cpp:395
+#: smartcard.cpp:394
 msgid ""
 "<h1>smartcard</h1> This module allows you to configure KDE support for "
 "smartcards. These can be used for various tasks such as storing SSL "
@@ -115,84 +206,10 @@ msgstr ""
 "<h1>스마트카드</h1>이 모듈은 KDE 스마트카드 지원을 설정합니다. SSL 인증서 저"
 "장이나 시스템 로그온 등에 사용할 수 있습니다."
 
-#. i18n: ectx: attribute (title), widget (QWidget)
-#: smartcardbase.ui:31
-msgid "Smartcard Support"
-msgstr "스마트카드 지원"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Park Shinjo"
 
-#. i18n: ectx: property (text), widget (QCheckBox)
-#: smartcardbase.ui:42
-msgid "&Enable smartcard support"
-msgstr "스마트카드 지원 사용(&E)"
-
-#. i18n: ectx: property (text), widget (QCheckBox)
-#: smartcardbase.ui:61
-msgid "Enable &polling to autodetect card events"
-msgstr "카드 이벤트를 검색하기 위하여 폴링 사용(&E)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox)
-#: smartcardbase.ui:64
-msgid ""
-"In most cases you should have this enabled. It allows KDE to automatically "
-"detect card insertion and reader hotplug events."
-msgstr ""
-"대부분 경우에 이 설정을 사용합니다. 이 설정을 사용하면 KDE에서 자동으로 카드"
-"를 검색하고 리더의 핫플러그 이벤트를 감지합니다."
-
-#. i18n: ectx: property (text), widget (QCheckBox)
-#: smartcardbase.ui:92
-msgid "Automatically &launch card manager if inserted card is unclaimed"
-msgstr "알 수 없는 카드가 삽입되면 카드 관리자 자동으로 실행하기(&L)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox)
-#: smartcardbase.ui:95
-msgid ""
-"When you insert a smartcard, KDE can automatically launch a management tool "
-"if no other application attempts to use the card."
-msgstr ""
-"스마트카드를 삽입하고 카드를 사용하려는 시도를 하지 않았을 때 KDE에서 카드 관"
-"리 도구를 실행할 지 설정합니다."
-
-#. i18n: ectx: property (text), widget (QCheckBox)
-#: smartcardbase.ui:106
-msgid "&Beep on card insert and removal"
-msgstr "카드 삽입/제거 시 소리로 알리기(&B)"
-
-#. i18n: ectx: attribute (title), widget (QWidget)
-#: smartcardbase.ui:135
-msgid "Readers"
-msgstr "리더"
-
-#. i18n: ectx: property (text), widget (K3ListView)
-#: smartcardbase.ui:152
-msgid "Reader"
-msgstr "리더"
-
-#. i18n: ectx: property (text), widget (K3ListView)
-#: smartcardbase.ui:163
-msgid "Type"
-msgstr "종류"
-
-#. i18n: ectx: property (text), widget (K3ListView)
-#: smartcardbase.ui:174
-msgid "Subtype"
-msgstr "하위형식"
-
-#. i18n: ectx: property (text), widget (K3ListView)
-#: smartcardbase.ui:185
-msgid "SubSubtype"
-msgstr "하위 하위형식"
-
-#. i18n: ectx: property (title), widget (QGroupBox)
-#: smartcardbase.ui:228
-msgid "PCSCLite Configuration"
-msgstr "PCSCLite 설정"
-
-#. i18n: ectx: property (text), widget (QLabel)
-#: smartcardbase.ui:251
-msgid ""
-"To add new readers you have to modify /etc/readers.conf file and re-start "
-"pcscd"
-msgstr ""
-"새 리더를 추가하시려면 /etc/readers.conf 파일을 수정하시고 pcscd를 다시 시작"
-"하십시오."
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"

@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-12-18 16:46+0100\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2009-12-18 18:26+0100\n"
 "Last-Translator: astur <malditoastur@gmail.com>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -48,27 +48,31 @@ msgstr "Si amosar o non mensaxes emerxentes na bandexa del sistema."
 msgid "ktcli"
 msgstr ""
 
-#: src/bcodec/bdecoder.cpp:71
-#, kde-format
-msgid "Illegal token: %1"
-msgstr "Elementu nun válidu: %1"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Redirixíu ensin un nuevu allugamientu"
 
-#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
-msgid "Decode error"
-msgstr "Fallu de decodificación"
+#: src/tracker/httptracker.cpp:285 src/tracker/httptracker.cpp:305
+#: src/tracker/httptracker.cpp:461
+msgid "Invalid response from tracker"
+msgstr "Rempuesta nun válida del llocalizador"
 
-#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
-msgid "Unexpected end of input"
-msgstr "Fin d'entrada inesperáu"
+#: src/tracker/httptracker.cpp:298
+msgid "Invalid data from tracker"
+msgstr "Datos nun válidos del llocalizador"
 
-#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
-#, kde-format
-msgid "Cannot convert %1 to an int"
-msgstr "Nun puede convertise %1 a un enteru"
+#: src/tracker/httptracker.cpp:478
+msgid "Invalid tracker URL"
+msgstr "URL nun válidu del llocalizador"
 
-#: src/bcodec/bdecoder.cpp:260
-msgid "Torrent is incomplete."
-msgstr "El torrent ta incompletu."
+#: src/tracker/httptracker.cpp:556 src/tracker/udptracker.cpp:364
+#: src/tracker/udptracker.cpp:374
+msgid "Timeout contacting tracker %1"
+msgstr ""
+
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "Nun foi posible resolver el nome de máquina %1"
 
 #: src/datachecker/datacheckerjob.cpp:82
 msgid "Waiting for other data checks to finish"
@@ -84,89 +88,172 @@ msgid "Checking Data"
 msgstr "Verificando los datos"
 
 #: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/torrent/torrentcreator.cpp:124
+#: src/datachecker/singledatachecker.cpp:49 src/torrent/torrentcreator.cpp:124
 #: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#, kde-format
+#: src/diskio/multifilecache.cpp:706 src/diskio/multifilecache.cpp:745
 msgid "Cannot open file %1: %2"
 msgstr "Nun puede abrise'l ficheru %1: %2"
 
-#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/torrent/torrentstats.cpp:73
+msgid "Not started"
+msgstr "Non aniciáu"
+
+#: src/torrent/torrentstats.cpp:75
+msgid "Download completed"
+msgstr "Baxada finada"
+
+#: src/torrent/torrentstats.cpp:77
+msgid "Seeding completed"
+msgstr "Siembra finada"
+
+#: src/torrent/torrentstats.cpp:79
+msgctxt "Status of a torrent file"
+msgid "Seeding"
+msgstr "Semando"
+
+#: src/torrent/torrentstats.cpp:81
+msgid "Downloading"
+msgstr "Baxando"
+
+#: src/torrent/torrentstats.cpp:83
+msgid "Stalled"
+msgstr "Estancáu"
+
+#: src/torrent/torrentstats.cpp:85
+msgid "Stopped"
+msgstr "Deteniu"
+
+#: src/torrent/torrentstats.cpp:87 src/interfaces/trackerinterface.cpp:60
+msgid "Error: %1"
+msgstr "Fallu: %1"
+
+#: src/torrent/torrentstats.cpp:89
+msgid "Allocating diskspace"
+msgstr "Asignando espaciu en discu"
+
+#: src/torrent/torrentstats.cpp:91
+msgid "Queued for seeding"
+msgstr ""
+
+#: src/torrent/torrentstats.cpp:91
+#, fuzzy
+msgid "Queued for downloading"
+msgstr "Baxando anguaño:"
+
+#: src/torrent/torrentstats.cpp:95
+msgid "Stopped. No space left on device."
+msgstr "Deteníu. Nun queda espaciu nel preséu."
+
+#: src/torrent/torrentstats.cpp:97
+msgid "Paused"
+msgstr "Posáu"
+
+#: src/torrent/torrentstats.cpp:99
+#, fuzzy
+msgid "Superseeding"
+msgstr "Semando"
+
+#: src/torrent/torrentcontrol.cpp:300
+msgid "Error writing to disk, do you have enough diskspace?"
+msgstr ""
+
+#: src/torrent/torrentcontrol.cpp:546
+msgid ""
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
+msgstr ""
+"Hebo un fallu mientres se cargaba'l torrent <b>%1</b>:<br/><b>%2</b><br/"
+">Probablemente'l torrent esté tollíu, o nun seya realmente un ficheru "
+"torrent válidu."
+
+#: src/torrent/torrentcontrol.cpp:576
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
+msgstr ""
+
+#: src/torrent/torrentcontrol.cpp:587
+#, fuzzy
+msgid "Unable to create %1: %2"
+msgstr "Nun pudo criase %1: %2"
+
+#: src/torrent/torrentcontrol.cpp:602
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+
+#: src/torrent/torrentcontrol.cpp:607
+#, fuzzy
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "Durante cuántu tiempu tuvo baxádose'l torrent"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Torrent tollíu."
+
+#: src/torrent/torrent.cpp:165
+#, fuzzy
+msgid "Unable to open torrent file %1: %2"
+msgstr " Nun puede abrise'l ficheru torrent %1: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Nun puede criase'l ficheru índiz: %1"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "El direutoriu %1 nun esiste"
+
+#: src/bcodec/bdecoder.cpp:71
+msgid "Illegal token: %1"
+msgstr "Elementu nun válidu: %1"
+
+#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
+msgid "Decode error"
+msgstr "Fallu de decodificación"
+
+#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
+msgid "Unexpected end of input"
+msgstr "Fin d'entrada inesperáu"
+
+#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
+msgid "Cannot convert %1 to an int"
+msgstr "Nun puede convertise %1 a un enteru"
+
+#: src/bcodec/bdecoder.cpp:260
+msgid "Torrent is incomplete."
+msgstr "El torrent ta incompletu."
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+#, fuzzy
+msgid "Failed to open %1: %2"
+msgstr "Fallu al abrir %1: %2"
+
+#: src/diskio/multifilecache.cpp:118 src/diskio/cache.cpp:170
 #: src/diskio/singlefilecache.cpp:85
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Failed to create %1: %2"
 msgstr "Fallu al criar %1: %2"
 
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-#, fuzzy, kde-format
-msgid "Cannot open %1: %2"
-msgstr "Nun puede abrise %1: %2"
-
-#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
-#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
-#, fuzzy, kde-format
-msgid "Cannot open %1 for writing: readonly filesystem"
-msgstr "Nun puede escribise en %1: sistema de ficheros de namái llectura"
-
-#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
-#, kde-format
-msgid "Attempting to write beyond the maximum size of %1"
-msgstr ""
-
-#: src/diskio/cachefile.cpp:257
-#, kde-format
-msgid ""
-"Cannot expand file %1: attempting to grow the file beyond the maximum size"
-msgstr ""
-
-#: src/diskio/cachefile.cpp:261
-#, fuzzy, kde-format
-msgid "Cannot expand file %1: %2"
-msgstr "Nun puede espandese'l ficheru %1: %2"
-
-#: src/diskio/cachefile.cpp:380
-#, fuzzy, kde-format
-msgid "Error: Reading past the end of the file %1"
-msgstr "Fallu: Al lleer tres el fin del ficheru %1"
-
-#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
-#, fuzzy, kde-format
-msgid "Failed to seek file %1: %2"
-msgstr "Fallu al desplazase nel ficheru %1: %2"
-
-#: src/diskio/cachefile.cpp:393
-#, kde-format
-msgid "Error reading from %1"
-msgstr "Fallu al lleer de %1"
-
-#: src/diskio/cachefile.cpp:436
-#, fuzzy, kde-format
-msgid "Failed to write to file %1: %2"
-msgstr "Fallu al escribir nel ficheru %1: %2"
-
-#: src/diskio/cachefile.cpp:503
-#, fuzzy, kde-format
-msgid "Cannot preallocate diskspace: %1"
-msgstr "Nun puede preasignase espaciu en discu: %1"
-
 #: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Cannot open index file %1: %2"
 msgstr "Nun puede abrise'l ficheru índiz %1: %2"
 
 #: src/diskio/dndfile.cpp:89
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Cannot create file %1: %2"
 msgstr "Nun puede criase'l ficheru %1: %2"
 
 #: src/diskio/dndfile.cpp:137
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Failed to write first chunk to DND file: %1"
 msgstr "Nun pudó escribise'l primer bloque nel ficheru DND: %1"
 
 #: src/diskio/dndfile.cpp:155
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Nun pudó escribise'l caberu bloque nel ficheru DND: %1"
 
@@ -192,34 +279,80 @@ msgctxt "@title job"
 msgid "Moving"
 msgstr "Media móvil"
 
-#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
-#, fuzzy, kde-format
-msgid "Failed to open %1: %2"
-msgstr "Fallu al abrir %1: %2"
+#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
+#: src/util/fileops.cpp:406
+#, fuzzy
+msgid "Cannot open %1: %2"
+msgstr "Nun puede abrise %1: %2"
+
+#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
+#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
+#, fuzzy
+msgid "Cannot open %1 for writing: readonly filesystem"
+msgstr "Nun puede escribise en %1: sistema de ficheros de namái llectura"
+
+#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
+msgid "Attempting to write beyond the maximum size of %1"
+msgstr ""
+
+#: src/diskio/cachefile.cpp:257
+msgid ""
+"Cannot expand file %1: attempting to grow the file beyond the maximum size"
+msgstr ""
+
+#: src/diskio/cachefile.cpp:261
+#, fuzzy
+msgid "Cannot expand file %1: %2"
+msgstr "Nun puede espandese'l ficheru %1: %2"
+
+#: src/diskio/cachefile.cpp:380
+#, fuzzy
+msgid "Error: Reading past the end of the file %1"
+msgstr "Fallu: Al lleer tres el fin del ficheru %1"
+
+#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
+#, fuzzy
+msgid "Failed to seek file %1: %2"
+msgstr "Fallu al desplazase nel ficheru %1: %2"
+
+#: src/diskio/cachefile.cpp:393
+msgid "Error reading from %1"
+msgstr "Fallu al lleer de %1"
+
+#: src/diskio/cachefile.cpp:436
+#, fuzzy
+msgid "Failed to write to file %1: %2"
+msgstr "Fallu al escribir nel ficheru %1: %2"
+
+#: src/diskio/cachefile.cpp:503
+#, fuzzy
+msgid "Cannot preallocate diskspace: %1"
+msgstr "Nun puede preasignase espaciu en discu: %1"
 
 #: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
 msgid "Unable to write to a piece mapped read only"
 msgstr ""
 
+#: src/download/webseed.cpp:52 src/download/webseed.cpp:99
+#: src/download/httpconnection.cpp:44
+msgid "Not connected"
+msgstr "Non conectáu"
+
+#: src/download/webseed.cpp:348 src/download/httpconnection.cpp:153
+msgid "Connection closed"
+msgstr "Zarróse la conexón"
+
+#: src/download/webseed.cpp:558
+msgid "Unused for %1 seconds (Too many connection failures)"
+msgstr ""
+
 #: src/download/chunkdownload.cpp:383
-#, kde-format
 msgid "1 peer"
 msgid_plural "%1 peers"
 msgstr[0] "1 collaciu"
 msgstr[1] "%1 collacios"
 
-#: src/download/downloader.cpp:808
-#, fuzzy
-msgid "Disabled because webseed does not match torrent"
-msgstr "Amuesa toles semilles web d'un torrent"
-
-#: src/download/httpconnection.cpp:44 src/download/webseed.cpp:52
-#: src/download/webseed.cpp:99
-msgid "Not connected"
-msgstr "Non conectáu"
-
 #: src/download/httpconnection.cpp:115
-#, kde-format
 msgid "Resolving proxy %1:%2"
 msgstr "Resolviendo'l «proxy» %1:%2"
 
@@ -229,16 +362,10 @@ msgid "Not enough system resources available"
 msgstr "Nun hai abondu espaciu disponible en discu."
 
 #: src/download/httpconnection.cpp:133
-#, kde-format
 msgid "Resolving hostname %1"
 msgstr "Resolviendo'l nome de máquina %1"
 
-#: src/download/httpconnection.cpp:153 src/download/webseed.cpp:348
-msgid "Connection closed"
-msgstr "Zarróse la conexón"
-
 #: src/download/httpconnection.cpp:160
-#, kde-format
 msgid "Error: request failed: %1"
 msgstr "Fallu: falló la petición: %1"
 
@@ -274,185 +401,13 @@ msgstr "Fallu: la petición superó'l tiempu llímite"
 msgid "Redirected without a new location."
 msgstr "Redirixíu ensin un nuevu allugamientu"
 
-#: src/download/webseed.cpp:558
-#, kde-format
-msgid "Unused for %1 seconds (Too many connection failures)"
-msgstr ""
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "Aceutar"
-
-#: src/interfaces/trackerinterface.cpp:58
-#, fuzzy, kde-format
-msgid "Warning: %1"
-msgstr "Abriendo %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Anunciando"
-
-#: src/interfaces/trackerinterface.cpp:60 src/torrent/torrentstats.cpp:87
-#, kde-format
-msgid "Error: %1"
-msgstr "Fallu: %1"
-
-#: src/migrate/migrate.cpp:45
-#, kde-format
-msgid "The directory %1 does not exist"
-msgstr "El direutoriu %1 nun esiste"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Cliente desconocíu"
-
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Torrent tollíu."
-
-#: src/torrent/torrent.cpp:165
-#, fuzzy, kde-format
-msgid "Unable to open torrent file %1: %2"
-msgstr " Nun puede abrise'l ficheru torrent %1: %2"
-
-#: src/torrent/torrentcontrol.cpp:300
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:546
-#, kde-format
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"Hebo un fallu mientres se cargaba'l torrent <b>%1</b>:<br/><b>%2</b><br/"
-">Probablemente'l torrent esté tollíu, o nun seya realmente un ficheru "
-"torrent válidu."
-
-#: src/torrent/torrentcontrol.cpp:576
-#, kde-format
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:587
-#, fuzzy, kde-format
-msgid "Unable to create %1: %2"
-msgstr "Nun pudo criase %1: %2"
-
-#: src/torrent/torrentcontrol.cpp:602
-#, kde-format
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:607
-#, fuzzy, kde-format
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "Durante cuántu tiempu tuvo baxádose'l torrent"
-
-#: src/torrent/torrentcreator.cpp:361
-#, kde-format
-msgid "Cannot create index file: %1"
-msgstr "Nun puede criase'l ficheru índiz: %1"
-
-#: src/torrent/torrentstats.cpp:73
-msgid "Not started"
-msgstr "Non aniciáu"
-
-#: src/torrent/torrentstats.cpp:75
-msgid "Download completed"
-msgstr "Baxada finada"
-
-#: src/torrent/torrentstats.cpp:77
-msgid "Seeding completed"
-msgstr "Siembra finada"
-
-#: src/torrent/torrentstats.cpp:79
-msgctxt "Status of a torrent file"
-msgid "Seeding"
-msgstr "Semando"
-
-#: src/torrent/torrentstats.cpp:81
-msgid "Downloading"
-msgstr "Baxando"
-
-#: src/torrent/torrentstats.cpp:83
-msgid "Stalled"
-msgstr "Estancáu"
-
-#: src/torrent/torrentstats.cpp:85
-msgid "Stopped"
-msgstr "Deteniu"
-
-#: src/torrent/torrentstats.cpp:89
-msgid "Allocating diskspace"
-msgstr "Asignando espaciu en discu"
-
-#: src/torrent/torrentstats.cpp:91
-msgid "Queued for seeding"
-msgstr ""
-
-#: src/torrent/torrentstats.cpp:91
+#: src/download/downloader.cpp:808
 #, fuzzy
-msgid "Queued for downloading"
-msgstr "Baxando anguaño:"
-
-#: src/torrent/torrentstats.cpp:95
-msgid "Stopped. No space left on device."
-msgstr "Deteníu. Nun queda espaciu nel preséu."
-
-#: src/torrent/torrentstats.cpp:97
-msgid "Paused"
-msgstr "Posáu"
-
-#: src/torrent/torrentstats.cpp:99
-#, fuzzy
-msgid "Superseeding"
-msgstr "Semando"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Redirixíu ensin un nuevu allugamientu"
-
-#: src/tracker/httptracker.cpp:285 src/tracker/httptracker.cpp:305
-#: src/tracker/httptracker.cpp:461
-msgid "Invalid response from tracker"
-msgstr "Rempuesta nun válida del llocalizador"
-
-#: src/tracker/httptracker.cpp:298
-msgid "Invalid data from tracker"
-msgstr "Datos nun válidos del llocalizador"
-
-#: src/tracker/httptracker.cpp:478
-msgid "Invalid tracker URL"
-msgstr "URL nun válidu del llocalizador"
-
-#: src/tracker/httptracker.cpp:556 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-#, kde-format
-msgid "Timeout contacting tracker %1"
-msgstr ""
-
-#: src/tracker/udptracker.cpp:401
-#, kde-format
-msgid "Unable to resolve hostname %1"
-msgstr "Nun foi posible resolver el nome de máquina %1"
-
-#: src/upnp/httprequest.cpp:96
-#, fuzzy
-msgid "Connection closed unexpectedly"
-msgstr "La conexón zarróse inesperadamente."
-
-#: src/upnp/httprequest.cpp:155
-msgid "Operation timed out"
-msgstr ""
+msgid "Disabled because webseed does not match torrent"
+msgstr "Amuesa toles semilles web d'un torrent"
 
 #: src/upnp/upnprouter.cpp:167
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Failed to download %1: %2"
 msgstr "Fallu al baxar %1: %2"
 
@@ -475,78 +430,31 @@ msgstr ""
 "Nun ye posible atopar el serviciu de redirección de puertos na descripción "
 "del preséu."
 
-#: src/util/file.cpp:84
-#, fuzzy, kde-format
-msgid "Cannot write to %1: %2"
-msgstr "Nun puede escribise en %1: %2"
+#: src/upnp/httprequest.cpp:96
+#, fuzzy
+msgid "Connection closed unexpectedly"
+msgstr "La conexón zarróse inesperadamente."
 
-#: src/util/file.cpp:98
-#, kde-format
-msgid "Cannot read from %1"
-msgstr "Nun puede lleese de %1"
+#: src/upnp/httprequest.cpp:155
+msgid "Operation timed out"
+msgstr ""
 
-#: src/util/fileops.cpp:101
-#, kde-format
-msgid "Cannot create directory %1"
-msgstr "Nun puede criase'l direutoriu %1"
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Cliente desconocíu"
 
-#: src/util/fileops.cpp:168
-#, kde-format
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Nun puede criase'l enllaz simbólicu de %1 a %2: %3"
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "Aceutar"
 
-#: src/util/fileops.cpp:185
-#, kde-format
-msgid "Cannot move %1 to %2: %3"
-msgstr "Nun puede movese %1 a %2: %3"
+#: src/interfaces/trackerinterface.cpp:58
+#, fuzzy
+msgid "Warning: %1"
+msgstr "Abriendo %1"
 
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-#, kde-format
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Nun puede copiase %1 a %2: %3"
-
-#: src/util/fileops.cpp:282
-#, kde-format
-msgid "Cannot delete %1: %2"
-msgstr "Nun puede desaniciase %1: %2"
-
-#: src/util/fileops.cpp:300
-#, kde-format
-msgid "Cannot create %1: %2"
-msgstr "Nun puede criase %1: %2"
-
-#: src/util/fileops.cpp:318
-#, kde-format
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Nun puede calculase'l tamañu del ficheru %1: %2"
-
-#: src/util/fileops.cpp:334
-#, fuzzy, kde-format
-msgid "Cannot calculate the filesize: %1"
-msgstr "Nun puede calculase'l tamañu del ficheru: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-#, kde-format
-msgid "Cannot expand file: %1"
-msgstr "Nun puede espandese'l ficheru: %1"
-
-#: src/util/fileops.cpp:427
-#, fuzzy, kde-format
-msgid "Cannot seek in file: %1"
-msgstr "Nun puede guetase nel ficheru: %1"
-
-#: src/util/functions.cpp:234
-#, kde-format
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-#, kde-format
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 día "
-msgstr[1] "%1 díes "
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Anunciando"
 
 #: src/util/logsystemmanager.cpp:33
 msgid "General"
@@ -581,6 +489,68 @@ msgstr "Fallu al lleer de %1"
 #, fuzzy
 msgid "Error when reading from disk"
 msgstr "Fallu al lleer de %1"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 día "
+msgstr[1] "%1 díes "
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "Nun puede criase'l direutoriu %1"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "Nun puede criase'l enllaz simbólicu de %1 a %2: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "Nun puede movese %1 a %2: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Nun puede copiase %1 a %2: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "Nun puede desaniciase %1: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "Nun puede criase %1: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Nun puede calculase'l tamañu del ficheru %1: %2"
+
+#: src/util/fileops.cpp:334
+#, fuzzy
+msgid "Cannot calculate the filesize: %1"
+msgstr "Nun puede calculase'l tamañu del ficheru: %1"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "Nun puede espandese'l ficheru: %1"
+
+#: src/util/fileops.cpp:427
+#, fuzzy
+msgid "Cannot seek in file: %1"
+msgstr "Nun puede guetase nel ficheru: %1"
+
+#: src/util/file.cpp:84
+#, fuzzy
+msgid "Cannot write to %1: %2"
+msgstr "Nun puede escribise en %1: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Nun puede lleese de %1"
 
 #~ msgid "Parse Error"
 #~ msgstr "Fallu d'analís"

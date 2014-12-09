@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kgpg\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-10-20 05:34+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2014-08-04 09:30+0200\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -23,41 +23,60 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Gregor Rakar,Andrej Vernekar,Jure Repinc,Jaka Kranjc,Andrej Mernik"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
+#: kgpg.h:32
+msgid ""
+"Hi,\n"
+"\n"
+"please find attached the user id '%UIDNAME%' of your key %KEYID% signed by "
+"me. This mail is encrypted with that key to make sure you control both the "
+"email address and the key.\n"
+"\n"
+"If you have multiple user ids, I sent the signature for each user id "
+"separately to that user id's associated email address. You can import the "
+"signatures by running each through `gpg --import` after you have decrypted "
+"them with `gpg --decrypt`.\n"
+"\n"
+"If you are using KGpg store the attachment to disk and then import it. Just "
+"select `Import Key...` from `Keys` menu and open the file.\n"
+"\n"
+"Note that I did not upload your key to any keyservers. If you want this new "
+"signature to be available to others, please upload it yourself. With GnuPG "
+"this can be done using gpg --keyserver subkeys.pgp.net --send-key %KEYID%.\n"
+"\n"
+"With KGpg you can right click on the key once you imported all user ids and "
+"choose `Export Public Key...`.\n"
+"\n"
+"If you have any questions, don't hesitate to ask.\n"
 msgstr ""
-"gregor.rakar@kiss.si,andrej.vernekar@moj.net,jlp@holodeck1.com,smgl@lynxlynx."
-"info,andrejm@ubuntu.si"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: adduid.ui:16
-msgid "Name (minimum 5 characters):"
-msgstr "Ime (vsaj 5 znakov):"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#. i18n: ectx: property (text), widget (QLabel, label_EmailSorting)
-#: adduid.ui:29 conf_ui2.ui:242 newkey.ui:67
-msgid "Email:"
-msgstr "E-pošta:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: adduid.ui:42
-msgid "Comment (optional):"
-msgstr "Opomba (izbirno):"
+"Pozdravljeni\n"
+"\n"
+"Priložen je uporabniški ID »%IMEUID%« vašega ključa %IDKLJUČA%, ki je "
+"podpisan z moje strani. Ta pošta je šifrirana s tem ključem, da se prepričam "
+"v vaš nadzor nad e-poštnim naslovom in ključem.\n"
+"\n"
+"Če imate več uporabniških ID-jev, sem podpis za vsakega od njih ločeno "
+"poslal na e-poštni naslov, ki je povezan z njim. Podpise lahko uvozite, tako "
+"da po odšifriranju z ukazom »gpg --decrypt« zaženete še »gpg --import«.\n"
+"\n"
+"Če uporabljate KGpg, shranite prilogo na disk in jo nato uvozite. Iz menija "
+"»Ključi« izberite »Uvozi ključ ...« in odprite shranjeno datoteko.\n"
+"\n"
+"Zapomnite si, da vašega ključa nisem poslal na noben strežnik s ključi. Če "
+"želite, da je novi podpis na voljo drugim, ga na strežnik pošljite sami. Z "
+"GnuPG to lahko storite z ukazom »gpg --keyserver subkeys.pgp.net --send-key "
+"%KEYID%«.\n"
+"\n"
+"S KGpg lahko po uvozu vseh uporabniških ID-jev kliknete z desno tipko miške "
+"na ključ in iz menija izberete »Izvozi javni ključ ...«.\n"
+"\n"
+"Če imate nadaljnja vprašanja, me kar pogumno vprašajte.\n"
 
 #: caff.cpp:151 caff.cpp:169
-#, kde-format
 msgctxt "%1 is the key id, %2 is the name and comment of the key or uid"
 msgid "%1: %2"
 msgstr "%1: %2"
 
 #: caff.cpp:154 caff.cpp:172
-#, kde-format
 msgctxt ""
 "%1 is the key id, %2 is the name and comment of the key or uid, %3 is the "
 "email address of the uid"
@@ -113,1061 +132,13 @@ msgid "UIDNAME"
 msgstr "IMEUID"
 
 #: caff.cpp:342
-#, kde-format
 msgctxt "%1 is 64 bit key id (in hex), text is used as email subject"
 msgid "Your key %1"
 msgstr "Vaš ključ %1"
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_4_2)
-#: conf_decryption.ui:52
-msgid ""
-"<qt><b>Custom Decryption Command:</b><br />\n"
-"<p>This option allows the user to specify a custom command to be executed by "
-"GPG when decryption occurs. (This is recommended for advanced users only).</"
-"p></qt>"
-msgstr ""
-"<qt><b>Ukaz odšifriranja po meri:</b><br />\n"
-"<p>Ta možnost omogoča uporabniku, da poda ukaz po meri, ki ga izvede GPG ob "
-"odšifriranju. (To je priporočljivo samo za izkušene uporabnike).</p></qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
-#: conf_decryption.ui:55
-msgid "Custom decryption command:"
-msgstr "Ukaz odšifriranja po meri:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, capEncrypt)
-#. i18n: ectx: property (windowTitle), widget (QWidget, Encryption)
-#: conf_encryption.ui:15 kgpgkeygenerate.ui:172 kgpgoptions.cpp:109
-msgid "Encryption"
-msgstr "Šifriranje"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AsciiArmor)
-#: conf_encryption.ui:31
-msgid ""
-"<qt><b>ASCII armored encryption:</b> <br /> \n"
-"<p>Checking this option outputs all encrypted files in a format that can be "
-"opened by a text editor and as such the output is suitable for placing in "
-"the body of an e-mail message.</p></qt>"
-msgstr ""
-"<qt><b>Šifriranje na podlagi ASCII:</b> <br /> \n"
-"<p>Izbor te možnosti bo vse datoteke šifriral v obliko, ki jo lahko odpre "
-"urejevalnik besedila, zato je to primerno za uporabo v telesu e-poštnih "
-"sporočil.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AsciiArmor)
-#: conf_encryption.ui:34 selectpublickeydialog.cpp:95
-msgid "ASCII armored encryption"
-msgstr "Šifriranje na podlagi ASCII"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpExtension)
-#: conf_encryption.ui:42
-msgid ""
-"<qt><b>Use *.pgp extension for encrypted files:</b><br />\n"
-"<p>Checking this option will append a .pgp extension to all encrypted files "
-"instead of a .gpg extension. This option will maintain compatibility with "
-"users of PGP (Pretty Good Privacy) software.</p></qt>"
-msgstr ""
-"<qt><b>Uporabi pripono *.pgp za šifrirane datoteke</b><br />\n"
-"<p>Izbor te možnosti bo dodal pripono .pgp vsem šifriranim datotekam namesto "
-"pripone .gpg . Ta možnost omogoča združljivost z uporabniki programske "
-"opreme PGP (Pretty Good Privacy).</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpExtension)
-#: conf_encryption.ui:45
-msgid "Use *.pgp extension for encrypted files"
-msgstr "Uporabi pripono *.pgp za šifrirane datoteke"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
-#: conf_encryption.ui:69
-msgid ""
-"<qt><b>Custom encryption command:</b><br />\n"
-"<p>When activated, an entry field will be shown in the key selection dialog, "
-"enabling you to enter a custom command for encryption. This option is "
-"recommended for experienced users only.</p></qt>"
-msgstr ""
-"<qt><b>Ukaz šifriranja po meri:</b> <br />\n"
-"<p>Ko je omogočeno, se pokaže vnosno polje v oknu za izbiro ključa, v "
-"katerem vnesete ukaz za šifriranje po meri. Ta možnost je priporočena samo "
-"za izkušene uporabnike.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
-#: conf_encryption.ui:72
-msgid "Custom encryption command:"
-msgstr "Ukaz šifriranja po meri:"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, encrypt_to_always)
-#: conf_encryption.ui:113
-msgid ""
-"<qt><b>Always encrypt with:</b><br />\n"
-"<p>This ensures all files/messages will also be encrypted with the chosen "
-"key. However, if the \"Encrypt files with:\" option is selected that chosen "
-"key will override the \"Always encrypt with:\" selection.</p></qt>"
-msgstr ""
-"<qt><b>Vedno šifriraj z:</b><br />\n"
-"<p>To zagotavlja, da bodo tudi vse datoteke in sporočila šifrirana z "
-"izbranim ključem. Če pa je izbrana možnost »Šifriraj datoteke z:«, bo "
-"slednji ključ prepisal izbiro pri »Vedno šifriraj z:«.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, encrypt_to_always)
-#: conf_encryption.ui:116
-msgid "Always encrypt with:"
-msgstr "Vedno šifriraj z:"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EncryptFilesTo)
-#: conf_encryption.ui:124
-msgid ""
-"<qt><b>Encrypt files with:</b><br />\n"
-"<p>Checking this option and selecting a key will force any file encryption "
-"operation to use the selected key. KGpg will not query for a recipient and "
-"the default key will be bypassed.</p></qt>"
-msgstr ""
-"<qt><b>Šifriraj datoteke z:</b><br />\n"
-"<p>Izbor te možnosti in izbor ključa bo prisilil vsako opravilo šifriranja "
-"datotek, da uporabi izbrani ključ. KGpg ne bo poizvedel po prejemniku, "
-"privzeti ključ pa bo prezrt.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EncryptFilesTo)
-#: conf_encryption.ui:127
-msgid "Encrypt files with:"
-msgstr "Šifriraj datoteke z:"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedKeys)
-#: conf_encryption.ui:135
-msgid ""
-"<qt><b>Allow encryption with untrusted keys:</b><br />\n"
-"<p>When importing a public key, the key is usually marked as untrusted and "
-"as such cannot be used unless it is signed by the default key (thus making "
-"it 'trusted'). Checking this box enables any key to be used even if it is "
-"untrusted.</p></qt>"
-msgstr ""
-"<qt><b>Dovoli šifriranje s ključi, ki niso zaupanja vredni:</b><br />\n"
-"<p>Ko uvažate javen ključ, se ključ običajno označi, da ni vreden zaupanja "
-"in tako ne more biti uporabljen, razen če ga podpišete s privzetim ključem "
-"(postane »zaupanja vreden«). Izbor te možnosti omogoča uporabo kateregakoli "
-"ključa, tudi če ni zaupanja vreden.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedKeys)
-#: conf_encryption.ui:138 selectpublickeydialog.cpp:100
-msgid "Allow encryption with untrusted keys"
-msgstr "Dovoli šifriranje s ključi, ki niso zaupanja vredni"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
-#: conf_encryption.ui:145
-msgid ""
-"<qt><b>Allow untrusted keys as members of key groups:</b><br /><p>A key "
-"group allows simple encryption to multiple recipients at once. Similar to "
-"the <em>Allow encryption with untrusted keys</em> option this allows "
-"untrusted keys to become member of a key group.</p></qt>"
-msgstr ""
-"<qt><b>Ključem, ki niso zaupanja vredni, dovoli, da so del skupin ključev</"
-"b><br /><p>Skupina ključev omogoča preprosto šifriranje za več prejemnikov "
-"hkrati. Podobno kot <em>Dovoli šifriranje s ključi, ki niso zaupanja vredni</"
-"em> ta možnost omogoča, da ključi, ki niso zaupanja vredni, postanejo del "
-"skupine ključev.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
-#: conf_encryption.ui:148
-msgid "Allow untrusted keys as members of key groups"
-msgstr "Ključem, ki niso zaupanja vredni, dovoli, da so del skupin ključev"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_HideUserID)
-#: conf_encryption.ui:156
-msgid ""
-"<qt><b>Hide user ID:</b><br /> \n"
-"<p>Checking this option will remove the keyid of the recipient from all "
-"encrypted packets. The advantage: traffic analysis of the encrypted packets "
-"cannot be performed as easily because the recipient is unknown. The "
-"disadvantage: the receiver of the encrypted packets is forced to try all "
-"secret keys before being able to decrypt the packets. This can be a lengthy "
-"process depending on the number of secret keys the receiver holds.</p></qt>"
-msgstr ""
-"<qt><b>Skrij uporabniški ID:</b><br /> \n"
-"<p>Izbor te možnosti bo odstranil ID ključa pošiljatelja iz vseh šifriranih "
-"paketov. Prednost: ni mogoče preučiti prometa na šifriranih paketih tako "
-"zlahka, saj pošiljatelj ni znan. Slabost: prejemnik šifriranih paketov mora "
-"preizkusiti vse skrivne ključe pred odšifriranjem paketov. To je lahko "
-"dolgotrajno opravilo, odvisno od števila skrivnih ključev, ki jih ima "
-"prejemnik.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HideUserID)
-#: conf_encryption.ui:159 selectpublickeydialog.cpp:106
-msgid "Hide user id"
-msgstr "Skrij uporabniški ID"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpCompatibility)
-#: conf_encryption.ui:167
-msgid ""
-"<qt><b>PGP 6 compatibility:</b><br /> \n"
-"<p>Checking this option forces GnuPG to output encrypted packets that are as "
-"compliant with PGP (Pretty Good Privacy) 6 standards as possible thus "
-"allowing GnuPG users to inter operate with PGP 6 users.</p></qt>"
-msgstr ""
-"<qt><b>Združljivost s PGP 6:</b><br />\n"
-"<p>Izbor te možnosti prisili GnuPG, da izdaja šifrirane pakete, ki so "
-"čimbolj združljivi s standardi PGP (Pretty Good Privacy) 6, da lahko "
-"uporabniki GnuPG sodelujejo z uporabniki PGP 6.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpCompatibility)
-#: conf_encryption.ui:170
-msgid "PGP 6 compatibility"
-msgstr "Združljivost s PGP 6"
-
-#. i18n: ectx: property (whatsThis), widget (QWidget, GPGConf)
-#: conf_gpg.ui:16
-msgid ""
-"<qt><b>Global Settings:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-msgstr ""
-"<qt><b>Splošne nastavitve:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: conf_gpg.ui:22
-msgid "GnuPG Home"
-msgstr "Domača mapa GnuPG"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2)
-#: conf_gpg.ui:30
-msgid ""
-"<b>Home Location</b><p>This is the directory where GnuPG stores its "
-"configuration and the keyrings. If you have not changed it this is usually "
-"<em>~/.gnupg/</em></p>"
-msgstr ""
-"<b>Domače mesto</b><p>To je mapa v katerega GnuPG shranjuje svoje nastavitve "
-"in zbirke ključev. Ponavadi je to <em>~/.gnupg/</em></p>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2)
-#: conf_gpg.ui:33
-msgid "Home location:"
-msgstr "Domače mesto:"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2_2)
-#: conf_gpg.ui:43
-msgid ""
-"<b>Configuration File</b><p>This is the name of the configuration file in "
-"the directory specified above. The default is <em>gnupg.conf</em> while "
-"older versions of GnuPG used <em>options</em>.</p>"
-msgstr ""
-"<b>Nastavitvena datoteka</b><p>To je ime nastavitvene datoteke v zgoraj "
-"navedeni mapi. Privzeto je to <em>gnupg.conf</em>, starejše različice GnuPG "
-"pa so uporabljale <em>options</em>.</p>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2_2)
-#: conf_gpg.ui:46
-msgid "Configuration file:"
-msgstr "Nastavitvena datoteka:"
-
-#. i18n: ectx: property (text), widget (QPushButton, changeHome)
-#: conf_gpg.ui:96
-msgid "Change..."
-msgstr "Spremeni ..."
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: conf_gpg.ui:108 kgpgfirstassistant.cpp:123
-msgid "GnuPG Binary"
-msgstr "Program GnuPG"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_6_2)
-#: conf_gpg.ui:114
-msgid ""
-"<b>Program path</b><p>This is the program that will be called for all GnuPG "
-"operations. The default of <em>gpg</em> will work on most systems.</p>"
-msgstr ""
-"<b>Pot do programa</b><p>To je program, ki bo zagnan za vsa opravila GnuPG. "
-"Privzeta vrednost <em>gpg</em> bo delovala na večini sistemov.</p>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_6_2)
-#: conf_gpg.ui:117
-msgid "Program path:"
-msgstr "Pot do programa:"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, use_agent)
-#: conf_gpg.ui:157
-msgid ""
-"<b>Use GnuPG agent</b><p>The GnuPG agent stores the passwords for your "
-"secret keys in memory for a limited amount of time. If you use your secret "
-"key again while it is cached you do not have to enter it again. This is less "
-"secure than typing it every time.</p>"
-msgstr ""
-"<b>Uporabi posrednika GnuPG</b><p>Posrednik GnuPG v pomnilnik začasno shrani "
-"gesla vaših skrivnih ključev. Če skrivni ključ, medtem ko je ta shranjen, "
-"ponovno uporabite, vam ne bo treba še enkrat vpisovati gesla. To je manj "
-"varno, kot pa če bi ga vpisali vsakič znova.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, use_agent)
-#: conf_gpg.ui:160
-msgid "Use GnuPG agent"
-msgstr "Uporabi posrednik GnuPG"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabGlobal)
-#: conf_misc.ui:24
-msgid "Global Settings"
-msgstr "Splošne nastavitve"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutoStart)
-#: conf_misc.ui:33
-msgid ""
-"<qt><b>Start KGpg automatically at KDE startup:</b><br />\n"
-"<p>If checked KGpg will start automatically each time that KDE starts up.</"
-"p></qt>"
-msgstr ""
-"<qt><b>Ob prijavi samodejno zaženi KGpg:</b><br />\n"
-"<p>Če je to označeno, se KGpg samodejno zažene ob vsakem zagonu KDE.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoStart)
-#: conf_misc.ui:36
-msgid "Start KGpg automatically at login"
-msgstr "Ob prijavi samodejno zaženi KGpg"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_UseMouseSelection)
-#: conf_misc.ui:53
-msgid ""
-"<qt><b>Use mouse selection instead of clipboard:</b><br />\n"
-"<p>If checked, clipboard operations in KGpg will use the selection "
-"clipboard, that means highlighting a text to copy, and middle button (or "
-"right+left together) to paste. If this option is not checked, the clipboard "
-"will work with Key shortcuts (Ctrl-c, Ctrl-v).</p></qt> "
-msgstr ""
-"<qt><b>Uporabi miškino izbiro namesto odložišča:</b><br />\n"
-"<p>Če je označeno, bodo dejanja odložišča v KGpg uporabila izbirno "
-"odložišče, kar pomeni, da izbor besedila z miško kopira, srednji gumb (ali "
-"pa skupaj levi in desni) pa prilepi besedilo. Če ta možnost ni označena, "
-"odložišče deluje z bližnjicami (Ctrl-C, Ctrl-V).</p></qt> "
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseMouseSelection)
-#: conf_misc.ui:56
-msgid "Use mouse selection instead of clipboard"
-msgstr "Uporabi miškino izbiro namesto odložišča"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_RemoteFileWarn)
-#: conf_misc.ui:70
-msgid ""
-"<qt><b>Display warning before creating temporary files:</b><br />\n"
-"<p></p></qt>"
-msgstr ""
-"<qt><b>Prikaži opozorilo pred ustvaritvijo začasnih datotek:</b><br />\n"
-"<p></p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_RemoteFileWarn)
-#: conf_misc.ui:74
-msgid ""
-"Display warning before creating temporary files\n"
-"(only occurs on remote files operations)"
-msgstr ""
-"Prikaži opozorilo pred ustvarjanjem začasnih datotek \n"
-"(samo pri opravilih z oddaljenimi datotekami)"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabApplet)
-#: conf_misc.ui:97
-msgid "Applet && Menus"
-msgstr "Aplet in meniji"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox11)
-#: conf_misc.ui:103
-msgid "Konqueror Service Menus"
-msgstr "Storitveni meniji Konquerorja"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
-#: conf_misc.ui:119
-msgid ""
-"<qt><b>Sign file service menu:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-msgstr ""
-"<qt><b>Meni storitve podpisovanja datotek:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: conf_misc.ui:122
-msgid "Sign file service menu:"
-msgstr "Meni storitve podpisovanja datotek:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
-#: conf_misc.ui:139 conf_misc.ui:178 keysmanager.cpp:310
-msgid "Disable"
-msgstr "Onemogoči"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
-#: conf_misc.ui:144 conf_misc.ui:183
-msgid "Enable with All Files"
-msgstr "Omogoči z vsemi datotekami"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_3)
-#: conf_misc.ui:164
-msgid ""
-"<qt><b>Decrypt file service menu:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-msgstr ""
-"<qt><b>Meni storitve odšifriranja datotek:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: conf_misc.ui:167
-msgid "Decrypt file service menu:"
-msgstr "Meni storitve odšifriranja datotek:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
-#: conf_misc.ui:188
-msgid "Enable with Encrypted Files"
-msgstr "Omogoči s šifriranimi datotekami"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: conf_misc.ui:201
-msgid "System Tray Applet"
-msgstr "Aplet sistemske vrstice"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowSystray)
-#: conf_misc.ui:208
-msgid ""
-"<qt><b>Show system tray icon:</b><br />\n"
-"<p>If checked KGpg will minimize to an icon in the system tray.</p></qt>"
-msgstr ""
-"<qt><b>Pokaži ikono v sistemski vrstici:</b><br />\n"
-"<p>Če je to označeno, se bo KGpg skrčil v ikono v sistemski vrstici.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSystray)
-#: conf_misc.ui:211
-msgid "Show system tray icon"
-msgstr "Pokaži ikono v sistemski vrstici"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: conf_misc.ui:223
-msgid "Left mouse click opens:"
-msgstr "Levi miškin klik odpre:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
-#: conf_misc.ui:240
-msgid "Key Manager"
-msgstr "Upravljalnik ključev"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
-#. i18n: ectx: attribute (title), widget (QWidget, tabEditor)
-#: conf_misc.ui:245 conf_misc.ui:272 editor/kgpgeditor.cpp:504
-msgid "Editor"
-msgstr "Urejevalnik"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: conf_misc.ui:280
-msgid "Recent files"
-msgstr "Nedavne datoteke"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabSigning)
-#: conf_misc.ui:306
-msgid "Key Signing"
-msgstr "Podpisovanje ključev"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
-#: conf_misc.ui:314
-msgid ""
-"Here you can define how User Ids that do not contain an email address (like "
-"Photo Ids) are sent to the key owner. You can choose to either send them "
-"with every other User Id you signed, only with the first Id you signed or to "
-"not send them at all."
-msgstr ""
-"Tu lahko določite, kako se lastnikom ključev pošiljajo uporabniški ID-ji, ki "
-"ne vsebujejo e-poštnega naslova (npr. fotografski ID). Izberete lahko med "
-"pošiljanjem z vsakim drugim uporabniškim ID-jem, s katerim ste podpisali; "
-"samo s prvim podpisanim uporabniškim ID-jem ali pa jih sploh ne pošljete."
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: conf_misc.ui:317
-msgid "Mailing of User Ids without Email Addresses"
-msgstr "Pošiljanje uporabniških ID-jev brez e-poštnega naslova"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
-#: conf_misc.ui:325
-msgid "Send with every Email"
-msgstr "Pošlji z vsako e-pošto"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
-#: conf_misc.ui:330
-msgid "Send only with first Email"
-msgstr "Pošlji samo s prvo e-pošto"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
-#: conf_misc.ui:335
-msgid "Do not send"
-msgstr "Ne pošlji"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: conf_misc.ui:345
-msgid "Email template"
-msgstr "Predloga e-pošte"
-
-#. i18n: ectx: property (whatsThis), widget (KTextEdit, EmailTemplateEdit)
-#: conf_misc.ui:353
-#, no-c-format
-msgid ""
-"This is the text of the email sent by the \"Sign and Mail User ID\" action.\n"
-"\n"
-"The placeholders surrounded by the percent signs (like %KEYID%) will be "
-"replaced with the corresponding text for every single mail."
-msgstr ""
-"To je besedilo e-pošte, ki je poslana z dejanjem »Podpiši in pošlji "
-"uporabniški ID.\n"
-"\n"
-"Vsebniki, ki so obdani z znakoma za odstotek (npr. %IDKLJUČA%), bodo za "
-"vsako posamezno e-pošto zamenjani z ustreznim besedilom."
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: conf_servers.ui:25
-msgid ""
-"<b>INFORMATION</b>:\n"
-"Only the default server will be stored in GnuPG's configuration file,\n"
-"all others will be stored for use by KGpg only."
-msgstr ""
-"<b>PODROBNOSTI</b>:\n"
-"Samo privzeti strežnik bo shranjen v nastavitveno datoteko GnuPG, \n"
-"vsi ostali pa bodo shranjeni samo za uporabo v KGpg."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseProxy)
-#: conf_servers.ui:35
-msgid "Honor HTTP proxy when available"
-msgstr "Upoštevaj posredniški strežnik HTTP, ko je na voljo"
-
-#. i18n: ectx: property (text), widget (KPushButton, server_default)
-#: conf_servers.ui:49
-msgid "&Set as Default"
-msgstr "&Nastavi kot privzeto"
-
-#. i18n: ectx: property (text), widget (KPushButton, server_add)
-#: conf_servers.ui:56
-msgid "&Add..."
-msgstr "&Dodaj ..."
-
-#. i18n: ectx: property (text), widget (KPushButton, server_del)
-#: conf_servers.ui:66
-msgid "&Delete"
-msgstr "I&zbriši"
-
-#. i18n: ectx: property (text), widget (KPushButton, server_edit)
-#: conf_servers.ui:73
-msgid "&Edit..."
-msgstr "&Uredi ..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: conf_ui2.ui:32
-msgid "Key Colors"
-msgstr "Barve ključev"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUltimate)
-#: conf_ui2.ui:42
-msgid "Ultimately trusted keys:"
-msgstr "Ključi, ki jim povsem zaupate:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustTrusted)
-#: conf_ui2.ui:52
-msgid "Trusted keys:"
-msgstr "Zaupanja vredni ključi:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustMarginally)
-#: conf_ui2.ui:62
-msgid "Marginally trusted keys:"
-msgstr "Ključi, ki jim delno zaupate:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustExpired)
-#: conf_ui2.ui:72
-msgid "Expired keys:"
-msgstr "Pretečeni ključi:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustRevoked)
-#: conf_ui2.ui:82
-msgid "Revoked keys:"
-msgstr "Preklicani ključi:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUnknown)
-#: conf_ui2.ui:92
-msgid "Unknown keys:"
-msgstr "Neznani ključi:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustDisabled)
-#: conf_ui2.ui:102
-msgid "Disabled keys:"
-msgstr "Onemogočeni ključi:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, TabPage)
-#: conf_ui2.ui:225
-msgid "Editor Font"
-msgstr "Pisava urejevalnika"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabKeyList)
-#: conf_ui2.ui:230
-msgid "Key List"
-msgstr "Seznam ključev"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBoxSorting)
-#: conf_ui2.ui:236
-msgid "Sort Order"
-msgstr "Vrstni red razvrščanja"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
-#: conf_ui2.ui:253 kgpgoptions.cpp:101
-msgid "Left to right, account first"
-msgstr "Od leve proti desni, najprej račun"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
-#: conf_ui2.ui:258 kgpgoptions.cpp:102
-msgid "Right to left, TLD first"
-msgstr "Od desne proti levi, najprej vrhnja internetna domena (TLD)"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
-#: conf_ui2.ui:263 kgpgoptions.cpp:103
-msgid "Right to left, domain first"
-msgstr "Od desne proti levi, najprej domena"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
-#: conf_ui2.ui:268 kgpgoptions.cpp:104
-msgid "Right to left, FQDN first"
-msgstr "Od desne proti levi, najprej absolutno ime domene (FQDN)"
-
-#: core/convert.cpp:39
-msgctxt "Encryption algorithm"
-msgid "RSA"
-msgstr "RSA"
-
-#: core/convert.cpp:41
-msgctxt "Encryption algorithm"
-msgid "DSA"
-msgstr "DSA"
-
-#: core/convert.cpp:43
-msgctxt "Encryption algorithm"
-msgid "ElGamal"
-msgstr "ElGamal"
-
-#: core/convert.cpp:45
-msgctxt "Encryption algorithm"
-msgid "DSA & ElGamal"
-msgstr "DSA in ElGamal"
-
-#: core/convert.cpp:47
-msgctxt "Encryption algorithm RSA, Signing algorithm RSA"
-msgid "RSA & RSA"
-msgstr "RSA in RSA"
-
-#: core/convert.cpp:50
-msgctxt "Unknown algorithm"
-msgid "Unknown"
-msgstr "Neznan"
-
-#: core/convert.cpp:58
-msgid "Do not Know"
-msgstr "Ne vem"
-
-#: core/convert.cpp:60
-msgid "Do NOT Trust"
-msgstr "NE zaupaj"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: core/convert.cpp:62 kgpgKeyInfo.ui:196
-msgid "Marginally"
-msgstr "Delno"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: core/convert.cpp:64 kgpgKeyInfo.ui:201
-msgid "Fully"
-msgstr "Polno"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: core/convert.cpp:66 kgpgKeyInfo.ui:206
-msgid "Ultimately"
-msgstr "Popolno"
-
-#: core/convert.cpp:69
-msgctxt "Unknown trust in key owner"
-msgid "Unknown"
-msgstr "Neznano"
-
-#: core/convert.cpp:77
-msgctxt "Invalid key"
-msgid "Invalid"
-msgstr "Neveljaven"
-
-#: core/convert.cpp:79
-msgctxt "Disabled key"
-msgid "Disabled"
-msgstr "Onemogočen"
-
-#: core/convert.cpp:81
-msgid "Revoked"
-msgstr "Preklican"
-
-#: core/convert.cpp:83 model/groupeditproxymodel.cpp:110
-msgctxt "Expired key"
-msgid "Expired"
-msgstr "Pretečen"
-
-#: core/convert.cpp:85
-msgctxt "Undefined key trust"
-msgid "Undefined"
-msgstr "Nedoločeno"
-
-#: core/convert.cpp:87
-msgctxt "No trust in key"
-msgid "None"
-msgstr "Brez"
-
-#: core/convert.cpp:89
-msgctxt "Marginal trust in key"
-msgid "Marginal"
-msgstr "Delno"
-
-#: core/convert.cpp:91
-msgctxt "Full trust in key"
-msgid "Full"
-msgstr "Polno"
-
-#: core/convert.cpp:93
-msgctxt "Ultimate trust in key"
-msgid "Ultimate"
-msgstr "Popolno"
-
-#: core/convert.cpp:96
-msgctxt "Unknown trust in key"
-msgid "Unknown"
-msgstr "Neznano"
-
-#: core/convert.cpp:105
-msgctxt "key capability"
-msgid "Signature"
-msgstr "Podpis"
-
-#: core/convert.cpp:107
-msgctxt "key capability"
-msgid "Encryption"
-msgstr "Šifriranje"
-
-#: core/convert.cpp:109
-msgctxt "key capability"
-msgid "Authentication"
-msgstr "Overitev"
-
-#: core/convert.cpp:111
-msgctxt "key capability"
-msgid "Certification"
-msgstr "Potrjevanje"
-
-#: core/convert.cpp:113
-msgctxt "used to join a list of key types, e.g. 'encryption, signature'"
-msgid ", "
-msgstr ", "
-
-#: core/KGpgGroupNode.cpp:164
-#, kde-format
-msgid "1 key"
-msgid_plural "%1 keys"
-msgstr[0] "%1 ključev"
-msgstr[1] "%1 ključ"
-msgstr[2] "%1 ključa"
-msgstr[3] "%1 ključi"
-
-#: core/KGpgKeyNode.cpp:84
-#, kde-format
-msgctxt "size of signing key / size of encryption key"
-msgid "%1 / %2"
-msgstr "%1 / %2"
-
-#: core/KGpgKeyNode.cpp:170 core/KGpgSignableNode.cpp:48
-#, kde-format
-msgid "1 signature"
-msgid_plural "%1 signatures"
-msgstr[0] "%1 podpisov"
-msgstr[1] "%1 podpis"
-msgstr[2] "%1 podpisa"
-msgstr[3] "%1 podpisi"
-
-#: core/KGpgNode.cpp:56
-#, kde-format
-msgctxt "Name of uid (comment)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
-
-#: core/KGpgRefNode.cpp:128 transactions/kgpgtransaction.cpp:634
-msgid "[No user id found]"
-msgstr "[Ni najdenega uporabniškega ID]"
-
-#: core/KGpgSignNode.cpp:88
-#, kde-format
-msgid "%1 [local signature]"
-msgstr "%1 [krajevni podpis]"
-
-#: core/KGpgSubkeyNode.cpp:86
-#, kde-format
-msgid "%1 subkey"
-msgstr "Podključ %1"
-
-#: core/KGpgUatNode.cpp:105
-msgid "Photo id"
-msgstr "Fotografski ID"
-
 #: detailedconsole.cpp:30
 msgid "Info"
 msgstr "Podrobnosti"
-
-#: editor/kgpgeditor.cpp:91 editor/kgpgeditor.cpp:241
-#: editor/kgpgeditor.cpp:749 editor/kgpgeditor.cpp:778
-msgid "Untitled"
-msgstr "Neimenovan"
-
-#: editor/kgpgeditor.cpp:187
-msgid "&Encrypt File..."
-msgstr "&Šifriraj datoteko ..."
-
-#: editor/kgpgeditor.cpp:191
-msgid "&Decrypt File..."
-msgstr "O&dšifriraj datoteko ..."
-
-#: editor/kgpgeditor.cpp:195
-msgid "&Open Key Manager"
-msgstr "&Odpri upravljalnik ključev"
-
-#: editor/kgpgeditor.cpp:198
-msgid "&Generate Signature..."
-msgstr "&Ustvari podpis ..."
-
-#: editor/kgpgeditor.cpp:202
-msgid "&Verify Signature..."
-msgstr "&Preveri podpis ..."
-
-#: editor/kgpgeditor.cpp:205
-msgid "&Check MD5 Sum..."
-msgstr "P&reveri vsoto MD5 ..."
-
-#: editor/kgpgeditor.cpp:208
-msgid "&Unicode (utf-8) Encoding"
-msgstr "Kodiranje &Unicode (utf-8)"
-
-#: editor/kgpgeditor.cpp:214
-msgid "En&crypt"
-msgstr "&Šifriraj"
-
-#: editor/kgpgeditor.cpp:218
-msgid "&Decrypt"
-msgstr "O&dšifriraj"
-
-#: editor/kgpgeditor.cpp:222
-msgid "S&ign/Verify"
-msgstr "Podp&iši/preveri"
-
-#: editor/kgpgeditor.cpp:245
-#, kde-format
-msgid ""
-"The document \"%1\" has changed.\n"
-"Do you want to save it?"
-msgstr ""
-"Dokument »%1« je spremenjen.\n"
-"Ali ga želite shraniti?"
-
-#: editor/kgpgeditor.cpp:246
-msgid "Close the document"
-msgstr "Zapri dokument"
-
-#: editor/kgpgeditor.cpp:292
-msgid ""
-"The document could not been saved, as the selected codec is not supported."
-msgstr "Dokumenta ni bilo mogoče shraniti, saj izbrani kodek ni podprt."
-
-#: editor/kgpgeditor.cpp:298
-msgid ""
-"The document could not been saved, as the selected encoding cannot encode "
-"every unicode character in it."
-msgstr ""
-"Dokumenta ni bilo mogoče shraniti, saj izbrano kodiranje ne more šifrirati "
-"vsakega znaka unicode v njem."
-
-#: editor/kgpgeditor.cpp:307 editor/kgpgeditor.cpp:326
-msgid ""
-"The document could not be saved, please check your permissions and disk "
-"space."
-msgstr ""
-"Dokumenta ni bilo mogoče shraniti. Preverite vaša dovoljenja in prostor na "
-"disku."
-
-#: editor/kgpgeditor.cpp:352 editor/kgpgeditor.cpp:359 keyexport.cpp:42
-#, kde-format
-msgid "Overwrite existing file %1?"
-msgstr "Prepišem obstoječo datoteko %1?"
-
-#: editor/kgpgeditor.cpp:470 editor/kgpgeditor.cpp:479
-#: editor/kgpgeditor.cpp:614 editor/kgpgeditor.cpp:652
-#: editor/kgpgeditor.cpp:690
-msgid "*|All Files"
-msgstr "*|Vse datoteke"
-
-#: editor/kgpgeditor.cpp:470
-msgid "Open File to Encode"
-msgstr "Odpri datoteko za šifriranje"
-
-#: editor/kgpgeditor.cpp:479
-msgid "Open File to Decode"
-msgstr "Odpri datoteko za odšifriranje"
-
-#: editor/kgpgeditor.cpp:493
-msgid "Decrypt File To"
-msgstr "Odšifriraj datoteko v"
-
-#: editor/kgpgeditor.cpp:502 keyexport.cpp:28
-msgid "Save File"
-msgstr "Shrani datoteko"
-
-#: editor/kgpgeditor.cpp:523 kgpgexternalactions.cpp:208
-#: kgpgexternalactions.cpp:371 transactions/kgpgtransaction.cpp:189
-msgid "File Already Exists"
-msgstr "Datoteka že obstaja"
-
-#: editor/kgpgeditor.cpp:614
-msgid "Open File to Sign"
-msgstr "Odpri datoteko za podpis"
-
-#: editor/kgpgeditor.cpp:652 editor/kgpgeditor.cpp:690
-msgid "Open File to Verify"
-msgstr "Odpri datoteko za preverjanje"
-
-#: editor/kgpgeditor.cpp:703 editor/kgpgtextedit.cpp:333
-#, kde-format
-msgid ""
-"<qt><b>Missing signature:</b><br />Key id: %1<br /><br />Do you want to "
-"import this key from a keyserver?</qt>"
-msgstr ""
-"<qt><b>Manjkajoč podpis:</b><br />ID ključa: %1<br /><br />Ali želite "
-"uvoziti ta ključ s strežnika s ključi?</qt>"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_import)
-#: editor/kgpgeditor.cpp:704 keyserver.ui:32 keytreeview.cpp:167
-msgid "Import"
-msgstr "Uvozi"
-
-#: editor/kgpgeditor.cpp:704 keytreeview.cpp:168
-msgid "Do Not Import"
-msgstr "Ne uvozi"
-
-#: editor/kgpgeditor.cpp:730 transactions/kgpgverify.cpp:149
-msgid "No signature found."
-msgstr "Ni najdenega podpisa."
-
-#: editor/kgpgeditor.cpp:735 editor/kgpgtextedit.cpp:320
-#: kgpgexternalactions.cpp:288
-msgctxt "Caption of message box"
-msgid "Verification Finished"
-msgstr "Preverjanje zaključeno"
-
-#. i18n: ectx: Menu (view)
-#: editor/kgpgeditor.rc:13 keysmanager.rc:25
-msgid "&View"
-msgstr "&Pogled"
-
-#. i18n: ectx: Menu (signature)
-#: editor/kgpgeditor.rc:18
-msgid "Si&gnature"
-msgstr "Po&dpis"
-
-#: editor/kgpgmd5widget.cpp:28
-msgid "MD5 Checksum"
-msgstr "Nadzorna vsota MD5"
-
-#: editor/kgpgmd5widget.cpp:31
-msgid "Compare MD5 with Clipboard"
-msgstr "Primerjaj MD5 z odložiščem"
-
-#: editor/kgpgmd5widget.cpp:46
-#, kde-format
-msgid "MD5 sum for <b>%1</b> is:"
-msgstr "Vsota MD5 za <b>%1</b> je:"
-
-#: editor/kgpgmd5widget.cpp:59
-msgid "<b>Unknown status</b>"
-msgstr "<b>Neznano stanje</b>"
-
-#: editor/kgpgmd5widget.cpp:84
-msgid "Clipboard content is not a MD5 sum."
-msgstr "Vsebina odložišča ni vsota MD5."
-
-#: editor/kgpgmd5widget.cpp:88
-msgid "<b>Correct checksum</b>, file is ok."
-msgstr "<b>Pravilna vsota</b>, datoteka je v redu."
-
-#: editor/kgpgmd5widget.cpp:94
-msgid "<b>Wrong checksum, <em>file corrupted</em></b>"
-msgstr "<b>Napačna nadzorna vsota, <em>datoteka je pokvarjena</em></b>"
-
-#: editor/kgpgtextedit.cpp:90
-msgid ""
-"<qt><b>Remote file dropped</b>.<br />The remote file will now be copied to a "
-"temporary file to process requested operation. This temporary file will be "
-"deleted after operation.</qt>"
-msgstr ""
-"<qt><b>Oddaljena datoteka spuščena</b>.<br />Oddaljena datoteka bo sedaj "
-"kopirana v začasno, da se izvede zahtevano opravilo. Ta začasna datoteka bo "
-"po koncu opravila izbrisana.</qt>"
-
-#: editor/kgpgtextedit.cpp:94
-msgid "Could not download file."
-msgstr "Ni bilo mogoče prejeti datoteke."
-
-#: editor/kgpgtextedit.cpp:127
-msgid ""
-"<qt>This file is a <b>public</b> key.<br />Do you want to import it instead "
-"of opening it in editor?</qt>"
-msgstr ""
-"<qt>Ta datoteka je <b>javni</b> ključ.<br />Ali jo želite uvoziti namesto "
-"odprtja v urejevalniku?</qt>"
-
-#: editor/kgpgtextedit.cpp:130
-msgid ""
-"<qt>This file is a <b>private</b> key.<br />Do you want to import it instead "
-"of opening it in editor?</qt>"
-msgstr ""
-"<qt>Ta datoteka je <b>zasebni</b> ključ.<br />Ali jo želite uvoziti namesto "
-"odprtja v urejevalniku?</qt>"
-
-#: editor/kgpgtextedit.cpp:135
-msgid "Key file dropped on Editor"
-msgstr "Datoteka s ključem spuščena v urejevalnik"
-
-#: editor/kgpgtextedit.cpp:257 kgpgexternalactions.cpp:408
-msgid "Decryption failed."
-msgstr "Odšifriranje ni uspelo."
-
-#: editor/kgpgtextedit.cpp:272 foldercompressjob.cpp:140
-#, kde-format
-msgid "The encryption failed with error code %1"
-msgstr "Šifriranje je spodletelo s kodo napake %1"
-
-#: editor/kgpgtextedit.cpp:273 foldercompressjob.cpp:141
-msgid "Encryption failed."
-msgstr "Šifriranje ni uspelo."
-
-#: editor/kgpgtextedit.cpp:286
-msgid "Signing not possible: bad passphrase or missing key"
-msgstr "Podpisovanje ni mogoče: slaba šifrirna fraza ali manjkajoč ključ"
-
-#. i18n: ectx: property (text), widget (QPushButton, Buttonimport)
-#: editor/kgpgtextedit.cpp:326 keyserver.ui:144 keyservers.cpp:213
-msgid "&Import"
-msgstr "&Uvozi"
-
-#: editor/kgpgtextedit.cpp:327
-msgid "Import key in your list"
-msgstr "Uvozi ključ v vaš seznam"
-
-#: editor/kgpgtextedit.cpp:330
-msgid "Do &Not Import"
-msgstr "&Ne uvozi"
-
-#: editor/kgpgtextedit.cpp:331
-msgid "Will not import this key in your list"
-msgstr "Ta ključ ne bo uvožen v vaš seznam"
-
-#: editor/kgpgtextedit.cpp:333
-msgid "Missing Key"
-msgstr "Manjkajoč ključ"
 
 #: foldercompressjob.cpp:44
 msgid "Processing folder compression and encryption"
@@ -1190,13 +161,19 @@ msgid "Unable to create temporary file"
 msgstr "Ni mogoče ustvariti začasne datoteke"
 
 #: foldercompressjob.cpp:123 transactions/kgpgencrypt.cpp:106
-#, kde-format
 msgctxt "Status message 'Encrypting <filename>' (operation starts)"
 msgid "Encrypting %1"
 msgstr "Šifriranje %1"
 
+#: foldercompressjob.cpp:140 editor/kgpgtextedit.cpp:272
+msgid "The encryption failed with error code %1"
+msgstr "Šifriranje je spodletelo s kodo napake %1"
+
+#: foldercompressjob.cpp:141 editor/kgpgtextedit.cpp:273
+msgid "Encryption failed."
+msgstr "Šifriranje ni uspelo."
+
 #: foldercompressjob.cpp:144 transactions/kgpgencrypt.cpp:109
-#, kde-format
 msgctxt "Status message 'Encrypted <filename>' (operation was completed)"
 msgid "Encrypted %1"
 msgstr "%1 šifrirana"
@@ -1229,95 +206,17 @@ msgstr "Razpoložljivi ključi"
 msgid "Available Trusted Keys"
 msgstr "Razpoložljivi ključi, ki so zaupanja vredni"
 
-#. i18n: ectx: property (text), widget (QLabel, filterEditLabel)
-#. i18n: ectx: property (text), widget (QLabel)
-#: groupedit.ui:38 keysmanager.cpp:431 searchres.ui:28
-msgid "Search:"
-msgstr "Poišči:"
-
-#. i18n: ectx: property (text), widget (QTableView, availableKeys)
-#. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: groupedit.ui:74 groupedit.ui:158 model/kgpgitemmodel.cpp:372
-#: model/kgpgsearchresultmodel.cpp:334
-msgid "Name"
-msgstr "Ime"
-
-#. i18n: ectx: property (text), widget (QTableView, availableKeys)
-#. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: groupedit.ui:79 groupedit.ui:163 model/kgpgitemmodel.cpp:373
-#: model/kgpgsearchresultmodel.cpp:336
-msgctxt "@title:column Title of a column of emails"
-msgid "Email"
-msgstr "E-pošta"
-
-#. i18n: ectx: property (text), widget (QTableView, availableKeys)
-#. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: groupedit.ui:84 groupedit.ui:168
-msgid "Id"
-msgstr "ID"
-
-#. i18n: ectx: property (text), widget (QLabel, kActiveLabel1)
-#: groupedit.ui:100
-msgid "Keys in the Group"
-msgstr "Ključi v skupini"
-
 #: keyexport.cpp:25
 msgid "Public Key Export"
 msgstr "Izvoz javnega ključa"
 
-#. i18n: ectx: property (text), widget (QRadioButton, checkMail)
-#: keyexport.ui:38
-msgctxt "Export a key via email"
-msgid "Email"
-msgstr "Pošlji po e-pošti"
+#: keyexport.cpp:28 editor/kgpgeditor.cpp:502
+msgid "Save File"
+msgstr "Shrani datoteko"
 
-#. i18n: ectx: property (text), widget (QRadioButton, checkClipboard)
-#: keyexport.ui:45 sourceselect.ui:34
-msgid "Clipboard"
-msgstr "Na odložišče"
-
-#. i18n: ectx: property (toolTip), widget (QRadioButton, checkServer)
-#: keyexport.ui:55
-msgid ""
-"You must define at least one keyserver in settings before you can export to "
-"one."
-msgstr ""
-"V nastavitvah morate vsaj en strežnik s ključi, preden lahko vanj izvažate."
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: keyexport.ui:58 keyserver.ui:41 keyserver.ui:176
-msgid "Key server:"
-msgstr "Strežnik s ključi:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkFile)
-#: keyexport.ui:72 sourceselect.ui:43
-msgid "File:"
-msgstr "V datoteko:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup3)
-#: keyexport.ui:92
-msgid "Export Settings"
-msgstr "Nastavitve izvoza"
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkAttrAll)
-#: keyexport.ui:98
-msgid "Export everything"
-msgstr "Izvozi vse"
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkAttrPhoto)
-#: keyexport.ui:108
-msgid "Do not export attributes (photo ids)"
-msgstr "Ne izvozi atributov (fotografskih ID-jev)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkAttrClean)
-#: keyexport.ui:115
-msgctxt ""
-"@option:radio Exports the smallest key possible. Maps to export-minimal "
-"option of gpg"
-msgid "Clean key"
-msgstr "Čist ključ"
+#: keyexport.cpp:42 editor/kgpgeditor.cpp:352 editor/kgpgeditor.cpp:359
+msgid "Overwrite existing file %1?"
+msgstr "Prepišem obstoječo datoteko %1?"
 
 #: keyinfodialog.cpp:165
 msgid ""
@@ -1383,119 +282,11 @@ msgstr "KGpg ni mogel spremeniti šifrirne fraze."
 msgid "Changing key properties failed."
 msgstr "Spreminjanje lastnosti ključa ni uspelo."
 
+#. i18n: file: kgpgKeyInfo.ui:37
 #. i18n: ectx: property (title), widget (QGroupBox, gr_properties)
-#: keyinfodialog.cpp:358 kgpgKeyInfo.ui:37
+#: keyinfodialog.cpp:358 rc.cpp:349
 msgid "Key properties"
 msgstr "Lastnosti ključa"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
-#: keyserver.ui:38
-msgid ""
-"<qt><b>Key Server:</b><br /> <p>A Key Server is a centralized repository of "
-"PGP/GnuPG keys connected to the Internet which can be conveniently accessed "
-"in order to obtain or deposit keys. Select from the drop down list to "
-"specify which key server should be used.</p> <p>Often these keys are held by "
-"people whom the user has never met and as such the authenticity is dubious "
-"at best. Refer to the GnuPG manual covering \"Web-of-Trust\" relationships "
-"to find out how GnuPG works around the problem of verifying authenticity.</"
-"p> </qt>"
-msgstr ""
-"<qt><b>Strežnik s ključi:</b><br /> <p>Strežnik s ključi je glavno skladišče "
-"ključev PGP/GnuPG, ki je povezano na internet in lahko dosegljivo za "
-"pridobivanje ali odlaganje ključev. Iz spustnega seznama izberite, kateri "
-"strežnik s ključi naj se uporablja.</p> <p>Pogosto te ključe zadržujejo "
-"osebe, ki jih uporabnik ni nikoli srečal, zato je njihova pristnost lahko "
-"dvomljiva. Poglejte v priročnik GnuPG, ki obravnava odnose »Spletnega "
-"zaupanja« (Web-of-Trust), da ugotovite kako GnuPG rešuje težavo preverjanja "
-"pristnosti.</p></qt>"
-
-#. i18n: ectx: property (whatsThis), widget (KComboBox, kCBimportks)
-#: keyserver.ui:52
-msgid ""
-"<b>Key Server Drop Down Dialog:</b>\n"
-"Allows the user to select the Key Server which will be used to import PGP/"
-"GnuPG keys into the local keyring."
-msgstr ""
-"<b>Spustni seznam strežnika ključev:</b>\n"
-"Uporabniku omogoča izbiro strežnika ključev, ki se bo uporabljal za uvoz "
-"ključev PGP/GnuPG v krajevno zbirko ključev."
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
-#: keyserver.ui:60
-msgid ""
-"<qt><b>Text to search or ID of the key to import:</b><br />\n"
-"<p>There are multiple ways to search for a key, you can use a text or "
-"partial text search (example: entering Phil or Zimmerman will bring up all "
-"keys in which Phil or Zimmerman shows up) or you can search by the ID's of "
-"the key. Key ID's are strings of letters and numbers that uniquely identify "
-"a key (example: searching for 0xED7585F4 would bring up the key associated "
-"with that ID).</p></qt>"
-msgstr ""
-"<qt><b>Iskano besedilo ali ID ključa za uvoz:</b><br />\n"
-"<p>Na voljo so številni načini, kako poiskati ključ. Uporabite lahko iskanje "
-"besedila ali dela besedila (primer: če vnesete Janez ali Novak, boste "
-"poiskali vse ključe, kjer se pojavljata Janez in Novak), iščete pa lahko "
-"tudi po ID-jih ključev. ID-ji ključev so nizi črk in številk, ki enolično "
-"predstavljajo ključ (primer: če vnesete 0xED7585F4, boste poiskali ključ, ki "
-"mu pripada ta ID).</p></qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: keyserver.ui:69
-msgid "Text to search or ID of the key to import:"
-msgstr "Besedilo za iskanje ali ID ključa za uvoz:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, cBproxyI)
-#. i18n: ectx: property (text), widget (QCheckBox, cBproxyE)
-#: keyserver.ui:91 keyserver.ui:221
-msgid "Honor HTTP proxy:"
-msgstr "Upoštevaj posredniški strežnik HTTP:"
-
-#. i18n: ectx: property (text), widget (QPushButton, Buttonsearch)
-#: keyserver.ui:134
-msgid "&Search"
-msgstr "Po&išči"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_export)
-#: keyserver.ui:170
-msgid "Export"
-msgstr "Izvozi"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
-#: keyserver.ui:190
-msgid ""
-"<qt><b>Key to be exported:</b><br />\n"
-"<p>This allows the user to specify the key from the drop down list that will "
-"be exported to the key server selected.</p></qt>"
-msgstr ""
-"<qt><b>Ključ za izvoz:</b><br />\n"
-"<p>To omogoča uporabniku, da navede ključ iz spustnega seznama, ki bo "
-"izvožen na izbran strežnik s ključi.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: keyserver.ui:193
-msgid "Key to be exported:"
-msgstr "Ključ za izvoz:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, exportAttributes)
-#: keyserver.ui:206
-msgid "Export attributes (photo id)"
-msgstr "Izvozi atribute (fotografski ID)"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, Buttonexport)
-#: keyserver.ui:265
-msgid ""
-"<qt><b>Export:</b><br />\n"
-"<p>Pushing this button will export the specified key to the specified server."
-"</p></qt>"
-msgstr ""
-"<qt><b>Izvozi:</b><br />\n"
-"<p>Pritisk na ta gumb bo izvozil navedeni ključ na navedeni strežnik.</p></"
-"qt>"
-
-#. i18n: ectx: property (text), widget (QPushButton, Buttonexport)
-#: keyserver.ui:268
-msgid "&Export"
-msgstr "&Izvozi"
 
 #: keyservers.cpp:47
 msgid "Key Server"
@@ -1526,7 +317,7 @@ msgstr "Pošiljanje na strežnik s ključi se je končalo brez napak"
 msgid "Upload to keyserver failed"
 msgstr "Pošiljanje na strežnik s ključi ni uspelo"
 
-#: keyservers.cpp:208 keysmanager.cpp:1238
+#: keyservers.cpp:208 keysmanager.cpp:1189
 msgid "Import Key From Keyserver"
 msgid_plural "Import Keys From Keyserver"
 msgstr[0] "Uvozi ključe s strežnika s ključi"
@@ -1534,12 +325,17 @@ msgstr[1] "Uvozi ključ s strežnika s ključi"
 msgstr[2] "Uvozi ključa s strežnika s ključi"
 msgstr[3] "Uvozi ključe s strežnika s ključi"
 
+#. i18n: file: keyserver.ui:144
+#. i18n: ectx: property (text), widget (QPushButton, Buttonimport)
+#: keyservers.cpp:213 rc.cpp:29 editor/kgpgtextedit.cpp:326
+msgid "&Import"
+msgstr "&Uvozi"
+
 #: keyservers.cpp:218
 msgid "Connecting to the server..."
 msgstr "Povezovanje s strežnikom ..."
 
 #: keyservers.cpp:269
-#, kde-format
 msgid "Found 1 matching key"
 msgid_plural "Found %1 matching keys"
 msgstr[0] "Najdenih %1 ustreznih ključev"
@@ -1555,203 +351,219 @@ msgstr "Najdenega ni nobenega ustreznega ključa"
 msgid "You must choose a key."
 msgstr "Izbrati morate ključ."
 
-#: keysmanager.cpp:132
+#: keysmanager.cpp:127
 msgid "Key Management"
 msgstr "Upravljanje s ključi"
 
-#: keysmanager.cpp:139
+#: keysmanager.cpp:134
 msgid "&Open Editor"
 msgstr "&Odpri urejevalnik"
 
-#: keysmanager.cpp:142
+#: keysmanager.cpp:137
 msgid "&Key Server Dialog"
 msgstr "Pogovorno okno za strežnike s &ključi"
 
-#: keysmanager.cpp:147 selectpublickeydialog.cpp:138
+#: keysmanager.cpp:142 selectpublickeydialog.cpp:138
 msgid "&Go to Default Key"
 msgstr "Po&jdi k privzetemu ključu"
 
-#: keysmanager.cpp:164
+#: keysmanager.cpp:159
 msgid "Tip of the &Day"
 msgstr "Namig &dneva"
 
-#: keysmanager.cpp:167
+#: keysmanager.cpp:162
 msgid "View GnuPG Manual"
 msgstr "Poglej priročnik GnuPG"
 
-#: keysmanager.cpp:172
+#: keysmanager.cpp:167
 msgid "&Refresh List"
 msgstr "O&sveži seznam"
 
-#: keysmanager.cpp:176
+#: keysmanager.cpp:171
 msgid "Show &Long Key Id"
 msgstr "Pokaži &dolg ID ključa"
 
-#: keysmanager.cpp:181
+#: keysmanager.cpp:176
 msgid "K&ey Properties"
 msgstr "&Lastnosti ključa"
 
-#: keysmanager.cpp:185
+#: keysmanager.cpp:180
 msgid "&Open Key URL"
 msgstr "&Odpri naslov URL ključa"
 
-#: keysmanager.cpp:189
+#: keysmanager.cpp:184
 msgid "Edit Key in &Terminal"
 msgstr "Uredi ključ v &terminalu"
 
-#: keysmanager.cpp:194
+#: keysmanager.cpp:189
 msgid "&Generate Key Pair..."
 msgstr "&Ustvari par ključev ..."
 
-#: keysmanager.cpp:203
+#: keysmanager.cpp:198
 msgid "&Import Key..."
 msgstr "U&vozi ključ ..."
 
-#: keysmanager.cpp:208
+#: keysmanager.cpp:203
 msgid "Send Ema&il"
 msgstr "Pošlj&i e-pošto"
 
-#: keysmanager.cpp:212
+#: keysmanager.cpp:207
 msgid "&Create New Contact in Address Book"
 msgstr "&Ustvari nov stik v Imeniku"
 
-#: keysmanager.cpp:218
+#: keysmanager.cpp:213
 msgid "&Edit Group..."
 msgstr "&Uredi skupino ..."
 
-#: keysmanager.cpp:221
+#: keysmanager.cpp:216
 msgid "&Delete Group"
 msgstr "I&zbriši skupino"
 
-#: keysmanager.cpp:225
+#: keysmanager.cpp:220
 msgid "&Rename Group"
 msgstr "&Preimenuj skupino"
 
-#: keysmanager.cpp:234
+#: keysmanager.cpp:229
 msgid "Set as De&fault Key"
 msgstr "Nastavi kot p&rivzeti ključ"
 
-#: keysmanager.cpp:237
+#: keysmanager.cpp:232
 msgid "&Add Photo..."
 msgstr "&Dodaj fotografijo ..."
 
-#: keysmanager.cpp:240
+#: keysmanager.cpp:235
 msgid "&Add User Id..."
 msgstr "&Dodaj uporabniški ID ..."
 
-#: keysmanager.cpp:243
+#: keysmanager.cpp:238
 msgid "Export Secret Key..."
 msgstr "Izvozi skrivni ključ ..."
 
-#: keysmanager.cpp:246
+#: keysmanager.cpp:241
 msgid "Delete Key Pair"
 msgstr "Izbriši par ključev"
 
-#: keysmanager.cpp:250
+#: keysmanager.cpp:245
 msgid "Revoke Key..."
 msgstr "Prekliči ključ ..."
 
-#: keysmanager.cpp:253
+#: keysmanager.cpp:248
 msgid "&Regenerate Public Key"
 msgstr "&Znova ustvari javni ključ"
 
-#: keysmanager.cpp:259
+#: keysmanager.cpp:254
 msgid "Set User Id as &Primary"
 msgstr "Nastavi uporabniški ID kot g&lavni"
 
-#: keysmanager.cpp:263
+#: keysmanager.cpp:258
 msgid "&Open Photo"
 msgstr "&Odpri fotografijo"
 
-#: keysmanager.cpp:267
+#: keysmanager.cpp:262
 msgid "&Delete Photo"
 msgstr "I&zbriši fotografijo"
 
-#: keysmanager.cpp:275
+#: keysmanager.cpp:270
 msgid "Import &Missing Signatures From Keyserver"
 msgstr "Uvozi &manjkajoče podpise s strežnika s ključi"
 
-#: keysmanager.cpp:293 model/kgpgitemmodel.cpp:374
+#: keysmanager.cpp:288 model/kgpgitemmodel.cpp:374
 msgid "Trust"
 msgstr "Zaupanje"
 
-#: keysmanager.cpp:296 model/kgpgitemmodel.cpp:375
+#: keysmanager.cpp:291 model/kgpgitemmodel.cpp:375
 msgid "Size"
 msgstr "Velikost"
 
-#: keysmanager.cpp:299 model/kgpgitemmodel.cpp:377
+#: keysmanager.cpp:294 model/kgpgitemmodel.cpp:377
 msgid "Creation"
 msgstr "Ustvaritev"
 
-#: keysmanager.cpp:302 model/kgpgitemmodel.cpp:376
+#: keysmanager.cpp:297 model/kgpgitemmodel.cpp:376
 msgid "Expiration"
 msgstr "Preteče"
 
-#: keysmanager.cpp:306
+#: keysmanager.cpp:301
 msgid "&Photo ID's"
 msgstr "&Fotografski ID"
 
-#: keysmanager.cpp:311
+#. i18n: file: conf_misc.ui:139
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
+#. i18n: file: conf_misc.ui:178
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
+#: keysmanager.cpp:305 rc.cpp:707 rc.cpp:721
+msgid "Disable"
+msgstr "Onemogoči"
+
+#: keysmanager.cpp:306
 msgctxt "small picture"
 msgid "Small"
 msgstr "Majhna"
 
-#: keysmanager.cpp:312
+#: keysmanager.cpp:307
 msgctxt "medium picture"
 msgid "Medium"
 msgstr "Srednja"
 
-#: keysmanager.cpp:313
+#: keysmanager.cpp:308
 msgctxt "large picture"
 msgid "Large"
 msgstr "Velika"
 
-#: keysmanager.cpp:317
+#: keysmanager.cpp:312
 msgid "Minimum &Trust"
 msgstr "Najmanjše &zaupanje"
 
-#: keysmanager.cpp:320
+#: keysmanager.cpp:315
 msgctxt "no filter: show all keys"
 msgid "&None"
 msgstr "&Brez"
 
-#: keysmanager.cpp:321
+#: keysmanager.cpp:316
 msgctxt "show only active keys"
 msgid "&Active"
 msgstr "Dej&avni"
 
-#: keysmanager.cpp:322
+#: keysmanager.cpp:317
 msgctxt "show only keys with at least marginal trust"
 msgid "&Marginal"
 msgstr "&Delno"
 
-#: keysmanager.cpp:323
+#: keysmanager.cpp:318
 msgctxt "show only keys with at least full trust"
 msgid "&Full"
 msgstr "&Polno"
 
-#: keysmanager.cpp:324
+#: keysmanager.cpp:319
 msgctxt "show only ultimately trusted keys"
 msgid "&Ultimate"
 msgstr "P&opolno"
 
-#: keysmanager.cpp:348
+#: keysmanager.cpp:343
 msgid "&Show Only Secret Keys"
 msgstr "Po&kaži samo skrivne ključe"
 
-#: keysmanager.cpp:443
+#. i18n: file: groupedit.ui:38
+#. i18n: ectx: property (text), widget (QLabel)
+#. i18n: file: searchres.ui:28
+#. i18n: ectx: property (text), widget (QLabel, filterEditLabel)
+#: keysmanager.cpp:426 rc.cpp:427 rc.cpp:582
+msgid "Search:"
+msgstr "Poišči:"
+
+#: keysmanager.cpp:438
 msgctxt ""
 "Name of the action that is a search line, shown for example in the toolbar "
 "configuration dialog"
 msgid "Search Line"
 msgstr "Iskalna vrstica"
 
-#: keysmanager.cpp:448
+#: keysmanager.cpp:443
 msgctxt "Name of the action that gives the focus to the search line"
 msgid "Focus Search Line"
 msgstr "Iskalna vrstica v žarišče"
 
-#: keysmanager.cpp:497
+#: keysmanager.cpp:492
 msgid ""
 "Another key generation operation is still in progress.\n"
 "Please wait a moment until this operation is complete."
@@ -1759,54 +571,55 @@ msgstr ""
 "Trenutno že poteka ustvarjanje drugega ključa.\n"
 "Počakajte trenutek, da se opravilo zaključi."
 
-#: keysmanager.cpp:498 keysmanager.cpp:528 keysmanager.cpp:576
+#: keysmanager.cpp:493 keysmanager.cpp:523 keysmanager.cpp:571
 msgid "Generating new key pair"
 msgstr "Ustvarjanje novega para ključev"
 
-#: keysmanager.cpp:529
+#: keysmanager.cpp:524
 msgid "Can not start \"konsole\" application for expert mode."
 msgstr "Ni mogoče zagnati programa »konsole« za napredni način."
 
-#: keysmanager.cpp:568 keysmanager.cpp:2620 keysmanager.cpp:2622
+#: keysmanager.cpp:563 keysmanager.cpp:2571 keysmanager.cpp:2573
 msgctxt "Application ready for user input"
 msgid "Ready"
 msgstr "Pripravljen"
 
-#: keysmanager.cpp:580 transactions/kgpggeneratekey.cpp:205
+#: keysmanager.cpp:575 transactions/kgpggeneratekey.cpp:205
 msgid "Bad passphrase. Cannot generate a new key pair."
 msgstr "Slaba šifrirna fraza. Ni mogoče ustvariti novega para ključev."
 
-#: keysmanager.cpp:583 transactions/kgpggeneratekey.cpp:208
+#: keysmanager.cpp:578 transactions/kgpggeneratekey.cpp:208
 msgid "Aborted by the user. Cannot generate a new key pair."
 msgstr "Uporabniška prekinitev. Ni mogoče ustvariti novega para ključev."
 
-#: keysmanager.cpp:586 transactions/kgpggeneratekey.cpp:211
+#: keysmanager.cpp:581 transactions/kgpggeneratekey.cpp:211
 msgid "The email address is not valid. Cannot generate a new key pair."
 msgstr "E-poštni naslov ni veljaven. Ni mogoče ustvariti novega para ključev."
 
-#: keysmanager.cpp:589 transactions/kgpggeneratekey.cpp:214
+#: keysmanager.cpp:584 transactions/kgpggeneratekey.cpp:214
 msgid "The name is not accepted by gpg. Cannot generate a new key pair."
 msgstr "GPG zavrača ime. Ni mogoče ustvariti novega para ključev."
 
+#. i18n: file: newkey.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, newKey)
-#: keysmanager.cpp:595 newkey.ui:13
+#: keysmanager.cpp:590 rc.cpp:159
 msgid "New Key Pair Created"
 msgstr "Ustvarjen nov par ključev"
 
-#: keysmanager.cpp:642
+#: keysmanager.cpp:637
 msgid "backup copy"
 msgstr "varnostna kopija"
 
-#: keysmanager.cpp:656 transactions/kgpggeneratekey.cpp:230
+#: keysmanager.cpp:651 transactions/kgpggeneratekey.cpp:230
 msgid "gpg process did not finish. Cannot generate a new key pair."
 msgstr ""
 "Opravilo GPG ni dokončalo dela. Ni mogoče ustvariti novega para ključev."
 
-#: keysmanager.cpp:760
+#: keysmanager.cpp:755
 msgid "You can only refresh primary keys. Please check your selection."
 msgstr "Osvežite lahko le glavne ključe. Preverite vašo izbiro."
 
-#: keysmanager.cpp:884
+#: keysmanager.cpp:879
 msgid ""
 "Another operation is still in progress.\n"
 "Please wait a moment until this operation is complete."
@@ -1814,11 +627,11 @@ msgstr ""
 "Trenutno že poteka drugo opravilo.\n"
 "Počakajte trenutek, da se opravilo zaključi."
 
-#: keysmanager.cpp:885 keysmanager.cpp:890
+#: keysmanager.cpp:880 keysmanager.cpp:885
 msgid "Add New User Id"
 msgstr "Dodaj nov uporabniški ID"
 
-#: keysmanager.cpp:926
+#: keysmanager.cpp:921
 msgid ""
 "The image must be a JPEG file. Remember that the image is stored within your "
 "public key, so if you use a very large picture, your key will become very "
@@ -1830,8 +643,7 @@ msgstr ""
 "vaš ključ. Velikost naj ne bi presegla 6 KiB. Dovolj dobro je, če uporabite "
 "sliko velikosti 240×288."
 
-#: keysmanager.cpp:958
-#, kde-format
+#: keysmanager.cpp:953
 msgid ""
 "<qt>Are you sure you want to delete Photo id <b>%1</b><br/>from key <b>%2 "
 "&lt;%3&gt;</b>?</qt>"
@@ -1839,48 +651,49 @@ msgstr ""
 "<qt>Ali ste prepričani, da želite izbrisati fotografski ID <b>%1</b><br/>iz "
 "ključa <b>%2 &lt;%3&gt;</b>?</qt>"
 
-#: keysmanager.cpp:1096
+#: keysmanager.cpp:1047
 msgid "Public Key"
 msgstr "Javni ključ"
 
-#: keysmanager.cpp:1099
+#: keysmanager.cpp:1050
 msgid "Sub Key"
 msgstr "Podključ"
 
-#: keysmanager.cpp:1102
+#: keysmanager.cpp:1053
 msgid "Secret Key Pair"
 msgstr "Skrivni par ključev"
 
-#: keysmanager.cpp:1105
+#: keysmanager.cpp:1056
 msgid "Key Group"
 msgstr "Skupina ključev"
 
+#. i18n: file: kgpgkeygenerate.ui:152
 #. i18n: ectx: property (text), widget (QCheckBox, capSign)
-#: keysmanager.cpp:1108 kgpgkeygenerate.ui:152
+#: keysmanager.cpp:1059 rc.cpp:150
 msgid "Signature"
 msgstr "Podpis"
 
-#: keysmanager.cpp:1111
+#: keysmanager.cpp:1062
 msgid "User ID"
 msgstr "Uporabniški ID"
 
-#: keysmanager.cpp:1114
+#: keysmanager.cpp:1065
 msgid "Revocation Signature"
 msgstr "Podpis za preklic"
 
-#: keysmanager.cpp:1117
+#: keysmanager.cpp:1068
 msgid "Photo ID"
 msgstr "Fotografski ID"
 
-#: keysmanager.cpp:1120
+#: keysmanager.cpp:1071
 msgid "Orphaned Secret Key"
 msgstr "Osirotel skrivni ključ"
 
-#: keysmanager.cpp:1125
+#: keysmanager.cpp:1076
 msgid "Group member"
 msgstr "Član skupine"
 
-#: keysmanager.cpp:1230
+#: keysmanager.cpp:1181
 msgid "&Sign User ID ..."
 msgid_plural "&Sign User IDs ..."
 msgstr[0] "&Podpiši uporabniške ID-je ..."
@@ -1888,7 +701,7 @@ msgstr[1] "&Podpiši uporabniški ID ..."
 msgstr[2] "&Podpiši uporabniška ID-ja ..."
 msgstr[3] "&Podpiši uporabniške ID-je ..."
 
-#: keysmanager.cpp:1231
+#: keysmanager.cpp:1182
 msgid "Sign and &Mail User ID ..."
 msgid_plural "Sign and &Mail User IDs ..."
 msgstr[0] "&Podpiši in pošlji uporabniške ID-je ..."
@@ -1896,7 +709,7 @@ msgstr[1] "&Podpiši in pošlji uporabniški ID ..."
 msgstr[2] "&Podpiši in pošlji uporabniška ID-ja ..."
 msgstr[3] "&Podpiši in pošlji uporabniške ID-je ..."
 
-#: keysmanager.cpp:1232
+#: keysmanager.cpp:1183
 msgid "E&xport Public Key..."
 msgid_plural "E&xport Public Keys..."
 msgstr[0] "I&zvozi javne ključe ..."
@@ -1904,7 +717,7 @@ msgstr[1] "I&zvozi javni ključ ..."
 msgstr[2] "I&zvozi javna ključa ..."
 msgstr[3] "I&zvozi javne ključe ..."
 
-#: keysmanager.cpp:1233
+#: keysmanager.cpp:1184
 msgid "&Refresh Key From Keyserver"
 msgid_plural "&Refresh Keys From Keyserver"
 msgstr[0] "Os&veži ključe s strežnika s ključi"
@@ -1912,7 +725,7 @@ msgstr[1] "Os&veži ključ s strežnika s ključi"
 msgstr[2] "Os&veži ključa s strežnika s ključi"
 msgstr[3] "Os&veži ključe s strežnika s ključi"
 
-#: keysmanager.cpp:1234
+#: keysmanager.cpp:1185
 msgid "&Create Group with Selected Key..."
 msgid_plural "&Create Group with Selected Keys..."
 msgstr[0] "&Ustvari skupino z izbranimi ključi ..."
@@ -1920,7 +733,7 @@ msgstr[1] "&Ustvari skupino z izbranim ključem ..."
 msgstr[2] "&Ustvari skupino z izbranima ključema ..."
 msgstr[3] "&Ustvari skupino z izbranimi ključi ..."
 
-#: keysmanager.cpp:1235
+#: keysmanager.cpp:1186
 msgid "&Sign Key..."
 msgid_plural "&Sign Keys..."
 msgstr[0] "&Podpiši ključe ..."
@@ -1928,7 +741,7 @@ msgstr[1] "&Podpiši ključ ..."
 msgstr[2] "&Podpiši ključa ..."
 msgstr[3] "&Podpiši ključe ..."
 
-#: keysmanager.cpp:1236
+#: keysmanager.cpp:1187
 msgid "&Delete User ID"
 msgid_plural "&Delete User IDs"
 msgstr[0] "&Izbriši uporabniške ID-je"
@@ -1936,7 +749,7 @@ msgstr[1] "&Izbriši uporabniški ID"
 msgstr[2] "&Izbriši uporabniška ID-ja"
 msgstr[3] "&Izbriši uporabniške ID-je"
 
-#: keysmanager.cpp:1237
+#: keysmanager.cpp:1188
 msgid "Delete Sign&ature"
 msgid_plural "Delete Sign&atures"
 msgstr[0] "Izbriši po&dpise"
@@ -1944,7 +757,7 @@ msgstr[1] "Izbriši po&dpis"
 msgstr[2] "Izbriši po&dpisa"
 msgstr[3] "Izbriši po&dpise"
 
-#: keysmanager.cpp:1239
+#: keysmanager.cpp:1190
 msgid "&Delete Key"
 msgid_plural "&Delete Keys"
 msgstr[0] "&Izbriši ključe"
@@ -1952,11 +765,11 @@ msgstr[1] "&Izbriši ključ"
 msgstr[2] "&Izbriši ključa"
 msgstr[3] "&Izbriši ključe"
 
-#: keysmanager.cpp:1362
+#: keysmanager.cpp:1313
 msgid "Creation of the revocation certificate failed..."
 msgstr "Ustvaritev potrdila za preklic ni uspela ..."
 
-#: keysmanager.cpp:1377
+#: keysmanager.cpp:1328
 msgid ""
 "<qt>Secret keys <b>should not</b> be saved in an unsafe place.<br/>If "
 "someone else can access this file, encryption with this key will be "
@@ -1966,16 +779,15 @@ msgstr ""
 "varna.<br />Če lahko kdo drug dostopa do te datoteke, bo šifriranje s tem "
 "ključem ogroženo.<br />Ali nadaljujem z izvozom ključa?</qt>"
 
-#: keysmanager.cpp:1389
+#: keysmanager.cpp:1340
 msgid "*.asc|*.asc Files"
 msgstr "*.asc|Datoteke *.asc"
 
-#: keysmanager.cpp:1389
+#: keysmanager.cpp:1340
 msgid "Export PRIVATE KEY As"
 msgstr "Izvozi ZASEBNI KLJUČ kot"
 
-#: keysmanager.cpp:1407
-#, kde-format
+#: keysmanager.cpp:1358
 msgid ""
 "<qt>Your <b>private</b> key \"%1\" was successfully exported to<br/>%2.<br/"
 "><b>Do not</b> leave it in an insecure place.</qt>"
@@ -1983,7 +795,7 @@ msgstr ""
 "<qt>Vaš <b>zasebni</b> ključ »%1« je bil uspešno izvožen v <br/>%2.<br /"
 "><b>ne pustite</b> ga na nezanesljivem mestu.</qt>"
 
-#: keysmanager.cpp:1410
+#: keysmanager.cpp:1361
 msgid ""
 "Your secret key could not be exported.\n"
 "Check the key."
@@ -1991,8 +803,7 @@ msgstr ""
 "Vašega skrivnega ključa ni bilo mogoče izvoziti.\n"
 "Preverite ključ."
 
-#: keysmanager.cpp:1513
-#, kde-format
+#: keysmanager.cpp:1464
 msgid "<qt>The public key was successfully exported to<br/>%2</qt>"
 msgid_plural "<qt>The %1 public keys were successfully exported to<br/>%2</qt>"
 msgstr[0] "<qt>%1 javnih ključev je bilo uspešno izvoženih v <br />%2</qt>"
@@ -2000,7 +811,7 @@ msgstr[1] "<qt>%1 javni ključ je bil uspešno izvožen v <br />%2</qt>"
 msgstr[2] "<qt>%1 javna ključa sta bila uspešno izvožena v <br />%2</qt>"
 msgstr[3] "<qt>%1 javni ključi so bili uspešno izvoženi v <br />%2</qt>"
 
-#: keysmanager.cpp:1517 keysmanager.cpp:1532 keysmanager.cpp:1546
+#: keysmanager.cpp:1468 keysmanager.cpp:1483 keysmanager.cpp:1497
 msgid ""
 "Your public key could not be exported\n"
 "Check the key."
@@ -2008,18 +819,18 @@ msgstr ""
 "Vašega javnega ključa ni bilo mogoče izvoziti.\n"
 "Preverite ključ."
 
-#: keysmanager.cpp:1566
+#: keysmanager.cpp:1517
 msgid ""
 "<qt>A viewer for JPEG images is not specified.<br/>Please check your "
 "installation.</qt>"
 msgstr ""
 "<qt>Pregledovalnik slik JPEG ni podan.<br />Preverite vašo namestitev.</qt>"
 
-#: keysmanager.cpp:1567
+#: keysmanager.cpp:1518
 msgid "Show photo"
 msgstr "Prikaži fotografijo"
 
-#: keysmanager.cpp:1664
+#: keysmanager.cpp:1615
 msgid ""
 "<p>This key is an orphaned secret key (secret key without public key.) It is "
 "currently not usable.</p><p>Would you like to regenerate the public key?</p>"
@@ -2027,24 +838,23 @@ msgstr ""
 "<p>Ta ključ je osirotel skrivni ključ (skrivni ključ brez javnega ključa). "
 "Trenutno ni uporaben.</p><p>Ali želite znova ustvariti javni ključ?</p>"
 
-#: keysmanager.cpp:1666
+#: keysmanager.cpp:1617
 msgid "Generate"
 msgstr "Ustvari"
 
-#: keysmanager.cpp:1666
+#: keysmanager.cpp:1617
 msgid "Do Not Generate"
 msgstr "Ne ustvari"
 
-#: keysmanager.cpp:1696
-#, kde-format
+#: keysmanager.cpp:1647
 msgid "<qt>Are you sure you want to delete group <b>%1</b> ?</qt>"
 msgstr "<qt>Ali ste prepričani, da bi radi izbrisali skupino <b>%1</b>?</qt>"
 
-#: keysmanager.cpp:1697 keysmanager.cpp:2369
+#: keysmanager.cpp:1648 keysmanager.cpp:2320
 msgid "Delete"
 msgstr "Izbriši"
 
-#: keysmanager.cpp:1727
+#: keysmanager.cpp:1678
 msgid ""
 "<qt>You cannot create a group containing signatures, subkeys or other groups."
 "</qt>"
@@ -2052,22 +862,21 @@ msgstr ""
 "<qt>Ne morete ustvariti skupine, ki vsebuje podpise, podključe ali druge "
 "skupine.</qt>"
 
-#: keysmanager.cpp:1742 kgpgrevokewidget.cpp:46
-#, kde-format
+#: keysmanager.cpp:1693 kgpgrevokewidget.cpp:46
 msgctxt "<Name> (<Email>) ID: <KeyId>"
 msgid "%1 (%2) ID: %3"
 msgstr "%1 (%2) ID: %3"
 
-#: keysmanager.cpp:1747
+#: keysmanager.cpp:1698
 msgid "Create New Group"
 msgstr "Ustvari novo skupino"
 
-#: keysmanager.cpp:1748
+#: keysmanager.cpp:1699
 msgctxt "Enter the name of the group you are creating now"
 msgid "Enter new group name:"
 msgstr "Vnesite ime nove skupine:"
 
-#: keysmanager.cpp:1754
+#: keysmanager.cpp:1705
 msgid ""
 "Following keys are not valid or not trusted and will not be added to the "
 "group:"
@@ -2075,8 +884,7 @@ msgstr ""
 "Naslednji ključi niso veljavni ali zaupanja vredni, zato ne bodo dodani v "
 "skupino:"
 
-#: keysmanager.cpp:1760
-#, kde-format
+#: keysmanager.cpp:1711
 msgid ""
 "<qt>No valid or trusted key was selected. The group <b>%1</b> will not be "
 "created.</qt>"
@@ -2084,16 +892,15 @@ msgstr ""
 "<qt>Ni bilo izbranega veljavnega ali zaupanja vrednega ključa. Skupina <b>"
 "%1</b> ne bo ustvarjena.</qt>"
 
-#: keysmanager.cpp:1772
+#: keysmanager.cpp:1723
 msgid "Group Properties"
 msgstr "Lastnosti skupine"
 
-#: keysmanager.cpp:1803
+#: keysmanager.cpp:1754
 msgid "You can only sign primary keys. Please check your selection."
 msgstr "Podpišete lahko le glavne ključe. Preverite vašo izbiro."
 
-#: keysmanager.cpp:1812
-#, kde-format
+#: keysmanager.cpp:1763
 msgid ""
 "<qt>You are about to sign key:<br /><br />%1<br />ID: %2<br />Fingerprint: "
 "<br /><b>%3</b>.<br /><br />You should check the key fingerprint by phoning "
@@ -2105,8 +912,7 @@ msgstr ""
 "telefoniranjem lastniku ključa ali pa z osebnim srečanjem, saj lahko kdo "
 "prestreza vašo komunikacijo.</qt>"
 
-#: keysmanager.cpp:1817
-#, kde-format
+#: keysmanager.cpp:1768
 msgid ""
 "<qt>You are about to sign key:<br /><br />%1 (%2)<br />ID: %3<br /"
 ">Fingerprint: <br /><b>%4</b>.<br /><br />You should check the key "
@@ -2118,20 +924,18 @@ msgstr ""
 "telefoniranjem lastniku ključa ali pa z osebnim srečanjem, saj lahko kdo "
 "prestreza vašo komunikacijo.</qt>"
 
-#: keysmanager.cpp:1832 keysmanager.cpp:1916 kgpgfirstassistant.cpp:284
+#: keysmanager.cpp:1783 keysmanager.cpp:1867 kgpgfirstassistant.cpp:284
 #: model/keylistproxymodel.cpp:196
-#, kde-format
 msgctxt "Name: ID"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: keysmanager.cpp:1834 keysmanager.cpp:1919 kgpgfirstassistant.cpp:286
-#, kde-format
+#: keysmanager.cpp:1785 keysmanager.cpp:1870 kgpgfirstassistant.cpp:286
 msgctxt "Name (Email): ID"
 msgid "%1 (%2): %3"
 msgstr "%1 (%2): %3"
 
-#: keysmanager.cpp:1840
+#: keysmanager.cpp:1791
 msgid ""
 "<qt>You are about to sign the following keys in one pass.<br/><b>If you have "
 "not carefully checked all fingerprints, the security of your communications "
@@ -2141,13 +945,12 @@ msgstr ""
 "pazljivo preverili vseh prstnih odtisov, potem bo varnost vaše komunikacije "
 "lahko ogrožena.</b></qt>"
 
-#: keysmanager.cpp:1882 keysmanager.cpp:2030
+#: keysmanager.cpp:1833 keysmanager.cpp:1981
 msgid "You can only sign user ids and photo ids. Please check your selection."
 msgstr ""
 "Podpišete lahko le uporabniške in fotografske ID-je. Preverite svojo izbiro."
 
-#: keysmanager.cpp:1896
-#, kde-format
+#: keysmanager.cpp:1847
 msgid ""
 "<qt>You are about to sign user id:<br /><br />%1<br />ID: %2<br /"
 ">Fingerprint: <br /><b>%3</b>.<br /><br />You should check the key "
@@ -2159,8 +962,7 @@ msgstr ""
 "s telefoniranjem lastniku ključa ali pa z osebnim srečanjem, saj lahko kdo "
 "prestreza vašo komunikacijo.</qt>"
 
-#: keysmanager.cpp:1900
-#, kde-format
+#: keysmanager.cpp:1851
 msgid ""
 "<qt>You are about to sign user id:<br /><br />%1 (%2)<br />ID: %3<br /"
 ">Fingerprint: <br /><b>%4</b>.<br /><br />You should check the key "
@@ -2172,7 +974,7 @@ msgstr ""
 "preveriti s telefoniranjem lastniku ključa ali pa z osebnim srečanjem, saj "
 "lahko kdo prestreza vašo komunikacijo.</qt>"
 
-#: keysmanager.cpp:1926
+#: keysmanager.cpp:1877
 msgid ""
 "<qt>You are about to sign the following user ids in one pass.<br/><b>If you "
 "have not carefully checked all fingerprints, the security of your "
@@ -2182,18 +984,15 @@ msgstr ""
 "niste pazljivo preverili vseh prstnih odtisov, bo varnost vaše komunikacije "
 "lahko ogrožena.</b></qt>"
 
-#: keysmanager.cpp:1997
-#, kde-format
+#: keysmanager.cpp:1948
 msgid "<qt>Bad passphrase, key <b>%1 (%2)</b> not signed.</qt>"
 msgstr "<qt>Slaba šifrirna fraza, ključ <b>%1 (%2)</b> ni podpisan.</qt>"
 
-#: keysmanager.cpp:2001
-#, kde-format
+#: keysmanager.cpp:1952
 msgid "<qt>The key <b>%1 (%2)</b> is already signed.</qt>"
 msgstr "<qt>Ključ <b>%1 (%2)</b> je že podpisan.</qt>"
 
-#: keysmanager.cpp:2006
-#, kde-format
+#: keysmanager.cpp:1957
 msgid ""
 "<qt>Signing key <b>%1</b> with key <b>%2</b> failed.<br />Do you want to try "
 "signing the key in console mode?</qt>"
@@ -2201,7 +1000,7 @@ msgstr ""
 "<qt>Podpisovanje ključa <b>%1</b> s ključem <b>%2</b> ni uspelo.<br />Ali "
 "želite podpisati ključ v konzolnem načinu?</qt>"
 
-#: keysmanager.cpp:2123
+#: keysmanager.cpp:2074
 msgid "All signatures for this key are already in your keyring"
 msgid_plural "All signatures for this keys are already in your keyring"
 msgstr[0] "Vsi podpisi za te ključe so že v vaši zbirki ključev"
@@ -2209,12 +1008,11 @@ msgstr[1] "Vsi podpisi za ta ključ so že v vaši zbirki ključev"
 msgstr[2] "Vsi podpisi za ta ključa so že v vaši zbirki ključev"
 msgstr[3] "Vsi podpisi za te ključe so že v vaši zbirki ključev"
 
-#: keysmanager.cpp:2218
+#: keysmanager.cpp:2169
 msgid "Edit key manually to delete a self-signature."
 msgstr "Uredite ključ ročno, da izbrišete samodejni podpis."
 
-#: keysmanager.cpp:2222
-#, kde-format
+#: keysmanager.cpp:2173
 msgid ""
 "<qt>Are you sure you want to delete signature<br /><b>%1</b><br />from user "
 "id <b>%2</b><br />of key: <b>%3</b>?</qt>"
@@ -2222,11 +1020,11 @@ msgstr ""
 "<qt>Ali ste prepričani, da bi radi izbrisali podpis<br /><b>%1</b><br /"
 ">uporabniškega ID-ja <b>%2</b><br /> ključa: <b>%3</b>?</qt>"
 
-#: keysmanager.cpp:2244
+#: keysmanager.cpp:2195
 msgid "Requested operation was unsuccessful, please edit the key manually."
 msgstr "Zahtevano opravilo je bilo neuspešno, zato uredite ključ ročno."
 
-#: keysmanager.cpp:2326
+#: keysmanager.cpp:2277
 msgid ""
 "<qt>The key you are deleting is a member of the following key group. Do you "
 "want to remove it from this group?</qt>"
@@ -2246,14 +1044,13 @@ msgstr[3] ""
 "<qt>Ključ, ki ga želite izbrisati, je del naslednjih skupin ključev. Ali ga "
 "želite odstraniti iz teh skupin?</qt>"
 
-#: keysmanager.cpp:2330 keysmanager.cpp:2343 keysmanager.cpp:2378
-#: keysmanager.cpp:2393 keysmanager.cpp:2396 keysmanager.cpp:2407
-#: keysmanager.cpp:2421 keysmanager.cpp:2469
+#: keysmanager.cpp:2281 keysmanager.cpp:2294 keysmanager.cpp:2329
+#: keysmanager.cpp:2344 keysmanager.cpp:2347 keysmanager.cpp:2358
+#: keysmanager.cpp:2372 keysmanager.cpp:2420
 msgid "Delete key"
 msgstr "Izbriši ključ"
 
-#: keysmanager.cpp:2342
-#, kde-format
+#: keysmanager.cpp:2293
 msgid ""
 "You are removing the last key from key group %1.<br/>Do you want to delete "
 "the group, too?"
@@ -2261,8 +1058,7 @@ msgstr ""
 "Odstranjujete zadnji ključ iz skupine %1.<br/>Ali želite izbrisati tudi "
 "skupino?"
 
-#: keysmanager.cpp:2366
-#, kde-format
+#: keysmanager.cpp:2317
 msgid ""
 "<p>Delete <b>secret</b> key pair <b>%1</b>?</p>Deleting this key pair means "
 "you will never be able to decrypt files encrypted with this key again."
@@ -2271,7 +1067,7 @@ msgstr ""
 "pomeni, da ne boste mogli nikoli več odšifrirati datotek šifriranih s tem "
 "ključem."
 
-#: keysmanager.cpp:2377 keysmanager.cpp:2406
+#: keysmanager.cpp:2328 keysmanager.cpp:2357
 msgid ""
 "Another key delete operation is still in progress.\n"
 "Please wait a moment until this operation is complete."
@@ -2279,22 +1075,19 @@ msgstr ""
 "Trenutno že poteka drugo opravilo brisanja ključa.\n"
 "Počakajte trenutek, da se opravilo zaključi."
 
-#: keysmanager.cpp:2393
-#, kde-format
+#: keysmanager.cpp:2344
 msgid "Key <b>%1</b> deleted."
 msgstr "Ključ <b>%1</b> je bil izbrisan."
 
-#: keysmanager.cpp:2396
-#, kde-format
+#: keysmanager.cpp:2347
 msgid "Deleting key <b>%1</b> failed."
 msgstr "Brisanje ključa <b>%1</b> je spodletelo."
 
-#: keysmanager.cpp:2420
-#, kde-format
+#: keysmanager.cpp:2371
 msgid "Can not delete key <b>%1</b> while it is edited in terminal."
 msgstr "Ni mogoče izbrisati ključa <b>%1</b>, dokler ga urejate v terminalu."
 
-#: keysmanager.cpp:2468
+#: keysmanager.cpp:2419
 msgid ""
 "You have selected items that are not keys. They can not be deleted with this "
 "menu entry."
@@ -2302,16 +1095,14 @@ msgstr ""
 "Izbrali ste predmete, ki niso ključi. Teh se ne da izbrisati preko tega "
 "vnosa v meniju."
 
-#: keysmanager.cpp:2493
-#, kde-format
+#: keysmanager.cpp:2444
 msgid ""
 "<qt>The following are secret key pairs:<br/><b>%1</b><br/>They will not be "
 "deleted.</qt>"
 msgstr ""
 "<qt>To so skrivni pari ključev:<br/><b>%1</b><br/>Ne bodo izbrisani.</qt>"
 
-#: keysmanager.cpp:2503
-#, kde-format
+#: keysmanager.cpp:2454
 msgid "<qt><b>Delete the following public key?</b></qt>"
 msgid_plural "<qt><b>Delete the following %1 public keys?</b></qt>"
 msgstr[0] "<qt><b>Izbrišem naslednjih %1 javnih ključev?</b></qt>"
@@ -2319,15 +1110,15 @@ msgstr[1] "<qt><b>Izbrišem naslednji %1 javni ključ?</b></qt>"
 msgstr[2] "<qt><b>Izbrišem naslednja %1 javna ključa?</b></qt>"
 msgstr[3] "<qt><b>Izbrišem naslednji %1 javni ključi?</b></qt>"
 
-#: keysmanager.cpp:2534 keysmanager.cpp:2605 keysmanager.cpp:2616
+#: keysmanager.cpp:2485 keysmanager.cpp:2556 keysmanager.cpp:2567
 msgid "Key Import"
 msgstr "Uvoz ključa"
 
-#: keysmanager.cpp:2541
+#: keysmanager.cpp:2492
 msgid "Open File"
 msgstr "Odpri datoteko"
 
-#: keysmanager.cpp:2570
+#: keysmanager.cpp:2521
 msgid ""
 "<qt>The text in the clipboard does not look like a key, but like encrypted "
 "text.<br />Do you want to decrypt it first and then try importing it?</qt>"
@@ -2335,65 +1126,59 @@ msgstr ""
 "<qt>Besedilo na odložišču ne izgleda kot ključ, ampak kot šifrirano besedilo."
 "<br />Ali ga želite najprej odšifrirati in nato poskusiti uvoziti?</qt>"
 
-#: keysmanager.cpp:2572
+#: keysmanager.cpp:2523
 msgid "Import from Clipboard"
 msgstr "Uvozi iz odložišča"
 
-#: keysmanager.cpp:2592
+#: keysmanager.cpp:2543
 msgid "Importing..."
 msgstr "Uvažanje ..."
 
-#: keysmanager.cpp:2604
+#: keysmanager.cpp:2555
 msgid "Key importing failed. Please see the detailed log for more information."
 msgstr "Uvažanje ključev ni uspelo. Za več podrobnosti si oglejte dnevnik."
 
-#: keysmanager.cpp:2669
+#: keysmanager.cpp:2620
 msgid "KGpg - encryption tool"
 msgstr "KGpg - orodje za šifriranje"
 
-#: keysmanager.cpp:2690
+#: keysmanager.cpp:2641
 msgid "Ke&y Manager"
 msgstr "Upra&vljalnik ključev"
 
-#: keysmanager.cpp:2693
+#: keysmanager.cpp:2644
 msgid "&Encrypt Clipboard"
 msgstr "&Šifriraj odložišče"
 
-#: keysmanager.cpp:2696
+#: keysmanager.cpp:2647
 msgid "&Decrypt Clipboard"
 msgstr "O&dšifriraj odložišče"
 
-#: keysmanager.cpp:2699
+#: keysmanager.cpp:2650
 msgid "&Sign/Verify Clipboard"
 msgstr "&Podpiši/Preveri odložišče"
 
-#: keysmanager.cpp:2736 keysmanager.cpp:2831 keysmanager.cpp:2849
+#: keysmanager.cpp:2687 keysmanager.cpp:2782 keysmanager.cpp:2800
 msgid "Clipboard is empty."
 msgstr "Odložišče je prazno."
 
-#: keysmanager.cpp:2781
+#: keysmanager.cpp:2732
 msgid "Text successfully encrypted."
 msgstr "Besedilo je bilo uspešno šifrirano."
 
-#. i18n: ectx: Menu (managekeys)
-#: keysmanager.rc:6
-msgid "&Keys"
-msgstr "&Ključi"
-
-#. i18n: ectx: Menu (show_details)
-#: keysmanager.rc:30
-msgid "&Show Details"
-msgstr "&Prikaži podrobnosti"
-
-#. i18n: ectx: Menu (groups)
-#: keysmanager.rc:42
-msgid "&Groups"
-msgstr "&Skupine"
-
 #: keytreeview.cpp:166
-#, kde-format
 msgid "<p>Do you want to import file <b>%1</b> into your key ring?</p>"
 msgstr "<p>Ali želite uvoziti datoteko <b>%1</b> v vašo zbirko ključev?</p>"
+
+#. i18n: file: keyserver.ui:32
+#. i18n: ectx: attribute (title), widget (QWidget, tab_import)
+#: keytreeview.cpp:167 rc.cpp:3 editor/kgpgeditor.cpp:704
+msgid "Import"
+msgstr "Uvozi"
+
+#: keytreeview.cpp:168 editor/kgpgeditor.cpp:704
+msgid "Do Not Import"
+msgstr "Ne uvozi"
 
 #: kgpg.cpp:76
 msgid ""
@@ -2408,7 +1193,6 @@ msgid "GnuPG error"
 msgstr "Napaka GnuPG"
 
 #: kgpg.cpp:90
-#, kde-format
 msgid ""
 "<qt>The use of <b>GnuPG Agent</b> is enabled in GnuPG's configuration file "
 "(%1).<br />However, the agent does not seem to be running. This could result "
@@ -2445,296 +1229,6 @@ msgstr ""
 "Žal ni mogoče izvesti zahtevanega opravila.\n"
 "Izberite le eno mapo ali pa več datotek, vendar ne mešajte datotek in map."
 
-#: kgpg.h:32
-msgid ""
-"Hi,\n"
-"\n"
-"please find attached the user id '%UIDNAME%' of your key %KEYID% signed by "
-"me. This mail is encrypted with that key to make sure you control both the "
-"email address and the key.\n"
-"\n"
-"If you have multiple user ids, I sent the signature for each user id "
-"separately to that user id's associated email address. You can import the "
-"signatures by running each through `gpg --import` after you have decrypted "
-"them with `gpg --decrypt`.\n"
-"\n"
-"If you are using KGpg store the attachment to disk and then import it. Just "
-"select `Import Key...` from `Keys` menu and open the file.\n"
-"\n"
-"Note that I did not upload your key to any keyservers. If you want this new "
-"signature to be available to others, please upload it yourself. With GnuPG "
-"this can be done using gpg --keyserver subkeys.pgp.net --send-key %KEYID%.\n"
-"\n"
-"With KGpg you can right click on the key once you imported all user ids and "
-"choose `Export Public Key...`.\n"
-"\n"
-"If you have any questions, don't hesitate to ask.\n"
-msgstr ""
-"Pozdravljeni\n"
-"\n"
-"Priložen je uporabniški ID »%IMEUID%« vašega ključa %IDKLJUČA%, ki je "
-"podpisan z moje strani. Ta pošta je šifrirana s tem ključem, da se prepričam "
-"v vaš nadzor nad e-poštnim naslovom in ključem.\n"
-"\n"
-"Če imate več uporabniških ID-jev, sem podpis za vsakega od njih ločeno "
-"poslal na e-poštni naslov, ki je povezan z njim. Podpise lahko uvozite, tako "
-"da po odšifriranju z ukazom »gpg --decrypt« zaženete še »gpg --import«.\n"
-"\n"
-"Če uporabljate KGpg, shranite prilogo na disk in jo nato uvozite. Iz menija "
-"»Ključi« izberite »Uvozi ključ ...« in odprite shranjeno datoteko.\n"
-"\n"
-"Zapomnite si, da vašega ključa nisem poslal na noben strežnik s ključi. Če "
-"želite, da je novi podpis na voljo drugim, ga na strežnik pošljite sami. Z "
-"GnuPG to lahko storite z ukazom »gpg --keyserver subkeys.pgp.net --send-key "
-"%KEYID%«.\n"
-"\n"
-"S KGpg lahko po uvozu vseh uporabniških ID-jev kliknete z desno tipko miške "
-"na ključ in iz menija izberete »Izvozi javni ključ ...«.\n"
-"\n"
-"Če imate nadaljnja vprašanja, me kar pogumno vprašajte.\n"
-
-#. i18n: ectx: label, entry (CustomDecrypt), group (Decryption)
-#: kgpg.kcfg:13
-msgid "Custom decryption command."
-msgstr "Ukaz odšifriranja po meri."
-
-#. i18n: ectx: label, entry (CustomEncryptionOptions), group (Encryption)
-#: kgpg.kcfg:19
-msgid "Custom encryption options"
-msgstr "Možnosti šifriranja po meri"
-
-#. i18n: ectx: label, entry (AllowCustomEncryptionOptions), group (Encryption)
-#: kgpg.kcfg:22
-msgid "Allow custom encryption options"
-msgstr "Dovoli možnosti šifriranja po meri"
-
-#. i18n: ectx: label, entry (FileEncryptionKey), group (Encryption)
-#: kgpg.kcfg:26
-msgid "File encryption key."
-msgstr "Ključ šifriranja datotek."
-
-#. i18n: ectx: label, entry (EncryptFilesTo), group (Encryption)
-#: kgpg.kcfg:29
-msgid "Encrypt files"
-msgstr "Šifriraj datoteke"
-
-#. i18n: ectx: label, entry (AsciiArmor), group (Encryption)
-#: kgpg.kcfg:33
-msgid "Use ASCII armored encryption."
-msgstr "Uporabi šifriranje na podlagi ASCII."
-
-#. i18n: ectx: label, entry (AllowUntrustedKeys), group (Encryption)
-#: kgpg.kcfg:37
-msgid "Allow encryption with untrusted keys."
-msgstr "Dovoli šifriranje s ključi, ki niso zaupanja vredni."
-
-#. i18n: ectx: label, entry (AllowUntrustedGroupMembers), group (Encryption)
-#: kgpg.kcfg:41
-msgid "Allow untrusted keys to become members of key groups."
-msgstr ""
-"Ključem, ki niso zaupanja vredni, dovoli, da postanejo člani skupin ključev."
-
-#. i18n: ectx: label, entry (HideUserID), group (Encryption)
-#: kgpg.kcfg:45
-msgid "Hide the user ID."
-msgstr "Skrij uporabniški ID."
-
-#. i18n: ectx: label, entry (PgpCompatibility), group (Encryption)
-#: kgpg.kcfg:49
-msgid "Enable PGP 6 compatibility."
-msgstr "Omogoči združljivost s PGP 6."
-
-#. i18n: ectx: label, entry (PgpExtension), group (Encryption)
-#: kgpg.kcfg:53
-msgid "Use *.pgp extension for encrypted files."
-msgstr "Uporabi pripono *.pgp za šifrirane datoteke."
-
-#. i18n: ectx: label, entry (GpgConfigPath), group (GPG Settings)
-#: kgpg.kcfg:60
-msgid "The path of the gpg configuration file."
-msgstr "Pot do nastavitvene datoteke gpg."
-
-#. i18n: ectx: label, entry (GpgBinaryPath), group (GPG Settings)
-#: kgpg.kcfg:63
-msgid "The path of the gpg binary used by KGpg."
-msgstr "Pot do programa gpg za uporabo v KGpg."
-
-#. i18n: ectx: label, entry (FirstRun), group (General Options)
-#: kgpg.kcfg:79
-msgid "Is the first time the application runs."
-msgstr "To je prvič, ko program teče."
-
-#. i18n: ectx: label, entry (EditorGeometry), group (General Options)
-#: kgpg.kcfg:83
-msgid "The size of the editor window."
-msgstr "Velikost urejevalnega okna."
-
-#. i18n: ectx: label, entry (ShowTrust), group (General Options)
-#: kgpg.kcfg:86
-msgid "Show the trust value in key manager."
-msgstr "Pokaži vrednost zaupanja v upravljalniku ključev."
-
-#. i18n: ectx: label, entry (ShowExpi), group (General Options)
-#: kgpg.kcfg:90
-msgid "Show the expiration value in key manager."
-msgstr "Pokaži vrednost preteka v upravljalniku ključev."
-
-#. i18n: ectx: label, entry (ShowSize), group (General Options)
-#: kgpg.kcfg:94
-msgid "Show the size value in key manager."
-msgstr "Pokaži velikost v upravljalniku ključev."
-
-#. i18n: ectx: label, entry (ShowCreat), group (General Options)
-#: kgpg.kcfg:98
-msgid "Show the creation value in key manager."
-msgstr "Pokaži datum ustvaritve v upravljalniku ključev."
-
-#. i18n: ectx: label, entry (ShowSecret), group (General Options)
-#: kgpg.kcfg:102
-msgid "Show only secret keys in key manager."
-msgstr "Pokaži samo skrivne ključe v upravljalniku ključev."
-
-#. i18n: ectx: label, entry (ShowLongKeyId), group (General Options)
-#: kgpg.kcfg:106
-msgid "Show long key id in key manager."
-msgstr "Pokaži dolg ID ključa v upravljalniku ključev."
-
-#. i18n: ectx: label, entry (TrustLevel), group (General Options)
-#: kgpg.kcfg:110
-msgid "Show only keys with at least that trust level in key manager."
-msgstr ""
-"V upravljalniku ključev pokaži samo ključe z zaupanjem, ki je višje od "
-"navedenega."
-
-#. i18n: ectx: label, entry (UseMouseSelection), group (User Interface)
-#: kgpg.kcfg:124
-msgid "Use the mouse selection instead of the clipboard."
-msgstr "Uporabi miškino izbiro namesto odložišča."
-
-#. i18n: ectx: label, entry (AutoStart), group (User Interface)
-#: kgpg.kcfg:128 kgpgfirstassistant.cpp:232
-msgid "Start KGpg automatically at KDE startup."
-msgstr "Samodejno zaženi KGpg ob zagonu KDE."
-
-#. i18n: ectx: label, entry (RemoteFileWarn), group (User Interface)
-#: kgpg.kcfg:132
-msgid ""
-"Display a warning before creating temporary files during remote file "
-"operations."
-msgstr ""
-"Prikaži opozorilo pred ustvarjanjem začasnih datotek med opravili z "
-"oddaljenimi datotekami."
-
-#. i18n: ectx: label, entry (LeftClick), group (User Interface)
-#: kgpg.kcfg:136
-msgid "Choose default left-click behavior"
-msgstr "Izberite privzeto obnašanje levega klika"
-
-#. i18n: ectx: label, entry (EncryptedDropEvent), group (User Interface)
-#: kgpg.kcfg:143
-msgid "Handle encrypted drops"
-msgstr "Obravnavaj šifrirane spuste"
-
-#. i18n: ectx: label, entry (UnencryptedDropEvent), group (User Interface)
-#: kgpg.kcfg:151
-msgid "Handle unencrypted drops"
-msgstr "Obravnavaj nešifrirane spuste"
-
-#. i18n: ectx: label, entry (SignMenu), group (User Interface)
-#: kgpg.kcfg:159
-msgid "Show the \"sign file\" service menu."
-msgstr "Prikaži meni storitve »podpiši datoteko«."
-
-#. i18n: ectx: label, entry (DecryptMenu), group (User Interface)
-#: kgpg.kcfg:167
-msgid "Show the \"decrypt file\" service menu."
-msgstr "Prikaži meni storitve »odšifriraj datoteko«."
-
-#. i18n: ectx: label, entry (ShowSystray), group (User Interface)
-#: kgpg.kcfg:176
-msgid "Show the systray icon"
-msgstr "Pokaži ikono v sistemski vrstici"
-
-#. i18n: ectx: label, entry (RecentFiles), group (User Interface)
-#: kgpg.kcfg:180
-msgid "The number of recently opened files shown in the editor menu."
-msgstr "Število nedavno odprtih datotek, prikazanih v meniju urejevalnika."
-
-#. i18n: ectx: label, entry (ShowTipOfDay), group (TipOfDay)
-#: kgpg.kcfg:187
-msgid "Show tip of the day."
-msgstr "Prikaži namig dneva."
-
-#. i18n: ectx: label, entry (ColorGood), group (Key Colors)
-#: kgpg.kcfg:194
-msgid "Color used for trusted keys."
-msgstr "Barva za zaupanja vredne ključe."
-
-#. i18n: ectx: label, entry (ColorRev), group (Key Colors)
-#: kgpg.kcfg:198
-msgid "Color used for revoked keys."
-msgstr "Barva za preklicane ključe."
-
-#. i18n: ectx: label, entry (ColorUnknown), group (Key Colors)
-#: kgpg.kcfg:202
-msgid "Color used for unknown keys."
-msgstr "Barva za neznane ključe."
-
-#. i18n: ectx: label, entry (ColorBad), group (Key Colors)
-#: kgpg.kcfg:206
-msgid "Color used for untrusted keys."
-msgstr "Barva za ključe, ki niso zaupanja vredni."
-
-#. i18n: ectx: label, entry (ColorUltimate), group (Key Colors)
-#: kgpg.kcfg:210
-msgid "Color used for ultimately trusted keys."
-msgstr "Barva za ključe, ki jim popolnoma zaupate."
-
-#. i18n: ectx: label, entry (ColorMarginal), group (Key Colors)
-#: kgpg.kcfg:214
-msgid "Color used for marginally trusted keys."
-msgstr "Barva za ključe, ki jim delno zaupate."
-
-#. i18n: ectx: label, entry (ColorExpired), group (Key Colors)
-#: kgpg.kcfg:218
-msgid "Color used for expired keys."
-msgstr "Barva za pretekle ključe."
-
-#. i18n: ectx: label, entry (Font), group (Text Font)
-#: kgpg.kcfg:225
-msgid "Font"
-msgstr "Pisava"
-
-#. i18n: ectx: label, entry (KeyServers), group (Servers)
-#: kgpg.kcfg:248
-msgid ""
-"Key servers used by KGpg. The first server in the list is the default server."
-msgstr ""
-"Strežniki s ključi, ki jih uporablja KGpg. Prvi strežnik s seznama je "
-"privzeti strežnik."
-
-#. i18n: ectx: label, entry (InfoServers), group (Servers)
-#: kgpg.kcfg:252
-msgid ""
-"List of URLs that show details and analysis of the given key. The first "
-"server in the list is the default server."
-msgstr ""
-"Seznam naslovo URL, ki prikazujejo podrobnosti preučevanja podanega ključa. "
-"Prvi strežnik s seznama je privzeti strežnik."
-
-#. i18n: ectx: label, entry (UseProxy), group (Key Servers)
-#: kgpg.kcfg:259
-msgid "Use HTTP proxy when available."
-msgstr "Uporabi posredniški strežnik HTTP, ko je na voljo."
-
-#. i18n: ectx: label, entry (EmailTemplate), group (Key Signing)
-#: kgpg.kcfg:266
-msgid ""
-"This is the text of the email sent by the \"Sign and Mail User ID\" action."
-msgstr ""
-"To je besedilo e-pošte, ki je poslana z dejanjem »Podpiši in pošlji "
-"uporabniški ID«."
-
 #: kgpgexternalactions.cpp:134
 msgid "Cannot create temporary file for folder compression."
 msgstr "Ni mogoče ustvariti začasne datoteke za stiskanje mape."
@@ -2744,7 +1238,6 @@ msgid "Temporary File Creation"
 msgstr "Ustvarjanje začasne datoteke"
 
 #: kgpgexternalactions.cpp:139
-#, kde-format
 msgid ""
 "<qt>KGpg will now create a temporary archive file:<br /><b>%1</b> to process "
 "the encryption. The file will be deleted after the encryption is finished.</"
@@ -2757,6 +1250,17 @@ msgstr ""
 msgid "Compression method for archive:"
 msgstr "Metoda stiskanja za arhiv:"
 
+#: kgpgexternalactions.cpp:208 kgpgexternalactions.cpp:371
+#: editor/kgpgeditor.cpp:523 transactions/kgpgtransaction.cpp:189
+msgid "File Already Exists"
+msgstr "Datoteka že obstaja"
+
+#: kgpgexternalactions.cpp:288 editor/kgpgeditor.cpp:735
+#: editor/kgpgtextedit.cpp:320
+msgctxt "Caption of message box"
+msgid "Verification Finished"
+msgstr "Preverjanje zaključeno"
+
 #: kgpgexternalactions.cpp:406
 msgid "Decryption of this file failed:"
 msgid_plural "Decryption of these files failed:"
@@ -2764,6 +1268,10 @@ msgstr[0] "Odšifriranje teh datotek ni uspelo."
 msgstr[1] "Odšifriranje te datoteke ni uspelo."
 msgstr[2] "Odšifriranje teh datotek ni uspelo."
 msgstr[3] "Odšifriranje teh datotek ni uspelo."
+
+#: kgpgexternalactions.cpp:408 editor/kgpgtextedit.cpp:257
+msgid "Decryption failed."
+msgstr "Odšifriranje ni uspelo."
 
 #: kgpgexternalactions.cpp:434
 msgid ""
@@ -2822,6 +1330,12 @@ msgstr ""
 "gpg|Program GnuPG\n"
 "*|Vse datoteke"
 
+#. i18n: file: conf_gpg.ui:108
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: kgpgfirstassistant.cpp:123 rc.cpp:614
+msgid "GnuPG Binary"
+msgstr "Program GnuPG"
+
 #: kgpgfirstassistant.cpp:141
 msgid "KGpg needs to know where your GnuPG configuration file is stored."
 msgstr "KGpg mora vedeti, kje je shranjena nastavitvena datoteka GnuPG"
@@ -2845,6 +1359,12 @@ msgstr "Privzeti ključ"
 #: kgpgfirstassistant.cpp:222
 msgid "Generate new key"
 msgstr "Ustvari nov ključ"
+
+#. i18n: file: kgpg.kcfg:128
+#. i18n: ectx: label, entry (AutoStart), group (User Interface)
+#: kgpgfirstassistant.cpp:232 rc.cpp:268
+msgid "Start KGpg automatically at KDE startup."
+msgstr "Samodejno zaženi KGpg ob zagonu KDE."
 
 #: kgpgfirstassistant.cpp:236
 msgid "Done"
@@ -2871,22 +1391,18 @@ msgid "<qt><b>The GnuPG configuration file was not found</b>.</qt>"
 msgstr "<qt><b>Nastavitvena datoteka za GnuPG ni bila najdena.</b></qt>"
 
 #: kgpgfirstassistant.cpp:298
-#, kde-format
 msgid "Your GnuPG binary is: %1"
 msgstr "Program GnuPG je: %1"
 
 #: kgpgfirstassistant.cpp:314 kgpgfirstassistant.cpp:370
-#, kde-format
 msgid "You have GnuPG version: %1"
 msgstr "Imate GnuPG različice: %1"
 
 #: kgpgfirstassistant.cpp:317
-#, kde-format
 msgid "Your default key is: %1"
 msgstr "Vaš privzeti ključ je: %1"
 
 #: kgpgfirstassistant.cpp:368
-#, kde-format
 msgid ""
 "Your GnuPG version (%1) seems to be too old.<br />Compatibility with "
 "versions before 1.4.0 is no longer guaranteed."
@@ -2966,180 +1482,37 @@ msgstr "Ustvariti nameravate ključ brez e-poštnega naslova"
 msgid "Email address not valid"
 msgstr "E-poštni naslov ni veljaven"
 
-#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyGenerate)
-#: kgpgkeygenerate.ui:14
-msgid "Key Generation"
-msgstr "Ustvarjanje ključa"
+#. i18n: file: conf_ui2.ui:253
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#: kgpgoptions.cpp:101 rc.cpp:94
+msgid "Left to right, account first"
+msgstr "Od leve proti desni, najprej račun"
 
-#. i18n: ectx: property (title), widget (QGroupBox, vgroup)
-#: kgpgkeygenerate.ui:26
-msgid "Generate Key Pair"
-msgstr "Ustvari par ključev"
+#. i18n: file: conf_ui2.ui:258
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#: kgpgoptions.cpp:102 rc.cpp:97
+msgid "Right to left, TLD first"
+msgstr "Od desne proti levi, najprej vrhnja internetna domena (TLD)"
 
-#. i18n: Name of key owner
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: kgpgkeygenerate.ui:32
-msgid "&Name:"
-msgstr "I&me:"
+#. i18n: file: conf_ui2.ui:263
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#: kgpgoptions.cpp:103 rc.cpp:100
+msgid "Right to left, domain first"
+msgstr "Od desne proti levi, najprej domena"
 
-#. i18n: ectx: property (toolTip), widget (KLineEdit, m_kname)
-#: kgpgkeygenerate.ui:42
-msgid ""
-"The name must have a length of at least 5 characters and must not begin with "
-"a digit."
-msgstr "Ime mora imeti vsaj pet znakov in se ne sme začeti s števko."
+#. i18n: file: conf_ui2.ui:268
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#: kgpgoptions.cpp:104 rc.cpp:103
+msgid "Right to left, FQDN first"
+msgstr "Od desne proti levi, najprej absolutno ime domene (FQDN)"
 
-#. i18n: ectx: property (placeholderText), widget (KLineEdit, m_kname)
-#: kgpgkeygenerate.ui:45
-msgid "Real name, at least 5 characters, no leading digits"
-msgstr "Pravo ime,  vsaj pet znakov, brez vodilnih števk"
-
-#. i18n: Email address of key owner
-#. i18n: ectx: property (text), widget (QLabel, emailLabel)
-#: kgpgkeygenerate.ui:52
-msgid "E&mail (optional):"
-msgstr "&E-pošta (izbirno):"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kgpgkeygenerate.ui:65
-msgid "Commen&t (optional):"
-msgstr "&Opomba (izbirno):"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: ectx: property (text), widget (QLabel, tl_expiration)
-#: kgpgkeygenerate.ui:78 kgpgKeyInfo.ui:139
-msgid "Expiration:"
-msgstr "Preteče:"
-
-#. i18n: ectx: property (text), widget (KLineEdit, m_days)
-#: kgpgkeygenerate.ui:88
-msgid "0"
-msgstr "0"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kgpgkeygenerate.ui:95
-msgid "&Key size:"
-msgstr "&Velikost ključa:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kgpgkeygenerate.ui:108
-msgid "&Algorithm:"
-msgstr "&Algoritem:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, capabilities)
-#. i18n: ectx: property (text), widget (QLabel, tl_caps)
-#: kgpgkeygenerate.ui:127 kgpgKeyInfo.ui:248
-msgid "Capabilities"
-msgstr "Zmožnosti"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, capCert)
-#: kgpgkeygenerate.ui:139
-msgid "Certification is automatically enabled for all keys"
-msgstr "Potrjevanje je samodejno omogočeno za vse ključe"
-
-#. i18n: ectx: property (text), widget (QCheckBox, capCert)
-#: kgpgkeygenerate.ui:142
-msgid "Certification"
-msgstr "Potrjevanje"
-
-#. i18n: ectx: property (text), widget (QCheckBox, capAuth)
-#: kgpgkeygenerate.ui:162
-msgid "Authentication"
-msgstr "Overitev"
-
-#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyInfo)
-#: kgpgKeyInfo.ui:14
-msgid "Kgpg"
-msgstr "KGpg"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#. i18n: ectx: property (text), widget (QLabel, tl_id)
-#: kgpgKeyInfo.ui:85 newkey.ui:91
-msgid "Key ID:"
-msgstr "ID ključa:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_comment)
-#: kgpgKeyInfo.ui:102
-msgid "Comment:"
-msgstr "Opomba:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_creation)
-#: kgpgKeyInfo.ui:122
-msgid "Creation:"
-msgstr "Ustvaritev:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_trust)
-#: kgpgKeyInfo.ui:156
-msgid "Trust:"
-msgstr "Zaupanje:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_owtrust)
-#: kgpgKeyInfo.ui:163
-msgid "Owner trust:"
-msgstr "Zaupanje lastniku:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: kgpgKeyInfo.ui:186
-msgid "I do not know"
-msgstr "Ne vem"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: kgpgKeyInfo.ui:191
-msgid "I do NOT trust"
-msgstr "NE zaupam"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_algorithm)
-#: kgpgKeyInfo.ui:214
-msgid "Algorithm:"
-msgstr "Algoritem:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_length)
-#: kgpgKeyInfo.ui:231
-msgid "Length:"
-msgstr "Dolžina:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, gr_photo)
-#: kgpgKeyInfo.ui:309
-msgid "Photo"
-msgstr "Fotografija"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, m_photo)
-#: kgpgKeyInfo.ui:329
-msgid ""
-"<qt><b>Photo:</b><p>A photo can be included with a public key for extra "
-"security. The photo can be used as an additional method of authenticating "
-"the key. However, it should not be relied upon as the only form of "
-"authentication.</p></qt>"
-msgstr ""
-"<qt><b>Fotografija:</b><p>Fotografija se lahko doda javnemu ključu za "
-"dodatno varnost. Fotografija se lahko uporablja kot dodatna metoda overitve "
-"ključa. Vendar pa naj se ne bi smela uporabljati kot edina oblika overitve.</"
-"p></qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, m_photo)
-#: kgpgKeyInfo.ui:338
-msgid "No Photo"
-msgstr "Brez fotografije"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_disable)
-#: kgpgKeyInfo.ui:375
-msgid "Disable key"
-msgstr "Onemogoči ključ"
-
-#. i18n: ectx: property (text), widget (KPushButton, m_expirationbtn)
-#: kgpgKeyInfo.ui:382
-msgid "Change Expiration"
-msgstr "Spremeni pretek"
-
-#. i18n: ectx: property (text), widget (KPushButton, m_password)
-#: kgpgKeyInfo.ui:389
-msgid "Change Passphrase"
-msgstr "Spremeni šifrirno frazo"
-
-#. i18n: ectx: property (title), widget (QGroupBox, gr_fingerprint)
-#: kgpgKeyInfo.ui:415
-msgid "Fingerprint"
-msgstr "Prstni odtis"
+#. i18n: file: kgpgkeygenerate.ui:172
+#. i18n: ectx: property (text), widget (QCheckBox, capEncrypt)
+#. i18n: file: conf_encryption.ui:15
+#. i18n: ectx: property (windowTitle), widget (QWidget, Encryption)
+#: kgpgoptions.cpp:109 rc.cpp:156 rc.cpp:451
+msgid "Encryption"
+msgstr "Šifriranje"
 
 #: kgpgoptions.cpp:110
 msgid "Decryption"
@@ -3230,61 +1603,6 @@ msgstr "Podpiši datoteko"
 msgid "Create Revocation Certificate"
 msgstr "Ustvari potrdilo za preklic"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: kgpgrevokewidget.ui:18
-msgid "Create revocation certificate for"
-msgstr "Ustvari potrdilo za preklic za"
-
-#. i18n: ectx: property (text), widget (QLabel, keyID)
-#: kgpgrevokewidget.ui:28
-msgid "key id"
-msgstr "ID ključa"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: kgpgrevokewidget.ui:45
-msgid "Reason for revocation:"
-msgstr "Vzrok za preklic:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: kgpgrevokewidget.ui:56
-msgid "No Reason"
-msgstr "Brez vzroka"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: kgpgrevokewidget.ui:61
-msgid "Key Has Been Compromised"
-msgstr "Ključ je bil ogrožen"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: kgpgrevokewidget.ui:66
-msgid "Key is Superseded"
-msgstr "Ključ je bil zamenjan"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: kgpgrevokewidget.ui:71
-msgid "Key is No Longer Used"
-msgstr "Ključ ni več v uporabi"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: kgpgrevokewidget.ui:81
-msgid "Description:"
-msgstr "Opis:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, cbSave)
-#: kgpgrevokewidget.ui:96
-msgid "Save certificate:"
-msgstr "Shrani potrdilo:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, cbPrint)
-#: kgpgrevokewidget.ui:111
-msgid "Print certificate"
-msgstr "Natisni potrdilo"
-
-#. i18n: ectx: property (text), widget (QCheckBox, cbImport)
-#: kgpgrevokewidget.ui:121
-msgid "Import into keyring"
-msgstr "Uvozi v zbirko ključev"
-
 #: main.cpp:24
 msgid ""
 "KGpg - simple gui for gpg\n"
@@ -3352,101 +1670,347 @@ msgstr "Preveri podpis"
 msgid "File to open"
 msgstr "Datoteka za odprtje"
 
-#: model/gpgservermodel.cpp:91
-#, kde-format
-msgctxt "Mark default keyserver in GUI"
-msgid "%1 (Default)"
-msgstr "%1 (privzeti)"
+#. i18n: file: keyserver.ui:38
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
+#: rc.cpp:6
+msgid ""
+"<qt><b>Key Server:</b><br /> <p>A Key Server is a centralized repository of "
+"PGP/GnuPG keys connected to the Internet which can be conveniently accessed "
+"in order to obtain or deposit keys. Select from the drop down list to "
+"specify which key server should be used.</p> <p>Often these keys are held by "
+"people whom the user has never met and as such the authenticity is dubious "
+"at best. Refer to the GnuPG manual covering \"Web-of-Trust\" relationships "
+"to find out how GnuPG works around the problem of verifying authenticity.</"
+"p> </qt>"
+msgstr ""
+"<qt><b>Strežnik s ključi:</b><br /> <p>Strežnik s ključi je glavno skladišče "
+"ključev PGP/GnuPG, ki je povezano na internet in lahko dosegljivo za "
+"pridobivanje ali odlaganje ključev. Iz spustnega seznama izberite, kateri "
+"strežnik s ključi naj se uporablja.</p> <p>Pogosto te ključe zadržujejo "
+"osebe, ki jih uporabnik ni nikoli srečal, zato je njihova pristnost lahko "
+"dvomljiva. Poglejte v priročnik GnuPG, ki obravnava odnose »Spletnega "
+"zaupanja« (Web-of-Trust), da ugotovite kako GnuPG rešuje težavo preverjanja "
+"pristnosti.</p></qt>"
 
-#: model/keylistproxymodel.cpp:191 transactions/kgpgimport.cpp:193
-#, kde-format
-msgctxt "ID: Name"
-msgid "%1: %2"
-msgstr "%1: %2"
+#. i18n: file: keyserver.ui:41
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#. i18n: file: keyserver.ui:176
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#. i18n: file: keyexport.ui:58
+#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
+#: rc.cpp:9 rc.cpp:35 rc.cpp:650
+msgid "Key server:"
+msgstr "Strežnik s ključi:"
 
-#: model/keylistproxymodel.cpp:193 transactions/kgpgimport.cpp:195
-#, kde-format
-msgctxt "ID: Name <Email>"
-msgid "%1: %2 &lt;%3&gt;"
-msgstr "%1: %2 &lt;%3&gt;"
+#. i18n: file: keyserver.ui:52
+#. i18n: ectx: property (whatsThis), widget (KComboBox, kCBimportks)
+#: rc.cpp:12
+msgid ""
+"<b>Key Server Drop Down Dialog:</b>\n"
+"Allows the user to select the Key Server which will be used to import PGP/"
+"GnuPG keys into the local keyring."
+msgstr ""
+"<b>Spustni seznam strežnika ključev:</b>\n"
+"Uporabniku omogoča izbiro strežnika ključev, ki se bo uporabljal za uvoz "
+"ključev PGP/GnuPG v krajevno zbirko ključev."
 
-#: model/keylistproxymodel.cpp:198
-#, kde-format
-msgctxt "Name <Email>: ID"
-msgid "%1 &lt;%2&gt;: %3"
-msgstr "%1 &lt;%2&gt;: %3"
+#. i18n: file: keyserver.ui:60
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
+#: rc.cpp:16
+msgid ""
+"<qt><b>Text to search or ID of the key to import:</b><br />\n"
+"<p>There are multiple ways to search for a key, you can use a text or "
+"partial text search (example: entering Phil or Zimmerman will bring up all "
+"keys in which Phil or Zimmerman shows up) or you can search by the ID's of "
+"the key. Key ID's are strings of letters and numbers that uniquely identify "
+"a key (example: searching for 0xED7585F4 would bring up the key associated "
+"with that ID).</p></qt>"
+msgstr ""
+"<qt><b>Iskano besedilo ali ID ključa za uvoz:</b><br />\n"
+"<p>Na voljo so številni načini, kako poiskati ključ. Uporabite lahko iskanje "
+"besedila ali dela besedila (primer: če vnesete Janez ali Novak, boste "
+"poiskali vse ključe, kjer se pojavljata Janez in Novak), iščete pa lahko "
+"tudi po ID-jih ključev. ID-ji ključev so nizi črk in številk, ki enolično "
+"predstavljajo ključ (primer: če vnesete 0xED7585F4, boste poiskali ključ, ki "
+"mu pripada ta ID).</p></qt>"
 
-#: model/kgpgitemmodel.cpp:270 model/kgpgitemmodel.cpp:273
-#, kde-format
-msgid "1 Key"
-msgid_plural "%1 Keys"
-msgstr[0] "%1 ključev"
-msgstr[1] "%1 ključ"
-msgstr[2] "%1 ključa"
-msgstr[3] "%1 ključi"
+#. i18n: file: keyserver.ui:69
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:20
+msgid "Text to search or ID of the key to import:"
+msgstr "Besedilo za iskanje ali ID ključa za uvoz:"
 
-#: model/kgpgitemmodel.cpp:274
-#, kde-format
-msgid "1 Group"
-msgid_plural "%1 Groups"
-msgstr[0] "%1 skupin"
-msgstr[1] "%1 skupina"
-msgstr[2] "%1 skupini"
-msgstr[3] "%1 skupine"
+#. i18n: file: keyserver.ui:91
+#. i18n: ectx: property (text), widget (QCheckBox, cBproxyI)
+#. i18n: file: keyserver.ui:221
+#. i18n: ectx: property (text), widget (QCheckBox, cBproxyE)
+#: rc.cpp:23 rc.cpp:48
+msgid "Honor HTTP proxy:"
+msgstr "Upoštevaj posredniški strežnik HTTP:"
 
-#: model/kgpgitemmodel.cpp:276
-#, kde-format
-msgctxt "%1 = something like 7 keys, %2 = something like 2 groups"
-msgid "%1, %2"
-msgstr "%1, %2"
+#. i18n: file: keyserver.ui:134
+#. i18n: ectx: property (text), widget (QPushButton, Buttonsearch)
+#: rc.cpp:26
+msgid "&Search"
+msgstr "Po&išči"
 
-#: model/kgpgitemmodel.cpp:378
-msgid "ID"
-msgstr "ID"
+#. i18n: file: keyserver.ui:170
+#. i18n: ectx: attribute (title), widget (QWidget, tab_export)
+#: rc.cpp:32
+msgid "Export"
+msgstr "Izvozi"
 
-#: model/kgpgsearchresultmodel.cpp:126
-#, kde-format
-msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009, revoked"
-msgid "ID %1, %2-bit %3 key, created %4, revoked"
-msgstr "ID %1, %2-biten ključ %3, ustvarjen %4, preklican"
+#. i18n: file: keyserver.ui:190
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
+#: rc.cpp:38
+msgid ""
+"<qt><b>Key to be exported:</b><br />\n"
+"<p>This allows the user to specify the key from the drop down list that will "
+"be exported to the key server selected.</p></qt>"
+msgstr ""
+"<qt><b>Ključ za izvoz:</b><br />\n"
+"<p>To omogoča uporabniku, da navede ključ iz spustnega seznama, ki bo "
+"izvožen na izbran strežnik s ključi.</p></qt>"
 
-#: model/kgpgsearchresultmodel.cpp:131
-#, kde-format
-msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009"
-msgid "ID %1, %2-bit %3 key, created %4"
-msgstr "ID %1, %2-biten ključ %3, ustvarjen %4"
+#. i18n: file: keyserver.ui:193
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#: rc.cpp:42
+msgid "Key to be exported:"
+msgstr "Ključ za izvoz:"
 
-#: model/kgpgsearchresultmodel.cpp:220
-#, kde-format
-msgid "One Photo ID"
-msgid_plural "%1 Photo IDs"
-msgstr[0] "%1 fotografskih ID-jev"
-msgstr[1] "%1 fotografski ID"
-msgstr[2] "%1 fotografska ID-ja"
-msgstr[3] "%1 fotografski ID-ji"
+#. i18n: file: keyserver.ui:206
+#. i18n: ectx: property (text), widget (QCheckBox, exportAttributes)
+#: rc.cpp:45
+msgid "Export attributes (photo id)"
+msgstr "Izvozi atribute (fotografski ID)"
 
+#. i18n: file: keyserver.ui:265
+#. i18n: ectx: property (whatsThis), widget (QPushButton, Buttonexport)
+#: rc.cpp:51
+msgid ""
+"<qt><b>Export:</b><br />\n"
+"<p>Pushing this button will export the specified key to the specified server."
+"</p></qt>"
+msgstr ""
+"<qt><b>Izvozi:</b><br />\n"
+"<p>Pritisk na ta gumb bo izvozil navedeni ključ na navedeni strežnik.</p></"
+"qt>"
+
+#. i18n: file: keyserver.ui:268
+#. i18n: ectx: property (text), widget (QPushButton, Buttonexport)
+#: rc.cpp:55
+msgid "&Export"
+msgstr "&Izvozi"
+
+#. i18n: file: conf_ui2.ui:32
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: rc.cpp:58
+msgid "Key Colors"
+msgstr "Barve ključev"
+
+#. i18n: file: conf_ui2.ui:42
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUltimate)
+#: rc.cpp:61
+msgid "Ultimately trusted keys:"
+msgstr "Ključi, ki jim povsem zaupate:"
+
+#. i18n: file: conf_ui2.ui:52
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustTrusted)
+#: rc.cpp:64
+msgid "Trusted keys:"
+msgstr "Zaupanja vredni ključi:"
+
+#. i18n: file: conf_ui2.ui:62
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustMarginally)
+#: rc.cpp:67
+msgid "Marginally trusted keys:"
+msgstr "Ključi, ki jim delno zaupate:"
+
+#. i18n: file: conf_ui2.ui:72
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustExpired)
+#: rc.cpp:70
+msgid "Expired keys:"
+msgstr "Pretečeni ključi:"
+
+#. i18n: file: conf_ui2.ui:82
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustRevoked)
+#: rc.cpp:73
+msgid "Revoked keys:"
+msgstr "Preklicani ključi:"
+
+#. i18n: file: conf_ui2.ui:92
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUnknown)
+#: rc.cpp:76
+msgid "Unknown keys:"
+msgstr "Neznani ključi:"
+
+#. i18n: file: conf_ui2.ui:102
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustDisabled)
+#: rc.cpp:79
+msgid "Disabled keys:"
+msgstr "Onemogočeni ključi:"
+
+#. i18n: file: conf_ui2.ui:225
+#. i18n: ectx: attribute (title), widget (QWidget, TabPage)
+#: rc.cpp:82
+msgid "Editor Font"
+msgstr "Pisava urejevalnika"
+
+#. i18n: file: conf_ui2.ui:230
+#. i18n: ectx: attribute (title), widget (QWidget, tabKeyList)
+#: rc.cpp:85
+msgid "Key List"
+msgstr "Seznam ključev"
+
+#. i18n: file: conf_ui2.ui:236
+#. i18n: ectx: property (title), widget (QGroupBox, groupBoxSorting)
+#: rc.cpp:88
+msgid "Sort Order"
+msgstr "Vrstni red razvrščanja"
+
+#. i18n: file: conf_ui2.ui:242
+#. i18n: ectx: property (text), widget (QLabel, label_EmailSorting)
+#. i18n: file: newkey.ui:67
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#. i18n: file: adduid.ui:29
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:91 rc.cpp:171 rc.cpp:340
+msgid "Email:"
+msgstr "E-pošta:"
+
+#. i18n: file: kgpgkeygenerate.ui:14
+#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyGenerate)
+#: rc.cpp:106
+msgid "Key Generation"
+msgstr "Ustvarjanje ključa"
+
+#. i18n: file: kgpgkeygenerate.ui:26
+#. i18n: ectx: property (title), widget (QGroupBox, vgroup)
+#: rc.cpp:109
+msgid "Generate Key Pair"
+msgstr "Ustvari par ključev"
+
+#. i18n: Name of key owner
+#. i18n: file: kgpgkeygenerate.ui:32
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: rc.cpp:113
+msgid "&Name:"
+msgstr "I&me:"
+
+#. i18n: file: kgpgkeygenerate.ui:42
+#. i18n: ectx: property (toolTip), widget (KLineEdit, m_kname)
+#: rc.cpp:116
+msgid ""
+"The name must have a length of at least 5 characters and must not begin with "
+"a digit."
+msgstr "Ime mora imeti vsaj pet znakov in se ne sme začeti s števko."
+
+#. i18n: file: kgpgkeygenerate.ui:45
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, m_kname)
+#: rc.cpp:119
+msgid "Real name, at least 5 characters, no leading digits"
+msgstr "Pravo ime,  vsaj pet znakov, brez vodilnih števk"
+
+#. i18n: Email address of key owner
+#. i18n: file: kgpgkeygenerate.ui:52
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#: rc.cpp:123
+msgid "E&mail (optional):"
+msgstr "&E-pošta (izbirno):"
+
+#. i18n: file: kgpgkeygenerate.ui:65
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:126
+msgid "Commen&t (optional):"
+msgstr "&Opomba (izbirno):"
+
+#. i18n: file: kgpgkeygenerate.ui:78
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: file: kgpgKeyInfo.ui:139
+#. i18n: ectx: property (text), widget (QLabel, tl_expiration)
+#: rc.cpp:129 rc.cpp:361
+msgid "Expiration:"
+msgstr "Preteče:"
+
+#. i18n: file: kgpgkeygenerate.ui:88
+#. i18n: ectx: property (text), widget (KLineEdit, m_days)
+#: rc.cpp:132
+msgid "0"
+msgstr "0"
+
+#. i18n: file: kgpgkeygenerate.ui:95
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:135
+msgid "&Key size:"
+msgstr "&Velikost ključa:"
+
+#. i18n: file: kgpgkeygenerate.ui:108
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:138
+msgid "&Algorithm:"
+msgstr "&Algoritem:"
+
+#. i18n: file: kgpgkeygenerate.ui:127
+#. i18n: ectx: property (title), widget (QGroupBox, capabilities)
+#. i18n: file: kgpgKeyInfo.ui:248
+#. i18n: ectx: property (text), widget (QLabel, tl_caps)
+#: rc.cpp:141 rc.cpp:391
+msgid "Capabilities"
+msgstr "Zmožnosti"
+
+#. i18n: file: kgpgkeygenerate.ui:139
+#. i18n: ectx: property (toolTip), widget (QCheckBox, capCert)
+#: rc.cpp:144
+msgid "Certification is automatically enabled for all keys"
+msgstr "Potrjevanje je samodejno omogočeno za vse ključe"
+
+#. i18n: file: kgpgkeygenerate.ui:142
+#. i18n: ectx: property (text), widget (QCheckBox, capCert)
+#: rc.cpp:147
+msgid "Certification"
+msgstr "Potrjevanje"
+
+#. i18n: file: kgpgkeygenerate.ui:162
+#. i18n: ectx: property (text), widget (QCheckBox, capAuth)
+#: rc.cpp:153
+msgid "Authentication"
+msgstr "Overitev"
+
+#. i18n: file: newkey.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: newkey.ui:19
+#: rc.cpp:162
 msgid "New Key Created"
 msgstr "Nov ključ ustvarjen"
 
+#. i18n: file: newkey.ui:25
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: newkey.ui:25
+#: rc.cpp:165
 msgid "You have successfully created the following key:"
 msgstr "Uspešno ste ustvarili naslednji ključ:"
 
+#. i18n: file: newkey.ui:37
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: newkey.ui:37
+#: rc.cpp:168
 msgid "Name:"
 msgstr "Ime:"
 
+#. i18n: file: newkey.ui:91
+#. i18n: ectx: property (text), widget (QLabel, textLabel5)
+#. i18n: file: kgpgKeyInfo.ui:85
+#. i18n: ectx: property (text), widget (QLabel, tl_id)
+#: rc.cpp:174 rc.cpp:352
+msgid "Key ID:"
+msgstr "ID ključa:"
+
+#. i18n: file: newkey.ui:115
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
-#: newkey.ui:115
+#: rc.cpp:177
 msgid "Fingerprint:"
 msgstr "Prstni odtis:"
 
+#. i18n: file: newkey.ui:136
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, CBdefault)
-#: newkey.ui:136
+#: rc.cpp:180
 msgid ""
 "<qt><b>Set as your default key:</b><br />\n"
 "<p>Checking this option sets the newly created key pair as the default key "
@@ -3456,18 +2020,21 @@ msgstr ""
 "<p>Če označite to možnost, bo novo ustvarjen par ključev nastavljen kot "
 "privzet par ključev.</p></qt>"
 
+#. i18n: file: newkey.ui:139
 #. i18n: ectx: property (text), widget (QCheckBox, CBdefault)
-#: newkey.ui:139
+#: rc.cpp:184
 msgid "Set as your default key"
 msgstr "Nastavi kot privzeti ključ"
 
+#. i18n: file: newkey.ui:151
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
-#: newkey.ui:151
+#: rc.cpp:187
 msgid "Revocation Certificate"
 msgstr "Potrdilo za preklic"
 
+#. i18n: file: newkey.ui:157
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: newkey.ui:157
+#: rc.cpp:190
 msgid ""
 "It is recommended to save or print a revocation certificate in case your key "
 "is compromised."
@@ -3475,25 +2042,1235 @@ msgstr ""
 "Priporočeno je, da shranite ali natisnete potrdilo za preklic, če bi bil "
 "slučajno vaš ključ ogrožen."
 
+#. i18n: file: newkey.ui:169
 #. i18n: ectx: property (text), widget (QCheckBox, CBsave)
-#: newkey.ui:169
+#: rc.cpp:193
 msgid "Save as:"
 msgstr "Shrani kot:"
 
+#. i18n: file: newkey.ui:185
 #. i18n: ectx: property (text), widget (QCheckBox, CBprint)
-#: newkey.ui:185
+#: rc.cpp:196
 msgid "Print"
 msgstr "Natisni"
 
+#. i18n: file: kgpg.kcfg:13
+#. i18n: ectx: label, entry (CustomDecrypt), group (Decryption)
+#: rc.cpp:199
+msgid "Custom decryption command."
+msgstr "Ukaz odšifriranja po meri."
+
+#. i18n: file: kgpg.kcfg:19
+#. i18n: ectx: label, entry (CustomEncryptionOptions), group (Encryption)
+#: rc.cpp:202
+msgid "Custom encryption options"
+msgstr "Možnosti šifriranja po meri"
+
+#. i18n: file: kgpg.kcfg:22
+#. i18n: ectx: label, entry (AllowCustomEncryptionOptions), group (Encryption)
+#: rc.cpp:205
+msgid "Allow custom encryption options"
+msgstr "Dovoli možnosti šifriranja po meri"
+
+#. i18n: file: kgpg.kcfg:26
+#. i18n: ectx: label, entry (FileEncryptionKey), group (Encryption)
+#: rc.cpp:208
+msgid "File encryption key."
+msgstr "Ključ šifriranja datotek."
+
+#. i18n: file: kgpg.kcfg:29
+#. i18n: ectx: label, entry (EncryptFilesTo), group (Encryption)
+#: rc.cpp:211
+msgid "Encrypt files"
+msgstr "Šifriraj datoteke"
+
+#. i18n: file: kgpg.kcfg:33
+#. i18n: ectx: label, entry (AsciiArmor), group (Encryption)
+#: rc.cpp:214
+msgid "Use ASCII armored encryption."
+msgstr "Uporabi šifriranje na podlagi ASCII."
+
+#. i18n: file: kgpg.kcfg:37
+#. i18n: ectx: label, entry (AllowUntrustedKeys), group (Encryption)
+#: rc.cpp:217
+msgid "Allow encryption with untrusted keys."
+msgstr "Dovoli šifriranje s ključi, ki niso zaupanja vredni."
+
+#. i18n: file: kgpg.kcfg:41
+#. i18n: ectx: label, entry (AllowUntrustedGroupMembers), group (Encryption)
+#: rc.cpp:220
+msgid "Allow untrusted keys to become members of key groups."
+msgstr ""
+"Ključem, ki niso zaupanja vredni, dovoli, da postanejo člani skupin ključev."
+
+#. i18n: file: kgpg.kcfg:45
+#. i18n: ectx: label, entry (HideUserID), group (Encryption)
+#: rc.cpp:223
+msgid "Hide the user ID."
+msgstr "Skrij uporabniški ID."
+
+#. i18n: file: kgpg.kcfg:49
+#. i18n: ectx: label, entry (PgpCompatibility), group (Encryption)
+#: rc.cpp:226
+msgid "Enable PGP 6 compatibility."
+msgstr "Omogoči združljivost s PGP 6."
+
+#. i18n: file: kgpg.kcfg:53
+#. i18n: ectx: label, entry (PgpExtension), group (Encryption)
+#: rc.cpp:229
+msgid "Use *.pgp extension for encrypted files."
+msgstr "Uporabi pripono *.pgp za šifrirane datoteke."
+
+#. i18n: file: kgpg.kcfg:60
+#. i18n: ectx: label, entry (GpgConfigPath), group (GPG Settings)
+#: rc.cpp:232
+msgid "The path of the gpg configuration file."
+msgstr "Pot do nastavitvene datoteke gpg."
+
+#. i18n: file: kgpg.kcfg:63
+#. i18n: ectx: label, entry (GpgBinaryPath), group (GPG Settings)
+#: rc.cpp:235
+msgid "The path of the gpg binary used by KGpg."
+msgstr "Pot do programa gpg za uporabo v KGpg."
+
+#. i18n: file: kgpg.kcfg:79
+#. i18n: ectx: label, entry (FirstRun), group (General Options)
+#: rc.cpp:238
+msgid "Is the first time the application runs."
+msgstr "To je prvič, ko program teče."
+
+#. i18n: file: kgpg.kcfg:83
+#. i18n: ectx: label, entry (EditorGeometry), group (General Options)
+#: rc.cpp:241
+msgid "The size of the editor window."
+msgstr "Velikost urejevalnega okna."
+
+#. i18n: file: kgpg.kcfg:86
+#. i18n: ectx: label, entry (ShowTrust), group (General Options)
+#: rc.cpp:244
+msgid "Show the trust value in key manager."
+msgstr "Pokaži vrednost zaupanja v upravljalniku ključev."
+
+#. i18n: file: kgpg.kcfg:90
+#. i18n: ectx: label, entry (ShowExpi), group (General Options)
+#: rc.cpp:247
+msgid "Show the expiration value in key manager."
+msgstr "Pokaži vrednost preteka v upravljalniku ključev."
+
+#. i18n: file: kgpg.kcfg:94
+#. i18n: ectx: label, entry (ShowSize), group (General Options)
+#: rc.cpp:250
+msgid "Show the size value in key manager."
+msgstr "Pokaži velikost v upravljalniku ključev."
+
+#. i18n: file: kgpg.kcfg:98
+#. i18n: ectx: label, entry (ShowCreat), group (General Options)
+#: rc.cpp:253
+msgid "Show the creation value in key manager."
+msgstr "Pokaži datum ustvaritve v upravljalniku ključev."
+
+#. i18n: file: kgpg.kcfg:102
+#. i18n: ectx: label, entry (ShowSecret), group (General Options)
+#: rc.cpp:256
+msgid "Show only secret keys in key manager."
+msgstr "Pokaži samo skrivne ključe v upravljalniku ključev."
+
+#. i18n: file: kgpg.kcfg:106
+#. i18n: ectx: label, entry (ShowLongKeyId), group (General Options)
+#: rc.cpp:259
+msgid "Show long key id in key manager."
+msgstr "Pokaži dolg ID ključa v upravljalniku ključev."
+
+#. i18n: file: kgpg.kcfg:110
+#. i18n: ectx: label, entry (TrustLevel), group (General Options)
+#: rc.cpp:262
+msgid "Show only keys with at least that trust level in key manager."
+msgstr ""
+"V upravljalniku ključev pokaži samo ključe z zaupanjem, ki je višje od "
+"navedenega."
+
+#. i18n: file: kgpg.kcfg:124
+#. i18n: ectx: label, entry (UseMouseSelection), group (User Interface)
+#: rc.cpp:265
+msgid "Use the mouse selection instead of the clipboard."
+msgstr "Uporabi miškino izbiro namesto odložišča."
+
+#. i18n: file: kgpg.kcfg:132
+#. i18n: ectx: label, entry (RemoteFileWarn), group (User Interface)
+#: rc.cpp:271
+msgid ""
+"Display a warning before creating temporary files during remote file "
+"operations."
+msgstr ""
+"Prikaži opozorilo pred ustvarjanjem začasnih datotek med opravili z "
+"oddaljenimi datotekami."
+
+#. i18n: file: kgpg.kcfg:136
+#. i18n: ectx: label, entry (LeftClick), group (User Interface)
+#: rc.cpp:274
+msgid "Choose default left-click behavior"
+msgstr "Izberite privzeto obnašanje levega klika"
+
+#. i18n: file: kgpg.kcfg:143
+#. i18n: ectx: label, entry (EncryptedDropEvent), group (User Interface)
+#: rc.cpp:277
+msgid "Handle encrypted drops"
+msgstr "Obravnavaj šifrirane spuste"
+
+#. i18n: file: kgpg.kcfg:151
+#. i18n: ectx: label, entry (UnencryptedDropEvent), group (User Interface)
+#: rc.cpp:280
+msgid "Handle unencrypted drops"
+msgstr "Obravnavaj nešifrirane spuste"
+
+#. i18n: file: kgpg.kcfg:159
+#. i18n: ectx: label, entry (SignMenu), group (User Interface)
+#: rc.cpp:283
+msgid "Show the \"sign file\" service menu."
+msgstr "Prikaži meni storitve »podpiši datoteko«."
+
+#. i18n: file: kgpg.kcfg:167
+#. i18n: ectx: label, entry (DecryptMenu), group (User Interface)
+#: rc.cpp:286
+msgid "Show the \"decrypt file\" service menu."
+msgstr "Prikaži meni storitve »odšifriraj datoteko«."
+
+#. i18n: file: kgpg.kcfg:176
+#. i18n: ectx: label, entry (ShowSystray), group (User Interface)
+#: rc.cpp:289
+msgid "Show the systray icon"
+msgstr "Pokaži ikono v sistemski vrstici"
+
+#. i18n: file: kgpg.kcfg:180
+#. i18n: ectx: label, entry (RecentFiles), group (User Interface)
+#: rc.cpp:292
+msgid "The number of recently opened files shown in the editor menu."
+msgstr "Število nedavno odprtih datotek, prikazanih v meniju urejevalnika."
+
+#. i18n: file: kgpg.kcfg:187
+#. i18n: ectx: label, entry (ShowTipOfDay), group (TipOfDay)
+#: rc.cpp:295
+msgid "Show tip of the day."
+msgstr "Prikaži namig dneva."
+
+#. i18n: file: kgpg.kcfg:194
+#. i18n: ectx: label, entry (ColorGood), group (Key Colors)
+#: rc.cpp:298
+msgid "Color used for trusted keys."
+msgstr "Barva za zaupanja vredne ključe."
+
+#. i18n: file: kgpg.kcfg:198
+#. i18n: ectx: label, entry (ColorRev), group (Key Colors)
+#: rc.cpp:301
+msgid "Color used for revoked keys."
+msgstr "Barva za preklicane ključe."
+
+#. i18n: file: kgpg.kcfg:202
+#. i18n: ectx: label, entry (ColorUnknown), group (Key Colors)
+#: rc.cpp:304
+msgid "Color used for unknown keys."
+msgstr "Barva za neznane ključe."
+
+#. i18n: file: kgpg.kcfg:206
+#. i18n: ectx: label, entry (ColorBad), group (Key Colors)
+#: rc.cpp:307
+msgid "Color used for untrusted keys."
+msgstr "Barva za ključe, ki niso zaupanja vredni."
+
+#. i18n: file: kgpg.kcfg:210
+#. i18n: ectx: label, entry (ColorUltimate), group (Key Colors)
+#: rc.cpp:310
+msgid "Color used for ultimately trusted keys."
+msgstr "Barva za ključe, ki jim popolnoma zaupate."
+
+#. i18n: file: kgpg.kcfg:214
+#. i18n: ectx: label, entry (ColorMarginal), group (Key Colors)
+#: rc.cpp:313
+msgid "Color used for marginally trusted keys."
+msgstr "Barva za ključe, ki jim delno zaupate."
+
+#. i18n: file: kgpg.kcfg:218
+#. i18n: ectx: label, entry (ColorExpired), group (Key Colors)
+#: rc.cpp:316
+msgid "Color used for expired keys."
+msgstr "Barva za pretekle ključe."
+
+#. i18n: file: kgpg.kcfg:225
+#. i18n: ectx: label, entry (Font), group (Text Font)
+#: rc.cpp:319
+msgid "Font"
+msgstr "Pisava"
+
+#. i18n: file: kgpg.kcfg:248
+#. i18n: ectx: label, entry (KeyServers), group (Servers)
+#: rc.cpp:322
+msgid ""
+"Key servers used by KGpg. The first server in the list is the default server."
+msgstr ""
+"Strežniki s ključi, ki jih uporablja KGpg. Prvi strežnik s seznama je "
+"privzeti strežnik."
+
+#. i18n: file: kgpg.kcfg:252
+#. i18n: ectx: label, entry (InfoServers), group (Servers)
+#: rc.cpp:325
+msgid ""
+"List of URLs that show details and analysis of the given key. The first "
+"server in the list is the default server."
+msgstr ""
+"Seznam naslovo URL, ki prikazujejo podrobnosti preučevanja podanega ključa. "
+"Prvi strežnik s seznama je privzeti strežnik."
+
+#. i18n: file: kgpg.kcfg:259
+#. i18n: ectx: label, entry (UseProxy), group (Key Servers)
+#: rc.cpp:328
+msgid "Use HTTP proxy when available."
+msgstr "Uporabi posredniški strežnik HTTP, ko je na voljo."
+
+#. i18n: file: kgpg.kcfg:266
+#. i18n: ectx: label, entry (EmailTemplate), group (Key Signing)
+#: rc.cpp:331
+msgid ""
+"This is the text of the email sent by the \"Sign and Mail User ID\" action."
+msgstr ""
+"To je besedilo e-pošte, ki je poslana z dejanjem »Podpiši in pošlji "
+"uporabniški ID«."
+
+#. i18n: file: adduid.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:337
+msgid "Name (minimum 5 characters):"
+msgstr "Ime (vsaj 5 znakov):"
+
+#. i18n: file: adduid.ui:42
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:343
+msgid "Comment (optional):"
+msgstr "Opomba (izbirno):"
+
+#. i18n: file: kgpgKeyInfo.ui:14
+#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyInfo)
+#: rc.cpp:346
+msgid "Kgpg"
+msgstr "KGpg"
+
+#. i18n: file: kgpgKeyInfo.ui:102
+#. i18n: ectx: property (text), widget (QLabel, tl_comment)
+#: rc.cpp:355
+msgid "Comment:"
+msgstr "Opomba:"
+
+#. i18n: file: kgpgKeyInfo.ui:122
+#. i18n: ectx: property (text), widget (QLabel, tl_creation)
+#: rc.cpp:358
+msgid "Creation:"
+msgstr "Ustvaritev:"
+
+#. i18n: file: kgpgKeyInfo.ui:156
+#. i18n: ectx: property (text), widget (QLabel, tl_trust)
+#: rc.cpp:364
+msgid "Trust:"
+msgstr "Zaupanje:"
+
+#. i18n: file: kgpgKeyInfo.ui:163
+#. i18n: ectx: property (text), widget (QLabel, tl_owtrust)
+#: rc.cpp:367
+msgid "Owner trust:"
+msgstr "Zaupanje lastniku:"
+
+#. i18n: file: kgpgKeyInfo.ui:186
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:370
+msgid "I do not know"
+msgstr "Ne vem"
+
+#. i18n: file: kgpgKeyInfo.ui:191
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:373
+msgid "I do NOT trust"
+msgstr "NE zaupam"
+
+#. i18n: file: kgpgKeyInfo.ui:196
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:376 core/convert.cpp:62
+msgid "Marginally"
+msgstr "Delno"
+
+#. i18n: file: kgpgKeyInfo.ui:201
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:379 core/convert.cpp:64
+msgid "Fully"
+msgstr "Polno"
+
+#. i18n: file: kgpgKeyInfo.ui:206
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:382 core/convert.cpp:66
+msgid "Ultimately"
+msgstr "Popolno"
+
+#. i18n: file: kgpgKeyInfo.ui:214
+#. i18n: ectx: property (text), widget (QLabel, tl_algorithm)
+#: rc.cpp:385
+msgid "Algorithm:"
+msgstr "Algoritem:"
+
+#. i18n: file: kgpgKeyInfo.ui:231
+#. i18n: ectx: property (text), widget (QLabel, tl_length)
+#: rc.cpp:388
+msgid "Length:"
+msgstr "Dolžina:"
+
+#. i18n: file: kgpgKeyInfo.ui:309
+#. i18n: ectx: property (title), widget (QGroupBox, gr_photo)
+#: rc.cpp:394
+msgid "Photo"
+msgstr "Fotografija"
+
+#. i18n: file: kgpgKeyInfo.ui:329
+#. i18n: ectx: property (whatsThis), widget (QLabel, m_photo)
+#: rc.cpp:397
+msgid ""
+"<qt><b>Photo:</b><p>A photo can be included with a public key for extra "
+"security. The photo can be used as an additional method of authenticating "
+"the key. However, it should not be relied upon as the only form of "
+"authentication.</p></qt>"
+msgstr ""
+"<qt><b>Fotografija:</b><p>Fotografija se lahko doda javnemu ključu za "
+"dodatno varnost. Fotografija se lahko uporablja kot dodatna metoda overitve "
+"ključa. Vendar pa naj se ne bi smela uporabljati kot edina oblika overitve.</"
+"p></qt>"
+
+#. i18n: file: kgpgKeyInfo.ui:338
+#. i18n: ectx: property (text), widget (QLabel, m_photo)
+#: rc.cpp:400
+msgid "No Photo"
+msgstr "Brez fotografije"
+
+#. i18n: file: kgpgKeyInfo.ui:375
+#. i18n: ectx: property (text), widget (QCheckBox, m_disable)
+#: rc.cpp:403
+msgid "Disable key"
+msgstr "Onemogoči ključ"
+
+#. i18n: file: kgpgKeyInfo.ui:382
+#. i18n: ectx: property (text), widget (KPushButton, m_expirationbtn)
+#: rc.cpp:406
+msgid "Change Expiration"
+msgstr "Spremeni pretek"
+
+#. i18n: file: kgpgKeyInfo.ui:389
+#. i18n: ectx: property (text), widget (KPushButton, m_password)
+#: rc.cpp:409
+msgid "Change Passphrase"
+msgstr "Spremeni šifrirno frazo"
+
+#. i18n: file: kgpgKeyInfo.ui:415
+#. i18n: ectx: property (title), widget (QGroupBox, gr_fingerprint)
+#: rc.cpp:412
+msgid "Fingerprint"
+msgstr "Prstni odtis"
+
+#. i18n: file: keysmanager.rc:6
+#. i18n: ectx: Menu (managekeys)
+#: rc.cpp:415
+msgid "&Keys"
+msgstr "&Ključi"
+
+#. i18n: file: keysmanager.rc:25
+#. i18n: ectx: Menu (view)
+#. i18n: file: editor/kgpgeditor.rc:13
+#. i18n: ectx: Menu (view)
+#: rc.cpp:418 rc.cpp:569
+msgid "&View"
+msgstr "&Pogled"
+
+#. i18n: file: keysmanager.rc:30
+#. i18n: ectx: Menu (show_details)
+#: rc.cpp:421
+msgid "&Show Details"
+msgstr "&Prikaži podrobnosti"
+
+#. i18n: file: keysmanager.rc:42
+#. i18n: ectx: Menu (groups)
+#: rc.cpp:424
+msgid "&Groups"
+msgstr "&Skupine"
+
+#. i18n: file: groupedit.ui:74
+#. i18n: ectx: property (text), widget (QTableView, availableKeys)
+#. i18n: file: groupedit.ui:158
+#. i18n: ectx: property (text), widget (QTableView, groupKeys)
+#: rc.cpp:430 rc.cpp:442 model/kgpgitemmodel.cpp:372
+#: model/kgpgsearchresultmodel.cpp:334
+msgid "Name"
+msgstr "Ime"
+
+#. i18n: file: groupedit.ui:79
+#. i18n: ectx: property (text), widget (QTableView, availableKeys)
+#. i18n: file: groupedit.ui:163
+#. i18n: ectx: property (text), widget (QTableView, groupKeys)
+#: rc.cpp:433 rc.cpp:445 model/kgpgitemmodel.cpp:373
+#: model/kgpgsearchresultmodel.cpp:336
+msgctxt "@title:column Title of a column of emails"
+msgid "Email"
+msgstr "E-pošta"
+
+#. i18n: file: groupedit.ui:84
+#. i18n: ectx: property (text), widget (QTableView, availableKeys)
+#. i18n: file: groupedit.ui:168
+#. i18n: ectx: property (text), widget (QTableView, groupKeys)
+#: rc.cpp:436 rc.cpp:448
+msgid "Id"
+msgstr "ID"
+
+#. i18n: file: groupedit.ui:100
+#. i18n: ectx: property (text), widget (QLabel, kActiveLabel1)
+#: rc.cpp:439
+msgid "Keys in the Group"
+msgstr "Ključi v skupini"
+
+#. i18n: file: conf_encryption.ui:31
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AsciiArmor)
+#: rc.cpp:454
+msgid ""
+"<qt><b>ASCII armored encryption:</b> <br /> \n"
+"<p>Checking this option outputs all encrypted files in a format that can be "
+"opened by a text editor and as such the output is suitable for placing in "
+"the body of an e-mail message.</p></qt>"
+msgstr ""
+"<qt><b>Šifriranje na podlagi ASCII:</b> <br /> \n"
+"<p>Izbor te možnosti bo vse datoteke šifriral v obliko, ki jo lahko odpre "
+"urejevalnik besedila, zato je to primerno za uporabo v telesu e-poštnih "
+"sporočil.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:34
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AsciiArmor)
+#: rc.cpp:458 selectpublickeydialog.cpp:95
+msgid "ASCII armored encryption"
+msgstr "Šifriranje na podlagi ASCII"
+
+#. i18n: file: conf_encryption.ui:42
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpExtension)
+#: rc.cpp:461
+msgid ""
+"<qt><b>Use *.pgp extension for encrypted files:</b><br />\n"
+"<p>Checking this option will append a .pgp extension to all encrypted files "
+"instead of a .gpg extension. This option will maintain compatibility with "
+"users of PGP (Pretty Good Privacy) software.</p></qt>"
+msgstr ""
+"<qt><b>Uporabi pripono *.pgp za šifrirane datoteke</b><br />\n"
+"<p>Izbor te možnosti bo dodal pripono .pgp vsem šifriranim datotekam namesto "
+"pripone .gpg . Ta možnost omogoča združljivost z uporabniki programske "
+"opreme PGP (Pretty Good Privacy).</p></qt>"
+
+#. i18n: file: conf_encryption.ui:45
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpExtension)
+#: rc.cpp:465
+msgid "Use *.pgp extension for encrypted files"
+msgstr "Uporabi pripono *.pgp za šifrirane datoteke"
+
+#. i18n: file: conf_encryption.ui:69
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
+#: rc.cpp:468
+msgid ""
+"<qt><b>Custom encryption command:</b><br />\n"
+"<p>When activated, an entry field will be shown in the key selection dialog, "
+"enabling you to enter a custom command for encryption. This option is "
+"recommended for experienced users only.</p></qt>"
+msgstr ""
+"<qt><b>Ukaz šifriranja po meri:</b> <br />\n"
+"<p>Ko je omogočeno, se pokaže vnosno polje v oknu za izbiro ključa, v "
+"katerem vnesete ukaz za šifriranje po meri. Ta možnost je priporočena samo "
+"za izkušene uporabnike.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:72
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
+#: rc.cpp:472
+msgid "Custom encryption command:"
+msgstr "Ukaz šifriranja po meri:"
+
+#. i18n: file: conf_encryption.ui:113
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, encrypt_to_always)
+#: rc.cpp:475
+msgid ""
+"<qt><b>Always encrypt with:</b><br />\n"
+"<p>This ensures all files/messages will also be encrypted with the chosen "
+"key. However, if the \"Encrypt files with:\" option is selected that chosen "
+"key will override the \"Always encrypt with:\" selection.</p></qt>"
+msgstr ""
+"<qt><b>Vedno šifriraj z:</b><br />\n"
+"<p>To zagotavlja, da bodo tudi vse datoteke in sporočila šifrirana z "
+"izbranim ključem. Če pa je izbrana možnost »Šifriraj datoteke z:«, bo "
+"slednji ključ prepisal izbiro pri »Vedno šifriraj z:«.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:116
+#. i18n: ectx: property (text), widget (QCheckBox, encrypt_to_always)
+#: rc.cpp:479
+msgid "Always encrypt with:"
+msgstr "Vedno šifriraj z:"
+
+#. i18n: file: conf_encryption.ui:124
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EncryptFilesTo)
+#: rc.cpp:482
+msgid ""
+"<qt><b>Encrypt files with:</b><br />\n"
+"<p>Checking this option and selecting a key will force any file encryption "
+"operation to use the selected key. KGpg will not query for a recipient and "
+"the default key will be bypassed.</p></qt>"
+msgstr ""
+"<qt><b>Šifriraj datoteke z:</b><br />\n"
+"<p>Izbor te možnosti in izbor ključa bo prisilil vsako opravilo šifriranja "
+"datotek, da uporabi izbrani ključ. KGpg ne bo poizvedel po prejemniku, "
+"privzeti ključ pa bo prezrt.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:127
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EncryptFilesTo)
+#: rc.cpp:486
+msgid "Encrypt files with:"
+msgstr "Šifriraj datoteke z:"
+
+#. i18n: file: conf_encryption.ui:135
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedKeys)
+#: rc.cpp:489
+msgid ""
+"<qt><b>Allow encryption with untrusted keys:</b><br />\n"
+"<p>When importing a public key, the key is usually marked as untrusted and "
+"as such cannot be used unless it is signed by the default key (thus making "
+"it 'trusted'). Checking this box enables any key to be used even if it is "
+"untrusted.</p></qt>"
+msgstr ""
+"<qt><b>Dovoli šifriranje s ključi, ki niso zaupanja vredni:</b><br />\n"
+"<p>Ko uvažate javen ključ, se ključ običajno označi, da ni vreden zaupanja "
+"in tako ne more biti uporabljen, razen če ga podpišete s privzetim ključem "
+"(postane »zaupanja vreden«). Izbor te možnosti omogoča uporabo kateregakoli "
+"ključa, tudi če ni zaupanja vreden.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:138
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedKeys)
+#: rc.cpp:493 selectpublickeydialog.cpp:100
+msgid "Allow encryption with untrusted keys"
+msgstr "Dovoli šifriranje s ključi, ki niso zaupanja vredni"
+
+#. i18n: file: conf_encryption.ui:145
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
+#: rc.cpp:496
+msgid ""
+"<qt><b>Allow untrusted keys as members of key groups:</b><br /><p>A key "
+"group allows simple encryption to multiple recipients at once. Similar to "
+"the <em>Allow encryption with untrusted keys</em> option this allows "
+"untrusted keys to become member of a key group.</p></qt>"
+msgstr ""
+"<qt><b>Ključem, ki niso zaupanja vredni, dovoli, da so del skupin ključev</"
+"b><br /><p>Skupina ključev omogoča preprosto šifriranje za več prejemnikov "
+"hkrati. Podobno kot <em>Dovoli šifriranje s ključi, ki niso zaupanja vredni</"
+"em> ta možnost omogoča, da ključi, ki niso zaupanja vredni, postanejo del "
+"skupine ključev.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:148
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
+#: rc.cpp:499
+msgid "Allow untrusted keys as members of key groups"
+msgstr "Ključem, ki niso zaupanja vredni, dovoli, da so del skupin ključev"
+
+#. i18n: file: conf_encryption.ui:156
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_HideUserID)
+#: rc.cpp:502
+msgid ""
+"<qt><b>Hide user ID:</b><br /> \n"
+"<p>Checking this option will remove the keyid of the recipient from all "
+"encrypted packets. The advantage: traffic analysis of the encrypted packets "
+"cannot be performed as easily because the recipient is unknown. The "
+"disadvantage: the receiver of the encrypted packets is forced to try all "
+"secret keys before being able to decrypt the packets. This can be a lengthy "
+"process depending on the number of secret keys the receiver holds.</p></qt>"
+msgstr ""
+"<qt><b>Skrij uporabniški ID:</b><br /> \n"
+"<p>Izbor te možnosti bo odstranil ID ključa pošiljatelja iz vseh šifriranih "
+"paketov. Prednost: ni mogoče preučiti prometa na šifriranih paketih tako "
+"zlahka, saj pošiljatelj ni znan. Slabost: prejemnik šifriranih paketov mora "
+"preizkusiti vse skrivne ključe pred odšifriranjem paketov. To je lahko "
+"dolgotrajno opravilo, odvisno od števila skrivnih ključev, ki jih ima "
+"prejemnik.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:159
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HideUserID)
+#: rc.cpp:506 selectpublickeydialog.cpp:106
+msgid "Hide user id"
+msgstr "Skrij uporabniški ID"
+
+#. i18n: file: conf_encryption.ui:167
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpCompatibility)
+#: rc.cpp:509
+msgid ""
+"<qt><b>PGP 6 compatibility:</b><br /> \n"
+"<p>Checking this option forces GnuPG to output encrypted packets that are as "
+"compliant with PGP (Pretty Good Privacy) 6 standards as possible thus "
+"allowing GnuPG users to inter operate with PGP 6 users.</p></qt>"
+msgstr ""
+"<qt><b>Združljivost s PGP 6:</b><br />\n"
+"<p>Izbor te možnosti prisili GnuPG, da izdaja šifrirane pakete, ki so "
+"čimbolj združljivi s standardi PGP (Pretty Good Privacy) 6, da lahko "
+"uporabniki GnuPG sodelujejo z uporabniki PGP 6.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:170
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpCompatibility)
+#: rc.cpp:513
+msgid "PGP 6 compatibility"
+msgstr "Združljivost s PGP 6"
+
+#. i18n: file: kgpgrevokewidget.ui:18
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:516
+msgid "Create revocation certificate for"
+msgstr "Ustvari potrdilo za preklic za"
+
+#. i18n: file: kgpgrevokewidget.ui:28
+#. i18n: ectx: property (text), widget (QLabel, keyID)
+#: rc.cpp:519
+msgid "key id"
+msgstr "ID ključa"
+
+#. i18n: file: kgpgrevokewidget.ui:45
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:522
+msgid "Reason for revocation:"
+msgstr "Vzrok za preklic:"
+
+#. i18n: file: kgpgrevokewidget.ui:56
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: rc.cpp:525
+msgid "No Reason"
+msgstr "Brez vzroka"
+
+#. i18n: file: kgpgrevokewidget.ui:61
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: rc.cpp:528
+msgid "Key Has Been Compromised"
+msgstr "Ključ je bil ogrožen"
+
+#. i18n: file: kgpgrevokewidget.ui:66
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: rc.cpp:531
+msgid "Key is Superseded"
+msgstr "Ključ je bil zamenjan"
+
+#. i18n: file: kgpgrevokewidget.ui:71
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: rc.cpp:534
+msgid "Key is No Longer Used"
+msgstr "Ključ ni več v uporabi"
+
+#. i18n: file: kgpgrevokewidget.ui:81
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#: rc.cpp:537
+msgid "Description:"
+msgstr "Opis:"
+
+#. i18n: file: kgpgrevokewidget.ui:96
+#. i18n: ectx: property (text), widget (QCheckBox, cbSave)
+#: rc.cpp:540
+msgid "Save certificate:"
+msgstr "Shrani potrdilo:"
+
+#. i18n: file: kgpgrevokewidget.ui:111
+#. i18n: ectx: property (text), widget (QCheckBox, cbPrint)
+#: rc.cpp:543
+msgid "Print certificate"
+msgstr "Natisni potrdilo"
+
+#. i18n: file: kgpgrevokewidget.ui:121
+#. i18n: ectx: property (text), widget (QCheckBox, cbImport)
+#: rc.cpp:546
+msgid "Import into keyring"
+msgstr "Uvozi v zbirko ključev"
+
+#. i18n: file: conf_servers.ui:25
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
+#: rc.cpp:549
+msgid ""
+"<b>INFORMATION</b>:\n"
+"Only the default server will be stored in GnuPG's configuration file,\n"
+"all others will be stored for use by KGpg only."
+msgstr ""
+"<b>PODROBNOSTI</b>:\n"
+"Samo privzeti strežnik bo shranjen v nastavitveno datoteko GnuPG, \n"
+"vsi ostali pa bodo shranjeni samo za uporabo v KGpg."
+
+#. i18n: file: conf_servers.ui:35
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseProxy)
+#: rc.cpp:554
+msgid "Honor HTTP proxy when available"
+msgstr "Upoštevaj posredniški strežnik HTTP, ko je na voljo"
+
+#. i18n: file: conf_servers.ui:49
+#. i18n: ectx: property (text), widget (KPushButton, server_default)
+#: rc.cpp:557
+msgid "&Set as Default"
+msgstr "&Nastavi kot privzeto"
+
+#. i18n: file: conf_servers.ui:56
+#. i18n: ectx: property (text), widget (KPushButton, server_add)
+#: rc.cpp:560
+msgid "&Add..."
+msgstr "&Dodaj ..."
+
+#. i18n: file: conf_servers.ui:66
+#. i18n: ectx: property (text), widget (KPushButton, server_del)
+#: rc.cpp:563
+msgid "&Delete"
+msgstr "I&zbriši"
+
+#. i18n: file: conf_servers.ui:73
+#. i18n: ectx: property (text), widget (KPushButton, server_edit)
+#: rc.cpp:566
+msgid "&Edit..."
+msgstr "&Uredi ..."
+
+#. i18n: file: editor/kgpgeditor.rc:18
+#. i18n: ectx: Menu (signature)
+#: rc.cpp:572
+msgid "Si&gnature"
+msgstr "Po&dpis"
+
+#. i18n: file: conf_decryption.ui:52
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_4_2)
+#: rc.cpp:575
+msgid ""
+"<qt><b>Custom Decryption Command:</b><br />\n"
+"<p>This option allows the user to specify a custom command to be executed by "
+"GPG when decryption occurs. (This is recommended for advanced users only).</"
+"p></qt>"
+msgstr ""
+"<qt><b>Ukaz odšifriranja po meri:</b><br />\n"
+"<p>Ta možnost omogoča uporabniku, da poda ukaz po meri, ki ga izvede GPG ob "
+"odšifriranju. (To je priporočljivo samo za izkušene uporabnike).</p></qt>"
+
+#. i18n: file: conf_decryption.ui:55
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
+#: rc.cpp:579
+msgid "Custom decryption command:"
+msgstr "Ukaz odšifriranja po meri:"
+
+#. i18n: file: searchres.ui:57
 #. i18n: ectx: property (text), widget (QTreeView, kLVsearch)
-#: searchres.ui:57
+#: rc.cpp:585
 msgid "Keys"
 msgstr "Ključi"
 
+#. i18n: file: searchres.ui:67
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: searchres.ui:67
+#: rc.cpp:588
 msgid "Key to import:"
 msgstr "Ključ za uvoz:"
+
+#. i18n: file: conf_gpg.ui:16
+#. i18n: ectx: property (whatsThis), widget (QWidget, GPGConf)
+#: rc.cpp:591
+msgid ""
+"<qt><b>Global Settings:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+msgstr ""
+"<qt><b>Splošne nastavitve:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+
+#. i18n: file: conf_gpg.ui:22
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: rc.cpp:596
+msgid "GnuPG Home"
+msgstr "Domača mapa GnuPG"
+
+#. i18n: file: conf_gpg.ui:30
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2)
+#: rc.cpp:599
+msgid ""
+"<b>Home Location</b><p>This is the directory where GnuPG stores its "
+"configuration and the keyrings. If you have not changed it this is usually "
+"<em>~/.gnupg/</em></p>"
+msgstr ""
+"<b>Domače mesto</b><p>To je mapa v katerega GnuPG shranjuje svoje nastavitve "
+"in zbirke ključev. Ponavadi je to <em>~/.gnupg/</em></p>"
+
+#. i18n: file: conf_gpg.ui:33
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2)
+#: rc.cpp:602
+msgid "Home location:"
+msgstr "Domače mesto:"
+
+#. i18n: file: conf_gpg.ui:43
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2_2)
+#: rc.cpp:605
+msgid ""
+"<b>Configuration File</b><p>This is the name of the configuration file in "
+"the directory specified above. The default is <em>gnupg.conf</em> while "
+"older versions of GnuPG used <em>options</em>.</p>"
+msgstr ""
+"<b>Nastavitvena datoteka</b><p>To je ime nastavitvene datoteke v zgoraj "
+"navedeni mapi. Privzeto je to <em>gnupg.conf</em>, starejše različice GnuPG "
+"pa so uporabljale <em>options</em>.</p>"
+
+#. i18n: file: conf_gpg.ui:46
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2_2)
+#: rc.cpp:608
+msgid "Configuration file:"
+msgstr "Nastavitvena datoteka:"
+
+#. i18n: file: conf_gpg.ui:96
+#. i18n: ectx: property (text), widget (QPushButton, changeHome)
+#: rc.cpp:611
+msgid "Change..."
+msgstr "Spremeni ..."
+
+#. i18n: file: conf_gpg.ui:114
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_6_2)
+#: rc.cpp:617
+msgid ""
+"<b>Program path</b><p>This is the program that will be called for all GnuPG "
+"operations. The default of <em>gpg</em> will work on most systems.</p>"
+msgstr ""
+"<b>Pot do programa</b><p>To je program, ki bo zagnan za vsa opravila GnuPG. "
+"Privzeta vrednost <em>gpg</em> bo delovala na večini sistemov.</p>"
+
+#. i18n: file: conf_gpg.ui:117
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_6_2)
+#: rc.cpp:620
+msgid "Program path:"
+msgstr "Pot do programa:"
+
+#. i18n: file: conf_gpg.ui:157
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, use_agent)
+#: rc.cpp:623
+msgid ""
+"<b>Use GnuPG agent</b><p>The GnuPG agent stores the passwords for your "
+"secret keys in memory for a limited amount of time. If you use your secret "
+"key again while it is cached you do not have to enter it again. This is less "
+"secure than typing it every time.</p>"
+msgstr ""
+"<b>Uporabi posrednika GnuPG</b><p>Posrednik GnuPG v pomnilnik začasno shrani "
+"gesla vaših skrivnih ključev. Če skrivni ključ, medtem ko je ta shranjen, "
+"ponovno uporabite, vam ne bo treba še enkrat vpisovati gesla. To je manj "
+"varno, kot pa če bi ga vpisali vsakič znova.</p>"
+
+#. i18n: file: conf_gpg.ui:160
+#. i18n: ectx: property (text), widget (QCheckBox, use_agent)
+#: rc.cpp:626
+msgid "Use GnuPG agent"
+msgstr "Uporabi posrednik GnuPG"
+
+#. i18n: file: sourceselect.ui:34
+#. i18n: ectx: property (text), widget (QRadioButton, checkClipboard)
+#. i18n: file: keyexport.ui:45
+#. i18n: ectx: property (text), widget (QRadioButton, checkClipboard)
+#: rc.cpp:629 rc.cpp:644
+msgid "Clipboard"
+msgstr "Na odložišče"
+
+#. i18n: file: sourceselect.ui:43
+#. i18n: ectx: property (text), widget (QRadioButton, checkFile)
+#. i18n: file: keyexport.ui:72
+#. i18n: ectx: property (text), widget (QRadioButton, checkFile)
+#: rc.cpp:632 rc.cpp:653
+msgid "File:"
+msgstr "V datoteko:"
+
+#. i18n: file: sourceselect.ui:67
+#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
+#: rc.cpp:635
+msgid "Keyserver:"
+msgstr "Strežnik s ključi:"
+
+#. i18n: file: sourceselect.ui:80
+#. i18n: ectx: property (toolTip), widget (KLineEdit, keyIds)
+#: rc.cpp:638
+msgid ""
+"Enter the ids or fingerprints of the keys to import as space separated list."
+msgstr ""
+"ID-je ali prstne odtise ključev, ki jih želite uvoziti, vnesite kot seznam, "
+"ločite jih s presledkom."
+
+#. i18n: file: keyexport.ui:38
+#. i18n: ectx: property (text), widget (QRadioButton, checkMail)
+#: rc.cpp:641
+msgctxt "Export a key via email"
+msgid "Email"
+msgstr "Pošlji po e-pošti"
+
+#. i18n: file: keyexport.ui:55
+#. i18n: ectx: property (toolTip), widget (QRadioButton, checkServer)
+#: rc.cpp:647
+msgid ""
+"You must define at least one keyserver in settings before you can export to "
+"one."
+msgstr ""
+"V nastavitvah morate vsaj en strežnik s ključi, preden lahko vanj izvažate."
+
+#. i18n: file: keyexport.ui:92
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup3)
+#: rc.cpp:656
+msgid "Export Settings"
+msgstr "Nastavitve izvoza"
+
+#. i18n: file: keyexport.ui:98
+#. i18n: ectx: property (text), widget (QRadioButton, checkAttrAll)
+#: rc.cpp:659
+msgid "Export everything"
+msgstr "Izvozi vse"
+
+#. i18n: file: keyexport.ui:108
+#. i18n: ectx: property (text), widget (QRadioButton, checkAttrPhoto)
+#: rc.cpp:662
+msgid "Do not export attributes (photo ids)"
+msgstr "Ne izvozi atributov (fotografskih ID-jev)"
+
+#. i18n: file: keyexport.ui:115
+#. i18n: ectx: property (text), widget (QRadioButton, checkAttrClean)
+#: rc.cpp:665
+msgctxt ""
+"@option:radio Exports the smallest key possible. Maps to export-minimal "
+"option of gpg"
+msgid "Clean key"
+msgstr "Čist ključ"
+
+#. i18n: file: conf_misc.ui:24
+#. i18n: ectx: attribute (title), widget (QWidget, tabGlobal)
+#: rc.cpp:668
+msgid "Global Settings"
+msgstr "Splošne nastavitve"
+
+#. i18n: file: conf_misc.ui:33
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutoStart)
+#: rc.cpp:671
+msgid ""
+"<qt><b>Start KGpg automatically at KDE startup:</b><br />\n"
+"<p>If checked KGpg will start automatically each time that KDE starts up.</"
+"p></qt>"
+msgstr ""
+"<qt><b>Ob prijavi samodejno zaženi KGpg:</b><br />\n"
+"<p>Če je to označeno, se KGpg samodejno zažene ob vsakem zagonu KDE.</p></qt>"
+
+#. i18n: file: conf_misc.ui:36
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoStart)
+#: rc.cpp:675
+msgid "Start KGpg automatically at login"
+msgstr "Ob prijavi samodejno zaženi KGpg"
+
+#. i18n: file: conf_misc.ui:53
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_UseMouseSelection)
+#: rc.cpp:678
+msgid ""
+"<qt><b>Use mouse selection instead of clipboard:</b><br />\n"
+"<p>If checked, clipboard operations in KGpg will use the selection "
+"clipboard, that means highlighting a text to copy, and middle button (or "
+"right+left together) to paste. If this option is not checked, the clipboard "
+"will work with Key shortcuts (Ctrl-c, Ctrl-v).</p></qt> "
+msgstr ""
+"<qt><b>Uporabi miškino izbiro namesto odložišča:</b><br />\n"
+"<p>Če je označeno, bodo dejanja odložišča v KGpg uporabila izbirno "
+"odložišče, kar pomeni, da izbor besedila z miško kopira, srednji gumb (ali "
+"pa skupaj levi in desni) pa prilepi besedilo. Če ta možnost ni označena, "
+"odložišče deluje z bližnjicami (Ctrl-C, Ctrl-V).</p></qt> "
+
+#. i18n: file: conf_misc.ui:56
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseMouseSelection)
+#: rc.cpp:682
+msgid "Use mouse selection instead of clipboard"
+msgstr "Uporabi miškino izbiro namesto odložišča"
+
+#. i18n: file: conf_misc.ui:70
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_RemoteFileWarn)
+#: rc.cpp:685
+msgid ""
+"<qt><b>Display warning before creating temporary files:</b><br />\n"
+"<p></p></qt>"
+msgstr ""
+"<qt><b>Prikaži opozorilo pred ustvaritvijo začasnih datotek:</b><br />\n"
+"<p></p></qt>"
+
+#. i18n: file: conf_misc.ui:74
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_RemoteFileWarn)
+#: rc.cpp:689
+msgid ""
+"Display warning before creating temporary files\n"
+"(only occurs on remote files operations)"
+msgstr ""
+"Prikaži opozorilo pred ustvarjanjem začasnih datotek \n"
+"(samo pri opravilih z oddaljenimi datotekami)"
+
+#. i18n: file: conf_misc.ui:97
+#. i18n: ectx: attribute (title), widget (QWidget, tabApplet)
+#: rc.cpp:693
+msgid "Applet && Menus"
+msgstr "Aplet in meniji"
+
+#. i18n: file: conf_misc.ui:103
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox11)
+#: rc.cpp:696
+msgid "Konqueror Service Menus"
+msgstr "Storitveni meniji Konquerorja"
+
+#. i18n: file: conf_misc.ui:119
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
+#: rc.cpp:699
+msgid ""
+"<qt><b>Sign file service menu:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+msgstr ""
+"<qt><b>Meni storitve podpisovanja datotek:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+
+#. i18n: file: conf_misc.ui:122
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:704
+msgid "Sign file service menu:"
+msgstr "Meni storitve podpisovanja datotek:"
+
+#. i18n: file: conf_misc.ui:144
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
+#. i18n: file: conf_misc.ui:183
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
+#: rc.cpp:710 rc.cpp:724
+msgid "Enable with All Files"
+msgstr "Omogoči z vsemi datotekami"
+
+#. i18n: file: conf_misc.ui:164
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_3)
+#: rc.cpp:713
+msgid ""
+"<qt><b>Decrypt file service menu:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+msgstr ""
+"<qt><b>Meni storitve odšifriranja datotek:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+
+#. i18n: file: conf_misc.ui:167
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:718
+msgid "Decrypt file service menu:"
+msgstr "Meni storitve odšifriranja datotek:"
+
+#. i18n: file: conf_misc.ui:188
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
+#: rc.cpp:727
+msgid "Enable with Encrypted Files"
+msgstr "Omogoči s šifriranimi datotekami"
+
+#. i18n: file: conf_misc.ui:201
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: rc.cpp:730
+msgid "System Tray Applet"
+msgstr "Aplet sistemske vrstice"
+
+#. i18n: file: conf_misc.ui:208
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowSystray)
+#: rc.cpp:733
+msgid ""
+"<qt><b>Show system tray icon:</b><br />\n"
+"<p>If checked KGpg will minimize to an icon in the system tray.</p></qt>"
+msgstr ""
+"<qt><b>Pokaži ikono v sistemski vrstici:</b><br />\n"
+"<p>Če je to označeno, se bo KGpg skrčil v ikono v sistemski vrstici.</p></qt>"
+
+#. i18n: file: conf_misc.ui:211
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSystray)
+#: rc.cpp:737
+msgid "Show system tray icon"
+msgstr "Pokaži ikono v sistemski vrstici"
+
+#. i18n: file: conf_misc.ui:223
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: rc.cpp:740
+msgid "Left mouse click opens:"
+msgstr "Levi miškin klik odpre:"
+
+#. i18n: file: conf_misc.ui:240
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
+#: rc.cpp:743
+msgid "Key Manager"
+msgstr "Upravljalnik ključev"
+
+#. i18n: file: conf_misc.ui:245
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
+#. i18n: file: conf_misc.ui:272
+#. i18n: ectx: attribute (title), widget (QWidget, tabEditor)
+#: rc.cpp:746 rc.cpp:749 editor/kgpgeditor.cpp:504
+msgid "Editor"
+msgstr "Urejevalnik"
+
+#. i18n: file: conf_misc.ui:280
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:752
+msgid "Recent files"
+msgstr "Nedavne datoteke"
+
+#. i18n: file: conf_misc.ui:306
+#. i18n: ectx: attribute (title), widget (QWidget, tabSigning)
+#: rc.cpp:755
+msgid "Key Signing"
+msgstr "Podpisovanje ključev"
+
+#. i18n: file: conf_misc.ui:314
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#: rc.cpp:758
+msgid ""
+"Here you can define how User Ids that do not contain an email address (like "
+"Photo Ids) are sent to the key owner. You can choose to either send them "
+"with every other User Id you signed, only with the first Id you signed or to "
+"not send them at all."
+msgstr ""
+"Tu lahko določite, kako se lastnikom ključev pošiljajo uporabniški ID-ji, ki "
+"ne vsebujejo e-poštnega naslova (npr. fotografski ID). Izberete lahko med "
+"pošiljanjem z vsakim drugim uporabniškim ID-jem, s katerim ste podpisali; "
+"samo s prvim podpisanim uporabniškim ID-jem ali pa jih sploh ne pošljete."
+
+#. i18n: file: conf_misc.ui:317
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:761
+msgid "Mailing of User Ids without Email Addresses"
+msgstr "Pošiljanje uporabniških ID-jev brez e-poštnega naslova"
+
+#. i18n: file: conf_misc.ui:325
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
+#: rc.cpp:764
+msgid "Send with every Email"
+msgstr "Pošlji z vsako e-pošto"
+
+#. i18n: file: conf_misc.ui:330
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
+#: rc.cpp:767
+msgid "Send only with first Email"
+msgstr "Pošlji samo s prvo e-pošto"
+
+#. i18n: file: conf_misc.ui:335
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
+#: rc.cpp:770
+msgid "Do not send"
+msgstr "Ne pošlji"
+
+#. i18n: file: conf_misc.ui:345
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:773
+msgid "Email template"
+msgstr "Predloga e-pošte"
+
+#. i18n: file: conf_misc.ui:353
+#. i18n: ectx: property (whatsThis), widget (KTextEdit, EmailTemplateEdit)
+#: rc.cpp:777
+#, no-c-format
+msgid ""
+"This is the text of the email sent by the \"Sign and Mail User ID\" action.\n"
+"\n"
+"The placeholders surrounded by the percent signs (like %KEYID%) will be "
+"replaced with the corresponding text for every single mail."
+msgstr ""
+"To je besedilo e-pošte, ki je poslana z dejanjem »Podpiši in pošlji "
+"uporabniški ID.\n"
+"\n"
+"Vsebniki, ki so obdani z znakoma za odstotek (npr. %IDKLJUČA%), bodo za "
+"vsako posamezno e-pošto zamenjani z ustreznim besedilom."
 
 #: selectexpirydate.cpp:27
 msgid "Choose New Expiration"
@@ -3513,12 +3290,10 @@ msgid "Select Public Key"
 msgstr "Izberite javni ključ"
 
 #: selectpublickeydialog.cpp:57
-#, kde-format
 msgid "Select Public Key for %1"
 msgstr "Izberite javni ključ za %1"
 
 #: selectpublickeydialog.cpp:60
-#, kde-format
 msgid "Select Public Key for %2 and one more file"
 msgid_plural "Select Public Key for %2 and %1 more files"
 msgstr[0] "Izberite javni ključ za %2 in še %1 datotek"
@@ -3602,7 +3377,6 @@ msgid "Choose secret key for signing:"
 msgstr "Izberite skrivni ključ za podpisovanje:"
 
 #: selectsecretkey.cpp:54
-#, kde-format
 msgid ""
 "How carefully have you checked that the key really belongs to the person "
 "with whom you wish to communicate:"
@@ -3646,145 +3420,425 @@ msgstr "Krajevni podpis (ne more biti izvožen)"
 msgid "Do not sign all user id's (open terminal)"
 msgstr "Ne podpiši vseh uporabniških ID-jev (odpri terminal)"
 
-#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
-#: sourceselect.ui:67
-msgid "Keyserver:"
-msgstr "Strežnik s ključi:"
+#: core/KGpgGroupNode.cpp:164
+msgid "1 key"
+msgid_plural "%1 keys"
+msgstr[0] "%1 ključev"
+msgstr[1] "%1 ključ"
+msgstr[2] "%1 ključa"
+msgstr[3] "%1 ključi"
 
-#. i18n: ectx: property (toolTip), widget (KLineEdit, keyIds)
-#: sourceselect.ui:80
-msgid ""
-"Enter the ids or fingerprints of the keys to import as space separated list."
-msgstr ""
-"ID-je ali prstne odtise ključev, ki jih želite uvoziti, vnesite kot seznam, "
-"ločite jih s presledkom."
+#: core/KGpgKeyNode.cpp:84
+msgctxt "size of signing key / size of encryption key"
+msgid "%1 / %2"
+msgstr "%1 / %2"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:2
-msgid ""
-"<p>If you want to decrypt a text file, simply drag and drop it into the "
-"editor window. KGpg will do the rest. Even remote files can be dropped.</p>\n"
-"<p>Drag a public key into the editor window and kgpg will automatically "
-"import it if you want.</p>\n"
-msgstr ""
-"<p>Če želite odšifrirati besedilno datoteko, jo preprosto povlecite in "
-"spustite na okno urejevalnika. KGpg opravil ostalo. Spustite lahko celo "
-"oddaljene datoteke.</p>\n"
-"<p>Če spustite javen ključ v okno urejevalnika, ga bo kgpg samodejno uvozil, "
-"če to želite.</p>\n"
+#: core/KGpgKeyNode.cpp:170 core/KGpgSignableNode.cpp:48
+msgid "1 signature"
+msgid_plural "%1 signatures"
+msgstr[0] "%1 podpisov"
+msgstr[1] "%1 podpis"
+msgstr[2] "%1 podpisa"
+msgstr[3] "%1 podpisi"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:7
-msgid ""
-"<p>The easiest way to encrypt a file: simply right click on the file, and "
-"you have an encrypt option in the contextual menu.\n"
-"This works in <strong>konqueror</strong> or on your Desktop!</p>\n"
-msgstr ""
-"<p>Najpreprostejši način šifriranja datoteke: preprosto kliknite na datoteko "
-"z desnim miškinim gumbom, kjer boste v vsebinskem meniju našli možnost "
-"šifriranja.\n"
-"To deluje v <strong>Konqueror-ju</strong> na vašem namizju!</p>\n"
+#: core/KGpgNode.cpp:56
+msgctxt "Name of uid (comment)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:13
-msgid ""
-"<p>If you want to encrypt a message for several persons, just select several "
-"encryption keys by pressing the &quot;Ctrl&quot; key.</p>\n"
-msgstr ""
-"<p>Če želite šifrirati sporočilo za več oseb, izberite več šifrirnih ključev "
-"s pritiskom na tipko »Ctrl«.</p>\n"
+#: core/KGpgRefNode.cpp:128 transactions/kgpgtransaction.cpp:634
+msgid "[No user id found]"
+msgstr "[Ni najdenega uporabniškega ID]"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:18
-msgid ""
-"<p><strong>You do not have to be an expert in encryption to use this tool?</"
-"strong><br>\n"
-"Simply create yourself a key pair in the key management window. Then, export "
-"your public key and mail it to your friends.<br>\n"
-"Ask them to do the same and import their public keys. Finally, to send an "
-"encrypted message, type it in the KGpg editor, then click &quot;"
-"encrypt&quot;. Choose\n"
-"your friend's key and click &quot;encrypt&quot; again. The message will be "
-"encrypted, ready to be sent by email.</p>\n"
-msgstr ""
-"<p><strong>Za uporabo tega orodja ne potrebujete biti strokovnjak v "
-"šifriranju.</strong><br>\n"
-"Preprosto si ustvarite par ključev v oknu za upravljanje s ključi. Potem "
-"izvozite vaš javni ključ in ga pošljite svojim prijateljem.<br>\n"
-"Prosite jih, da storijo isto, in uvozite njihove javne ključe. Da bi poslali "
-"šifrirano sporočilo, ga natipkajte v urejevalnik KGpg, nato pa kliknite "
-"»Šifriraj«. Izberite \n"
-"ključ vašega prijatelja in spet kliknite »Šifriraj«. Sporočilo bo šifrirano "
-"in pripravljeno za pošiljanje po e-pošti.</p>\n"
+#: core/KGpgSignNode.cpp:88
+msgid "%1 [local signature]"
+msgstr "%1 [krajevni podpis]"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:26
-msgid ""
-"<p>To perform an operation on a key, open the key management window and "
-"right click on the key. A popup menu with all available options will appear."
-"</p>\n"
-msgstr ""
-"<p>Da izvedete dejanje na ključu, odprite okno za upravljanje s ključi in "
-"kliknite z desnim miškinim gumbom na ključ. Pokazal se bo pojavni meni z "
-"vsemi možnostmi.</p>\n"
+#: core/KGpgSubkeyNode.cpp:86
+msgid "%1 subkey"
+msgstr "Podključ %1"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:31
-msgid ""
-"<p>Decrypt a file with a single mouse click on it. You will then be prompted "
-"for password, and then that is it!</p>\n"
-msgstr ""
-"<p>Odšifrirajte datoteko z enim klikom miške. Vprašani boste za geslo in to "
-"je vse!</p>\n"
+#: core/KGpgUatNode.cpp:105
+msgid "Photo id"
+msgstr "Fotografski ID"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:36
-msgid ""
-"<p>If you only want to open the key manager, type this in the command line "
-"prompt: <pre>kgpg -k</pre>\n"
-"The editor can be reached by: <pre>kgpg -d</pre></p>\n"
-msgstr ""
-"<p>Če bi radi samo odprli upravljalnik ključev, v ukazno vrstico vnesite "
-"<pre>kgpg -k</pre>\n"
-"Do urejevalnika pa pridete z: <pre>kgpg -d</pre></p>\n"
+#: core/convert.cpp:39
+msgctxt "Encryption algorithm"
+msgid "RSA"
+msgstr "RSA"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:42
-msgid ""
-"<p>To open a file in the KGpg's editor and immediately decrypt it type: "
-"<pre>kgpg -s filename</pre></p>\n"
-msgstr ""
-"<p>Za odprtje in takojšnje odšifriranje datoteke v urejevalniku KGpg "
-"vnesite: <pre>kgpg -s datoteka</pre></p>\n"
+#: core/convert.cpp:41
+msgctxt "Encryption algorithm"
+msgid "DSA"
+msgstr "DSA"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:47
-msgid ""
-"<p>If you want to change the password or expiration of a secret key simply "
-"double click on it to get the key properties dialog.</p>\n"
-msgstr ""
-"<p>Če želite spremeniti geslo ali pretek skrivnega ključa, samo dvokliknite "
-"nanj, da pridete do pogovornega okna z lastnostmi ključa.</p>\n"
+#: core/convert.cpp:43
+msgctxt "Encryption algorithm"
+msgid "ElGamal"
+msgstr "ElGamal"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:52
-msgid ""
-"<p>You can reach your default key by pressing &quot;Ctrl+Home&quot; in the "
-"key manager.</p>\n"
-msgstr ""
-"<p>Vaš privzeti ključ lahko v upravljalniku ključev dosežete s pritiskom na "
-"»Ctrl+Home«.</p>\n"
+#: core/convert.cpp:45
+msgctxt "Encryption algorithm"
+msgid "DSA & ElGamal"
+msgstr "DSA in ElGamal"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:57
+#: core/convert.cpp:47
+msgctxt "Encryption algorithm RSA, Signing algorithm RSA"
+msgid "RSA & RSA"
+msgstr "RSA in RSA"
+
+#: core/convert.cpp:50
+msgctxt "Unknown algorithm"
+msgid "Unknown"
+msgstr "Neznan"
+
+#: core/convert.cpp:58
+msgid "Do not Know"
+msgstr "Ne vem"
+
+#: core/convert.cpp:60
+msgid "Do NOT Trust"
+msgstr "NE zaupaj"
+
+#: core/convert.cpp:69
+msgctxt "Unknown trust in key owner"
+msgid "Unknown"
+msgstr "Neznano"
+
+#: core/convert.cpp:77
+msgctxt "Invalid key"
+msgid "Invalid"
+msgstr "Neveljaven"
+
+#: core/convert.cpp:79
+msgctxt "Disabled key"
+msgid "Disabled"
+msgstr "Onemogočen"
+
+#: core/convert.cpp:81
+msgid "Revoked"
+msgstr "Preklican"
+
+#: core/convert.cpp:83 model/groupeditproxymodel.cpp:110
+msgctxt "Expired key"
+msgid "Expired"
+msgstr "Pretečen"
+
+#: core/convert.cpp:85
+msgctxt "Undefined key trust"
+msgid "Undefined"
+msgstr "Nedoločeno"
+
+#: core/convert.cpp:87
+msgctxt "No trust in key"
+msgid "None"
+msgstr "Brez"
+
+#: core/convert.cpp:89
+msgctxt "Marginal trust in key"
+msgid "Marginal"
+msgstr "Delno"
+
+#: core/convert.cpp:91
+msgctxt "Full trust in key"
+msgid "Full"
+msgstr "Polno"
+
+#: core/convert.cpp:93
+msgctxt "Ultimate trust in key"
+msgid "Ultimate"
+msgstr "Popolno"
+
+#: core/convert.cpp:96
+msgctxt "Unknown trust in key"
+msgid "Unknown"
+msgstr "Neznano"
+
+#: core/convert.cpp:105
+msgctxt "key capability"
+msgid "Signature"
+msgstr "Podpis"
+
+#: core/convert.cpp:107
+msgctxt "key capability"
+msgid "Encryption"
+msgstr "Šifriranje"
+
+#: core/convert.cpp:109
+msgctxt "key capability"
+msgid "Authentication"
+msgstr "Overitev"
+
+#: core/convert.cpp:111
+msgctxt "key capability"
+msgid "Certification"
+msgstr "Potrjevanje"
+
+#: core/convert.cpp:113
+msgctxt "used to join a list of key types, e.g. 'encryption, signature'"
+msgid ", "
+msgstr ", "
+
+#: editor/kgpgeditor.cpp:91 editor/kgpgeditor.cpp:241
+#: editor/kgpgeditor.cpp:749 editor/kgpgeditor.cpp:778
+msgid "Untitled"
+msgstr "Neimenovan"
+
+#: editor/kgpgeditor.cpp:187
+msgid "&Encrypt File..."
+msgstr "&Šifriraj datoteko ..."
+
+#: editor/kgpgeditor.cpp:191
+msgid "&Decrypt File..."
+msgstr "O&dšifriraj datoteko ..."
+
+#: editor/kgpgeditor.cpp:195
+msgid "&Open Key Manager"
+msgstr "&Odpri upravljalnik ključev"
+
+#: editor/kgpgeditor.cpp:198
+msgid "&Generate Signature..."
+msgstr "&Ustvari podpis ..."
+
+#: editor/kgpgeditor.cpp:202
+msgid "&Verify Signature..."
+msgstr "&Preveri podpis ..."
+
+#: editor/kgpgeditor.cpp:205
+msgid "&Check MD5 Sum..."
+msgstr "P&reveri vsoto MD5 ..."
+
+#: editor/kgpgeditor.cpp:208
+msgid "&Unicode (utf-8) Encoding"
+msgstr "Kodiranje &Unicode (utf-8)"
+
+#: editor/kgpgeditor.cpp:214
+msgid "En&crypt"
+msgstr "&Šifriraj"
+
+#: editor/kgpgeditor.cpp:218
+msgid "&Decrypt"
+msgstr "O&dšifriraj"
+
+#: editor/kgpgeditor.cpp:222
+msgid "S&ign/Verify"
+msgstr "Podp&iši/preveri"
+
+#: editor/kgpgeditor.cpp:245
 msgid ""
-"<p>The number of signatures is shown as a tooltip if you hover the mouse on "
-"the size column in key manager. A key has to be expanded once for this to "
-"work.</p>\n"
+"The document \"%1\" has changed.\n"
+"Do you want to save it?"
 msgstr ""
-"<p>Če v upravljalniku ključev z miško preidete čez stolpec z velikostjo, se "
-"v orodnem namigu prikaže število podpisov. Za to mora biti ključ enkrat "
-"razširjen.</p>\n"
+"Dokument »%1« je spremenjen.\n"
+"Ali ga želite shraniti?"
+
+#: editor/kgpgeditor.cpp:246
+msgid "Close the document"
+msgstr "Zapri dokument"
+
+#: editor/kgpgeditor.cpp:292
+msgid ""
+"The document could not been saved, as the selected codec is not supported."
+msgstr "Dokumenta ni bilo mogoče shraniti, saj izbrani kodek ni podprt."
+
+#: editor/kgpgeditor.cpp:298
+msgid ""
+"The document could not been saved, as the selected encoding cannot encode "
+"every unicode character in it."
+msgstr ""
+"Dokumenta ni bilo mogoče shraniti, saj izbrano kodiranje ne more šifrirati "
+"vsakega znaka unicode v njem."
+
+#: editor/kgpgeditor.cpp:307 editor/kgpgeditor.cpp:326
+msgid ""
+"The document could not be saved, please check your permissions and disk "
+"space."
+msgstr ""
+"Dokumenta ni bilo mogoče shraniti. Preverite vaša dovoljenja in prostor na "
+"disku."
+
+#: editor/kgpgeditor.cpp:470 editor/kgpgeditor.cpp:479
+#: editor/kgpgeditor.cpp:614 editor/kgpgeditor.cpp:652
+#: editor/kgpgeditor.cpp:690
+msgid "*|All Files"
+msgstr "*|Vse datoteke"
+
+#: editor/kgpgeditor.cpp:470
+msgid "Open File to Encode"
+msgstr "Odpri datoteko za šifriranje"
+
+#: editor/kgpgeditor.cpp:479
+msgid "Open File to Decode"
+msgstr "Odpri datoteko za odšifriranje"
+
+#: editor/kgpgeditor.cpp:493
+msgid "Decrypt File To"
+msgstr "Odšifriraj datoteko v"
+
+#: editor/kgpgeditor.cpp:614
+msgid "Open File to Sign"
+msgstr "Odpri datoteko za podpis"
+
+#: editor/kgpgeditor.cpp:652 editor/kgpgeditor.cpp:690
+msgid "Open File to Verify"
+msgstr "Odpri datoteko za preverjanje"
+
+#: editor/kgpgeditor.cpp:703 editor/kgpgtextedit.cpp:333
+msgid ""
+"<qt><b>Missing signature:</b><br />Key id: %1<br /><br />Do you want to "
+"import this key from a keyserver?</qt>"
+msgstr ""
+"<qt><b>Manjkajoč podpis:</b><br />ID ključa: %1<br /><br />Ali želite "
+"uvoziti ta ključ s strežnika s ključi?</qt>"
+
+#: editor/kgpgeditor.cpp:730 transactions/kgpgverify.cpp:149
+msgid "No signature found."
+msgstr "Ni najdenega podpisa."
+
+#: editor/kgpgmd5widget.cpp:28
+msgid "MD5 Checksum"
+msgstr "Nadzorna vsota MD5"
+
+#: editor/kgpgmd5widget.cpp:31
+msgid "Compare MD5 with Clipboard"
+msgstr "Primerjaj MD5 z odložiščem"
+
+#: editor/kgpgmd5widget.cpp:46
+msgid "MD5 sum for <b>%1</b> is:"
+msgstr "Vsota MD5 za <b>%1</b> je:"
+
+#: editor/kgpgmd5widget.cpp:59
+msgid "<b>Unknown status</b>"
+msgstr "<b>Neznano stanje</b>"
+
+#: editor/kgpgmd5widget.cpp:84
+msgid "Clipboard content is not a MD5 sum."
+msgstr "Vsebina odložišča ni vsota MD5."
+
+#: editor/kgpgmd5widget.cpp:88
+msgid "<b>Correct checksum</b>, file is ok."
+msgstr "<b>Pravilna vsota</b>, datoteka je v redu."
+
+#: editor/kgpgmd5widget.cpp:94
+msgid "<b>Wrong checksum, <em>file corrupted</em></b>"
+msgstr "<b>Napačna nadzorna vsota, <em>datoteka je pokvarjena</em></b>"
+
+#: editor/kgpgtextedit.cpp:90
+msgid ""
+"<qt><b>Remote file dropped</b>.<br />The remote file will now be copied to a "
+"temporary file to process requested operation. This temporary file will be "
+"deleted after operation.</qt>"
+msgstr ""
+"<qt><b>Oddaljena datoteka spuščena</b>.<br />Oddaljena datoteka bo sedaj "
+"kopirana v začasno, da se izvede zahtevano opravilo. Ta začasna datoteka bo "
+"po koncu opravila izbrisana.</qt>"
+
+#: editor/kgpgtextedit.cpp:94
+msgid "Could not download file."
+msgstr "Ni bilo mogoče prejeti datoteke."
+
+#: editor/kgpgtextedit.cpp:127
+msgid ""
+"<qt>This file is a <b>public</b> key.<br />Do you want to import it instead "
+"of opening it in editor?</qt>"
+msgstr ""
+"<qt>Ta datoteka je <b>javni</b> ključ.<br />Ali jo želite uvoziti namesto "
+"odprtja v urejevalniku?</qt>"
+
+#: editor/kgpgtextedit.cpp:130
+msgid ""
+"<qt>This file is a <b>private</b> key.<br />Do you want to import it instead "
+"of opening it in editor?</qt>"
+msgstr ""
+"<qt>Ta datoteka je <b>zasebni</b> ključ.<br />Ali jo želite uvoziti namesto "
+"odprtja v urejevalniku?</qt>"
+
+#: editor/kgpgtextedit.cpp:135
+msgid "Key file dropped on Editor"
+msgstr "Datoteka s ključem spuščena v urejevalnik"
+
+#: editor/kgpgtextedit.cpp:286
+msgid "Signing not possible: bad passphrase or missing key"
+msgstr "Podpisovanje ni mogoče: slaba šifrirna fraza ali manjkajoč ključ"
+
+#: editor/kgpgtextedit.cpp:327
+msgid "Import key in your list"
+msgstr "Uvozi ključ v vaš seznam"
+
+#: editor/kgpgtextedit.cpp:330
+msgid "Do &Not Import"
+msgstr "&Ne uvozi"
+
+#: editor/kgpgtextedit.cpp:331
+msgid "Will not import this key in your list"
+msgstr "Ta ključ ne bo uvožen v vaš seznam"
+
+#: editor/kgpgtextedit.cpp:333
+msgid "Missing Key"
+msgstr "Manjkajoč ključ"
+
+#: model/gpgservermodel.cpp:91
+msgctxt "Mark default keyserver in GUI"
+msgid "%1 (Default)"
+msgstr "%1 (privzeti)"
+
+#: model/keylistproxymodel.cpp:191 transactions/kgpgimport.cpp:193
+msgctxt "ID: Name"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: model/keylistproxymodel.cpp:193 transactions/kgpgimport.cpp:195
+msgctxt "ID: Name <Email>"
+msgid "%1: %2 &lt;%3&gt;"
+msgstr "%1: %2 &lt;%3&gt;"
+
+#: model/keylistproxymodel.cpp:198
+msgctxt "Name <Email>: ID"
+msgid "%1 &lt;%2&gt;: %3"
+msgstr "%1 &lt;%2&gt;: %3"
+
+#: model/kgpgitemmodel.cpp:270 model/kgpgitemmodel.cpp:273
+msgid "1 Key"
+msgid_plural "%1 Keys"
+msgstr[0] "%1 ključev"
+msgstr[1] "%1 ključ"
+msgstr[2] "%1 ključa"
+msgstr[3] "%1 ključi"
+
+#: model/kgpgitemmodel.cpp:274
+msgid "1 Group"
+msgid_plural "%1 Groups"
+msgstr[0] "%1 skupin"
+msgstr[1] "%1 skupina"
+msgstr[2] "%1 skupini"
+msgstr[3] "%1 skupine"
+
+#: model/kgpgitemmodel.cpp:276
+msgctxt "%1 = something like 7 keys, %2 = something like 2 groups"
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: model/kgpgitemmodel.cpp:378
+msgid "ID"
+msgstr "ID"
+
+#: model/kgpgsearchresultmodel.cpp:126
+msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009, revoked"
+msgid "ID %1, %2-bit %3 key, created %4, revoked"
+msgstr "ID %1, %2-biten ključ %3, ustvarjen %4, preklican"
+
+#: model/kgpgsearchresultmodel.cpp:131
+msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009"
+msgid "ID %1, %2-bit %3 key, created %4"
+msgstr "ID %1, %2-biten ključ %3, ustvarjen %4"
+
+#: model/kgpgsearchresultmodel.cpp:220
+msgid "One Photo ID"
+msgid_plural "%1 Photo IDs"
+msgstr[0] "%1 fotografskih ID-jev"
+msgstr[1] "%1 fotografski ID"
+msgstr[2] "%1 fotografska ID-ja"
+msgstr[3] "%1 fotografski ID-ji"
 
 #: transactions/kgpgaddphoto.cpp:41
 msgid "This image is very large. Use it anyway?"
@@ -3799,12 +3853,10 @@ msgid "Do Not Use"
 msgstr "Ne uporabi"
 
 #: transactions/kgpgchangepass.cpp:69
-#, kde-format
 msgid "Enter old passphrase for <b>%1</b>"
 msgstr "Vnesite staro šifrirno frazo za <b>%1</b>"
 
 #: transactions/kgpgchangepass.cpp:71
-#, kde-format
 msgid ""
 "<qt>Enter new passphrase for <b>%1</b><br />If you forget this passphrase "
 "all your encrypted files and messages will be inaccessible.</qt>"
@@ -3813,24 +3865,20 @@ msgstr ""
 "frazo, bodo vse vaše šifrirane datoteke in sporočila postala nedostopna.</qt>"
 
 #: transactions/kgpgdecrypt.cpp:118
-#, kde-format
 msgctxt "Status message 'Decrypting <filename>' (operation starts)"
 msgid "Decrypting %1"
 msgstr "Odšifriranje %1"
 
 #: transactions/kgpgdecrypt.cpp:121
-#, kde-format
 msgctxt "Status message 'Decrypted <filename>' (operation was completed)"
 msgid "Decrypted %1"
 msgstr "%1 je odšifrirana"
 
 #: transactions/kgpggeneratekey.cpp:64
-#, kde-format
 msgid "Generating New Key for %1"
 msgstr "Ustvarjanje novega ključa za %1"
 
 #: transactions/kgpggeneratekey.cpp:137
-#, kde-format
 msgid ""
 "<p><b>Enter passphrase for %1 &lt;%2&gt;</b>:<br />Passphrase should include "
 "non alphanumeric characters and random sequences.</p>"
@@ -3839,7 +3887,6 @@ msgstr ""
 "vsebuje znake, ki niso številke ali črke in naključna zaporedja.</p>"
 
 #: transactions/kgpggeneratekey.cpp:140
-#, kde-format
 msgid ""
 "<p><b>Enter passphrase for %1</b>:<br />Passphrase should include non "
 "alphanumeric characters and random sequences.</p>"
@@ -3880,17 +3927,14 @@ msgstr ""
 "uporabljate drug program dokler se ustvarjanje ključa ne nadaljuje."
 
 #: transactions/kgpggeneratekey.cpp:217
-#, kde-format
 msgid "Key %1 generated"
 msgstr "Ustvarjen je bil ključ %1"
 
 #: transactions/kgpggeneraterevoke.cpp:48
-#, kde-format
 msgid "Generating Revocation Certificate for key %1"
 msgstr "Ustvarjanje potrdila za preklic za ključ %1"
 
 #: transactions/kgpgimport.cpp:128
-#, kde-format
 msgid ""
 "The import result string has an unsupported format in line %1.<br />Please "
 "see the detailed log for more information."
@@ -3903,7 +3947,6 @@ msgid "No key imported.<br />Please see the detailed log for more information."
 msgstr "Uvožen ni bil noben ključ.<br />Za več podrobnosti si oglejte dnevnik."
 
 #: transactions/kgpgimport.cpp:141
-#, kde-format
 msgid "<qt>%1 key processed.</qt>"
 msgid_plural "<qt>%1 keys processed.</qt>"
 msgstr[0] "<qt>%1 obdelanih ključev.</qt>"
@@ -3912,7 +3955,6 @@ msgstr[2] "<qt>%1 obdelana ključa.</qt>"
 msgstr[3] "<qt>%1 obdelani ključi.</qt>"
 
 #: transactions/kgpgimport.cpp:144
-#, kde-format
 msgid "<qt><br />One key without ID.</qt>"
 msgid_plural "<qt><br />%1 keys without ID.</qt>"
 msgstr[0] "<qt><br />%1 ključev brez ID-ja.</qt>"
@@ -3921,7 +3963,6 @@ msgstr[2] "<qt><br />%1 ključa brez ID-ja.</qt>"
 msgstr[3] "<qt><br />%1 ključi brez ID-ja.</qt>"
 
 #: transactions/kgpgimport.cpp:146
-#, kde-format
 msgid "<qt><br /><b>One key imported:</b></qt>"
 msgid_plural "<qt><br /><b>%1 keys imported:</b></qt>"
 msgstr[0] "<qt><br /><b>%1 uvoženih ključev:</b></qt>"
@@ -3930,7 +3971,6 @@ msgstr[2] "<qt><br /><b>%1 uvožena ključa:</b></qt>"
 msgstr[3] "<qt><br /><b>%1 uvoženi ključi:</b></qt>"
 
 #: transactions/kgpgimport.cpp:148
-#, kde-format
 msgid "<qt><br />One RSA key imported.</qt>"
 msgid_plural "<qt><br />%1 RSA keys imported.</qt>"
 msgstr[0] "<qt><br />%1 uvoženih ključev RSA.</qt>"
@@ -3939,7 +3979,6 @@ msgstr[2] "<qt><br />%1 uvožena ključa RSA.</qt>"
 msgstr[3] "<qt><br />%1 uvoženi ključi RSA.</qt>"
 
 #: transactions/kgpgimport.cpp:150
-#, kde-format
 msgid "<qt><br />One key unchanged.</qt>"
 msgid_plural "<qt><br />%1 keys unchanged.</qt>"
 msgstr[0] "<qt><br />%1 nespremenjenih ključev.</qt>"
@@ -3948,7 +3987,6 @@ msgstr[2] "<qt><br />%1 nespremenjena ključa.</qt>"
 msgstr[3] "<qt><br />%1 nespremenjeni ključi.</qt>"
 
 #: transactions/kgpgimport.cpp:152
-#, kde-format
 msgid "<qt><br />One user ID imported.</qt>"
 msgid_plural "<qt><br />%1 user IDs imported.</qt>"
 msgstr[0] "<qt><br />%1 uvoženih uporabniških ID-jev.</qt>"
@@ -3957,7 +3995,6 @@ msgstr[2] "<qt><br />%1 uvožena uporabniška ID-ja.</qt>"
 msgstr[3] "<qt><br />%1 uvoženi uporabniški ID-ji.</qt>"
 
 #: transactions/kgpgimport.cpp:154
-#, kde-format
 msgid "<qt><br />One subkey imported.</qt>"
 msgid_plural "<qt><br />%1 subkeys imported.</qt>"
 msgstr[0] "<qt><br />%1 uvoženih podključev.</qt>"
@@ -3966,7 +4003,6 @@ msgstr[2] "<qt><br />%1 uvožena podključa.</qt>"
 msgstr[3] "<qt><br />%1 uvoženi podključi.</qt>"
 
 #: transactions/kgpgimport.cpp:156
-#, kde-format
 msgid "<qt><br />One signature imported.</qt>"
 msgid_plural "<qt><br />%1 signatures imported.</qt>"
 msgstr[0] "<qt><br />%1 uvoženih podpisov.</qt>"
@@ -3975,7 +4011,6 @@ msgstr[2] "<qt><br />%1 uvožena podpisa.</qt>"
 msgstr[3] "<qt><br />%1 uvoženi podpisi.</qt>"
 
 #: transactions/kgpgimport.cpp:158
-#, kde-format
 msgid "<qt><br />One revocation certificate imported.</qt>"
 msgid_plural "<qt><br />%1 revocation certificates imported.</qt>"
 msgstr[0] "<qt><br />%1 uvoženih potrdil za preklic.</qt>"
@@ -3984,7 +4019,6 @@ msgstr[2] "<qt><br />%1 uvoženi potrdili za preklic.</qt>"
 msgstr[3] "<qt><br />%1 uvožena  potrdila za preklic.</qt>"
 
 #: transactions/kgpgimport.cpp:160
-#, kde-format
 msgid "<qt><br />One secret key processed.</qt>"
 msgid_plural "<qt><br />%1 secret keys processed.</qt>"
 msgstr[0] "<qt><br />%1 obdelanih skrivnih ključev.</qt>"
@@ -3993,7 +4027,6 @@ msgstr[2] "<qt><br />%1 obdelana skrivna ključa.</qt>"
 msgstr[3] "<qt><br />%1 obdelani skrivni ključi.</qt>"
 
 #: transactions/kgpgimport.cpp:162
-#, kde-format
 msgid "<qt><br /><b>One secret key imported.</b></qt>"
 msgid_plural "<qt><br /><b>%1 secret keys imported.</b></qt>"
 msgstr[0] "<qt><br /><b>%1 uvoženih skrivnih ključev.</b></qt>"
@@ -4002,7 +4035,6 @@ msgstr[2] "<qt><br /><b>%1 uvožena skrivna ključa.</b></qt>"
 msgstr[3] "<qt><br /><b>%1 uvoženi skrivni ključi.</b></qt>"
 
 #: transactions/kgpgimport.cpp:164
-#, kde-format
 msgid "<qt><br />One secret key unchanged.</qt>"
 msgid_plural "<qt><br />%1 secret keys unchanged.</qt>"
 msgstr[0] "<qt><br />%1 nespremenjenih skrivnih ključev.</qt>"
@@ -4011,7 +4043,6 @@ msgstr[2] "<qt><br />%1 nespremenjena skrivna ključa.</qt>"
 msgstr[3] "<qt><br />%1 nespremenjeni skrivni ključi.</qt>"
 
 #: transactions/kgpgimport.cpp:166
-#, kde-format
 msgid "<qt><br />One secret key not imported.</qt>"
 msgid_plural "<qt><br />%1 secret keys not imported.</qt>"
 msgstr[0] "<qt><br />%1 skrivnih ključev ni bilo uvoženih.</qt>"
@@ -4100,12 +4131,10 @@ msgid " or "
 msgstr " ali "
 
 #: transactions/kgpgtransaction.cpp:638
-#, kde-format
 msgid "Enter passphrase for <b>%1</b>"
 msgstr "Vnesite šifrirno frazo za <b>%1</b>"
 
 #: transactions/kgpgtransaction.cpp:652
-#, kde-format
 msgid "<p><b>Bad passphrase</b>. You have 1 try left.</p>"
 msgid_plural "<p><b>Bad passphrase</b>. You have %1 tries left.</p>"
 msgstr[0] "<p><b>Napačna šifrirna fraza.</b> Imate še %1 poskusov.</p>"
@@ -4114,18 +4143,15 @@ msgstr[2] "<p><b>Napačna šifrirna fraza.</b> Imate še %1 poskusa.</p>"
 msgstr[3] "<p><b>Napačna šifrirna fraza.</b> Imate še %1 poskuse.</p>"
 
 #: transactions/kgpgverify.cpp:96
-#, kde-format
 msgctxt "first argument is formatted date, second argument is formatted time"
 msgid "The signature was created at %1 %2"
 msgstr "Podpis je bil ustvarjen %1 ob %2"
 
 #: transactions/kgpgverify.cpp:132 transactions/kgpgverify.cpp:166
-#, kde-format
 msgid "<qt>Good signature from:<br /><b>%1</b><br />Key ID: %2<br /></qt>"
 msgstr "<qt>Dober podpis od:<br /><b>%1</b><br />ID ključa: %2<br /></qt>"
 
 #: transactions/kgpgverify.cpp:136 transactions/kgpgverify.cpp:170
-#, kde-format
 msgctxt "Good signature from: NAME <EMAIL>, Key ID: HEXID"
 msgid ""
 "<qt>Good signature from:<br /><b>%1 &lt;%2&gt;</b><br />Key ID: %3<br /></qt>"
@@ -4133,7 +4159,6 @@ msgstr ""
 "<qt>Dober podpis od:<br /><b>%1 &lt;%2&gt;</b><br />ID ključa: %3<br /></qt>"
 
 #: transactions/kgpgverify.cpp:182
-#, kde-format
 msgid ""
 "<qt><b>BAD signature</b> from:<br /> %1<br />Key id: %2<br /><br /><b>The "
 "file is corrupted</b><br /></qt>"
@@ -4149,6 +4174,123 @@ msgstr "<qt>Podpis je veljaven, vendar ključ ni zaupanja vreden<br /></qt>"
 msgid ""
 "<qt>The signature is valid, and the key is ultimately trusted<br /></qt>"
 msgstr "<qt>Podpis je veljaven in ključu popolnoma zaupate<br /></qt>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Gregor Rakar,Andrej Vernekar,Jure Repinc,Jaka Kranjc,Andrej Mernik"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "gregor.rakar@kiss.si,andrej.vernekar@moj.net,jlp@holodeck1.com,"
+#~ "smgl@lynxlynx.info,andrejm@ubuntu.si"
+
+#~ msgid ""
+#~ "<p>If you want to decrypt a text file, simply drag and drop it into the "
+#~ "editor window. KGpg will do the rest. Even remote files can be dropped.</"
+#~ "p>\n"
+#~ "<p>Drag a public key into the editor window and kgpg will automatically "
+#~ "import it if you want.</p>\n"
+#~ msgstr ""
+#~ "<p>Če želite odšifrirati besedilno datoteko, jo preprosto povlecite in "
+#~ "spustite na okno urejevalnika. KGpg opravil ostalo. Spustite lahko celo "
+#~ "oddaljene datoteke.</p>\n"
+#~ "<p>Če spustite javen ključ v okno urejevalnika, ga bo kgpg samodejno "
+#~ "uvozil, če to želite.</p>\n"
+
+#~ msgid ""
+#~ "<p>The easiest way to encrypt a file: simply right click on the file, and "
+#~ "you have an encrypt option in the contextual menu.\n"
+#~ "This works in <strong>konqueror</strong> or on your Desktop!</p>\n"
+#~ msgstr ""
+#~ "<p>Najpreprostejši način šifriranja datoteke: preprosto kliknite na "
+#~ "datoteko z desnim miškinim gumbom, kjer boste v vsebinskem meniju našli "
+#~ "možnost šifriranja.\n"
+#~ "To deluje v <strong>Konqueror-ju</strong> na vašem namizju!</p>\n"
+
+#~ msgid ""
+#~ "<p>If you want to encrypt a message for several persons, just select "
+#~ "several encryption keys by pressing the &quot;Ctrl&quot; key.</p>\n"
+#~ msgstr ""
+#~ "<p>Če želite šifrirati sporočilo za več oseb, izberite več šifrirnih "
+#~ "ključev s pritiskom na tipko »Ctrl«.</p>\n"
+
+#~ msgid ""
+#~ "<p><strong>You do not have to be an expert in encryption to use this tool?"
+#~ "</strong><br>\n"
+#~ "Simply create yourself a key pair in the key management window. Then, "
+#~ "export your public key and mail it to your friends.<br>\n"
+#~ "Ask them to do the same and import their public keys. Finally, to send an "
+#~ "encrypted message, type it in the KGpg editor, then click &quot;"
+#~ "encrypt&quot;. Choose\n"
+#~ "your friend's key and click &quot;encrypt&quot; again. The message will "
+#~ "be encrypted, ready to be sent by email.</p>\n"
+#~ msgstr ""
+#~ "<p><strong>Za uporabo tega orodja ne potrebujete biti strokovnjak v "
+#~ "šifriranju.</strong><br>\n"
+#~ "Preprosto si ustvarite par ključev v oknu za upravljanje s ključi. Potem "
+#~ "izvozite vaš javni ključ in ga pošljite svojim prijateljem.<br>\n"
+#~ "Prosite jih, da storijo isto, in uvozite njihove javne ključe. Da bi "
+#~ "poslali šifrirano sporočilo, ga natipkajte v urejevalnik KGpg, nato pa "
+#~ "kliknite »Šifriraj«. Izberite \n"
+#~ "ključ vašega prijatelja in spet kliknite »Šifriraj«. Sporočilo bo "
+#~ "šifrirano in pripravljeno za pošiljanje po e-pošti.</p>\n"
+
+#~ msgid ""
+#~ "<p>To perform an operation on a key, open the key management window and "
+#~ "right click on the key. A popup menu with all available options will "
+#~ "appear.</p>\n"
+#~ msgstr ""
+#~ "<p>Da izvedete dejanje na ključu, odprite okno za upravljanje s ključi in "
+#~ "kliknite z desnim miškinim gumbom na ključ. Pokazal se bo pojavni meni z "
+#~ "vsemi možnostmi.</p>\n"
+
+#~ msgid ""
+#~ "<p>Decrypt a file with a single mouse click on it. You will then be "
+#~ "prompted for password, and then that is it!</p>\n"
+#~ msgstr ""
+#~ "<p>Odšifrirajte datoteko z enim klikom miške. Vprašani boste za geslo in "
+#~ "to je vse!</p>\n"
+
+#~ msgid ""
+#~ "<p>If you only want to open the key manager, type this in the command "
+#~ "line prompt: <pre>kgpg -k</pre>\n"
+#~ "The editor can be reached by: <pre>kgpg -d</pre></p>\n"
+#~ msgstr ""
+#~ "<p>Če bi radi samo odprli upravljalnik ključev, v ukazno vrstico vnesite "
+#~ "<pre>kgpg -k</pre>\n"
+#~ "Do urejevalnika pa pridete z: <pre>kgpg -d</pre></p>\n"
+
+#~ msgid ""
+#~ "<p>To open a file in the KGpg's editor and immediately decrypt it type: "
+#~ "<pre>kgpg -s filename</pre></p>\n"
+#~ msgstr ""
+#~ "<p>Za odprtje in takojšnje odšifriranje datoteke v urejevalniku KGpg "
+#~ "vnesite: <pre>kgpg -s datoteka</pre></p>\n"
+
+#~ msgid ""
+#~ "<p>If you want to change the password or expiration of a secret key "
+#~ "simply double click on it to get the key properties dialog.</p>\n"
+#~ msgstr ""
+#~ "<p>Če želite spremeniti geslo ali pretek skrivnega ključa, samo "
+#~ "dvokliknite nanj, da pridete do pogovornega okna z lastnostmi ključa.</"
+#~ "p>\n"
+
+#~ msgid ""
+#~ "<p>You can reach your default key by pressing &quot;Ctrl+Home&quot; in "
+#~ "the key manager.</p>\n"
+#~ msgstr ""
+#~ "<p>Vaš privzeti ključ lahko v upravljalniku ključev dosežete s pritiskom "
+#~ "na »Ctrl+Home«.</p>\n"
+
+#~ msgid ""
+#~ "<p>The number of signatures is shown as a tooltip if you hover the mouse "
+#~ "on the size column in key manager. A key has to be expanded once for this "
+#~ "to work.</p>\n"
+#~ msgstr ""
+#~ "<p>Če v upravljalniku ključev z miško preidete čez stolpec z velikostjo, "
+#~ "se v orodnem namigu prikaže število podpisov. Za to mora biti ključ "
+#~ "enkrat razširjen.</p>\n"
 
 #~ msgid "Edit Key Server"
 #~ msgstr "Uredi strežnik s ključi"

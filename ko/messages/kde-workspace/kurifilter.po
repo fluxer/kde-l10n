@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kurifilter\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-30 01:55+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2013-07-28 16:47+0900\n"
 "Last-Translator: Park Shinjo <peremen@gmail.com>\n"
 "Language-Team: Korean <kde@peremen.name>\n"
@@ -67,8 +67,21 @@ msgstr ""
 "지정했다면 Konqueror 같은 프로그램에 단어나 어절을 입력했을 경우 자동으로 검"
 "색을 시작할 것입니다.</para>"
 
+#: kuriikwsfilter.cpp:125
+msgid "No preferred search providers were found."
+msgstr "선호하는 검색 공급자를 찾을 수 없습니다."
+
+#: kuriikwsfilter.cpp:144
+msgid "No search providers were found."
+msgstr "검색 공급자를 찾을 수 없습니다."
+
+#: kurisearchfilter.cpp:87
+msgid "Search F&ilters"
+msgstr "검색 필터(&I)"
+
+#. i18n: file: ikwsopts_ui.ui:17
 #. i18n: ectx: property (toolTip), widget (QCheckBox, cbEnableShortcuts)
-#: ikwsopts_ui.ui:17
+#: rc.cpp:3
 msgid ""
 "<html><head/><body><p>Enable or disable web shortcuts. </p><p>Web shortcuts "
 "allow you to quickly access or search for information located online or on "
@@ -84,53 +97,63 @@ msgstr ""
 "려면 키워드 'gg'를 입력하고 키워드 구분자와 검색 항목을 입력하십시오. 예: "
 "<span style=\" font-weight:600;\">gg:KDE</span></p></body></html>"
 
+#. i18n: file: ikwsopts_ui.ui:20
 #. i18n: ectx: property (text), widget (QCheckBox, cbEnableShortcuts)
-#: ikwsopts_ui.ui:20
+#: rc.cpp:6
 msgid "&Enable Web shortcuts"
 msgstr "웹 바로 가기 사용하기(&E)"
 
+#. i18n: file: ikwsopts_ui.ui:30
 #. i18n: ectx: property (text), widget (QCheckBox, cbUseSelectedShortcutsOnly)
-#: ikwsopts_ui.ui:30
+#: rc.cpp:9
 msgid "&Use preferred shortcuts only"
 msgstr "선호하는 바로 가기만 사용하기(&U)"
 
+#. i18n: file: ikwsopts_ui.ui:37
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, searchLineEdit)
-#: ikwsopts_ui.ui:37
+#: rc.cpp:12
 msgid "Search for shortcut"
 msgstr "바로 가기 검색"
 
+#. i18n: file: ikwsopts_ui.ui:71
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbNew)
-#: ikwsopts_ui.ui:71
+#: rc.cpp:15
 msgid "Add a new Web shortcut"
 msgstr "새 웹 바로 가기 추가"
 
+#. i18n: file: ikwsopts_ui.ui:74
 #. i18n: ectx: property (text), widget (QPushButton, pbNew)
-#: ikwsopts_ui.ui:74
+#: rc.cpp:18
 msgid "&New..."
 msgstr "새로 만들기(&N)..."
 
+#. i18n: file: ikwsopts_ui.ui:84
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbChange)
-#: ikwsopts_ui.ui:84
+#: rc.cpp:21
 msgid "Modify the highlighted Web shortcut"
 msgstr "선택한 웹 바로 가기 편집"
 
+#. i18n: file: ikwsopts_ui.ui:87
 #. i18n: ectx: property (text), widget (QPushButton, pbChange)
-#: ikwsopts_ui.ui:87
+#: rc.cpp:24
 msgid "Chan&ge..."
 msgstr "변경(&G)..."
 
+#. i18n: file: ikwsopts_ui.ui:97
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbDelete)
-#: ikwsopts_ui.ui:97
+#: rc.cpp:27
 msgid "Delete the highlighted Web shortcut"
 msgstr "선택한 웹 바로 가기 삭제"
 
+#. i18n: file: ikwsopts_ui.ui:100
 #. i18n: ectx: property (text), widget (QPushButton, pbDelete)
-#: ikwsopts_ui.ui:100
+#: rc.cpp:30
 msgid "De&lete"
 msgstr "삭제(&L)"
 
+#. i18n: file: ikwsopts_ui.ui:138
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbDefaultEngine)
-#: ikwsopts_ui.ui:138
+#: rc.cpp:33
 msgid ""
 "<qt>\n"
 "Select the search engine to use for input boxes that provide automatic "
@@ -143,13 +166,15 @@ msgstr ""
 "b>을 선택하십시오.\n"
 "</qt>"
 
+#. i18n: file: ikwsopts_ui.ui:141
 #. i18n: ectx: property (text), widget (QLabel, lbDefaultEngine)
-#: ikwsopts_ui.ui:141
+#: rc.cpp:38
 msgid "Default Web &shortcut:"
 msgstr "기본 웹 바로 가기(&S):"
 
+#. i18n: file: ikwsopts_ui.ui:166
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cmbDefaultEngine)
-#: ikwsopts_ui.ui:166
+#: rc.cpp:41
 msgid ""
 "<html><head/><body><p>Select a default web shortcut. </p><p>This allows "
 "applications to automatically convert the typed word or phrase to web "
@@ -163,112 +188,59 @@ msgstr ""
 "<span style=\" font-weight:600;\">없음</span>을 선택하십시오.</p></body></"
 "html>"
 
+#. i18n: file: ikwsopts_ui.ui:182
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbDelimiter)
-#: ikwsopts_ui.ui:182
+#: rc.cpp:44
 msgid ""
 "Choose the delimiter that separates the keyword from the phrase or word to "
 "be searched."
 msgstr "검색할 단어와 키워드를 구분하기 위한 문자를 선택하십시오."
 
+#. i18n: file: ikwsopts_ui.ui:185
 #. i18n: ectx: property (text), widget (QLabel, lbDelimiter)
-#: ikwsopts_ui.ui:185
+#: rc.cpp:47
 msgid "&Keyword delimiter:"
 msgstr "키워드 구분자(&K):"
 
+#. i18n: file: ikwsopts_ui.ui:204
 #. i18n: ectx: property (toolTip), widget (KComboBox, cmbDelimiter)
-#: ikwsopts_ui.ui:204
+#: rc.cpp:50
 msgid "Choose a delimiter to mark the Web shortcut keyword."
 msgstr "웹 바로 가기 키워드를 구분할 구분자를 지정하십시오."
 
+#. i18n: file: ikwsopts_ui.ui:208
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbDelimiter)
-#: ikwsopts_ui.ui:208
+#: rc.cpp:53
 msgctxt "Colon as keyword delimiter"
 msgid "Colon"
 msgstr "콜론"
 
+#. i18n: file: ikwsopts_ui.ui:213
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbDelimiter)
-#: ikwsopts_ui.ui:213
+#: rc.cpp:56
 msgctxt "Space as keyword delimiter"
 msgid "Space"
 msgstr "공백"
 
-#: kuriikwsfilter.cpp:125
-msgid "No preferred search providers were found."
-msgstr "선호하는 검색 공급자를 찾을 수 없습니다."
-
-#: kuriikwsfilter.cpp:144
-msgid "No search providers were found."
-msgstr "검색 공급자를 찾을 수 없습니다."
-
-#: kurisearchfilter.cpp:87
-msgid "Search F&ilters"
-msgstr "검색 필터(&I)"
-
-#: searchproviderdlg.cpp:50
-msgctxt "@item:inlistbox The default character set"
-msgid "Default"
-msgstr "기본값"
-
-#: searchproviderdlg.cpp:54
-msgid "Modify Web Shortcut"
-msgstr "웹 바로 가기 수정"
-
-#: searchproviderdlg.cpp:64
-msgid "New Web Shortcut"
-msgstr "새 웹 바로 가기"
-
-#: searchproviderdlg.cpp:117
-#, kde-format
-msgid ""
-"The shortcut \"%1\" is already assigned to \"%2\". Please choose a different "
-"one."
-msgstr ""
-"바로 가기 \"%1\"이(가) 이미 \"%2\"에 할당되어 있습니다. 다른 이름을 지정하십"
-"시오."
-
-#: searchproviderdlg.cpp:122
-#, kde-format
-msgctxt "- web short cut (e.g. gg): what it refers to (e.g. Google)"
-msgid "- %1: \"%2\""
-msgstr "- %1: \"%2\""
-
-#: searchproviderdlg.cpp:126
-#, kde-format
-msgid ""
-"The following shortcuts are already assigned. Please choose different ones.\n"
-"%1"
-msgstr ""
-"다음 바로 가기가 이미 할당되어 있습니다. 다른 이름을 입력하십시오.\n"
-"%1"
-
-#: searchproviderdlg.cpp:138
-msgid ""
-"The Shortcut URL does not contain a \\{...} placeholder for the user query.\n"
-"This means that the same page is always going to be visited, regardless of "
-"the text typed in with the shortcut."
-msgstr ""
-"이 단축 URL에는 사용자 쿼리의 자리 대체자 \\{...}이 들어 있지 않습니다.\n"
-"이것은 사용자가 무엇을 입력하든 똑같은 페이지가 열린다는 뜻입니다."
-
-#: searchproviderdlg.cpp:141
-msgid "Keep It"
-msgstr "그대로 두기"
-
+#. i18n: file: searchproviderdlg_ui.ui:17
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbName)
-#: searchproviderdlg_ui.ui:17
+#: rc.cpp:59
 msgid "Enter the human-readable name of the search provider here."
 msgstr "인간이 읽을 수 있는 검색 공급자의 이름을 입력하십시오."
 
+#. i18n: file: searchproviderdlg_ui.ui:23
 #. i18n: ectx: property (text), widget (QLabel, lbName)
-#: searchproviderdlg_ui.ui:23
+#: rc.cpp:62
 msgid "Shortcut &name:"
 msgstr "바로 가기 이름(&N):"
 
+#. i18n: file: searchproviderdlg_ui.ui:42
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbQuery)
+#. i18n: file: searchproviderdlg_ui.ui:64
 #. i18n: ectx: property (toolTip), widget (KLineEdit, leQuery)
+#. i18n: file: searchproviderdlg_ui.ui:70
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, leQuery)
-#: searchproviderdlg_ui.ui:42 searchproviderdlg_ui.ui:64
-#: searchproviderdlg_ui.ui:70
+#: rc.cpp:65 rc.cpp:74 rc.cpp:80
 msgid ""
 "<qt>\n"
 "Enter the URI that is used to perform a search on the search engine here.<br/"
@@ -297,21 +269,25 @@ msgstr ""
 "자열을 기본값으로 사용합니다.\n"
 "</qt>"
 
+#. i18n: file: searchproviderdlg_ui.ui:48
 #. i18n: ectx: property (text), widget (QLabel, lbQuery)
-#: searchproviderdlg_ui.ui:48
+#: rc.cpp:71
 msgid "Shortcut &URL:"
 msgstr "바로 가기 URL(&U):"
 
+#. i18n: file: searchproviderdlg_ui.ui:86
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cbCharset)
-#: searchproviderdlg_ui.ui:86
+#: rc.cpp:86
 msgid "Select the character set that will be used to encode your search query."
 msgstr "검색 질의어를 인코딩하기 위한 문자 집합을 선택하십시오."
 
+#. i18n: file: searchproviderdlg_ui.ui:95
 #. i18n: ectx: property (toolTip), widget (KLineEdit, leShortcut)
+#. i18n: file: searchproviderdlg_ui.ui:100
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, leShortcut)
+#. i18n: file: searchproviderdlg_ui.ui:122
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbShortcut)
-#: searchproviderdlg_ui.ui:95 searchproviderdlg_ui.ui:100
-#: searchproviderdlg_ui.ui:122
+#: rc.cpp:89 rc.cpp:94 rc.cpp:105
 msgid ""
 "<qt>\n"
 "The shortcuts entered here can be used as a pseudo-URI scheme in KDE. For "
@@ -325,9 +301,11 @@ msgstr ""
 "다.\n"
 "</qt>"
 
+#. i18n: file: searchproviderdlg_ui.ui:110
 #. i18n: ectx: property (toolTip), widget (KLineEdit, leName)
+#. i18n: file: searchproviderdlg_ui.ui:113
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, leName)
-#: searchproviderdlg_ui.ui:110 searchproviderdlg_ui.ui:113
+#: rc.cpp:99 rc.cpp:102
 msgid ""
 "<html><head/><body><p>Enter the human-readable name of the web shortcut here."
 "</p></body></html>"
@@ -335,22 +313,73 @@ msgstr ""
 "<html><head/><body><p>사용자가 식별할 수 있는 검색 공급자의 이름을 입력하십시"
 "오.</p></body></html>"
 
+#. i18n: file: searchproviderdlg_ui.ui:125
 #. i18n: ectx: property (text), widget (QLabel, lbShortcut)
-#: searchproviderdlg_ui.ui:125
+#: rc.cpp:110
 msgid "&Shortcuts:"
 msgstr "바로 가기(&S):"
 
+#. i18n: file: searchproviderdlg_ui.ui:138
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbCharset)
-#: searchproviderdlg_ui.ui:138
+#: rc.cpp:113
 msgid "Select the character set that will be used to encode your search query"
 msgstr "검색 쿼리를 인코딩하기 위한 문자 집합을 선택하십시오"
 
+#. i18n: file: searchproviderdlg_ui.ui:141
 #. i18n: ectx: property (text), widget (QLabel, lbCharset)
-#: searchproviderdlg_ui.ui:141
+#: rc.cpp:116
 msgid "&Charset:"
 msgstr "문자 집합(&C):"
 
+#. i18n: file: searchproviderdlg_ui.ui:164
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbPaste)
-#: searchproviderdlg_ui.ui:164
+#: rc.cpp:119
 msgid "Insert query placeholder"
 msgstr "쿼리 자리 비움자 삽입"
+
+#: searchproviderdlg.cpp:50
+msgctxt "@item:inlistbox The default character set"
+msgid "Default"
+msgstr "기본값"
+
+#: searchproviderdlg.cpp:54
+msgid "Modify Web Shortcut"
+msgstr "웹 바로 가기 수정"
+
+#: searchproviderdlg.cpp:64
+msgid "New Web Shortcut"
+msgstr "새 웹 바로 가기"
+
+#: searchproviderdlg.cpp:117
+msgid ""
+"The shortcut \"%1\" is already assigned to \"%2\". Please choose a different "
+"one."
+msgstr ""
+"바로 가기 \"%1\"이(가) 이미 \"%2\"에 할당되어 있습니다. 다른 이름을 지정하십"
+"시오."
+
+#: searchproviderdlg.cpp:122
+msgctxt "- web short cut (e.g. gg): what it refers to (e.g. Google)"
+msgid "- %1: \"%2\""
+msgstr "- %1: \"%2\""
+
+#: searchproviderdlg.cpp:126
+msgid ""
+"The following shortcuts are already assigned. Please choose different ones.\n"
+"%1"
+msgstr ""
+"다음 바로 가기가 이미 할당되어 있습니다. 다른 이름을 입력하십시오.\n"
+"%1"
+
+#: searchproviderdlg.cpp:138
+msgid ""
+"The Shortcut URL does not contain a \\{...} placeholder for the user query.\n"
+"This means that the same page is always going to be visited, regardless of "
+"the text typed in with the shortcut."
+msgstr ""
+"이 단축 URL에는 사용자 쿼리의 자리 대체자 \\{...}이 들어 있지 않습니다.\n"
+"이것은 사용자가 무엇을 입력하든 똑같은 페이지가 열린다는 뜻입니다."
+
+#: searchproviderdlg.cpp:141
+msgid "Keep It"
+msgstr "그대로 두기"

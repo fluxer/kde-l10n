@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kgpg\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-10-20 05:34+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2014-04-02 08:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -19,39 +19,65 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Іван Петрущак"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ivanpetrouchtchak@yahoo.com"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: adduid.ui:16
-msgid "Name (minimum 5 characters):"
-msgstr "Ім’я (мінімум 5 символів):"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#. i18n: ectx: property (text), widget (QLabel, label_EmailSorting)
-#: adduid.ui:29 conf_ui2.ui:242 newkey.ui:67
-msgid "Email:"
-msgstr "Ел. пошта:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: adduid.ui:42
-msgid "Comment (optional):"
-msgstr "Коментар (не обов'язковий):"
+#: kgpg.h:32
+msgid ""
+"Hi,\n"
+"\n"
+"please find attached the user id '%UIDNAME%' of your key %KEYID% signed by "
+"me. This mail is encrypted with that key to make sure you control both the "
+"email address and the key.\n"
+"\n"
+"If you have multiple user ids, I sent the signature for each user id "
+"separately to that user id's associated email address. You can import the "
+"signatures by running each through `gpg --import` after you have decrypted "
+"them with `gpg --decrypt`.\n"
+"\n"
+"If you are using KGpg store the attachment to disk and then import it. Just "
+"select `Import Key...` from `Keys` menu and open the file.\n"
+"\n"
+"Note that I did not upload your key to any keyservers. If you want this new "
+"signature to be available to others, please upload it yourself. With GnuPG "
+"this can be done using gpg --keyserver subkeys.pgp.net --send-key %KEYID%.\n"
+"\n"
+"With KGpg you can right click on the key once you imported all user ids and "
+"choose `Export Public Key...`.\n"
+"\n"
+"If you have any questions, don't hesitate to ask.\n"
+msgstr ""
+"Доброго дня,\n"
+"\n"
+"До цього листа долучено ідентифікатор користувача «%UIDNAME%» вашого ключа "
+"%KEYID%, підписаний мною. Це повідомлення зашифровано відповідним ключем, "
+"щоб переконатися, що ви контролюєте адресу електронної пошти і ключ.\n"
+"\n"
+"Якщо у вас декілька ідентифікаторів користувача, мною надіслано підписи для "
+"кожного з ідентифікаторів окремо на кожну з пов’язаних з ним адрес "
+"електронної пошти. Ви можете імпортувати всі ці підписи за допомогою команди "
+"«gpg --import» після розшифрування за допомогою команди «gpg --"
+"decrypt» (команди слід виконати окремо для кожного з підписів).\n"
+"\n"
+"Якщо ви користуєтеся KGpg, збережіть долучення до повідомлення на диску, а "
+"потім імпортуйте його. Для цього достатньо вибрати пункт «Імпортувати "
+"ключ...» з меню «Ключі», а потім вказати збережений файл.\n"
+"\n"
+"Зауважте, що мною не було вивантажено ваш ключ на жоден з серверів ключів. "
+"Якщо ви хочете скористатися новим підписом для спілкування з іншими "
+"користувачами, будь ласка, виконайте вивантаження самостійно. Якщо ви "
+"користуєтеся GnuPG, вивантаження можна виконати за допомогою такої команди: "
+"gpg --keyserver subkeys.pgp.net --send-key %KEYID%.\n"
+"\n"
+"У KGpg для вивантаження достатньо навести вказівник миші на пункт ключа "
+"після імпортування всіх ідентифікаторів користувача, клацнути правою кнопкою "
+"і вибрати у контекстному меню пункт «Експортувати відкритий ключ...».\n"
+"\n"
+"Якщо у вас виникли якісь питання, не вагайтеся їх поставити.\n"
 
 #: caff.cpp:151 caff.cpp:169
-#, kde-format
 msgctxt "%1 is the key id, %2 is the name and comment of the key or uid"
 msgid "%1: %2"
 msgstr "%1: %2"
 
 #: caff.cpp:154 caff.cpp:172
-#, kde-format
 msgctxt ""
 "%1 is the key id, %2 is the name and comment of the key or uid, %3 is the "
 "email address of the uid"
@@ -110,1069 +136,13 @@ msgid "UIDNAME"
 msgstr "UIDNAME"
 
 #: caff.cpp:342
-#, kde-format
 msgctxt "%1 is 64 bit key id (in hex), text is used as email subject"
 msgid "Your key %1"
 msgstr "Ваш ключ %1"
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_4_2)
-#: conf_decryption.ui:52
-msgid ""
-"<qt><b>Custom Decryption Command:</b><br />\n"
-"<p>This option allows the user to specify a custom command to be executed by "
-"GPG when decryption occurs. (This is recommended for advanced users only).</"
-"p></qt>"
-msgstr ""
-"<qt><b>Нетипова команда розшифрування:</b><br />\n"
-"<p>Тут користувач може вказати нетипову команду для виконання GPG під час "
-"розшифровки. (Рекомендується тільки для досвідчених користувачів.)</p></qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
-#: conf_decryption.ui:55
-msgid "Custom decryption command:"
-msgstr "Нетипова команда розшифрування:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, capEncrypt)
-#. i18n: ectx: property (windowTitle), widget (QWidget, Encryption)
-#: conf_encryption.ui:15 kgpgkeygenerate.ui:172 kgpgoptions.cpp:109
-msgid "Encryption"
-msgstr "Шифрування"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AsciiArmor)
-#: conf_encryption.ui:31
-msgid ""
-"<qt><b>ASCII armored encryption:</b> <br /> \n"
-"<p>Checking this option outputs all encrypted files in a format that can be "
-"opened by a text editor and as such the output is suitable for placing in "
-"the body of an e-mail message.</p></qt>"
-msgstr ""
-"<qt><b>Броньоване шифрування ASCII:</b> <br /> \n"
-"<p>Позначення цього пункту призведе до видачі всіх зашифрованих файлів у "
-"форматі, який можна відкрити у текстовому редакторі, через що такий вивід "
-"придатний для розміщення в тілі електронного повідомлення.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AsciiArmor)
-#: conf_encryption.ui:34 selectpublickeydialog.cpp:95
-msgid "ASCII armored encryption"
-msgstr "Броньоване шифрування ASCII"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpExtension)
-#: conf_encryption.ui:42
-msgid ""
-"<qt><b>Use *.pgp extension for encrypted files:</b><br />\n"
-"<p>Checking this option will append a .pgp extension to all encrypted files "
-"instead of a .gpg extension. This option will maintain compatibility with "
-"users of PGP (Pretty Good Privacy) software.</p></qt>"
-msgstr ""
-"<qt><b>Використовувати суфікс *.pgp для зашифрованих файлів:</b><br />\n"
-"<p>Позначення цього пункту призведе до додавання суфікса *.pgp до всіх "
-"зашифрованих файлів, замість суфікса .gpg. Цей параметр буде підтримувати "
-"сумісність з файлами користувачів програм PGP.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpExtension)
-#: conf_encryption.ui:45
-msgid "Use *.pgp extension for encrypted files"
-msgstr "Використовувати суфікс *.pgp для зашифрованих файлів"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
-#: conf_encryption.ui:69
-msgid ""
-"<qt><b>Custom encryption command:</b><br />\n"
-"<p>When activated, an entry field will be shown in the key selection dialog, "
-"enabling you to enter a custom command for encryption. This option is "
-"recommended for experienced users only.</p></qt>"
-msgstr ""
-"<qt><b>Нетипова команда шифрування:</b> <br />\n"
-"<p>Якщо задіяно цей параметр, у вікні вибору ключа буде показано поле вводу, "
-"що дасть можливість ввести нетипову команду для шифрування. Рекомендуємо "
-"лише досвідченим користувачам.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
-#: conf_encryption.ui:72
-msgid "Custom encryption command:"
-msgstr "Нетипова команда шифрування:"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, encrypt_to_always)
-#: conf_encryption.ui:113
-msgid ""
-"<qt><b>Always encrypt with:</b><br />\n"
-"<p>This ensures all files/messages will also be encrypted with the chosen "
-"key. However, if the \"Encrypt files with:\" option is selected that chosen "
-"key will override the \"Always encrypt with:\" selection.</p></qt>"
-msgstr ""
-"<qt><b>Завжди шифрувати з:</b><br /> \n"
-"<p>Цей параметр гарантує, що всі файли/повідомлення буде також зашифровано "
-"цим ключем. Однак, якщо параметр «Шифрувати файли за допомогою:» увімкнено, "
-"то його ключ матиме перевагу над вибором у «Завжди шифрувати з:».</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, encrypt_to_always)
-#: conf_encryption.ui:116
-msgid "Always encrypt with:"
-msgstr "Завжди зашифровувати з:"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EncryptFilesTo)
-#: conf_encryption.ui:124
-msgid ""
-"<qt><b>Encrypt files with:</b><br />\n"
-"<p>Checking this option and selecting a key will force any file encryption "
-"operation to use the selected key. KGpg will not query for a recipient and "
-"the default key will be bypassed.</p></qt>"
-msgstr ""
-"<qt><b>Шифрувати файли за допомогою:</b><br /> \n"
-"<p>Увімкнення цього параметра і вибір ключа примусить всі дії шифрування "
-"файлів використовувати вибраний ключ. KGpg не буде питати про адресата, "
-"типовий ключ буде знехтувано.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EncryptFilesTo)
-#: conf_encryption.ui:127
-msgid "Encrypt files with:"
-msgstr "Зашифровувати файли за допомогою:"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedKeys)
-#: conf_encryption.ui:135
-msgid ""
-"<qt><b>Allow encryption with untrusted keys:</b><br />\n"
-"<p>When importing a public key, the key is usually marked as untrusted and "
-"as such cannot be used unless it is signed by the default key (thus making "
-"it 'trusted'). Checking this box enables any key to be used even if it is "
-"untrusted.</p></qt>"
-msgstr ""
-"<qt><b>Дозволити шифрування ненадійними ключами:</b> <br />\n"
-"<p>Під час імпортування відкритого ключа, його, як правило, позначено, як "
-"ненадійний, його неможливо використовувати, поки його не буде підписано "
-"типовим ключем. (Тоді він стане «надійним»). Увімкнувши цей параметр, ви "
-"уможливлюєте використання будь-якого ключа, навіть ненадійного.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedKeys)
-#: conf_encryption.ui:138 selectpublickeydialog.cpp:100
-msgid "Allow encryption with untrusted keys"
-msgstr "Дозволити шифрування ненадійними ключами"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
-#: conf_encryption.ui:145
-msgid ""
-"<qt><b>Allow untrusted keys as members of key groups:</b><br /><p>A key "
-"group allows simple encryption to multiple recipients at once. Similar to "
-"the <em>Allow encryption with untrusted keys</em> option this allows "
-"untrusted keys to become member of a key group.</p></qt>"
-msgstr ""
-"<qt><b>Дозволити ненадійним ключам бути елементами груп ключів:</b><br /"
-"><p>За допомогою груп ключів можна спростити шифрування даних для декількох "
-"отримувачів одночасно. Подібно до пункту <em>Дозволити шифрування "
-"ненадійними ключами</em>, цей пункт надає програмі змогу використовувати "
-"ненадійні ключі, як елементи подібних груп.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
-#: conf_encryption.ui:148
-msgid "Allow untrusted keys as members of key groups"
-msgstr "Дозволити ненадійним ключам бути елементами груп ключів"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_HideUserID)
-#: conf_encryption.ui:156
-msgid ""
-"<qt><b>Hide user ID:</b><br /> \n"
-"<p>Checking this option will remove the keyid of the recipient from all "
-"encrypted packets. The advantage: traffic analysis of the encrypted packets "
-"cannot be performed as easily because the recipient is unknown. The "
-"disadvantage: the receiver of the encrypted packets is forced to try all "
-"secret keys before being able to decrypt the packets. This can be a lengthy "
-"process depending on the number of secret keys the receiver holds.</p></qt>"
-msgstr ""
-"<qt><b>Приховувати ІД користувача:</b> \n"
-"<p>Увімкнення цього параметра вилучатиме ІД ключа адресата з усіх "
-"зашифрованих пакетів. Перевага: не так легко зробити аналіз потоку "
-"зашифрованих пакетів, бо одержувач невідомий. Недолік: адресат зашифрованих "
-"пакетів змушений спробувати всі закриті ключі, перш ніж зможе розшифрувати "
-"пакети. Залежно від кількості закритих ключів у адресата, це може бути "
-"тривалим процесом.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HideUserID)
-#: conf_encryption.ui:159 selectpublickeydialog.cpp:106
-msgid "Hide user id"
-msgstr "Ховати ІД користувача"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpCompatibility)
-#: conf_encryption.ui:167
-msgid ""
-"<qt><b>PGP 6 compatibility:</b><br /> \n"
-"<p>Checking this option forces GnuPG to output encrypted packets that are as "
-"compliant with PGP (Pretty Good Privacy) 6 standards as possible thus "
-"allowing GnuPG users to inter operate with PGP 6 users.</p></qt>"
-msgstr ""
-"<qt><b>Сумісність з PGP 6:</b><br /> \n"
-"<p>Позначення цього пункту, змушує GnuPG видавати зашифровані пакети якомога "
-"сумісніші зі стандартами PGP (ДДК — Досить Добра Конфіденційність) 6, що "
-"надасть змогу користувачам GnuPG співпрацювати з користувачами PGP 6.</p></"
-"qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpCompatibility)
-#: conf_encryption.ui:170
-msgid "PGP 6 compatibility"
-msgstr "Сумісність з PGP 6"
-
-#. i18n: ectx: property (whatsThis), widget (QWidget, GPGConf)
-#: conf_gpg.ui:16
-msgid ""
-"<qt><b>Global Settings:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-msgstr ""
-"<qt><b>Загальні параметри:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: conf_gpg.ui:22
-msgid "GnuPG Home"
-msgstr "Домівка GnuPG"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2)
-#: conf_gpg.ui:30
-msgid ""
-"<b>Home Location</b><p>This is the directory where GnuPG stores its "
-"configuration and the keyrings. If you have not changed it this is usually "
-"<em>~/.gnupg/</em></p>"
-msgstr ""
-"<b>Адреса домівки</b><p>Це каталог, де GnuPG зберігає свої налаштування і "
-"зв’язки ключів. Якщо ви нічого не змінювали, це, зазвичай, <em>~/.gnupg/</"
-"em></p>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2)
-#: conf_gpg.ui:33
-msgid "Home location:"
-msgstr "Адреса домівки:"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2_2)
-#: conf_gpg.ui:43
-msgid ""
-"<b>Configuration File</b><p>This is the name of the configuration file in "
-"the directory specified above. The default is <em>gnupg.conf</em> while "
-"older versions of GnuPG used <em>options</em>.</p>"
-msgstr ""
-"<b>Файл налаштувань</b><p>Це назва файла налаштувань у каталозі, вказаному "
-"вище. Типовою назвою є <em>gnupg.conf</em>, а старіші версії GnuPG "
-"використовують назву <em>options</em>.</p>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2_2)
-#: conf_gpg.ui:46
-msgid "Configuration file:"
-msgstr "Файл налаштувань:"
-
-#. i18n: ectx: property (text), widget (QPushButton, changeHome)
-#: conf_gpg.ui:96
-msgid "Change..."
-msgstr "Змінити..."
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: conf_gpg.ui:108 kgpgfirstassistant.cpp:123
-msgid "GnuPG Binary"
-msgstr "Двійковий GnuPG"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_6_2)
-#: conf_gpg.ui:114
-msgid ""
-"<b>Program path</b><p>This is the program that will be called for all GnuPG "
-"operations. The default of <em>gpg</em> will work on most systems.</p>"
-msgstr ""
-"<b>Шлях програми</b><p>Це програма, яку буде викликано для проведення всіх "
-"дій GnuPG. Типова назва, <em>gpg</em>, має працювати у більшості систем.</p>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_6_2)
-#: conf_gpg.ui:117
-msgid "Program path:"
-msgstr "Шлях програми:"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, use_agent)
-#: conf_gpg.ui:157
-msgid ""
-"<b>Use GnuPG agent</b><p>The GnuPG agent stores the passwords for your "
-"secret keys in memory for a limited amount of time. If you use your secret "
-"key again while it is cached you do not have to enter it again. This is less "
-"secure than typing it every time.</p>"
-msgstr ""
-"<b>Використовувати агент GnuPG</b><p>Агент GnuPG зберігає паролі до ваших "
-"секретних ключів у пам’яті деякий проміжок часу. Якщо ви знову "
-"використовуєте секретний ключ у той час, коли він все ще у кеші, вам не "
-"треба його ще раз вводити. Використання агента становить певну небезпеку "
-"порівняно з введенням пароля кожного разу за вимогою.</p>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, use_agent)
-#: conf_gpg.ui:160
-msgid "Use GnuPG agent"
-msgstr "Використовувати агент GnuPG"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabGlobal)
-#: conf_misc.ui:24
-msgid "Global Settings"
-msgstr "Загальні параметри"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutoStart)
-#: conf_misc.ui:33
-msgid ""
-"<qt><b>Start KGpg automatically at KDE startup:</b><br />\n"
-"<p>If checked KGpg will start automatically each time that KDE starts up.</"
-"p></qt>"
-msgstr ""
-"<qt><b>Запускати KGpg автоматично при вході в KDE:</b><br />\n"
-"<p>Якщо увімкнено, KGpg буде автоматично запускатись разом з KDE.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoStart)
-#: conf_misc.ui:36
-msgid "Start KGpg automatically at login"
-msgstr "Запускати KGpg автоматично при вході в систему"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_UseMouseSelection)
-#: conf_misc.ui:53
-msgid ""
-"<qt><b>Use mouse selection instead of clipboard:</b><br />\n"
-"<p>If checked, clipboard operations in KGpg will use the selection "
-"clipboard, that means highlighting a text to copy, and middle button (or "
-"right+left together) to paste. If this option is not checked, the clipboard "
-"will work with Key shortcuts (Ctrl-c, Ctrl-v).</p></qt> "
-msgstr ""
-"<qt><b>Замість кишені використовувати позначене мишкою:</b> <br />\n"
-"<p>Якщо ввімкнено, KGpg використовуватиме кишеню вибраного, що означає "
-"позначення тексту для копіювання, і натискання на середню кнопку (або на "
-"ліву + праву разом) для вставлення. Якщо цей параметр не ввімкнено, кишеня "
-"працюватиме від гарячих клавіш (Ctrl-c, Ctrl-v).</p></qt> "
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseMouseSelection)
-#: conf_misc.ui:56
-msgid "Use mouse selection instead of clipboard"
-msgstr "Замість кишені використовувати позначене мишкою"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_RemoteFileWarn)
-#: conf_misc.ui:70
-msgid ""
-"<qt><b>Display warning before creating temporary files:</b><br />\n"
-"<p></p></qt>"
-msgstr ""
-"<qt><b>Перед створенням тимчасових файлів показувати попередження:</b><br /"
-">\n"
-"<p></p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_RemoteFileWarn)
-#: conf_misc.ui:74
-msgid ""
-"Display warning before creating temporary files\n"
-"(only occurs on remote files operations)"
-msgstr ""
-"Попереджати перед створенням тимчасових файлів \n"
-"(Може статись тільки при діях з віддаленими файлами)"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabApplet)
-#: conf_misc.ui:97
-msgid "Applet && Menus"
-msgstr "Аплет і меню"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox11)
-#: conf_misc.ui:103
-msgid "Konqueror Service Menus"
-msgstr "Меню служб Konqueror"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
-#: conf_misc.ui:119
-msgid ""
-"<qt><b>Sign file service menu:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-msgstr ""
-"<qt><b>Службове меню підписування файла:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: conf_misc.ui:122
-msgid "Sign file service menu:"
-msgstr "Службове меню підписування файла:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
-#: conf_misc.ui:139 conf_misc.ui:178 keysmanager.cpp:310
-msgid "Disable"
-msgstr "Вимкнути"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
-#: conf_misc.ui:144 conf_misc.ui:183
-msgid "Enable with All Files"
-msgstr "Уможливити з усіма файлами"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_3)
-#: conf_misc.ui:164
-msgid ""
-"<qt><b>Decrypt file service menu:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-msgstr ""
-"<qt><b>Службове меню розшифрування файла:</b><br />\n"
-"<p></p>\n"
-"</qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: conf_misc.ui:167
-msgid "Decrypt file service menu:"
-msgstr "Службове меню розшифрування файла:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
-#: conf_misc.ui:188
-msgid "Enable with Encrypted Files"
-msgstr "Уможливити з зашифрованими файлами"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
-#: conf_misc.ui:201
-msgid "System Tray Applet"
-msgstr "Аплет системного лотка"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowSystray)
-#: conf_misc.ui:208
-msgid ""
-"<qt><b>Show system tray icon:</b><br />\n"
-"<p>If checked KGpg will minimize to an icon in the system tray.</p></qt>"
-msgstr ""
-"<qt><b>Показувати піктограму у системному лотку:</b><br />\n"
-"<p>Якщо позначено, KGpg буде згортатися у піктограму у системному лотку.</"
-"p></qt>"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSystray)
-#: conf_misc.ui:211
-msgid "Show system tray icon"
-msgstr "Показувати піктограму системного лотка"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: conf_misc.ui:223
-msgid "Left mouse click opens:"
-msgstr "Клацання лівою кнопкою миші відкриває:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
-#: conf_misc.ui:240
-msgid "Key Manager"
-msgstr "Керування ключами"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
-#. i18n: ectx: attribute (title), widget (QWidget, tabEditor)
-#: conf_misc.ui:245 conf_misc.ui:272 editor/kgpgeditor.cpp:504
-msgid "Editor"
-msgstr "Редактор"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: conf_misc.ui:280
-msgid "Recent files"
-msgstr "Нещодавні файли"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabSigning)
-#: conf_misc.ui:306
-msgid "Key Signing"
-msgstr "Підписування ключів"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
-#: conf_misc.ui:314
-msgid ""
-"Here you can define how User Ids that do not contain an email address (like "
-"Photo Ids) are sent to the key owner. You can choose to either send them "
-"with every other User Id you signed, only with the first Id you signed or to "
-"not send them at all."
-msgstr ""
-"Тут ви можете визначити спосіб надсилання власникові ключа ідентифікаторів "
-"користувача, які не містять адрес електронної пошти (наприклад, "
-"фотографічних ідентифікаторів). Ви можете надсилати їх з кожним "
-"ідентифікатором користувача, який ви підписуєте, надсилати їх лише з першим "
-"ідентифікатором, який ви підписуєте або не надсилати їх взагалі."
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: conf_misc.ui:317
-msgid "Mailing of User Ids without Email Addresses"
-msgstr "Надсилання ідентифікаторів користувачів без адрес ел. пошти"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
-#: conf_misc.ui:325
-msgid "Send with every Email"
-msgstr "Надсилати з кожним повідомленням"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
-#: conf_misc.ui:330
-msgid "Send only with first Email"
-msgstr "Надсилати лише з першим повідомленням"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
-#: conf_misc.ui:335
-msgid "Do not send"
-msgstr "Не надсилати"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: conf_misc.ui:345
-msgid "Email template"
-msgstr "Шаблон повідомлення"
-
-#. i18n: ectx: property (whatsThis), widget (KTextEdit, EmailTemplateEdit)
-#: conf_misc.ui:353
-#, no-c-format
-msgid ""
-"This is the text of the email sent by the \"Sign and Mail User ID\" action.\n"
-"\n"
-"The placeholders surrounded by the percent signs (like %KEYID%) will be "
-"replaced with the corresponding text for every single mail."
-msgstr ""
-"Це текст повідомлення, яке буде надіслано у відповідь на виконання дії "
-"«Підписати і надіслати ідентифікатор користувача».\n"
-"\n"
-"Рядки між символами відсотків (зокрема %KEYID%) буде замінено на відповідний "
-"текст у кожному з повідомлень електронної пошти."
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: conf_servers.ui:25
-msgid ""
-"<b>INFORMATION</b>:\n"
-"Only the default server will be stored in GnuPG's configuration file,\n"
-"all others will be stored for use by KGpg only."
-msgstr ""
-"<b>ІНФОРМАЦІЯ</b>:\n"
-"У файлі налаштування GnuPG зберігатиметься лише запис типового сервера,\n"
-"всі інші записи зберігатимуться лише для використання у KGpg."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseProxy)
-#: conf_servers.ui:35
-msgid "Honor HTTP proxy when available"
-msgstr "Використовувати HTTP-проксі, якщо він доступний"
-
-#. i18n: ectx: property (text), widget (KPushButton, server_default)
-#: conf_servers.ui:49
-msgid "&Set as Default"
-msgstr "&Зробити типовим"
-
-#. i18n: ectx: property (text), widget (KPushButton, server_add)
-#: conf_servers.ui:56
-msgid "&Add..."
-msgstr "&Додати..."
-
-#. i18n: ectx: property (text), widget (KPushButton, server_del)
-#: conf_servers.ui:66
-msgid "&Delete"
-msgstr "&Вилучити"
-
-#. i18n: ectx: property (text), widget (KPushButton, server_edit)
-#: conf_servers.ui:73
-msgid "&Edit..."
-msgstr "&Змінити..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: conf_ui2.ui:32
-msgid "Key Colors"
-msgstr "Кольори ключів"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUltimate)
-#: conf_ui2.ui:42
-msgid "Ultimately trusted keys:"
-msgstr "Ключі з безмежною довірою:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustTrusted)
-#: conf_ui2.ui:52
-msgid "Trusted keys:"
-msgstr "Ключі з довірою:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustMarginally)
-#: conf_ui2.ui:62
-msgid "Marginally trusted keys:"
-msgstr "Ключі з не повною довірою:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustExpired)
-#: conf_ui2.ui:72
-msgid "Expired keys:"
-msgstr "Застарілі ключі:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustRevoked)
-#: conf_ui2.ui:82
-msgid "Revoked keys:"
-msgstr "Анульовані ключі:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUnknown)
-#: conf_ui2.ui:92
-msgid "Unknown keys:"
-msgstr "Невідомі ключі:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel_trustDisabled)
-#: conf_ui2.ui:102
-msgid "Disabled keys:"
-msgstr "Вимкнені ключі:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, TabPage)
-#: conf_ui2.ui:225
-msgid "Editor Font"
-msgstr "Шрифт редактора"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabKeyList)
-#: conf_ui2.ui:230
-msgid "Key List"
-msgstr "Список ключів"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBoxSorting)
-#: conf_ui2.ui:236
-msgid "Sort Order"
-msgstr "Порядок"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
-#: conf_ui2.ui:253 kgpgoptions.cpp:101
-msgid "Left to right, account first"
-msgstr "Зліва праворуч, спочатку обліковий запис"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
-#: conf_ui2.ui:258 kgpgoptions.cpp:102
-msgid "Right to left, TLD first"
-msgstr "Справа ліворуч, спочатку TLD"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
-#: conf_ui2.ui:263 kgpgoptions.cpp:103
-msgid "Right to left, domain first"
-msgstr "Справа ліворуч, спочатку домен"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
-#: conf_ui2.ui:268 kgpgoptions.cpp:104
-msgid "Right to left, FQDN first"
-msgstr "Справа ліворуч, спочатку FQDN"
-
-#: core/convert.cpp:39
-msgctxt "Encryption algorithm"
-msgid "RSA"
-msgstr "RSA"
-
-#: core/convert.cpp:41
-msgctxt "Encryption algorithm"
-msgid "DSA"
-msgstr "DSA"
-
-#: core/convert.cpp:43
-msgctxt "Encryption algorithm"
-msgid "ElGamal"
-msgstr "ElGamal"
-
-#: core/convert.cpp:45
-msgctxt "Encryption algorithm"
-msgid "DSA & ElGamal"
-msgstr "DSA і ElGamal"
-
-#: core/convert.cpp:47
-msgctxt "Encryption algorithm RSA, Signing algorithm RSA"
-msgid "RSA & RSA"
-msgstr "RSA і RSA"
-
-#: core/convert.cpp:50
-msgctxt "Unknown algorithm"
-msgid "Unknown"
-msgstr "Невідомий"
-
-#: core/convert.cpp:58
-msgid "Do not Know"
-msgstr "Я не знаю"
-
-#: core/convert.cpp:60
-msgid "Do NOT Trust"
-msgstr "Я НЕ довіряю"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: core/convert.cpp:62 kgpgKeyInfo.ui:196
-msgid "Marginally"
-msgstr "Не повністю"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: core/convert.cpp:64 kgpgKeyInfo.ui:201
-msgid "Fully"
-msgstr "Повністю"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: core/convert.cpp:66 kgpgKeyInfo.ui:206
-msgid "Ultimately"
-msgstr "Безмежна"
-
-#: core/convert.cpp:69
-msgctxt "Unknown trust in key owner"
-msgid "Unknown"
-msgstr "Невідома"
-
-#: core/convert.cpp:77
-msgctxt "Invalid key"
-msgid "Invalid"
-msgstr "Некоректний"
-
-#: core/convert.cpp:79
-msgctxt "Disabled key"
-msgid "Disabled"
-msgstr "Вимкнений"
-
-#: core/convert.cpp:81
-msgid "Revoked"
-msgstr "Анульований"
-
-#: core/convert.cpp:83 model/groupeditproxymodel.cpp:110
-msgctxt "Expired key"
-msgid "Expired"
-msgstr "Застарілий"
-
-#: core/convert.cpp:85
-msgctxt "Undefined key trust"
-msgid "Undefined"
-msgstr "Невизначена"
-
-#: core/convert.cpp:87
-msgctxt "No trust in key"
-msgid "None"
-msgstr "Немає"
-
-#: core/convert.cpp:89
-msgctxt "Marginal trust in key"
-msgid "Marginal"
-msgstr "Неповна"
-
-#: core/convert.cpp:91
-msgctxt "Full trust in key"
-msgid "Full"
-msgstr "Повна"
-
-#: core/convert.cpp:93
-msgctxt "Ultimate trust in key"
-msgid "Ultimate"
-msgstr "Безмежна"
-
-#: core/convert.cpp:96
-msgctxt "Unknown trust in key"
-msgid "Unknown"
-msgstr "Невідома"
-
-#: core/convert.cpp:105
-msgctxt "key capability"
-msgid "Signature"
-msgstr "Підписування"
-
-#: core/convert.cpp:107
-msgctxt "key capability"
-msgid "Encryption"
-msgstr "Шифрування"
-
-#: core/convert.cpp:109
-msgctxt "key capability"
-msgid "Authentication"
-msgstr "Розпізнавання"
-
-#: core/convert.cpp:111
-msgctxt "key capability"
-msgid "Certification"
-msgstr "Сертифікація"
-
-#: core/convert.cpp:113
-msgctxt "used to join a list of key types, e.g. 'encryption, signature'"
-msgid ", "
-msgstr ", "
-
-#: core/KGpgGroupNode.cpp:164
-#, kde-format
-msgid "1 key"
-msgid_plural "%1 keys"
-msgstr[0] "%1 ключ"
-msgstr[1] "%1 ключі"
-msgstr[2] "%1 ключів"
-msgstr[3] "1 ключ"
-
-#: core/KGpgKeyNode.cpp:84
-#, kde-format
-msgctxt "size of signing key / size of encryption key"
-msgid "%1 / %2"
-msgstr "%1 / %2"
-
-#: core/KGpgKeyNode.cpp:170 core/KGpgSignableNode.cpp:48
-#, kde-format
-msgid "1 signature"
-msgid_plural "%1 signatures"
-msgstr[0] "%1 підпис"
-msgstr[1] "%1 підписи"
-msgstr[2] "%1 підписів"
-msgstr[3] "1 підпис"
-
-#: core/KGpgNode.cpp:56
-#, kde-format
-msgctxt "Name of uid (comment)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
-
-#: core/KGpgRefNode.cpp:128 transactions/kgpgtransaction.cpp:634
-msgid "[No user id found]"
-msgstr "[Не знайдено ІД користувача]"
-
-#: core/KGpgSignNode.cpp:88
-#, kde-format
-msgid "%1 [local signature]"
-msgstr "%1 [локальний підпис]"
-
-#: core/KGpgSubkeyNode.cpp:86
-#, kde-format
-msgid "%1 subkey"
-msgstr "%1 підключ"
-
-#: core/KGpgUatNode.cpp:105
-msgid "Photo id"
-msgstr "Фото ІД"
-
 #: detailedconsole.cpp:30
 msgid "Info"
 msgstr "Інформація"
-
-#: editor/kgpgeditor.cpp:91 editor/kgpgeditor.cpp:241
-#: editor/kgpgeditor.cpp:749 editor/kgpgeditor.cpp:778
-msgid "Untitled"
-msgstr "Без назви"
-
-#: editor/kgpgeditor.cpp:187
-msgid "&Encrypt File..."
-msgstr "&Зашифрувати файл..."
-
-#: editor/kgpgeditor.cpp:191
-msgid "&Decrypt File..."
-msgstr "&Розшифрувати файл..."
-
-#: editor/kgpgeditor.cpp:195
-msgid "&Open Key Manager"
-msgstr "&Відкрити керування ключами"
-
-#: editor/kgpgeditor.cpp:198
-msgid "&Generate Signature..."
-msgstr "&Створити підпис..."
-
-#: editor/kgpgeditor.cpp:202
-msgid "&Verify Signature..."
-msgstr "&Перевірити підпис..."
-
-#: editor/kgpgeditor.cpp:205
-msgid "&Check MD5 Sum..."
-msgstr "П&еревірити суму MD5..."
-
-#: editor/kgpgeditor.cpp:208
-msgid "&Unicode (utf-8) Encoding"
-msgstr "Кодування &юнікод (utf-8)"
-
-#: editor/kgpgeditor.cpp:214
-msgid "En&crypt"
-msgstr "&Зашифрувати"
-
-#: editor/kgpgeditor.cpp:218
-msgid "&Decrypt"
-msgstr "&Розшифрувати"
-
-#: editor/kgpgeditor.cpp:222
-msgid "S&ign/Verify"
-msgstr "П&ідписати/Перевірити"
-
-#: editor/kgpgeditor.cpp:245
-#, kde-format
-msgid ""
-"The document \"%1\" has changed.\n"
-"Do you want to save it?"
-msgstr ""
-"Документ «%1» було змінено.\n"
-"Хочете зберегти зміни?"
-
-#: editor/kgpgeditor.cpp:246
-msgid "Close the document"
-msgstr "Закрити документ"
-
-#: editor/kgpgeditor.cpp:292
-msgid ""
-"The document could not been saved, as the selected codec is not supported."
-msgstr ""
-"Не вдалось зберегти документ, оскільки підтримки вказаного кодеку не "
-"передбачено."
-
-#: editor/kgpgeditor.cpp:298
-msgid ""
-"The document could not been saved, as the selected encoding cannot encode "
-"every unicode character in it."
-msgstr ""
-"Не вдалось зберегти документ, оскільки вибране кодування нездатне закодувати "
-"в ньому кожний символ юнікоду."
-
-#: editor/kgpgeditor.cpp:307 editor/kgpgeditor.cpp:326
-msgid ""
-"The document could not be saved, please check your permissions and disk "
-"space."
-msgstr ""
-"Документ неможливо було зберегти. Будь ласка, перевірте ваші права доступу і "
-"чи достатньо вільного місця на диску."
-
-#: editor/kgpgeditor.cpp:352 editor/kgpgeditor.cpp:359 keyexport.cpp:42
-#, kde-format
-msgid "Overwrite existing file %1?"
-msgstr "Перезаписати існуючий файл %1?"
-
-#: editor/kgpgeditor.cpp:470 editor/kgpgeditor.cpp:479
-#: editor/kgpgeditor.cpp:614 editor/kgpgeditor.cpp:652
-#: editor/kgpgeditor.cpp:690
-msgid "*|All Files"
-msgstr "*|Всі файли"
-
-#: editor/kgpgeditor.cpp:470
-msgid "Open File to Encode"
-msgstr "Відкрити файл для кодування"
-
-#: editor/kgpgeditor.cpp:479
-msgid "Open File to Decode"
-msgstr "Відкрити файл для декодування"
-
-#: editor/kgpgeditor.cpp:493
-msgid "Decrypt File To"
-msgstr "Розшифрувати файл у"
-
-#: editor/kgpgeditor.cpp:502 keyexport.cpp:28
-msgid "Save File"
-msgstr "Зберегти файл"
-
-#: editor/kgpgeditor.cpp:523 kgpgexternalactions.cpp:208
-#: kgpgexternalactions.cpp:371 transactions/kgpgtransaction.cpp:189
-msgid "File Already Exists"
-msgstr "Файл вже існує"
-
-#: editor/kgpgeditor.cpp:614
-msgid "Open File to Sign"
-msgstr "Відкрити файл для підпису"
-
-#: editor/kgpgeditor.cpp:652 editor/kgpgeditor.cpp:690
-msgid "Open File to Verify"
-msgstr "Відкрити файл для перевірки"
-
-#: editor/kgpgeditor.cpp:703 editor/kgpgtextedit.cpp:333
-#, kde-format
-msgid ""
-"<qt><b>Missing signature:</b><br />Key id: %1<br /><br />Do you want to "
-"import this key from a keyserver?</qt>"
-msgstr ""
-"<qt><b>Немає підпису:</b><br />ІД ключа: %1<br /><br />Хочете імпортувати "
-"цей ключ з сервера ключів?</qt>"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_import)
-#: editor/kgpgeditor.cpp:704 keyserver.ui:32 keytreeview.cpp:167
-msgid "Import"
-msgstr "Імпортувати"
-
-#: editor/kgpgeditor.cpp:704 keytreeview.cpp:168
-msgid "Do Not Import"
-msgstr "Не імпортувати"
-
-#: editor/kgpgeditor.cpp:730 transactions/kgpgverify.cpp:149
-msgid "No signature found."
-msgstr "Підпис не знайдено."
-
-#: editor/kgpgeditor.cpp:735 editor/kgpgtextedit.cpp:320
-#: kgpgexternalactions.cpp:288
-msgctxt "Caption of message box"
-msgid "Verification Finished"
-msgstr "Перевірку завершено"
-
-#. i18n: ectx: Menu (view)
-#: editor/kgpgeditor.rc:13 keysmanager.rc:25
-msgid "&View"
-msgstr "П&ерегляд"
-
-#. i18n: ectx: Menu (signature)
-#: editor/kgpgeditor.rc:18
-msgid "Si&gnature"
-msgstr "П&ідпис"
-
-#: editor/kgpgmd5widget.cpp:28
-msgid "MD5 Checksum"
-msgstr "Контрольна сума MD5"
-
-#: editor/kgpgmd5widget.cpp:31
-msgid "Compare MD5 with Clipboard"
-msgstr "Порівняти MD5 з кишенею"
-
-#: editor/kgpgmd5widget.cpp:46
-#, kde-format
-msgid "MD5 sum for <b>%1</b> is:"
-msgstr "Контрольна сума MD5 для <b>%1</b>:"
-
-#: editor/kgpgmd5widget.cpp:59
-msgid "<b>Unknown status</b>"
-msgstr "<b>Невідомий стан</b>"
-
-#: editor/kgpgmd5widget.cpp:84
-msgid "Clipboard content is not a MD5 sum."
-msgstr "Вміст кишені не є сумою MD5."
-
-#: editor/kgpgmd5widget.cpp:88
-msgid "<b>Correct checksum</b>, file is ok."
-msgstr "<b>Контрольна сума правильна</b>, файл не пошкоджено."
-
-#: editor/kgpgmd5widget.cpp:94
-msgid "<b>Wrong checksum, <em>file corrupted</em></b>"
-msgstr "<b>Неправильна контрольна сума, <em>файл пошкоджений</em></b>"
-
-#: editor/kgpgtextedit.cpp:90
-msgid ""
-"<qt><b>Remote file dropped</b>.<br />The remote file will now be copied to a "
-"temporary file to process requested operation. This temporary file will be "
-"deleted after operation.</qt>"
-msgstr ""
-"<qt><b>Скидання віддаленого файла</b>.<br />Для здійснення викликаної дії "
-"віддалений файл буде скопійовано в тимчасовий. Цей тимчасовий файл буде "
-"вилучено після виконання дії.</qt>"
-
-#: editor/kgpgtextedit.cpp:94
-msgid "Could not download file."
-msgstr "Не вдалося звантажити файл."
-
-#: editor/kgpgtextedit.cpp:127
-msgid ""
-"<qt>This file is a <b>public</b> key.<br />Do you want to import it instead "
-"of opening it in editor?</qt>"
-msgstr ""
-"<qt>Цей файл є <b>відкритим</b> ключем.<br />Бажаєте імпортувати його "
-"замість відкриття у редакторі?</qt>"
-
-#: editor/kgpgtextedit.cpp:130
-msgid ""
-"<qt>This file is a <b>private</b> key.<br />Do you want to import it instead "
-"of opening it in editor?</qt>"
-msgstr ""
-"<qt>Цей файл є <b>закритим</b> ключем.<br />Бажаєте імпортувати його замість "
-"відкриття у редакторі?</qt>"
-
-#: editor/kgpgtextedit.cpp:135
-msgid "Key file dropped on Editor"
-msgstr "У вікно редактора скинуто файл ключа"
-
-#: editor/kgpgtextedit.cpp:257 kgpgexternalactions.cpp:408
-msgid "Decryption failed."
-msgstr "Помилка розшифрування."
-
-#: editor/kgpgtextedit.cpp:272 foldercompressjob.cpp:140
-#, kde-format
-msgid "The encryption failed with error code %1"
-msgstr "Спроба шифрування зазнала невдачі з кодом помилки %1"
-
-#: editor/kgpgtextedit.cpp:273 foldercompressjob.cpp:141
-msgid "Encryption failed."
-msgstr "Помилка шифрування."
-
-#: editor/kgpgtextedit.cpp:286
-msgid "Signing not possible: bad passphrase or missing key"
-msgstr "Неможливо підписати: помилковий пароль або немає ключа"
-
-#. i18n: ectx: property (text), widget (QPushButton, Buttonimport)
-#: editor/kgpgtextedit.cpp:326 keyserver.ui:144 keyservers.cpp:213
-msgid "&Import"
-msgstr "&Імпортувати"
-
-#: editor/kgpgtextedit.cpp:327
-msgid "Import key in your list"
-msgstr "Імпортувати ключ у ваш список"
-
-#: editor/kgpgtextedit.cpp:330
-msgid "Do &Not Import"
-msgstr "&Не імпортувати"
-
-#: editor/kgpgtextedit.cpp:331
-msgid "Will not import this key in your list"
-msgstr "Не імпортуватиме цей ключ у ваш список"
-
-#: editor/kgpgtextedit.cpp:333
-msgid "Missing Key"
-msgstr "Відсутній ключ"
 
 #: foldercompressjob.cpp:44
 msgid "Processing folder compression and encryption"
@@ -1195,13 +165,19 @@ msgid "Unable to create temporary file"
 msgstr "Неможливо створити тимчасовий файл"
 
 #: foldercompressjob.cpp:123 transactions/kgpgencrypt.cpp:106
-#, kde-format
 msgctxt "Status message 'Encrypting <filename>' (operation starts)"
 msgid "Encrypting %1"
 msgstr "Шифруємо %1"
 
+#: foldercompressjob.cpp:140 editor/kgpgtextedit.cpp:272
+msgid "The encryption failed with error code %1"
+msgstr "Спроба шифрування зазнала невдачі з кодом помилки %1"
+
+#: foldercompressjob.cpp:141 editor/kgpgtextedit.cpp:273
+msgid "Encryption failed."
+msgstr "Помилка шифрування."
+
 #: foldercompressjob.cpp:144 transactions/kgpgencrypt.cpp:109
-#, kde-format
 msgctxt "Status message 'Encrypted <filename>' (operation was completed)"
 msgid "Encrypted %1"
 msgstr "%1 зашифровано"
@@ -1234,96 +210,17 @@ msgstr "Наявні ключі"
 msgid "Available Trusted Keys"
 msgstr "Наявні ключі з довірою"
 
-#. i18n: ectx: property (text), widget (QLabel, filterEditLabel)
-#. i18n: ectx: property (text), widget (QLabel)
-#: groupedit.ui:38 keysmanager.cpp:431 searchres.ui:28
-msgid "Search:"
-msgstr "Пошук: "
-
-#. i18n: ectx: property (text), widget (QTableView, availableKeys)
-#. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: groupedit.ui:74 groupedit.ui:158 model/kgpgitemmodel.cpp:372
-#: model/kgpgsearchresultmodel.cpp:334
-msgid "Name"
-msgstr "Ім'я"
-
-#. i18n: ectx: property (text), widget (QTableView, availableKeys)
-#. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: groupedit.ui:79 groupedit.ui:163 model/kgpgitemmodel.cpp:373
-#: model/kgpgsearchresultmodel.cpp:336
-msgctxt "@title:column Title of a column of emails"
-msgid "Email"
-msgstr "Ел. пошта"
-
-#. i18n: ectx: property (text), widget (QTableView, availableKeys)
-#. i18n: ectx: property (text), widget (QTableView, groupKeys)
-#: groupedit.ui:84 groupedit.ui:168
-msgid "Id"
-msgstr "ІД"
-
-#. i18n: ectx: property (text), widget (QLabel, kActiveLabel1)
-#: groupedit.ui:100
-msgid "Keys in the Group"
-msgstr "Ключі в групі"
-
 #: keyexport.cpp:25
 msgid "Public Key Export"
 msgstr "Експортування відкритого ключа"
 
-#. i18n: ectx: property (text), widget (QRadioButton, checkMail)
-#: keyexport.ui:38
-msgctxt "Export a key via email"
-msgid "Email"
-msgstr "Надіслати ел. поштою"
+#: keyexport.cpp:28 editor/kgpgeditor.cpp:502
+msgid "Save File"
+msgstr "Зберегти файл"
 
-#. i18n: ectx: property (text), widget (QRadioButton, checkClipboard)
-#: keyexport.ui:45 sourceselect.ui:34
-msgid "Clipboard"
-msgstr "Кишеня"
-
-#. i18n: ectx: property (toolTip), widget (QRadioButton, checkServer)
-#: keyexport.ui:55
-msgid ""
-"You must define at least one keyserver in settings before you can export to "
-"one."
-msgstr ""
-"Перш ніж виконувати експортування, вам слід визначити у параметрах програми "
-"принаймні один сервер ключів."
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: keyexport.ui:58 keyserver.ui:41 keyserver.ui:176
-msgid "Key server:"
-msgstr "Сервер ключів:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkFile)
-#: keyexport.ui:72 sourceselect.ui:43
-msgid "File:"
-msgstr "Файл:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup3)
-#: keyexport.ui:92
-msgid "Export Settings"
-msgstr "Параметри експорту"
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkAttrAll)
-#: keyexport.ui:98
-msgid "Export everything"
-msgstr "Експортувати все"
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkAttrPhoto)
-#: keyexport.ui:108
-msgid "Do not export attributes (photo ids)"
-msgstr "Не експортувати атрибути (фото ІД)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, checkAttrClean)
-#: keyexport.ui:115
-msgctxt ""
-"@option:radio Exports the smallest key possible. Maps to export-minimal "
-"option of gpg"
-msgid "Clean key"
-msgstr "Очистити ключ"
+#: keyexport.cpp:42 editor/kgpgeditor.cpp:352 editor/kgpgeditor.cpp:359
+msgid "Overwrite existing file %1?"
+msgstr "Перезаписати існуючий файл %1?"
 
 #: keyinfodialog.cpp:165
 msgid ""
@@ -1390,119 +287,11 @@ msgstr "KGpg не вдалося змінити пароль."
 msgid "Changing key properties failed."
 msgstr "Спроба змінити властивості ключа завершилася невдало."
 
+#. i18n: file: kgpgKeyInfo.ui:37
 #. i18n: ectx: property (title), widget (QGroupBox, gr_properties)
-#: keyinfodialog.cpp:358 kgpgKeyInfo.ui:37
+#: keyinfodialog.cpp:358 rc.cpp:349
 msgid "Key properties"
 msgstr "Властивості ключів"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
-#: keyserver.ui:38
-msgid ""
-"<qt><b>Key Server:</b><br /> <p>A Key Server is a centralized repository of "
-"PGP/GnuPG keys connected to the Internet which can be conveniently accessed "
-"in order to obtain or deposit keys. Select from the drop down list to "
-"specify which key server should be used.</p> <p>Often these keys are held by "
-"people whom the user has never met and as such the authenticity is dubious "
-"at best. Refer to the GnuPG manual covering \"Web-of-Trust\" relationships "
-"to find out how GnuPG works around the problem of verifying authenticity.</"
-"p> </qt>"
-msgstr ""
-"<qt><b>Сервер ключів:</b><br /> <p>Сервер ключів — це централізоване сховище "
-"ключів PGP/GnuPG, з’єднане з інтернетом, зі зручним доступом для добування "
-"чи розміщення ключів. Зробіть вибір зі спадного списку, щоб вказати який "
-"сервер ключів використовувати.</p> <p> Часто ці ключі належать людям, з "
-"якими користувач не знайомий, тому їхня приналежність, в найкращому випадку, "
-"сумнівна. Зверніться до посібника GnuPG по співвідношення «мережа-довіра», "
-"щоб дізнатись, як у GnuPG вирішується проблема перевірки автентичності.</p> "
-"</qt>"
-
-#. i18n: ectx: property (whatsThis), widget (KComboBox, kCBimportks)
-#: keyserver.ui:52
-msgid ""
-"<b>Key Server Drop Down Dialog:</b>\n"
-"Allows the user to select the Key Server which will be used to import PGP/"
-"GnuPG keys into the local keyring."
-msgstr ""
-"<b>Вікно скинення сервера ключів:</b>\n"
-"Дозволяє користувачам вибрати сервер ключів для імпортування ключів PGP/ "
-"GnuPG у локальну в'язку."
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
-#: keyserver.ui:60
-msgid ""
-"<qt><b>Text to search or ID of the key to import:</b><br />\n"
-"<p>There are multiple ways to search for a key, you can use a text or "
-"partial text search (example: entering Phil or Zimmerman will bring up all "
-"keys in which Phil or Zimmerman shows up) or you can search by the ID's of "
-"the key. Key ID's are strings of letters and numbers that uniquely identify "
-"a key (example: searching for 0xED7585F4 would bring up the key associated "
-"with that ID).</p></qt>"
-msgstr ""
-"<qt><b>Текст для пошуку або ІД ключа для імпортування:</b><br />\n"
-"<p>Є багато шляхів пошуку за ключами; можна використовувати пошук за текстом "
-"або частковим текстом (наприклад, введення тексту Пилип або Цимерман покаже "
-"всі ключі, які фігурують Пилип або Цимерман), або можна шукати за ІД ключа. "
-"ІД ключів — це ланцюжки літер і цифр, що однозначно посвідчують ключ "
-"(наприклад пошук за 0xED7585F4 поверне ключ прив'язаний до цього ІД).</p></"
-"qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: keyserver.ui:69
-msgid "Text to search or ID of the key to import:"
-msgstr "Текст для пошуку або ІД ключа для імпортування:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, cBproxyI)
-#. i18n: ectx: property (text), widget (QCheckBox, cBproxyE)
-#: keyserver.ui:91 keyserver.ui:221
-msgid "Honor HTTP proxy:"
-msgstr "Задовольняти проксі HTTP:"
-
-#. i18n: ectx: property (text), widget (QPushButton, Buttonsearch)
-#: keyserver.ui:134
-msgid "&Search"
-msgstr "&Пошук"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_export)
-#: keyserver.ui:170
-msgid "Export"
-msgstr "Експортувати"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
-#: keyserver.ui:190
-msgid ""
-"<qt><b>Key to be exported:</b><br />\n"
-"<p>This allows the user to specify the key from the drop down list that will "
-"be exported to the key server selected.</p></qt>"
-msgstr ""
-"<qt><b>Експортувати ключ:</b><br />\n"
-"<p>Це дозволяє користувачу вибрати з спадного списку ключ, який буде "
-"експортовано до вказаного сервера ключів.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: keyserver.ui:193
-msgid "Key to be exported:"
-msgstr "Експортувати ключ:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, exportAttributes)
-#: keyserver.ui:206
-msgid "Export attributes (photo id)"
-msgstr "Експортувати атрибути (фото ІД)"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, Buttonexport)
-#: keyserver.ui:265
-msgid ""
-"<qt><b>Export:</b><br />\n"
-"<p>Pushing this button will export the specified key to the specified server."
-"</p></qt>"
-msgstr ""
-"<qt><b>Експортувати:</b><br />\n"
-"<p>Якщо натиснути на цю кнопку, вказаний ключ буде експортовано до вказаного "
-"сервера.</p></qt>"
-
-#. i18n: ectx: property (text), widget (QPushButton, Buttonexport)
-#: keyserver.ui:268
-msgid "&Export"
-msgstr "&Експортувати"
 
 #: keyservers.cpp:47
 msgid "Key Server"
@@ -1535,7 +324,7 @@ msgstr "Вивантаження до сервера ключів заверши
 msgid "Upload to keyserver failed"
 msgstr "Спроба вивантаження до сервера ключів завершилася невдало"
 
-#: keyservers.cpp:208 keysmanager.cpp:1238
+#: keyservers.cpp:208 keysmanager.cpp:1189
 msgid "Import Key From Keyserver"
 msgid_plural "Import Keys From Keyserver"
 msgstr[0] "Імпортувати ключі з сервера ключів"
@@ -1543,12 +332,17 @@ msgstr[1] "Імпортувати ключі з сервера ключів"
 msgstr[2] "Імпортувати ключі з сервера ключів"
 msgstr[3] "Імпортувати ключ з сервера ключів"
 
+#. i18n: file: keyserver.ui:144
+#. i18n: ectx: property (text), widget (QPushButton, Buttonimport)
+#: keyservers.cpp:213 rc.cpp:29 editor/kgpgtextedit.cpp:326
+msgid "&Import"
+msgstr "&Імпортувати"
+
 #: keyservers.cpp:218
 msgid "Connecting to the server..."
 msgstr "З'єднання з сервером..."
 
 #: keyservers.cpp:269
-#, kde-format
 msgid "Found 1 matching key"
 msgid_plural "Found %1 matching keys"
 msgstr[0] "Знайдено %1 відповідний ключ"
@@ -1564,203 +358,219 @@ msgstr "Відповідних ключів не знайдено"
 msgid "You must choose a key."
 msgstr "Ви мусите вибрати ключ."
 
-#: keysmanager.cpp:132
+#: keysmanager.cpp:127
 msgid "Key Management"
 msgstr "Керування ключами"
 
-#: keysmanager.cpp:139
+#: keysmanager.cpp:134
 msgid "&Open Editor"
 msgstr "&Відкрити редактор"
 
-#: keysmanager.cpp:142
+#: keysmanager.cpp:137
 msgid "&Key Server Dialog"
 msgstr "Вікно серверів &ключів"
 
-#: keysmanager.cpp:147 selectpublickeydialog.cpp:138
+#: keysmanager.cpp:142 selectpublickeydialog.cpp:138
 msgid "&Go to Default Key"
 msgstr "&Перейти до типового ключа"
 
-#: keysmanager.cpp:164
+#: keysmanager.cpp:159
 msgid "Tip of the &Day"
 msgstr "Порада &дня"
 
-#: keysmanager.cpp:167
+#: keysmanager.cpp:162
 msgid "View GnuPG Manual"
 msgstr "Переглянути посібник GnuPG"
 
-#: keysmanager.cpp:172
+#: keysmanager.cpp:167
 msgid "&Refresh List"
 msgstr "П&оновити список"
 
-#: keysmanager.cpp:176
+#: keysmanager.cpp:171
 msgid "Show &Long Key Id"
 msgstr "Показати &довгий ІД ключа"
 
-#: keysmanager.cpp:181
+#: keysmanager.cpp:176
 msgid "K&ey Properties"
 msgstr "Властивості к&лючів"
 
-#: keysmanager.cpp:185
+#: keysmanager.cpp:180
 msgid "&Open Key URL"
 msgstr "&Відкрити адресу ключа"
 
-#: keysmanager.cpp:189
+#: keysmanager.cpp:184
 msgid "Edit Key in &Terminal"
 msgstr "Редагувати ключ у &терміналі"
 
-#: keysmanager.cpp:194
+#: keysmanager.cpp:189
 msgid "&Generate Key Pair..."
 msgstr "Ство&рити пару ключів..."
 
-#: keysmanager.cpp:203
+#: keysmanager.cpp:198
 msgid "&Import Key..."
 msgstr "&Імпортувати ключ..."
 
-#: keysmanager.cpp:208
+#: keysmanager.cpp:203
 msgid "Send Ema&il"
 msgstr "Надіслати п&овідомлення ел. поштою"
 
-#: keysmanager.cpp:212
+#: keysmanager.cpp:207
 msgid "&Create New Contact in Address Book"
 msgstr "&Створити новий контакт в адресній книзі"
 
-#: keysmanager.cpp:218
+#: keysmanager.cpp:213
 msgid "&Edit Group..."
 msgstr "&Редагувати групу..."
 
-#: keysmanager.cpp:221
+#: keysmanager.cpp:216
 msgid "&Delete Group"
 msgstr "&Вилучити групу"
 
-#: keysmanager.cpp:225
+#: keysmanager.cpp:220
 msgid "&Rename Group"
 msgstr "Пере&йменувати групу"
 
-#: keysmanager.cpp:234
+#: keysmanager.cpp:229
 msgid "Set as De&fault Key"
 msgstr "Встановити як тип&овий ключ"
 
-#: keysmanager.cpp:237
+#: keysmanager.cpp:232
 msgid "&Add Photo..."
 msgstr "Дод&ати фото..."
 
-#: keysmanager.cpp:240
+#: keysmanager.cpp:235
 msgid "&Add User Id..."
 msgstr "&Додати ІД користувача..."
 
-#: keysmanager.cpp:243
+#: keysmanager.cpp:238
 msgid "Export Secret Key..."
 msgstr "Експортувати закритий ключ..."
 
-#: keysmanager.cpp:246
+#: keysmanager.cpp:241
 msgid "Delete Key Pair"
 msgstr "Вилучити пару ключів"
 
-#: keysmanager.cpp:250
+#: keysmanager.cpp:245
 msgid "Revoke Key..."
 msgstr "Скасувати ключ..."
 
-#: keysmanager.cpp:253
+#: keysmanager.cpp:248
 msgid "&Regenerate Public Key"
 msgstr "&Переробити відкритий ключ"
 
-#: keysmanager.cpp:259
+#: keysmanager.cpp:254
 msgid "Set User Id as &Primary"
 msgstr "Встановити ІД користувача як &головний"
 
-#: keysmanager.cpp:263
+#: keysmanager.cpp:258
 msgid "&Open Photo"
 msgstr "В&ідкрити фото"
 
-#: keysmanager.cpp:267
+#: keysmanager.cpp:262
 msgid "&Delete Photo"
 msgstr "&Витерти фото"
 
-#: keysmanager.cpp:275
+#: keysmanager.cpp:270
 msgid "Import &Missing Signatures From Keyserver"
 msgstr "Імпортувати &відсутні підписи з сервера ключів"
 
-#: keysmanager.cpp:293 model/kgpgitemmodel.cpp:374
+#: keysmanager.cpp:288 model/kgpgitemmodel.cpp:374
 msgid "Trust"
 msgstr "Довіра"
 
-#: keysmanager.cpp:296 model/kgpgitemmodel.cpp:375
+#: keysmanager.cpp:291 model/kgpgitemmodel.cpp:375
 msgid "Size"
 msgstr "Розмір"
 
-#: keysmanager.cpp:299 model/kgpgitemmodel.cpp:377
+#: keysmanager.cpp:294 model/kgpgitemmodel.cpp:377
 msgid "Creation"
 msgstr "Створено"
 
-#: keysmanager.cpp:302 model/kgpgitemmodel.cpp:376
+#: keysmanager.cpp:297 model/kgpgitemmodel.cpp:376
 msgid "Expiration"
 msgstr "Строк дії"
 
-#: keysmanager.cpp:306
+#: keysmanager.cpp:301
 msgid "&Photo ID's"
 msgstr "&Фотоідентифікатори"
 
-#: keysmanager.cpp:311
+#. i18n: file: conf_misc.ui:139
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
+#. i18n: file: conf_misc.ui:178
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
+#: keysmanager.cpp:305 rc.cpp:707 rc.cpp:721
+msgid "Disable"
+msgstr "Вимкнути"
+
+#: keysmanager.cpp:306
 msgctxt "small picture"
 msgid "Small"
 msgstr "Мале"
 
-#: keysmanager.cpp:312
+#: keysmanager.cpp:307
 msgctxt "medium picture"
 msgid "Medium"
 msgstr "Середнє"
 
-#: keysmanager.cpp:313
+#: keysmanager.cpp:308
 msgctxt "large picture"
 msgid "Large"
 msgstr "Велике"
 
-#: keysmanager.cpp:317
+#: keysmanager.cpp:312
 msgid "Minimum &Trust"
 msgstr "Мінімальна &довіра"
 
-#: keysmanager.cpp:320
+#: keysmanager.cpp:315
 msgctxt "no filter: show all keys"
 msgid "&None"
 msgstr "&Всі"
 
-#: keysmanager.cpp:321
+#: keysmanager.cpp:316
 msgctxt "show only active keys"
 msgid "&Active"
 msgstr "&Активні"
 
-#: keysmanager.cpp:322
+#: keysmanager.cpp:317
 msgctxt "show only keys with at least marginal trust"
 msgid "&Marginal"
 msgstr "&З неповною довірою"
 
-#: keysmanager.cpp:323
+#: keysmanager.cpp:318
 msgctxt "show only keys with at least full trust"
 msgid "&Full"
 msgstr "З &повною довірою"
 
-#: keysmanager.cpp:324
+#: keysmanager.cpp:319
 msgctxt "show only ultimately trusted keys"
 msgid "&Ultimate"
 msgstr "З &необмеженою довірою"
 
-#: keysmanager.cpp:348
+#: keysmanager.cpp:343
 msgid "&Show Only Secret Keys"
 msgstr "Пока&зувати тільки закриті ключі"
 
-#: keysmanager.cpp:443
+#. i18n: file: groupedit.ui:38
+#. i18n: ectx: property (text), widget (QLabel)
+#. i18n: file: searchres.ui:28
+#. i18n: ectx: property (text), widget (QLabel, filterEditLabel)
+#: keysmanager.cpp:426 rc.cpp:427 rc.cpp:582
+msgid "Search:"
+msgstr "Пошук: "
+
+#: keysmanager.cpp:438
 msgctxt ""
 "Name of the action that is a search line, shown for example in the toolbar "
 "configuration dialog"
 msgid "Search Line"
 msgstr "Пошук рядка"
 
-#: keysmanager.cpp:448
+#: keysmanager.cpp:443
 msgctxt "Name of the action that gives the focus to the search line"
 msgid "Focus Search Line"
 msgstr "Фокусувати пошук рядка"
 
-#: keysmanager.cpp:497
+#: keysmanager.cpp:492
 msgid ""
 "Another key generation operation is still in progress.\n"
 "Please wait a moment until this operation is complete."
@@ -1768,55 +578,56 @@ msgstr ""
 "Зараз створюється інший ключ.\n"
 "Будь ласка, зачекайте на завершення цієї дії."
 
-#: keysmanager.cpp:498 keysmanager.cpp:528 keysmanager.cpp:576
+#: keysmanager.cpp:493 keysmanager.cpp:523 keysmanager.cpp:571
 msgid "Generating new key pair"
 msgstr "Створення нової пари ключів"
 
-#: keysmanager.cpp:529
+#: keysmanager.cpp:524
 msgid "Can not start \"konsole\" application for expert mode."
 msgstr ""
 "Запустити програму «konsole» для режиму досвідченого користувач неможливо."
 
-#: keysmanager.cpp:568 keysmanager.cpp:2620 keysmanager.cpp:2622
+#: keysmanager.cpp:563 keysmanager.cpp:2571 keysmanager.cpp:2573
 msgctxt "Application ready for user input"
 msgid "Ready"
 msgstr "Готово"
 
-#: keysmanager.cpp:580 transactions/kgpggeneratekey.cpp:205
+#: keysmanager.cpp:575 transactions/kgpggeneratekey.cpp:205
 msgid "Bad passphrase. Cannot generate a new key pair."
 msgstr "Неправильна фраза пароля. Неможливо створити нову пару ключів."
 
-#: keysmanager.cpp:583 transactions/kgpggeneratekey.cpp:208
+#: keysmanager.cpp:578 transactions/kgpggeneratekey.cpp:208
 msgid "Aborted by the user. Cannot generate a new key pair."
 msgstr "Перервано користувачем. Неможливо створити нову пару ключів."
 
-#: keysmanager.cpp:586 transactions/kgpggeneratekey.cpp:211
+#: keysmanager.cpp:581 transactions/kgpggeneratekey.cpp:211
 msgid "The email address is not valid. Cannot generate a new key pair."
 msgstr ""
 "Некоректна адреса електронної пошти. Неможливо створити нову пару ключів."
 
-#: keysmanager.cpp:589 transactions/kgpggeneratekey.cpp:214
+#: keysmanager.cpp:584 transactions/kgpggeneratekey.cpp:214
 msgid "The name is not accepted by gpg. Cannot generate a new key pair."
 msgstr "Назву не прийнято gpg. Неможливо створити нову пару ключів."
 
+#. i18n: file: newkey.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, newKey)
-#: keysmanager.cpp:595 newkey.ui:13
+#: keysmanager.cpp:590 rc.cpp:159
 msgid "New Key Pair Created"
 msgstr "Нову пару ключів створено"
 
-#: keysmanager.cpp:642
+#: keysmanager.cpp:637
 msgid "backup copy"
 msgstr "резервна копія"
 
-#: keysmanager.cpp:656 transactions/kgpggeneratekey.cpp:230
+#: keysmanager.cpp:651 transactions/kgpggeneratekey.cpp:230
 msgid "gpg process did not finish. Cannot generate a new key pair."
 msgstr "Не завершився процес gpg. Неможливо створити нову пару ключів."
 
-#: keysmanager.cpp:760
+#: keysmanager.cpp:755
 msgid "You can only refresh primary keys. Please check your selection."
 msgstr "Поновити можна тільки основні ключі. Будь ласка, перевірте ваш вибір."
 
-#: keysmanager.cpp:884
+#: keysmanager.cpp:879
 msgid ""
 "Another operation is still in progress.\n"
 "Please wait a moment until this operation is complete."
@@ -1824,11 +635,11 @@ msgstr ""
 "Зараз виконується інша дія.\n"
 "Будь ласка, зачекайте на завершення цієї дії."
 
-#: keysmanager.cpp:885 keysmanager.cpp:890
+#: keysmanager.cpp:880 keysmanager.cpp:885
 msgid "Add New User Id"
 msgstr "Додати новий ІД користувача"
 
-#: keysmanager.cpp:926
+#: keysmanager.cpp:921
 msgid ""
 "The image must be a JPEG file. Remember that the image is stored within your "
 "public key, so if you use a very large picture, your key will become very "
@@ -1840,8 +651,7 @@ msgstr ""
 "також дуже великим. Розмір не повинен перевищувати 6 КіБ. Розмір зображення "
 "в межах 240⨯288 є прийнятним."
 
-#: keysmanager.cpp:958
-#, kde-format
+#: keysmanager.cpp:953
 msgid ""
 "<qt>Are you sure you want to delete Photo id <b>%1</b><br/>from key <b>%2 "
 "&lt;%3&gt;</b>?</qt>"
@@ -1849,48 +659,49 @@ msgstr ""
 "<qt>Ви впевнені, що хочете вилучити фото ідентифікацію <b>%1</b><br/>з ключа "
 "<b>%2 &lt;%3&gt;</b>?</qt>"
 
-#: keysmanager.cpp:1096
+#: keysmanager.cpp:1047
 msgid "Public Key"
 msgstr "Відкритий ключ"
 
-#: keysmanager.cpp:1099
+#: keysmanager.cpp:1050
 msgid "Sub Key"
 msgstr "Підключ"
 
-#: keysmanager.cpp:1102
+#: keysmanager.cpp:1053
 msgid "Secret Key Pair"
 msgstr "Секретна пара ключів"
 
-#: keysmanager.cpp:1105
+#: keysmanager.cpp:1056
 msgid "Key Group"
 msgstr "Група ключів"
 
+#. i18n: file: kgpgkeygenerate.ui:152
 #. i18n: ectx: property (text), widget (QCheckBox, capSign)
-#: keysmanager.cpp:1108 kgpgkeygenerate.ui:152
+#: keysmanager.cpp:1059 rc.cpp:150
 msgid "Signature"
 msgstr "Підпис"
 
-#: keysmanager.cpp:1111
+#: keysmanager.cpp:1062
 msgid "User ID"
 msgstr "ІД користувача"
 
-#: keysmanager.cpp:1114
+#: keysmanager.cpp:1065
 msgid "Revocation Signature"
 msgstr "Анулюючий підпис"
 
-#: keysmanager.cpp:1117
+#: keysmanager.cpp:1068
 msgid "Photo ID"
 msgstr "Фото-ІД"
 
-#: keysmanager.cpp:1120
+#: keysmanager.cpp:1071
 msgid "Orphaned Secret Key"
 msgstr "Осиротілий секретний ключ"
 
-#: keysmanager.cpp:1125
+#: keysmanager.cpp:1076
 msgid "Group member"
 msgstr "Член групи"
 
-#: keysmanager.cpp:1230
+#: keysmanager.cpp:1181
 msgid "&Sign User ID ..."
 msgid_plural "&Sign User IDs ..."
 msgstr[0] "&Підписати ІД користувача..."
@@ -1898,7 +709,7 @@ msgstr[1] "&Підписати ІД користувачів..."
 msgstr[2] "&Підписати ІД користувачів..."
 msgstr[3] "&Підписати ІД користувача..."
 
-#: keysmanager.cpp:1231
+#: keysmanager.cpp:1182
 msgid "Sign and &Mail User ID ..."
 msgid_plural "Sign and &Mail User IDs ..."
 msgstr[0] "Підписати і &надіслати ІД користувачів..."
@@ -1906,7 +717,7 @@ msgstr[1] "Підписати і &надіслати ІД користувачі
 msgstr[2] "Підписати і &надіслати ІД користувачів..."
 msgstr[3] "Підписати і &надіслати ІД користувача..."
 
-#: keysmanager.cpp:1232
+#: keysmanager.cpp:1183
 msgid "E&xport Public Key..."
 msgid_plural "E&xport Public Keys..."
 msgstr[0] "Е&кспортувати відкриті ключі..."
@@ -1914,7 +725,7 @@ msgstr[1] "Е&кспортувати відкриті ключі..."
 msgstr[2] "Е&кспортувати відкриті ключі..."
 msgstr[3] "Е&кспортувати відкритий ключ..."
 
-#: keysmanager.cpp:1233
+#: keysmanager.cpp:1184
 msgid "&Refresh Key From Keyserver"
 msgid_plural "&Refresh Keys From Keyserver"
 msgstr[0] "&Оновити ключі з сервера ключів"
@@ -1922,7 +733,7 @@ msgstr[1] "&Оновити ключі з сервера ключів"
 msgstr[2] "&Оновити ключі з сервера ключів"
 msgstr[3] "&Оновити ключ з сервера ключів"
 
-#: keysmanager.cpp:1234
+#: keysmanager.cpp:1185
 msgid "&Create Group with Selected Key..."
 msgid_plural "&Create Group with Selected Keys..."
 msgstr[0] "&Створити групу з вибраних ключів..."
@@ -1930,7 +741,7 @@ msgstr[1] "&Створити групу з вибраних ключів..."
 msgstr[2] "&Створити групу з вибраних ключів..."
 msgstr[3] "&Створити групу з вибраного ключа..."
 
-#: keysmanager.cpp:1235
+#: keysmanager.cpp:1186
 msgid "&Sign Key..."
 msgid_plural "&Sign Keys..."
 msgstr[0] "&Підписати ключі..."
@@ -1938,7 +749,7 @@ msgstr[1] "&Підписати ключі..."
 msgstr[2] "&Підписати ключі..."
 msgstr[3] "&Підписати ключ..."
 
-#: keysmanager.cpp:1236
+#: keysmanager.cpp:1187
 msgid "&Delete User ID"
 msgid_plural "&Delete User IDs"
 msgstr[0] "&Вилучити ІД користувачів"
@@ -1946,7 +757,7 @@ msgstr[1] "&Вилучити ІД користувачів"
 msgstr[2] "&Вилучити ІД користувачів"
 msgstr[3] "&Вилучити ІД користувача"
 
-#: keysmanager.cpp:1237
+#: keysmanager.cpp:1188
 msgid "Delete Sign&ature"
 msgid_plural "Delete Sign&atures"
 msgstr[0] "Вилучити підпи&си"
@@ -1954,7 +765,7 @@ msgstr[1] "Вилучити підпи&си"
 msgstr[2] "Вилучити підпи&си"
 msgstr[3] "Вилучити підпи&с"
 
-#: keysmanager.cpp:1239
+#: keysmanager.cpp:1190
 msgid "&Delete Key"
 msgid_plural "&Delete Keys"
 msgstr[0] "&Вилучити ключі"
@@ -1962,11 +773,11 @@ msgstr[1] "&Вилучити ключі"
 msgstr[2] "&Вилучити ключі"
 msgstr[3] "&Вилучити ключ"
 
-#: keysmanager.cpp:1362
+#: keysmanager.cpp:1313
 msgid "Creation of the revocation certificate failed..."
 msgstr "Створення сертифіката відкликання було невдалим..."
 
-#: keysmanager.cpp:1377
+#: keysmanager.cpp:1328
 msgid ""
 "<qt>Secret keys <b>should not</b> be saved in an unsafe place.<br/>If "
 "someone else can access this file, encryption with this key will be "
@@ -1976,16 +787,15 @@ msgstr ""
 ">Якщо хтось інший має доступ до цього файла, шифрування цим ключем буде "
 "скомпрометоване!<br/>Продовжити експортування ключа?</qt>"
 
-#: keysmanager.cpp:1389
+#: keysmanager.cpp:1340
 msgid "*.asc|*.asc Files"
 msgstr "*.asc|файли *.asc"
 
-#: keysmanager.cpp:1389
+#: keysmanager.cpp:1340
 msgid "Export PRIVATE KEY As"
 msgstr "Експортувати ЗАКРИТИЙ КЛЮЧ як"
 
-#: keysmanager.cpp:1407
-#, kde-format
+#: keysmanager.cpp:1358
 msgid ""
 "<qt>Your <b>private</b> key \"%1\" was successfully exported to<br/>%2.<br/"
 "><b>Do not</b> leave it in an insecure place.</qt>"
@@ -1993,7 +803,7 @@ msgstr ""
 "<qt>Ваш <b>закритий</b> ключ «%1» успішно експортовано до<br/>%2.<br/><b>Не</"
 "b> залишайте його в місці з недостатнім рівнем безпеки.</qt>"
 
-#: keysmanager.cpp:1410
+#: keysmanager.cpp:1361
 msgid ""
 "Your secret key could not be exported.\n"
 "Check the key."
@@ -2001,8 +811,7 @@ msgstr ""
 "Неможливо експортувати ваш закритий ключ.\n"
 "Перевірте ключ."
 
-#: keysmanager.cpp:1513
-#, kde-format
+#: keysmanager.cpp:1464
 msgid "<qt>The public key was successfully exported to<br/>%2</qt>"
 msgid_plural "<qt>The %1 public keys were successfully exported to<br/>%2</qt>"
 msgstr[0] "<qt>%1 відкритий ключ успішно експортовано до <br/>%2</qt>"
@@ -2010,7 +819,7 @@ msgstr[1] "<qt>%1 відкриті ключі успішно експортов�
 msgstr[2] "<qt>%1 відкритих ключів успішно експортовано до <br/>%2</qt>"
 msgstr[3] "<qt>Відкритий ключ успішно експортовано до <br/>%2</qt>"
 
-#: keysmanager.cpp:1517 keysmanager.cpp:1532 keysmanager.cpp:1546
+#: keysmanager.cpp:1468 keysmanager.cpp:1483 keysmanager.cpp:1497
 msgid ""
 "Your public key could not be exported\n"
 "Check the key."
@@ -2018,7 +827,7 @@ msgstr ""
 "Неможливо експортувати ваш відкритий ключ.\n"
 "Перевірте ключ."
 
-#: keysmanager.cpp:1566
+#: keysmanager.cpp:1517
 msgid ""
 "<qt>A viewer for JPEG images is not specified.<br/>Please check your "
 "installation.</qt>"
@@ -2026,11 +835,11 @@ msgstr ""
 "<qt>Не вказано переглядач зображень JPEG.<br/>Будь ласка, перевірте чи "
 "встановлено всі належні компоненти.</qt>"
 
-#: keysmanager.cpp:1567
+#: keysmanager.cpp:1518
 msgid "Show photo"
 msgstr "Показати фото"
 
-#: keysmanager.cpp:1664
+#: keysmanager.cpp:1615
 msgid ""
 "<p>This key is an orphaned secret key (secret key without public key.) It is "
 "currently not usable.</p><p>Would you like to regenerate the public key?</p>"
@@ -2039,24 +848,23 @@ msgstr ""
 "він непридатний для використання.</p><p>Хочете відновити (створити) "
 "відкритий ключ?</p>"
 
-#: keysmanager.cpp:1666
+#: keysmanager.cpp:1617
 msgid "Generate"
 msgstr "Створити"
 
-#: keysmanager.cpp:1666
+#: keysmanager.cpp:1617
 msgid "Do Not Generate"
 msgstr "Не створювати"
 
-#: keysmanager.cpp:1696
-#, kde-format
+#: keysmanager.cpp:1647
 msgid "<qt>Are you sure you want to delete group <b>%1</b> ?</qt>"
 msgstr "<qt>Ви впевнені, що хочете витерти групу <b>%1</b> ?</qt>"
 
-#: keysmanager.cpp:1697 keysmanager.cpp:2369
+#: keysmanager.cpp:1648 keysmanager.cpp:2320
 msgid "Delete"
 msgstr "Вилучити"
 
-#: keysmanager.cpp:1727
+#: keysmanager.cpp:1678
 msgid ""
 "<qt>You cannot create a group containing signatures, subkeys or other groups."
 "</qt>"
@@ -2064,30 +872,28 @@ msgstr ""
 "<qt>Ви не можете створити групу з підписами, підключами або іншими групами.</"
 "qt>"
 
-#: keysmanager.cpp:1742 kgpgrevokewidget.cpp:46
-#, kde-format
+#: keysmanager.cpp:1693 kgpgrevokewidget.cpp:46
 msgctxt "<Name> (<Email>) ID: <KeyId>"
 msgid "%1 (%2) ID: %3"
 msgstr "%1 (%2) ІД: %3"
 
-#: keysmanager.cpp:1747
+#: keysmanager.cpp:1698
 msgid "Create New Group"
 msgstr "Створити нову групу"
 
-#: keysmanager.cpp:1748
+#: keysmanager.cpp:1699
 msgctxt "Enter the name of the group you are creating now"
 msgid "Enter new group name:"
 msgstr "Введіть назву нової групи:"
 
-#: keysmanager.cpp:1754
+#: keysmanager.cpp:1705
 msgid ""
 "Following keys are not valid or not trusted and will not be added to the "
 "group:"
 msgstr ""
 "Наступні ключ(і) не дійсні або не мають довіри і до групи додані не будуть:"
 
-#: keysmanager.cpp:1760
-#, kde-format
+#: keysmanager.cpp:1711
 msgid ""
 "<qt>No valid or trusted key was selected. The group <b>%1</b> will not be "
 "created.</qt>"
@@ -2095,17 +901,16 @@ msgstr ""
 "<qt>Не вибрано дійсного або з довірою ключа. Групу <b>%1</b> не буде "
 "створено.</qt>"
 
-#: keysmanager.cpp:1772
+#: keysmanager.cpp:1723
 msgid "Group Properties"
 msgstr "Властивості групи"
 
-#: keysmanager.cpp:1803
+#: keysmanager.cpp:1754
 msgid "You can only sign primary keys. Please check your selection."
 msgstr ""
 "Підписувати можна тільки основні ключі. Будь ласка, перевірте ваш вибір."
 
-#: keysmanager.cpp:1812
-#, kde-format
+#: keysmanager.cpp:1763
 msgid ""
 "<qt>You are about to sign key:<br /><br />%1<br />ID: %2<br />Fingerprint: "
 "<br /><b>%3</b>.<br /><br />You should check the key fingerprint by phoning "
@@ -2117,8 +922,7 @@ msgstr ""
 "зустрітись з власником ключа, щоб бути переконаним, що ніхто не намагається "
 "перехопити ваш обмін інформацією.</qt>"
 
-#: keysmanager.cpp:1817
-#, kde-format
+#: keysmanager.cpp:1768
 msgid ""
 "<qt>You are about to sign key:<br /><br />%1 (%2)<br />ID: %3<br /"
 ">Fingerprint: <br /><b>%4</b>.<br /><br />You should check the key "
@@ -2130,20 +934,18 @@ msgstr ""
 "подзвонити або зустрітись з власником ключа, щоб переконатися, що ніхто не "
 "намагається перехопити ваш обмін інформацією.</qt>"
 
-#: keysmanager.cpp:1832 keysmanager.cpp:1916 kgpgfirstassistant.cpp:284
+#: keysmanager.cpp:1783 keysmanager.cpp:1867 kgpgfirstassistant.cpp:284
 #: model/keylistproxymodel.cpp:196
-#, kde-format
 msgctxt "Name: ID"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: keysmanager.cpp:1834 keysmanager.cpp:1919 kgpgfirstassistant.cpp:286
-#, kde-format
+#: keysmanager.cpp:1785 keysmanager.cpp:1870 kgpgfirstassistant.cpp:286
 msgctxt "Name (Email): ID"
 msgid "%1 (%2): %3"
 msgstr "%1 (%2): %3"
 
-#: keysmanager.cpp:1840
+#: keysmanager.cpp:1791
 msgid ""
 "<qt>You are about to sign the following keys in one pass.<br/><b>If you have "
 "not carefully checked all fingerprints, the security of your communications "
@@ -2153,14 +955,13 @@ msgstr ""
 "були ретельними під час перевірки всіх відбитків, безпеку вашого зв'язку не "
 "можна гарантувати!</b></qt>"
 
-#: keysmanager.cpp:1882 keysmanager.cpp:2030
+#: keysmanager.cpp:1833 keysmanager.cpp:1981
 msgid "You can only sign user ids and photo ids. Please check your selection."
 msgstr ""
 "Ви можете підписувати тільки ідентифікатори користувача та фото-"
 "ідентифікатори. Будь ласка, перевірте ваш вибір."
 
-#: keysmanager.cpp:1896
-#, kde-format
+#: keysmanager.cpp:1847
 msgid ""
 "<qt>You are about to sign user id:<br /><br />%1<br />ID: %2<br /"
 ">Fingerprint: <br /><b>%3</b>.<br /><br />You should check the key "
@@ -2172,8 +973,7 @@ msgstr ""
 "подзвонити або зустрітись з власником ключа, щоб переконатися, що ніхто не "
 "намагається перехопити ваш обмін інформацією.</qt>"
 
-#: keysmanager.cpp:1900
-#, kde-format
+#: keysmanager.cpp:1851
 msgid ""
 "<qt>You are about to sign user id:<br /><br />%1 (%2)<br />ID: %3<br /"
 ">Fingerprint: <br /><b>%4</b>.<br /><br />You should check the key "
@@ -2185,7 +985,7 @@ msgstr ""
 "подзвонити або зустрітись з власником ключа, щоб переконатися, що ніхто не "
 "намагається перехопити ваш обмін інформацією.</qt>"
 
-#: keysmanager.cpp:1926
+#: keysmanager.cpp:1877
 msgid ""
 "<qt>You are about to sign the following user ids in one pass.<br/><b>If you "
 "have not carefully checked all fingerprints, the security of your "
@@ -2195,18 +995,15 @@ msgstr ""
 "><b>Якщо ви не були ретельними під час перевірки всіх відбитків, безпеку "
 "вашого зв'язку не можна гарантувати!</b></qt>"
 
-#: keysmanager.cpp:1997
-#, kde-format
+#: keysmanager.cpp:1948
 msgid "<qt>Bad passphrase, key <b>%1 (%2)</b> not signed.</qt>"
 msgstr "<qt>Не правильна фраза пароля, ключ <b>%1 (%2)</b> не підписаний.</qt>"
 
-#: keysmanager.cpp:2001
-#, kde-format
+#: keysmanager.cpp:1952
 msgid "<qt>The key <b>%1 (%2)</b> is already signed.</qt>"
 msgstr "<qt>Ключ <b>%1 (%2)</b> вже підписаний.</qt>"
 
-#: keysmanager.cpp:2006
-#, kde-format
+#: keysmanager.cpp:1957
 msgid ""
 "<qt>Signing key <b>%1</b> with key <b>%2</b> failed.<br />Do you want to try "
 "signing the key in console mode?</qt>"
@@ -2214,7 +1011,7 @@ msgstr ""
 "<qt>Підписування ключа <b>%1</b> ключем <b>%2</b> було невдалим.<br /> "
 "Хочете спробувати підписати ключ в режимі консолі?</qt>"
 
-#: keysmanager.cpp:2123
+#: keysmanager.cpp:2074
 msgid "All signatures for this key are already in your keyring"
 msgid_plural "All signatures for this keys are already in your keyring"
 msgstr[0] "Всі підписи для цих ключів вже зберігаються у сховищі"
@@ -2222,12 +1019,11 @@ msgstr[1] "Всі підписи для цих ключів вже зберіг�
 msgstr[2] "Всі підписи для цих ключів вже зберігаються у сховищі"
 msgstr[3] "Всі підписи для цього ключа вже зберігаються у сховищі"
 
-#: keysmanager.cpp:2218
+#: keysmanager.cpp:2169
 msgid "Edit key manually to delete a self-signature."
 msgstr "Відредагуйте ключ вручну, щоб вилучити автопідпис."
 
-#: keysmanager.cpp:2222
-#, kde-format
+#: keysmanager.cpp:2173
 msgid ""
 "<qt>Are you sure you want to delete signature<br /><b>%1</b><br />from user "
 "id <b>%2</b><br />of key: <b>%3</b>?</qt>"
@@ -2235,11 +1031,11 @@ msgstr ""
 "<qt>Ви впевнені, що хочете вилучити підписи<br /><b>%1</b><br />з ІД "
 "користувача <b>%2</b><br />ключа: <b>%3</b>?</qt>"
 
-#: keysmanager.cpp:2244
+#: keysmanager.cpp:2195
 msgid "Requested operation was unsuccessful, please edit the key manually."
 msgstr "Викликана дія не була успішна, будь ласка, відредагуйте ключ вручну."
 
-#: keysmanager.cpp:2326
+#: keysmanager.cpp:2277
 msgid ""
 "<qt>The key you are deleting is a member of the following key group. Do you "
 "want to remove it from this group?</qt>"
@@ -2259,14 +1055,13 @@ msgstr[3] ""
 "<qt>Ключ, який ви вилучаєте, належить до наведеної нижче групи ключів. Ви "
 "бажаєте вилучити його з цієї групи?</qt>"
 
-#: keysmanager.cpp:2330 keysmanager.cpp:2343 keysmanager.cpp:2378
-#: keysmanager.cpp:2393 keysmanager.cpp:2396 keysmanager.cpp:2407
-#: keysmanager.cpp:2421 keysmanager.cpp:2469
+#: keysmanager.cpp:2281 keysmanager.cpp:2294 keysmanager.cpp:2329
+#: keysmanager.cpp:2344 keysmanager.cpp:2347 keysmanager.cpp:2358
+#: keysmanager.cpp:2372 keysmanager.cpp:2420
 msgid "Delete key"
 msgstr "Вилучити ключ"
 
-#: keysmanager.cpp:2342
-#, kde-format
+#: keysmanager.cpp:2293
 msgid ""
 "You are removing the last key from key group %1.<br/>Do you want to delete "
 "the group, too?"
@@ -2274,8 +1069,7 @@ msgstr ""
 "Ви маєте намір вилучити останній ключ з групи ключів %1.<br/>Хочете вилучити "
 "і саму групу?"
 
-#: keysmanager.cpp:2366
-#, kde-format
+#: keysmanager.cpp:2317
 msgid ""
 "<p>Delete <b>secret</b> key pair <b>%1</b>?</p>Deleting this key pair means "
 "you will never be able to decrypt files encrypted with this key again."
@@ -2284,7 +1078,7 @@ msgstr ""
 "ключів буде означати, що ви вже ніколи не зможете розшифрувати файли "
 "зашифровані цим ключем."
 
-#: keysmanager.cpp:2377 keysmanager.cpp:2406
+#: keysmanager.cpp:2328 keysmanager.cpp:2357
 msgid ""
 "Another key delete operation is still in progress.\n"
 "Please wait a moment until this operation is complete."
@@ -2292,24 +1086,21 @@ msgstr ""
 "Зараз виконується дія з вилучення іншого ключа.\n"
 "Будь ласка, зачекайте на завершення цієї дії."
 
-#: keysmanager.cpp:2393
-#, kde-format
+#: keysmanager.cpp:2344
 msgid "Key <b>%1</b> deleted."
 msgstr "Ключ <b>%1</b> вилучено."
 
-#: keysmanager.cpp:2396
-#, kde-format
+#: keysmanager.cpp:2347
 msgid "Deleting key <b>%1</b> failed."
 msgstr "Спроба вилучення ключа <b>%1</b> завершилася невдало."
 
-#: keysmanager.cpp:2420
-#, kde-format
+#: keysmanager.cpp:2371
 msgid "Can not delete key <b>%1</b> while it is edited in terminal."
 msgstr ""
 "Не можна вилучити ключ <b>%1</b>, оскільки його у цей час редагують у "
 "терміналі."
 
-#: keysmanager.cpp:2468
+#: keysmanager.cpp:2419
 msgid ""
 "You have selected items that are not keys. They can not be deleted with this "
 "menu entry."
@@ -2317,8 +1108,7 @@ msgstr ""
 "Ви вибрали елементи, що не є ключами. Їх не можна вилучити за допомогою "
 "цього пункту меню."
 
-#: keysmanager.cpp:2493
-#, kde-format
+#: keysmanager.cpp:2444
 msgid ""
 "<qt>The following are secret key pairs:<br/><b>%1</b><br/>They will not be "
 "deleted.</qt>"
@@ -2326,8 +1116,7 @@ msgstr ""
 "<qt>Нижче наведено пари закритих ключів:<br/><b>%1</b><br/>Їх не буде "
 "вилучено.</qt>"
 
-#: keysmanager.cpp:2503
-#, kde-format
+#: keysmanager.cpp:2454
 msgid "<qt><b>Delete the following public key?</b></qt>"
 msgid_plural "<qt><b>Delete the following %1 public keys?</b></qt>"
 msgstr[0] "<qt><b>Вилучити наступний %1 відкритий ключ?</b></qt>"
@@ -2335,15 +1124,15 @@ msgstr[1] "<qt><b>Вилучити наступні %1 відкриті ключ
 msgstr[2] "<qt><b>Вилучити наступних %1 відкритих ключів?</b></qt>"
 msgstr[3] "<qt><b>Вилучити вказаний відкритий ключ?</b></qt>"
 
-#: keysmanager.cpp:2534 keysmanager.cpp:2605 keysmanager.cpp:2616
+#: keysmanager.cpp:2485 keysmanager.cpp:2556 keysmanager.cpp:2567
 msgid "Key Import"
 msgstr "Імпорт ключів"
 
-#: keysmanager.cpp:2541
+#: keysmanager.cpp:2492
 msgid "Open File"
 msgstr "Відкрити файл"
 
-#: keysmanager.cpp:2570
+#: keysmanager.cpp:2521
 msgid ""
 "<qt>The text in the clipboard does not look like a key, but like encrypted "
 "text.<br />Do you want to decrypt it first and then try importing it?</qt>"
@@ -2352,67 +1141,61 @@ msgstr ""
 "текстом.<br />Бажаєте спершу його розшифрувати, а потім спробувати "
 "імпортувати?</qt>"
 
-#: keysmanager.cpp:2572
+#: keysmanager.cpp:2523
 msgid "Import from Clipboard"
 msgstr "Імпорт з буфера обміну"
 
-#: keysmanager.cpp:2592
+#: keysmanager.cpp:2543
 msgid "Importing..."
 msgstr "Імпортується..."
 
-#: keysmanager.cpp:2604
+#: keysmanager.cpp:2555
 msgid "Key importing failed. Please see the detailed log for more information."
 msgstr ""
 "Спроба імпортування ключа завершилася невдало. Будь ласка, зверніться до "
 "журналу, щоб отримати докладніші відомості."
 
-#: keysmanager.cpp:2669
+#: keysmanager.cpp:2620
 msgid "KGpg - encryption tool"
 msgstr "KGpg — інструмент шифрування"
 
-#: keysmanager.cpp:2690
+#: keysmanager.cpp:2641
 msgid "Ke&y Manager"
 msgstr "Кер&ування ключами"
 
-#: keysmanager.cpp:2693
+#: keysmanager.cpp:2644
 msgid "&Encrypt Clipboard"
 msgstr "&Зашифрувати кишеню"
 
-#: keysmanager.cpp:2696
+#: keysmanager.cpp:2647
 msgid "&Decrypt Clipboard"
 msgstr "&Розшифрувати кишеню"
 
-#: keysmanager.cpp:2699
+#: keysmanager.cpp:2650
 msgid "&Sign/Verify Clipboard"
 msgstr "&Підписати/перевірити кишеню"
 
-#: keysmanager.cpp:2736 keysmanager.cpp:2831 keysmanager.cpp:2849
+#: keysmanager.cpp:2687 keysmanager.cpp:2782 keysmanager.cpp:2800
 msgid "Clipboard is empty."
 msgstr "Кишеня порожня."
 
-#: keysmanager.cpp:2781
+#: keysmanager.cpp:2732
 msgid "Text successfully encrypted."
 msgstr "Текст успішно зашифровано."
 
-#. i18n: ectx: Menu (managekeys)
-#: keysmanager.rc:6
-msgid "&Keys"
-msgstr "&Ключі"
-
-#. i18n: ectx: Menu (show_details)
-#: keysmanager.rc:30
-msgid "&Show Details"
-msgstr "&Показувати подробиці"
-
-#. i18n: ectx: Menu (groups)
-#: keysmanager.rc:42
-msgid "&Groups"
-msgstr "&Групи"
-
 #: keytreeview.cpp:166
-#, kde-format
 msgid "<p>Do you want to import file <b>%1</b> into your key ring?</p>"
 msgstr "<p>Чи ви хочете імпортувати файл <b>%1</b> у вашу в'язку ключів?</p>"
+
+#. i18n: file: keyserver.ui:32
+#. i18n: ectx: attribute (title), widget (QWidget, tab_import)
+#: keytreeview.cpp:167 rc.cpp:3 editor/kgpgeditor.cpp:704
+msgid "Import"
+msgstr "Імпортувати"
+
+#: keytreeview.cpp:168 editor/kgpgeditor.cpp:704
+msgid "Do Not Import"
+msgstr "Не імпортувати"
 
 #: kgpg.cpp:76
 msgid ""
@@ -2427,7 +1210,6 @@ msgid "GnuPG error"
 msgstr "Помилка GnuPG"
 
 #: kgpg.cpp:90
-#, kde-format
 msgid ""
 "<qt>The use of <b>GnuPG Agent</b> is enabled in GnuPG's configuration file "
 "(%1).<br />However, the agent does not seem to be running. This could result "
@@ -2465,300 +1247,6 @@ msgstr ""
 "Будь ласка, виберіть тільки одну теку або декілька файлів, але не змішуйте "
 "файли і теки."
 
-#: kgpg.h:32
-msgid ""
-"Hi,\n"
-"\n"
-"please find attached the user id '%UIDNAME%' of your key %KEYID% signed by "
-"me. This mail is encrypted with that key to make sure you control both the "
-"email address and the key.\n"
-"\n"
-"If you have multiple user ids, I sent the signature for each user id "
-"separately to that user id's associated email address. You can import the "
-"signatures by running each through `gpg --import` after you have decrypted "
-"them with `gpg --decrypt`.\n"
-"\n"
-"If you are using KGpg store the attachment to disk and then import it. Just "
-"select `Import Key...` from `Keys` menu and open the file.\n"
-"\n"
-"Note that I did not upload your key to any keyservers. If you want this new "
-"signature to be available to others, please upload it yourself. With GnuPG "
-"this can be done using gpg --keyserver subkeys.pgp.net --send-key %KEYID%.\n"
-"\n"
-"With KGpg you can right click on the key once you imported all user ids and "
-"choose `Export Public Key...`.\n"
-"\n"
-"If you have any questions, don't hesitate to ask.\n"
-msgstr ""
-"Доброго дня,\n"
-"\n"
-"До цього листа долучено ідентифікатор користувача «%UIDNAME%» вашого ключа "
-"%KEYID%, підписаний мною. Це повідомлення зашифровано відповідним ключем, "
-"щоб переконатися, що ви контролюєте адресу електронної пошти і ключ.\n"
-"\n"
-"Якщо у вас декілька ідентифікаторів користувача, мною надіслано підписи для "
-"кожного з ідентифікаторів окремо на кожну з пов’язаних з ним адрес "
-"електронної пошти. Ви можете імпортувати всі ці підписи за допомогою команди "
-"«gpg --import» після розшифрування за допомогою команди «gpg --"
-"decrypt» (команди слід виконати окремо для кожного з підписів).\n"
-"\n"
-"Якщо ви користуєтеся KGpg, збережіть долучення до повідомлення на диску, а "
-"потім імпортуйте його. Для цього достатньо вибрати пункт «Імпортувати "
-"ключ...» з меню «Ключі», а потім вказати збережений файл.\n"
-"\n"
-"Зауважте, що мною не було вивантажено ваш ключ на жоден з серверів ключів. "
-"Якщо ви хочете скористатися новим підписом для спілкування з іншими "
-"користувачами, будь ласка, виконайте вивантаження самостійно. Якщо ви "
-"користуєтеся GnuPG, вивантаження можна виконати за допомогою такої команди: "
-"gpg --keyserver subkeys.pgp.net --send-key %KEYID%.\n"
-"\n"
-"У KGpg для вивантаження достатньо навести вказівник миші на пункт ключа "
-"після імпортування всіх ідентифікаторів користувача, клацнути правою кнопкою "
-"і вибрати у контекстному меню пункт «Експортувати відкритий ключ...».\n"
-"\n"
-"Якщо у вас виникли якісь питання, не вагайтеся їх поставити.\n"
-
-#. i18n: ectx: label, entry (CustomDecrypt), group (Decryption)
-#: kgpg.kcfg:13
-msgid "Custom decryption command."
-msgstr "Нестандартна команда розшифрування."
-
-#. i18n: ectx: label, entry (CustomEncryptionOptions), group (Encryption)
-#: kgpg.kcfg:19
-msgid "Custom encryption options"
-msgstr "Нетипові параметри шифрування"
-
-#. i18n: ectx: label, entry (AllowCustomEncryptionOptions), group (Encryption)
-#: kgpg.kcfg:22
-msgid "Allow custom encryption options"
-msgstr "Дозволити нетипові параметри шифрування"
-
-#. i18n: ectx: label, entry (FileEncryptionKey), group (Encryption)
-#: kgpg.kcfg:26
-msgid "File encryption key."
-msgstr "Ключ шифрування файла."
-
-#. i18n: ectx: label, entry (EncryptFilesTo), group (Encryption)
-#: kgpg.kcfg:29
-msgid "Encrypt files"
-msgstr "Зашифровувати файли"
-
-#. i18n: ectx: label, entry (AsciiArmor), group (Encryption)
-#: kgpg.kcfg:33
-msgid "Use ASCII armored encryption."
-msgstr "Використовувати броньоване шифрування ASCII."
-
-#. i18n: ectx: label, entry (AllowUntrustedKeys), group (Encryption)
-#: kgpg.kcfg:37
-msgid "Allow encryption with untrusted keys."
-msgstr "Дозволити шифрування ключами без довіри."
-
-#. i18n: ectx: label, entry (AllowUntrustedGroupMembers), group (Encryption)
-#: kgpg.kcfg:41
-msgid "Allow untrusted keys to become members of key groups."
-msgstr "Дозволити ненадійним ключам бути елементами груп ключів."
-
-#. i18n: ectx: label, entry (HideUserID), group (Encryption)
-#: kgpg.kcfg:45
-msgid "Hide the user ID."
-msgstr "Ховати ІД користувача."
-
-#. i18n: ectx: label, entry (PgpCompatibility), group (Encryption)
-#: kgpg.kcfg:49
-msgid "Enable PGP 6 compatibility."
-msgstr "Уможливити сумісність з PGP 6."
-
-#. i18n: ectx: label, entry (PgpExtension), group (Encryption)
-#: kgpg.kcfg:53
-msgid "Use *.pgp extension for encrypted files."
-msgstr "Використовувати суфікс *.pgp для зашифрованих файлів."
-
-#. i18n: ectx: label, entry (GpgConfigPath), group (GPG Settings)
-#: kgpg.kcfg:60
-msgid "The path of the gpg configuration file."
-msgstr "Шлях до файла налаштування gpg."
-
-#. i18n: ectx: label, entry (GpgBinaryPath), group (GPG Settings)
-#: kgpg.kcfg:63
-msgid "The path of the gpg binary used by KGpg."
-msgstr "Шлях до двійкового файла програми gpg, який використовуватиме KGpg."
-
-#. i18n: ectx: label, entry (FirstRun), group (General Options)
-#: kgpg.kcfg:79
-msgid "Is the first time the application runs."
-msgstr "Перший запуск програми."
-
-#. i18n: ectx: label, entry (EditorGeometry), group (General Options)
-#: kgpg.kcfg:83
-msgid "The size of the editor window."
-msgstr "Розмір вікна редактора."
-
-#. i18n: ectx: label, entry (ShowTrust), group (General Options)
-#: kgpg.kcfg:86
-msgid "Show the trust value in key manager."
-msgstr "Показувати довіру у керуванні ключами."
-
-#. i18n: ectx: label, entry (ShowExpi), group (General Options)
-#: kgpg.kcfg:90
-msgid "Show the expiration value in key manager."
-msgstr "Показувати строк дії ключа у керуванні ключами."
-
-#. i18n: ectx: label, entry (ShowSize), group (General Options)
-#: kgpg.kcfg:94
-msgid "Show the size value in key manager."
-msgstr "Показувати розмір в керуванні ключами."
-
-#. i18n: ectx: label, entry (ShowCreat), group (General Options)
-#: kgpg.kcfg:98
-msgid "Show the creation value in key manager."
-msgstr "Показувати коли створено в керуванні ключами."
-
-#. i18n: ectx: label, entry (ShowSecret), group (General Options)
-#: kgpg.kcfg:102
-msgid "Show only secret keys in key manager."
-msgstr "Показувати лише ключі з керування ключами."
-
-#. i18n: ectx: label, entry (ShowLongKeyId), group (General Options)
-#: kgpg.kcfg:106
-msgid "Show long key id in key manager."
-msgstr "Показувати довгий ІД ключа у керуванні ключами."
-
-#. i18n: ectx: label, entry (TrustLevel), group (General Options)
-#: kgpg.kcfg:110
-msgid "Show only keys with at least that trust level in key manager."
-msgstr ""
-"Показувати у керуванні ключами лише ключі з вказаним мінімальним рівнем "
-"довіри."
-
-#. i18n: ectx: label, entry (UseMouseSelection), group (User Interface)
-#: kgpg.kcfg:124
-msgid "Use the mouse selection instead of the clipboard."
-msgstr "Замість кишені, використовувати вибране мишкою."
-
-#. i18n: ectx: label, entry (AutoStart), group (User Interface)
-#: kgpg.kcfg:128 kgpgfirstassistant.cpp:232
-msgid "Start KGpg automatically at KDE startup."
-msgstr "Запускати KGpg автоматично при вході в KDE."
-
-#. i18n: ectx: label, entry (RemoteFileWarn), group (User Interface)
-#: kgpg.kcfg:132
-msgid ""
-"Display a warning before creating temporary files during remote file "
-"operations."
-msgstr ""
-"Показувати попередження перед створенням тимчасових файлів при роботі з "
-"віддаленими файлами."
-
-#. i18n: ectx: label, entry (LeftClick), group (User Interface)
-#: kgpg.kcfg:136
-msgid "Choose default left-click behavior"
-msgstr "Виберіть типову поведінку при клацанні лівої кнопки мишки"
-
-#. i18n: ectx: label, entry (EncryptedDropEvent), group (User Interface)
-#: kgpg.kcfg:143
-msgid "Handle encrypted drops"
-msgstr "Працювати з зашифрованим вкинутим"
-
-#. i18n: ectx: label, entry (UnencryptedDropEvent), group (User Interface)
-#: kgpg.kcfg:151
-msgid "Handle unencrypted drops"
-msgstr "Працювати з незашифрованим вкинутим"
-
-#. i18n: ectx: label, entry (SignMenu), group (User Interface)
-#: kgpg.kcfg:159
-msgid "Show the \"sign file\" service menu."
-msgstr "Показувати сервісне меню «підписати файл»."
-
-#. i18n: ectx: label, entry (DecryptMenu), group (User Interface)
-#: kgpg.kcfg:167
-msgid "Show the \"decrypt file\" service menu."
-msgstr "Показувати сервісне меню «розшифрувати файл»."
-
-#. i18n: ectx: label, entry (ShowSystray), group (User Interface)
-#: kgpg.kcfg:176
-msgid "Show the systray icon"
-msgstr "Показувати піктограму в системному лотку"
-
-#. i18n: ectx: label, entry (RecentFiles), group (User Interface)
-#: kgpg.kcfg:180
-msgid "The number of recently opened files shown in the editor menu."
-msgstr "Кількість нещодавно відкрити файлів, показаних у меню."
-
-#. i18n: ectx: label, entry (ShowTipOfDay), group (TipOfDay)
-#: kgpg.kcfg:187
-msgid "Show tip of the day."
-msgstr "Показувати пораду дня."
-
-#. i18n: ectx: label, entry (ColorGood), group (Key Colors)
-#: kgpg.kcfg:194
-msgid "Color used for trusted keys."
-msgstr "Колір для ключів з довірою."
-
-#. i18n: ectx: label, entry (ColorRev), group (Key Colors)
-#: kgpg.kcfg:198
-msgid "Color used for revoked keys."
-msgstr "Колір для анульованих ключів."
-
-#. i18n: ectx: label, entry (ColorUnknown), group (Key Colors)
-#: kgpg.kcfg:202
-msgid "Color used for unknown keys."
-msgstr "Колір для невідомих ключів."
-
-#. i18n: ectx: label, entry (ColorBad), group (Key Colors)
-#: kgpg.kcfg:206
-msgid "Color used for untrusted keys."
-msgstr "Колір для ключів без довіри."
-
-#. i18n: ectx: label, entry (ColorUltimate), group (Key Colors)
-#: kgpg.kcfg:210
-msgid "Color used for ultimately trusted keys."
-msgstr "Колір для ключів з безмежною довірою."
-
-#. i18n: ectx: label, entry (ColorMarginal), group (Key Colors)
-#: kgpg.kcfg:214
-msgid "Color used for marginally trusted keys."
-msgstr "Колір для ключів з не повною довірою."
-
-#. i18n: ectx: label, entry (ColorExpired), group (Key Colors)
-#: kgpg.kcfg:218
-msgid "Color used for expired keys."
-msgstr "Колір для застарілих ключів."
-
-#. i18n: ectx: label, entry (Font), group (Text Font)
-#: kgpg.kcfg:225
-msgid "Font"
-msgstr "Шрифт"
-
-#. i18n: ectx: label, entry (KeyServers), group (Servers)
-#: kgpg.kcfg:248
-msgid ""
-"Key servers used by KGpg. The first server in the list is the default server."
-msgstr ""
-"Сервери ключів, якими користуватиметься KGpg. Першим у списку буде типовий "
-"сервер."
-
-#. i18n: ectx: label, entry (InfoServers), group (Servers)
-#: kgpg.kcfg:252
-msgid ""
-"List of URLs that show details and analysis of the given key. The first "
-"server in the list is the default server."
-msgstr ""
-"Список адрес з подробицями та аналізом щодо вказаного ключа. Першим у списку "
-"буде типовий сервер."
-
-#. i18n: ectx: label, entry (UseProxy), group (Key Servers)
-#: kgpg.kcfg:259
-msgid "Use HTTP proxy when available."
-msgstr "При наявності використовувати HTTP проксі."
-
-#. i18n: ectx: label, entry (EmailTemplate), group (Key Signing)
-#: kgpg.kcfg:266
-msgid ""
-"This is the text of the email sent by the \"Sign and Mail User ID\" action."
-msgstr ""
-"Це текст повідомлення, яке буде надіслано у відповідь на виконання дії "
-"«Підписати і надіслати ідентифікатор користувача»."
-
 #: kgpgexternalactions.cpp:134
 msgid "Cannot create temporary file for folder compression."
 msgstr "Не вдалося створити тимчасовий файл для стискання теки."
@@ -2768,7 +1256,6 @@ msgid "Temporary File Creation"
 msgstr "Тимчасове створення файла"
 
 #: kgpgexternalactions.cpp:139
-#, kde-format
 msgid ""
 "<qt>KGpg will now create a temporary archive file:<br /><b>%1</b> to process "
 "the encryption. The file will be deleted after the encryption is finished.</"
@@ -2781,6 +1268,17 @@ msgstr ""
 msgid "Compression method for archive:"
 msgstr "Метод стиснення архіву:"
 
+#: kgpgexternalactions.cpp:208 kgpgexternalactions.cpp:371
+#: editor/kgpgeditor.cpp:523 transactions/kgpgtransaction.cpp:189
+msgid "File Already Exists"
+msgstr "Файл вже існує"
+
+#: kgpgexternalactions.cpp:288 editor/kgpgeditor.cpp:735
+#: editor/kgpgtextedit.cpp:320
+msgctxt "Caption of message box"
+msgid "Verification Finished"
+msgstr "Перевірку завершено"
+
 #: kgpgexternalactions.cpp:406
 msgid "Decryption of this file failed:"
 msgid_plural "Decryption of these files failed:"
@@ -2788,6 +1286,10 @@ msgstr[0] "Спроба розшифрувати ці файли зазнала 
 msgstr[1] "Спроба розшифрувати ці файли зазнала невдачі:"
 msgstr[2] "Спроба розшифрувати ці файли зазнала невдачі:"
 msgstr[3] "Спроба розшифрувати цей файл зазнала невдачі:"
+
+#: kgpgexternalactions.cpp:408 editor/kgpgtextedit.cpp:257
+msgid "Decryption failed."
+msgstr "Помилка розшифрування."
 
 #: kgpgexternalactions.cpp:434
 msgid ""
@@ -2848,6 +1350,12 @@ msgstr ""
 "gpg|Файл програми GnuPG\n"
 "*|Всі файли"
 
+#. i18n: file: conf_gpg.ui:108
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: kgpgfirstassistant.cpp:123 rc.cpp:614
+msgid "GnuPG Binary"
+msgstr "Двійковий GnuPG"
+
 #: kgpgfirstassistant.cpp:141
 msgid "KGpg needs to know where your GnuPG configuration file is stored."
 msgstr "KGpg необхідно знати, де зберігається файл налаштування GnuPG."
@@ -2871,6 +1379,12 @@ msgstr "Типовий ключ"
 #: kgpgfirstassistant.cpp:222
 msgid "Generate new key"
 msgstr "Створити новий ключ"
+
+#. i18n: file: kgpg.kcfg:128
+#. i18n: ectx: label, entry (AutoStart), group (User Interface)
+#: kgpgfirstassistant.cpp:232 rc.cpp:268
+msgid "Start KGpg automatically at KDE startup."
+msgstr "Запускати KGpg автоматично при вході в KDE."
 
 #: kgpgfirstassistant.cpp:236
 msgid "Done"
@@ -2897,22 +1411,18 @@ msgid "<qt><b>The GnuPG configuration file was not found</b>.</qt>"
 msgstr "<qt><b>Не вдалося знайти файл налаштувань GnuPG</b>.</qt>"
 
 #: kgpgfirstassistant.cpp:298
-#, kde-format
 msgid "Your GnuPG binary is: %1"
 msgstr "Ваш виконуваний файл GnuPG: %1"
 
 #: kgpgfirstassistant.cpp:314 kgpgfirstassistant.cpp:370
-#, kde-format
 msgid "You have GnuPG version: %1"
 msgstr "У вас встановлено версію GnuPG: %1"
 
 #: kgpgfirstassistant.cpp:317
-#, kde-format
 msgid "Your default key is: %1"
 msgstr "Ваш типовий ключ: %1"
 
 #: kgpgfirstassistant.cpp:368
-#, kde-format
 msgid ""
 "Your GnuPG version (%1) seems to be too old.<br />Compatibility with "
 "versions before 1.4.0 is no longer guaranteed."
@@ -2992,181 +1502,37 @@ msgstr "Ви збираєтесь створити ключ без адреси 
 msgid "Email address not valid"
 msgstr "Неправильна адреса електронної пошти"
 
-#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyGenerate)
-#: kgpgkeygenerate.ui:14
-msgid "Key Generation"
-msgstr "Створення ключа"
+#. i18n: file: conf_ui2.ui:253
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#: kgpgoptions.cpp:101 rc.cpp:94
+msgid "Left to right, account first"
+msgstr "Зліва праворуч, спочатку обліковий запис"
 
-#. i18n: ectx: property (title), widget (QGroupBox, vgroup)
-#: kgpgkeygenerate.ui:26
-msgid "Generate Key Pair"
-msgstr "Створити пару ключів"
+#. i18n: file: conf_ui2.ui:258
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#: kgpgoptions.cpp:102 rc.cpp:97
+msgid "Right to left, TLD first"
+msgstr "Справа ліворуч, спочатку TLD"
 
-#. i18n: Name of key owner
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: kgpgkeygenerate.ui:32
-msgid "&Name:"
-msgstr "&Ім’я:"
+#. i18n: file: conf_ui2.ui:263
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#: kgpgoptions.cpp:103 rc.cpp:100
+msgid "Right to left, domain first"
+msgstr "Справа ліворуч, спочатку домен"
 
-#. i18n: ectx: property (toolTip), widget (KLineEdit, m_kname)
-#: kgpgkeygenerate.ui:42
-msgid ""
-"The name must have a length of at least 5 characters and must not begin with "
-"a digit."
-msgstr "Ім’я має складатися принаймні з 5 символів і не починатися з цифри."
+#. i18n: file: conf_ui2.ui:268
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_EmailSorting)
+#: kgpgoptions.cpp:104 rc.cpp:103
+msgid "Right to left, FQDN first"
+msgstr "Справа ліворуч, спочатку FQDN"
 
-#. i18n: ectx: property (placeholderText), widget (KLineEdit, m_kname)
-#: kgpgkeygenerate.ui:45
-msgid "Real name, at least 5 characters, no leading digits"
-msgstr ""
-"Справжнє ім’я, має складатися з принаймні 5 символів, без початкових цифр"
-
-#. i18n: Email address of key owner
-#. i18n: ectx: property (text), widget (QLabel, emailLabel)
-#: kgpgkeygenerate.ui:52
-msgid "E&mail (optional):"
-msgstr "Адреса &ел. пошти (необов’язкова):"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kgpgkeygenerate.ui:65
-msgid "Commen&t (optional):"
-msgstr "Комен&тар (не обов'язковий):"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: ectx: property (text), widget (QLabel, tl_expiration)
-#: kgpgkeygenerate.ui:78 kgpgKeyInfo.ui:139
-msgid "Expiration:"
-msgstr "Строк дії:"
-
-#. i18n: ectx: property (text), widget (KLineEdit, m_days)
-#: kgpgkeygenerate.ui:88
-msgid "0"
-msgstr "0"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kgpgkeygenerate.ui:95
-msgid "&Key size:"
-msgstr "Розмір к&люча:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kgpgkeygenerate.ui:108
-msgid "&Algorithm:"
-msgstr "&Алгоритм:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, capabilities)
-#. i18n: ectx: property (text), widget (QLabel, tl_caps)
-#: kgpgkeygenerate.ui:127 kgpgKeyInfo.ui:248
-msgid "Capabilities"
-msgstr "Можливості"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, capCert)
-#: kgpgkeygenerate.ui:139
-msgid "Certification is automatically enabled for all keys"
-msgstr "Сертифікацію автоматично увімкнено для усіх ключів"
-
-#. i18n: ectx: property (text), widget (QCheckBox, capCert)
-#: kgpgkeygenerate.ui:142
-msgid "Certification"
-msgstr "Сертифікація"
-
-#. i18n: ectx: property (text), widget (QCheckBox, capAuth)
-#: kgpgkeygenerate.ui:162
-msgid "Authentication"
-msgstr "Розпізнавання"
-
-#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyInfo)
-#: kgpgKeyInfo.ui:14
-msgid "Kgpg"
-msgstr "Kgpg"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#. i18n: ectx: property (text), widget (QLabel, tl_id)
-#: kgpgKeyInfo.ui:85 newkey.ui:91
-msgid "Key ID:"
-msgstr "ІД ключа:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_comment)
-#: kgpgKeyInfo.ui:102
-msgid "Comment:"
-msgstr "Коментар:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_creation)
-#: kgpgKeyInfo.ui:122
-msgid "Creation:"
-msgstr "Створено:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_trust)
-#: kgpgKeyInfo.ui:156
-msgid "Trust:"
-msgstr "Довіра:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_owtrust)
-#: kgpgKeyInfo.ui:163
-msgid "Owner trust:"
-msgstr "Довіра до власника:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: kgpgKeyInfo.ui:186
-msgid "I do not know"
-msgstr "Я не знаю"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
-#: kgpgKeyInfo.ui:191
-msgid "I do NOT trust"
-msgstr "Я не довіряю"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_algorithm)
-#: kgpgKeyInfo.ui:214
-msgid "Algorithm:"
-msgstr "Алгоритм:"
-
-#. i18n: ectx: property (text), widget (QLabel, tl_length)
-#: kgpgKeyInfo.ui:231
-msgid "Length:"
-msgstr "Довжина:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, gr_photo)
-#: kgpgKeyInfo.ui:309
-msgid "Photo"
-msgstr "Фото"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, m_photo)
-#: kgpgKeyInfo.ui:329
-msgid ""
-"<qt><b>Photo:</b><p>A photo can be included with a public key for extra "
-"security. The photo can be used as an additional method of authenticating "
-"the key. However, it should not be relied upon as the only form of "
-"authentication.</p></qt>"
-msgstr ""
-"<qt><b>Фото:</b><p>для підвищення рівня безпеки можна додати до відкритого "
-"ключа фото. Цим фото можна скористатися як додатковим способом розпізнавання "
-"ключа. Але не слід покладатися на нього, як на єдину форму розпізнавання.</"
-"p></qt>"
-
-#. i18n: ectx: property (text), widget (QLabel, m_photo)
-#: kgpgKeyInfo.ui:338
-msgid "No Photo"
-msgstr "Немає фото"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_disable)
-#: kgpgKeyInfo.ui:375
-msgid "Disable key"
-msgstr "Вимкнути ключ"
-
-#. i18n: ectx: property (text), widget (KPushButton, m_expirationbtn)
-#: kgpgKeyInfo.ui:382
-msgid "Change Expiration"
-msgstr "Змінити строк дії"
-
-#. i18n: ectx: property (text), widget (KPushButton, m_password)
-#: kgpgKeyInfo.ui:389
-msgid "Change Passphrase"
-msgstr "Змінити пароль"
-
-#. i18n: ectx: property (title), widget (QGroupBox, gr_fingerprint)
-#: kgpgKeyInfo.ui:415
-msgid "Fingerprint"
-msgstr "Дайджест"
+#. i18n: file: kgpgkeygenerate.ui:172
+#. i18n: ectx: property (text), widget (QCheckBox, capEncrypt)
+#. i18n: file: conf_encryption.ui:15
+#. i18n: ectx: property (windowTitle), widget (QWidget, Encryption)
+#: kgpgoptions.cpp:109 rc.cpp:156 rc.cpp:451
+msgid "Encryption"
+msgstr "Шифрування"
 
 #: kgpgoptions.cpp:110
 msgid "Decryption"
@@ -3258,61 +1624,6 @@ msgstr "Підписати файл"
 msgid "Create Revocation Certificate"
 msgstr "Створити сертифікат відкликання"
 
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: kgpgrevokewidget.ui:18
-msgid "Create revocation certificate for"
-msgstr "Створити сертифікат відкликання для"
-
-#. i18n: ectx: property (text), widget (QLabel, keyID)
-#: kgpgrevokewidget.ui:28
-msgid "key id"
-msgstr "ІД ключа"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: kgpgrevokewidget.ui:45
-msgid "Reason for revocation:"
-msgstr "Причина відкликання:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: kgpgrevokewidget.ui:56
-msgid "No Reason"
-msgstr "Без причини"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: kgpgrevokewidget.ui:61
-msgid "Key Has Been Compromised"
-msgstr "Ключ скомпрометовано"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: kgpgrevokewidget.ui:66
-msgid "Key is Superseded"
-msgstr "Ключ замінено"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
-#: kgpgrevokewidget.ui:71
-msgid "Key is No Longer Used"
-msgstr "Ключ більше не використовується"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: kgpgrevokewidget.ui:81
-msgid "Description:"
-msgstr "Опис:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, cbSave)
-#: kgpgrevokewidget.ui:96
-msgid "Save certificate:"
-msgstr "Зберегти сертифікат:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, cbPrint)
-#: kgpgrevokewidget.ui:111
-msgid "Print certificate"
-msgstr "Надрукувати сертифікат"
-
-#. i18n: ectx: property (text), widget (QCheckBox, cbImport)
-#: kgpgrevokewidget.ui:121
-msgid "Import into keyring"
-msgstr "Імпортувати у в'язку"
-
 #: main.cpp:24
 msgid ""
 "KGpg - simple gui for gpg\n"
@@ -3379,101 +1690,348 @@ msgstr "Перевірити підпис"
 msgid "File to open"
 msgstr "Відкрити файл"
 
-#: model/gpgservermodel.cpp:91
-#, kde-format
-msgctxt "Mark default keyserver in GUI"
-msgid "%1 (Default)"
-msgstr "%1 (Типовий)"
+#. i18n: file: keyserver.ui:38
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
+#: rc.cpp:6
+msgid ""
+"<qt><b>Key Server:</b><br /> <p>A Key Server is a centralized repository of "
+"PGP/GnuPG keys connected to the Internet which can be conveniently accessed "
+"in order to obtain or deposit keys. Select from the drop down list to "
+"specify which key server should be used.</p> <p>Often these keys are held by "
+"people whom the user has never met and as such the authenticity is dubious "
+"at best. Refer to the GnuPG manual covering \"Web-of-Trust\" relationships "
+"to find out how GnuPG works around the problem of verifying authenticity.</"
+"p> </qt>"
+msgstr ""
+"<qt><b>Сервер ключів:</b><br /> <p>Сервер ключів — це централізоване сховище "
+"ключів PGP/GnuPG, з’єднане з інтернетом, зі зручним доступом для добування "
+"чи розміщення ключів. Зробіть вибір зі спадного списку, щоб вказати який "
+"сервер ключів використовувати.</p> <p> Часто ці ключі належать людям, з "
+"якими користувач не знайомий, тому їхня приналежність, в найкращому випадку, "
+"сумнівна. Зверніться до посібника GnuPG по співвідношення «мережа-довіра», "
+"щоб дізнатись, як у GnuPG вирішується проблема перевірки автентичності.</p> "
+"</qt>"
 
-#: model/keylistproxymodel.cpp:191 transactions/kgpgimport.cpp:193
-#, kde-format
-msgctxt "ID: Name"
-msgid "%1: %2"
-msgstr "%1: %2"
+#. i18n: file: keyserver.ui:41
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#. i18n: file: keyserver.ui:176
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#. i18n: file: keyexport.ui:58
+#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
+#: rc.cpp:9 rc.cpp:35 rc.cpp:650
+msgid "Key server:"
+msgstr "Сервер ключів:"
 
-#: model/keylistproxymodel.cpp:193 transactions/kgpgimport.cpp:195
-#, kde-format
-msgctxt "ID: Name <Email>"
-msgid "%1: %2 &lt;%3&gt;"
-msgstr "%1: %2 &lt;%3&gt;"
+#. i18n: file: keyserver.ui:52
+#. i18n: ectx: property (whatsThis), widget (KComboBox, kCBimportks)
+#: rc.cpp:12
+msgid ""
+"<b>Key Server Drop Down Dialog:</b>\n"
+"Allows the user to select the Key Server which will be used to import PGP/"
+"GnuPG keys into the local keyring."
+msgstr ""
+"<b>Вікно скинення сервера ключів:</b>\n"
+"Дозволяє користувачам вибрати сервер ключів для імпортування ключів PGP/ "
+"GnuPG у локальну в'язку."
 
-#: model/keylistproxymodel.cpp:198
-#, kde-format
-msgctxt "Name <Email>: ID"
-msgid "%1 &lt;%2&gt;: %3"
-msgstr "%1 &lt;%2&gt;: %3"
+#. i18n: file: keyserver.ui:60
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
+#: rc.cpp:16
+msgid ""
+"<qt><b>Text to search or ID of the key to import:</b><br />\n"
+"<p>There are multiple ways to search for a key, you can use a text or "
+"partial text search (example: entering Phil or Zimmerman will bring up all "
+"keys in which Phil or Zimmerman shows up) or you can search by the ID's of "
+"the key. Key ID's are strings of letters and numbers that uniquely identify "
+"a key (example: searching for 0xED7585F4 would bring up the key associated "
+"with that ID).</p></qt>"
+msgstr ""
+"<qt><b>Текст для пошуку або ІД ключа для імпортування:</b><br />\n"
+"<p>Є багато шляхів пошуку за ключами; можна використовувати пошук за текстом "
+"або частковим текстом (наприклад, введення тексту Пилип або Цимерман покаже "
+"всі ключі, які фігурують Пилип або Цимерман), або можна шукати за ІД ключа. "
+"ІД ключів — це ланцюжки літер і цифр, що однозначно посвідчують ключ "
+"(наприклад пошук за 0xED7585F4 поверне ключ прив'язаний до цього ІД).</p></"
+"qt>"
 
-#: model/kgpgitemmodel.cpp:270 model/kgpgitemmodel.cpp:273
-#, kde-format
-msgid "1 Key"
-msgid_plural "%1 Keys"
-msgstr[0] "%1 ключ"
-msgstr[1] "%1 ключі"
-msgstr[2] "%1 ключів"
-msgstr[3] "1 ключ"
+#. i18n: file: keyserver.ui:69
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:20
+msgid "Text to search or ID of the key to import:"
+msgstr "Текст для пошуку або ІД ключа для імпортування:"
 
-#: model/kgpgitemmodel.cpp:274
-#, kde-format
-msgid "1 Group"
-msgid_plural "%1 Groups"
-msgstr[0] "%1 група"
-msgstr[1] "%1 групи"
-msgstr[2] "%1 груп"
-msgstr[3] "1 група"
+#. i18n: file: keyserver.ui:91
+#. i18n: ectx: property (text), widget (QCheckBox, cBproxyI)
+#. i18n: file: keyserver.ui:221
+#. i18n: ectx: property (text), widget (QCheckBox, cBproxyE)
+#: rc.cpp:23 rc.cpp:48
+msgid "Honor HTTP proxy:"
+msgstr "Задовольняти проксі HTTP:"
 
-#: model/kgpgitemmodel.cpp:276
-#, kde-format
-msgctxt "%1 = something like 7 keys, %2 = something like 2 groups"
-msgid "%1, %2"
-msgstr "%1, %2"
+#. i18n: file: keyserver.ui:134
+#. i18n: ectx: property (text), widget (QPushButton, Buttonsearch)
+#: rc.cpp:26
+msgid "&Search"
+msgstr "&Пошук"
 
-#: model/kgpgitemmodel.cpp:378
-msgid "ID"
-msgstr "ІД"
+#. i18n: file: keyserver.ui:170
+#. i18n: ectx: attribute (title), widget (QWidget, tab_export)
+#: rc.cpp:32
+msgid "Export"
+msgstr "Експортувати"
 
-#: model/kgpgsearchresultmodel.cpp:126
-#, kde-format
-msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009, revoked"
-msgid "ID %1, %2-bit %3 key, created %4, revoked"
-msgstr "ІД: %1, %2-бітовий ключ %3, створений %4, анульовано"
+#. i18n: file: keyserver.ui:190
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
+#: rc.cpp:38
+msgid ""
+"<qt><b>Key to be exported:</b><br />\n"
+"<p>This allows the user to specify the key from the drop down list that will "
+"be exported to the key server selected.</p></qt>"
+msgstr ""
+"<qt><b>Експортувати ключ:</b><br />\n"
+"<p>Це дозволяє користувачу вибрати з спадного списку ключ, який буде "
+"експортовано до вказаного сервера ключів.</p></qt>"
 
-#: model/kgpgsearchresultmodel.cpp:131
-#, kde-format
-msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009"
-msgid "ID %1, %2-bit %3 key, created %4"
-msgstr "ІД: %1, %2-бітовий ключ %3, створений %4"
+#. i18n: file: keyserver.ui:193
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#: rc.cpp:42
+msgid "Key to be exported:"
+msgstr "Експортувати ключ:"
 
-#: model/kgpgsearchresultmodel.cpp:220
-#, kde-format
-msgid "One Photo ID"
-msgid_plural "%1 Photo IDs"
-msgstr[0] "%1 фотоідентифікатор"
-msgstr[1] "%1 фотоідентифікатора"
-msgstr[2] "%1 фотоідентифікаторів"
-msgstr[3] "Один фотоідентифікатор"
+#. i18n: file: keyserver.ui:206
+#. i18n: ectx: property (text), widget (QCheckBox, exportAttributes)
+#: rc.cpp:45
+msgid "Export attributes (photo id)"
+msgstr "Експортувати атрибути (фото ІД)"
 
+#. i18n: file: keyserver.ui:265
+#. i18n: ectx: property (whatsThis), widget (QPushButton, Buttonexport)
+#: rc.cpp:51
+msgid ""
+"<qt><b>Export:</b><br />\n"
+"<p>Pushing this button will export the specified key to the specified server."
+"</p></qt>"
+msgstr ""
+"<qt><b>Експортувати:</b><br />\n"
+"<p>Якщо натиснути на цю кнопку, вказаний ключ буде експортовано до вказаного "
+"сервера.</p></qt>"
+
+#. i18n: file: keyserver.ui:268
+#. i18n: ectx: property (text), widget (QPushButton, Buttonexport)
+#: rc.cpp:55
+msgid "&Export"
+msgstr "&Експортувати"
+
+#. i18n: file: conf_ui2.ui:32
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: rc.cpp:58
+msgid "Key Colors"
+msgstr "Кольори ключів"
+
+#. i18n: file: conf_ui2.ui:42
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUltimate)
+#: rc.cpp:61
+msgid "Ultimately trusted keys:"
+msgstr "Ключі з безмежною довірою:"
+
+#. i18n: file: conf_ui2.ui:52
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustTrusted)
+#: rc.cpp:64
+msgid "Trusted keys:"
+msgstr "Ключі з довірою:"
+
+#. i18n: file: conf_ui2.ui:62
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustMarginally)
+#: rc.cpp:67
+msgid "Marginally trusted keys:"
+msgstr "Ключі з не повною довірою:"
+
+#. i18n: file: conf_ui2.ui:72
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustExpired)
+#: rc.cpp:70
+msgid "Expired keys:"
+msgstr "Застарілі ключі:"
+
+#. i18n: file: conf_ui2.ui:82
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustRevoked)
+#: rc.cpp:73
+msgid "Revoked keys:"
+msgstr "Анульовані ключі:"
+
+#. i18n: file: conf_ui2.ui:92
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustUnknown)
+#: rc.cpp:76
+msgid "Unknown keys:"
+msgstr "Невідомі ключі:"
+
+#. i18n: file: conf_ui2.ui:102
+#. i18n: ectx: property (text), widget (QLabel, textLabel_trustDisabled)
+#: rc.cpp:79
+msgid "Disabled keys:"
+msgstr "Вимкнені ключі:"
+
+#. i18n: file: conf_ui2.ui:225
+#. i18n: ectx: attribute (title), widget (QWidget, TabPage)
+#: rc.cpp:82
+msgid "Editor Font"
+msgstr "Шрифт редактора"
+
+#. i18n: file: conf_ui2.ui:230
+#. i18n: ectx: attribute (title), widget (QWidget, tabKeyList)
+#: rc.cpp:85
+msgid "Key List"
+msgstr "Список ключів"
+
+#. i18n: file: conf_ui2.ui:236
+#. i18n: ectx: property (title), widget (QGroupBox, groupBoxSorting)
+#: rc.cpp:88
+msgid "Sort Order"
+msgstr "Порядок"
+
+#. i18n: file: conf_ui2.ui:242
+#. i18n: ectx: property (text), widget (QLabel, label_EmailSorting)
+#. i18n: file: newkey.ui:67
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#. i18n: file: adduid.ui:29
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:91 rc.cpp:171 rc.cpp:340
+msgid "Email:"
+msgstr "Ел. пошта:"
+
+#. i18n: file: kgpgkeygenerate.ui:14
+#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyGenerate)
+#: rc.cpp:106
+msgid "Key Generation"
+msgstr "Створення ключа"
+
+#. i18n: file: kgpgkeygenerate.ui:26
+#. i18n: ectx: property (title), widget (QGroupBox, vgroup)
+#: rc.cpp:109
+msgid "Generate Key Pair"
+msgstr "Створити пару ключів"
+
+#. i18n: Name of key owner
+#. i18n: file: kgpgkeygenerate.ui:32
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: rc.cpp:113
+msgid "&Name:"
+msgstr "&Ім’я:"
+
+#. i18n: file: kgpgkeygenerate.ui:42
+#. i18n: ectx: property (toolTip), widget (KLineEdit, m_kname)
+#: rc.cpp:116
+msgid ""
+"The name must have a length of at least 5 characters and must not begin with "
+"a digit."
+msgstr "Ім’я має складатися принаймні з 5 символів і не починатися з цифри."
+
+#. i18n: file: kgpgkeygenerate.ui:45
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, m_kname)
+#: rc.cpp:119
+msgid "Real name, at least 5 characters, no leading digits"
+msgstr ""
+"Справжнє ім’я, має складатися з принаймні 5 символів, без початкових цифр"
+
+#. i18n: Email address of key owner
+#. i18n: file: kgpgkeygenerate.ui:52
+#. i18n: ectx: property (text), widget (QLabel, emailLabel)
+#: rc.cpp:123
+msgid "E&mail (optional):"
+msgstr "Адреса &ел. пошти (необов’язкова):"
+
+#. i18n: file: kgpgkeygenerate.ui:65
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:126
+msgid "Commen&t (optional):"
+msgstr "Комен&тар (не обов'язковий):"
+
+#. i18n: file: kgpgkeygenerate.ui:78
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: file: kgpgKeyInfo.ui:139
+#. i18n: ectx: property (text), widget (QLabel, tl_expiration)
+#: rc.cpp:129 rc.cpp:361
+msgid "Expiration:"
+msgstr "Строк дії:"
+
+#. i18n: file: kgpgkeygenerate.ui:88
+#. i18n: ectx: property (text), widget (KLineEdit, m_days)
+#: rc.cpp:132
+msgid "0"
+msgstr "0"
+
+#. i18n: file: kgpgkeygenerate.ui:95
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:135
+msgid "&Key size:"
+msgstr "Розмір к&люча:"
+
+#. i18n: file: kgpgkeygenerate.ui:108
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:138
+msgid "&Algorithm:"
+msgstr "&Алгоритм:"
+
+#. i18n: file: kgpgkeygenerate.ui:127
+#. i18n: ectx: property (title), widget (QGroupBox, capabilities)
+#. i18n: file: kgpgKeyInfo.ui:248
+#. i18n: ectx: property (text), widget (QLabel, tl_caps)
+#: rc.cpp:141 rc.cpp:391
+msgid "Capabilities"
+msgstr "Можливості"
+
+#. i18n: file: kgpgkeygenerate.ui:139
+#. i18n: ectx: property (toolTip), widget (QCheckBox, capCert)
+#: rc.cpp:144
+msgid "Certification is automatically enabled for all keys"
+msgstr "Сертифікацію автоматично увімкнено для усіх ключів"
+
+#. i18n: file: kgpgkeygenerate.ui:142
+#. i18n: ectx: property (text), widget (QCheckBox, capCert)
+#: rc.cpp:147
+msgid "Certification"
+msgstr "Сертифікація"
+
+#. i18n: file: kgpgkeygenerate.ui:162
+#. i18n: ectx: property (text), widget (QCheckBox, capAuth)
+#: rc.cpp:153
+msgid "Authentication"
+msgstr "Розпізнавання"
+
+#. i18n: file: newkey.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
-#: newkey.ui:19
+#: rc.cpp:162
 msgid "New Key Created"
 msgstr "Створено новий ключ"
 
+#. i18n: file: newkey.ui:25
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: newkey.ui:25
+#: rc.cpp:165
 msgid "You have successfully created the following key:"
 msgstr "Ви успішно створили наступний ключ:"
 
+#. i18n: file: newkey.ui:37
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: newkey.ui:37
+#: rc.cpp:168
 msgid "Name:"
 msgstr "Ім'я:"
 
+#. i18n: file: newkey.ui:91
+#. i18n: ectx: property (text), widget (QLabel, textLabel5)
+#. i18n: file: kgpgKeyInfo.ui:85
+#. i18n: ectx: property (text), widget (QLabel, tl_id)
+#: rc.cpp:174 rc.cpp:352
+msgid "Key ID:"
+msgstr "ІД ключа:"
+
+#. i18n: file: newkey.ui:115
 #. i18n: ectx: property (text), widget (QLabel, textLabel6)
-#: newkey.ui:115
+#: rc.cpp:177
 msgid "Fingerprint:"
 msgstr "Відбиток:"
 
+#. i18n: file: newkey.ui:136
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, CBdefault)
-#: newkey.ui:136
+#: rc.cpp:180
 msgid ""
 "<qt><b>Set as your default key:</b><br />\n"
 "<p>Checking this option sets the newly created key pair as the default key "
@@ -3483,18 +2041,21 @@ msgstr ""
 "<p>Увімкнення цього параметра зробить вашу новостворену пару ключів типовою "
 "парою ключів.</p></qt>"
 
+#. i18n: file: newkey.ui:139
 #. i18n: ectx: property (text), widget (QCheckBox, CBdefault)
-#: newkey.ui:139
+#: rc.cpp:184
 msgid "Set as your default key"
 msgstr "Встановити як типовий ключ"
 
+#. i18n: file: newkey.ui:151
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
-#: newkey.ui:151
+#: rc.cpp:187
 msgid "Revocation Certificate"
 msgstr "Сертифікат відкликання"
 
+#. i18n: file: newkey.ui:157
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: newkey.ui:157
+#: rc.cpp:190
 msgid ""
 "It is recommended to save or print a revocation certificate in case your key "
 "is compromised."
@@ -3502,25 +2063,1241 @@ msgstr ""
 "Рекомендується зберегти або видрукувати сертифікат відкликання на випадок, "
 "якщо ваш ключ буде скомпрометовано."
 
+#. i18n: file: newkey.ui:169
 #. i18n: ectx: property (text), widget (QCheckBox, CBsave)
-#: newkey.ui:169
+#: rc.cpp:193
 msgid "Save as:"
 msgstr "Зберегти як:"
 
+#. i18n: file: newkey.ui:185
 #. i18n: ectx: property (text), widget (QCheckBox, CBprint)
-#: newkey.ui:185
+#: rc.cpp:196
 msgid "Print"
 msgstr "Друк"
 
+#. i18n: file: kgpg.kcfg:13
+#. i18n: ectx: label, entry (CustomDecrypt), group (Decryption)
+#: rc.cpp:199
+msgid "Custom decryption command."
+msgstr "Нестандартна команда розшифрування."
+
+#. i18n: file: kgpg.kcfg:19
+#. i18n: ectx: label, entry (CustomEncryptionOptions), group (Encryption)
+#: rc.cpp:202
+msgid "Custom encryption options"
+msgstr "Нетипові параметри шифрування"
+
+#. i18n: file: kgpg.kcfg:22
+#. i18n: ectx: label, entry (AllowCustomEncryptionOptions), group (Encryption)
+#: rc.cpp:205
+msgid "Allow custom encryption options"
+msgstr "Дозволити нетипові параметри шифрування"
+
+#. i18n: file: kgpg.kcfg:26
+#. i18n: ectx: label, entry (FileEncryptionKey), group (Encryption)
+#: rc.cpp:208
+msgid "File encryption key."
+msgstr "Ключ шифрування файла."
+
+#. i18n: file: kgpg.kcfg:29
+#. i18n: ectx: label, entry (EncryptFilesTo), group (Encryption)
+#: rc.cpp:211
+msgid "Encrypt files"
+msgstr "Зашифровувати файли"
+
+#. i18n: file: kgpg.kcfg:33
+#. i18n: ectx: label, entry (AsciiArmor), group (Encryption)
+#: rc.cpp:214
+msgid "Use ASCII armored encryption."
+msgstr "Використовувати броньоване шифрування ASCII."
+
+#. i18n: file: kgpg.kcfg:37
+#. i18n: ectx: label, entry (AllowUntrustedKeys), group (Encryption)
+#: rc.cpp:217
+msgid "Allow encryption with untrusted keys."
+msgstr "Дозволити шифрування ключами без довіри."
+
+#. i18n: file: kgpg.kcfg:41
+#. i18n: ectx: label, entry (AllowUntrustedGroupMembers), group (Encryption)
+#: rc.cpp:220
+msgid "Allow untrusted keys to become members of key groups."
+msgstr "Дозволити ненадійним ключам бути елементами груп ключів."
+
+#. i18n: file: kgpg.kcfg:45
+#. i18n: ectx: label, entry (HideUserID), group (Encryption)
+#: rc.cpp:223
+msgid "Hide the user ID."
+msgstr "Ховати ІД користувача."
+
+#. i18n: file: kgpg.kcfg:49
+#. i18n: ectx: label, entry (PgpCompatibility), group (Encryption)
+#: rc.cpp:226
+msgid "Enable PGP 6 compatibility."
+msgstr "Уможливити сумісність з PGP 6."
+
+#. i18n: file: kgpg.kcfg:53
+#. i18n: ectx: label, entry (PgpExtension), group (Encryption)
+#: rc.cpp:229
+msgid "Use *.pgp extension for encrypted files."
+msgstr "Використовувати суфікс *.pgp для зашифрованих файлів."
+
+#. i18n: file: kgpg.kcfg:60
+#. i18n: ectx: label, entry (GpgConfigPath), group (GPG Settings)
+#: rc.cpp:232
+msgid "The path of the gpg configuration file."
+msgstr "Шлях до файла налаштування gpg."
+
+#. i18n: file: kgpg.kcfg:63
+#. i18n: ectx: label, entry (GpgBinaryPath), group (GPG Settings)
+#: rc.cpp:235
+msgid "The path of the gpg binary used by KGpg."
+msgstr "Шлях до двійкового файла програми gpg, який використовуватиме KGpg."
+
+#. i18n: file: kgpg.kcfg:79
+#. i18n: ectx: label, entry (FirstRun), group (General Options)
+#: rc.cpp:238
+msgid "Is the first time the application runs."
+msgstr "Перший запуск програми."
+
+#. i18n: file: kgpg.kcfg:83
+#. i18n: ectx: label, entry (EditorGeometry), group (General Options)
+#: rc.cpp:241
+msgid "The size of the editor window."
+msgstr "Розмір вікна редактора."
+
+#. i18n: file: kgpg.kcfg:86
+#. i18n: ectx: label, entry (ShowTrust), group (General Options)
+#: rc.cpp:244
+msgid "Show the trust value in key manager."
+msgstr "Показувати довіру у керуванні ключами."
+
+#. i18n: file: kgpg.kcfg:90
+#. i18n: ectx: label, entry (ShowExpi), group (General Options)
+#: rc.cpp:247
+msgid "Show the expiration value in key manager."
+msgstr "Показувати строк дії ключа у керуванні ключами."
+
+#. i18n: file: kgpg.kcfg:94
+#. i18n: ectx: label, entry (ShowSize), group (General Options)
+#: rc.cpp:250
+msgid "Show the size value in key manager."
+msgstr "Показувати розмір в керуванні ключами."
+
+#. i18n: file: kgpg.kcfg:98
+#. i18n: ectx: label, entry (ShowCreat), group (General Options)
+#: rc.cpp:253
+msgid "Show the creation value in key manager."
+msgstr "Показувати коли створено в керуванні ключами."
+
+#. i18n: file: kgpg.kcfg:102
+#. i18n: ectx: label, entry (ShowSecret), group (General Options)
+#: rc.cpp:256
+msgid "Show only secret keys in key manager."
+msgstr "Показувати лише ключі з керування ключами."
+
+#. i18n: file: kgpg.kcfg:106
+#. i18n: ectx: label, entry (ShowLongKeyId), group (General Options)
+#: rc.cpp:259
+msgid "Show long key id in key manager."
+msgstr "Показувати довгий ІД ключа у керуванні ключами."
+
+#. i18n: file: kgpg.kcfg:110
+#. i18n: ectx: label, entry (TrustLevel), group (General Options)
+#: rc.cpp:262
+msgid "Show only keys with at least that trust level in key manager."
+msgstr ""
+"Показувати у керуванні ключами лише ключі з вказаним мінімальним рівнем "
+"довіри."
+
+#. i18n: file: kgpg.kcfg:124
+#. i18n: ectx: label, entry (UseMouseSelection), group (User Interface)
+#: rc.cpp:265
+msgid "Use the mouse selection instead of the clipboard."
+msgstr "Замість кишені, використовувати вибране мишкою."
+
+#. i18n: file: kgpg.kcfg:132
+#. i18n: ectx: label, entry (RemoteFileWarn), group (User Interface)
+#: rc.cpp:271
+msgid ""
+"Display a warning before creating temporary files during remote file "
+"operations."
+msgstr ""
+"Показувати попередження перед створенням тимчасових файлів при роботі з "
+"віддаленими файлами."
+
+#. i18n: file: kgpg.kcfg:136
+#. i18n: ectx: label, entry (LeftClick), group (User Interface)
+#: rc.cpp:274
+msgid "Choose default left-click behavior"
+msgstr "Виберіть типову поведінку при клацанні лівої кнопки мишки"
+
+#. i18n: file: kgpg.kcfg:143
+#. i18n: ectx: label, entry (EncryptedDropEvent), group (User Interface)
+#: rc.cpp:277
+msgid "Handle encrypted drops"
+msgstr "Працювати з зашифрованим вкинутим"
+
+#. i18n: file: kgpg.kcfg:151
+#. i18n: ectx: label, entry (UnencryptedDropEvent), group (User Interface)
+#: rc.cpp:280
+msgid "Handle unencrypted drops"
+msgstr "Працювати з незашифрованим вкинутим"
+
+#. i18n: file: kgpg.kcfg:159
+#. i18n: ectx: label, entry (SignMenu), group (User Interface)
+#: rc.cpp:283
+msgid "Show the \"sign file\" service menu."
+msgstr "Показувати сервісне меню «підписати файл»."
+
+#. i18n: file: kgpg.kcfg:167
+#. i18n: ectx: label, entry (DecryptMenu), group (User Interface)
+#: rc.cpp:286
+msgid "Show the \"decrypt file\" service menu."
+msgstr "Показувати сервісне меню «розшифрувати файл»."
+
+#. i18n: file: kgpg.kcfg:176
+#. i18n: ectx: label, entry (ShowSystray), group (User Interface)
+#: rc.cpp:289
+msgid "Show the systray icon"
+msgstr "Показувати піктограму в системному лотку"
+
+#. i18n: file: kgpg.kcfg:180
+#. i18n: ectx: label, entry (RecentFiles), group (User Interface)
+#: rc.cpp:292
+msgid "The number of recently opened files shown in the editor menu."
+msgstr "Кількість нещодавно відкрити файлів, показаних у меню."
+
+#. i18n: file: kgpg.kcfg:187
+#. i18n: ectx: label, entry (ShowTipOfDay), group (TipOfDay)
+#: rc.cpp:295
+msgid "Show tip of the day."
+msgstr "Показувати пораду дня."
+
+#. i18n: file: kgpg.kcfg:194
+#. i18n: ectx: label, entry (ColorGood), group (Key Colors)
+#: rc.cpp:298
+msgid "Color used for trusted keys."
+msgstr "Колір для ключів з довірою."
+
+#. i18n: file: kgpg.kcfg:198
+#. i18n: ectx: label, entry (ColorRev), group (Key Colors)
+#: rc.cpp:301
+msgid "Color used for revoked keys."
+msgstr "Колір для анульованих ключів."
+
+#. i18n: file: kgpg.kcfg:202
+#. i18n: ectx: label, entry (ColorUnknown), group (Key Colors)
+#: rc.cpp:304
+msgid "Color used for unknown keys."
+msgstr "Колір для невідомих ключів."
+
+#. i18n: file: kgpg.kcfg:206
+#. i18n: ectx: label, entry (ColorBad), group (Key Colors)
+#: rc.cpp:307
+msgid "Color used for untrusted keys."
+msgstr "Колір для ключів без довіри."
+
+#. i18n: file: kgpg.kcfg:210
+#. i18n: ectx: label, entry (ColorUltimate), group (Key Colors)
+#: rc.cpp:310
+msgid "Color used for ultimately trusted keys."
+msgstr "Колір для ключів з безмежною довірою."
+
+#. i18n: file: kgpg.kcfg:214
+#. i18n: ectx: label, entry (ColorMarginal), group (Key Colors)
+#: rc.cpp:313
+msgid "Color used for marginally trusted keys."
+msgstr "Колір для ключів з не повною довірою."
+
+#. i18n: file: kgpg.kcfg:218
+#. i18n: ectx: label, entry (ColorExpired), group (Key Colors)
+#: rc.cpp:316
+msgid "Color used for expired keys."
+msgstr "Колір для застарілих ключів."
+
+#. i18n: file: kgpg.kcfg:225
+#. i18n: ectx: label, entry (Font), group (Text Font)
+#: rc.cpp:319
+msgid "Font"
+msgstr "Шрифт"
+
+#. i18n: file: kgpg.kcfg:248
+#. i18n: ectx: label, entry (KeyServers), group (Servers)
+#: rc.cpp:322
+msgid ""
+"Key servers used by KGpg. The first server in the list is the default server."
+msgstr ""
+"Сервери ключів, якими користуватиметься KGpg. Першим у списку буде типовий "
+"сервер."
+
+#. i18n: file: kgpg.kcfg:252
+#. i18n: ectx: label, entry (InfoServers), group (Servers)
+#: rc.cpp:325
+msgid ""
+"List of URLs that show details and analysis of the given key. The first "
+"server in the list is the default server."
+msgstr ""
+"Список адрес з подробицями та аналізом щодо вказаного ключа. Першим у списку "
+"буде типовий сервер."
+
+#. i18n: file: kgpg.kcfg:259
+#. i18n: ectx: label, entry (UseProxy), group (Key Servers)
+#: rc.cpp:328
+msgid "Use HTTP proxy when available."
+msgstr "При наявності використовувати HTTP проксі."
+
+#. i18n: file: kgpg.kcfg:266
+#. i18n: ectx: label, entry (EmailTemplate), group (Key Signing)
+#: rc.cpp:331
+msgid ""
+"This is the text of the email sent by the \"Sign and Mail User ID\" action."
+msgstr ""
+"Це текст повідомлення, яке буде надіслано у відповідь на виконання дії "
+"«Підписати і надіслати ідентифікатор користувача»."
+
+#. i18n: file: adduid.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:337
+msgid "Name (minimum 5 characters):"
+msgstr "Ім’я (мінімум 5 символів):"
+
+#. i18n: file: adduid.ui:42
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:343
+msgid "Comment (optional):"
+msgstr "Коментар (не обов'язковий):"
+
+#. i18n: file: kgpgKeyInfo.ui:14
+#. i18n: ectx: property (windowTitle), widget (KDialog, kgpgKeyInfo)
+#: rc.cpp:346
+msgid "Kgpg"
+msgstr "Kgpg"
+
+#. i18n: file: kgpgKeyInfo.ui:102
+#. i18n: ectx: property (text), widget (QLabel, tl_comment)
+#: rc.cpp:355
+msgid "Comment:"
+msgstr "Коментар:"
+
+#. i18n: file: kgpgKeyInfo.ui:122
+#. i18n: ectx: property (text), widget (QLabel, tl_creation)
+#: rc.cpp:358
+msgid "Creation:"
+msgstr "Створено:"
+
+#. i18n: file: kgpgKeyInfo.ui:156
+#. i18n: ectx: property (text), widget (QLabel, tl_trust)
+#: rc.cpp:364
+msgid "Trust:"
+msgstr "Довіра:"
+
+#. i18n: file: kgpgKeyInfo.ui:163
+#. i18n: ectx: property (text), widget (QLabel, tl_owtrust)
+#: rc.cpp:367
+msgid "Owner trust:"
+msgstr "Довіра до власника:"
+
+#. i18n: file: kgpgKeyInfo.ui:186
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:370
+msgid "I do not know"
+msgstr "Я не знаю"
+
+#. i18n: file: kgpgKeyInfo.ui:191
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:373
+msgid "I do NOT trust"
+msgstr "Я не довіряю"
+
+#. i18n: file: kgpgKeyInfo.ui:196
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:376 core/convert.cpp:62
+msgid "Marginally"
+msgstr "Не повністю"
+
+#. i18n: file: kgpgKeyInfo.ui:201
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:379 core/convert.cpp:64
+msgid "Fully"
+msgstr "Повністю"
+
+#. i18n: file: kgpgKeyInfo.ui:206
+#. i18n: ectx: property (text), item, widget (KComboBox, m_owtrust)
+#: rc.cpp:382 core/convert.cpp:66
+msgid "Ultimately"
+msgstr "Безмежна"
+
+#. i18n: file: kgpgKeyInfo.ui:214
+#. i18n: ectx: property (text), widget (QLabel, tl_algorithm)
+#: rc.cpp:385
+msgid "Algorithm:"
+msgstr "Алгоритм:"
+
+#. i18n: file: kgpgKeyInfo.ui:231
+#. i18n: ectx: property (text), widget (QLabel, tl_length)
+#: rc.cpp:388
+msgid "Length:"
+msgstr "Довжина:"
+
+#. i18n: file: kgpgKeyInfo.ui:309
+#. i18n: ectx: property (title), widget (QGroupBox, gr_photo)
+#: rc.cpp:394
+msgid "Photo"
+msgstr "Фото"
+
+#. i18n: file: kgpgKeyInfo.ui:329
+#. i18n: ectx: property (whatsThis), widget (QLabel, m_photo)
+#: rc.cpp:397
+msgid ""
+"<qt><b>Photo:</b><p>A photo can be included with a public key for extra "
+"security. The photo can be used as an additional method of authenticating "
+"the key. However, it should not be relied upon as the only form of "
+"authentication.</p></qt>"
+msgstr ""
+"<qt><b>Фото:</b><p>для підвищення рівня безпеки можна додати до відкритого "
+"ключа фото. Цим фото можна скористатися як додатковим способом розпізнавання "
+"ключа. Але не слід покладатися на нього, як на єдину форму розпізнавання.</"
+"p></qt>"
+
+#. i18n: file: kgpgKeyInfo.ui:338
+#. i18n: ectx: property (text), widget (QLabel, m_photo)
+#: rc.cpp:400
+msgid "No Photo"
+msgstr "Немає фото"
+
+#. i18n: file: kgpgKeyInfo.ui:375
+#. i18n: ectx: property (text), widget (QCheckBox, m_disable)
+#: rc.cpp:403
+msgid "Disable key"
+msgstr "Вимкнути ключ"
+
+#. i18n: file: kgpgKeyInfo.ui:382
+#. i18n: ectx: property (text), widget (KPushButton, m_expirationbtn)
+#: rc.cpp:406
+msgid "Change Expiration"
+msgstr "Змінити строк дії"
+
+#. i18n: file: kgpgKeyInfo.ui:389
+#. i18n: ectx: property (text), widget (KPushButton, m_password)
+#: rc.cpp:409
+msgid "Change Passphrase"
+msgstr "Змінити пароль"
+
+#. i18n: file: kgpgKeyInfo.ui:415
+#. i18n: ectx: property (title), widget (QGroupBox, gr_fingerprint)
+#: rc.cpp:412
+msgid "Fingerprint"
+msgstr "Дайджест"
+
+#. i18n: file: keysmanager.rc:6
+#. i18n: ectx: Menu (managekeys)
+#: rc.cpp:415
+msgid "&Keys"
+msgstr "&Ключі"
+
+#. i18n: file: keysmanager.rc:25
+#. i18n: ectx: Menu (view)
+#. i18n: file: editor/kgpgeditor.rc:13
+#. i18n: ectx: Menu (view)
+#: rc.cpp:418 rc.cpp:569
+msgid "&View"
+msgstr "П&ерегляд"
+
+#. i18n: file: keysmanager.rc:30
+#. i18n: ectx: Menu (show_details)
+#: rc.cpp:421
+msgid "&Show Details"
+msgstr "&Показувати подробиці"
+
+#. i18n: file: keysmanager.rc:42
+#. i18n: ectx: Menu (groups)
+#: rc.cpp:424
+msgid "&Groups"
+msgstr "&Групи"
+
+#. i18n: file: groupedit.ui:74
+#. i18n: ectx: property (text), widget (QTableView, availableKeys)
+#. i18n: file: groupedit.ui:158
+#. i18n: ectx: property (text), widget (QTableView, groupKeys)
+#: rc.cpp:430 rc.cpp:442 model/kgpgitemmodel.cpp:372
+#: model/kgpgsearchresultmodel.cpp:334
+msgid "Name"
+msgstr "Ім'я"
+
+#. i18n: file: groupedit.ui:79
+#. i18n: ectx: property (text), widget (QTableView, availableKeys)
+#. i18n: file: groupedit.ui:163
+#. i18n: ectx: property (text), widget (QTableView, groupKeys)
+#: rc.cpp:433 rc.cpp:445 model/kgpgitemmodel.cpp:373
+#: model/kgpgsearchresultmodel.cpp:336
+msgctxt "@title:column Title of a column of emails"
+msgid "Email"
+msgstr "Ел. пошта"
+
+#. i18n: file: groupedit.ui:84
+#. i18n: ectx: property (text), widget (QTableView, availableKeys)
+#. i18n: file: groupedit.ui:168
+#. i18n: ectx: property (text), widget (QTableView, groupKeys)
+#: rc.cpp:436 rc.cpp:448
+msgid "Id"
+msgstr "ІД"
+
+#. i18n: file: groupedit.ui:100
+#. i18n: ectx: property (text), widget (QLabel, kActiveLabel1)
+#: rc.cpp:439
+msgid "Keys in the Group"
+msgstr "Ключі в групі"
+
+#. i18n: file: conf_encryption.ui:31
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AsciiArmor)
+#: rc.cpp:454
+msgid ""
+"<qt><b>ASCII armored encryption:</b> <br /> \n"
+"<p>Checking this option outputs all encrypted files in a format that can be "
+"opened by a text editor and as such the output is suitable for placing in "
+"the body of an e-mail message.</p></qt>"
+msgstr ""
+"<qt><b>Броньоване шифрування ASCII:</b> <br /> \n"
+"<p>Позначення цього пункту призведе до видачі всіх зашифрованих файлів у "
+"форматі, який можна відкрити у текстовому редакторі, через що такий вивід "
+"придатний для розміщення в тілі електронного повідомлення.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:34
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AsciiArmor)
+#: rc.cpp:458 selectpublickeydialog.cpp:95
+msgid "ASCII armored encryption"
+msgstr "Броньоване шифрування ASCII"
+
+#. i18n: file: conf_encryption.ui:42
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpExtension)
+#: rc.cpp:461
+msgid ""
+"<qt><b>Use *.pgp extension for encrypted files:</b><br />\n"
+"<p>Checking this option will append a .pgp extension to all encrypted files "
+"instead of a .gpg extension. This option will maintain compatibility with "
+"users of PGP (Pretty Good Privacy) software.</p></qt>"
+msgstr ""
+"<qt><b>Використовувати суфікс *.pgp для зашифрованих файлів:</b><br />\n"
+"<p>Позначення цього пункту призведе до додавання суфікса *.pgp до всіх "
+"зашифрованих файлів, замість суфікса .gpg. Цей параметр буде підтримувати "
+"сумісність з файлами користувачів програм PGP.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:45
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpExtension)
+#: rc.cpp:465
+msgid "Use *.pgp extension for encrypted files"
+msgstr "Використовувати суфікс *.pgp для зашифрованих файлів"
+
+#. i18n: file: conf_encryption.ui:69
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
+#: rc.cpp:468
+msgid ""
+"<qt><b>Custom encryption command:</b><br />\n"
+"<p>When activated, an entry field will be shown in the key selection dialog, "
+"enabling you to enter a custom command for encryption. This option is "
+"recommended for experienced users only.</p></qt>"
+msgstr ""
+"<qt><b>Нетипова команда шифрування:</b> <br />\n"
+"<p>Якщо задіяно цей параметр, у вікні вибору ключа буде показано поле вводу, "
+"що дасть можливість ввести нетипову команду для шифрування. Рекомендуємо "
+"лише досвідченим користувачам.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:72
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowCustomEncryptionOptions)
+#: rc.cpp:472
+msgid "Custom encryption command:"
+msgstr "Нетипова команда шифрування:"
+
+#. i18n: file: conf_encryption.ui:113
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, encrypt_to_always)
+#: rc.cpp:475
+msgid ""
+"<qt><b>Always encrypt with:</b><br />\n"
+"<p>This ensures all files/messages will also be encrypted with the chosen "
+"key. However, if the \"Encrypt files with:\" option is selected that chosen "
+"key will override the \"Always encrypt with:\" selection.</p></qt>"
+msgstr ""
+"<qt><b>Завжди шифрувати з:</b><br /> \n"
+"<p>Цей параметр гарантує, що всі файли/повідомлення буде також зашифровано "
+"цим ключем. Однак, якщо параметр «Шифрувати файли за допомогою:» увімкнено, "
+"то його ключ матиме перевагу над вибором у «Завжди шифрувати з:».</p></qt>"
+
+#. i18n: file: conf_encryption.ui:116
+#. i18n: ectx: property (text), widget (QCheckBox, encrypt_to_always)
+#: rc.cpp:479
+msgid "Always encrypt with:"
+msgstr "Завжди зашифровувати з:"
+
+#. i18n: file: conf_encryption.ui:124
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EncryptFilesTo)
+#: rc.cpp:482
+msgid ""
+"<qt><b>Encrypt files with:</b><br />\n"
+"<p>Checking this option and selecting a key will force any file encryption "
+"operation to use the selected key. KGpg will not query for a recipient and "
+"the default key will be bypassed.</p></qt>"
+msgstr ""
+"<qt><b>Шифрувати файли за допомогою:</b><br /> \n"
+"<p>Увімкнення цього параметра і вибір ключа примусить всі дії шифрування "
+"файлів використовувати вибраний ключ. KGpg не буде питати про адресата, "
+"типовий ключ буде знехтувано.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:127
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EncryptFilesTo)
+#: rc.cpp:486
+msgid "Encrypt files with:"
+msgstr "Зашифровувати файли за допомогою:"
+
+#. i18n: file: conf_encryption.ui:135
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedKeys)
+#: rc.cpp:489
+msgid ""
+"<qt><b>Allow encryption with untrusted keys:</b><br />\n"
+"<p>When importing a public key, the key is usually marked as untrusted and "
+"as such cannot be used unless it is signed by the default key (thus making "
+"it 'trusted'). Checking this box enables any key to be used even if it is "
+"untrusted.</p></qt>"
+msgstr ""
+"<qt><b>Дозволити шифрування ненадійними ключами:</b> <br />\n"
+"<p>Під час імпортування відкритого ключа, його, як правило, позначено, як "
+"ненадійний, його неможливо використовувати, поки його не буде підписано "
+"типовим ключем. (Тоді він стане «надійним»). Увімкнувши цей параметр, ви "
+"уможливлюєте використання будь-якого ключа, навіть ненадійного.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:138
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedKeys)
+#: rc.cpp:493 selectpublickeydialog.cpp:100
+msgid "Allow encryption with untrusted keys"
+msgstr "Дозволити шифрування ненадійними ключами"
+
+#. i18n: file: conf_encryption.ui:145
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
+#: rc.cpp:496
+msgid ""
+"<qt><b>Allow untrusted keys as members of key groups:</b><br /><p>A key "
+"group allows simple encryption to multiple recipients at once. Similar to "
+"the <em>Allow encryption with untrusted keys</em> option this allows "
+"untrusted keys to become member of a key group.</p></qt>"
+msgstr ""
+"<qt><b>Дозволити ненадійним ключам бути елементами груп ключів:</b><br /"
+"><p>За допомогою груп ключів можна спростити шифрування даних для декількох "
+"отримувачів одночасно. Подібно до пункту <em>Дозволити шифрування "
+"ненадійними ключами</em>, цей пункт надає програмі змогу використовувати "
+"ненадійні ключі, як елементи подібних груп.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:148
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AllowUntrustedGroupMembers)
+#: rc.cpp:499
+msgid "Allow untrusted keys as members of key groups"
+msgstr "Дозволити ненадійним ключам бути елементами груп ключів"
+
+#. i18n: file: conf_encryption.ui:156
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_HideUserID)
+#: rc.cpp:502
+msgid ""
+"<qt><b>Hide user ID:</b><br /> \n"
+"<p>Checking this option will remove the keyid of the recipient from all "
+"encrypted packets. The advantage: traffic analysis of the encrypted packets "
+"cannot be performed as easily because the recipient is unknown. The "
+"disadvantage: the receiver of the encrypted packets is forced to try all "
+"secret keys before being able to decrypt the packets. This can be a lengthy "
+"process depending on the number of secret keys the receiver holds.</p></qt>"
+msgstr ""
+"<qt><b>Приховувати ІД користувача:</b> \n"
+"<p>Увімкнення цього параметра вилучатиме ІД ключа адресата з усіх "
+"зашифрованих пакетів. Перевага: не так легко зробити аналіз потоку "
+"зашифрованих пакетів, бо одержувач невідомий. Недолік: адресат зашифрованих "
+"пакетів змушений спробувати всі закриті ключі, перш ніж зможе розшифрувати "
+"пакети. Залежно від кількості закритих ключів у адресата, це може бути "
+"тривалим процесом.</p></qt>"
+
+#. i18n: file: conf_encryption.ui:159
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HideUserID)
+#: rc.cpp:506 selectpublickeydialog.cpp:106
+msgid "Hide user id"
+msgstr "Ховати ІД користувача"
+
+#. i18n: file: conf_encryption.ui:167
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_PgpCompatibility)
+#: rc.cpp:509
+msgid ""
+"<qt><b>PGP 6 compatibility:</b><br /> \n"
+"<p>Checking this option forces GnuPG to output encrypted packets that are as "
+"compliant with PGP (Pretty Good Privacy) 6 standards as possible thus "
+"allowing GnuPG users to inter operate with PGP 6 users.</p></qt>"
+msgstr ""
+"<qt><b>Сумісність з PGP 6:</b><br /> \n"
+"<p>Позначення цього пункту, змушує GnuPG видавати зашифровані пакети якомога "
+"сумісніші зі стандартами PGP (ДДК — Досить Добра Конфіденційність) 6, що "
+"надасть змогу користувачам GnuPG співпрацювати з користувачами PGP 6.</p></"
+"qt>"
+
+#. i18n: file: conf_encryption.ui:170
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PgpCompatibility)
+#: rc.cpp:513
+msgid "PGP 6 compatibility"
+msgstr "Сумісність з PGP 6"
+
+#. i18n: file: kgpgrevokewidget.ui:18
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:516
+msgid "Create revocation certificate for"
+msgstr "Створити сертифікат відкликання для"
+
+#. i18n: file: kgpgrevokewidget.ui:28
+#. i18n: ectx: property (text), widget (QLabel, keyID)
+#: rc.cpp:519
+msgid "key id"
+msgstr "ІД ключа"
+
+#. i18n: file: kgpgrevokewidget.ui:45
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:522
+msgid "Reason for revocation:"
+msgstr "Причина відкликання:"
+
+#. i18n: file: kgpgrevokewidget.ui:56
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: rc.cpp:525
+msgid "No Reason"
+msgstr "Без причини"
+
+#. i18n: file: kgpgrevokewidget.ui:61
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: rc.cpp:528
+msgid "Key Has Been Compromised"
+msgstr "Ключ скомпрометовано"
+
+#. i18n: file: kgpgrevokewidget.ui:66
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: rc.cpp:531
+msgid "Key is Superseded"
+msgstr "Ключ замінено"
+
+#. i18n: file: kgpgrevokewidget.ui:71
+#. i18n: ectx: property (text), item, widget (KComboBox, comboBox1)
+#: rc.cpp:534
+msgid "Key is No Longer Used"
+msgstr "Ключ більше не використовується"
+
+#. i18n: file: kgpgrevokewidget.ui:81
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#: rc.cpp:537
+msgid "Description:"
+msgstr "Опис:"
+
+#. i18n: file: kgpgrevokewidget.ui:96
+#. i18n: ectx: property (text), widget (QCheckBox, cbSave)
+#: rc.cpp:540
+msgid "Save certificate:"
+msgstr "Зберегти сертифікат:"
+
+#. i18n: file: kgpgrevokewidget.ui:111
+#. i18n: ectx: property (text), widget (QCheckBox, cbPrint)
+#: rc.cpp:543
+msgid "Print certificate"
+msgstr "Надрукувати сертифікат"
+
+#. i18n: file: kgpgrevokewidget.ui:121
+#. i18n: ectx: property (text), widget (QCheckBox, cbImport)
+#: rc.cpp:546
+msgid "Import into keyring"
+msgstr "Імпортувати у в'язку"
+
+#. i18n: file: conf_servers.ui:25
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
+#: rc.cpp:549
+msgid ""
+"<b>INFORMATION</b>:\n"
+"Only the default server will be stored in GnuPG's configuration file,\n"
+"all others will be stored for use by KGpg only."
+msgstr ""
+"<b>ІНФОРМАЦІЯ</b>:\n"
+"У файлі налаштування GnuPG зберігатиметься лише запис типового сервера,\n"
+"всі інші записи зберігатимуться лише для використання у KGpg."
+
+#. i18n: file: conf_servers.ui:35
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseProxy)
+#: rc.cpp:554
+msgid "Honor HTTP proxy when available"
+msgstr "Використовувати HTTP-проксі, якщо він доступний"
+
+#. i18n: file: conf_servers.ui:49
+#. i18n: ectx: property (text), widget (KPushButton, server_default)
+#: rc.cpp:557
+msgid "&Set as Default"
+msgstr "&Зробити типовим"
+
+#. i18n: file: conf_servers.ui:56
+#. i18n: ectx: property (text), widget (KPushButton, server_add)
+#: rc.cpp:560
+msgid "&Add..."
+msgstr "&Додати..."
+
+#. i18n: file: conf_servers.ui:66
+#. i18n: ectx: property (text), widget (KPushButton, server_del)
+#: rc.cpp:563
+msgid "&Delete"
+msgstr "&Вилучити"
+
+#. i18n: file: conf_servers.ui:73
+#. i18n: ectx: property (text), widget (KPushButton, server_edit)
+#: rc.cpp:566
+msgid "&Edit..."
+msgstr "&Змінити..."
+
+#. i18n: file: editor/kgpgeditor.rc:18
+#. i18n: ectx: Menu (signature)
+#: rc.cpp:572
+msgid "Si&gnature"
+msgstr "П&ідпис"
+
+#. i18n: file: conf_decryption.ui:52
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_4_2)
+#: rc.cpp:575
+msgid ""
+"<qt><b>Custom Decryption Command:</b><br />\n"
+"<p>This option allows the user to specify a custom command to be executed by "
+"GPG when decryption occurs. (This is recommended for advanced users only).</"
+"p></qt>"
+msgstr ""
+"<qt><b>Нетипова команда розшифрування:</b><br />\n"
+"<p>Тут користувач може вказати нетипову команду для виконання GPG під час "
+"розшифровки. (Рекомендується тільки для досвідчених користувачів.)</p></qt>"
+
+#. i18n: file: conf_decryption.ui:55
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
+#: rc.cpp:579
+msgid "Custom decryption command:"
+msgstr "Нетипова команда розшифрування:"
+
+#. i18n: file: searchres.ui:57
 #. i18n: ectx: property (text), widget (QTreeView, kLVsearch)
-#: searchres.ui:57
+#: rc.cpp:585
 msgid "Keys"
 msgstr "Ключі"
 
+#. i18n: file: searchres.ui:67
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: searchres.ui:67
+#: rc.cpp:588
 msgid "Key to import:"
 msgstr "Імпортувати ключ:"
+
+#. i18n: file: conf_gpg.ui:16
+#. i18n: ectx: property (whatsThis), widget (QWidget, GPGConf)
+#: rc.cpp:591
+msgid ""
+"<qt><b>Global Settings:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+msgstr ""
+"<qt><b>Загальні параметри:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+
+#. i18n: file: conf_gpg.ui:22
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox2)
+#: rc.cpp:596
+msgid "GnuPG Home"
+msgstr "Домівка GnuPG"
+
+#. i18n: file: conf_gpg.ui:30
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2)
+#: rc.cpp:599
+msgid ""
+"<b>Home Location</b><p>This is the directory where GnuPG stores its "
+"configuration and the keyrings. If you have not changed it this is usually "
+"<em>~/.gnupg/</em></p>"
+msgstr ""
+"<b>Адреса домівки</b><p>Це каталог, де GnuPG зберігає свої налаштування і "
+"зв’язки ключів. Якщо ви нічого не змінювали, це, зазвичай, <em>~/.gnupg/</"
+"em></p>"
+
+#. i18n: file: conf_gpg.ui:33
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2)
+#: rc.cpp:602
+msgid "Home location:"
+msgstr "Адреса домівки:"
+
+#. i18n: file: conf_gpg.ui:43
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_5_2_2)
+#: rc.cpp:605
+msgid ""
+"<b>Configuration File</b><p>This is the name of the configuration file in "
+"the directory specified above. The default is <em>gnupg.conf</em> while "
+"older versions of GnuPG used <em>options</em>.</p>"
+msgstr ""
+"<b>Файл налаштувань</b><p>Це назва файла налаштувань у каталозі, вказаному "
+"вище. Типовою назвою є <em>gnupg.conf</em>, а старіші версії GnuPG "
+"використовують назву <em>options</em>.</p>"
+
+#. i18n: file: conf_gpg.ui:46
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_5_2_2)
+#: rc.cpp:608
+msgid "Configuration file:"
+msgstr "Файл налаштувань:"
+
+#. i18n: file: conf_gpg.ui:96
+#. i18n: ectx: property (text), widget (QPushButton, changeHome)
+#: rc.cpp:611
+msgid "Change..."
+msgstr "Змінити..."
+
+#. i18n: file: conf_gpg.ui:114
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_6_2)
+#: rc.cpp:617
+msgid ""
+"<b>Program path</b><p>This is the program that will be called for all GnuPG "
+"operations. The default of <em>gpg</em> will work on most systems.</p>"
+msgstr ""
+"<b>Шлях програми</b><p>Це програма, яку буде викликано для проведення всіх "
+"дій GnuPG. Типова назва, <em>gpg</em>, має працювати у більшості систем.</p>"
+
+#. i18n: file: conf_gpg.ui:117
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_6_2)
+#: rc.cpp:620
+msgid "Program path:"
+msgstr "Шлях програми:"
+
+#. i18n: file: conf_gpg.ui:157
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, use_agent)
+#: rc.cpp:623
+msgid ""
+"<b>Use GnuPG agent</b><p>The GnuPG agent stores the passwords for your "
+"secret keys in memory for a limited amount of time. If you use your secret "
+"key again while it is cached you do not have to enter it again. This is less "
+"secure than typing it every time.</p>"
+msgstr ""
+"<b>Використовувати агент GnuPG</b><p>Агент GnuPG зберігає паролі до ваших "
+"секретних ключів у пам’яті деякий проміжок часу. Якщо ви знову "
+"використовуєте секретний ключ у той час, коли він все ще у кеші, вам не "
+"треба його ще раз вводити. Використання агента становить певну небезпеку "
+"порівняно з введенням пароля кожного разу за вимогою.</p>"
+
+#. i18n: file: conf_gpg.ui:160
+#. i18n: ectx: property (text), widget (QCheckBox, use_agent)
+#: rc.cpp:626
+msgid "Use GnuPG agent"
+msgstr "Використовувати агент GnuPG"
+
+#. i18n: file: sourceselect.ui:34
+#. i18n: ectx: property (text), widget (QRadioButton, checkClipboard)
+#. i18n: file: keyexport.ui:45
+#. i18n: ectx: property (text), widget (QRadioButton, checkClipboard)
+#: rc.cpp:629 rc.cpp:644
+msgid "Clipboard"
+msgstr "Кишеня"
+
+#. i18n: file: sourceselect.ui:43
+#. i18n: ectx: property (text), widget (QRadioButton, checkFile)
+#. i18n: file: keyexport.ui:72
+#. i18n: ectx: property (text), widget (QRadioButton, checkFile)
+#: rc.cpp:632 rc.cpp:653
+msgid "File:"
+msgstr "Файл:"
+
+#. i18n: file: sourceselect.ui:67
+#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
+#: rc.cpp:635
+msgid "Keyserver:"
+msgstr "Сервер ключів:"
+
+#. i18n: file: sourceselect.ui:80
+#. i18n: ectx: property (toolTip), widget (KLineEdit, keyIds)
+#: rc.cpp:638
+msgid ""
+"Enter the ids or fingerprints of the keys to import as space separated list."
+msgstr ""
+"Введіть ідентифікатори або відбитки ключів для імпорту. Записи слід "
+"відокремлювати пробілами."
+
+#. i18n: file: keyexport.ui:38
+#. i18n: ectx: property (text), widget (QRadioButton, checkMail)
+#: rc.cpp:641
+msgctxt "Export a key via email"
+msgid "Email"
+msgstr "Надіслати ел. поштою"
+
+#. i18n: file: keyexport.ui:55
+#. i18n: ectx: property (toolTip), widget (QRadioButton, checkServer)
+#: rc.cpp:647
+msgid ""
+"You must define at least one keyserver in settings before you can export to "
+"one."
+msgstr ""
+"Перш ніж виконувати експортування, вам слід визначити у параметрах програми "
+"принаймні один сервер ключів."
+
+#. i18n: file: keyexport.ui:92
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup3)
+#: rc.cpp:656
+msgid "Export Settings"
+msgstr "Параметри експорту"
+
+#. i18n: file: keyexport.ui:98
+#. i18n: ectx: property (text), widget (QRadioButton, checkAttrAll)
+#: rc.cpp:659
+msgid "Export everything"
+msgstr "Експортувати все"
+
+#. i18n: file: keyexport.ui:108
+#. i18n: ectx: property (text), widget (QRadioButton, checkAttrPhoto)
+#: rc.cpp:662
+msgid "Do not export attributes (photo ids)"
+msgstr "Не експортувати атрибути (фото ІД)"
+
+#. i18n: file: keyexport.ui:115
+#. i18n: ectx: property (text), widget (QRadioButton, checkAttrClean)
+#: rc.cpp:665
+msgctxt ""
+"@option:radio Exports the smallest key possible. Maps to export-minimal "
+"option of gpg"
+msgid "Clean key"
+msgstr "Очистити ключ"
+
+#. i18n: file: conf_misc.ui:24
+#. i18n: ectx: attribute (title), widget (QWidget, tabGlobal)
+#: rc.cpp:668
+msgid "Global Settings"
+msgstr "Загальні параметри"
+
+#. i18n: file: conf_misc.ui:33
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutoStart)
+#: rc.cpp:671
+msgid ""
+"<qt><b>Start KGpg automatically at KDE startup:</b><br />\n"
+"<p>If checked KGpg will start automatically each time that KDE starts up.</"
+"p></qt>"
+msgstr ""
+"<qt><b>Запускати KGpg автоматично при вході в KDE:</b><br />\n"
+"<p>Якщо увімкнено, KGpg буде автоматично запускатись разом з KDE.</p></qt>"
+
+#. i18n: file: conf_misc.ui:36
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoStart)
+#: rc.cpp:675
+msgid "Start KGpg automatically at login"
+msgstr "Запускати KGpg автоматично при вході в систему"
+
+#. i18n: file: conf_misc.ui:53
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_UseMouseSelection)
+#: rc.cpp:678
+msgid ""
+"<qt><b>Use mouse selection instead of clipboard:</b><br />\n"
+"<p>If checked, clipboard operations in KGpg will use the selection "
+"clipboard, that means highlighting a text to copy, and middle button (or "
+"right+left together) to paste. If this option is not checked, the clipboard "
+"will work with Key shortcuts (Ctrl-c, Ctrl-v).</p></qt> "
+msgstr ""
+"<qt><b>Замість кишені використовувати позначене мишкою:</b> <br />\n"
+"<p>Якщо ввімкнено, KGpg використовуватиме кишеню вибраного, що означає "
+"позначення тексту для копіювання, і натискання на середню кнопку (або на "
+"ліву + праву разом) для вставлення. Якщо цей параметр не ввімкнено, кишеня "
+"працюватиме від гарячих клавіш (Ctrl-c, Ctrl-v).</p></qt> "
+
+#. i18n: file: conf_misc.ui:56
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseMouseSelection)
+#: rc.cpp:682
+msgid "Use mouse selection instead of clipboard"
+msgstr "Замість кишені використовувати позначене мишкою"
+
+#. i18n: file: conf_misc.ui:70
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_RemoteFileWarn)
+#: rc.cpp:685
+msgid ""
+"<qt><b>Display warning before creating temporary files:</b><br />\n"
+"<p></p></qt>"
+msgstr ""
+"<qt><b>Перед створенням тимчасових файлів показувати попередження:</b><br /"
+">\n"
+"<p></p></qt>"
+
+#. i18n: file: conf_misc.ui:74
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_RemoteFileWarn)
+#: rc.cpp:689
+msgid ""
+"Display warning before creating temporary files\n"
+"(only occurs on remote files operations)"
+msgstr ""
+"Попереджати перед створенням тимчасових файлів \n"
+"(Може статись тільки при діях з віддаленими файлами)"
+
+#. i18n: file: conf_misc.ui:97
+#. i18n: ectx: attribute (title), widget (QWidget, tabApplet)
+#: rc.cpp:693
+msgid "Applet && Menus"
+msgstr "Аплет і меню"
+
+#. i18n: file: conf_misc.ui:103
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox11)
+#: rc.cpp:696
+msgid "Konqueror Service Menus"
+msgstr "Меню служб Konqueror"
+
+#. i18n: file: conf_misc.ui:119
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1)
+#: rc.cpp:699
+msgid ""
+"<qt><b>Sign file service menu:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+msgstr ""
+"<qt><b>Службове меню підписування файла:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+
+#. i18n: file: conf_misc.ui:122
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:704
+msgid "Sign file service menu:"
+msgstr "Службове меню підписування файла:"
+
+#. i18n: file: conf_misc.ui:144
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_SignMenu)
+#. i18n: file: conf_misc.ui:183
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
+#: rc.cpp:710 rc.cpp:724
+msgid "Enable with All Files"
+msgstr "Уможливити з усіма файлами"
+
+#. i18n: file: conf_misc.ui:164
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel1_3)
+#: rc.cpp:713
+msgid ""
+"<qt><b>Decrypt file service menu:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+msgstr ""
+"<qt><b>Службове меню розшифрування файла:</b><br />\n"
+"<p></p>\n"
+"</qt>"
+
+#. i18n: file: conf_misc.ui:167
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:718
+msgid "Decrypt file service menu:"
+msgstr "Службове меню розшифрування файла:"
+
+#. i18n: file: conf_misc.ui:188
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_DecryptMenu)
+#: rc.cpp:727
+msgid "Enable with Encrypted Files"
+msgstr "Уможливити з зашифрованими файлами"
+
+#. i18n: file: conf_misc.ui:201
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox3)
+#: rc.cpp:730
+msgid "System Tray Applet"
+msgstr "Аплет системного лотка"
+
+#. i18n: file: conf_misc.ui:208
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_ShowSystray)
+#: rc.cpp:733
+msgid ""
+"<qt><b>Show system tray icon:</b><br />\n"
+"<p>If checked KGpg will minimize to an icon in the system tray.</p></qt>"
+msgstr ""
+"<qt><b>Показувати піктограму у системному лотку:</b><br />\n"
+"<p>Якщо позначено, KGpg буде згортатися у піктограму у системному лотку.</"
+"p></qt>"
+
+#. i18n: file: conf_misc.ui:211
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSystray)
+#: rc.cpp:737
+msgid "Show system tray icon"
+msgstr "Показувати піктограму системного лотка"
+
+#. i18n: file: conf_misc.ui:223
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: rc.cpp:740
+msgid "Left mouse click opens:"
+msgstr "Клацання лівою кнопкою миші відкриває:"
+
+#. i18n: file: conf_misc.ui:240
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
+#: rc.cpp:743
+msgid "Key Manager"
+msgstr "Керування ключами"
+
+#. i18n: file: conf_misc.ui:245
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_LeftClick)
+#. i18n: file: conf_misc.ui:272
+#. i18n: ectx: attribute (title), widget (QWidget, tabEditor)
+#: rc.cpp:746 rc.cpp:749 editor/kgpgeditor.cpp:504
+msgid "Editor"
+msgstr "Редактор"
+
+#. i18n: file: conf_misc.ui:280
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:752
+msgid "Recent files"
+msgstr "Нещодавні файли"
+
+#. i18n: file: conf_misc.ui:306
+#. i18n: ectx: attribute (title), widget (QWidget, tabSigning)
+#: rc.cpp:755
+msgid "Key Signing"
+msgstr "Підписування ключів"
+
+#. i18n: file: conf_misc.ui:314
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#: rc.cpp:758
+msgid ""
+"Here you can define how User Ids that do not contain an email address (like "
+"Photo Ids) are sent to the key owner. You can choose to either send them "
+"with every other User Id you signed, only with the first Id you signed or to "
+"not send them at all."
+msgstr ""
+"Тут ви можете визначити спосіб надсилання власникові ключа ідентифікаторів "
+"користувача, які не містять адрес електронної пошти (наприклад, "
+"фотографічних ідентифікаторів). Ви можете надсилати їх з кожним "
+"ідентифікатором користувача, який ви підписуєте, надсилати їх лише з першим "
+"ідентифікатором, який ви підписуєте або не надсилати їх взагалі."
+
+#. i18n: file: conf_misc.ui:317
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:761
+msgid "Mailing of User Ids without Email Addresses"
+msgstr "Надсилання ідентифікаторів користувачів без адрес ел. пошти"
+
+#. i18n: file: conf_misc.ui:325
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
+#: rc.cpp:764
+msgid "Send with every Email"
+msgstr "Надсилати з кожним повідомленням"
+
+#. i18n: file: conf_misc.ui:330
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
+#: rc.cpp:767
+msgid "Send only with first Email"
+msgstr "Надсилати лише з першим повідомленням"
+
+#. i18n: file: conf_misc.ui:335
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_MailUats)
+#: rc.cpp:770
+msgid "Do not send"
+msgstr "Не надсилати"
+
+#. i18n: file: conf_misc.ui:345
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:773
+msgid "Email template"
+msgstr "Шаблон повідомлення"
+
+#. i18n: file: conf_misc.ui:353
+#. i18n: ectx: property (whatsThis), widget (KTextEdit, EmailTemplateEdit)
+#: rc.cpp:777
+#, no-c-format
+msgid ""
+"This is the text of the email sent by the \"Sign and Mail User ID\" action.\n"
+"\n"
+"The placeholders surrounded by the percent signs (like %KEYID%) will be "
+"replaced with the corresponding text for every single mail."
+msgstr ""
+"Це текст повідомлення, яке буде надіслано у відповідь на виконання дії "
+"«Підписати і надіслати ідентифікатор користувача».\n"
+"\n"
+"Рядки між символами відсотків (зокрема %KEYID%) буде замінено на відповідний "
+"текст у кожному з повідомлень електронної пошти."
 
 #: selectexpirydate.cpp:27
 msgid "Choose New Expiration"
@@ -3540,12 +3317,10 @@ msgid "Select Public Key"
 msgstr "Вибрати відкритий ключ"
 
 #: selectpublickeydialog.cpp:57
-#, kde-format
 msgid "Select Public Key for %1"
 msgstr "Вибрати відкритий ключ для %1"
 
 #: selectpublickeydialog.cpp:60
-#, kde-format
 msgid "Select Public Key for %2 and one more file"
 msgid_plural "Select Public Key for %2 and %1 more files"
 msgstr[0] "Вибір відкритого ключа для %2 та ще %1 файла"
@@ -3628,7 +3403,6 @@ msgid "Choose secret key for signing:"
 msgstr "Вибрати закритий ключ для підписування:"
 
 #: selectsecretkey.cpp:54
-#, kde-format
 msgid ""
 "How carefully have you checked that the key really belongs to the person "
 "with whom you wish to communicate:"
@@ -3672,146 +3446,427 @@ msgstr "Локальний підпис (не можна експортуват�
 msgid "Do not sign all user id's (open terminal)"
 msgstr "Не підписувати всі ІД-ри користувача (відкрити термінал)"
 
-#. i18n: ectx: property (text), widget (QRadioButton, checkServer)
-#: sourceselect.ui:67
-msgid "Keyserver:"
-msgstr "Сервер ключів:"
+#: core/KGpgGroupNode.cpp:164
+msgid "1 key"
+msgid_plural "%1 keys"
+msgstr[0] "%1 ключ"
+msgstr[1] "%1 ключі"
+msgstr[2] "%1 ключів"
+msgstr[3] "1 ключ"
 
-#. i18n: ectx: property (toolTip), widget (KLineEdit, keyIds)
-#: sourceselect.ui:80
-msgid ""
-"Enter the ids or fingerprints of the keys to import as space separated list."
-msgstr ""
-"Введіть ідентифікатори або відбитки ключів для імпорту. Записи слід "
-"відокремлювати пробілами."
+#: core/KGpgKeyNode.cpp:84
+msgctxt "size of signing key / size of encryption key"
+msgid "%1 / %2"
+msgstr "%1 / %2"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:2
-msgid ""
-"<p>If you want to decrypt a text file, simply drag and drop it into the "
-"editor window. KGpg will do the rest. Even remote files can be dropped.</p>\n"
-"<p>Drag a public key into the editor window and kgpg will automatically "
-"import it if you want.</p>\n"
-msgstr ""
-"<p>Якщо ви хочете розшифрувати текстовий файл, перетягніть і відпустіть його "
-"у вікні редактора. Решту зробить Kgpg. Це можна робити навіть з віддаленими "
-"файлами.</p>\n"
-"<p>Перетягніть відкритий ключ у вікно редактора і kgpg його автоматично "
-"імпортує, якщо ви цього хочете.</p>\n"
+#: core/KGpgKeyNode.cpp:170 core/KGpgSignableNode.cpp:48
+msgid "1 signature"
+msgid_plural "%1 signatures"
+msgstr[0] "%1 підпис"
+msgstr[1] "%1 підписи"
+msgstr[2] "%1 підписів"
+msgstr[3] "1 підпис"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:7
-msgid ""
-"<p>The easiest way to encrypt a file: simply right click on the file, and "
-"you have an encrypt option in the contextual menu.\n"
-"This works in <strong>konqueror</strong> or on your Desktop!</p>\n"
-msgstr ""
-"<p>Найпростіший шлях зашифрувати файл — це клацнути правою кнопкою мишки на "
-"позначці файла: у контекстному меню ви побачите пункт шифрування.\n"
-"Подібний спосіб працюватиме у <strong>konqueror</strong> і на вашій "
-"стільниці!</p>\n"
+#: core/KGpgNode.cpp:56
+msgctxt "Name of uid (comment)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:13
-msgid ""
-"<p>If you want to encrypt a message for several persons, just select several "
-"encryption keys by pressing the &quot;Ctrl&quot; key.</p>\n"
-msgstr ""
-"<p>Якщо ви хочете зашифрувати повідомлення для декількох осіб, виберіть "
-"декілька шифрувальних ключів за допомогою утримання клавіші &quot;Ctrl&quot;."
-"</p>\n"
+#: core/KGpgRefNode.cpp:128 transactions/kgpgtransaction.cpp:634
+msgid "[No user id found]"
+msgstr "[Не знайдено ІД користувача]"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:18
-msgid ""
-"<p><strong>You do not have to be an expert in encryption to use this tool?</"
-"strong><br>\n"
-"Simply create yourself a key pair in the key management window. Then, export "
-"your public key and mail it to your friends.<br>\n"
-"Ask them to do the same and import their public keys. Finally, to send an "
-"encrypted message, type it in the KGpg editor, then click &quot;"
-"encrypt&quot;. Choose\n"
-"your friend's key and click &quot;encrypt&quot; again. The message will be "
-"encrypted, ready to be sent by email.</p>\n"
-msgstr ""
-"<p><strong>Вам не потрібно бути експертом, щоб користуватися цією програмою?"
-"</strong><br>\n"
-"Просто створіть собі пару ключів у вікні керування ключами. Потім "
-"експортуйте ваш відкритий ключ і надішліть його вашим друзям.<br>\n"
-"Попросіть їх зробити те саме і імпортуйте їхні відкриті ключі. Нарешті, щоб "
-"надіслати зашифроване повідомлення, введіть його в редакторі KGpg, потім "
-"натисніть «зашифрувати». Виберіть \n"
-"ключ вашого друга і знов натисніть «зашифрувати». Повідомлення буде "
-"зашифроване й готове для пересилання електронною поштою.</p>\n"
+#: core/KGpgSignNode.cpp:88
+msgid "%1 [local signature]"
+msgstr "%1 [локальний підпис]"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:26
-msgid ""
-"<p>To perform an operation on a key, open the key management window and "
-"right click on the key. A popup menu with all available options will appear."
-"</p>\n"
-msgstr ""
-"<p>Щоб виконати дію над ключем, відкрийте вікно керування ключами і клацніть "
-"правою кнопкою мишки по ключу. З'явиться меню з усіма можливими діями.</p>\n"
+#: core/KGpgSubkeyNode.cpp:86
+msgid "%1 subkey"
+msgstr "%1 підключ"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:31
-msgid ""
-"<p>Decrypt a file with a single mouse click on it. You will then be prompted "
-"for password, and then that is it!</p>\n"
-msgstr ""
-"<p>Розшифруйте файл одним клацанням мишки на ньому. У вас запитають пароль і "
-"це все!</p>\n"
+#: core/KGpgUatNode.cpp:105
+msgid "Photo id"
+msgstr "Фото ІД"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:36
-msgid ""
-"<p>If you only want to open the key manager, type this in the command line "
-"prompt: <pre>kgpg -k</pre>\n"
-"The editor can be reached by: <pre>kgpg -d</pre></p>\n"
-msgstr ""
-"<p>Якщо ви хочете відкрити тільки керування ключами, введіть <pre>kgpg -k</"
-"pre> в запрошенні командного рядка. Доступ до редактора можна отримати за "
-"допомогою команди <pre>kgpg -d</pre></p>\n"
+#: core/convert.cpp:39
+msgctxt "Encryption algorithm"
+msgid "RSA"
+msgstr "RSA"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:42
-msgid ""
-"<p>To open a file in the KGpg's editor and immediately decrypt it type: "
-"<pre>kgpg -s filename</pre></p>\n"
-msgstr ""
-"<p>Щоб відкрити файл у редакторі KGpg і негайно розшифрувати його виконайте "
-"команду: <pre>kgpg -s назва_файла</pre></p>\n"
+#: core/convert.cpp:41
+msgctxt "Encryption algorithm"
+msgid "DSA"
+msgstr "DSA"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:47
-msgid ""
-"<p>If you want to change the password or expiration of a secret key simply "
-"double click on it to get the key properties dialog.</p>\n"
-msgstr ""
-"<p>Якщо ви бажаєте змінити пароль або строк дії секретного ключа, просто "
-"двічі клацніть по ньому, щоб отримати доступ до вікна його властивостей.</"
-"p>\n"
+#: core/convert.cpp:43
+msgctxt "Encryption algorithm"
+msgid "ElGamal"
+msgstr "ElGamal"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:52
-msgid ""
-"<p>You can reach your default key by pressing &quot;Ctrl+Home&quot; in the "
-"key manager.</p>\n"
-msgstr ""
-"<p>Ви можете отримати доступ до вашого типового ключа, якщо натиснете &quot;"
-"Ctrl+Home&quot; у керуванні ключами.</p>\n"
+#: core/convert.cpp:45
+msgctxt "Encryption algorithm"
+msgid "DSA & ElGamal"
+msgstr "DSA і ElGamal"
 
-#. i18n: ectx: @info:tipoftheday
-#: tips:57
+#: core/convert.cpp:47
+msgctxt "Encryption algorithm RSA, Signing algorithm RSA"
+msgid "RSA & RSA"
+msgstr "RSA і RSA"
+
+#: core/convert.cpp:50
+msgctxt "Unknown algorithm"
+msgid "Unknown"
+msgstr "Невідомий"
+
+#: core/convert.cpp:58
+msgid "Do not Know"
+msgstr "Я не знаю"
+
+#: core/convert.cpp:60
+msgid "Do NOT Trust"
+msgstr "Я НЕ довіряю"
+
+#: core/convert.cpp:69
+msgctxt "Unknown trust in key owner"
+msgid "Unknown"
+msgstr "Невідома"
+
+#: core/convert.cpp:77
+msgctxt "Invalid key"
+msgid "Invalid"
+msgstr "Некоректний"
+
+#: core/convert.cpp:79
+msgctxt "Disabled key"
+msgid "Disabled"
+msgstr "Вимкнений"
+
+#: core/convert.cpp:81
+msgid "Revoked"
+msgstr "Анульований"
+
+#: core/convert.cpp:83 model/groupeditproxymodel.cpp:110
+msgctxt "Expired key"
+msgid "Expired"
+msgstr "Застарілий"
+
+#: core/convert.cpp:85
+msgctxt "Undefined key trust"
+msgid "Undefined"
+msgstr "Невизначена"
+
+#: core/convert.cpp:87
+msgctxt "No trust in key"
+msgid "None"
+msgstr "Немає"
+
+#: core/convert.cpp:89
+msgctxt "Marginal trust in key"
+msgid "Marginal"
+msgstr "Неповна"
+
+#: core/convert.cpp:91
+msgctxt "Full trust in key"
+msgid "Full"
+msgstr "Повна"
+
+#: core/convert.cpp:93
+msgctxt "Ultimate trust in key"
+msgid "Ultimate"
+msgstr "Безмежна"
+
+#: core/convert.cpp:96
+msgctxt "Unknown trust in key"
+msgid "Unknown"
+msgstr "Невідома"
+
+#: core/convert.cpp:105
+msgctxt "key capability"
+msgid "Signature"
+msgstr "Підписування"
+
+#: core/convert.cpp:107
+msgctxt "key capability"
+msgid "Encryption"
+msgstr "Шифрування"
+
+#: core/convert.cpp:109
+msgctxt "key capability"
+msgid "Authentication"
+msgstr "Розпізнавання"
+
+#: core/convert.cpp:111
+msgctxt "key capability"
+msgid "Certification"
+msgstr "Сертифікація"
+
+#: core/convert.cpp:113
+msgctxt "used to join a list of key types, e.g. 'encryption, signature'"
+msgid ", "
+msgstr ", "
+
+#: editor/kgpgeditor.cpp:91 editor/kgpgeditor.cpp:241
+#: editor/kgpgeditor.cpp:749 editor/kgpgeditor.cpp:778
+msgid "Untitled"
+msgstr "Без назви"
+
+#: editor/kgpgeditor.cpp:187
+msgid "&Encrypt File..."
+msgstr "&Зашифрувати файл..."
+
+#: editor/kgpgeditor.cpp:191
+msgid "&Decrypt File..."
+msgstr "&Розшифрувати файл..."
+
+#: editor/kgpgeditor.cpp:195
+msgid "&Open Key Manager"
+msgstr "&Відкрити керування ключами"
+
+#: editor/kgpgeditor.cpp:198
+msgid "&Generate Signature..."
+msgstr "&Створити підпис..."
+
+#: editor/kgpgeditor.cpp:202
+msgid "&Verify Signature..."
+msgstr "&Перевірити підпис..."
+
+#: editor/kgpgeditor.cpp:205
+msgid "&Check MD5 Sum..."
+msgstr "П&еревірити суму MD5..."
+
+#: editor/kgpgeditor.cpp:208
+msgid "&Unicode (utf-8) Encoding"
+msgstr "Кодування &юнікод (utf-8)"
+
+#: editor/kgpgeditor.cpp:214
+msgid "En&crypt"
+msgstr "&Зашифрувати"
+
+#: editor/kgpgeditor.cpp:218
+msgid "&Decrypt"
+msgstr "&Розшифрувати"
+
+#: editor/kgpgeditor.cpp:222
+msgid "S&ign/Verify"
+msgstr "П&ідписати/Перевірити"
+
+#: editor/kgpgeditor.cpp:245
 msgid ""
-"<p>The number of signatures is shown as a tooltip if you hover the mouse on "
-"the size column in key manager. A key has to be expanded once for this to "
-"work.</p>\n"
+"The document \"%1\" has changed.\n"
+"Do you want to save it?"
 msgstr ""
-"<p>Кількість підписів буде показано у вигляді підказки, якщо ви затримаєте "
-"вказівник миші над стовпчиком розміру у керуванні ключами. Щоб це "
-"спрацювало, слід хоча б одного разу розкрити ключ.</p>\n"
+"Документ «%1» було змінено.\n"
+"Хочете зберегти зміни?"
+
+#: editor/kgpgeditor.cpp:246
+msgid "Close the document"
+msgstr "Закрити документ"
+
+#: editor/kgpgeditor.cpp:292
+msgid ""
+"The document could not been saved, as the selected codec is not supported."
+msgstr ""
+"Не вдалось зберегти документ, оскільки підтримки вказаного кодеку не "
+"передбачено."
+
+#: editor/kgpgeditor.cpp:298
+msgid ""
+"The document could not been saved, as the selected encoding cannot encode "
+"every unicode character in it."
+msgstr ""
+"Не вдалось зберегти документ, оскільки вибране кодування нездатне закодувати "
+"в ньому кожний символ юнікоду."
+
+#: editor/kgpgeditor.cpp:307 editor/kgpgeditor.cpp:326
+msgid ""
+"The document could not be saved, please check your permissions and disk "
+"space."
+msgstr ""
+"Документ неможливо було зберегти. Будь ласка, перевірте ваші права доступу і "
+"чи достатньо вільного місця на диску."
+
+#: editor/kgpgeditor.cpp:470 editor/kgpgeditor.cpp:479
+#: editor/kgpgeditor.cpp:614 editor/kgpgeditor.cpp:652
+#: editor/kgpgeditor.cpp:690
+msgid "*|All Files"
+msgstr "*|Всі файли"
+
+#: editor/kgpgeditor.cpp:470
+msgid "Open File to Encode"
+msgstr "Відкрити файл для кодування"
+
+#: editor/kgpgeditor.cpp:479
+msgid "Open File to Decode"
+msgstr "Відкрити файл для декодування"
+
+#: editor/kgpgeditor.cpp:493
+msgid "Decrypt File To"
+msgstr "Розшифрувати файл у"
+
+#: editor/kgpgeditor.cpp:614
+msgid "Open File to Sign"
+msgstr "Відкрити файл для підпису"
+
+#: editor/kgpgeditor.cpp:652 editor/kgpgeditor.cpp:690
+msgid "Open File to Verify"
+msgstr "Відкрити файл для перевірки"
+
+#: editor/kgpgeditor.cpp:703 editor/kgpgtextedit.cpp:333
+msgid ""
+"<qt><b>Missing signature:</b><br />Key id: %1<br /><br />Do you want to "
+"import this key from a keyserver?</qt>"
+msgstr ""
+"<qt><b>Немає підпису:</b><br />ІД ключа: %1<br /><br />Хочете імпортувати "
+"цей ключ з сервера ключів?</qt>"
+
+#: editor/kgpgeditor.cpp:730 transactions/kgpgverify.cpp:149
+msgid "No signature found."
+msgstr "Підпис не знайдено."
+
+#: editor/kgpgmd5widget.cpp:28
+msgid "MD5 Checksum"
+msgstr "Контрольна сума MD5"
+
+#: editor/kgpgmd5widget.cpp:31
+msgid "Compare MD5 with Clipboard"
+msgstr "Порівняти MD5 з кишенею"
+
+#: editor/kgpgmd5widget.cpp:46
+msgid "MD5 sum for <b>%1</b> is:"
+msgstr "Контрольна сума MD5 для <b>%1</b>:"
+
+#: editor/kgpgmd5widget.cpp:59
+msgid "<b>Unknown status</b>"
+msgstr "<b>Невідомий стан</b>"
+
+#: editor/kgpgmd5widget.cpp:84
+msgid "Clipboard content is not a MD5 sum."
+msgstr "Вміст кишені не є сумою MD5."
+
+#: editor/kgpgmd5widget.cpp:88
+msgid "<b>Correct checksum</b>, file is ok."
+msgstr "<b>Контрольна сума правильна</b>, файл не пошкоджено."
+
+#: editor/kgpgmd5widget.cpp:94
+msgid "<b>Wrong checksum, <em>file corrupted</em></b>"
+msgstr "<b>Неправильна контрольна сума, <em>файл пошкоджений</em></b>"
+
+#: editor/kgpgtextedit.cpp:90
+msgid ""
+"<qt><b>Remote file dropped</b>.<br />The remote file will now be copied to a "
+"temporary file to process requested operation. This temporary file will be "
+"deleted after operation.</qt>"
+msgstr ""
+"<qt><b>Скидання віддаленого файла</b>.<br />Для здійснення викликаної дії "
+"віддалений файл буде скопійовано в тимчасовий. Цей тимчасовий файл буде "
+"вилучено після виконання дії.</qt>"
+
+#: editor/kgpgtextedit.cpp:94
+msgid "Could not download file."
+msgstr "Не вдалося звантажити файл."
+
+#: editor/kgpgtextedit.cpp:127
+msgid ""
+"<qt>This file is a <b>public</b> key.<br />Do you want to import it instead "
+"of opening it in editor?</qt>"
+msgstr ""
+"<qt>Цей файл є <b>відкритим</b> ключем.<br />Бажаєте імпортувати його "
+"замість відкриття у редакторі?</qt>"
+
+#: editor/kgpgtextedit.cpp:130
+msgid ""
+"<qt>This file is a <b>private</b> key.<br />Do you want to import it instead "
+"of opening it in editor?</qt>"
+msgstr ""
+"<qt>Цей файл є <b>закритим</b> ключем.<br />Бажаєте імпортувати його замість "
+"відкриття у редакторі?</qt>"
+
+#: editor/kgpgtextedit.cpp:135
+msgid "Key file dropped on Editor"
+msgstr "У вікно редактора скинуто файл ключа"
+
+#: editor/kgpgtextedit.cpp:286
+msgid "Signing not possible: bad passphrase or missing key"
+msgstr "Неможливо підписати: помилковий пароль або немає ключа"
+
+#: editor/kgpgtextedit.cpp:327
+msgid "Import key in your list"
+msgstr "Імпортувати ключ у ваш список"
+
+#: editor/kgpgtextedit.cpp:330
+msgid "Do &Not Import"
+msgstr "&Не імпортувати"
+
+#: editor/kgpgtextedit.cpp:331
+msgid "Will not import this key in your list"
+msgstr "Не імпортуватиме цей ключ у ваш список"
+
+#: editor/kgpgtextedit.cpp:333
+msgid "Missing Key"
+msgstr "Відсутній ключ"
+
+#: model/gpgservermodel.cpp:91
+msgctxt "Mark default keyserver in GUI"
+msgid "%1 (Default)"
+msgstr "%1 (Типовий)"
+
+#: model/keylistproxymodel.cpp:191 transactions/kgpgimport.cpp:193
+msgctxt "ID: Name"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: model/keylistproxymodel.cpp:193 transactions/kgpgimport.cpp:195
+msgctxt "ID: Name <Email>"
+msgid "%1: %2 &lt;%3&gt;"
+msgstr "%1: %2 &lt;%3&gt;"
+
+#: model/keylistproxymodel.cpp:198
+msgctxt "Name <Email>: ID"
+msgid "%1 &lt;%2&gt;: %3"
+msgstr "%1 &lt;%2&gt;: %3"
+
+#: model/kgpgitemmodel.cpp:270 model/kgpgitemmodel.cpp:273
+msgid "1 Key"
+msgid_plural "%1 Keys"
+msgstr[0] "%1 ключ"
+msgstr[1] "%1 ключі"
+msgstr[2] "%1 ключів"
+msgstr[3] "1 ключ"
+
+#: model/kgpgitemmodel.cpp:274
+msgid "1 Group"
+msgid_plural "%1 Groups"
+msgstr[0] "%1 група"
+msgstr[1] "%1 групи"
+msgstr[2] "%1 груп"
+msgstr[3] "1 група"
+
+#: model/kgpgitemmodel.cpp:276
+msgctxt "%1 = something like 7 keys, %2 = something like 2 groups"
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: model/kgpgitemmodel.cpp:378
+msgid "ID"
+msgstr "ІД"
+
+#: model/kgpgsearchresultmodel.cpp:126
+msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009, revoked"
+msgid "ID %1, %2-bit %3 key, created %4, revoked"
+msgstr "ІД: %1, %2-бітовий ключ %3, створений %4, анульовано"
+
+#: model/kgpgsearchresultmodel.cpp:131
+msgctxt "example: ID abc123xy, 1024-bit RSA key, created Jan 12 2009"
+msgid "ID %1, %2-bit %3 key, created %4"
+msgstr "ІД: %1, %2-бітовий ключ %3, створений %4"
+
+#: model/kgpgsearchresultmodel.cpp:220
+msgid "One Photo ID"
+msgid_plural "%1 Photo IDs"
+msgstr[0] "%1 фотоідентифікатор"
+msgstr[1] "%1 фотоідентифікатора"
+msgstr[2] "%1 фотоідентифікаторів"
+msgstr[3] "Один фотоідентифікатор"
 
 #: transactions/kgpgaddphoto.cpp:41
 msgid "This image is very large. Use it anyway?"
@@ -3826,12 +3881,10 @@ msgid "Do Not Use"
 msgstr "Не використовувати"
 
 #: transactions/kgpgchangepass.cpp:69
-#, kde-format
 msgid "Enter old passphrase for <b>%1</b>"
 msgstr "Введіть старий пароль для <b>%1</b>"
 
 #: transactions/kgpgchangepass.cpp:71
-#, kde-format
 msgid ""
 "<qt>Enter new passphrase for <b>%1</b><br />If you forget this passphrase "
 "all your encrypted files and messages will be inaccessible.</qt>"
@@ -3840,24 +3893,20 @@ msgstr ""
 "ваші шифровані файли і повідомлення стануть недоступними.</qt>"
 
 #: transactions/kgpgdecrypt.cpp:118
-#, kde-format
 msgctxt "Status message 'Decrypting <filename>' (operation starts)"
 msgid "Decrypting %1"
 msgstr "Розшифровується %1"
 
 #: transactions/kgpgdecrypt.cpp:121
-#, kde-format
 msgctxt "Status message 'Decrypted <filename>' (operation was completed)"
 msgid "Decrypted %1"
 msgstr "Розшифровано %1"
 
 #: transactions/kgpggeneratekey.cpp:64
-#, kde-format
 msgid "Generating New Key for %1"
 msgstr "Створення нового ключа для %1"
 
 #: transactions/kgpggeneratekey.cpp:137
-#, kde-format
 msgid ""
 "<p><b>Enter passphrase for %1 &lt;%2&gt;</b>:<br />Passphrase should include "
 "non alphanumeric characters and random sequences.</p>"
@@ -3866,7 +3915,6 @@ msgstr ""
 "буквено-цифрові символи і випадкові послідовності.</p>"
 
 #: transactions/kgpggeneratekey.cpp:140
-#, kde-format
 msgid ""
 "<p><b>Enter passphrase for %1</b>:<br />Passphrase should include non "
 "alphanumeric characters and random sequences.</p>"
@@ -3908,17 +3956,14 @@ msgstr ""
 "створення ключа."
 
 #: transactions/kgpggeneratekey.cpp:217
-#, kde-format
 msgid "Key %1 generated"
 msgstr "Створено ключ %1"
 
 #: transactions/kgpggeneraterevoke.cpp:48
-#, kde-format
 msgid "Generating Revocation Certificate for key %1"
 msgstr "Створення сертифіката відкликання для ключа %1"
 
 #: transactions/kgpgimport.cpp:128
-#, kde-format
 msgid ""
 "The import result string has an unsupported format in line %1.<br />Please "
 "see the detailed log for more information."
@@ -3934,7 +3979,6 @@ msgstr ""
 "щоб отримати докладніші відомості."
 
 #: transactions/kgpgimport.cpp:141
-#, kde-format
 msgid "<qt>%1 key processed.</qt>"
 msgid_plural "<qt>%1 keys processed.</qt>"
 msgstr[0] "<qt>%1 ключ опрацьовано.</qt>"
@@ -3943,7 +3987,6 @@ msgstr[2] "<qt>%1 ключів опрацьовано.</qt>"
 msgstr[3] "<qt>%1 ключ опрацьовано.</qt>"
 
 #: transactions/kgpgimport.cpp:144
-#, kde-format
 msgid "<qt><br />One key without ID.</qt>"
 msgid_plural "<qt><br />%1 keys without ID.</qt>"
 msgstr[0] "<qt><br />%1 ключ без ІД.</qt>"
@@ -3952,7 +3995,6 @@ msgstr[2] "<qt><br />%1 ключів без ІД.</qt>"
 msgstr[3] "<qt><br />Один ключ без ІД.</qt>"
 
 #: transactions/kgpgimport.cpp:146
-#, kde-format
 msgid "<qt><br /><b>One key imported:</b></qt>"
 msgid_plural "<qt><br /><b>%1 keys imported:</b></qt>"
 msgstr[0] "<qt><br /><b>Імпортовано %1 ключ:</b></qt>"
@@ -3961,7 +4003,6 @@ msgstr[2] "<qt><br /><b>Імпортовано %1 ключів:</b></qt>"
 msgstr[3] "<qt><br /><b>Імпортовано один ключ:</b></qt>"
 
 #: transactions/kgpgimport.cpp:148
-#, kde-format
 msgid "<qt><br />One RSA key imported.</qt>"
 msgid_plural "<qt><br />%1 RSA keys imported.</qt>"
 msgstr[0] "<qt><br />Імпортовано %1 ключ RSA.</qt>"
@@ -3970,7 +4011,6 @@ msgstr[2] "<qt><br />Імпортовано %1 ключів RSA.</qt>"
 msgstr[3] "<qt><br />Імпортовано один ключ RSA.</qt>"
 
 #: transactions/kgpgimport.cpp:150
-#, kde-format
 msgid "<qt><br />One key unchanged.</qt>"
 msgid_plural "<qt><br />%1 keys unchanged.</qt>"
 msgstr[0] "<qt><br />%1 ключ не змінено.</qt>"
@@ -3979,7 +4019,6 @@ msgstr[2] "<qt><br />%1 ключів не змінено.</qt>"
 msgstr[3] "<qt><br />Один ключ не змінено.</qt>"
 
 #: transactions/kgpgimport.cpp:152
-#, kde-format
 msgid "<qt><br />One user ID imported.</qt>"
 msgid_plural "<qt><br />%1 user IDs imported.</qt>"
 msgstr[0] "<qt><br />Імпортовано %1 ідентифікатор користувача.</qt>"
@@ -3988,7 +4027,6 @@ msgstr[2] "<qt><br />Імпортовано %1 ідентифікаторів к
 msgstr[3] "<qt><br />Імпортовано один ідентифікатор користувача.</qt>"
 
 #: transactions/kgpgimport.cpp:154
-#, kde-format
 msgid "<qt><br />One subkey imported.</qt>"
 msgid_plural "<qt><br />%1 subkeys imported.</qt>"
 msgstr[0] "<qt><br />Імпортовано %1 підключ.</qt>"
@@ -3997,7 +4035,6 @@ msgstr[2] "<qt><br />Імпортовано %1 підключів.</qt>"
 msgstr[3] "<qt><br />Імпортовано один підключ.</qt>"
 
 #: transactions/kgpgimport.cpp:156
-#, kde-format
 msgid "<qt><br />One signature imported.</qt>"
 msgid_plural "<qt><br />%1 signatures imported.</qt>"
 msgstr[0] "<qt><br />Імпортовано %1 підпис.</qt>"
@@ -4006,7 +4043,6 @@ msgstr[2] "<qt><br />Імпортовано %1 підписів.</qt>"
 msgstr[3] "<qt><br />Імпортовано один підпис.</qt>"
 
 #: transactions/kgpgimport.cpp:158
-#, kde-format
 msgid "<qt><br />One revocation certificate imported.</qt>"
 msgid_plural "<qt><br />%1 revocation certificates imported.</qt>"
 msgstr[0] "<qt><br />Імпортовано %1 сертифікат відкликання.</qt>"
@@ -4015,7 +4051,6 @@ msgstr[2] "<qt><br />Імпортовано %1 сертифікатів відк
 msgstr[3] "<qt><br />Імпортовано один сертифікат відкликання.</qt>"
 
 #: transactions/kgpgimport.cpp:160
-#, kde-format
 msgid "<qt><br />One secret key processed.</qt>"
 msgid_plural "<qt><br />%1 secret keys processed.</qt>"
 msgstr[0] "<qt><br />Опрацьовано %1 закритий ключ.</qt>"
@@ -4024,7 +4059,6 @@ msgstr[2] "<qt><br />Опрацьовано %1 закритих ключів.</q
 msgstr[3] "<qt><br />Опрацьовано один закритий ключ.</qt>"
 
 #: transactions/kgpgimport.cpp:162
-#, kde-format
 msgid "<qt><br /><b>One secret key imported.</b></qt>"
 msgid_plural "<qt><br /><b>%1 secret keys imported.</b></qt>"
 msgstr[0] "<qt><br /><b>Імпортовано %1 закритий ключ.</b></qt>"
@@ -4033,7 +4067,6 @@ msgstr[2] "<qt><br /><b>Імпортовано %1 закритих ключів.
 msgstr[3] "<qt><br /><b>Імпортовано один закритий ключ.</b></qt>"
 
 #: transactions/kgpgimport.cpp:164
-#, kde-format
 msgid "<qt><br />One secret key unchanged.</qt>"
 msgid_plural "<qt><br />%1 secret keys unchanged.</qt>"
 msgstr[0] "<qt><br />Не змінено %1 закритий ключ.</qt>"
@@ -4042,7 +4075,6 @@ msgstr[2] "<qt><br />Не змінено %1 закритих ключів.<br/><
 msgstr[3] "<qt><br />Не змінено один закритий ключ.</qt>"
 
 #: transactions/kgpgimport.cpp:166
-#, kde-format
 msgid "<qt><br />One secret key not imported.</qt>"
 msgid_plural "<qt><br />%1 secret keys not imported.</qt>"
 msgstr[0] "<qt><br />Не імпортовано %1 закритий ключ.</qt>"
@@ -4132,12 +4164,10 @@ msgid " or "
 msgstr " або "
 
 #: transactions/kgpgtransaction.cpp:638
-#, kde-format
 msgid "Enter passphrase for <b>%1</b>"
 msgstr "Введіть фразу пароля для <b>%1</b>"
 
 #: transactions/kgpgtransaction.cpp:652
-#, kde-format
 msgid "<p><b>Bad passphrase</b>. You have 1 try left.</p>"
 msgid_plural "<p><b>Bad passphrase</b>. You have %1 tries left.</p>"
 msgstr[0] "<p><b>Неправильна фраза пароля</b>. Залишилася %1 спроба.</p>"
@@ -4146,18 +4176,15 @@ msgstr[2] "<p><b>Неправильна фраза пароля</b>. Залиш�
 msgstr[3] "<p><b>Неправильна фраза пароля</b>. Залишилася одна спроба.</p>"
 
 #: transactions/kgpgverify.cpp:96
-#, kde-format
 msgctxt "first argument is formatted date, second argument is formatted time"
 msgid "The signature was created at %1 %2"
 msgstr "Підпис було створено %1 о %2"
 
 #: transactions/kgpgverify.cpp:132 transactions/kgpgverify.cpp:166
-#, kde-format
 msgid "<qt>Good signature from:<br /><b>%1</b><br />Key ID: %2<br /></qt>"
 msgstr "<qt>Правильний підпис від:<br /><b>%1</b><br />ІД ключа: %2<br /></qt>"
 
 #: transactions/kgpgverify.cpp:136 transactions/kgpgverify.cpp:170
-#, kde-format
 msgctxt "Good signature from: NAME <EMAIL>, Key ID: HEXID"
 msgid ""
 "<qt>Good signature from:<br /><b>%1 &lt;%2&gt;</b><br />Key ID: %3<br /></qt>"
@@ -4166,7 +4193,6 @@ msgstr ""
 "></qt>"
 
 #: transactions/kgpgverify.cpp:182
-#, kde-format
 msgid ""
 "<qt><b>BAD signature</b> from:<br /> %1<br />Key id: %2<br /><br /><b>The "
 "file is corrupted</b><br /></qt>"
@@ -4182,6 +4208,122 @@ msgstr "<qt>Підпис дійсний, але ключ не надійний<b
 msgid ""
 "<qt>The signature is valid, and the key is ultimately trusted<br /></qt>"
 msgstr "<qt>Підпис дійсний і ключ має необмежену надійність<br /></qt>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Іван Петрущак"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ivanpetrouchtchak@yahoo.com"
+
+#~ msgid ""
+#~ "<p>If you want to decrypt a text file, simply drag and drop it into the "
+#~ "editor window. KGpg will do the rest. Even remote files can be dropped.</"
+#~ "p>\n"
+#~ "<p>Drag a public key into the editor window and kgpg will automatically "
+#~ "import it if you want.</p>\n"
+#~ msgstr ""
+#~ "<p>Якщо ви хочете розшифрувати текстовий файл, перетягніть і відпустіть "
+#~ "його у вікні редактора. Решту зробить Kgpg. Це можна робити навіть з "
+#~ "віддаленими файлами.</p>\n"
+#~ "<p>Перетягніть відкритий ключ у вікно редактора і kgpg його автоматично "
+#~ "імпортує, якщо ви цього хочете.</p>\n"
+
+#~ msgid ""
+#~ "<p>The easiest way to encrypt a file: simply right click on the file, and "
+#~ "you have an encrypt option in the contextual menu.\n"
+#~ "This works in <strong>konqueror</strong> or on your Desktop!</p>\n"
+#~ msgstr ""
+#~ "<p>Найпростіший шлях зашифрувати файл — це клацнути правою кнопкою мишки "
+#~ "на позначці файла: у контекстному меню ви побачите пункт шифрування.\n"
+#~ "Подібний спосіб працюватиме у <strong>konqueror</strong> і на вашій "
+#~ "стільниці!</p>\n"
+
+#~ msgid ""
+#~ "<p>If you want to encrypt a message for several persons, just select "
+#~ "several encryption keys by pressing the &quot;Ctrl&quot; key.</p>\n"
+#~ msgstr ""
+#~ "<p>Якщо ви хочете зашифрувати повідомлення для декількох осіб, виберіть "
+#~ "декілька шифрувальних ключів за допомогою утримання клавіші &quot;"
+#~ "Ctrl&quot;.</p>\n"
+
+#~ msgid ""
+#~ "<p><strong>You do not have to be an expert in encryption to use this tool?"
+#~ "</strong><br>\n"
+#~ "Simply create yourself a key pair in the key management window. Then, "
+#~ "export your public key and mail it to your friends.<br>\n"
+#~ "Ask them to do the same and import their public keys. Finally, to send an "
+#~ "encrypted message, type it in the KGpg editor, then click &quot;"
+#~ "encrypt&quot;. Choose\n"
+#~ "your friend's key and click &quot;encrypt&quot; again. The message will "
+#~ "be encrypted, ready to be sent by email.</p>\n"
+#~ msgstr ""
+#~ "<p><strong>Вам не потрібно бути експертом, щоб користуватися цією "
+#~ "програмою?</strong><br>\n"
+#~ "Просто створіть собі пару ключів у вікні керування ключами. Потім "
+#~ "експортуйте ваш відкритий ключ і надішліть його вашим друзям.<br>\n"
+#~ "Попросіть їх зробити те саме і імпортуйте їхні відкриті ключі. Нарешті, "
+#~ "щоб надіслати зашифроване повідомлення, введіть його в редакторі KGpg, "
+#~ "потім натисніть «зашифрувати». Виберіть \n"
+#~ "ключ вашого друга і знов натисніть «зашифрувати». Повідомлення буде "
+#~ "зашифроване й готове для пересилання електронною поштою.</p>\n"
+
+#~ msgid ""
+#~ "<p>To perform an operation on a key, open the key management window and "
+#~ "right click on the key. A popup menu with all available options will "
+#~ "appear.</p>\n"
+#~ msgstr ""
+#~ "<p>Щоб виконати дію над ключем, відкрийте вікно керування ключами і "
+#~ "клацніть правою кнопкою мишки по ключу. З'явиться меню з усіма можливими "
+#~ "діями.</p>\n"
+
+#~ msgid ""
+#~ "<p>Decrypt a file with a single mouse click on it. You will then be "
+#~ "prompted for password, and then that is it!</p>\n"
+#~ msgstr ""
+#~ "<p>Розшифруйте файл одним клацанням мишки на ньому. У вас запитають "
+#~ "пароль і це все!</p>\n"
+
+#~ msgid ""
+#~ "<p>If you only want to open the key manager, type this in the command "
+#~ "line prompt: <pre>kgpg -k</pre>\n"
+#~ "The editor can be reached by: <pre>kgpg -d</pre></p>\n"
+#~ msgstr ""
+#~ "<p>Якщо ви хочете відкрити тільки керування ключами, введіть <pre>kgpg -"
+#~ "k</pre> в запрошенні командного рядка. Доступ до редактора можна отримати "
+#~ "за допомогою команди <pre>kgpg -d</pre></p>\n"
+
+#~ msgid ""
+#~ "<p>To open a file in the KGpg's editor and immediately decrypt it type: "
+#~ "<pre>kgpg -s filename</pre></p>\n"
+#~ msgstr ""
+#~ "<p>Щоб відкрити файл у редакторі KGpg і негайно розшифрувати його "
+#~ "виконайте команду: <pre>kgpg -s назва_файла</pre></p>\n"
+
+#~ msgid ""
+#~ "<p>If you want to change the password or expiration of a secret key "
+#~ "simply double click on it to get the key properties dialog.</p>\n"
+#~ msgstr ""
+#~ "<p>Якщо ви бажаєте змінити пароль або строк дії секретного ключа, просто "
+#~ "двічі клацніть по ньому, щоб отримати доступ до вікна його властивостей.</"
+#~ "p>\n"
+
+#~ msgid ""
+#~ "<p>You can reach your default key by pressing &quot;Ctrl+Home&quot; in "
+#~ "the key manager.</p>\n"
+#~ msgstr ""
+#~ "<p>Ви можете отримати доступ до вашого типового ключа, якщо натиснете "
+#~ "&quot;Ctrl+Home&quot; у керуванні ключами.</p>\n"
+
+#~ msgid ""
+#~ "<p>The number of signatures is shown as a tooltip if you hover the mouse "
+#~ "on the size column in key manager. A key has to be expanded once for this "
+#~ "to work.</p>\n"
+#~ msgstr ""
+#~ "<p>Кількість підписів буде показано у вигляді підказки, якщо ви "
+#~ "затримаєте вказівник миші над стовпчиком розміру у керуванні ключами. Щоб "
+#~ "це спрацювало, слід хоча б одного разу розкрити ключ.</p>\n"
 
 #~ msgid "Edit Key Server"
 #~ msgstr "Редагувати сервер ключів"

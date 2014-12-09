@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ksnapshot\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-01-30 01:33+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2014-08-02 18:53+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -26,15 +26,26 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Michał Rudolf, Jacek Stolarczyk, Łukasz Wojniłowicz"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
+#: ksnapshot_options.h:30
+msgid "Captures the window under the mouse on startup (instead of the desktop)"
 msgstr ""
-"mrudolf@kdewebdev.org,jacek@mer.chemia.polsl.gliwice.pl, lukasz."
-"wojnilowicz@gmail.com"
+"Po uruchomieniu tworzy zrzut okna pod kursorem myszy (a nie całego pulpitu)"
+
+#: ksnapshot_options.h:31
+msgid "Captures the desktop"
+msgstr "Przechwytuje pulpit"
+
+#: ksnapshot_options.h:32
+msgid "Captures a region"
+msgstr "Przechwytuje obszar"
+
+#: ksnapshot_options.h:33
+msgid "Captures a free region (not rectangular)"
+msgstr "Przechwytuje dowolny obszar (nie prostokątny)"
+
+#: ksnapshot_options.h:34
+msgid "Captures a part of windows"
+msgstr "Przechwytuje część okna"
 
 #: freeregiongrabber.cpp:122 regiongrabber.cpp:117
 msgid ""
@@ -61,7 +72,6 @@ msgid "(c) 2007, Montel Laurent"
 msgstr "(c) 2007, Montel Laurent"
 
 #: kipiimagecollectionselector.cpp:52
-#, kde-format
 msgctxt "%1 is collection name, %2 is image count in collection"
 msgid "%1 (%2 image)"
 msgid_plural "%1 (%2 images)"
@@ -121,37 +131,14 @@ msgid "The screen has been successfully grabbed."
 msgstr "Zrzut ekranu zrobiony."
 
 #: ksnapshot.cpp:876
-#, kde-format
 msgid "Preview of the snapshot image (%1 x %2)"
 msgstr "Podgląd zrzutu ekranu (%1 x %2)"
-
-#: ksnapshot_options.h:30
-msgid "Captures the window under the mouse on startup (instead of the desktop)"
-msgstr ""
-"Po uruchomieniu tworzy zrzut okna pod kursorem myszy (a nie całego pulpitu)"
-
-#: ksnapshot_options.h:31
-msgid "Captures the desktop"
-msgstr "Przechwytuje pulpit"
-
-#: ksnapshot_options.h:32
-msgid "Captures a region"
-msgstr "Przechwytuje obszar"
-
-#: ksnapshot_options.h:33
-msgid "Captures a free region (not rectangular)"
-msgstr "Przechwytuje dowolny obszar (nie prostokątny)"
-
-#: ksnapshot_options.h:34
-msgid "Captures a part of windows"
-msgstr "Przechwytuje część okna"
 
 #: ksnapshotobject.cpp:118
 msgid "File Exists"
 msgstr "Plik istnieje"
 
 #: ksnapshotobject.cpp:119
-#, kde-format
 msgid "<qt>Do you really want to overwrite <b>%1</b>?</qt>"
 msgstr "<qt>Czy chcesz nadpisać <b>%1</b>?</qt>"
 
@@ -164,7 +151,6 @@ msgid "Unable to Save Image"
 msgstr "Nie można zapisać zrzutu"
 
 #: ksnapshotobject.cpp:157
-#, kde-format
 msgid ""
 "KSnapshot was unable to save the image to\n"
 "%1."
@@ -179,167 +165,6 @@ msgstr "Tytuł"
 #: ksnapshotobject.cpp:181
 msgid "Window Class"
 msgstr "Klasa okna"
-
-#. i18n: ectx: property (whatsThis), widget (KSnapshotPreview, lblImage)
-#: ksnapshotwidget.ui:33
-msgid ""
-"This is a preview of the current snapshot.\n"
-"\n"
-"The image can be dragged to another application or document to copy the full "
-"screenshot there. Try it with the file manager.\n"
-"\n"
-"You can also copy the image to the clipboard by pressing Ctrl+C."
-msgstr ""
-"To jest miniaturka aktualnego zrzutu.\n"
-"\n"
-"Obrazek można przeciągnąć do innego programu lub dokumentu, by skopiować tam "
-"cały zrzut. Spróbuj w menadżerze plików.\n"
-"\n"
-"Można także skopiować obraz do schowka, wciskając Ctrl+C."
-
-#. i18n: ectx: property (whatsThis), widget (KPushButton, btnNew)
-#: ksnapshotwidget.ui:55
-msgid "Click this button to take a new snapshot."
-msgstr "Ten przycisk tworzy nowy zrzut ekranu."
-
-#. i18n: ectx: property (text), widget (KPushButton, btnNew)
-#: ksnapshotwidget.ui:58
-msgid "Take a &New Snapshot"
-msgstr "Zrób &nowy zrzut ekranu"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ksnapshotwidget.ui:95
-msgid "Cap&ture mode:"
-msgstr "&Tryb zrzutu:"
-
-#. i18n: ectx: property (whatsThis), widget (QComboBox, comboMode)
-#: ksnapshotwidget.ui:116
-msgid ""
-"<qt>Using this menu, you can select from the six following snapshot modes:\n"
-"<p>\n"
-"<b>Full Screen</b> - captures the entire desktop.<br/>\n"
-"<b>Window Under Cursor</b> - captures only the window (or menu) that is "
-"under the mouse cursor when the snapshot is taken.<br/>\n"
-"<b>Rectangular Region</b> - captures only the rectangular region of the "
-"desktop that you specify. When taking a new snapshot in this mode you will "
-"be able to select any area of the screen by clicking and dragging the mouse."
-"<br/>\n"
-"<b>Freehand Region</b> - captures arbitrary shapes that you specify. When "
-"taking a new snapshot in this mode you will be able to select any shape by "
-"dragging the mouse.<br/>\n"
-"<b>Section of Window</b> - captures only a section of the window. When "
-"taking a new snapshot in this mode you will be able to select any child "
-"window by moving the mouse over it.<br/>\n"
-"<b>Current Screen</b> - if you have multiple screens, this captures the "
-"screen containing the mouse cursor when the snapshot is taken.\n"
-"</p></qt>"
-msgstr ""
-"<qt>Z tego menu można wybrać jeden z sześciu rodzajów zrzutu ekranu:\n"
-"<p>\n"
-"<b>Pełny ekran</b> - zapisuje całą zawartość ekranu.<br/>\n"
-"<b>Okno pod kursorem</b> - zapisuje jedynie okno (lub menu) zawierające "
-"kursor w momencie wykonywania zrzutu.<br/>\n"
-"<b>Prostokątny obszar</b> - przechwytuje tylko prostokątny obszar pulpitu, "
-"wskazany przez ciebie. Przy robieniu nowego zrzutu ekranu w tym trybie, "
-"będziesz mógł zaznaczyć dowolny obszar ekranu poprzez kliknięcie i "
-"przeciągnięcie myszą.<br/>\n"
-"<b>Odręczny obszar</b> - przechwytuje dowolne kształty, określone przez "
-"ciebie. Przy robieniu nowego zrzutu ekranu w tym trybie, będziesz mógł "
-"zaznaczyć dowolny kształt poprzez przeciągnięcie myszą.<br/>\n"
-"<b>Część okna</b> - zapisuje tylko część okna. Podczas wykonywania zrzutu "
-"będzie można wybrać dowolny element okna przez przesunięcie myszy nad "
-"niego<br/>\n"
-"<b>Bieżący ekran</b> - jeśli podłączonych jest kilka ekranów, ten tryb "
-"pozwala zapisać zrzut ekranu zawierającego kursor myszy.\n"
-"</p></qt>"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: ksnapshotwidget.ui:120
-msgid "Full Screen"
-msgstr "Pełny ekran"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: ksnapshotwidget.ui:125
-msgid "Window Under Cursor"
-msgstr "Okno pod kursorem"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: ksnapshotwidget.ui:130
-msgid "Rectangular Region"
-msgstr "Prostokątny obszar"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: ksnapshotwidget.ui:135
-msgid "Freehand Region"
-msgstr "Dowolny obszar"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: ksnapshotwidget.ui:140
-msgid "Section of Window"
-msgstr "Część okna"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
-#: ksnapshotwidget.ui:145
-msgid "Current Screen"
-msgstr "Obecny ekran"
-
-#. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: ksnapshotwidget.ui:153
-msgid "Snapshot &delay:"
-msgstr "&Opóźnienie:"
-
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, spinDelay)
-#: ksnapshotwidget.ui:172
-msgid "Snapshot delay in seconds"
-msgstr "Opóźnienie w sekundach przez utworzeniem zrzutu ekranu"
-
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, spinDelay)
-#: ksnapshotwidget.ui:182
-msgid ""
-"<qt><p>\n"
-"This is the number of seconds to wait after clicking the <i>New Snapshot</i> "
-"button before taking the snapshot.\n"
-"</p><p>\n"
-"This is very useful for getting windows, menus and other items on the screen "
-"set up just the way you want.\n"
-"</p><p>\n"
-"If <i>no delay</i> is set, the program will wait for a mouse click before "
-"taking a snapshot.\n"
-"</p>\n"
-"</qt>"
-msgstr ""
-"<qt><p>\n"
-"Liczba sekund, która ma upłynąć od kliknięcia na przycisku <i>Nowy zrzut</"
-"i>, zanim zrzut ekranu zostanie utworzony.\n"
-"</p><p>\n"
-"Jest to przydatne do ustawienia okien, menu i innych elementów na ekranie w "
-"potrzebny sposób.\n"
-"\n"
-"</p><p> Jeśli wybrano <i>brak opóźnienia</i>, program utworzy zrzut ekranu, "
-"po kliknięciu myszką.\n"
-"</p>\n"
-"</qt>"
-
-#. i18n: ectx: property (specialValueText), widget (KIntSpinBox, spinDelay)
-#: ksnapshotwidget.ui:185
-msgid "No delay"
-msgstr "Brak opóźnienia"
-
-#. i18n: ectx: property (text), widget (QLabel, lblIncludeDecorations)
-#: ksnapshotwidget.ui:195
-msgid "Include &window decorations:"
-msgstr "Uwzględnij &wystój okien:"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbIncludeDecorations)
-#: ksnapshotwidget.ui:208
-msgid ""
-"When enabled, snapshot of a window will also include the window decorations"
-msgstr "Jeśli ta opcja jest włączona, zrzut będzie zawierał wystrój okna"
-
-#. i18n: ectx: property (text), widget (QLabel, lblIncludePointer)
-#: ksnapshotwidget.ui:221
-msgid "Include mouse &pointer:"
-msgstr "Uwzględnij &wskaźnik myszy:"
 
 #: main.cpp:34
 msgid "KDE Screenshot Utility"
@@ -400,13 +225,201 @@ msgid "Free region grabbing, KIPI plugins support, port to Windows"
 msgstr ""
 "Przechwytywanie dowolnego obszaru, obsługa wtyczek KIPI, port na Windowsa"
 
+#. i18n: file: ksnapshotwidget.ui:33
+#. i18n: ectx: property (whatsThis), widget (KSnapshotPreview, lblImage)
+#: rc.cpp:3
+msgid ""
+"This is a preview of the current snapshot.\n"
+"\n"
+"The image can be dragged to another application or document to copy the full "
+"screenshot there. Try it with the file manager.\n"
+"\n"
+"You can also copy the image to the clipboard by pressing Ctrl+C."
+msgstr ""
+"To jest miniaturka aktualnego zrzutu.\n"
+"\n"
+"Obrazek można przeciągnąć do innego programu lub dokumentu, by skopiować tam "
+"cały zrzut. Spróbuj w menadżerze plików.\n"
+"\n"
+"Można także skopiować obraz do schowka, wciskając Ctrl+C."
+
+#. i18n: file: ksnapshotwidget.ui:55
+#. i18n: ectx: property (whatsThis), widget (KPushButton, btnNew)
+#: rc.cpp:10
+msgid "Click this button to take a new snapshot."
+msgstr "Ten przycisk tworzy nowy zrzut ekranu."
+
+#. i18n: file: ksnapshotwidget.ui:58
+#. i18n: ectx: property (text), widget (KPushButton, btnNew)
+#: rc.cpp:13
+msgid "Take a &New Snapshot"
+msgstr "Zrób &nowy zrzut ekranu"
+
+#. i18n: file: ksnapshotwidget.ui:95
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:16
+msgid "Cap&ture mode:"
+msgstr "&Tryb zrzutu:"
+
+#. i18n: file: ksnapshotwidget.ui:116
+#. i18n: ectx: property (whatsThis), widget (QComboBox, comboMode)
+#: rc.cpp:19
+msgid ""
+"<qt>Using this menu, you can select from the six following snapshot modes:\n"
+"<p>\n"
+"<b>Full Screen</b> - captures the entire desktop.<br/>\n"
+"<b>Window Under Cursor</b> - captures only the window (or menu) that is "
+"under the mouse cursor when the snapshot is taken.<br/>\n"
+"<b>Rectangular Region</b> - captures only the rectangular region of the "
+"desktop that you specify. When taking a new snapshot in this mode you will "
+"be able to select any area of the screen by clicking and dragging the mouse."
+"<br/>\n"
+"<b>Freehand Region</b> - captures arbitrary shapes that you specify. When "
+"taking a new snapshot in this mode you will be able to select any shape by "
+"dragging the mouse.<br/>\n"
+"<b>Section of Window</b> - captures only a section of the window. When "
+"taking a new snapshot in this mode you will be able to select any child "
+"window by moving the mouse over it.<br/>\n"
+"<b>Current Screen</b> - if you have multiple screens, this captures the "
+"screen containing the mouse cursor when the snapshot is taken.\n"
+"</p></qt>"
+msgstr ""
+"<qt>Z tego menu można wybrać jeden z sześciu rodzajów zrzutu ekranu:\n"
+"<p>\n"
+"<b>Pełny ekran</b> - zapisuje całą zawartość ekranu.<br/>\n"
+"<b>Okno pod kursorem</b> - zapisuje jedynie okno (lub menu) zawierające "
+"kursor w momencie wykonywania zrzutu.<br/>\n"
+"<b>Prostokątny obszar</b> - przechwytuje tylko prostokątny obszar pulpitu, "
+"wskazany przez ciebie. Przy robieniu nowego zrzutu ekranu w tym trybie, "
+"będziesz mógł zaznaczyć dowolny obszar ekranu poprzez kliknięcie i "
+"przeciągnięcie myszą.<br/>\n"
+"<b>Odręczny obszar</b> - przechwytuje dowolne kształty, określone przez "
+"ciebie. Przy robieniu nowego zrzutu ekranu w tym trybie, będziesz mógł "
+"zaznaczyć dowolny kształt poprzez przeciągnięcie myszą.<br/>\n"
+"<b>Część okna</b> - zapisuje tylko część okna. Podczas wykonywania zrzutu "
+"będzie można wybrać dowolny element okna przez przesunięcie myszy nad "
+"niego<br/>\n"
+"<b>Bieżący ekran</b> - jeśli podłączonych jest kilka ekranów, ten tryb "
+"pozwala zapisać zrzut ekranu zawierającego kursor myszy.\n"
+"</p></qt>"
+
+#. i18n: file: ksnapshotwidget.ui:120
+#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
+#: rc.cpp:30
+msgid "Full Screen"
+msgstr "Pełny ekran"
+
+#. i18n: file: ksnapshotwidget.ui:125
+#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
+#: rc.cpp:33
+msgid "Window Under Cursor"
+msgstr "Okno pod kursorem"
+
+#. i18n: file: ksnapshotwidget.ui:130
+#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
+#: rc.cpp:36
+msgid "Rectangular Region"
+msgstr "Prostokątny obszar"
+
+#. i18n: file: ksnapshotwidget.ui:135
+#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
+#: rc.cpp:39
+msgid "Freehand Region"
+msgstr "Dowolny obszar"
+
+#. i18n: file: ksnapshotwidget.ui:140
+#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
+#: rc.cpp:42
+msgid "Section of Window"
+msgstr "Część okna"
+
+#. i18n: file: ksnapshotwidget.ui:145
+#. i18n: ectx: property (text), item, widget (QComboBox, comboMode)
+#: rc.cpp:45
+msgid "Current Screen"
+msgstr "Obecny ekran"
+
+#. i18n: file: ksnapshotwidget.ui:153
+#. i18n: ectx: property (text), widget (QLabel, lblDelay)
+#: rc.cpp:48
+msgid "Snapshot &delay:"
+msgstr "&Opóźnienie:"
+
+#. i18n: file: ksnapshotwidget.ui:172
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, spinDelay)
+#: rc.cpp:51
+msgid "Snapshot delay in seconds"
+msgstr "Opóźnienie w sekundach przez utworzeniem zrzutu ekranu"
+
+#. i18n: file: ksnapshotwidget.ui:182
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, spinDelay)
+#: rc.cpp:54
+msgid ""
+"<qt><p>\n"
+"This is the number of seconds to wait after clicking the <i>New Snapshot</i> "
+"button before taking the snapshot.\n"
+"</p><p>\n"
+"This is very useful for getting windows, menus and other items on the screen "
+"set up just the way you want.\n"
+"</p><p>\n"
+"If <i>no delay</i> is set, the program will wait for a mouse click before "
+"taking a snapshot.\n"
+"</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>\n"
+"Liczba sekund, która ma upłynąć od kliknięcia na przycisku <i>Nowy zrzut</"
+"i>, zanim zrzut ekranu zostanie utworzony.\n"
+"</p><p>\n"
+"Jest to przydatne do ustawienia okien, menu i innych elementów na ekranie w "
+"potrzebny sposób.\n"
+"\n"
+"</p><p> Jeśli wybrano <i>brak opóźnienia</i>, program utworzy zrzut ekranu, "
+"po kliknięciu myszką.\n"
+"</p>\n"
+"</qt>"
+
+#. i18n: file: ksnapshotwidget.ui:185
+#. i18n: ectx: property (specialValueText), widget (KIntSpinBox, spinDelay)
+#: rc.cpp:64
+msgid "No delay"
+msgstr "Brak opóźnienia"
+
+#. i18n: file: ksnapshotwidget.ui:195
+#. i18n: ectx: property (text), widget (QLabel, lblIncludeDecorations)
+#: rc.cpp:67
+msgid "Include &window decorations:"
+msgstr "Uwzględnij &wystój okien:"
+
+#. i18n: file: ksnapshotwidget.ui:208
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbIncludeDecorations)
+#: rc.cpp:70
+msgid ""
+"When enabled, snapshot of a window will also include the window decorations"
+msgstr "Jeśli ta opcja jest włączona, zrzut będzie zawierał wystrój okna"
+
+#. i18n: file: ksnapshotwidget.ui:221
+#. i18n: ectx: property (text), widget (QLabel, lblIncludePointer)
+#: rc.cpp:73
+msgid "Include mouse &pointer:"
+msgstr "Uwzględnij &wskaźnik myszy:"
+
 #: snapshottimer.cpp:36 snapshottimer.cpp:111
-#, kde-format
 msgid "Snapshot will be taken in 1 second"
 msgid_plural "Snapshot will be taken in %1 seconds"
 msgstr[0] "Zrzut zostanie wykonany za 1 sekundę"
 msgstr[1] "Zrzut zostanie wykonany za %1 sekundy"
 msgstr[2] "Zrzut zostanie wykonany za %1 sekund"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Michał Rudolf, Jacek Stolarczyk, Łukasz Wojniłowicz"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "mrudolf@kdewebdev.org,jacek@mer.chemia.polsl.gliwice.pl, lukasz."
+#~ "wojnilowicz@gmail.com"
 
 #~ msgid "Region"
 #~ msgstr "Obszar"

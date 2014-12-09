@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-12-18 16:46+0100\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2012-09-27 14:33+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <i18ngr@lists.hellug.gr>\n"
@@ -48,27 +48,31 @@ msgstr "Αν θα γίνεται ή όχι χρήση utp"
 msgid "ktcli"
 msgstr "ktcli"
 
-#: src/bcodec/bdecoder.cpp:71
-#, kde-format
-msgid "Illegal token: %1"
-msgstr "Εσφαλμένο αναγνωριστικό: %1"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Ανακατεύθυνση χωρίς τοποθεσία ανακατεύθυνσης"
 
-#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
-msgid "Decode error"
-msgstr "Σφάλμα αποκωδικοποίησης"
+#: src/tracker/httptracker.cpp:285 src/tracker/httptracker.cpp:305
+#: src/tracker/httptracker.cpp:461
+msgid "Invalid response from tracker"
+msgstr "Μη έγκυρη απάντηση από ιχνηλάτη"
 
-#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
-msgid "Unexpected end of input"
-msgstr "Μη αναμενόμενο τέλος της εισόδου"
+#: src/tracker/httptracker.cpp:298
+msgid "Invalid data from tracker"
+msgstr "Μη έγκυρα δεδομένα από τον ιχνηλάτη"
 
-#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
-#, kde-format
-msgid "Cannot convert %1 to an int"
-msgstr "Αδυναμία μετατροπής του %1 σε ακέραιο"
+#: src/tracker/httptracker.cpp:478
+msgid "Invalid tracker URL"
+msgstr "Μη έγκυρο URL ιχνηλάτη"
 
-#: src/bcodec/bdecoder.cpp:260
-msgid "Torrent is incomplete."
-msgstr "Το torrent δεν είναι ολοκληρωμένο"
+#: src/tracker/httptracker.cpp:556 src/tracker/udptracker.cpp:364
+#: src/tracker/udptracker.cpp:374
+msgid "Timeout contacting tracker %1"
+msgstr "Τέλος χρόνου επαφής με ιχνηλάτη %1"
+
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "Αδυναμία επίλυσης ονόματος υπολογιστή %1"
 
 #: src/datachecker/datacheckerjob.cpp:82
 msgid "Waiting for other data checks to finish"
@@ -83,92 +87,162 @@ msgid "Checking Data"
 msgstr "Έλεγχος δεδομένων"
 
 #: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/torrent/torrentcreator.cpp:124
+#: src/datachecker/singledatachecker.cpp:49 src/torrent/torrentcreator.cpp:124
 #: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#, kde-format
+#: src/diskio/multifilecache.cpp:706 src/diskio/multifilecache.cpp:745
 msgid "Cannot open file %1: %2"
 msgstr "Αδυναμία ανοίγματος του αρχείου %1: %2"
 
-#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/torrent/torrentstats.cpp:73
+msgid "Not started"
+msgstr "Δεν ξεκίνησε"
+
+#: src/torrent/torrentstats.cpp:75
+msgid "Download completed"
+msgstr "Η λήψη ολοκληρώθηκε"
+
+#: src/torrent/torrentstats.cpp:77
+msgid "Seeding completed"
+msgstr "Ολοκλήρωση προσφοράς πηγής"
+
+#: src/torrent/torrentstats.cpp:79
+msgctxt "Status of a torrent file"
+msgid "Seeding"
+msgstr "Προσφορά πηγής"
+
+#: src/torrent/torrentstats.cpp:81
+msgid "Downloading"
+msgstr "Λήψη"
+
+#: src/torrent/torrentstats.cpp:83
+msgid "Stalled"
+msgstr "Σταματημένο"
+
+#: src/torrent/torrentstats.cpp:85
+msgid "Stopped"
+msgstr "Διακόπηκε"
+
+#: src/torrent/torrentstats.cpp:87 src/interfaces/trackerinterface.cpp:60
+msgid "Error: %1"
+msgstr "Σφάλμα: %1"
+
+#: src/torrent/torrentstats.cpp:89
+msgid "Allocating diskspace"
+msgstr "Κατανομή χώρου στο δίσκο"
+
+#: src/torrent/torrentstats.cpp:91
+msgid "Queued for seeding"
+msgstr "Σε αναμονή για προσφορά πηγής"
+
+#: src/torrent/torrentstats.cpp:91
+msgid "Queued for downloading"
+msgstr "Σε αναμονή για λήψη"
+
+#: src/torrent/torrentstats.cpp:95
+msgid "Stopped. No space left on device."
+msgstr "Διεκόπη. Δεν υπάρχει ελεύθερος χώρος στη συσκευή."
+
+#: src/torrent/torrentstats.cpp:97
+msgid "Paused"
+msgstr "Σε παύση"
+
+#: src/torrent/torrentstats.cpp:99
+msgid "Superseeding"
+msgstr "Υπερπροσφορά πηγής"
+
+#: src/torrent/torrentcontrol.cpp:300
+msgid "Error writing to disk, do you have enough diskspace?"
+msgstr "Σφάλμα εγγραφής στο δίσκο, έχετε αρκετό χώρο;"
+
+#: src/torrent/torrentcontrol.cpp:546
+msgid ""
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
+msgstr ""
+"Παρουσιάστηκε σφάλμα κατά τη φόρτωση του torrent <b>%1</b>:<br/><b>%2</b><br/"
+"> Το torrent πιθανότατα είναι κατεστραμμένο, ή δεν είναι έγκυρο αρχείο torrent."
+
+#: src/torrent/torrentcontrol.cpp:576
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
+msgstr "Παρουσιάστηκε σφάλμα κατά τη φόρτωση <b>%1</b>:<br/><b>%2</b>"
+
+#: src/torrent/torrentcontrol.cpp:587
+msgid "Unable to create %1: %2"
+msgstr "Αδυναμία δημιουργίας %1: %2"
+
+#: src/torrent/torrentcontrol.cpp:602
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+"Ήδη λαμβάνετε το torrent <b>%1</b>. Οι λίστες ιχνηλατών και από τα δύο "
+"torrent συγχωνεύτηκαν."
+
+#: src/torrent/torrentcontrol.cpp:607
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "Ήδη λαμβάνετε αυτό το αρχείο torrent <b>%1</b>."
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Κατεστραμμένο torrent."
+
+#: src/torrent/torrent.cpp:165
+msgid "Unable to open torrent file %1: %2"
+msgstr " Αδυναμία ανοίγματος του αρχείου torrent %1: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Αδυναμία δημιουργίας αρχείου ευρετηρίου: %1"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "Ο κατάλογος %1 δεν υπάρχει"
+
+#: src/bcodec/bdecoder.cpp:71
+msgid "Illegal token: %1"
+msgstr "Εσφαλμένο αναγνωριστικό: %1"
+
+#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
+msgid "Decode error"
+msgstr "Σφάλμα αποκωδικοποίησης"
+
+#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
+msgid "Unexpected end of input"
+msgstr "Μη αναμενόμενο τέλος της εισόδου"
+
+#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
+msgid "Cannot convert %1 to an int"
+msgstr "Αδυναμία μετατροπής του %1 σε ακέραιο"
+
+#: src/bcodec/bdecoder.cpp:260
+msgid "Torrent is incomplete."
+msgstr "Το torrent δεν είναι ολοκληρωμένο"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+msgid "Failed to open %1: %2"
+msgstr "Αδυναμία ανοίγματος του %1: %2"
+
+#: src/diskio/multifilecache.cpp:118 src/diskio/cache.cpp:170
 #: src/diskio/singlefilecache.cpp:85
-#, kde-format
 msgid "Failed to create %1: %2"
 msgstr "Αδυναμία δημιουργίας του %1: %2"
 
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-#, kde-format
-msgid "Cannot open %1: %2"
-msgstr "Αδυναμία ανοίγματος του αρχείου %1 : %2"
-
-#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
-#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
-#, kde-format
-msgid "Cannot open %1 for writing: readonly filesystem"
-msgstr ""
-"Αδυναμία ανοίγματος του %1 για εγγραφή: σύστημα αρχείων για ανάγνωση μόνο"
-
-#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
-#, kde-format
-msgid "Attempting to write beyond the maximum size of %1"
-msgstr "Απόπειρα εγγραφής πέρα από το μέγιστο μέγεθος του %1"
-
-#: src/diskio/cachefile.cpp:257
-#, kde-format
-msgid ""
-"Cannot expand file %1: attempting to grow the file beyond the maximum size"
-msgstr ""
-"Αδυναμία επέκτασης αρχείου %1: απόπειρα αύξησης μεγέθους αρχείου πέρα από το "
-"μέγιστο"
-
-#: src/diskio/cachefile.cpp:261
-#, kde-format
-msgid "Cannot expand file %1: %2"
-msgstr "Αδυναμία επέκτασης του αρχείου: %1: %2"
-
-#: src/diskio/cachefile.cpp:380
-#, kde-format
-msgid "Error: Reading past the end of the file %1"
-msgstr "Σφάλμα: Η ανάγνωση πέρασε το τέλος του αρχείου %1"
-
-#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
-#, kde-format
-msgid "Failed to seek file %1: %2"
-msgstr "Αποτυχία αναζήτησης αρχείου %1: %2"
-
-#: src/diskio/cachefile.cpp:393
-#, kde-format
-msgid "Error reading from %1"
-msgstr "Σφάλμα ανάγνωσης από το %1"
-
-#: src/diskio/cachefile.cpp:436
-#, kde-format
-msgid "Failed to write to file %1: %2"
-msgstr "Αποτυχία εγγραφής στο αρχείο %1: %2"
-
-#: src/diskio/cachefile.cpp:503
-#, kde-format
-msgid "Cannot preallocate diskspace: %1"
-msgstr "Αδυναμία προκράτησης χώρου στο δίσκο: %1"
-
 #: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-#, kde-format
 msgid "Cannot open index file %1: %2"
 msgstr "Αδυναμία ανοίγματος του αρχείου ευρετηρίου %1: %2"
 
 #: src/diskio/dndfile.cpp:89
-#, kde-format
 msgid "Cannot create file %1: %2"
 msgstr "Αδυναμία δημιουργίας αρχείου %1: %2"
 
 #: src/diskio/dndfile.cpp:137
-#, kde-format
 msgid "Failed to write first chunk to DND file: %1"
 msgstr "Αποτυχία εγγραφής του πρώτου κομματιού στο αρχείο DND: %1"
 
 #: src/diskio/dndfile.cpp:155
-#, kde-format
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Αποτυχία εγγραφής του τελευταίου κομματιού στο αρχείο DND: %1"
 
@@ -191,33 +265,76 @@ msgctxt "@title job"
 msgid "Moving"
 msgstr "Κινούμενο"
 
-#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
-#, kde-format
-msgid "Failed to open %1: %2"
-msgstr "Αδυναμία ανοίγματος του %1: %2"
+#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
+#: src/util/fileops.cpp:406
+msgid "Cannot open %1: %2"
+msgstr "Αδυναμία ανοίγματος του αρχείου %1 : %2"
+
+#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
+#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
+msgid "Cannot open %1 for writing: readonly filesystem"
+msgstr ""
+"Αδυναμία ανοίγματος του %1 για εγγραφή: σύστημα αρχείων για ανάγνωση μόνο"
+
+#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
+msgid "Attempting to write beyond the maximum size of %1"
+msgstr "Απόπειρα εγγραφής πέρα από το μέγιστο μέγεθος του %1"
+
+#: src/diskio/cachefile.cpp:257
+msgid ""
+"Cannot expand file %1: attempting to grow the file beyond the maximum size"
+msgstr ""
+"Αδυναμία επέκτασης αρχείου %1: απόπειρα αύξησης μεγέθους αρχείου πέρα από το "
+"μέγιστο"
+
+#: src/diskio/cachefile.cpp:261
+msgid "Cannot expand file %1: %2"
+msgstr "Αδυναμία επέκτασης του αρχείου: %1: %2"
+
+#: src/diskio/cachefile.cpp:380
+msgid "Error: Reading past the end of the file %1"
+msgstr "Σφάλμα: Η ανάγνωση πέρασε το τέλος του αρχείου %1"
+
+#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
+msgid "Failed to seek file %1: %2"
+msgstr "Αποτυχία αναζήτησης αρχείου %1: %2"
+
+#: src/diskio/cachefile.cpp:393
+msgid "Error reading from %1"
+msgstr "Σφάλμα ανάγνωσης από το %1"
+
+#: src/diskio/cachefile.cpp:436
+msgid "Failed to write to file %1: %2"
+msgstr "Αποτυχία εγγραφής στο αρχείο %1: %2"
+
+#: src/diskio/cachefile.cpp:503
+msgid "Cannot preallocate diskspace: %1"
+msgstr "Αδυναμία προκράτησης χώρου στο δίσκο: %1"
 
 #: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
 msgid "Unable to write to a piece mapped read only"
 msgstr "Αδυναμία εγγραφής σε κομμάτι για ανάγνωση μόνο"
 
+#: src/download/webseed.cpp:52 src/download/webseed.cpp:99
+#: src/download/httpconnection.cpp:44
+msgid "Not connected"
+msgstr "Χωρίς σύνδεση"
+
+#: src/download/webseed.cpp:348 src/download/httpconnection.cpp:153
+msgid "Connection closed"
+msgstr "Η σύνδεση έκλεισε"
+
+#: src/download/webseed.cpp:558
+msgid "Unused for %1 seconds (Too many connection failures)"
+msgstr "Αχρησιμοποίητο για %1 δευτερόλεπτα (Πάρα πολλές αποτυχίες σύνδεσης)"
+
 #: src/download/chunkdownload.cpp:383
-#, kde-format
 msgid "1 peer"
 msgid_plural "%1 peers"
 msgstr[0] "1 ομότιμος κόμβος"
 msgstr[1] "%1 ομότιμοι κόμβοι"
 
-#: src/download/downloader.cpp:808
-msgid "Disabled because webseed does not match torrent"
-msgstr "Απενεργοποιήθηκε γιατί η πηγή ιστού δεν ταιριάζει με το torrent"
-
-#: src/download/httpconnection.cpp:44 src/download/webseed.cpp:52
-#: src/download/webseed.cpp:99
-msgid "Not connected"
-msgstr "Χωρίς σύνδεση"
-
 #: src/download/httpconnection.cpp:115
-#, kde-format
 msgid "Resolving proxy %1:%2"
 msgstr "Επίλυση διαμεσολαβητή %1:%2"
 
@@ -226,16 +343,10 @@ msgid "Not enough system resources available"
 msgstr "Δεν υπάρχουν αρκετοί διαθέσιμοι πόροι"
 
 #: src/download/httpconnection.cpp:133
-#, kde-format
 msgid "Resolving hostname %1"
 msgstr "Επίλυση ονόματος υπολογιστή %1"
 
-#: src/download/httpconnection.cpp:153 src/download/webseed.cpp:348
-msgid "Connection closed"
-msgstr "Η σύνδεση έκλεισε"
-
 #: src/download/httpconnection.cpp:160
-#, kde-format
 msgid "Error: request failed: %1"
 msgstr "Σφάλμα: αποτυχία αίτησης: %1"
 
@@ -271,183 +382,11 @@ msgstr "Σφάλμα: λήξη χρονικού ορίου αίτησης"
 msgid "Redirected without a new location."
 msgstr "Ανακατεύθυνση χωρίς μια νέα τοποθεσία."
 
-#: src/download/webseed.cpp:558
-#, kde-format
-msgid "Unused for %1 seconds (Too many connection failures)"
-msgstr "Αχρησιμοποίητο για %1 δευτερόλεπτα (Πάρα πολλές αποτυχίες σύνδεσης)"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "Εντάξει"
-
-#: src/interfaces/trackerinterface.cpp:58
-#, kde-format
-msgid "Warning: %1"
-msgstr "Προειδοποίηση: %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Ανακοίνωση"
-
-#: src/interfaces/trackerinterface.cpp:60 src/torrent/torrentstats.cpp:87
-#, kde-format
-msgid "Error: %1"
-msgstr "Σφάλμα: %1"
-
-#: src/migrate/migrate.cpp:45
-#, kde-format
-msgid "The directory %1 does not exist"
-msgstr "Ο κατάλογος %1 δεν υπάρχει"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Άγνωστος πελάτης"
-
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Κατεστραμμένο torrent."
-
-#: src/torrent/torrent.cpp:165
-#, kde-format
-msgid "Unable to open torrent file %1: %2"
-msgstr " Αδυναμία ανοίγματος του αρχείου torrent %1: %2"
-
-#: src/torrent/torrentcontrol.cpp:300
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr "Σφάλμα εγγραφής στο δίσκο, έχετε αρκετό χώρο;"
-
-#: src/torrent/torrentcontrol.cpp:546
-#, kde-format
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"Παρουσιάστηκε σφάλμα κατά τη φόρτωση του torrent <b>%1</b>:<br/><b>%2</b><br/"
-"> Το torrent πιθανότατα είναι κατεστραμμένο, ή δεν είναι έγκυρο αρχείο torrent."
-
-#: src/torrent/torrentcontrol.cpp:576
-#, kde-format
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr "Παρουσιάστηκε σφάλμα κατά τη φόρτωση <b>%1</b>:<br/><b>%2</b>"
-
-#: src/torrent/torrentcontrol.cpp:587
-#, kde-format
-msgid "Unable to create %1: %2"
-msgstr "Αδυναμία δημιουργίας %1: %2"
-
-#: src/torrent/torrentcontrol.cpp:602
-#, kde-format
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-"Ήδη λαμβάνετε το torrent <b>%1</b>. Οι λίστες ιχνηλατών και από τα δύο "
-"torrent συγχωνεύτηκαν."
-
-#: src/torrent/torrentcontrol.cpp:607
-#, kde-format
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "Ήδη λαμβάνετε αυτό το αρχείο torrent <b>%1</b>."
-
-#: src/torrent/torrentcreator.cpp:361
-#, kde-format
-msgid "Cannot create index file: %1"
-msgstr "Αδυναμία δημιουργίας αρχείου ευρετηρίου: %1"
-
-#: src/torrent/torrentstats.cpp:73
-msgid "Not started"
-msgstr "Δεν ξεκίνησε"
-
-#: src/torrent/torrentstats.cpp:75
-msgid "Download completed"
-msgstr "Η λήψη ολοκληρώθηκε"
-
-#: src/torrent/torrentstats.cpp:77
-msgid "Seeding completed"
-msgstr "Ολοκλήρωση προσφοράς πηγής"
-
-#: src/torrent/torrentstats.cpp:79
-msgctxt "Status of a torrent file"
-msgid "Seeding"
-msgstr "Προσφορά πηγής"
-
-#: src/torrent/torrentstats.cpp:81
-msgid "Downloading"
-msgstr "Λήψη"
-
-#: src/torrent/torrentstats.cpp:83
-msgid "Stalled"
-msgstr "Σταματημένο"
-
-#: src/torrent/torrentstats.cpp:85
-msgid "Stopped"
-msgstr "Διακόπηκε"
-
-#: src/torrent/torrentstats.cpp:89
-msgid "Allocating diskspace"
-msgstr "Κατανομή χώρου στο δίσκο"
-
-#: src/torrent/torrentstats.cpp:91
-msgid "Queued for seeding"
-msgstr "Σε αναμονή για προσφορά πηγής"
-
-#: src/torrent/torrentstats.cpp:91
-msgid "Queued for downloading"
-msgstr "Σε αναμονή για λήψη"
-
-#: src/torrent/torrentstats.cpp:95
-msgid "Stopped. No space left on device."
-msgstr "Διεκόπη. Δεν υπάρχει ελεύθερος χώρος στη συσκευή."
-
-#: src/torrent/torrentstats.cpp:97
-msgid "Paused"
-msgstr "Σε παύση"
-
-#: src/torrent/torrentstats.cpp:99
-msgid "Superseeding"
-msgstr "Υπερπροσφορά πηγής"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Ανακατεύθυνση χωρίς τοποθεσία ανακατεύθυνσης"
-
-#: src/tracker/httptracker.cpp:285 src/tracker/httptracker.cpp:305
-#: src/tracker/httptracker.cpp:461
-msgid "Invalid response from tracker"
-msgstr "Μη έγκυρη απάντηση από ιχνηλάτη"
-
-#: src/tracker/httptracker.cpp:298
-msgid "Invalid data from tracker"
-msgstr "Μη έγκυρα δεδομένα από τον ιχνηλάτη"
-
-#: src/tracker/httptracker.cpp:478
-msgid "Invalid tracker URL"
-msgstr "Μη έγκυρο URL ιχνηλάτη"
-
-#: src/tracker/httptracker.cpp:556 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-#, kde-format
-msgid "Timeout contacting tracker %1"
-msgstr "Τέλος χρόνου επαφής με ιχνηλάτη %1"
-
-#: src/tracker/udptracker.cpp:401
-#, kde-format
-msgid "Unable to resolve hostname %1"
-msgstr "Αδυναμία επίλυσης ονόματος υπολογιστή %1"
-
-#: src/upnp/httprequest.cpp:96
-msgid "Connection closed unexpectedly"
-msgstr "Η σύνδεση έκλεισε απροσδόκητα"
-
-#: src/upnp/httprequest.cpp:155
-msgid "Operation timed out"
-msgstr "Τέλος χρόνου λειτουργίας"
+#: src/download/downloader.cpp:808
+msgid "Disabled because webseed does not match torrent"
+msgstr "Απενεργοποιήθηκε γιατί η πηγή ιστού δεν ταιριάζει με το torrent"
 
 #: src/upnp/upnprouter.cpp:167
-#, kde-format
 msgid "Failed to download %1: %2"
 msgstr "Αποτυχία λήψης %1: %2"
 
@@ -468,78 +407,29 @@ msgid "Cannot find port forwarding service in the device's description."
 msgstr ""
 "Αδυναμία εύρεσης υπηρεσίας προώθησης θυρών στην περιγραφή της συσκευής."
 
-#: src/util/file.cpp:84
-#, kde-format
-msgid "Cannot write to %1: %2"
-msgstr "Αδυναμία εγγραφής στο %1: %2"
+#: src/upnp/httprequest.cpp:96
+msgid "Connection closed unexpectedly"
+msgstr "Η σύνδεση έκλεισε απροσδόκητα"
 
-#: src/util/file.cpp:98
-#, kde-format
-msgid "Cannot read from %1"
-msgstr "Αδυναμία ανάγνωσης από το %1"
+#: src/upnp/httprequest.cpp:155
+msgid "Operation timed out"
+msgstr "Τέλος χρόνου λειτουργίας"
 
-#: src/util/fileops.cpp:101
-#, kde-format
-msgid "Cannot create directory %1"
-msgstr "Αδυναμία δημιουργίας του καταλόγου %1"
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Άγνωστος πελάτης"
 
-#: src/util/fileops.cpp:168
-#, kde-format
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Αδυναμία δημιουργίας συμβολικού συνδέσμου %1 στο %2: %3"
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "Εντάξει"
 
-#: src/util/fileops.cpp:185
-#, kde-format
-msgid "Cannot move %1 to %2: %3"
-msgstr "Αδυναμία μετακίνησης του %1 στο %2: %3"
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr "Προειδοποίηση: %1"
 
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-#, kde-format
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Αδυναμία αντιγραφής του %1 στο %2: %3"
-
-#: src/util/fileops.cpp:282
-#, kde-format
-msgid "Cannot delete %1: %2"
-msgstr "Αδυναμία διαγραφής του %1: %2"
-
-#: src/util/fileops.cpp:300
-#, kde-format
-msgid "Cannot create %1: %2"
-msgstr "Αδυναμία δημιουργίας του %1: %2"
-
-#: src/util/fileops.cpp:318
-#, kde-format
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Αδυναμία υπολογισμού του μεγέθους αρχείου %1: %2"
-
-#: src/util/fileops.cpp:334
-#, kde-format
-msgid "Cannot calculate the filesize: %1"
-msgstr "Αδυναμία υπολογισμού του μεγέθους αρχείου: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-#, kde-format
-msgid "Cannot expand file: %1"
-msgstr "Αδυναμία επέκτασης του αρχείου: %1"
-
-#: src/util/fileops.cpp:427
-#, kde-format
-msgid "Cannot seek in file: %1"
-msgstr "Αδυναμία αναζήτησης στο αρχείο: %1"
-
-#: src/util/functions.cpp:234
-#, kde-format
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-#, kde-format
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 ημέρα"
-msgstr[1] "%1 ημέρες"
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Ανακοίνωση"
 
 #: src/util/logsystemmanager.cpp:33
 msgid "General"
@@ -572,6 +462,65 @@ msgstr "Σφάλμα κατά την εγγραφή στο δίσκο"
 #: src/util/signalcatcher.cpp:80
 msgid "Error when reading from disk"
 msgstr "Σφάλμα κατά την ανάγνωση από το δίσκο"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 ημέρα"
+msgstr[1] "%1 ημέρες"
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "Αδυναμία δημιουργίας του καταλόγου %1"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "Αδυναμία δημιουργίας συμβολικού συνδέσμου %1 στο %2: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "Αδυναμία μετακίνησης του %1 στο %2: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Αδυναμία αντιγραφής του %1 στο %2: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "Αδυναμία διαγραφής του %1: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "Αδυναμία δημιουργίας του %1: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Αδυναμία υπολογισμού του μεγέθους αρχείου %1: %2"
+
+#: src/util/fileops.cpp:334
+msgid "Cannot calculate the filesize: %1"
+msgstr "Αδυναμία υπολογισμού του μεγέθους αρχείου: %1"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "Αδυναμία επέκτασης του αρχείου: %1"
+
+#: src/util/fileops.cpp:427
+msgid "Cannot seek in file: %1"
+msgstr "Αδυναμία αναζήτησης στο αρχείο: %1"
+
+#: src/util/file.cpp:84
+msgid "Cannot write to %1: %2"
+msgstr "Αδυναμία εγγραφής στο %1: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Αδυναμία ανάγνωσης από το %1"
 
 #~ msgid "Parse Error"
 #~ msgstr "Σφάλμα ανάλυσης"

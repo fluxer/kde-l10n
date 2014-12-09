@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: katebacktracebrowserplugin\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-07 01:24+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2009-05-06 20:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -19,56 +19,102 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Юрій Чорноіван"
+#: katebacktracebrowser.cpp:46 katebacktracebrowser.cpp:131
+#: katebacktracebrowser.cpp:157
+msgid "Backtrace Browser"
+msgstr "Переглядач зворотного трасування"
 
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "yurchor@ukr.net"
+#: katebacktracebrowser.cpp:46
+msgid "Browsing backtraces"
+msgstr "Перегляд зворотного трасування"
 
+#: katebacktracebrowser.cpp:87
+msgid "Indexed files: %1"
+msgstr "Проіндексованих файлів: %1"
+
+#: katebacktracebrowser.cpp:111
+msgid "Indexing files..."
+msgstr "Індексування файлів..."
+
+#: katebacktracebrowser.cpp:139 katebacktracebrowser.cpp:388
+msgid "Backtrace Browser Settings"
+msgstr "Параметри переглядача зворотного трасування"
+
+#: katebacktracebrowser.cpp:186
+msgid "Load Backtrace"
+msgstr "Завантажити зворотне трасування"
+
+#: katebacktracebrowser.cpp:228
+msgid "Loading backtrace succeeded"
+msgstr "Успішне завантаження зворотного трасування"
+
+#: katebacktracebrowser.cpp:230
+msgid "Loading backtrace failed"
+msgstr "Спроба завантажити зворотне трасування завершилася невдало"
+
+#: katebacktracebrowser.cpp:266
+msgid "File not found: %1"
+msgstr "Не знайдено файла: %1"
+
+#: katebacktracebrowser.cpp:278
+msgid "Opened file: %1"
+msgstr "Відкрито файл: %1"
+
+#: katebacktracebrowser.cpp:281
+msgid "No debugging information available"
+msgstr "Немає інформації щодо налагоджування"
+
+#. i18n: file: btbrowserwidget.ui:27
 #. i18n: ectx: property (text), widget (QTreeWidget, lstBacktrace)
-#: btbrowserwidget.ui:27
+#: rc.cpp:3
 msgid "#"
 msgstr "№"
 
+#. i18n: file: btbrowserwidget.ui:32
 #. i18n: ectx: property (text), widget (QTreeWidget, lstBacktrace)
-#: btbrowserwidget.ui:32
+#: rc.cpp:6
 msgid "File"
 msgstr "Файл"
 
+#. i18n: file: btbrowserwidget.ui:37
 #. i18n: ectx: property (text), widget (QTreeWidget, lstBacktrace)
-#: btbrowserwidget.ui:37
+#: rc.cpp:9
 msgid "Line"
 msgstr "Рядок"
 
+#. i18n: file: btbrowserwidget.ui:42
 #. i18n: ectx: property (text), widget (QTreeWidget, lstBacktrace)
-#: btbrowserwidget.ui:42
+#: rc.cpp:12
 msgid "Function"
 msgstr "Функція"
 
+#. i18n: file: btbrowserwidget.ui:72
 #. i18n: ectx: property (text), widget (QPushButton, btnConfigure)
-#: btbrowserwidget.ui:72
+#: rc.cpp:15
 msgid "Configure Paths..."
 msgstr "Налаштувати шляхи..."
 
+#. i18n: file: btbrowserwidget.ui:79
 #. i18n: ectx: property (text), widget (QPushButton, btnClipboard)
-#: btbrowserwidget.ui:79
+#: rc.cpp:18
 msgid "Use Clipboard"
 msgstr "Скористатися буфером"
 
+#. i18n: file: btbrowserwidget.ui:86
 #. i18n: ectx: property (text), widget (QPushButton, btnBacktrace)
-#: btbrowserwidget.ui:86
+#: rc.cpp:21
 msgid "Load File..."
 msgstr "Завантажити файл..."
 
+#. i18n: file: btconfigwidget.ui:14
 #. i18n: ectx: property (title), widget (QGroupBox, gFolderList)
-#: btconfigwidget.ui:14
+#: rc.cpp:24
 msgid "Search Folders"
 msgstr "Шукати у теках"
 
+#. i18n: file: btconfigwidget.ui:20
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: btconfigwidget.ui:20
+#: rc.cpp:27
 msgid ""
 "Please add the source folders in which to search for the files in the "
 "backtrace:"
@@ -76,8 +122,9 @@ msgstr ""
 "Будь ласка додайте теки, де слід проводити пошук файлів під час зворотного "
 "трасування."
 
+#. i18n: file: btconfigwidget.ui:39
 #. i18n: ectx: property (whatsThis), widget (QListWidget, lstFolders)
-#: btconfigwidget.ui:39
+#: rc.cpp:30
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -115,70 +162,34 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">/шлях/до/qt/src</li></ul></"
 "body></html>"
 
+#. i18n: file: btconfigwidget.ui:61
 #. i18n: ectx: property (text), widget (KPushButton, btnRemove)
-#: btconfigwidget.ui:61
+#: rc.cpp:39
 msgid "&Remove"
 msgstr "Ви&лучити"
 
+#. i18n: file: btconfigwidget.ui:68
 #. i18n: ectx: property (text), widget (KPushButton, btnAdd)
-#: btconfigwidget.ui:68
+#: rc.cpp:42
 msgid "&Add"
 msgstr "&Додати"
 
+#. i18n: file: btconfigwidget.ui:79
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: btconfigwidget.ui:79
+#: rc.cpp:45
 msgid "File types:"
 msgstr "Типи файлів:"
 
+#. i18n: file: btconfigwidget.ui:89
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, edtExtensions)
-#: btconfigwidget.ui:89
+#: rc.cpp:48
 msgid "List of file extensions. Example: *.cpp, *.h, *.c, etc..."
 msgstr "Список суфіксів. Приклад: *.cpp, *.h, *.c тощо..."
 
-#: katebacktracebrowser.cpp:46 katebacktracebrowser.cpp:131
-#: katebacktracebrowser.cpp:157
-msgid "Backtrace Browser"
-msgstr "Переглядач зворотного трасування"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Юрій Чорноіван"
 
-#: katebacktracebrowser.cpp:46
-msgid "Browsing backtraces"
-msgstr "Перегляд зворотного трасування"
-
-#: katebacktracebrowser.cpp:87
-#, kde-format
-msgid "Indexed files: %1"
-msgstr "Проіндексованих файлів: %1"
-
-#: katebacktracebrowser.cpp:111
-msgid "Indexing files..."
-msgstr "Індексування файлів..."
-
-#: katebacktracebrowser.cpp:139 katebacktracebrowser.cpp:388
-msgid "Backtrace Browser Settings"
-msgstr "Параметри переглядача зворотного трасування"
-
-#: katebacktracebrowser.cpp:186
-msgid "Load Backtrace"
-msgstr "Завантажити зворотне трасування"
-
-#: katebacktracebrowser.cpp:228
-msgid "Loading backtrace succeeded"
-msgstr "Успішне завантаження зворотного трасування"
-
-#: katebacktracebrowser.cpp:230
-msgid "Loading backtrace failed"
-msgstr "Спроба завантажити зворотне трасування завершилася невдало"
-
-#: katebacktracebrowser.cpp:266
-#, kde-format
-msgid "File not found: %1"
-msgstr "Не знайдено файла: %1"
-
-#: katebacktracebrowser.cpp:278
-#, kde-format
-msgid "Opened file: %1"
-msgstr "Відкрито файл: %1"
-
-#: katebacktracebrowser.cpp:281
-msgid "No debugging information available"
-msgstr "Немає інформації щодо налагоджування"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "yurchor@ukr.net"

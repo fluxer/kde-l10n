@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kuser\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-20 03:21+0200\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2010-02-23 04:41+0200\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@kinux.ee>\n"
@@ -20,21 +20,15 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Peeter Russak, Marek Laane"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "pezz@tkwcy.ee, bald@starman.ee"
-
 #: ku_adduser.cpp:47
 msgid "New Account Options"
 msgstr "Uue konto valikud"
 
+#. i18n: file: ku_generalsettings.ui:123
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_createHomeDir)
+#. i18n: file: kuser.kcfg:55
 #. i18n: ectx: label, entry (createHomeDir), group (connection-$(connection))
-#: ku_adduser.cpp:53 ku_generalsettings.ui:127 kuser.kcfg:55
+#: ku_adduser.cpp:53 rc.cpp:54 rc.cpp:130
 msgid "Create home folder"
 msgstr "Tekitatakse kodukataloog"
 
@@ -43,17 +37,14 @@ msgid "Copy skeleton"
 msgstr "Kopeeritakse tüüpilised failid"
 
 #: ku_adduser.cpp:74
-#, kde-format
 msgid "User with UID %1 already exists."
 msgstr "Kasutaja UID-iga %1 on juba olemas."
 
 #: ku_adduser.cpp:81
-#, kde-format
 msgid "User with RID %1 already exists."
 msgstr "Kasutaja RID-iga %1 on juba olemas."
 
 #: ku_adduser.cpp:123
-#, kde-format
 msgid ""
 "Folder %1 already exists.\n"
 "%2 may become owner and permissions may change.\n"
@@ -64,97 +55,73 @@ msgstr ""
 "Kas tõesti soovid kasutada kataloogi %3?"
 
 #: ku_adduser.cpp:130
-#, kde-format
 msgid "%1 is not a folder."
 msgstr "%1 ei ole kataloog."
 
 #: ku_adduser.cpp:132 ku_adduser.cpp:159
-#, kde-format
 msgid "stat() failed on %1."
 msgstr "stat() nurjus %1 jaoks."
 
 #: ku_adduser.cpp:152
-#, kde-format
 msgid "Mailbox %1 already exists (uid=%2)."
 msgstr "Postkast %1 on juba olemas (uid=%2)."
 
 #: ku_adduser.cpp:156
-#, kde-format
 msgid "%1 exists but is not a regular file."
 msgstr "%1 on olemas, aga pole tavaline fail."
 
-#: ku_configdlg.cpp:55 ku_edituser.cpp:153
+#: ku_configdlg.cpp:51 ku_edituser.cpp:153
 msgid "<Empty>"
 msgstr "<Puudub>"
 
-#: ku_configdlg.cpp:57 ku_configdlg.cpp:97
+#: ku_configdlg.cpp:53
 msgid "Connection"
 msgstr "Ühendus"
 
-#: ku_configdlg.cpp:63
+#: ku_configdlg.cpp:59
 msgid "Password Policy"
 msgstr "Paroolireeglid"
 
-#: ku_configdlg.cpp:64 ku_configdlg.cpp:65 ku_configdlg.cpp:66
-#: ku_configdlg.cpp:67
+#: ku_configdlg.cpp:60 ku_configdlg.cpp:61 ku_configdlg.cpp:62
+#: ku_configdlg.cpp:63
 msgid " day"
 msgid_plural " days"
 msgstr[0] " päev"
 msgstr[1] " päeva"
 
-#: ku_configdlg.cpp:69
+#: ku_configdlg.cpp:65
 msgid "General"
 msgstr "Üldine"
 
-#: ku_configdlg.cpp:69
+#: ku_configdlg.cpp:65
 msgid "General Settings"
 msgstr "Üldised seadistused"
 
+#. i18n: file: ku_generalsettings.ui:42
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_source)
-#: ku_configdlg.cpp:75 ku_generalsettings.ui:41
+#: ku_configdlg.cpp:71 rc.cpp:36
 msgid "Files"
 msgstr "Failid"
 
-#: ku_configdlg.cpp:75
+#: ku_configdlg.cpp:71
 msgid "File Source Settings"
 msgstr "Lähtefaili seadistused"
-
-#: ku_configdlg.cpp:103
-msgid "Settings"
-msgstr "Seadistused"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, KU_LdapSamba)
-#: ku_configdlg.cpp:110 ku_edituser.cpp:271 ku_ldapsamba.ui:21
-msgid "Samba"
-msgstr "Samba"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_source)
-#: ku_configdlg.cpp:112 ku_generalsettings.ui:46
-msgid "LDAP"
-msgstr "LDAP"
-
-#: ku_configdlg.cpp:112
-msgid "LDAP Source Settings"
-msgstr "LDAP lähtefaili seadistused"
 
 #: ku_deluser.cpp:34
 msgid "Delete User"
 msgstr "Kustuta kasutaja"
 
 #: ku_deluser.cpp:39
-#, kde-format
 msgid "<p>Deleting user <b>%1</b><br />Also perform the following actions:</p>"
 msgstr ""
 "<p>Kasutaja <b>%1</b> kustutamine<br />Koos sellega sooritatakse järgmised "
 "tegevused:</p>"
 
 #: ku_deluser.cpp:42
-#, kde-format
 msgid "Delete &home folder: %1"
 msgstr "Kustutatakse kodukataloo&g: %1"
 
 #: ku_deluser.cpp:44
-#, kde-format
 msgid "Delete &mailbox: %1"
 msgstr "Kustutatakse &postkast: %1"
 
@@ -222,7 +189,7 @@ msgstr "Kohalik"
 msgid "Builtin"
 msgstr "Sisseehitatud"
 
-#: ku_editgroup.cpp:149 ku_edituser.cpp:313
+#: ku_editgroup.cpp:149
 msgid "Domain SID:"
 msgstr "Domeeni SID:"
 
@@ -251,17 +218,14 @@ msgid "You need to type a group name."
 msgstr "Anda tuleb grupi nimi."
 
 #: ku_editgroup.cpp:289
-#, kde-format
 msgid "Group with name %1 already exists."
 msgstr "Grupp nimega %1 on juba olemas."
 
 #: ku_editgroup.cpp:296
-#, kde-format
 msgid "Group with SID %1 already exists."
 msgstr "Grupp SID-iga %1 on juba olemas."
 
 #: ku_editgroup.cpp:301
-#, kde-format
 msgid "Group with gid %1 already exists."
 msgstr "Grupp GID-iga %1 on juba olemas."
 
@@ -273,12 +237,16 @@ msgstr "Ära muuda"
 msgid " days"
 msgstr " päeva"
 
+#. i18n: file: ku_passwordpolicy.ui:77
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_smax)
+#. i18n: file: ku_passwordpolicy.ui:90
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_sinact)
+#. i18n: file: ku_passwordpolicy.ui:116
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_swarn)
+#. i18n: file: ku_passwordpolicy.ui:159
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_sneverexpire)
-#: ku_edituser.cpp:82 ku_edituser.cpp:260 ku_passwordpolicy.ui:77
-#: ku_passwordpolicy.ui:90 ku_passwordpolicy.ui:116 ku_passwordpolicy.ui:159
+#: ku_edituser.cpp:82 ku_edituser.cpp:253 rc.cpp:75 rc.cpp:78 rc.cpp:84
+#: rc.cpp:90
 msgid "Never"
 msgstr "mitte kunagi"
 
@@ -286,6 +254,7 @@ msgstr "mitte kunagi"
 msgid "User Info"
 msgstr "Kasutaja info"
 
+#. i18n("WHAT IS THIS: User login");
 #: ku_edituser.cpp:118
 msgid "User login:"
 msgstr "Kasutajanimi:"
@@ -298,50 +267,62 @@ msgstr "Kas&utaja ID:"
 msgid "Set &Password..."
 msgstr "Säti &parool..."
 
+#. i18n("WHAT IS THIS: Full Name");
 #: ku_edituser.cpp:135
 msgid "Full &name:"
 msgstr "Täielik &nimi:"
 
+#. i18n("WHAT IS THIS: Surname");
 #: ku_edituser.cpp:142
 msgid "Surname:"
 msgstr "Perekonnanimi:"
 
+#. i18n("WHAT IS THIS: Email");
 #: ku_edituser.cpp:147
 msgid "Email address:"
 msgstr "E-posti aadress:"
 
+#. i18n("WHAT IS THIS: Login Shell");
 #: ku_edituser.cpp:161
 msgid "&Login shell:"
 msgstr "She&ll:"
 
+#. i18n("WHAT IS THIS: Home Directory");
 #: ku_edituser.cpp:166
 msgid "&Home folder:"
 msgstr "Kodukataloo&g:"
 
+#. i18n("WHAT IS THIS: Office");
 #: ku_edituser.cpp:174
 msgid "&Office:"
 msgstr "K&ontor:"
 
+#. i18n("WHAT IS THIS: Office Phone");
 #: ku_edituser.cpp:179
 msgid "Offi&ce Phone:"
 msgstr "Tele&fon tööl:"
 
+#. i18n("WHAT IS THIS: Home Phone");
 #: ku_edituser.cpp:184
 msgid "Ho&me Phone:"
 msgstr "Telefon ko&dus:"
 
+#. i18n("WHAT IS THIS: Login class");
 #: ku_edituser.cpp:189
 msgid "Login class:"
 msgstr "Sisselogimise klass:"
 
+#. i18n("WHAT IS THIS: Office1");
 #: ku_edituser.cpp:194
 msgid "&Office #1:"
 msgstr "Kontor &1:"
 
+#. i18n("WHAT IS THIS: Office2");
 #: ku_edituser.cpp:199
 msgid "O&ffice #2:"
 msgstr "Kontor &2:"
 
+#. i18n("WHAT IS THIS: Address");
 #: ku_edituser.cpp:204
 msgid "&Address:"
 msgstr "&Aadress:"
@@ -354,125 +335,79 @@ msgstr "Ko&nto suletud"
 msgid "Disable &POSIX account information"
 msgstr "&POSIX konto info keelamine"
 
-#: ku_edituser.cpp:227
+#: ku_edituser.cpp:226
 msgid "Password Management"
 msgstr "Paroolide haldamine"
 
-#: ku_edituser.cpp:233
+#: ku_edituser.cpp:232
 msgid "Last password change:"
 msgstr "Viimane paroolivahetus:"
 
-#: ku_edituser.cpp:239
+#: ku_edituser.cpp:238
 msgid "POSIX parameters:"
 msgstr "POSIX-i parameetrid:"
 
-#: ku_edituser.cpp:240
+#: ku_edituser.cpp:239
 msgid "Time before password may &not be changed after last password change:"
 msgstr "Pärast viimast paroolimuutmist ei saa parooli muuta e&nne:"
 
-#: ku_edituser.cpp:241
+#: ku_edituser.cpp:240
 msgid "Time when password &expires after last password change:"
 msgstr "Pärast viimast paroolivahetust a&egub parool:"
 
-#: ku_edituser.cpp:242
+#: ku_edituser.cpp:241
 msgid "Time before password expires to &issue an expire warning:"
 msgstr "Pärast aegumisho&iatuse andmist aegub parool:"
 
-#: ku_edituser.cpp:243
+#: ku_edituser.cpp:242
 msgid "Time when account will be &disabled after expiration of password:"
 msgstr "Kasutajanimi tühistatakse pärast parooli ae&gumist:"
 
-#: ku_edituser.cpp:254
+#: ku_edituser.cpp:247
 msgid "&Account will expire on:"
 msgstr "K&asutajanime kehtivus lõpeb:"
 
-#: ku_edituser.cpp:278
-msgid "RID:"
-msgstr "RID:"
-
-#: ku_edituser.cpp:283
-msgid "Login script:"
-msgstr "Sisselogimisskript:"
-
-#: ku_edituser.cpp:288
-msgid "Profile path:"
-msgstr "Profiili asukoht:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4_2_2)
-#: ku_edituser.cpp:293 ku_ldapsamba.ui:74
-msgid "Home drive:"
-msgstr "Koduketas:"
-
-#: ku_edituser.cpp:298
-msgid "Home path:"
-msgstr "Kodu asukoht:"
-
-#: ku_edituser.cpp:303
-msgid "User workstations:"
-msgstr "Kasutaja tööjaamad:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: ku_edituser.cpp:308 ku_ldapsamba.ui:157
-msgid "Domain name:"
-msgstr "Domeeni nimi:"
-
-#: ku_edituser.cpp:319
-msgid "Disable &Samba account information"
-msgstr "&Samba konto info keelamine"
-
-#: ku_edituser.cpp:325 ku_mainview.cpp:69
+#: ku_edituser.cpp:264 ku_mainview.cpp:69
 msgid "Groups"
 msgstr "Grupid"
 
-#: ku_edituser.cpp:335 ku_edituser.cpp:664 ku_edituser.cpp:695
+#: ku_edituser.cpp:274 ku_edituser.cpp:565 ku_edituser.cpp:596
 msgid "Primary group: "
 msgstr "Esmane grupp: "
 
-#: ku_edituser.cpp:338
+#: ku_edituser.cpp:277
 msgid "Set as Primary"
 msgstr "Määra esmagrupiks"
 
-#: ku_edituser.cpp:352 ku_edituser.cpp:375
+#: ku_edituser.cpp:291 ku_edituser.cpp:314
 msgid "User Properties"
 msgstr "Kasutaja omadused"
 
-#: ku_edituser.cpp:358
-#, kde-format
+#: ku_edituser.cpp:297
 msgid "User Properties - %1 Selected Users"
 msgstr "Kasutaja omadused - %1 valitud kasutajat"
 
-#: ku_edituser.cpp:531 ku_mainview.cpp:145
+#: ku_edituser.cpp:449 ku_mainview.cpp:145
 msgid "Do Not Change"
 msgstr "Ära muuda"
 
-#: ku_edituser.cpp:910
+#: ku_edituser.cpp:778
 msgid "You need to specify an UID."
 msgstr "Anda tuleb UID."
 
-#: ku_edituser.cpp:915
+#: ku_edituser.cpp:783
 msgid "You must specify a home directory."
 msgstr "Anda tuleb kodukataloog."
 
-#: ku_edituser.cpp:921
+#: ku_edituser.cpp:789
 msgid "You must fill the surname field."
 msgstr "Anda tuleb perekonnanimi."
 
-#: ku_edituser.cpp:928
-msgid "You need to specify a samba RID."
-msgstr "Anda tuleb Samba RID."
-
-#: ku_edituser.cpp:973
-#, kde-format
+#: ku_edituser.cpp:833
 msgid "User with UID %1 already exists"
 msgstr "Kasutaja UID-iga %1 on juba olemas"
 
-#: ku_edituser.cpp:983
-#, kde-format
-msgid "User with RID %1 already exists"
-msgstr "Kasutaja RID-iga %1 on juba olemas"
-
-#: ku_edituser.cpp:997
-#, kde-format
+#: ku_edituser.cpp:846
 msgid ""
 "<p>The shell %1 is not yet listed in the file %2. In order to use this shell "
 "you must add it to this file first.<br />Do you want to add it now?</p>"
@@ -480,95 +415,17 @@ msgstr ""
 "<p>Shell %1 ei ole praegu kirjas failis %2. Selle shelli kasutamiseks tuleb "
 "see esmalt faili lisada.<br />Kas soovid seda kohe teha?</p>"
 
-#: ku_edituser.cpp:1001
+#: ku_edituser.cpp:850
 msgid "Unlisted Shell"
 msgstr "Kirjapanemata shell"
 
-#: ku_edituser.cpp:1002
+#: ku_edituser.cpp:851
 msgid "&Add Shell"
 msgstr "Lis&a shell"
 
-#: ku_edituser.cpp:1003
+#: ku_edituser.cpp:852
 msgid "Do &Not Add"
 msgstr "Ä&ra lisa"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ku_filessettings.ui:30
-msgid "User/group database locations"
-msgstr "Kasutaja/grupi andmebaasi asukoht"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_md5shadow)
-#: ku_filessettings.ui:42
-msgid "MD5 shadow passwords"
-msgstr "MD5 variparoolid"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel6_3)
-#: ku_filessettings.ui:52
-msgid "Shadow group file:"
-msgstr "Varigrupifail:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel5_3)
-#: ku_filessettings.ui:65
-msgid "Shadow password file:"
-msgstr "Variparoolifail:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4_3)
-#: ku_filessettings.ui:78
-msgid "Group file:"
-msgstr "Grupifail:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3_3)
-#: ku_filessettings.ui:88
-msgid "Password file:"
-msgstr "Paroolifail:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ku_generalsettings.ui:30
-msgid "Source of user/group database:"
-msgstr "Kasutaja/grupi andmebaasi asukoht:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_source)
-#: ku_generalsettings.ui:51
-msgid "System"
-msgstr "Süsteem"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: ku_generalsettings.ui:72
-msgid "First normal GID:"
-msgstr "Esimene tavaline GID:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#. i18n: ectx: property (text), widget (QLabel, textLabel5_2_2)
-#: ku_generalsettings.ui:82 ku_ldapsamba.ui:103
-msgid "Home path template:"
-msgstr "Kodukataloogi asukoha mall:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: ku_generalsettings.ui:92
-msgid "Shell:"
-msgstr "Shell:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3_2)
-#: ku_generalsettings.ui:109
-msgid "First normal UID:"
-msgstr "Esimene tavaline UID:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_copySkel)
-#. i18n: ectx: label, entry (copySkel), group (connection-$(connection))
-#: ku_generalsettings.ui:137 kuser.kcfg:60
-msgid "Copy skeleton to home folder"
-msgstr "Kopeeritakse tüüpilised failid"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_userPrivateGroup)
-#. i18n: ectx: label, entry (userPrivateGroup), group (connection-$(connection))
-#: ku_generalsettings.ui:152 kuser.kcfg:65
-msgid "User private groups"
-msgstr "Kasutaja privaatgrupid"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: ku_generalsettings.ui:159
-msgid "Default group:"
-msgstr "Vaikimisi grupp:"
 
 #: ku_groupfiles.cpp:74
 msgid "Groups file name not set, please check 'Settings/Files'"
@@ -576,7 +433,6 @@ msgstr ""
 "Gruppide faili nimi pole määratud, palun kontrolli Seadistused->Failid."
 
 #: ku_groupfiles.cpp:82
-#, kde-format
 msgid ""
 "stat() call on file %1 failed: %2\n"
 "Check KUser settings."
@@ -584,24 +440,14 @@ msgstr ""
 "stat() väljakutse failile %1 nurjus: %2\n"
 "Kontrolli KUseri seadistusi."
 
-#: ku_groupfiles.cpp:96 ku_userfiles.cpp:195
-#, kde-format
+#: ku_groupfiles.cpp:96 ku_userfiles.cpp:187
 msgid "Error opening %1 for reading."
 msgstr "Faili %1 avamisel lugemiseks."
 
-#: ku_groupfiles.cpp:172 ku_groupfiles.cpp:179 ku_userfiles.cpp:294
-#: ku_userfiles.cpp:301
-#, kde-format
+#: ku_groupfiles.cpp:172 ku_groupfiles.cpp:179 ku_userfiles.cpp:286
+#: ku_userfiles.cpp:293
 msgid "Error opening %1 for writing."
 msgstr "Faili %1 avamisel kirjutamiseks."
-
-#: ku_groupldap.cpp:156
-msgid "Loading Groups From LDAP"
-msgstr "Gruppide laadimine LDAP-ist"
-
-#: ku_groupldap.cpp:208 ku_userldap.cpp:512
-msgid "LDAP Operation"
-msgstr "LDAP-i toiming"
 
 #: ku_groupmodel.cpp:48
 msgid "GID"
@@ -634,159 +480,6 @@ msgstr "Kirjeldus"
 #: ku_groupmodel.cpp:78
 msgid "Unknown"
 msgstr "Tundmatu"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ldapsam)
-#: ku_ldapsamba.ui:36
-msgid "Manage Samba user accounts/groups"
-msgstr "Samba kasutajate kontode/gruppide haldus"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_2_2)
-#: ku_ldapsamba.ui:61
-msgid "Default login script:"
-msgstr "Vaikimisi sisselogimisskript:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3_2_2)
-#: ku_ldapsamba.ui:87
-msgid "Profile path template:"
-msgstr "Profiili asukoha mall:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_lanmanhash)
-#. i18n: ectx: label, entry (lanmanhash), group (connection-$(connection))
-#: ku_ldapsamba.ui:139 kuser.kcfg:304
-msgid "Store LanManager hashed password"
-msgstr "LanManageri räsitud parooli salvestamine"
-
-#. i18n: ectx: property (text), widget (KPushButton, domQuery)
-#: ku_ldapsamba.ui:177
-msgid "&Query Server"
-msgstr "Serveri pärin&g"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ku_ldapsamba.ui:189
-msgid "Domain SID (you can obtain with 'net getlocalsid domain_name'):"
-msgstr "Domeeni SID (hangitav käsuga 'net getlocalsid domeeni_nimi'):"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: ku_ldapsamba.ui:217
-msgid "Algorithmic RID base:"
-msgstr "Algoritmiline RID-baas:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapgrouprdn)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapuserrdn)
-#: ku_ldapsettings.ui:34 ku_ldapsettings.ui:165
-msgid "cn"
-msgstr "cn"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapgrouprdn)
-#: ku_ldapsettings.ui:39
-msgid "gidNumber"
-msgstr "gidNumber"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:51
-msgid "Plain Text"
-msgstr "Lihttekst"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:56
-msgid "CRYPT"
-msgstr "CRYPT"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:61
-msgid "MD5"
-msgstr "MD5"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:66
-msgid "SMD5"
-msgstr "SMD5"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:71
-msgid "SHA"
-msgstr "SHA"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:76
-msgid "SSHA"
-msgstr "SSHA"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ku_ldapsettings.ui:84
-msgid "User base:"
-msgstr "Kasutaja baas:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
-#: ku_ldapsettings.ui:94
-msgid "Group filter:"
-msgstr "Grupi filter:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#: ku_ldapsettings.ui:104
-msgid "Structural objectclass:"
-msgstr "Struktuuri objektiklass:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: ku_ldapsettings.ui:114
-msgid "User filter:"
-msgstr "Kasutaja filter:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapstructural)
-#: ku_ldapsettings.ui:131
-msgid "account"
-msgstr "konto"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapstructural)
-#: ku_ldapsettings.ui:136
-msgid "inetOrgPerson"
-msgstr "inetOrgPerson"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: ku_ldapsettings.ui:144
-msgid "Group RDN prefix:"
-msgstr "Grupi RDN prefiks:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapuserrdn)
-#: ku_ldapsettings.ui:155
-msgid "uid"
-msgstr "UID"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapuserrdn)
-#: ku_ldapsettings.ui:160
-msgid "uidNumber"
-msgstr "uidNumber"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: ku_ldapsettings.ui:173
-msgid "Group base:"
-msgstr "Grupi baas:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: ku_ldapsettings.ui:183
-msgid "User RDN prefix:"
-msgstr "Kasutaja RDN prefiks:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: ku_ldapsettings.ui:193
-msgid "Password hash:"
-msgstr "Parooliräsi:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ldapshadow)
-#: ku_ldapsettings.ui:205
-msgid "Manage shadowAccount objectclass"
-msgstr "Objektiklassi shadowAccount haldus"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ldapcnfullname)
-#. i18n: ectx: label, entry (ldapcnfullname), group (connection-$(connection))
-#: ku_ldapsettings.ui:212 kuser.kcfg:225
-msgid "Store the user's full name in the cn attribute"
-msgstr "Kasutaja täieliku nime salvestamine cn atribuudis"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ldapgecos)
-#: ku_ldapsettings.ui:219
-msgid "Update the gecos attribute"
-msgstr "gecos atribuudi uuendamine"
 
 #: ku_main.cpp:37
 msgid "KDE User Editor"
@@ -821,7 +514,6 @@ msgid "KDE User Manager"
 msgstr "KDE kasutajate haldur"
 
 #: ku_mainview.cpp:144
-#, kde-format
 msgid ""
 "You have selected %1 users. Do you really want to change the password for "
 "all the selected users?"
@@ -842,12 +534,10 @@ msgid "Please type the name of the new user:"
 msgstr "Palun anna uue kasutaja nimi:"
 
 #: ku_mainview.cpp:204
-#, kde-format
 msgid "User with name %1 already exists."
 msgstr "Kasutajanimi %1 on juba olemas."
 
 #: ku_mainview.cpp:359
-#, kde-format
 msgid ""
 "You are using private groups.\n"
 "Do you want to delete the user's private group '%1'?"
@@ -864,7 +554,6 @@ msgid "You have run out of gid space."
 msgstr "GID-id said otsa."
 
 #: ku_mainview.cpp:457
-#, kde-format
 msgid ""
 "The group '%1' is the primary group of one or more users (such as '%2'); it "
 "cannot be deleted."
@@ -873,12 +562,10 @@ msgstr ""
 "gruppi ei saa kustutada."
 
 #: ku_mainview.cpp:466
-#, kde-format
 msgid "Do you really want to delete the group '%1'?"
 msgstr "Kas tõesti eemaldada grupp '%1'?"
 
 #: ku_mainview.cpp:470
-#, kde-format
 msgid "Do you really want to delete the %1 selected groups?"
 msgstr "Kas tõesti eemaldada %1 valitud gruppi?"
 
@@ -919,12 +606,10 @@ msgid "Show System Users/Groups"
 msgstr "Näita süsteemseid kasutajaid/gruppe"
 
 #: ku_misc.cpp:55
-#, kde-format
 msgid "Can not create backup file for %1"
 msgstr "Ei saa teha varukoopiat failist %1"
 
 #: ku_misc.cpp:105
-#, kde-format
 msgid ""
 "Error creating symlink %1.\n"
 "Error: %2"
@@ -933,7 +618,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_misc.cpp:115
-#, kde-format
 msgid ""
 "Cannot change owner of folder %1.\n"
 "Error: %2"
@@ -942,7 +626,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_misc.cpp:120
-#, kde-format
 msgid ""
 "Cannot change permissions on folder %1.\n"
 "Error: %2"
@@ -951,7 +634,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_misc.cpp:130
-#, kde-format
 msgid ""
 "Cannot change owner of file %1.\n"
 "Error: %2"
@@ -960,7 +642,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_misc.cpp:135
-#, kde-format
 msgid ""
 "Cannot change permissions on file %1.\n"
 "Error: %2"
@@ -969,44 +650,16 @@ msgstr ""
 "Viga: %2"
 
 #: ku_misc.cpp:154
-#, kde-format
 msgid "File %1 does not exist."
 msgstr "Faili %1 ei ole olemas."
 
 #: ku_misc.cpp:159
-#, kde-format
 msgid "Cannot open file %1 for reading."
 msgstr "Faili avamine lugemiseks nurjus: %1."
 
 #: ku_misc.cpp:164
-#, kde-format
 msgid "Cannot open file %1 for writing."
 msgstr "Faili avamine kirjutamiseks nurjus: %1."
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: ku_passwordpolicy.ui:38
-msgid "Time before password expires to issue an expire warning:"
-msgstr "Pärast aegumishoiatuse andmist aegub parool:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: ku_passwordpolicy.ui:51
-msgid "Time when password expires after last password change:"
-msgstr "Pärast viimast paroolivahetust aegub parool:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: ku_passwordpolicy.ui:64
-msgid "Time when account will be disabled after expiration of password:"
-msgstr "Kasutajanimi tühistatakse pärast parooli aegumist:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ku_passwordpolicy.ui:103
-msgid "Time before password may not be changed after last password change:"
-msgstr "Pärast viimast paroolimuutmist ei saa parooli muuta enne:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: ku_passwordpolicy.ui:149
-msgid "Account will expire on:"
-msgstr "Kasutajanime kehtivus lõpeb:"
 
 #: ku_pwdlg.cpp:33
 msgid "Enter Password"
@@ -1057,7 +710,6 @@ msgid "A connection with this name already exists."
 msgstr "Sellise nimega ühendus on juba olemas."
 
 #: ku_selectconn.cpp:130
-#, kde-format
 msgid "Do you really want to delete the connection '%1'?"
 msgstr "Kas tõesti kustutada ühendus '%1'?"
 
@@ -1066,12 +718,10 @@ msgid "Delete Connection"
 msgstr "Kustuta ühendus"
 
 #: ku_user.cpp:161
-#, kde-format
 msgid "Cannot create home folder for %1: it is null or empty."
 msgstr "Kasutaja %1 kodukataloogi loomine nurjus: see on tühi või nimeta."
 
 #: ku_user.cpp:167
-#, kde-format
 msgid ""
 "Cannot create home folder %1.\n"
 "Error: %2"
@@ -1080,7 +730,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:173
-#, kde-format
 msgid ""
 "Cannot change owner of home folder %1.\n"
 "Error: %2"
@@ -1089,7 +738,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:178
-#, kde-format
 msgid ""
 "Cannot change permissions on home folder %1.\n"
 "Error: %2"
@@ -1098,7 +746,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:193
-#, kde-format
 msgid ""
 "Folder %1 already exists.\n"
 "Will make %2 owner and change permissions.\n"
@@ -1109,7 +756,6 @@ msgstr ""
 "Kas jätkata?"
 
 #: ku_user.cpp:197 ku_user.cpp:215
-#, kde-format
 msgid ""
 "Cannot change owner of %1 folder.\n"
 "Error: %2"
@@ -1118,7 +764,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:201
-#, kde-format
 msgid ""
 "Folder %1 left 'as is'.\n"
 "Verify ownership and permissions for user %2 who may not be able to log in."
@@ -1127,13 +772,11 @@ msgstr ""
 "Kontrolli kasutaja %2 õigusi, kes ei tohiks saada sisse logida."
 
 #: ku_user.cpp:205
-#, kde-format
 msgid "%1 exists and is not a folder. User %2 will not be able to log in."
 msgstr ""
 "%1 on olemas ja pole kataloog. Kasutajal %2 pole võimalik sisse logida."
 
 #: ku_user.cpp:211
-#, kde-format
 msgid ""
 "Cannot create %1 folder.\n"
 "Error: %2"
@@ -1142,7 +785,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:219
-#, kde-format
 msgid ""
 "stat call on %1 failed.\n"
 "Error: %2"
@@ -1151,12 +793,10 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:234
-#, kde-format
 msgid "Cannot create %1: %2"
 msgstr "Ei saa luua %1: %2"
 
 #: ku_user.cpp:244
-#, kde-format
 msgid ""
 "Cannot change owner on mailbox: %1\n"
 "Error: %2"
@@ -1165,7 +805,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:250
-#, kde-format
 msgid ""
 "Cannot change permissions on mailbox: %1\n"
 "Error: %2"
@@ -1174,18 +813,15 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:265
-#, kde-format
 msgid "Folder %1 does not exist, cannot copy skeleton for %2."
 msgstr ""
 "Kataloogi %1 ei ole olemas, kasutajale %2 ei saa tüüpseadistusi kopeerida."
 
 #: ku_user.cpp:270
-#, kde-format
 msgid "Folder %1 does not exist, cannot copy skeleton."
 msgstr "Kataloogi %1 ei ole olemas, tüüpseadistusi ei saa kopeerida."
 
 #: ku_user.cpp:288
-#, kde-format
 msgid ""
 "Cannot remove home folder %1.\n"
 "Error: %2"
@@ -1194,12 +830,10 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:292
-#, kde-format
 msgid "Removal of home folder %1 failed (uid = %2, gid = %3)."
 msgstr "Kodukataloogi %1 eemaldamine nurjus (uid = %2, gid = %3)."
 
 #: ku_user.cpp:295
-#, kde-format
 msgid ""
 "stat call on file %1 failed.\n"
 "Error: %2"
@@ -1208,7 +842,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:313
-#, kde-format
 msgid ""
 "Cannot remove crontab %1.\n"
 "Error: %2"
@@ -1217,7 +850,6 @@ msgstr ""
 "Viga: %2"
 
 #: ku_user.cpp:327
-#, kde-format
 msgid ""
 "Cannot remove mailbox %1.\n"
 "Error: %2"
@@ -1225,7 +857,7 @@ msgstr ""
 "Postkasti %1 eemaldamine nurjus.\n"
 "Viga: %2"
 
-#: ku_userfiles.cpp:103
+#: ku_userfiles.cpp:100
 msgid ""
 "KUser sources were not configured.\n"
 "Set 'Password file' in Settings/Files"
@@ -1233,8 +865,7 @@ msgstr ""
 "KUseri lähtefailid pole seadistatud.\n"
 "Määra paroolifail Seadistused->Failid"
 
-#: ku_userfiles.cpp:111
-#, kde-format
+#: ku_userfiles.cpp:108
 msgid ""
 "Stat call on file %1 failed: %2\n"
 "Check KUser settings."
@@ -1242,27 +873,17 @@ msgstr ""
 "stat väljakutse failile %1 nurjus: %2\n"
 "Kontrolli KUseri seadistusi."
 
-#: ku_userfiles.cpp:125
-#, kde-format
+#: ku_userfiles.cpp:122
 msgid "Error opening %1 for reading.\n"
 msgstr "Viga %1 avamisel lugemiseks.\n"
 
-#: ku_userfiles.cpp:207
-#, kde-format
+#: ku_userfiles.cpp:199
 msgid ""
 "No /etc/passwd entry for %1.\n"
 "Entry will be removed at the next `Save'-operation."
 msgstr ""
 "/etc/passwd rei sisalda kirjet %1 kohta.\n"
 "Kirje eemaldatakse järgmisel salvestamisel."
-
-#: ku_userfiles.cpp:441
-msgid "Unable to build password database."
-msgstr "Paroolide andmebaasi ehitamine nurjus."
-
-#: ku_userldap.cpp:228
-msgid "Loading Users From LDAP"
-msgstr "Kasutajate laadimine LDAP-ilt"
 
 #: ku_usermodel.cpp:48
 msgid "UID"
@@ -1300,23 +921,175 @@ msgstr "Samba koduketas"
 msgid "Samba Home Path"
 msgstr "Samba kodu asukoht"
 
+#. i18n: file: kuserui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:3
+msgid "&File"
+msgstr "&Fail"
+
+#. i18n: file: kuserui.rc:8
+#. i18n: ectx: Menu (user)
+#: rc.cpp:6
+msgid "&User"
+msgstr "Kas&utaja"
+
+#. i18n: file: kuserui.rc:14
+#. i18n: ectx: Menu (group)
+#: rc.cpp:9
+msgid "&Group"
+msgstr "&Grupp"
+
+#. i18n: file: kuserui.rc:19
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:12
+msgid "&Settings"
+msgstr "&Seadistused"
+
+#. i18n: file: ku_filessettings.ui:30
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:15
+msgid "User/group database locations"
+msgstr "Kasutaja/grupi andmebaasi asukoht"
+
+#. i18n: file: ku_filessettings.ui:42
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_md5shadow)
+#: rc.cpp:18
+msgid "MD5 shadow passwords"
+msgstr "MD5 variparoolid"
+
+#. i18n: file: ku_filessettings.ui:52
+#. i18n: ectx: property (text), widget (QLabel, textLabel6_3)
+#: rc.cpp:21
+msgid "Shadow group file:"
+msgstr "Varigrupifail:"
+
+#. i18n: file: ku_filessettings.ui:65
+#. i18n: ectx: property (text), widget (QLabel, textLabel5_3)
+#: rc.cpp:24
+msgid "Shadow password file:"
+msgstr "Variparoolifail:"
+
+#. i18n: file: ku_filessettings.ui:78
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_3)
+#: rc.cpp:27
+msgid "Group file:"
+msgstr "Grupifail:"
+
+#. i18n: file: ku_filessettings.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel3_3)
+#: rc.cpp:30
+msgid "Password file:"
+msgstr "Paroolifail:"
+
+#. i18n: file: ku_generalsettings.ui:31
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:33
+msgid "Source of user/group database:"
+msgstr "Kasutaja/grupi andmebaasi asukoht:"
+
+#. i18n: file: ku_generalsettings.ui:47
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_source)
+#: rc.cpp:39
+msgid "System"
+msgstr "Süsteem"
+
+#. i18n: file: ku_generalsettings.ui:68
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:42
+msgid "First normal GID:"
+msgstr "Esimene tavaline GID:"
+
+#. i18n: file: ku_generalsettings.ui:78
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: rc.cpp:45
+msgid "Home path template:"
+msgstr "Kodukataloogi asukoha mall:"
+
+#. i18n: file: ku_generalsettings.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:48
+msgid "Shell:"
+msgstr "Shell:"
+
+#. i18n: file: ku_generalsettings.ui:105
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3_2)
+#: rc.cpp:51
+msgid "First normal UID:"
+msgstr "Esimene tavaline UID:"
+
+#. i18n: file: ku_generalsettings.ui:133
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_copySkel)
+#. i18n: file: kuser.kcfg:60
+#. i18n: ectx: label, entry (copySkel), group (connection-$(connection))
+#: rc.cpp:57 rc.cpp:136
+msgid "Copy skeleton to home folder"
+msgstr "Kopeeritakse tüüpilised failid"
+
+#. i18n: file: ku_generalsettings.ui:148
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_userPrivateGroup)
+#. i18n: file: kuser.kcfg:65
+#. i18n: ectx: label, entry (userPrivateGroup), group (connection-$(connection))
+#: rc.cpp:60 rc.cpp:142
+msgid "User private groups"
+msgstr "Kasutaja privaatgrupid"
+
+#. i18n: file: ku_generalsettings.ui:155
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
+#: rc.cpp:63
+msgid "Default group:"
+msgstr "Vaikimisi grupp:"
+
+#. i18n: file: ku_passwordpolicy.ui:38
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:66
+msgid "Time before password expires to issue an expire warning:"
+msgstr "Pärast aegumishoiatuse andmist aegub parool:"
+
+#. i18n: file: ku_passwordpolicy.ui:51
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: rc.cpp:69
+msgid "Time when password expires after last password change:"
+msgstr "Pärast viimast paroolivahetust aegub parool:"
+
+#. i18n: file: ku_passwordpolicy.ui:64
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
+#: rc.cpp:72
+msgid "Time when account will be disabled after expiration of password:"
+msgstr "Kasutajanimi tühistatakse pärast parooli aegumist:"
+
+#. i18n: file: ku_passwordpolicy.ui:103
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:81
+msgid "Time before password may not be changed after last password change:"
+msgstr "Pärast viimast paroolimuutmist ei saa parooli muuta enne:"
+
+#. i18n: file: ku_passwordpolicy.ui:149
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:87
+msgid "Account will expire on:"
+msgstr "Kasutajanime kehtivus lõpeb:"
+
+#. i18n: file: kuser.kcfg:16
 #. i18n: ectx: label, entry (connection), group (general)
-#: kuser.kcfg:16
+#: rc.cpp:93
 msgid "Default connection"
 msgstr "Vaikeühendus"
 
+#. i18n: file: kuser.kcfg:20
 #. i18n: ectx: label, entry (showsys), group (general)
-#: kuser.kcfg:20
+#: rc.cpp:96
 msgid "Show system users"
 msgstr "Näita süsteemseid kasutajaid"
 
+#. i18n: file: kuser.kcfg:26
 #. i18n: ectx: label, entry (source), group (connection-$(connection))
-#: kuser.kcfg:26
+#: rc.cpp:99
 msgid "The source of the user and group database"
 msgstr "Kasutaja/grupi andmebaasi asukoht:"
 
+#. i18n: file: kuser.kcfg:27
 #. i18n: ectx: whatsthis, entry (source), group (connection-$(connection))
-#: kuser.kcfg:27
+#: rc.cpp:102
 msgid ""
 "This option allows you to select where the user/group data stored. Currently "
 "three storage backends are supported. <BR><B>Files</B> stores user/group "
@@ -1334,25 +1107,29 @@ msgstr ""
 "sambaSamAccount vahendusel. <BR><B>Süsteem</B> võimaldab lugemisõigust "
 "kõigile kasutajatele ja gruppidele, millest sinu süsteem on teadlik."
 
+#. i18n: file: kuser.kcfg:36
 #. i18n: ectx: label, entry (shell), group (connection-$(connection))
-#: kuser.kcfg:36
+#: rc.cpp:105
 msgid "Shell"
 msgstr "Shell"
 
+#. i18n: file: kuser.kcfg:37
 #. i18n: ectx: whatsthis, entry (shell), group (connection-$(connection))
-#: kuser.kcfg:37
+#: rc.cpp:108
 msgid ""
 "This option allows you to select the shell which will be the default for new "
 "users."
 msgstr "Siin saab valida uute kasutajate vaikeshelli."
 
+#. i18n: file: kuser.kcfg:40
 #. i18n: ectx: label, entry (homepath), group (connection-$(connection))
-#: kuser.kcfg:40
+#: rc.cpp:111
 msgid "Home path template"
 msgstr "Kodu asukoha mall"
 
+#. i18n: file: kuser.kcfg:41
 #. i18n: ectx: whatsthis, entry (homepath), group (connection-$(connection))
-#: kuser.kcfg:41
+#: rc.cpp:115
 #, no-c-format
 msgid ""
 "This option specifies the UNIX home path template for new users. The '%U' "
@@ -1361,13 +1138,15 @@ msgstr ""
 "Siin saab määrata uute kasutajate UNIX-i kodukataloogi asukoha malli. Makro "
 "'%U' asendatakse tegeliku kasutajanimega."
 
+#. i18n: file: kuser.kcfg:45
 #. i18n: ectx: label, entry (firstUID), group (connection-$(connection))
-#: kuser.kcfg:45
+#: rc.cpp:118
 msgid "First UID"
 msgstr "Esimene UID"
 
+#. i18n: file: kuser.kcfg:46
 #. i18n: ectx: whatsthis, entry (firstUID), group (connection-$(connection))
-#: kuser.kcfg:46
+#: rc.cpp:121
 msgid ""
 "This options specifies the first user ID where searching for an available "
 "UID starts."
@@ -1375,13 +1154,15 @@ msgstr ""
 "See määrab esimese kasutaja ID, millest alates hakatakse otsima saadaolevaid "
 "UID-sid."
 
+#. i18n: file: kuser.kcfg:50
 #. i18n: ectx: label, entry (firstGID), group (connection-$(connection))
-#: kuser.kcfg:50
+#: rc.cpp:124
 msgid "First GID"
 msgstr "Esimene GID"
 
+#. i18n: file: kuser.kcfg:51
 #. i18n: ectx: whatsthis, entry (firstGID), group (connection-$(connection))
-#: kuser.kcfg:51
+#: rc.cpp:127
 msgid ""
 "This options specifies the first group ID where searching for an available "
 "GID starts."
@@ -1389,23 +1170,26 @@ msgstr ""
 "See määrab esimese grupi ID, millest alates hakatakse otsima saadaolevaid "
 "GID-sid."
 
+#. i18n: file: kuser.kcfg:56
 #. i18n: ectx: whatsthis, entry (createHomeDir), group (connection-$(connection))
-#: kuser.kcfg:56
+#: rc.cpp:133
 msgid ""
 "If this option is checked then a home directory will created for the new "
 "user."
 msgstr "Sisselülitamisel luuakse uuele kasutajale kodukataloog."
 
+#. i18n: file: kuser.kcfg:61
 #. i18n: ectx: whatsthis, entry (copySkel), group (connection-$(connection))
-#: kuser.kcfg:61
+#: rc.cpp:139
 msgid ""
 "If this option is checked then the contents of the skeleton folder will "
 "copied to the new user's home directory"
 msgstr ""
 "Sisselülitamisel kopeeritakse mallkataloogi sisu uue kasutaja kodukataloogi."
 
+#. i18n: file: kuser.kcfg:66
 #. i18n: ectx: whatsthis, entry (userPrivateGroup), group (connection-$(connection))
-#: kuser.kcfg:66
+#: rc.cpp:145
 msgid ""
 "If this option is enabled, new user creation will create a private group "
 "named as the user, and the primary group of the user will assigned to this "
@@ -1414,86 +1198,102 @@ msgstr ""
 "Sisselülitamisel luuakse uue kasutaja loomisel tema nimega privaatgrupp ning "
 "see määratakse ka kasutaja esmaseks grupiks."
 
+#. i18n: file: kuser.kcfg:70
 #. i18n: ectx: label, entry (defaultgroup), group (connection-$(connection))
-#: kuser.kcfg:70
+#: rc.cpp:148
 msgid "Default primary group"
 msgstr "Vaikimisi esmane grupp"
 
+#. i18n: file: kuser.kcfg:71
 #. i18n: ectx: whatsthis, entry (defaultgroup), group (connection-$(connection))
-#: kuser.kcfg:71
+#: rc.cpp:151
 msgid ""
 "This is the default primary group which will be assigned to a newly created "
 "user."
 msgstr ""
 "See on vaikimisi esmane grupp, mis omistatakse loodud uutele kasutajatele."
 
+#. i18n: file: kuser.kcfg:76
 #. i18n: ectx: label, entry (smin), group (connection-$(connection))
-#: kuser.kcfg:76
+#: rc.cpp:154
 msgid "smin"
 msgstr "smin"
 
+#. i18n: file: kuser.kcfg:80
 #. i18n: ectx: label, entry (smax), group (connection-$(connection))
-#: kuser.kcfg:80
+#: rc.cpp:157
 msgid "smax"
 msgstr "smax"
 
+#. i18n: file: kuser.kcfg:84
 #. i18n: ectx: label, entry (swarn), group (connection-$(connection))
-#: kuser.kcfg:84
+#: rc.cpp:160
 msgid "swarn"
 msgstr "swarn"
 
+#. i18n: file: kuser.kcfg:88
 #. i18n: ectx: label, entry (sinact), group (connection-$(connection))
-#: kuser.kcfg:88
+#: rc.cpp:163
 msgid "sinact"
 msgstr "sinact"
 
+#. i18n: file: kuser.kcfg:92
 #. i18n: ectx: label, entry (sexpire), group (connection-$(connection))
-#: kuser.kcfg:92
+#: rc.cpp:166
 msgid "sexpire"
 msgstr "sexpire"
 
+#. i18n: file: kuser.kcfg:93
 #. i18n: ectx: whatsthis, entry (sexpire), group (connection-$(connection))
-#: kuser.kcfg:93
+#: rc.cpp:169
 msgid "This setting is for specifying a date when user accounts will expire."
 msgstr "See määrab kuupäeva, mil kasutaja konto aegub."
 
+#. i18n: file: kuser.kcfg:97
 #. i18n: ectx: label, entry (sneverexpire), group (connection-$(connection))
-#: kuser.kcfg:97
+#: rc.cpp:172
 msgid "sneverexpire"
 msgstr "sneverexpire"
 
+#. i18n: file: kuser.kcfg:98
 #. i18n: ectx: whatsthis, entry (sneverexpire), group (connection-$(connection))
-#: kuser.kcfg:98
+#: rc.cpp:175
 msgid "Check this if you want to user accounts never expire."
 msgstr "Selle märkimisel ei aegu kasutaja konto kunagi."
 
+#. i18n: file: kuser.kcfg:103
 #. i18n: ectx: label, entry (passwdsrc), group (connection-$(connection))
-#: kuser.kcfg:103
+#: rc.cpp:178
 msgid "Password file"
 msgstr "Paroolifail"
 
+#. i18n: file: kuser.kcfg:104
 #. i18n: ectx: whatsthis, entry (passwdsrc), group (connection-$(connection))
-#: kuser.kcfg:104
+#: rc.cpp:181
 msgid "This specifies the users database file (usually /etc/passwd)."
 msgstr "See määrab kasutajate andmebaasi faili (tavaliselt /etc/passwd)."
 
+#. i18n: file: kuser.kcfg:108
 #. i18n: ectx: label, entry (groupsrc), group (connection-$(connection))
-#: kuser.kcfg:108
+#: rc.cpp:184
 msgid "Group file"
 msgstr "Grupifail"
 
+#. i18n: file: kuser.kcfg:109
 #. i18n: ectx: whatsthis, entry (groupsrc), group (connection-$(connection))
-#: kuser.kcfg:109
+#: rc.cpp:187
 msgid "This specifies the groups database file (usually /etc/group)."
 msgstr "See määrab gruppide andmebaasi faili (tavaliselt /etc/group)."
 
+#. i18n: file: kuser.kcfg:113
 #. i18n: ectx: label, entry (md5shadow), group (connection-$(connection))
-#: kuser.kcfg:113
+#: rc.cpp:190
 msgid "MD5 Shadow passwords"
 msgstr "MD5 variparoolid"
 
+#. i18n: file: kuser.kcfg:114
 #. i18n: ectx: whatsthis, entry (md5shadow), group (connection-$(connection))
-#: kuser.kcfg:114
+#: rc.cpp:193
 msgid ""
 "Check this if you want the passwords in the shadow file MD5 hashed. Leave "
 "this unchecked if DES encryption should be used."
@@ -1501,13 +1301,15 @@ msgstr ""
 "Sisselülitamisel räsitakse paroolid varifailis MD5-ga. Jäta märkimata, kui "
 "kasutad DES-krüptimist."
 
+#. i18n: file: kuser.kcfg:117
 #. i18n: ectx: label, entry (shadowsrc), group (connection-$(connection))
-#: kuser.kcfg:117
+#: rc.cpp:196
 msgid "Shadow password file"
 msgstr "Variparoolifail"
 
+#. i18n: file: kuser.kcfg:118
 #. i18n: ectx: whatsthis, entry (shadowsrc), group (connection-$(connection))
-#: kuser.kcfg:118
+#: rc.cpp:199
 msgid ""
 "Specifies the shadow password file (usually /etc/shadow). Leave this empty "
 "if your system does not use a shadow password file."
@@ -1515,13 +1317,15 @@ msgstr ""
 "Määrab variparoolifaili (tavaliselt /etc/shadow). Jäta tühjaks, kui sinu "
 "süsteemis ei kasutada variparoolifaili."
 
+#. i18n: file: kuser.kcfg:122
 #. i18n: ectx: label, entry (gshadowsrc), group (connection-$(connection))
-#: kuser.kcfg:122
+#: rc.cpp:202
 msgid "Group shadow file"
 msgstr "Varigrupifail"
 
+#. i18n: file: kuser.kcfg:123
 #. i18n: ectx: whatsthis, entry (gshadowsrc), group (connection-$(connection))
-#: kuser.kcfg:123
+#: rc.cpp:205
 msgid ""
 "Specifies the shadow group file (usually /etc/gshadow). Leave this empty if "
 "your system does not use a shadow group file."
@@ -1529,151 +1333,187 @@ msgstr ""
 "Määrab varigrupifaili (tavaliselt /etc/gshadow). Jäta tühjaks, kui sinu "
 "süsteemis ei kasutada varigrupifaili."
 
+#. i18n: file: kuser.kcfg:128
 #. i18n: ectx: label, entry (ldapuser), group (connection-$(connection))
-#: kuser.kcfg:128
+#: rc.cpp:208
 msgid "LDAP User"
 msgstr "LDAP-i kasutaja"
 
+#. i18n: file: kuser.kcfg:131
 #. i18n: ectx: label, entry (ldappassword), group (connection-$(connection))
-#: kuser.kcfg:131
+#: rc.cpp:211
 msgid "LDAP Password"
 msgstr "LDAP-i parool"
 
+#. i18n: file: kuser.kcfg:134
 #. i18n: ectx: label, entry (ldaprealm), group (connection-$(connection))
-#: kuser.kcfg:134
+#: rc.cpp:214
 msgid "LDAP SASL Realm"
 msgstr "LDAP-i SASL-i valdkond"
 
+#. i18n: file: kuser.kcfg:137
 #. i18n: ectx: label, entry (ldapbinddn), group (connection-$(connection))
-#: kuser.kcfg:137
+#: rc.cpp:217
 msgid "LDAP Bind DN"
 msgstr "LDAP-i Bind DN"
 
+#. i18n: file: kuser.kcfg:140
 #. i18n: ectx: label, entry (ldaphost), group (connection-$(connection))
-#: kuser.kcfg:140
+#: rc.cpp:220
 msgid "LDAP Host"
 msgstr "LDAP-i masin"
 
+#. i18n: file: kuser.kcfg:143
 #. i18n: ectx: label, entry (ldapport), group (connection-$(connection))
-#: kuser.kcfg:143
+#: rc.cpp:223
 msgid "LDAP Port"
 msgstr "LDAP-i port"
 
+#. i18n: file: kuser.kcfg:147
 #. i18n: ectx: label, entry (ldapver), group (connection-$(connection))
-#: kuser.kcfg:147
+#: rc.cpp:226
 msgid "LDAP version"
 msgstr "LDAP-i versioon"
 
+#. i18n: file: kuser.kcfg:151
 #. i18n: ectx: label, entry (ldapsizelimit), group (connection-$(connection))
-#: kuser.kcfg:151
+#: rc.cpp:229
 msgid "LDAP Size limit"
 msgstr "LDAP-i suurusepiirang"
 
+#. i18n: file: kuser.kcfg:155
 #. i18n: ectx: label, entry (ldaptimelimit), group (connection-$(connection))
+#. i18n: file: kuser.kcfg:159
 #. i18n: ectx: label, entry (ldappagesize), group (connection-$(connection))
-#: kuser.kcfg:155 kuser.kcfg:159
+#: rc.cpp:232 rc.cpp:235
 msgid "LDAP Time limit"
 msgstr "LDAP-i ajapiirang"
 
+#. i18n: file: kuser.kcfg:163
 #. i18n: ectx: label, entry (ldapdn), group (connection-$(connection))
-#: kuser.kcfg:163
+#: rc.cpp:238
 msgid "LDAP Base DN"
 msgstr "LDAP-i Base DN"
 
+#. i18n: file: kuser.kcfg:166
 #. i18n: ectx: label, entry (ldapfilter), group (connection-$(connection))
-#: kuser.kcfg:166
+#: rc.cpp:241
 msgid "LDAP Filter"
 msgstr "LDAP-i filter"
 
+#. i18n: file: kuser.kcfg:169
 #. i18n: ectx: label, entry (ldapnosec), group (connection-$(connection))
-#: kuser.kcfg:169
+#: rc.cpp:244
 msgid "LDAP no encryption"
 msgstr "LDAP krüptimiseta"
 
+#. i18n: file: kuser.kcfg:173
 #. i18n: ectx: label, entry (ldaptls), group (connection-$(connection))
-#: kuser.kcfg:173
+#: rc.cpp:247
 msgid "LDAP TLS"
 msgstr "LDAP TLS"
 
+#. i18n: file: kuser.kcfg:177
 #. i18n: ectx: label, entry (ldapssl), group (connection-$(connection))
-#: kuser.kcfg:177
+#: rc.cpp:250
 msgid "LDAP SSL"
 msgstr "LDAP SSL"
 
+#. i18n: file: kuser.kcfg:181
 #. i18n: ectx: label, entry (ldapanon), group (connection-$(connection))
-#: kuser.kcfg:181
+#: rc.cpp:253
 msgid "LDAP Anonymous"
 msgstr "LDAP anonüümne"
 
+#. i18n: file: kuser.kcfg:185
 #. i18n: ectx: label, entry (ldapsimple), group (connection-$(connection))
-#: kuser.kcfg:185
+#: rc.cpp:256
 msgid "LDAP Simple auth"
 msgstr "LDAP-i lihtne autentimine"
 
+#. i18n: file: kuser.kcfg:189
 #. i18n: ectx: label, entry (ldapsasl), group (connection-$(connection))
-#: kuser.kcfg:189
+#: rc.cpp:259
 msgid "LDAP SASL auth"
 msgstr "LDAP-i SASL autentimine"
 
+#. i18n: file: kuser.kcfg:193
 #. i18n: ectx: label, entry (ldapsaslmech), group (connection-$(connection))
-#: kuser.kcfg:193
+#: rc.cpp:262
 msgid "LDAP SASL mechanism"
 msgstr "LDAP-i SASL-mehhanism"
 
+#. i18n: file: kuser.kcfg:197
 #. i18n: ectx: label, entry (ldapuserbase), group (connection-$(connection))
-#: kuser.kcfg:197
+#: rc.cpp:265
 msgid "LDAP User container"
 msgstr "LDAP-i kasutaja konteiner"
 
+#. i18n: file: kuser.kcfg:198
 #. i18n: ectx: whatsthis, entry (ldapuserbase), group (connection-$(connection))
-#: kuser.kcfg:198
+#: rc.cpp:268
 msgid ""
 "This specifies where to store users' entries relative to the LDAP base DN."
 msgstr "Määrab, kuhu salvestada kasutajate LDAP-i baas-DN-iga seotud kirjed."
 
+#. i18n: file: kuser.kcfg:202
 #. i18n: ectx: label, entry (ldapuserfilter), group (connection-$(connection))
-#: kuser.kcfg:202
+#: rc.cpp:271
 msgid "LDAP User filter"
 msgstr "LDAP-i kasutaja filter"
 
+#. i18n: file: kuser.kcfg:203
 #. i18n: ectx: whatsthis, entry (ldapuserfilter), group (connection-$(connection))
-#: kuser.kcfg:203
+#: rc.cpp:274
 msgid "This specifies the filter used for user entries."
 msgstr "Määrab, millist filtrit kasutada kasutajakirjete puhul."
 
+#. i18n: file: kuser.kcfg:206
 #. i18n: ectx: label, entry (ldapgroupbase), group (connection-$(connection))
-#: kuser.kcfg:206
+#: rc.cpp:277
 msgid "LDAP Group container"
 msgstr "LDAP-i grupi konteiner"
 
+#. i18n: file: kuser.kcfg:207
 #. i18n: ectx: whatsthis, entry (ldapgroupbase), group (connection-$(connection))
-#: kuser.kcfg:207
+#: rc.cpp:280
 msgid ""
 "This specifies where to store groups' entries relative to the LDAP base DN."
 msgstr "Määrab, kuhu salvestada gruppide LDAP-i baas-DN-iga seotud kirjed."
 
+#. i18n: file: kuser.kcfg:211
 #. i18n: ectx: label, entry (ldapgroupfilter), group (connection-$(connection))
-#: kuser.kcfg:211
+#: rc.cpp:283
 msgid "LDAP Group filter"
 msgstr "LDAP-i grupi filter"
 
+#. i18n: file: kuser.kcfg:212
 #. i18n: ectx: whatsthis, entry (ldapgroupfilter), group (connection-$(connection))
-#: kuser.kcfg:212
+#: rc.cpp:286
 msgid "This specifies the filter used for group entries."
 msgstr "Määrab grupikirjete puhul tarvitatava filtri."
 
+#. i18n: file: kuser.kcfg:215
 #. i18n: ectx: label, entry (ldapuserrdn), group (connection-$(connection))
-#: kuser.kcfg:215
+#: rc.cpp:289
 msgid "LDAP User RDN prefix"
 msgstr "LDAP-i kasutaja RDN prefiks"
 
+#. i18n: file: kuser.kcfg:216
 #. i18n: ectx: whatsthis, entry (ldapuserrdn), group (connection-$(connection))
-#: kuser.kcfg:216
+#: rc.cpp:292
 msgid "This specifies what prefix will used for user entries."
 msgstr "Määrab, millist prefiksit kasutada kasutajakirjete puhul."
 
+#. i18n: file: kuser.kcfg:225
+#. i18n: ectx: label, entry (ldapcnfullname), group (connection-$(connection))
+#: rc.cpp:295
+msgid "Store the user's full name in the cn attribute"
+msgstr "Kasutaja täieliku nime salvestamine cn atribuudis"
+
+#. i18n: file: kuser.kcfg:226
 #. i18n: ectx: whatsthis, entry (ldapcnfullname), group (connection-$(connection))
-#: kuser.kcfg:226
+#: rc.cpp:298
 msgid ""
 "Check this if the user's full name should be stored in the cn (Canonical "
 "Name) attribute."
@@ -1681,23 +1521,27 @@ msgstr ""
 "Sisselülitamisel salvestatakse kasutaja täielik nimi cn (kanooniline nimi) "
 "atribuudis."
 
+#. i18n: file: kuser.kcfg:230
 #. i18n: ectx: label, entry (ldapgecos), group (connection-$(connection))
-#: kuser.kcfg:230
+#: rc.cpp:301
 msgid "Update the gecos field"
 msgstr "gecos välja uuendamine"
 
+#. i18n: file: kuser.kcfg:231
 #. i18n: ectx: whatsthis, entry (ldapgecos), group (connection-$(connection))
-#: kuser.kcfg:231
+#: rc.cpp:304
 msgid "Check this if the gecos attribute should be updated."
 msgstr "Sisselülitamisel uuendatakse gecos atribuuti."
 
+#. i18n: file: kuser.kcfg:235
 #. i18n: ectx: label, entry (ldapshadow), group (connection-$(connection))
-#: kuser.kcfg:235
+#: rc.cpp:307
 msgid "Manage LDAP shadowAccount objectclass"
 msgstr "LDAP-i objektiklassi shadowAccount haldus"
 
+#. i18n: file: kuser.kcfg:236
 #. i18n: ectx: whatsthis, entry (ldapshadow), group (connection-$(connection))
-#: kuser.kcfg:236
+#: rc.cpp:310
 msgid ""
 "Check this if the shadowAccount object should be used in the users' entries. "
 "It allows to enforce password change/expiration policies."
@@ -1705,13 +1549,15 @@ msgstr ""
 "Sisselülitamisel tarvitatakse kasutajakirjetes objekti shadowAccount. See "
 "lubab kehtestada parooli muutmise/aegumise reegleid."
 
+#. i18n: file: kuser.kcfg:240
 #. i18n: ectx: label, entry (ldapstructural), group (connection-$(connection))
-#: kuser.kcfg:240
+#: rc.cpp:313
 msgid "LDAP Structural objectclass"
 msgstr "LDAP-i struktuuri objektiklass"
 
+#. i18n: file: kuser.kcfg:241
 #. i18n: ectx: whatsthis, entry (ldapstructural), group (connection-$(connection))
-#: kuser.kcfg:241
+#: rc.cpp:316
 msgid ""
 "This option allows to specify the structural objectclass used with users' "
 "entries. If you want to use these entries not just for authentication, but "
@@ -1721,33 +1567,39 @@ msgstr ""
 "objektiklassi. Kui soovid pruukida neid kirjeid, mitte ainult autentimiseks, "
 "vaid ka aadressiraamatu jaoks, vali inetOrgPerson."
 
+#. i18n: file: kuser.kcfg:249
 #. i18n: ectx: label, entry (ldapgrouprdn), group (connection-$(connection))
-#: kuser.kcfg:249
+#: rc.cpp:319
 msgid "LDAP Group RDN prefix"
 msgstr "LDAP-i grupi RDN prefiks"
 
+#. i18n: file: kuser.kcfg:250
 #. i18n: ectx: whatsthis, entry (ldapgrouprdn), group (connection-$(connection))
-#: kuser.kcfg:250
+#: rc.cpp:322
 msgid "This specifies what prefix will used for group entries."
 msgstr "See määrab grupikirjete puhul tarvitatava prefiksi."
 
+#. i18n: file: kuser.kcfg:258
 #. i18n: ectx: label, entry (ldappasswordhash), group (connection-$(connection))
-#: kuser.kcfg:258
+#: rc.cpp:325
 msgid "LDAP Password hash method"
 msgstr "LDAP-i parooliräsi meetod"
 
+#. i18n: file: kuser.kcfg:259
 #. i18n: ectx: whatsthis, entry (ldappasswordhash), group (connection-$(connection))
-#: kuser.kcfg:259
+#: rc.cpp:328
 msgid "This specifies the password hashing method. The most secure is SSHA."
 msgstr "See määrab parooli räsimise meetodi. Kõige turvalisem on SSHA."
 
+#. i18n: file: kuser.kcfg:271
 #. i18n: ectx: label, entry (ldapsam), group (connection-$(connection))
-#: kuser.kcfg:271
+#: rc.cpp:331
 msgid "Enable samba account management"
 msgstr "Samba kontohalduse lubamine"
 
+#. i18n: file: kuser.kcfg:272
 #. i18n: ectx: whatsthis, entry (ldapsam), group (connection-$(connection))
-#: kuser.kcfg:272
+#: rc.cpp:334
 msgid ""
 "Check this if you want to use the user/group entries in a Samba domain. "
 "KUser will create sambaSamAccount objectclass for each entry which is usable "
@@ -1757,23 +1609,27 @@ msgstr ""
 "loob objektiklassi sambaSamAccount igale kirjele, mida saab tarvitada "
 "ldapsam passdb taustarakendusega Samba versioonis 3.0 või uuem."
 
+#. i18n: file: kuser.kcfg:275
 #. i18n: ectx: label, entry (samdomain), group (connection-$(connection))
-#: kuser.kcfg:275
+#: rc.cpp:337
 msgid "Samba domain name"
 msgstr "Samba domeeni nimi"
 
+#. i18n: file: kuser.kcfg:276
 #. i18n: ectx: whatsthis, entry (samdomain), group (connection-$(connection))
-#: kuser.kcfg:276
+#: rc.cpp:340
 msgid "This specifies the samba domain name."
 msgstr "See määrab Samba domeeni nime."
 
+#. i18n: file: kuser.kcfg:279
 #. i18n: ectx: label, entry (samdomsid), group (connection-$(connection))
-#: kuser.kcfg:279
+#: rc.cpp:343
 msgid "Samba domain SID"
 msgstr "Samba domeeni SID"
 
+#. i18n: file: kuser.kcfg:280
 #. i18n: ectx: whatsthis, entry (samdomsid), group (connection-$(connection))
-#: kuser.kcfg:280
+#: rc.cpp:346
 msgid ""
 "This specifies the domain Security IDentifier. It is unique in a single "
 "domain. You can query the value of the domain SID with 'net getlocalsid "
@@ -1782,13 +1638,15 @@ msgstr ""
 "See määrab domeeni turvaidentifikaatori. See on igas domeenis unikaalne. "
 "Domeeni SID väärtuse saab hankida käsuga 'net getlocalsid domeeni_nimi'."
 
+#. i18n: file: kuser.kcfg:283
 #. i18n: ectx: label, entry (samridbase), group (connection-$(connection))
-#: kuser.kcfg:283
+#: rc.cpp:349
 msgid "Algorithmic RID base"
 msgstr "Algoritmiline RID-baas"
 
+#. i18n: file: kuser.kcfg:284
 #. i18n: ectx: whatsthis, entry (samridbase), group (connection-$(connection))
-#: kuser.kcfg:284
+#: rc.cpp:352
 msgid ""
 "This value is an offset for the algorithmic mapping from uids and gids to "
 "rids. The default (and minimum) value is 1000, it must be even, and the LDAP "
@@ -1798,13 +1656,15 @@ msgstr ""
 "Vaikimisi (ja minimaalne) väärtus on 1000, see peab olema paarisarv ning "
 "LDAP-i andmebaasis ja failis smb.conf peavad olema ühesugused väärtused."
 
+#. i18n: file: kuser.kcfg:288
 #. i18n: ectx: label, entry (samloginscript), group (connection-$(connection))
-#: kuser.kcfg:288
+#: rc.cpp:355
 msgid "Samba login script"
 msgstr "Samba sisselogimisskript"
 
+#. i18n: file: kuser.kcfg:289
 #. i18n: ectx: whatsthis, entry (samloginscript), group (connection-$(connection))
-#: kuser.kcfg:289
+#: rc.cpp:358
 msgid ""
 "This specifies a name of a login script (in the `Netlogon` share) which will "
 "be executed as the user logs in to a Windows machine."
@@ -1812,13 +1672,15 @@ msgstr ""
 "See määrab sisselogimisskripti nime (jagatud ressursil 'Netlogon'), mis "
 "käivitatakse kasutaja sisselogimisel Windowsi masinasse."
 
+#. i18n: file: kuser.kcfg:292
 #. i18n: ectx: label, entry (samhomedrive), group (connection-$(connection))
-#: kuser.kcfg:292
+#: rc.cpp:361
 msgid "Samba home drive"
 msgstr "Samba koduketas"
 
+#. i18n: file: kuser.kcfg:293
 #. i18n: ectx: whatsthis, entry (samhomedrive), group (connection-$(connection))
-#: kuser.kcfg:293
+#: rc.cpp:364
 msgid ""
 "Specifies a drive letter where the user's home directory will automatically "
 "mapped when he/she logs into a Windows machine."
@@ -1826,13 +1688,15 @@ msgstr ""
 "Määrab kettatähise, millega kasutaja kodukataloog automaatselt seotakse, kui "
 "ta logib end sisse Windowsi masinasse."
 
+#. i18n: file: kuser.kcfg:296
 #. i18n: ectx: label, entry (samprofilepath), group (connection-$(connection))
-#: kuser.kcfg:296
+#: rc.cpp:367
 msgid "Samba profile path template"
 msgstr "Samba profiili asukoha mall"
 
+#. i18n: file: kuser.kcfg:297
 #. i18n: ectx: whatsthis, entry (samprofilepath), group (connection-$(connection))
-#: kuser.kcfg:297
+#: rc.cpp:371
 #, no-c-format
 msgid ""
 "This specifies the location of the roaming profile of the user. The '%U' "
@@ -1841,13 +1705,15 @@ msgstr ""
 "See määrab kasutaja profiili asukoha. Makro '%U' asendatakse tegeliku "
 "kasutajanimega."
 
+#. i18n: file: kuser.kcfg:300
 #. i18n: ectx: label, entry (samhomepath), group (connection-$(connection))
-#: kuser.kcfg:300
+#: rc.cpp:374
 msgid "Samba home path template"
 msgstr "Samba kodu asukoha mall"
 
+#. i18n: file: kuser.kcfg:301
 #. i18n: ectx: whatsthis, entry (samhomepath), group (connection-$(connection))
-#: kuser.kcfg:301
+#: rc.cpp:378
 #, no-c-format
 msgid ""
 "This specifies the location of the home directory of the user. This field is "
@@ -1857,8 +1723,15 @@ msgstr ""
 "See määrab kasutaja kodukataloogi asukoha. Sellel väljal on tähendus ainult "
 "Windowsi masinatele. Makro '%U' asendatakse tegeliku kasutajanimega."
 
+#. i18n: file: kuser.kcfg:304
+#. i18n: ectx: label, entry (lanmanhash), group (connection-$(connection))
+#: rc.cpp:381
+msgid "Store LanManager hashed password"
+msgstr "LanManageri räsitud parooli salvestamine"
+
+#. i18n: file: kuser.kcfg:305
 #. i18n: ectx: whatsthis, entry (lanmanhash), group (connection-$(connection))
-#: kuser.kcfg:305
+#: rc.cpp:384
 msgid ""
 "Store the LanManager hashed password in the sambaLMPassword attribute. Check "
 "this if you have older clients (Win9x series and before) on your network."
@@ -1867,25 +1740,151 @@ msgstr ""
 "sisse lültiada, kui võrgus on vanemaid kliente (Win9x seeria või veel "
 "iidsemad)."
 
-#. i18n: ectx: Menu (file)
-#: kuserui.rc:4
-msgid "&File"
-msgstr "&Fail"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Peeter Russak, Marek Laane"
 
-#. i18n: ectx: Menu (user)
-#: kuserui.rc:8
-msgid "&User"
-msgstr "Kas&utaja"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "pezz@tkwcy.ee, bald@starman.ee"
 
-#. i18n: ectx: Menu (group)
-#: kuserui.rc:14
-msgid "&Group"
-msgstr "&Grupp"
+#~ msgid "Settings"
+#~ msgstr "Seadistused"
 
-#. i18n: ectx: Menu (settings)
-#: kuserui.rc:19
-msgid "&Settings"
-msgstr "&Seadistused"
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP Source Settings"
+#~ msgstr "LDAP lähtefaili seadistused"
+
+#~ msgid "RID:"
+#~ msgstr "RID:"
+
+#~ msgid "Login script:"
+#~ msgstr "Sisselogimisskript:"
+
+#~ msgid "Profile path:"
+#~ msgstr "Profiili asukoht:"
+
+#~ msgid "Home drive:"
+#~ msgstr "Koduketas:"
+
+#~ msgid "Home path:"
+#~ msgstr "Kodu asukoht:"
+
+#~ msgid "User workstations:"
+#~ msgstr "Kasutaja tööjaamad:"
+
+#~ msgid "Domain name:"
+#~ msgstr "Domeeni nimi:"
+
+#~ msgid "Disable &Samba account information"
+#~ msgstr "&Samba konto info keelamine"
+
+#~ msgid "You need to specify a samba RID."
+#~ msgstr "Anda tuleb Samba RID."
+
+#~ msgid "User with RID %1 already exists"
+#~ msgstr "Kasutaja RID-iga %1 on juba olemas"
+
+#~ msgid "Loading Groups From LDAP"
+#~ msgstr "Gruppide laadimine LDAP-ist"
+
+#~ msgid "LDAP Operation"
+#~ msgstr "LDAP-i toiming"
+
+#~ msgid "Manage Samba user accounts/groups"
+#~ msgstr "Samba kasutajate kontode/gruppide haldus"
+
+#~ msgid "Default login script:"
+#~ msgstr "Vaikimisi sisselogimisskript:"
+
+#~ msgid "Profile path template:"
+#~ msgstr "Profiili asukoha mall:"
+
+#~ msgid "&Query Server"
+#~ msgstr "Serveri pärin&g"
+
+#~ msgid "Domain SID (you can obtain with 'net getlocalsid domain_name'):"
+#~ msgstr "Domeeni SID (hangitav käsuga 'net getlocalsid domeeni_nimi'):"
+
+#~ msgid "Algorithmic RID base:"
+#~ msgstr "Algoritmiline RID-baas:"
+
+#~ msgid "cn"
+#~ msgstr "cn"
+
+#~ msgid "gidNumber"
+#~ msgstr "gidNumber"
+
+#~ msgid "Plain Text"
+#~ msgstr "Lihttekst"
+
+#~ msgid "CRYPT"
+#~ msgstr "CRYPT"
+
+#~ msgid "MD5"
+#~ msgstr "MD5"
+
+#~ msgid "SMD5"
+#~ msgstr "SMD5"
+
+#~ msgid "SHA"
+#~ msgstr "SHA"
+
+#~ msgid "SSHA"
+#~ msgstr "SSHA"
+
+#~ msgid "User base:"
+#~ msgstr "Kasutaja baas:"
+
+#~ msgid "Group filter:"
+#~ msgstr "Grupi filter:"
+
+#~ msgid "Structural objectclass:"
+#~ msgstr "Struktuuri objektiklass:"
+
+#~ msgid "User filter:"
+#~ msgstr "Kasutaja filter:"
+
+#~ msgid "account"
+#~ msgstr "konto"
+
+#~ msgid "inetOrgPerson"
+#~ msgstr "inetOrgPerson"
+
+#~ msgid "Group RDN prefix:"
+#~ msgstr "Grupi RDN prefiks:"
+
+#~ msgid "uid"
+#~ msgstr "UID"
+
+#~ msgid "uidNumber"
+#~ msgstr "uidNumber"
+
+#~ msgid "Group base:"
+#~ msgstr "Grupi baas:"
+
+#~ msgid "User RDN prefix:"
+#~ msgstr "Kasutaja RDN prefiks:"
+
+#~ msgid "Password hash:"
+#~ msgstr "Parooliräsi:"
+
+#~ msgid "Manage shadowAccount objectclass"
+#~ msgstr "Objektiklassi shadowAccount haldus"
+
+#~ msgid "Update the gecos attribute"
+#~ msgstr "gecos atribuudi uuendamine"
+
+#~ msgid "Unable to build password database."
+#~ msgstr "Paroolide andmebaasi ehitamine nurjus."
+
+#~ msgid "Loading Users From LDAP"
+#~ msgstr "Kasutajate laadimine LDAP-ilt"
 
 #~ msgid "Hide System Users/Groups"
 #~ msgstr "Peida süsteemsed kasutajad/grupid"

@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kuser\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-20 03:21+0200\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2012-06-13 23:17+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -22,21 +22,15 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Marko Rosić,Slobodan Simić"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "roske@kde.org.yu,slsimic@gmail.com"
-
 #: ku_adduser.cpp:47
 msgid "New Account Options"
 msgstr "Opcije novog naloga"
 
+#. i18n: file: ku_generalsettings.ui:123
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_createHomeDir)
+#. i18n: file: kuser.kcfg:55
 #. i18n: ectx: label, entry (createHomeDir), group (connection-$(connection))
-#: ku_adduser.cpp:53 ku_generalsettings.ui:127 kuser.kcfg:55
+#: ku_adduser.cpp:53 rc.cpp:54 rc.cpp:130
 msgid "Create home folder"
 msgstr "Napravi domaću fasciklu"
 
@@ -45,17 +39,14 @@ msgid "Copy skeleton"
 msgstr "Kopiraj skelet"
 
 #: ku_adduser.cpp:74
-#, kde-format
 msgid "User with UID %1 already exists."
 msgstr "Korisnik sa UID‑om %1 već postoji."
 
 #: ku_adduser.cpp:81
-#, kde-format
 msgid "User with RID %1 already exists."
 msgstr "Korisnik sa RID‑om %1 već postoji."
 
 #: ku_adduser.cpp:123
-#, kde-format
 msgid ""
 "Folder %1 already exists.\n"
 "%2 may become owner and permissions may change.\n"
@@ -66,39 +57,35 @@ msgstr ""
 "Želite li zaista da upotrebite %3?"
 
 #: ku_adduser.cpp:130
-#, kde-format
 msgid "%1 is not a folder."
 msgstr "%1 nije fascikla."
 
 #: ku_adduser.cpp:132 ku_adduser.cpp:159
-#, kde-format
 msgid "stat() failed on %1."
 msgstr "<icode>stat()</icode> nije uspeo na %1."
 
 #: ku_adduser.cpp:152
-#, kde-format
 msgid "Mailbox %1 already exists (uid=%2)."
 msgstr "Sanduče %1 već postoji (UID %2)."
 
 #: ku_adduser.cpp:156
-#, kde-format
 msgid "%1 exists but is not a regular file."
 msgstr "%1 postoji, ali nije običan fajl."
 
-#: ku_configdlg.cpp:55 ku_edituser.cpp:153
+#: ku_configdlg.cpp:51 ku_edituser.cpp:153
 msgid "<Empty>"
 msgstr "&lt;prazno&gt;"
 
-#: ku_configdlg.cpp:57 ku_configdlg.cpp:97
+#: ku_configdlg.cpp:53
 msgid "Connection"
 msgstr "Veza"
 
-#: ku_configdlg.cpp:63
+#: ku_configdlg.cpp:59
 msgid "Password Policy"
 msgstr "Smernica lozinki"
 
-#: ku_configdlg.cpp:64 ku_configdlg.cpp:65 ku_configdlg.cpp:66
-#: ku_configdlg.cpp:67
+#: ku_configdlg.cpp:60 ku_configdlg.cpp:61 ku_configdlg.cpp:62
+#: ku_configdlg.cpp:63
 msgid " day"
 msgid_plural " days"
 msgstr[0] " dan"
@@ -106,42 +93,25 @@ msgstr[1] " dana"
 msgstr[2] " dana"
 msgstr[3] " dan"
 
-#: ku_configdlg.cpp:69
+#: ku_configdlg.cpp:65
 msgid "General"
 msgstr "Opšte"
 
-#: ku_configdlg.cpp:69
+#: ku_configdlg.cpp:65
 msgid "General Settings"
 msgstr "Opšte postavke"
 
 # >! Contexts.
 # >> @item:inlistbox
+#. i18n: file: ku_generalsettings.ui:42
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_source)
-#: ku_configdlg.cpp:75 ku_generalsettings.ui:41
+#: ku_configdlg.cpp:71 rc.cpp:36
 msgid "Files"
 msgstr "Fajlovi"
 
-#: ku_configdlg.cpp:75
+#: ku_configdlg.cpp:71
 msgid "File Source Settings"
 msgstr "Postavke izvora fajla"
-
-#: ku_configdlg.cpp:103
-msgid "Settings"
-msgstr "Postavke"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, KU_LdapSamba)
-#: ku_configdlg.cpp:110 ku_edituser.cpp:271 ku_ldapsamba.ui:21
-msgid "Samba"
-msgstr "Samba"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_source)
-#: ku_configdlg.cpp:112 ku_generalsettings.ui:46
-msgid "LDAP"
-msgstr "LDAP"
-
-#: ku_configdlg.cpp:112
-msgid "LDAP Source Settings"
-msgstr "Postavke LDAP izvora"
 
 # >> @title:window
 #: ku_deluser.cpp:34
@@ -149,18 +119,15 @@ msgid "Delete User"
 msgstr "Brisanje korisnika"
 
 #: ku_deluser.cpp:39
-#, kde-format
 msgid "<p>Deleting user <b>%1</b><br />Also perform the following actions:</p>"
 msgstr ""
 "<p>Brišem korisnika <b>%1</b><br />Pritom izvodim i sledeće radnje:</p>"
 
 #: ku_deluser.cpp:42
-#, kde-format
 msgid "Delete &home folder: %1"
 msgstr "Obriši &domaću fasciklu: %1"
 
 #: ku_deluser.cpp:44
-#, kde-format
 msgid "Delete &mailbox: %1"
 msgstr "Obriši &sanduče: %1"
 
@@ -237,7 +204,7 @@ msgstr "lokalna"
 msgid "Builtin"
 msgstr "ugrađena"
 
-#: ku_editgroup.cpp:149 ku_edituser.cpp:313
+#: ku_editgroup.cpp:149
 msgid "Domain SID:"
 msgstr "SID domena:"
 
@@ -266,17 +233,14 @@ msgid "You need to type a group name."
 msgstr "Morate da unesete ime grupe."
 
 #: ku_editgroup.cpp:289
-#, kde-format
 msgid "Group with name %1 already exists."
 msgstr "Grupa %1 već postoji."
 
 #: ku_editgroup.cpp:296
-#, kde-format
 msgid "Group with SID %1 already exists."
 msgstr "Grupa sa SID‑om %1 već postoji."
 
 #: ku_editgroup.cpp:301
-#, kde-format
 msgid "Group with gid %1 already exists."
 msgstr "Grupa sa GID‑om %1 već postoji."
 
@@ -288,12 +252,16 @@ msgstr "Ne menjaj"
 msgid " days"
 msgstr " dana"
 
+#. i18n: file: ku_passwordpolicy.ui:77
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_smax)
+#. i18n: file: ku_passwordpolicy.ui:90
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_sinact)
+#. i18n: file: ku_passwordpolicy.ui:116
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_swarn)
+#. i18n: file: ku_passwordpolicy.ui:159
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_sneverexpire)
-#: ku_edituser.cpp:82 ku_edituser.cpp:260 ku_passwordpolicy.ui:77
-#: ku_passwordpolicy.ui:90 ku_passwordpolicy.ui:116 ku_passwordpolicy.ui:159
+#: ku_edituser.cpp:82 ku_edituser.cpp:253 rc.cpp:75 rc.cpp:78 rc.cpp:84
+#: rc.cpp:90
 msgid "Never"
 msgstr "nikad"
 
@@ -302,6 +270,7 @@ msgid "User Info"
 msgstr "Podaci o korisniku"
 
 # rewrite-msgid: /User login/Username/
+#. i18n("WHAT IS THIS: User login");
 #: ku_edituser.cpp:118
 msgid "User login:"
 msgstr "Korisničko ime:"
@@ -314,50 +283,62 @@ msgstr "&Korisnički ID:"
 msgid "Set &Password..."
 msgstr "Postavi &lozinku..."
 
+#. i18n("WHAT IS THIS: Full Name");
 #: ku_edituser.cpp:135
 msgid "Full &name:"
 msgstr "Pu&no ime i prezime:"
 
+#. i18n("WHAT IS THIS: Surname");
 #: ku_edituser.cpp:142
 msgid "Surname:"
 msgstr "Prezime:"
 
+#. i18n("WHAT IS THIS: Email");
 #: ku_edituser.cpp:147
 msgid "Email address:"
 msgstr "Adresa e‑pošte:"
 
+#. i18n("WHAT IS THIS: Login Shell");
 #: ku_edituser.cpp:161
 msgid "&Login shell:"
 msgstr "&Prijavna školjka:"
 
+#. i18n("WHAT IS THIS: Home Directory");
 #: ku_edituser.cpp:166
 msgid "&Home folder:"
 msgstr "&Domaća fascikla:"
 
+#. i18n("WHAT IS THIS: Office");
 #: ku_edituser.cpp:174
 msgid "&Office:"
 msgstr "&Posao:"
 
+#. i18n("WHAT IS THIS: Office Phone");
 #: ku_edituser.cpp:179
 msgid "Offi&ce Phone:"
 msgstr "&Telefon na poslu:"
 
+#. i18n("WHAT IS THIS: Home Phone");
 #: ku_edituser.cpp:184
 msgid "Ho&me Phone:"
 msgstr "&Kućni telefon:"
 
+#. i18n("WHAT IS THIS: Login class");
 #: ku_edituser.cpp:189
 msgid "Login class:"
 msgstr "Prijavna klasa:"
 
+#. i18n("WHAT IS THIS: Office1");
 #: ku_edituser.cpp:194
 msgid "&Office #1:"
 msgstr "P&osao 1:"
 
+#. i18n("WHAT IS THIS: Office2");
 #: ku_edituser.cpp:199
 msgid "O&ffice #2:"
 msgstr "Po&sao 2:"
 
+#. i18n("WHAT IS THIS: Address");
 #: ku_edituser.cpp:204
 msgid "&Address:"
 msgstr "&Adresa:"
@@ -370,131 +351,83 @@ msgstr "Nalog i&sključen"
 msgid "Disable &POSIX account information"
 msgstr "Isključi podatke o &POSIX nalogu"
 
-#: ku_edituser.cpp:227
+#: ku_edituser.cpp:226
 msgid "Password Management"
 msgstr "Upravljanje lozinkom"
 
-#: ku_edituser.cpp:233
+#: ku_edituser.cpp:232
 msgid "Last password change:"
 msgstr "Poslednja izmena lozinke:"
 
-#: ku_edituser.cpp:239
+#: ku_edituser.cpp:238
 msgid "POSIX parameters:"
 msgstr "POSIX parametri:"
 
-#: ku_edituser.cpp:240
+#: ku_edituser.cpp:239
 msgid "Time before password may &not be changed after last password change:"
 msgstr ""
 "Vreme za koje se lozinka &ne može promeniti nakon njene poslednje promene:"
 
-#: ku_edituser.cpp:241
+#: ku_edituser.cpp:240
 msgid "Time when password &expires after last password change:"
 msgstr "Vreme za koje lozinka &ističe nakon njene poslednje promene:"
 
-#: ku_edituser.cpp:242
+#: ku_edituser.cpp:241
 msgid "Time before password expires to &issue an expire warning:"
 msgstr "Vreme izdavanja u&pozorenja pre isticanja lozinke:"
 
-#: ku_edituser.cpp:243
+#: ku_edituser.cpp:242
 msgid "Time when account will be &disabled after expiration of password:"
 msgstr "Vreme posle kog će nalog biti is&ključen nakon isticanja lozinke:"
 
-#: ku_edituser.cpp:254
+#: ku_edituser.cpp:247
 msgid "&Account will expire on:"
 msgstr "N&alog ističe:"
 
-#: ku_edituser.cpp:278
-msgid "RID:"
-msgstr "RID:"
-
-#: ku_edituser.cpp:283
-msgid "Login script:"
-msgstr "Prijavna skripta:"
-
-#: ku_edituser.cpp:288
-msgid "Profile path:"
-msgstr "Putanja profila:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4_2_2)
-#: ku_edituser.cpp:293 ku_ldapsamba.ui:74
-msgid "Home drive:"
-msgstr "Domaća jedinica:"
-
-#: ku_edituser.cpp:298
-msgid "Home path:"
-msgstr "Domaća putanja:"
-
-#: ku_edituser.cpp:303
-msgid "User workstations:"
-msgstr "Korisničke radne stanice:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: ku_edituser.cpp:308 ku_ldapsamba.ui:157
-msgid "Domain name:"
-msgstr "Ime domena:"
-
-#: ku_edituser.cpp:319
-msgid "Disable &Samba account information"
-msgstr "Isključi podatke o &Sambinom nalogu"
-
-#: ku_edituser.cpp:325 ku_mainview.cpp:69
+#: ku_edituser.cpp:264 ku_mainview.cpp:69
 msgid "Groups"
 msgstr "Grupe"
 
-#: ku_edituser.cpp:335 ku_edituser.cpp:664 ku_edituser.cpp:695
+#: ku_edituser.cpp:274 ku_edituser.cpp:565 ku_edituser.cpp:596
 msgid "Primary group: "
 msgstr "Primarna grupa: "
 
-#: ku_edituser.cpp:338
+#: ku_edituser.cpp:277
 msgid "Set as Primary"
 msgstr "Postavi kao primarnu"
 
-#: ku_edituser.cpp:352 ku_edituser.cpp:375
+#: ku_edituser.cpp:291 ku_edituser.cpp:314
 msgid "User Properties"
 msgstr "Svojstva korisnika"
 
 # ! Plurals.
-#: ku_edituser.cpp:358
-#, kde-format
+#: ku_edituser.cpp:297
 msgid "User Properties - %1 Selected Users"
 msgstr ""
-"Svojstva korisnika — %1 označenih korisnika"
-"|/|"
-"Svojstva korisnika — %1 $[množ ^1 'izabrani korisnik' 'izabrana korisnika' "
-"'izabranih korisnika']"
+"Svojstva korisnika — %1 označenih korisnika|/|Svojstva korisnika — %1 $[množ "
+"^1 'izabrani korisnik' 'izabrana korisnika' 'izabranih korisnika']"
 
-#: ku_edituser.cpp:531 ku_mainview.cpp:145
+#: ku_edituser.cpp:449 ku_mainview.cpp:145
 msgid "Do Not Change"
 msgstr "Ne menjaj"
 
-#: ku_edituser.cpp:910
+#: ku_edituser.cpp:778
 msgid "You need to specify an UID."
 msgstr "Morate zadati UID."
 
-#: ku_edituser.cpp:915
+#: ku_edituser.cpp:783
 msgid "You must specify a home directory."
 msgstr "Morate zadati domaću fasciklu."
 
-#: ku_edituser.cpp:921
+#: ku_edituser.cpp:789
 msgid "You must fill the surname field."
 msgstr "Morate popuniti polje sa prezimenom."
 
-#: ku_edituser.cpp:928
-msgid "You need to specify a samba RID."
-msgstr "Morate zadati Sambin RID."
-
-#: ku_edituser.cpp:973
-#, kde-format
+#: ku_edituser.cpp:833
 msgid "User with UID %1 already exists"
 msgstr "Korisnik sa UID‑om %1 već postoji."
 
-#: ku_edituser.cpp:983
-#, kde-format
-msgid "User with RID %1 already exists"
-msgstr "Korisnik sa RID‑om %1 već postoji."
-
-#: ku_edituser.cpp:997
-#, kde-format
+#: ku_edituser.cpp:846
 msgid ""
 "<p>The shell %1 is not yet listed in the file %2. In order to use this shell "
 "you must add it to this file first.<br />Do you want to add it now?</p>"
@@ -502,102 +435,23 @@ msgstr ""
 "<p>Školjka %1 još nije navedena u fajlu %2. Da biste je koristili morate je "
 "prvo dodati u ovaj fajl.</p><p>Želite li sada da je dodate?</p>"
 
-#: ku_edituser.cpp:1001
+#: ku_edituser.cpp:850
 msgid "Unlisted Shell"
 msgstr "Nenavedena školjka"
 
-#: ku_edituser.cpp:1002
+#: ku_edituser.cpp:851
 msgid "&Add Shell"
 msgstr "&Dodaj školjku"
 
-#: ku_edituser.cpp:1003
+#: ku_edituser.cpp:852
 msgid "Do &Not Add"
 msgstr "&Nemoj da dodaš"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ku_filessettings.ui:30
-msgid "User/group database locations"
-msgstr "Lokacija baze korisnika/grupa"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_md5shadow)
-#: ku_filessettings.ui:42
-msgid "MD5 shadow passwords"
-msgstr "MD5 zaklonjene lozinke"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel6_3)
-#: ku_filessettings.ui:52
-msgid "Shadow group file:"
-msgstr "Fajl zaklonjenih grupa:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel5_3)
-#: ku_filessettings.ui:65
-msgid "Shadow password file:"
-msgstr "Fajl zaklonjenih lozinki:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4_3)
-#: ku_filessettings.ui:78
-msgid "Group file:"
-msgstr "Fajl grupa:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3_3)
-#: ku_filessettings.ui:88
-msgid "Password file:"
-msgstr "Fajl lozinki:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ku_generalsettings.ui:30
-msgid "Source of user/group database:"
-msgstr "Izvor baze korisnika/grupa:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_source)
-#: ku_generalsettings.ui:51
-msgid "System"
-msgstr "sistem"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: ku_generalsettings.ui:72
-msgid "First normal GID:"
-msgstr "Prvi običan GID:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#. i18n: ectx: property (text), widget (QLabel, textLabel5_2_2)
-#: ku_generalsettings.ui:82 ku_ldapsamba.ui:103
-msgid "Home path template:"
-msgstr "Šablon domaće putanje:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: ku_generalsettings.ui:92
-msgid "Shell:"
-msgstr "Školjka:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3_2)
-#: ku_generalsettings.ui:109
-msgid "First normal UID:"
-msgstr "Prvi običan UID:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_copySkel)
-#. i18n: ectx: label, entry (copySkel), group (connection-$(connection))
-#: ku_generalsettings.ui:137 kuser.kcfg:60
-msgid "Copy skeleton to home folder"
-msgstr "Kopiraj skelet u domaću fasciklu"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_userPrivateGroup)
-#. i18n: ectx: label, entry (userPrivateGroup), group (connection-$(connection))
-#: ku_generalsettings.ui:152 kuser.kcfg:65
-msgid "User private groups"
-msgstr "Korisnikove privatne grupe"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: ku_generalsettings.ui:159
-msgid "Default group:"
-msgstr "Podrazumevana grupa:"
 
 #: ku_groupfiles.cpp:74
 msgid "Groups file name not set, please check 'Settings/Files'"
 msgstr "Ime za fajl grupa nije zadato, proverite u postavkama fajlova."
 
 #: ku_groupfiles.cpp:82
-#, kde-format
 msgid ""
 "stat() call on file %1 failed: %2\n"
 "Check KUser settings."
@@ -605,24 +459,14 @@ msgstr ""
 "Poziv <icode>stat()</icode> nad fajlom %1 nije uspeo: %2\n"
 "Proverite postavke K‑korisnika."
 
-#: ku_groupfiles.cpp:96 ku_userfiles.cpp:195
-#, kde-format
+#: ku_groupfiles.cpp:96 ku_userfiles.cpp:187
 msgid "Error opening %1 for reading."
 msgstr "Greška pri otvaranju %1 za čitanje."
 
-#: ku_groupfiles.cpp:172 ku_groupfiles.cpp:179 ku_userfiles.cpp:294
-#: ku_userfiles.cpp:301
-#, kde-format
+#: ku_groupfiles.cpp:172 ku_groupfiles.cpp:179 ku_userfiles.cpp:286
+#: ku_userfiles.cpp:293
 msgid "Error opening %1 for writing."
 msgstr "Greška pri otvaranju %1 za upisivanje."
-
-#: ku_groupldap.cpp:156
-msgid "Loading Groups From LDAP"
-msgstr "Učitavam grupe iz LDAP‑a"
-
-#: ku_groupldap.cpp:208 ku_userldap.cpp:512
-msgid "LDAP Operation"
-msgstr "LDAP postupak"
 
 # >> @title:column
 #: ku_groupmodel.cpp:48
@@ -664,160 +508,6 @@ msgstr "opis"
 msgid "Unknown"
 msgstr "nepoznata"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ldapsam)
-#: ku_ldapsamba.ui:36
-msgid "Manage Samba user accounts/groups"
-msgstr "Upravljaj Sambinim korisničkim nalozima i grupama"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_2_2)
-#: ku_ldapsamba.ui:61
-msgid "Default login script:"
-msgstr "Podrazumevana prijavna skripta:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3_2_2)
-#: ku_ldapsamba.ui:87
-msgid "Profile path template:"
-msgstr "Šablon putanje profila:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_lanmanhash)
-#. i18n: ectx: label, entry (lanmanhash), group (connection-$(connection))
-#: ku_ldapsamba.ui:139 kuser.kcfg:304
-msgid "Store LanManager hashed password"
-msgstr "Skladišti LanManagerovu disperziranu lozinku"
-
-#. i18n: ectx: property (text), widget (KPushButton, domQuery)
-#: ku_ldapsamba.ui:177
-msgid "&Query Server"
-msgstr "&Upitaj server"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ku_ldapsamba.ui:189
-msgid "Domain SID (you can obtain with 'net getlocalsid domain_name'):"
-msgstr ""
-"SID domena (možete ga dobiti sa <icode>net getlocalsid domain_name</icode>):"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: ku_ldapsamba.ui:217
-msgid "Algorithmic RID base:"
-msgstr "Algoritamska osnova RID‑ova:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapgrouprdn)
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapuserrdn)
-#: ku_ldapsettings.ui:34 ku_ldapsettings.ui:165
-msgid "cn"
-msgstr "cn"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapgrouprdn)
-#: ku_ldapsettings.ui:39
-msgid "gidNumber"
-msgstr "gidNumber"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:51
-msgid "Plain Text"
-msgstr "obični tekst"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:56
-msgid "CRYPT"
-msgstr "CRYPT"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:61
-msgid "MD5"
-msgstr "MD5"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:66
-msgid "SMD5"
-msgstr "SMD5"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:71
-msgid "SHA"
-msgstr "SHA"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldappasswordhash)
-#: ku_ldapsettings.ui:76
-msgid "SSHA"
-msgstr "SSHA"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ku_ldapsettings.ui:84
-msgid "User base:"
-msgstr "Baza korisnika:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
-#: ku_ldapsettings.ui:94
-msgid "Group filter:"
-msgstr "Filter grupa:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#: ku_ldapsettings.ui:104
-msgid "Structural objectclass:"
-msgstr "Strukturna objektna klasa:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: ku_ldapsettings.ui:114
-msgid "User filter:"
-msgstr "Filter korisnika:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapstructural)
-#: ku_ldapsettings.ui:131
-msgid "account"
-msgstr "nalog"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapstructural)
-#: ku_ldapsettings.ui:136
-msgid "inetOrgPerson"
-msgstr "inetOrgPerson"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: ku_ldapsettings.ui:144
-msgid "Group RDN prefix:"
-msgstr "RDN prefiks grupe:"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapuserrdn)
-#: ku_ldapsettings.ui:155
-msgid "uid"
-msgstr "uid"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_ldapuserrdn)
-#: ku_ldapsettings.ui:160
-msgid "uidNumber"
-msgstr "uidNumber"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: ku_ldapsettings.ui:173
-msgid "Group base:"
-msgstr "Baza grupa:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: ku_ldapsettings.ui:183
-msgid "User RDN prefix:"
-msgstr "RDN prefiks korisnika:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: ku_ldapsettings.ui:193
-msgid "Password hash:"
-msgstr "Disperzija lozinke:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ldapshadow)
-#: ku_ldapsettings.ui:205
-msgid "Manage shadowAccount objectclass"
-msgstr "Upravljaj objektnom klasom shadowAccount"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ldapcnfullname)
-#. i18n: ectx: label, entry (ldapcnfullname), group (connection-$(connection))
-#: ku_ldapsettings.ui:212 kuser.kcfg:225
-msgid "Store the user's full name in the cn attribute"
-msgstr "Skladišti puno ime korisnika u atributu cn"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ldapgecos)
-#: ku_ldapsettings.ui:219
-msgid "Update the gecos attribute"
-msgstr "Ažuriraj atribut gecos"
-
 #: ku_main.cpp:37
 msgid "KDE User Editor"
 msgstr "Uređivač korisnika za KDE"
@@ -852,7 +542,6 @@ msgstr "Menadžer korisnika za KDE"
 
 # ! Plurals.
 #: ku_mainview.cpp:144
-#, kde-format
 msgid ""
 "You have selected %1 users. Do you really want to change the password for "
 "all the selected users?"
@@ -873,12 +562,10 @@ msgid "Please type the name of the new user:"
 msgstr "Unesite ime novog korisnika:"
 
 #: ku_mainview.cpp:204
-#, kde-format
 msgid "User with name %1 already exists."
 msgstr "Korisnik po imenu %1 već postoji."
 
 #: ku_mainview.cpp:359
-#, kde-format
 msgid ""
 "You are using private groups.\n"
 "Do you want to delete the user's private group '%1'?"
@@ -896,7 +583,6 @@ msgid "You have run out of gid space."
 msgstr "Potrošen je sav prostor za GID‑ove."
 
 #: ku_mainview.cpp:457
-#, kde-format
 msgid ""
 "The group '%1' is the primary group of one or more users (such as '%2'); it "
 "cannot be deleted."
@@ -905,19 +591,15 @@ msgstr ""
 "obrisana."
 
 #: ku_mainview.cpp:466
-#, kde-format
 msgid "Do you really want to delete the group '%1'?"
 msgstr "Želite li zaista da obrišete grupu „%1“?"
 
 # ! Plurals.
 #: ku_mainview.cpp:470
-#, kde-format
 msgid "Do you really want to delete the %1 selected groups?"
 msgstr ""
-"Želite li zaista da obrišete %1 izabranih grupa?"
-"|/|"
-"Želite li zaista da obrišete %1 $[množ ^1 'izabranu grupu' 'izabrane grupe' "
-"'izabranih grupa']?"
+"Želite li zaista da obrišete %1 izabranih grupa?|/|Želite li zaista da "
+"obrišete %1 $[množ ^1 'izabranu grupu' 'izabrane grupe' 'izabranih grupa']?"
 
 #: ku_mainwidget.cpp:51
 msgid "Reading configuration"
@@ -956,12 +638,10 @@ msgid "Show System Users/Groups"
 msgstr "Prikaži sistemske korisnike i grupe"
 
 #: ku_misc.cpp:55
-#, kde-format
 msgid "Can not create backup file for %1"
 msgstr "Ne mogu da napravim rezervni fajl za %1"
 
 #: ku_misc.cpp:105
-#, kde-format
 msgid ""
 "Error creating symlink %1.\n"
 "Error: %2"
@@ -970,7 +650,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_misc.cpp:115
-#, kde-format
 msgid ""
 "Cannot change owner of folder %1.\n"
 "Error: %2"
@@ -979,7 +658,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_misc.cpp:120
-#, kde-format
 msgid ""
 "Cannot change permissions on folder %1.\n"
 "Error: %2"
@@ -988,7 +666,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_misc.cpp:130
-#, kde-format
 msgid ""
 "Cannot change owner of file %1.\n"
 "Error: %2"
@@ -997,7 +674,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_misc.cpp:135
-#, kde-format
 msgid ""
 "Cannot change permissions on file %1.\n"
 "Error: %2"
@@ -1006,45 +682,16 @@ msgstr ""
 "Greška: %2"
 
 #: ku_misc.cpp:154
-#, kde-format
 msgid "File %1 does not exist."
 msgstr "Fajl %1 ne postoji."
 
 #: ku_misc.cpp:159
-#, kde-format
 msgid "Cannot open file %1 for reading."
 msgstr "Ne mogu da otvorim fajl %1 za čitanje."
 
 #: ku_misc.cpp:164
-#, kde-format
 msgid "Cannot open file %1 for writing."
 msgstr "Ne mogu da otvorim fajl %1 za pisanje."
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: ku_passwordpolicy.ui:38
-msgid "Time before password expires to issue an expire warning:"
-msgstr "Vreme izdavanja upozorenja pre isticanja lozinke:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: ku_passwordpolicy.ui:51
-msgid "Time when password expires after last password change:"
-msgstr "Vreme za koje lozinka ističe nakon njene poslednje promene:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: ku_passwordpolicy.ui:64
-msgid "Time when account will be disabled after expiration of password:"
-msgstr "Vreme kada će nalog biti isključen nakon isticanja lozinke:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ku_passwordpolicy.ui:103
-msgid "Time before password may not be changed after last password change:"
-msgstr ""
-"Vreme za koje se lozinka &ne može promeniti nakon njene poslednje promene:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: ku_passwordpolicy.ui:149
-msgid "Account will expire on:"
-msgstr "Nalog ističe:"
 
 # >> @title:window
 #: ku_pwdlg.cpp:33
@@ -1096,7 +743,6 @@ msgid "A connection with this name already exists."
 msgstr "Veza sa ovim imenom već postoji."
 
 #: ku_selectconn.cpp:130
-#, kde-format
 msgid "Do you really want to delete the connection '%1'?"
 msgstr "Želite li zaista da obrišete vezu „%1“?"
 
@@ -1106,12 +752,10 @@ msgid "Delete Connection"
 msgstr "Brisanje veze"
 
 #: ku_user.cpp:161
-#, kde-format
 msgid "Cannot create home folder for %1: it is null or empty."
 msgstr "Ne mogu da napravim domaću fasciklu za %1: nulta ili prazna."
 
 #: ku_user.cpp:167
-#, kde-format
 msgid ""
 "Cannot create home folder %1.\n"
 "Error: %2"
@@ -1120,7 +764,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:173
-#, kde-format
 msgid ""
 "Cannot change owner of home folder %1.\n"
 "Error: %2"
@@ -1129,7 +772,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:178
-#, kde-format
 msgid ""
 "Cannot change permissions on home folder %1.\n"
 "Error: %2"
@@ -1138,7 +780,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:193
-#, kde-format
 msgid ""
 "Folder %1 already exists.\n"
 "Will make %2 owner and change permissions.\n"
@@ -1149,7 +790,6 @@ msgstr ""
 "Želite li da nastavite?"
 
 #: ku_user.cpp:197 ku_user.cpp:215
-#, kde-format
 msgid ""
 "Cannot change owner of %1 folder.\n"
 "Error: %2"
@@ -1158,7 +798,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:201
-#, kde-format
 msgid ""
 "Folder %1 left 'as is'.\n"
 "Verify ownership and permissions for user %2 who may not be able to log in."
@@ -1168,12 +807,10 @@ msgstr ""
 "se prijavi na sistem."
 
 #: ku_user.cpp:205
-#, kde-format
 msgid "%1 exists and is not a folder. User %2 will not be able to log in."
 msgstr "%1 već postoji i nije fascikla. Korisnik %2 neće moći da se prijavi."
 
 #: ku_user.cpp:211
-#, kde-format
 msgid ""
 "Cannot create %1 folder.\n"
 "Error: %2"
@@ -1182,7 +819,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:219
-#, kde-format
 msgid ""
 "stat call on %1 failed.\n"
 "Error: %2"
@@ -1191,12 +827,10 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:234
-#, kde-format
 msgid "Cannot create %1: %2"
 msgstr "Ne mogu da napravim %1: %2"
 
 #: ku_user.cpp:244
-#, kde-format
 msgid ""
 "Cannot change owner on mailbox: %1\n"
 "Error: %2"
@@ -1205,7 +839,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:250
-#, kde-format
 msgid ""
 "Cannot change permissions on mailbox: %1\n"
 "Error: %2"
@@ -1214,17 +847,14 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:265
-#, kde-format
 msgid "Folder %1 does not exist, cannot copy skeleton for %2."
 msgstr "Fascikla %1 ne postoji, ne mogu da kopiram skelet za %2."
 
 #: ku_user.cpp:270
-#, kde-format
 msgid "Folder %1 does not exist, cannot copy skeleton."
 msgstr "Fascikla %1 ne postoji, ne mogu da kopiram skelet."
 
 #: ku_user.cpp:288
-#, kde-format
 msgid ""
 "Cannot remove home folder %1.\n"
 "Error: %2"
@@ -1233,12 +863,10 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:292
-#, kde-format
 msgid "Removal of home folder %1 failed (uid = %2, gid = %3)."
 msgstr "Uklanjanje domaće fascikle %1 nije uspelo (UID %2, GID %3)."
 
 #: ku_user.cpp:295
-#, kde-format
 msgid ""
 "stat call on file %1 failed.\n"
 "Error: %2"
@@ -1247,7 +875,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:313
-#, kde-format
 msgid ""
 "Cannot remove crontab %1.\n"
 "Error: %2"
@@ -1256,7 +883,6 @@ msgstr ""
 "Greška: %2"
 
 #: ku_user.cpp:327
-#, kde-format
 msgid ""
 "Cannot remove mailbox %1.\n"
 "Error: %2"
@@ -1264,7 +890,7 @@ msgstr ""
 "Ne mogu da uklonim sanduče %1.\n"
 "Greška: %2"
 
-#: ku_userfiles.cpp:103
+#: ku_userfiles.cpp:100
 msgid ""
 "KUser sources were not configured.\n"
 "Set 'Password file' in Settings/Files"
@@ -1272,8 +898,7 @@ msgstr ""
 "Izvori K‑korisnika nisu podešeni.\n"
 "Zadajte fajl lozinke u postavkama fajlova."
 
-#: ku_userfiles.cpp:111
-#, kde-format
+#: ku_userfiles.cpp:108
 msgid ""
 "Stat call on file %1 failed: %2\n"
 "Check KUser settings."
@@ -1281,27 +906,17 @@ msgstr ""
 "Poziv <icode>stat()</icode> nad fajlom %1 nije uspeo: %2\n"
 "Proverite postavke K‑korisnika."
 
-#: ku_userfiles.cpp:125
-#, kde-format
+#: ku_userfiles.cpp:122
 msgid "Error opening %1 for reading.\n"
 msgstr "Greška pri otvaranju %1 za čitanje.\n"
 
-#: ku_userfiles.cpp:207
-#, kde-format
+#: ku_userfiles.cpp:199
 msgid ""
 "No /etc/passwd entry for %1.\n"
 "Entry will be removed at the next `Save'-operation."
 msgstr ""
 "U <filename>/etc/passwd</filename> nema unosa za %1.\n"
 "Ovaj unos će biti uklonjen prilikom sledećeg upisivanja."
-
-#: ku_userfiles.cpp:441
-msgid "Unable to build password database."
-msgstr "Ne mogu da izgradim bazu lozinki."
-
-#: ku_userldap.cpp:228
-msgid "Loading Users From LDAP"
-msgstr "Učitavam korisnike iz LDAP‑a"
 
 # >> @title:column
 #: ku_usermodel.cpp:48
@@ -1349,23 +964,176 @@ msgstr "Samba: domaća jedinica"
 msgid "Samba Home Path"
 msgstr "Samba: domaća putanja"
 
+#. i18n: file: kuserui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:3
+msgid "&File"
+msgstr "&Fajl"
+
+#. i18n: file: kuserui.rc:8
+#. i18n: ectx: Menu (user)
+#: rc.cpp:6
+msgid "&User"
+msgstr "&Korisnik"
+
+#. i18n: file: kuserui.rc:14
+#. i18n: ectx: Menu (group)
+#: rc.cpp:9
+msgid "&Group"
+msgstr "&Grupa"
+
+#. i18n: file: kuserui.rc:19
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:12
+msgid "&Settings"
+msgstr "&Podešavanje"
+
+#. i18n: file: ku_filessettings.ui:30
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:15
+msgid "User/group database locations"
+msgstr "Lokacija baze korisnika/grupa"
+
+#. i18n: file: ku_filessettings.ui:42
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_md5shadow)
+#: rc.cpp:18
+msgid "MD5 shadow passwords"
+msgstr "MD5 zaklonjene lozinke"
+
+#. i18n: file: ku_filessettings.ui:52
+#. i18n: ectx: property (text), widget (QLabel, textLabel6_3)
+#: rc.cpp:21
+msgid "Shadow group file:"
+msgstr "Fajl zaklonjenih grupa:"
+
+#. i18n: file: ku_filessettings.ui:65
+#. i18n: ectx: property (text), widget (QLabel, textLabel5_3)
+#: rc.cpp:24
+msgid "Shadow password file:"
+msgstr "Fajl zaklonjenih lozinki:"
+
+#. i18n: file: ku_filessettings.ui:78
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_3)
+#: rc.cpp:27
+msgid "Group file:"
+msgstr "Fajl grupa:"
+
+#. i18n: file: ku_filessettings.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel3_3)
+#: rc.cpp:30
+msgid "Password file:"
+msgstr "Fajl lozinki:"
+
+#. i18n: file: ku_generalsettings.ui:31
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:33
+msgid "Source of user/group database:"
+msgstr "Izvor baze korisnika/grupa:"
+
+#. i18n: file: ku_generalsettings.ui:47
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_source)
+#: rc.cpp:39
+msgid "System"
+msgstr "sistem"
+
+#. i18n: file: ku_generalsettings.ui:68
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:42
+msgid "First normal GID:"
+msgstr "Prvi običan GID:"
+
+#. i18n: file: ku_generalsettings.ui:78
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: rc.cpp:45
+msgid "Home path template:"
+msgstr "Šablon domaće putanje:"
+
+#. i18n: file: ku_generalsettings.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:48
+msgid "Shell:"
+msgstr "Školjka:"
+
+#. i18n: file: ku_generalsettings.ui:105
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3_2)
+#: rc.cpp:51
+msgid "First normal UID:"
+msgstr "Prvi običan UID:"
+
+#. i18n: file: ku_generalsettings.ui:133
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_copySkel)
+#. i18n: file: kuser.kcfg:60
+#. i18n: ectx: label, entry (copySkel), group (connection-$(connection))
+#: rc.cpp:57 rc.cpp:136
+msgid "Copy skeleton to home folder"
+msgstr "Kopiraj skelet u domaću fasciklu"
+
+#. i18n: file: ku_generalsettings.ui:148
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_userPrivateGroup)
+#. i18n: file: kuser.kcfg:65
+#. i18n: ectx: label, entry (userPrivateGroup), group (connection-$(connection))
+#: rc.cpp:60 rc.cpp:142
+msgid "User private groups"
+msgstr "Korisnikove privatne grupe"
+
+#. i18n: file: ku_generalsettings.ui:155
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
+#: rc.cpp:63
+msgid "Default group:"
+msgstr "Podrazumevana grupa:"
+
+#. i18n: file: ku_passwordpolicy.ui:38
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:66
+msgid "Time before password expires to issue an expire warning:"
+msgstr "Vreme izdavanja upozorenja pre isticanja lozinke:"
+
+#. i18n: file: ku_passwordpolicy.ui:51
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: rc.cpp:69
+msgid "Time when password expires after last password change:"
+msgstr "Vreme za koje lozinka ističe nakon njene poslednje promene:"
+
+#. i18n: file: ku_passwordpolicy.ui:64
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
+#: rc.cpp:72
+msgid "Time when account will be disabled after expiration of password:"
+msgstr "Vreme kada će nalog biti isključen nakon isticanja lozinke:"
+
+#. i18n: file: ku_passwordpolicy.ui:103
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:81
+msgid "Time before password may not be changed after last password change:"
+msgstr ""
+"Vreme za koje se lozinka &ne može promeniti nakon njene poslednje promene:"
+
+#. i18n: file: ku_passwordpolicy.ui:149
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:87
+msgid "Account will expire on:"
+msgstr "Nalog ističe:"
+
+#. i18n: file: kuser.kcfg:16
 #. i18n: ectx: label, entry (connection), group (general)
-#: kuser.kcfg:16
+#: rc.cpp:93
 msgid "Default connection"
 msgstr "Podrazumevana veza"
 
+#. i18n: file: kuser.kcfg:20
 #. i18n: ectx: label, entry (showsys), group (general)
-#: kuser.kcfg:20
+#: rc.cpp:96
 msgid "Show system users"
 msgstr "Prikaži sistemske korisnike"
 
+#. i18n: file: kuser.kcfg:26
 #. i18n: ectx: label, entry (source), group (connection-$(connection))
-#: kuser.kcfg:26
+#: rc.cpp:99
 msgid "The source of the user and group database"
 msgstr "Izvor baze podataka korisnika i grupa"
 
+#. i18n: file: kuser.kcfg:27
 #. i18n: ectx: whatsthis, entry (source), group (connection-$(connection))
-#: kuser.kcfg:27
+#: rc.cpp:102
 msgid ""
 "This option allows you to select where the user/group data stored. Currently "
 "three storage backends are supported. <BR><B>Files</B> stores user/group "
@@ -1376,23 +1144,25 @@ msgid ""
 "access to all users and groups which your installation knows about."
 msgstr ""
 "<html>Ovom opcijom možete da odredite gde će biti smeštani podaci o "
-"korisnicima i grupama. Trenutno su podržane tri "
-"pozadine:<ul><li><interface>Fajlovi</interface> smešta podatke u "
-"tradicionalne fajlove <filename>/etc/passwd</filename> i <filename>/etc/"
-"group</filename>.</li><li><interface>LDAP</interface> smešta podatke na "
-"imenički server koristeći objektne klase <icode>posixAccount</icode> i "
-"<icode>posixGroup</icode>. Ova pozadina omogućava upravljanje Samba "
-"korisnicima i grupama preko objektne klase <icode>sambaSamAccount</icode>.</"
-"li><li><interface>sistem</interface> pruža pristup samo za čitanje svim "
-"poznatim korisnicima i grupama na sistemu.</li></ul></html>"
+"korisnicima i grupama. Trenutno su podržane tri pozadine:"
+"<ul><li><interface>Fajlovi</interface> smešta podatke u tradicionalne "
+"fajlove <filename>/etc/passwd</filename> i <filename>/etc/group</filename>.</"
+"li><li><interface>LDAP</interface> smešta podatke na imenički server "
+"koristeći objektne klase <icode>posixAccount</icode> i <icode>posixGroup</"
+"icode>. Ova pozadina omogućava upravljanje Samba korisnicima i grupama preko "
+"objektne klase <icode>sambaSamAccount</icode>.</li><li><interface>sistem</"
+"interface> pruža pristup samo za čitanje svim poznatim korisnicima i grupama "
+"na sistemu.</li></ul></html>"
 
+#. i18n: file: kuser.kcfg:36
 #. i18n: ectx: label, entry (shell), group (connection-$(connection))
-#: kuser.kcfg:36
+#: rc.cpp:105
 msgid "Shell"
 msgstr "Školjka"
 
+#. i18n: file: kuser.kcfg:37
 #. i18n: ectx: whatsthis, entry (shell), group (connection-$(connection))
-#: kuser.kcfg:37
+#: rc.cpp:108
 msgid ""
 "This option allows you to select the shell which will be the default for new "
 "users."
@@ -1401,14 +1171,16 @@ msgstr ""
 "korisnike."
 
 # rewrite-msgid: /Home path/Home folder/
+#. i18n: file: kuser.kcfg:40
 #. i18n: ectx: label, entry (homepath), group (connection-$(connection))
-#: kuser.kcfg:40
+#: rc.cpp:111
 msgid "Home path template"
 msgstr "Šablon domaće fascikle"
 
 # rewrite-msgid: /Home path/Home folder/
+#. i18n: file: kuser.kcfg:41
 #. i18n: ectx: whatsthis, entry (homepath), group (connection-$(connection))
-#: kuser.kcfg:41
+#: rc.cpp:115
 #, no-c-format
 msgid ""
 "This option specifies the UNIX home path template for new users. The '%U' "
@@ -1417,13 +1189,15 @@ msgstr ""
 "Ova opcija zadaje šablon Unix domaće fascikle za nove korisnike. Makro "
 "<icode>%U</icode> biće zamenjen korisničkim imenom."
 
+#. i18n: file: kuser.kcfg:45
 #. i18n: ectx: label, entry (firstUID), group (connection-$(connection))
-#: kuser.kcfg:45
+#: rc.cpp:118
 msgid "First UID"
 msgstr "Prvi UID"
 
+#. i18n: file: kuser.kcfg:46
 #. i18n: ectx: whatsthis, entry (firstUID), group (connection-$(connection))
-#: kuser.kcfg:46
+#: rc.cpp:121
 msgid ""
 "This options specifies the first user ID where searching for an available "
 "UID starts."
@@ -1431,13 +1205,15 @@ msgstr ""
 "Ova opcije određuje prvi ID korisnika, od kojeg počinje traženje slobodnih "
 "UID‑ova."
 
+#. i18n: file: kuser.kcfg:50
 #. i18n: ectx: label, entry (firstGID), group (connection-$(connection))
-#: kuser.kcfg:50
+#: rc.cpp:124
 msgid "First GID"
 msgstr "Prvi GID"
 
+#. i18n: file: kuser.kcfg:51
 #. i18n: ectx: whatsthis, entry (firstGID), group (connection-$(connection))
-#: kuser.kcfg:51
+#: rc.cpp:127
 msgid ""
 "This options specifies the first group ID where searching for an available "
 "GID starts."
@@ -1445,8 +1221,9 @@ msgstr ""
 "Ova opcija određuje prvi ID grupe, od kojeg počinje traženje slobodnih "
 "GID‑ova."
 
+#. i18n: file: kuser.kcfg:56
 #. i18n: ectx: whatsthis, entry (createHomeDir), group (connection-$(connection))
-#: kuser.kcfg:56
+#: rc.cpp:133
 msgid ""
 "If this option is checked then a home directory will created for the new "
 "user."
@@ -1454,8 +1231,9 @@ msgstr ""
 "Ako je ova opcija uključena, za svakog novog korisnika biće napravljena "
 "domaća fascikla."
 
+#. i18n: file: kuser.kcfg:61
 #. i18n: ectx: whatsthis, entry (copySkel), group (connection-$(connection))
-#: kuser.kcfg:61
+#: rc.cpp:139
 msgid ""
 "If this option is checked then the contents of the skeleton folder will "
 "copied to the new user's home directory"
@@ -1463,8 +1241,9 @@ msgstr ""
 "Ako je ova opcija uključena, sadržaj skeletne fascikle će biti kopiran u "
 "domaću fasciklu novog korisnika."
 
+#. i18n: file: kuser.kcfg:66
 #. i18n: ectx: whatsthis, entry (userPrivateGroup), group (connection-$(connection))
-#: kuser.kcfg:66
+#: rc.cpp:145
 msgid ""
 "If this option is enabled, new user creation will create a private group "
 "named as the user, and the primary group of the user will assigned to this "
@@ -1474,13 +1253,15 @@ msgstr ""
 "privatna grupa istog imena, koja će biti dodeljena kao primarna za tog "
 "korisnika."
 
+#. i18n: file: kuser.kcfg:70
 #. i18n: ectx: label, entry (defaultgroup), group (connection-$(connection))
-#: kuser.kcfg:70
+#: rc.cpp:148
 msgid "Default primary group"
 msgstr "Podrazumevana primarna grupa"
 
+#. i18n: file: kuser.kcfg:71
 #. i18n: ectx: whatsthis, entry (defaultgroup), group (connection-$(connection))
-#: kuser.kcfg:71
+#: rc.cpp:151
 msgid ""
 "This is the default primary group which will be assigned to a newly created "
 "user."
@@ -1488,76 +1269,90 @@ msgstr ""
 "Ovo je podrazumevana primarna grupa koja će biti dodeljena novododatom "
 "korisniku."
 
+#. i18n: file: kuser.kcfg:76
 #. i18n: ectx: label, entry (smin), group (connection-$(connection))
-#: kuser.kcfg:76
+#: rc.cpp:154
 msgid "smin"
 msgstr "s‑min"
 
+#. i18n: file: kuser.kcfg:80
 #. i18n: ectx: label, entry (smax), group (connection-$(connection))
-#: kuser.kcfg:80
+#: rc.cpp:157
 msgid "smax"
 msgstr "s‑maks"
 
+#. i18n: file: kuser.kcfg:84
 #. i18n: ectx: label, entry (swarn), group (connection-$(connection))
-#: kuser.kcfg:84
+#: rc.cpp:160
 msgid "swarn"
 msgstr "s‑pozor"
 
+#. i18n: file: kuser.kcfg:88
 #. i18n: ectx: label, entry (sinact), group (connection-$(connection))
-#: kuser.kcfg:88
+#: rc.cpp:163
 msgid "sinact"
 msgstr "s‑neaktivan"
 
+#. i18n: file: kuser.kcfg:92
 #. i18n: ectx: label, entry (sexpire), group (connection-$(connection))
-#: kuser.kcfg:92
+#: rc.cpp:166
 msgid "sexpire"
 msgstr "s‑ističe"
 
+#. i18n: file: kuser.kcfg:93
 #. i18n: ectx: whatsthis, entry (sexpire), group (connection-$(connection))
-#: kuser.kcfg:93
+#: rc.cpp:169
 msgid "This setting is for specifying a date when user accounts will expire."
 msgstr "Ova postavka određuje datum kada korisnikov nalog ističe."
 
+#. i18n: file: kuser.kcfg:97
 #. i18n: ectx: label, entry (sneverexpire), group (connection-$(connection))
-#: kuser.kcfg:97
+#: rc.cpp:172
 msgid "sneverexpire"
 msgstr "s‑nikad‑ne‑ističe"
 
+#. i18n: file: kuser.kcfg:98
 #. i18n: ectx: whatsthis, entry (sneverexpire), group (connection-$(connection))
-#: kuser.kcfg:98
+#: rc.cpp:175
 msgid "Check this if you want to user accounts never expire."
 msgstr "Popunite ovo ako želite da korisnikov nalog nikada ne istekne."
 
+#. i18n: file: kuser.kcfg:103
 #. i18n: ectx: label, entry (passwdsrc), group (connection-$(connection))
-#: kuser.kcfg:103
+#: rc.cpp:178
 msgid "Password file"
 msgstr "Fajl lozinki"
 
+#. i18n: file: kuser.kcfg:104
 #. i18n: ectx: whatsthis, entry (passwdsrc), group (connection-$(connection))
-#: kuser.kcfg:104
+#: rc.cpp:181
 msgid "This specifies the users database file (usually /etc/passwd)."
 msgstr ""
 "Ovde se navodi fajl sa bazom korisnika (obično <filename>/etc/passwd</"
 "filename>)."
 
+#. i18n: file: kuser.kcfg:108
 #. i18n: ectx: label, entry (groupsrc), group (connection-$(connection))
-#: kuser.kcfg:108
+#: rc.cpp:184
 msgid "Group file"
 msgstr "Fajl grupa"
 
+#. i18n: file: kuser.kcfg:109
 #. i18n: ectx: whatsthis, entry (groupsrc), group (connection-$(connection))
-#: kuser.kcfg:109
+#: rc.cpp:187
 msgid "This specifies the groups database file (usually /etc/group)."
 msgstr ""
 "Ovde se navodi fajl sa bazom grupa (obično <filename>/etc/group</filename>)."
 
+#. i18n: file: kuser.kcfg:113
 #. i18n: ectx: label, entry (md5shadow), group (connection-$(connection))
-#: kuser.kcfg:113
+#: rc.cpp:190
 msgid "MD5 Shadow passwords"
 msgstr "MD5 zaklonjene lozinke"
 
+#. i18n: file: kuser.kcfg:114
 #. i18n: ectx: whatsthis, entry (md5shadow), group (connection-$(connection))
-#: kuser.kcfg:114
+#: rc.cpp:193
 msgid ""
 "Check this if you want the passwords in the shadow file MD5 hashed. Leave "
 "this unchecked if DES encryption should be used."
@@ -1565,13 +1360,15 @@ msgstr ""
 "Popunite ovo ako želite da se u fajlu zaklonjenih lozinki koristi MD5 "
 "disperziranje. Ostavite nepopunjenim ako želite DES šifrovanje."
 
+#. i18n: file: kuser.kcfg:117
 #. i18n: ectx: label, entry (shadowsrc), group (connection-$(connection))
-#: kuser.kcfg:117
+#: rc.cpp:196
 msgid "Shadow password file"
 msgstr "Fajl zaklonjenih lozinki"
 
+#. i18n: file: kuser.kcfg:118
 #. i18n: ectx: whatsthis, entry (shadowsrc), group (connection-$(connection))
-#: kuser.kcfg:118
+#: rc.cpp:199
 msgid ""
 "Specifies the shadow password file (usually /etc/shadow). Leave this empty "
 "if your system does not use a shadow password file."
@@ -1579,13 +1376,15 @@ msgstr ""
 "Zadaje fajl zaklonjenih lozinki (obično <filename>/etc/shadow</filename>). "
 "Ostavite praznim ako sistem ne koristi fajl zaklonjenih lozinki."
 
+#. i18n: file: kuser.kcfg:122
 #. i18n: ectx: label, entry (gshadowsrc), group (connection-$(connection))
-#: kuser.kcfg:122
+#: rc.cpp:202
 msgid "Group shadow file"
 msgstr "Fajl zaklonjenih grupa"
 
+#. i18n: file: kuser.kcfg:123
 #. i18n: ectx: whatsthis, entry (gshadowsrc), group (connection-$(connection))
-#: kuser.kcfg:123
+#: rc.cpp:205
 msgid ""
 "Specifies the shadow group file (usually /etc/gshadow). Leave this empty if "
 "your system does not use a shadow group file."
@@ -1593,152 +1392,188 @@ msgstr ""
 "Zadaje fajl zaklonjenih grupa (obično <filename>/etc/gshadow</filename>). "
 "Ostavite praznim ako sistem ne koristi fajl zaklonjenih grupa."
 
+#. i18n: file: kuser.kcfg:128
 #. i18n: ectx: label, entry (ldapuser), group (connection-$(connection))
-#: kuser.kcfg:128
+#: rc.cpp:208
 msgid "LDAP User"
 msgstr "LDAP korisnik"
 
+#. i18n: file: kuser.kcfg:131
 #. i18n: ectx: label, entry (ldappassword), group (connection-$(connection))
-#: kuser.kcfg:131
+#: rc.cpp:211
 msgid "LDAP Password"
 msgstr "LDAP lozinka"
 
+#. i18n: file: kuser.kcfg:134
 #. i18n: ectx: label, entry (ldaprealm), group (connection-$(connection))
-#: kuser.kcfg:134
+#: rc.cpp:214
 msgid "LDAP SASL Realm"
 msgstr "LDAP SASL carstvo"
 
+#. i18n: file: kuser.kcfg:137
 #. i18n: ectx: label, entry (ldapbinddn), group (connection-$(connection))
-#: kuser.kcfg:137
+#: rc.cpp:217
 msgid "LDAP Bind DN"
 msgstr "LDAP DN sveza"
 
+#. i18n: file: kuser.kcfg:140
 #. i18n: ectx: label, entry (ldaphost), group (connection-$(connection))
-#: kuser.kcfg:140
+#: rc.cpp:220
 msgid "LDAP Host"
 msgstr "LDAP domaćin"
 
+#. i18n: file: kuser.kcfg:143
 #. i18n: ectx: label, entry (ldapport), group (connection-$(connection))
-#: kuser.kcfg:143
+#: rc.cpp:223
 msgid "LDAP Port"
 msgstr "LDAP port"
 
+#. i18n: file: kuser.kcfg:147
 #. i18n: ectx: label, entry (ldapver), group (connection-$(connection))
-#: kuser.kcfg:147
+#: rc.cpp:226
 msgid "LDAP version"
 msgstr "LDAP verzija"
 
+#. i18n: file: kuser.kcfg:151
 #. i18n: ectx: label, entry (ldapsizelimit), group (connection-$(connection))
-#: kuser.kcfg:151
+#: rc.cpp:229
 msgid "LDAP Size limit"
 msgstr "LDAP ograničenje veličine"
 
+#. i18n: file: kuser.kcfg:155
 #. i18n: ectx: label, entry (ldaptimelimit), group (connection-$(connection))
+#. i18n: file: kuser.kcfg:159
 #. i18n: ectx: label, entry (ldappagesize), group (connection-$(connection))
-#: kuser.kcfg:155 kuser.kcfg:159
+#: rc.cpp:232 rc.cpp:235
 msgid "LDAP Time limit"
 msgstr "LDAP ograničenje vremena"
 
+#. i18n: file: kuser.kcfg:163
 #. i18n: ectx: label, entry (ldapdn), group (connection-$(connection))
-#: kuser.kcfg:163
+#: rc.cpp:238
 msgid "LDAP Base DN"
 msgstr "LDAP bazni DN"
 
+#. i18n: file: kuser.kcfg:166
 #. i18n: ectx: label, entry (ldapfilter), group (connection-$(connection))
-#: kuser.kcfg:166
+#: rc.cpp:241
 msgid "LDAP Filter"
 msgstr "LDAP filter"
 
+#. i18n: file: kuser.kcfg:169
 #. i18n: ectx: label, entry (ldapnosec), group (connection-$(connection))
-#: kuser.kcfg:169
+#: rc.cpp:244
 msgid "LDAP no encryption"
 msgstr "LDAP bez šifrovanja"
 
+#. i18n: file: kuser.kcfg:173
 #. i18n: ectx: label, entry (ldaptls), group (connection-$(connection))
-#: kuser.kcfg:173
+#: rc.cpp:247
 msgid "LDAP TLS"
 msgstr "LDAP TLS"
 
+#. i18n: file: kuser.kcfg:177
 #. i18n: ectx: label, entry (ldapssl), group (connection-$(connection))
-#: kuser.kcfg:177
+#: rc.cpp:250
 msgid "LDAP SSL"
 msgstr "LDAP SSL"
 
+#. i18n: file: kuser.kcfg:181
 #. i18n: ectx: label, entry (ldapanon), group (connection-$(connection))
-#: kuser.kcfg:181
+#: rc.cpp:253
 msgid "LDAP Anonymous"
 msgstr "LDAP anonimno"
 
+#. i18n: file: kuser.kcfg:185
 #. i18n: ectx: label, entry (ldapsimple), group (connection-$(connection))
-#: kuser.kcfg:185
+#: rc.cpp:256
 msgid "LDAP Simple auth"
 msgstr "LDAP jednostavna autentifikacija"
 
+#. i18n: file: kuser.kcfg:189
 #. i18n: ectx: label, entry (ldapsasl), group (connection-$(connection))
-#: kuser.kcfg:189
+#: rc.cpp:259
 msgid "LDAP SASL auth"
 msgstr "LDAP SASL autentifikacija"
 
+#. i18n: file: kuser.kcfg:193
 #. i18n: ectx: label, entry (ldapsaslmech), group (connection-$(connection))
-#: kuser.kcfg:193
+#: rc.cpp:262
 msgid "LDAP SASL mechanism"
 msgstr "LDAP SASL mehanizam"
 
+#. i18n: file: kuser.kcfg:197
 #. i18n: ectx: label, entry (ldapuserbase), group (connection-$(connection))
-#: kuser.kcfg:197
+#: rc.cpp:265
 msgid "LDAP User container"
 msgstr "LDAP sadržalac korisnika"
 
+#. i18n: file: kuser.kcfg:198
 #. i18n: ectx: whatsthis, entry (ldapuserbase), group (connection-$(connection))
-#: kuser.kcfg:198
+#: rc.cpp:268
 msgid ""
 "This specifies where to store users' entries relative to the LDAP base DN."
 msgstr ""
 "Ovo određuje gde će se smeštati unosi korisnika u odnosu na LDAP bazni DN."
 
+#. i18n: file: kuser.kcfg:202
 #. i18n: ectx: label, entry (ldapuserfilter), group (connection-$(connection))
-#: kuser.kcfg:202
+#: rc.cpp:271
 msgid "LDAP User filter"
 msgstr "LDAP filter korisnika"
 
+#. i18n: file: kuser.kcfg:203
 #. i18n: ectx: whatsthis, entry (ldapuserfilter), group (connection-$(connection))
-#: kuser.kcfg:203
+#: rc.cpp:274
 msgid "This specifies the filter used for user entries."
 msgstr "Ovo navodi filter za unose korisnika."
 
+#. i18n: file: kuser.kcfg:206
 #. i18n: ectx: label, entry (ldapgroupbase), group (connection-$(connection))
-#: kuser.kcfg:206
+#: rc.cpp:277
 msgid "LDAP Group container"
 msgstr "LDAP sadržalac grupa"
 
+#. i18n: file: kuser.kcfg:207
 #. i18n: ectx: whatsthis, entry (ldapgroupbase), group (connection-$(connection))
-#: kuser.kcfg:207
+#: rc.cpp:280
 msgid ""
 "This specifies where to store groups' entries relative to the LDAP base DN."
 msgstr "Ovo određuje gde će se smeštati unosi grupa u odnosu na LDAP bazni DN."
 
+#. i18n: file: kuser.kcfg:211
 #. i18n: ectx: label, entry (ldapgroupfilter), group (connection-$(connection))
-#: kuser.kcfg:211
+#: rc.cpp:283
 msgid "LDAP Group filter"
 msgstr "LDAP filter grupa"
 
+#. i18n: file: kuser.kcfg:212
 #. i18n: ectx: whatsthis, entry (ldapgroupfilter), group (connection-$(connection))
-#: kuser.kcfg:212
+#: rc.cpp:286
 msgid "This specifies the filter used for group entries."
 msgstr "Ovo određuje filter za unose grupa."
 
+#. i18n: file: kuser.kcfg:215
 #. i18n: ectx: label, entry (ldapuserrdn), group (connection-$(connection))
-#: kuser.kcfg:215
+#: rc.cpp:289
 msgid "LDAP User RDN prefix"
 msgstr "LDAP RDN prefiks korisnika"
 
+#. i18n: file: kuser.kcfg:216
 #. i18n: ectx: whatsthis, entry (ldapuserrdn), group (connection-$(connection))
-#: kuser.kcfg:216
+#: rc.cpp:292
 msgid "This specifies what prefix will used for user entries."
 msgstr "Ovo određuje prefiks za unose korisnika."
 
+#. i18n: file: kuser.kcfg:225
+#. i18n: ectx: label, entry (ldapcnfullname), group (connection-$(connection))
+#: rc.cpp:295
+msgid "Store the user's full name in the cn attribute"
+msgstr "Skladišti puno ime korisnika u atributu cn"
+
+#. i18n: file: kuser.kcfg:226
 #. i18n: ectx: whatsthis, entry (ldapcnfullname), group (connection-$(connection))
-#: kuser.kcfg:226
+#: rc.cpp:298
 msgid ""
 "Check this if the user's full name should be stored in the cn (Canonical "
 "Name) attribute."
@@ -1746,23 +1581,27 @@ msgstr ""
 "Popunite ovo da bi se puno ime korisnika skladištilo u atributu <icode>cn</"
 "icode> (kanonsko ime)."
 
+#. i18n: file: kuser.kcfg:230
 #. i18n: ectx: label, entry (ldapgecos), group (connection-$(connection))
-#: kuser.kcfg:230
+#: rc.cpp:301
 msgid "Update the gecos field"
 msgstr "Ažuriraj polje <icode>gecos</icode>"
 
+#. i18n: file: kuser.kcfg:231
 #. i18n: ectx: whatsthis, entry (ldapgecos), group (connection-$(connection))
-#: kuser.kcfg:231
+#: rc.cpp:304
 msgid "Check this if the gecos attribute should be updated."
 msgstr "Popunite ovo da bi se ažurirao atribut <icode>gecos</icode>."
 
+#. i18n: file: kuser.kcfg:235
 #. i18n: ectx: label, entry (ldapshadow), group (connection-$(connection))
-#: kuser.kcfg:235
+#: rc.cpp:307
 msgid "Manage LDAP shadowAccount objectclass"
 msgstr "Upravljaj LDAP objektnom klasom <icode>shadowAccount</icode>"
 
+#. i18n: file: kuser.kcfg:236
 #. i18n: ectx: whatsthis, entry (ldapshadow), group (connection-$(connection))
-#: kuser.kcfg:236
+#: rc.cpp:310
 msgid ""
 "Check this if the shadowAccount object should be used in the users' entries. "
 "It allows to enforce password change/expiration policies."
@@ -1771,13 +1610,15 @@ msgstr ""
 "korisničkim unosima. On omogućava sprovođenje smernica za menjanje i "
 "isticanje lozinke."
 
+#. i18n: file: kuser.kcfg:240
 #. i18n: ectx: label, entry (ldapstructural), group (connection-$(connection))
-#: kuser.kcfg:240
+#: rc.cpp:313
 msgid "LDAP Structural objectclass"
 msgstr "LDAP strukturna objektna klasa"
 
+#. i18n: file: kuser.kcfg:241
 #. i18n: ectx: whatsthis, entry (ldapstructural), group (connection-$(connection))
-#: kuser.kcfg:241
+#: rc.cpp:316
 msgid ""
 "This option allows to specify the structural objectclass used with users' "
 "entries. If you want to use these entries not just for authentication, but "
@@ -1787,33 +1628,39 @@ msgstr ""
 "korisničkim unosima. Ako ove unose želite da koristite ne samo za "
 "autentifikaciju, već i za adresar, izaberite <icode>inetOrgPerson</icode>."
 
+#. i18n: file: kuser.kcfg:249
 #. i18n: ectx: label, entry (ldapgrouprdn), group (connection-$(connection))
-#: kuser.kcfg:249
+#: rc.cpp:319
 msgid "LDAP Group RDN prefix"
 msgstr "LDAP RDN prefiks grupe"
 
+#. i18n: file: kuser.kcfg:250
 #. i18n: ectx: whatsthis, entry (ldapgrouprdn), group (connection-$(connection))
-#: kuser.kcfg:250
+#: rc.cpp:322
 msgid "This specifies what prefix will used for group entries."
 msgstr "Ovo određuje prefiks za unose grupa."
 
+#. i18n: file: kuser.kcfg:258
 #. i18n: ectx: label, entry (ldappasswordhash), group (connection-$(connection))
-#: kuser.kcfg:258
+#: rc.cpp:325
 msgid "LDAP Password hash method"
 msgstr "LDAP metod disperziranja lozinki"
 
+#. i18n: file: kuser.kcfg:259
 #. i18n: ectx: whatsthis, entry (ldappasswordhash), group (connection-$(connection))
-#: kuser.kcfg:259
+#: rc.cpp:328
 msgid "This specifies the password hashing method. The most secure is SSHA."
 msgstr "Ovde se zadaje metod disperziranja lozinki. Najbezbedniji je SSHA."
 
+#. i18n: file: kuser.kcfg:271
 #. i18n: ectx: label, entry (ldapsam), group (connection-$(connection))
-#: kuser.kcfg:271
+#: rc.cpp:331
 msgid "Enable samba account management"
 msgstr "Uključi upravljanje Sambinim nalogom"
 
+#. i18n: file: kuser.kcfg:272
 #. i18n: ectx: whatsthis, entry (ldapsam), group (connection-$(connection))
-#: kuser.kcfg:272
+#: rc.cpp:334
 msgid ""
 "Check this if you want to use the user/group entries in a Samba domain. "
 "KUser will create sambaSamAccount objectclass for each entry which is usable "
@@ -1824,23 +1671,27 @@ msgstr ""
 "icode> za svaki unos koji je upotrebljiv sa pozadinom <icode>ldapsam</icode> "
 "za <icode>passdb</icode> u izdanju Sambe novijim od 3.0."
 
+#. i18n: file: kuser.kcfg:275
 #. i18n: ectx: label, entry (samdomain), group (connection-$(connection))
-#: kuser.kcfg:275
+#: rc.cpp:337
 msgid "Samba domain name"
 msgstr "Ime Sambinog domena"
 
+#. i18n: file: kuser.kcfg:276
 #. i18n: ectx: whatsthis, entry (samdomain), group (connection-$(connection))
-#: kuser.kcfg:276
+#: rc.cpp:340
 msgid "This specifies the samba domain name."
 msgstr "Ovo određuje ime Sambinog domena."
 
+#. i18n: file: kuser.kcfg:279
 #. i18n: ectx: label, entry (samdomsid), group (connection-$(connection))
-#: kuser.kcfg:279
+#: rc.cpp:343
 msgid "Samba domain SID"
 msgstr "SID Sambinog domena"
 
+#. i18n: file: kuser.kcfg:280
 #. i18n: ectx: whatsthis, entry (samdomsid), group (connection-$(connection))
-#: kuser.kcfg:280
+#: rc.cpp:346
 msgid ""
 "This specifies the domain Security IDentifier. It is unique in a single "
 "domain. You can query the value of the domain SID with 'net getlocalsid "
@@ -1850,13 +1701,15 @@ msgstr ""
 "jednom domenu. Vrednost SID‑a domena možete očitati pomoću <icode>net "
 "getlocalsid domain_name</icode>."
 
+#. i18n: file: kuser.kcfg:283
 #. i18n: ectx: label, entry (samridbase), group (connection-$(connection))
-#: kuser.kcfg:283
+#: rc.cpp:349
 msgid "Algorithmic RID base"
 msgstr "Algoritamska osnova RID‑ova"
 
+#. i18n: file: kuser.kcfg:284
 #. i18n: ectx: whatsthis, entry (samridbase), group (connection-$(connection))
-#: kuser.kcfg:284
+#: rc.cpp:352
 msgid ""
 "This value is an offset for the algorithmic mapping from uids and gids to "
 "rids. The default (and minimum) value is 1000, it must be even, and the LDAP "
@@ -1866,13 +1719,15 @@ msgstr ""
 "RID‑ove. Podrazumevana (i najmanja) vrednost je 1000, mora biti parna, a "
 "LDAP baza i <filename>smb.conf</filename> moraju skladištiti iste vrednosti."
 
+#. i18n: file: kuser.kcfg:288
 #. i18n: ectx: label, entry (samloginscript), group (connection-$(connection))
-#: kuser.kcfg:288
+#: rc.cpp:355
 msgid "Samba login script"
 msgstr "Prijavna skripta Sambe"
 
+#. i18n: file: kuser.kcfg:289
 #. i18n: ectx: whatsthis, entry (samloginscript), group (connection-$(connection))
-#: kuser.kcfg:289
+#: rc.cpp:358
 msgid ""
 "This specifies a name of a login script (in the `Netlogon` share) which will "
 "be executed as the user logs in to a Windows machine."
@@ -1880,13 +1735,15 @@ msgstr ""
 "Ovo zadaje ime prijavne skripte (u deljenju <icode>NetLogon</icode>) koja se "
 "izvršava kad se korisnik prijavi na računar pod Windowsom."
 
+#. i18n: file: kuser.kcfg:292
 #. i18n: ectx: label, entry (samhomedrive), group (connection-$(connection))
-#: kuser.kcfg:292
+#: rc.cpp:361
 msgid "Samba home drive"
 msgstr "Domaća jedinica Sambe"
 
+#. i18n: file: kuser.kcfg:293
 #. i18n: ectx: whatsthis, entry (samhomedrive), group (connection-$(connection))
-#: kuser.kcfg:293
+#: rc.cpp:364
 msgid ""
 "Specifies a drive letter where the user's home directory will automatically "
 "mapped when he/she logs into a Windows machine."
@@ -1894,13 +1751,15 @@ msgstr ""
 "Zadaje slovo jedinice na koje se automatski mapira korisnikova domaća "
 "fascikla, pri prijavljivanju na računar pod Windowsom."
 
+#. i18n: file: kuser.kcfg:296
 #. i18n: ectx: label, entry (samprofilepath), group (connection-$(connection))
-#: kuser.kcfg:296
+#: rc.cpp:367
 msgid "Samba profile path template"
 msgstr "Šablon Sambine putanje profila"
 
+#. i18n: file: kuser.kcfg:297
 #. i18n: ectx: whatsthis, entry (samprofilepath), group (connection-$(connection))
-#: kuser.kcfg:297
+#: rc.cpp:371
 #, no-c-format
 msgid ""
 "This specifies the location of the roaming profile of the user. The '%U' "
@@ -1909,13 +1768,15 @@ msgstr ""
 "Ovo zadaje lokaciju korisnikovog lutajućeg profila. Makro <icode>%U</icode> "
 "biće zamenjen korisničkim imenom."
 
+#. i18n: file: kuser.kcfg:300
 #. i18n: ectx: label, entry (samhomepath), group (connection-$(connection))
-#: kuser.kcfg:300
+#: rc.cpp:374
 msgid "Samba home path template"
 msgstr "Šablon Sambine domaće putanje."
 
+#. i18n: file: kuser.kcfg:301
 #. i18n: ectx: whatsthis, entry (samhomepath), group (connection-$(connection))
-#: kuser.kcfg:301
+#: rc.cpp:378
 #, no-c-format
 msgid ""
 "This specifies the location of the home directory of the user. This field is "
@@ -1926,8 +1787,15 @@ msgstr ""
 "za računare pod Windowsom. Makro <icode>%U</icode> biće zamenjen korisničkim "
 "imenom."
 
+#. i18n: file: kuser.kcfg:304
+#. i18n: ectx: label, entry (lanmanhash), group (connection-$(connection))
+#: rc.cpp:381
+msgid "Store LanManager hashed password"
+msgstr "Skladišti LanManagerovu disperziranu lozinku"
+
+#. i18n: file: kuser.kcfg:305
 #. i18n: ectx: whatsthis, entry (lanmanhash), group (connection-$(connection))
-#: kuser.kcfg:305
+#: rc.cpp:384
 msgid ""
 "Store the LanManager hashed password in the sambaLMPassword attribute. Check "
 "this if you have older clients (Win9x series and before) on your network."
@@ -1936,22 +1804,150 @@ msgstr ""
 "<icode>sambaLMPassword</icode>. Popunite ovo ako u mreži ima starijih "
 "klijenata (serija Windows 9x i ranije)."
 
-#. i18n: ectx: Menu (file)
-#: kuserui.rc:4
-msgid "&File"
-msgstr "&Fajl"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marko Rosić,Slobodan Simić"
 
-#. i18n: ectx: Menu (user)
-#: kuserui.rc:8
-msgid "&User"
-msgstr "&Korisnik"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "roske@kde.org.yu,slsimic@gmail.com"
 
-#. i18n: ectx: Menu (group)
-#: kuserui.rc:14
-msgid "&Group"
-msgstr "&Grupa"
+#~ msgid "Settings"
+#~ msgstr "Postavke"
 
-#. i18n: ectx: Menu (settings)
-#: kuserui.rc:19
-msgid "&Settings"
-msgstr "&Podešavanje"
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP Source Settings"
+#~ msgstr "Postavke LDAP izvora"
+
+#~ msgid "RID:"
+#~ msgstr "RID:"
+
+#~ msgid "Login script:"
+#~ msgstr "Prijavna skripta:"
+
+#~ msgid "Profile path:"
+#~ msgstr "Putanja profila:"
+
+#~ msgid "Home drive:"
+#~ msgstr "Domaća jedinica:"
+
+#~ msgid "Home path:"
+#~ msgstr "Domaća putanja:"
+
+#~ msgid "User workstations:"
+#~ msgstr "Korisničke radne stanice:"
+
+#~ msgid "Domain name:"
+#~ msgstr "Ime domena:"
+
+#~ msgid "Disable &Samba account information"
+#~ msgstr "Isključi podatke o &Sambinom nalogu"
+
+#~ msgid "You need to specify a samba RID."
+#~ msgstr "Morate zadati Sambin RID."
+
+#~ msgid "User with RID %1 already exists"
+#~ msgstr "Korisnik sa RID‑om %1 već postoji."
+
+#~ msgid "Loading Groups From LDAP"
+#~ msgstr "Učitavam grupe iz LDAP‑a"
+
+#~ msgid "LDAP Operation"
+#~ msgstr "LDAP postupak"
+
+#~ msgid "Manage Samba user accounts/groups"
+#~ msgstr "Upravljaj Sambinim korisničkim nalozima i grupama"
+
+#~ msgid "Default login script:"
+#~ msgstr "Podrazumevana prijavna skripta:"
+
+#~ msgid "Profile path template:"
+#~ msgstr "Šablon putanje profila:"
+
+#~ msgid "&Query Server"
+#~ msgstr "&Upitaj server"
+
+#~ msgid "Domain SID (you can obtain with 'net getlocalsid domain_name'):"
+#~ msgstr ""
+#~ "SID domena (možete ga dobiti sa <icode>net getlocalsid domain_name</"
+#~ "icode>):"
+
+#~ msgid "Algorithmic RID base:"
+#~ msgstr "Algoritamska osnova RID‑ova:"
+
+#~ msgid "cn"
+#~ msgstr "cn"
+
+#~ msgid "gidNumber"
+#~ msgstr "gidNumber"
+
+#~ msgid "Plain Text"
+#~ msgstr "obični tekst"
+
+#~ msgid "CRYPT"
+#~ msgstr "CRYPT"
+
+#~ msgid "MD5"
+#~ msgstr "MD5"
+
+#~ msgid "SMD5"
+#~ msgstr "SMD5"
+
+#~ msgid "SHA"
+#~ msgstr "SHA"
+
+#~ msgid "SSHA"
+#~ msgstr "SSHA"
+
+#~ msgid "User base:"
+#~ msgstr "Baza korisnika:"
+
+#~ msgid "Group filter:"
+#~ msgstr "Filter grupa:"
+
+#~ msgid "Structural objectclass:"
+#~ msgstr "Strukturna objektna klasa:"
+
+#~ msgid "User filter:"
+#~ msgstr "Filter korisnika:"
+
+#~ msgid "account"
+#~ msgstr "nalog"
+
+#~ msgid "inetOrgPerson"
+#~ msgstr "inetOrgPerson"
+
+#~ msgid "Group RDN prefix:"
+#~ msgstr "RDN prefiks grupe:"
+
+#~ msgid "uid"
+#~ msgstr "uid"
+
+#~ msgid "uidNumber"
+#~ msgstr "uidNumber"
+
+#~ msgid "Group base:"
+#~ msgstr "Baza grupa:"
+
+#~ msgid "User RDN prefix:"
+#~ msgstr "RDN prefiks korisnika:"
+
+#~ msgid "Password hash:"
+#~ msgstr "Disperzija lozinke:"
+
+#~ msgid "Manage shadowAccount objectclass"
+#~ msgstr "Upravljaj objektnom klasom shadowAccount"
+
+#~ msgid "Update the gecos attribute"
+#~ msgstr "Ažuriraj atribut gecos"
+
+#~ msgid "Unable to build password database."
+#~ msgstr "Ne mogu da izgradim bazu lozinki."
+
+#~ msgid "Loading Users From LDAP"
+#~ msgstr "Učitavam korisnike iz LDAP‑a"

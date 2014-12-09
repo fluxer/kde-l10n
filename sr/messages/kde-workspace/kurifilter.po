@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kurifilter\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-30 01:55+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2013-06-03 18:02+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -70,8 +70,21 @@ msgstr ""
 "унесете у улазни виџет програма који подржава ову могућност, попут "
 "К‑освајача.</para>"
 
+#: kuriikwsfilter.cpp:125
+msgid "No preferred search providers were found."
+msgstr "Није нађен ниједан пожељни претраживач."
+
+#: kuriikwsfilter.cpp:144
+msgid "No search providers were found."
+msgstr "Није нађен ниједан претраживач."
+
+#: kurisearchfilter.cpp:87
+msgid "Search F&ilters"
+msgstr "&Филтери претраге"
+
+#. i18n: file: ikwsopts_ui.ui:17
 #. i18n: ectx: property (toolTip), widget (QCheckBox, cbEnableShortcuts)
-#: ikwsopts_ui.ui:17
+#: rc.cpp:3
 msgid ""
 "<html><head/><body><p>Enable or disable web shortcuts. </p><p>Web shortcuts "
 "allow you to quickly access or search for information located online or on "
@@ -87,53 +100,63 @@ msgstr ""
 "што унесете <icode>gg</icode> праћено раздвајачем кључне речи и изразом за "
 "претрагу, попут <code>gg:KDE</code>.</p></body></html>"
 
+#. i18n: file: ikwsopts_ui.ui:20
 #. i18n: ectx: property (text), widget (QCheckBox, cbEnableShortcuts)
-#: ikwsopts_ui.ui:20
+#: rc.cpp:6
 msgid "&Enable Web shortcuts"
 msgstr "&Веб пречице"
 
+#. i18n: file: ikwsopts_ui.ui:30
 #. i18n: ectx: property (text), widget (QCheckBox, cbUseSelectedShortcutsOnly)
-#: ikwsopts_ui.ui:30
+#: rc.cpp:9
 msgid "&Use preferred shortcuts only"
 msgstr "&Само пожељне пречице"
 
+#. i18n: file: ikwsopts_ui.ui:37
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, searchLineEdit)
-#: ikwsopts_ui.ui:37
+#: rc.cpp:12
 msgid "Search for shortcut"
 msgstr "Потражи пречицу"
 
+#. i18n: file: ikwsopts_ui.ui:71
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbNew)
-#: ikwsopts_ui.ui:71
+#: rc.cpp:15
 msgid "Add a new Web shortcut"
 msgstr "Додај нову веб пречицу"
 
+#. i18n: file: ikwsopts_ui.ui:74
 #. i18n: ectx: property (text), widget (QPushButton, pbNew)
-#: ikwsopts_ui.ui:74
+#: rc.cpp:18
 msgid "&New..."
 msgstr "&Нови..."
 
+#. i18n: file: ikwsopts_ui.ui:84
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbChange)
-#: ikwsopts_ui.ui:84
+#: rc.cpp:21
 msgid "Modify the highlighted Web shortcut"
 msgstr "Измените истакнуту веб пречицу."
 
+#. i18n: file: ikwsopts_ui.ui:87
 #. i18n: ectx: property (text), widget (QPushButton, pbChange)
-#: ikwsopts_ui.ui:87
+#: rc.cpp:24
 msgid "Chan&ge..."
 msgstr "&Измени..."
 
+#. i18n: file: ikwsopts_ui.ui:97
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbDelete)
-#: ikwsopts_ui.ui:97
+#: rc.cpp:27
 msgid "Delete the highlighted Web shortcut"
 msgstr "Обришите истакнуту веб пречицу."
 
+#. i18n: file: ikwsopts_ui.ui:100
 #. i18n: ectx: property (text), widget (QPushButton, pbDelete)
-#: ikwsopts_ui.ui:100
+#: rc.cpp:30
 msgid "De&lete"
 msgstr "&Обриши"
 
+#. i18n: file: ikwsopts_ui.ui:138
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbDefaultEngine)
-#: ikwsopts_ui.ui:138
+#: rc.cpp:33
 msgid ""
 "<qt>\n"
 "Select the search engine to use for input boxes that provide automatic "
@@ -145,13 +168,15 @@ msgstr ""
 "упишете обичне речи или изразе уместо УРЛ‑а. Ову могућност можете искључити "
 "избором <interface>ниједна</interface> са списка.</qt>"
 
+#. i18n: file: ikwsopts_ui.ui:141
 #. i18n: ectx: property (text), widget (QLabel, lbDefaultEngine)
-#: ikwsopts_ui.ui:141
+#: rc.cpp:38
 msgid "Default Web &shortcut:"
 msgstr "&Подразумевана веб пречица:"
 
+#. i18n: file: ikwsopts_ui.ui:166
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cmbDefaultEngine)
-#: ikwsopts_ui.ui:166
+#: rc.cpp:41
 msgid ""
 "<html><head/><body><p>Select a default web shortcut. </p><p>This allows "
 "applications to automatically convert the typed word or phrase to web "
@@ -166,117 +191,63 @@ msgstr ""
 "body></html>"
 
 # rewrite-msgid: /delimiter/separator/
+#. i18n: file: ikwsopts_ui.ui:182
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbDelimiter)
-#: ikwsopts_ui.ui:182
+#: rc.cpp:44
 msgid ""
 "Choose the delimiter that separates the keyword from the phrase or word to "
 "be searched."
 msgstr "Изаберите знак раздвајач кључне речи од израза или речи која се тражи."
 
 # rewrite-msgid: /delimiter/separator/
+#. i18n: file: ikwsopts_ui.ui:185
 #. i18n: ectx: property (text), widget (QLabel, lbDelimiter)
-#: ikwsopts_ui.ui:185
+#: rc.cpp:47
 msgid "&Keyword delimiter:"
 msgstr "&Раздвајач кључне речи:"
 
 # rewrite-msgid: /delimiter/separator/
+#. i18n: file: ikwsopts_ui.ui:204
 #. i18n: ectx: property (toolTip), widget (KComboBox, cmbDelimiter)
-#: ikwsopts_ui.ui:204
+#: rc.cpp:50
 msgid "Choose a delimiter to mark the Web shortcut keyword."
 msgstr "Изаберите раздвајач за означавање кључне речи веб пречице."
 
 # >> @item:inlistbox Keyword delimiter character
+#. i18n: file: ikwsopts_ui.ui:208
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbDelimiter)
-#: ikwsopts_ui.ui:208
+#: rc.cpp:53
 msgctxt "Colon as keyword delimiter"
 msgid "Colon"
 msgstr "двотачка"
 
 # >> @item:inlistbox Keyword delimiter character
+#. i18n: file: ikwsopts_ui.ui:213
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbDelimiter)
-#: ikwsopts_ui.ui:213
+#: rc.cpp:56
 msgctxt "Space as keyword delimiter"
 msgid "Space"
 msgstr "размак"
 
-#: kuriikwsfilter.cpp:125
-msgid "No preferred search providers were found."
-msgstr "Није нађен ниједан пожељни претраживач."
-
-#: kuriikwsfilter.cpp:144
-msgid "No search providers were found."
-msgstr "Није нађен ниједан претраживач."
-
-#: kurisearchfilter.cpp:87
-msgid "Search F&ilters"
-msgstr "&Филтери претраге"
-
-#: searchproviderdlg.cpp:50
-msgctxt "@item:inlistbox The default character set"
-msgid "Default"
-msgstr "подразумевани"
-
-# >> @title:window
-#: searchproviderdlg.cpp:54
-msgid "Modify Web Shortcut"
-msgstr "Измена веб пречице"
-
-# >> @title:window
-#: searchproviderdlg.cpp:64
-msgid "New Web Shortcut"
-msgstr "Нова веб пречица"
-
-#: searchproviderdlg.cpp:117
-#, kde-format
-msgid ""
-"The shortcut \"%1\" is already assigned to \"%2\". Please choose a different "
-"one."
-msgstr "Пречица „%1“ већ се користи за „%2“. Изаберите неку другу."
-
-#: searchproviderdlg.cpp:122
-#, kde-format
-msgctxt "- web short cut (e.g. gg): what it refers to (e.g. Google)"
-msgid "- %1: \"%2\""
-msgstr "— %1: \"%2\""
-
-#: searchproviderdlg.cpp:126
-#, kde-format
-msgid ""
-"The following shortcuts are already assigned. Please choose different ones.\n"
-"%1"
-msgstr ""
-"Следеће пречице су већ додељене. Изаберите неке друге.\n"
-"%1"
-
-#: searchproviderdlg.cpp:138
-msgid ""
-"The Shortcut URL does not contain a \\{...} placeholder for the user query.\n"
-"This means that the same page is always going to be visited, regardless of "
-"the text typed in with the shortcut."
-msgstr ""
-"<html>УРЛ пречице не садржи местодржач <icode>\\{...}</icode> за кориснички "
-"упит. Ово значи да се увек посећује иста страница, без обзира на текст унет "
-"уз пречицу.</html>"
-
-#: searchproviderdlg.cpp:141
-msgid "Keep It"
-msgstr "Остави тако"
-
+#. i18n: file: searchproviderdlg_ui.ui:17
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbName)
-#: searchproviderdlg_ui.ui:17
+#: rc.cpp:59
 msgid "Enter the human-readable name of the search provider here."
 msgstr "Кориснику читљив назив претраживача."
 
+#. i18n: file: searchproviderdlg_ui.ui:23
 #. i18n: ectx: property (text), widget (QLabel, lbName)
-#: searchproviderdlg_ui.ui:23
+#: rc.cpp:62
 msgid "Shortcut &name:"
 msgstr "&Име пречице:"
 
+#. i18n: file: searchproviderdlg_ui.ui:42
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbQuery)
+#. i18n: file: searchproviderdlg_ui.ui:64
 #. i18n: ectx: property (toolTip), widget (KLineEdit, leQuery)
+#. i18n: file: searchproviderdlg_ui.ui:70
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, leQuery)
-#: searchproviderdlg_ui.ui:42 searchproviderdlg_ui.ui:64
-#: searchproviderdlg_ui.ui:70
+#: rc.cpp:65 rc.cpp:74 rc.cpp:80
 msgid ""
 "<qt>\n"
 "Enter the URI that is used to perform a search on the search engine here.<br/"
@@ -304,21 +275,25 @@ msgstr ""
 "вредност (гледано с лева). Ниска под наводницима се узима за подразумевану "
 "вредност ако се ништа лево од ње не уклопи.</p></qt>"
 
+#. i18n: file: searchproviderdlg_ui.ui:48
 #. i18n: ectx: property (text), widget (QLabel, lbQuery)
-#: searchproviderdlg_ui.ui:48
+#: rc.cpp:71
 msgid "Shortcut &URL:"
 msgstr "&УРЛ пречице:"
 
+#. i18n: file: searchproviderdlg_ui.ui:86
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cbCharset)
-#: searchproviderdlg_ui.ui:86
+#: rc.cpp:86
 msgid "Select the character set that will be used to encode your search query."
 msgstr "Кодирање којим се шаље упит за претрагу."
 
+#. i18n: file: searchproviderdlg_ui.ui:95
 #. i18n: ectx: property (toolTip), widget (KLineEdit, leShortcut)
+#. i18n: file: searchproviderdlg_ui.ui:100
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, leShortcut)
+#. i18n: file: searchproviderdlg_ui.ui:122
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbShortcut)
-#: searchproviderdlg_ui.ui:95 searchproviderdlg_ui.ui:100
-#: searchproviderdlg_ui.ui:122
+#: rc.cpp:89 rc.cpp:94 rc.cpp:105
 msgid ""
 "<qt>\n"
 "The shortcuts entered here can be used as a pseudo-URI scheme in KDE. For "
@@ -330,9 +305,11 @@ msgstr ""
 "пречица <icode>av</icode> може се употребити као <icode>av: moja pretraga</"
 "icode>.</qt>"
 
+#. i18n: file: searchproviderdlg_ui.ui:110
 #. i18n: ectx: property (toolTip), widget (KLineEdit, leName)
+#. i18n: file: searchproviderdlg_ui.ui:113
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, leName)
-#: searchproviderdlg_ui.ui:110 searchproviderdlg_ui.ui:113
+#: rc.cpp:99 rc.cpp:102
 msgid ""
 "<html><head/><body><p>Enter the human-readable name of the web shortcut here."
 "</p></body></html>"
@@ -340,22 +317,74 @@ msgstr ""
 "<html><head/><body><p>Лако препознатљив назив веб пречице.</p></body></html>"
 
 # >> @title:column
+#. i18n: file: searchproviderdlg_ui.ui:125
 #. i18n: ectx: property (text), widget (QLabel, lbShortcut)
-#: searchproviderdlg_ui.ui:125
+#: rc.cpp:110
 msgid "&Shortcuts:"
 msgstr "&Пречице:"
 
+#. i18n: file: searchproviderdlg_ui.ui:138
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbCharset)
-#: searchproviderdlg_ui.ui:138
+#: rc.cpp:113
 msgid "Select the character set that will be used to encode your search query"
 msgstr "Кодирање којим се шаље упит за претрагу."
 
+#. i18n: file: searchproviderdlg_ui.ui:141
 #. i18n: ectx: property (text), widget (QLabel, lbCharset)
-#: searchproviderdlg_ui.ui:141
+#: rc.cpp:116
 msgid "&Charset:"
 msgstr "&Кодирање:"
 
+#. i18n: file: searchproviderdlg_ui.ui:164
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbPaste)
-#: searchproviderdlg_ui.ui:164
+#: rc.cpp:119
 msgid "Insert query placeholder"
 msgstr "Уметни местодржач упита"
+
+#: searchproviderdlg.cpp:50
+msgctxt "@item:inlistbox The default character set"
+msgid "Default"
+msgstr "подразумевани"
+
+# >> @title:window
+#: searchproviderdlg.cpp:54
+msgid "Modify Web Shortcut"
+msgstr "Измена веб пречице"
+
+# >> @title:window
+#: searchproviderdlg.cpp:64
+msgid "New Web Shortcut"
+msgstr "Нова веб пречица"
+
+#: searchproviderdlg.cpp:117
+msgid ""
+"The shortcut \"%1\" is already assigned to \"%2\". Please choose a different "
+"one."
+msgstr "Пречица „%1“ већ се користи за „%2“. Изаберите неку другу."
+
+#: searchproviderdlg.cpp:122
+msgctxt "- web short cut (e.g. gg): what it refers to (e.g. Google)"
+msgid "- %1: \"%2\""
+msgstr "— %1: \"%2\""
+
+#: searchproviderdlg.cpp:126
+msgid ""
+"The following shortcuts are already assigned. Please choose different ones.\n"
+"%1"
+msgstr ""
+"Следеће пречице су већ додељене. Изаберите неке друге.\n"
+"%1"
+
+#: searchproviderdlg.cpp:138
+msgid ""
+"The Shortcut URL does not contain a \\{...} placeholder for the user query.\n"
+"This means that the same page is always going to be visited, regardless of "
+"the text typed in with the shortcut."
+msgstr ""
+"<html>УРЛ пречице не садржи местодржач <icode>\\{...}</icode> за кориснички "
+"упит. Ово значи да се увек посећује иста страница, без обзира на текст унет "
+"уз пречицу.</html>"
+
+#: searchproviderdlg.cpp:141
+msgid "Keep It"
+msgstr "Остави тако"

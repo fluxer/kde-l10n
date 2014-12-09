@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: okular_dvi\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-09-23 06:42+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2014-05-17 18:38+0200\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -19,13 +19,414 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Uroš Manačinski,Jure Repinc,Andrej Mernik"
+#: psgs.cpp:263
+msgid ""
+"The version of Ghostview that is installed on this computer does not contain "
+"any of the Ghostview device drivers that are known to Okular. PostScript "
+"support has therefore been turned off in Okular."
+msgstr ""
+"Različica GhostViewa, ki je nameščena na računalniku, ne vsebuje nobenih "
+"gonilnikov za naprave, ki bi jih Okular poznal. Zato je bila Okularjeva "
+"podpora za PostScript izklopljena."
 
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "uros.manacinski@gmail.com,jlp@holodeck1.com,andrejm@ubuntu.si"
+#: psgs.cpp:267
+msgid ""
+"<qt><p>The Ghostview program, which Okular uses internally to display the "
+"PostScript graphics that is included in this DVI file, is generally able to "
+"write its output in a variety of formats. The sub-programs that Ghostview "
+"uses for these tasks are called 'device drivers'; there is one device driver "
+"for each format that Ghostview is able to write. Different versions of "
+"Ghostview often have different sets of device drivers available. It seems "
+"that the version of Ghostview that is installed on this computer does not "
+"contain <strong>any</strong> of the device drivers that are known to Okular."
+"</p><p>It seems unlikely that a regular installation of Ghostview would not "
+"contain these drivers. This error may therefore point to a serious "
+"misconfiguration of the Ghostview installation on your computer.</p><p>If "
+"you want to fix the problems with Ghostview, you can use the command "
+"<strong>gs --help</strong> to display the list of device drivers contained "
+"in Ghostview. Among others, Okular can use the 'png256', 'jpeg' and 'pnm' "
+"drivers. Note that Okular needs to be restarted to re-enable PostScript "
+"support.</p></qt>"
+msgstr ""
+"<qt><p>Program GhostView, ki ga uporablja Okular notranje za prikaz grafike "
+"PostScript, ki je vključena v ta dokument DVI, je splošno zmožen shraniti "
+"svoj izhod v različnih vrstah. Pod-programi, ki jih GhostView uporabi za "
+"takšne naloge so znani kot »gonilniki za naprave«. Za vsako vrsto, ki jo je "
+"GhostView zmožen izpisati, je na voljo en tak gonilnik. V različnih "
+"različicah GhostViewa so pogosto na voljo različni gonilniki. Kot kaže "
+"različica GhostViewa, ki je nameščena na tem računalniku, ne vsebuje "
+"<strong>nobenega</strong> gonilnika, ki bi ga Okular prepoznal. </"
+"p><p>Neobičajno je, da namestitev GhostViewa ne bi vsebovala teh gonilnikov. "
+"Napaka morda kaže na resnejšo napako v namestitvi GhostViewa.</p><p>Če "
+"želite odpraviti težave z GhostView, lahko uporabite ukaz <strong>gs --help</"
+"strong>, ki prikaže seznam gonilnikov. Med drugimi Okular lahko uporablja "
+"gonilnike »png256«, »jpeg« in »pnm«. Da bi omogočili podporo za PostScript, "
+"morate znova zagnati Okular.</p></qt>"
+
+#: dviFile.cpp:111
+msgid "The DVI file does not start with the preamble."
+msgstr "Datoteka DVI se ne začne z ustreznim uvodom."
+
+#: dviFile.cpp:116
+msgid ""
+"The DVI file contains the wrong version of DVI output for this program. "
+"Hint: If you use the typesetting system Omega, you have to use a special "
+"program, such as oxdvi."
+msgstr ""
+"Datoteka DVI za ta program vsebuje napačno različico izhoda DVI. Namig: če "
+"uporabljate sistem Omega, morate uporabiti poseben program, npr. oxdvi."
+
+#: dviFile.cpp:154
+msgid ""
+"The DVI file is badly corrupted. Okular was not able to find the postamble."
+msgstr ""
+"Datoteka DVI je močno pokvarjena. Okular ni mogel najti ustreznega zaključka."
+
+#: dviFile.cpp:169
+msgid "The postamble does not begin with the POST command."
+msgstr "Zaključek se ne začne z ukazom POST."
+
+#: dviFile.cpp:222
+msgid "The postamble contained a command other than FNTDEF."
+msgstr "Zaključek vsebuje ukaz, ki ni FNTDEF."
+
+#: dviFile.cpp:258
+msgid "The page %1 does not start with the BOP command."
+msgstr "Stran %1 se ne začne z ukazom BOP."
+
+#: dviFile.cpp:390
+msgid ""
+"<qt><p>The external program <strong>pdf2ps</strong> could not be started. As "
+"a result, the PDF-file %1 could not be converted to PostScript. Some graphic "
+"elements in your document will therefore not be displayed.</p><p><b>Possible "
+"reason:</b> The program <strong>pdf2ps</strong> may not be installed on your "
+"system, or cannot be found in the current search path.</p><p><b>What you can "
+"do:</b> The program <strong>pdf2ps</strong> is normally contained in "
+"distributions of the ghostscript PostScript interpreter system. If "
+"ghostscript is not installed on your system, you could install it now. If "
+"you are sure that ghostscript is installed, try to use <strong>pdf2ps</"
+"strong> from the command line to check if it really works.</p><p><em>PATH:</"
+"em> %2</p></qt>"
+msgstr ""
+"<qt><p>Ni mogoče zagnati zunanjega programa <strong>pdf2ps</strong>. "
+"Posledično datoteke PDF %1 ni bilo mogoče pretvoriti v PostScript. Nekateri "
+"grafični predmeti iz dokumenta zato ne bodo prikazani.</p><p><b>Mogoč razlog:"
+"</b> Program <strong>pdf2ps</strong> mogoče ni nameščen na računalniku, ali "
+"pa ga ni mogoče najti v iskanih mapah.</p><p><b>Kaj lahko storite:</b> "
+"Program <strong>pdf2ps</strong> je običajno del distribucije Ghostscript "
+"sistema za tolmačenje PostScripta. Če Ghostscript ni nameščen, ga sedaj "
+"lahko namestite. Če zagotovo veste, da je Ghostscript nameščen, poskusite "
+"uporabiti <strong>pdf2ps</strong> iz ukazne vrstice in preverite, ali deluje."
+"</p><p><em>PATH:</em> %2</p></qt>"
+
+#: dviFile.cpp:414
+msgid ""
+"<qt><p>The PDF-file %1 could not be converted to PostScript. Some graphic "
+"elements in your document will therefore not be displayed.</p><p><b>Possible "
+"reason:</b> The file %1 might be broken, or might not be a PDF-file at all. "
+"This is the output of the <strong>pdf2ps</strong> program that Okular used:</"
+"p><p><strong>%2</strong></p></qt>"
+msgstr ""
+"<qt><p>Datoteke PDF %1 ni mogoče pretvoriti v PostScript. Nekateri grafični "
+"elementi iz dokumenta zato ne bodo prikazani.</p><p><b>Mogoč razlog:</b> "
+"Datoteka %1 je morda poškodovana, ali pa mogoče sploh ni datoteka PDF. To je "
+"izpis programa <strong>pdf2ps</strong>, ki ga je uporabil Okular:</"
+"p><p><strong>%2</strong></p></qt>"
+
+#: special.cpp:37
+msgid "That makes 25 errors. Further error messages will not be printed."
+msgstr "To je 25 napak. Nadaljnja sporočila o napakah ne bodo izpisana."
+
+#: special.cpp:218
+msgid ""
+"Error in DVIfile '%1', page %2. Color pop command issued when the color "
+"stack is empty."
+msgstr ""
+"Napaka v datoteki DVI »%1«, stran %2. Izdan je bil ukaz za odvzem barve s "
+"sklada, vendar je sklad prazen."
+
+#: special.cpp:303
+msgid ""
+"Malformed parameter in the epsf special command.\n"
+"Expected a float to follow %1 in %2"
+msgstr ""
+"Napačen parameter posebnega ukaza epsf.\n"
+"V %2 je bilo pričakovano, da bo %1 sledilo število s plavajočo vejico"
+
+#: special.cpp:434
+msgid ""
+"File not found: \n"
+" %1"
+msgstr ""
+"Datoteke ni bilo mogoče najti:\n"
+" %1"
+
+#: special.cpp:681
+msgid ""
+"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
+"special."
+msgstr ""
+"Napaka v datoteki DVI »%1«, stran %2. Ni bilo mogoče ugotoviti kota "
+"zasukanega besedila."
+
+#: special.cpp:704
+msgid "The special command '%1' is not implemented."
+msgstr "Poseben ukaz »%1« ni podprt."
+
+#: util.cpp:77
+msgid ""
+"Fatal error.\n"
+"\n"
+msgstr ""
+"Usodna napaka.\n"
+"\n"
+
+#: util.cpp:79
+msgid ""
+"\n"
+"\n"
+"This probably means that either you found a bug in Okular,\n"
+"or that the DVI file, or auxiliary files (such as font files, \n"
+"or virtual font files) were really badly broken.\n"
+"Okular will abort after this message. If you believe that you \n"
+"found a bug, or that Okular should behave better in this situation\n"
+"please report the problem."
+msgstr ""
+"\n"
+"\n"
+"To verjetno pomeni, da ste našli napako v Okularju,\n"
+"ali pa da je datoteka DVI, oziroma dodatna datoteka\n"
+"(npr. datoteka s pisavo), močno pokvarjena.\n"
+"Okular bo po tem sporočilu prekinil opravilo. Če\n"
+"menite, da ste našli napako, ali pa da bi se moral\n"
+"Okular odzvati bolje, pošljite poročilo o napaki."
+
+#: dviRenderer_prescan.cpp:86
+msgid "Embedding %1"
+msgstr "Vgrajevanje %1"
+
+#: dviRenderer_prescan.cpp:101
+msgid ""
+"Page %1: The PDF file <strong>%2</strong> could not be converted to "
+"PostScript.<br>"
+msgstr ""
+"Stran %1: dokument PDF <strong>%2</strong> ne more biti pretvorjen v "
+"PostScript.<br>"
+
+#: dviRenderer_prescan.cpp:103
+msgid ""
+"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
+msgstr "Stran %1: datoteke PostScript <strong>%2</strong> ni mogoče najti.<br>"
+
+#: dviRenderer_prescan.cpp:252
+msgid "The papersize data '%1' could not be parsed."
+msgstr "Podatka o velikosti papirja »%1« ni mogoče razčleniti."
+
+#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
+msgid "The DVI code referred to font #%1, which was not previously defined."
+msgstr "Koda DVI se nanaša na pisavo #%1, ki pa še ni bila določena."
+
+#: dviRenderer.cpp:231 dviRenderer.cpp:468
+msgid "File corruption. %1"
+msgstr "Okvarjena datoteka. %1"
+
+#: dviRenderer.cpp:362
+msgid "Not all PostScript files could be embedded into your document. %1"
+msgstr "V dokument ni bilo mogoče vstaviti vseh datotek PostScript. %1"
+
+#: dviRenderer.cpp:365
+msgid "All external PostScript files were embedded into your document."
+msgstr "Vse zunanje datoteke PostScript so bile vstavljene v vaš dokument."
+
+#: dviRenderer.cpp:453
+msgid "The specified file '%1' does not exist."
+msgstr "Navedena datoteka '%1' ne obstaja."
+
+#: dviRenderer.cpp:612
+msgid ""
+"You have asked Okular to locate the place in the DVI file which corresponds "
+"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
+"contain the necessary source file information. "
+msgstr ""
+"Od Okularja ste zahtevali, da najde mesto v datoteki DVI, ki ustreza vrstici "
+"%1 v datoteki TeX %2. Izgleda pa, da datoteka DVI ne vsebuje zahtevanih "
+"podrobnosti o izvorni datoteki. "
+
+#: dviRenderer.cpp:652
+msgid ""
+"Okular was not able to locate the place in the DVI file which corresponds to "
+"line %1 in the TeX-file %2."
+msgstr ""
+"Okular ni mogel najti mesta v datoteki DVI, ki ustreza vrstici %1 v datoteki "
+"TeX %2."
+
+#: TeXFont_PFB.cpp:42
+msgid ""
+"The font file %1 could be opened and read, but its font format is "
+"unsupported."
+msgstr ""
+"Datoteko s pisavo %1 je bilo mogoče odpreti in prebrati, vendar ta oblika "
+"pisave še ni podprta."
+
+#: TeXFont_PFB.cpp:48
+msgid "The font file %1 is broken, or it could not be opened or read."
+msgstr ""
+"Datoteka s pisavo %1 je pokvarjena, ali pa je ni bilo mogoče odpreti oziroma "
+"prebrati."
+
+#: TeXFont_PFB.cpp:169
+msgid ""
+"FreeType reported an error when setting the character size for font file %1."
+msgstr ""
+"FreeType je med nastavljanjem velikosti znakov za datoteko s pisavo %1 javil "
+"napako."
+
+#: TeXFont_PFB.cpp:185
+msgid "FreeType is unable to load glyph #%1 from font file %2."
+msgstr "FreeType ni mogel naložiti pismenke #%1 iz datoteke s pisavo %2."
+
+#: TeXFont_PFB.cpp:197
+msgid "FreeType is unable to render glyph #%1 from font file %2."
+msgstr "FreeType ne more izrisati pismenke #%1 iz datoteke s pisavo %2."
+
+#: TeXFont_PFB.cpp:210
+msgid "Glyph #%1 is empty."
+msgstr "Pismenka #%1 je prazna"
+
+#: TeXFont_PFB.cpp:211
+msgid "Glyph #%1 from font file %2 is empty."
+msgstr "Pismenka #%1 iz datoteke s pisavami %2 je prazna."
+
+#: TeXFont_PFB.cpp:279
+msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
+msgstr ""
+"FreeType ne more naložiti metrike za pismenko #%1 iz datoteke s pisavo %2."
+
+#: TeXFontDefinition.cpp:107
+msgid "Cannot find font %1, file %2."
+msgstr "Ni mogoče najti pisave %1, datoteke %2."
+
+#: TeXFontDefinition.cpp:123
+msgid "Checksum mismatch for font file %1"
+msgstr "Neujemanje z nadzorno vsoto za datoteko s pisavo %1"
+
+#: TeXFontDefinition.cpp:171
+msgid "Cannot recognize format for font file %1"
+msgstr "Ni mogoče prepoznati vrste datoteke s pisavo %1"
+
+#: dviRenderer_draw.cpp:261
+msgid "The DVI code set a character of an unknown font."
+msgstr "Koda DVI je nastavila znak iz neznane pisave."
+
+#: dviRenderer_draw.cpp:375
+msgid "The stack was not empty when the EOP command was encountered."
+msgstr "Sklad ni bil prazen, ko je prišel na vrsto ukaz EOP."
+
+#: dviRenderer_draw.cpp:387
+msgid "The stack was empty when a POP command was encountered."
+msgstr "Sklad je bil prazen, ko je prišel na vrsto ukaz POP."
+
+#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
+msgid "The DVI code referred to a font which was not previously defined."
+msgstr "Koda DVI se je navezovala na pisavo, ki prej še ni bila določena."
+
+#: dviRenderer_draw.cpp:570
+msgid "An illegal command was encountered."
+msgstr "Okular je naletel na neveljaven ukaz."
+
+#: dviRenderer_draw.cpp:575
+msgid "The unknown op-code %1 was encountered."
+msgstr "Okular je naletel na neznano operacijsko kodo %1."
+
+#: vf.cpp:182
+msgid "Wrong command byte found in VF macro list: %1"
+msgstr "V seznamu makrov VF je bilo mogoče najti napačen bajt ukaza: %1"
+
+#: TeXFont_PK.cpp:90
+msgid "Cannot open font file %1."
+msgstr "Datoteke s pisavo %1 ni mogoče odpreti."
+
+#: TeXFont_PK.cpp:139
+msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
+msgstr "TexFont_PK::operator[]: znak %1 v pisavi %2 ni določen"
+
+#: TeXFont_PK.cpp:455
+msgid "Unexpected %1 in PK file %2"
+msgstr "Nepričakovan %1 v datoteki PK %2"
+
+#: TeXFont_PK.cpp:522
+msgid "The character %1 is too large in file %2"
+msgstr "Znak %1 je v datoteki %2 prevelik"
+
+#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
+msgid "Wrong number of bits stored:  char. %1, font %2"
+msgstr "Shranjeno je napačno število bitov: znak %1, pisava %2"
+
+#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
+msgid "Bad pk file (%1), too many bits"
+msgstr "Slaba datoteka pk (%1), preveč bitov"
+
+#: TeXFont_PK.cpp:742
+msgid "Font has non-square aspect ratio "
+msgstr "Pisava nima enake višine in širine"
+
+#: generator_dvi.cpp:54
+msgid "DVI Backend"
+msgstr "Zaledje za DVI"
+
+#: generator_dvi.cpp:56
+msgid "A DVI file renderer"
+msgstr "Izrisovalnik datotek DVI"
+
+#: generator_dvi.cpp:58
+msgid "© 2006 Luigi Toscano"
+msgstr "© 2006 Luigi Toscano"
+
+#: generator_dvi.cpp:356
+msgid "Generator/Date"
+msgstr "Ustvarjalec/datum"
+
+#: generator_dvi.cpp:455
+msgid "Font file not found"
+msgstr "Ni mogoče najti datoteke s pisavo"
+
+#: fontpool.cpp:209
+msgid ""
+"<qt><p>Okular was not able to locate all the font files which are necessary "
+"to display the current DVI file. Your document might be unreadable.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Okular ni mogel najti vseh datotek s pisavami, ki so potrebne za "
+"prikaz te datoteke DVI. Vašega dokumenta morda ne bo mogoče prebrati.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+
+#: fontpool.cpp:280
+msgid ""
+"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
+"font files could not be located, and your document might be unreadable.<br/"
+">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
+"your system, or it cannot be found in the current search path.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Med zaganjanjem <em>kpsewhich</em> je prišlo do težav. Zaradi tega ni "
+"bilo mogoče najti nekaterih datotek s pisavami in zato bo vaš dokument morda "
+"neberljiv.<br/>Mogoč vzrok: program <em>kpsewhich</em> morda ni nameščen ali "
+"pa ga ni bilo mogoče najti v trenutni poti za iskanje.</p><p><small><b>PATH:"
+"</b> %1</small></p><p><small>%2</small></p></qt>"
+
+#: fontpool.cpp:299
+msgid ""
+"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
+"error %2). As a result, some font files could not be located, and your "
+"document might be unreadable.</qt>"
+msgstr ""
+"<qt>Ustvarjanje pisav s <em>kpsewhich</em> je bilo prekinjeno (izhodna koda "
+"%1, napaka %2). Posledično nekaterih datotek s pisavami ni bilo mogoče "
+"najti, dokumenta pa morda ne bo mogoče prebrati.</qt>"
+
+#: fontpool.cpp:477
+msgid "Currently generating %1 at %2 dpi..."
+msgstr "Trenutno ustvarjam %1 pri %2 točk/palec ..."
 
 #: dviexport.cpp:129
 msgid ""
@@ -94,235 +495,6 @@ msgstr ""
 "napako. Podrobnejše poročilo o napaki se morda nahaja v <strong>Lastnostih "
 "dokumenta</strong>, ki so dosegljive iz menija Datoteka.</qt>"
 
-#: dviFile.cpp:111
-msgid "The DVI file does not start with the preamble."
-msgstr "Datoteka DVI se ne začne z ustreznim uvodom."
-
-#: dviFile.cpp:116
-msgid ""
-"The DVI file contains the wrong version of DVI output for this program. "
-"Hint: If you use the typesetting system Omega, you have to use a special "
-"program, such as oxdvi."
-msgstr ""
-"Datoteka DVI za ta program vsebuje napačno različico izhoda DVI. Namig: če "
-"uporabljate sistem Omega, morate uporabiti poseben program, npr. oxdvi."
-
-#: dviFile.cpp:154
-msgid ""
-"The DVI file is badly corrupted. Okular was not able to find the postamble."
-msgstr ""
-"Datoteka DVI je močno pokvarjena. Okular ni mogel najti ustreznega zaključka."
-
-#: dviFile.cpp:169
-msgid "The postamble does not begin with the POST command."
-msgstr "Zaključek se ne začne z ukazom POST."
-
-#: dviFile.cpp:222
-msgid "The postamble contained a command other than FNTDEF."
-msgstr "Zaključek vsebuje ukaz, ki ni FNTDEF."
-
-#: dviFile.cpp:258
-#, kde-format
-msgid "The page %1 does not start with the BOP command."
-msgstr "Stran %1 se ne začne z ukazom BOP."
-
-#: dviFile.cpp:390
-#, kde-format
-msgid ""
-"<qt><p>The external program <strong>pdf2ps</strong> could not be started. As "
-"a result, the PDF-file %1 could not be converted to PostScript. Some graphic "
-"elements in your document will therefore not be displayed.</p><p><b>Possible "
-"reason:</b> The program <strong>pdf2ps</strong> may not be installed on your "
-"system, or cannot be found in the current search path.</p><p><b>What you can "
-"do:</b> The program <strong>pdf2ps</strong> is normally contained in "
-"distributions of the ghostscript PostScript interpreter system. If "
-"ghostscript is not installed on your system, you could install it now. If "
-"you are sure that ghostscript is installed, try to use <strong>pdf2ps</"
-"strong> from the command line to check if it really works.</p><p><em>PATH:</"
-"em> %2</p></qt>"
-msgstr ""
-"<qt><p>Ni mogoče zagnati zunanjega programa <strong>pdf2ps</strong>. "
-"Posledično datoteke PDF %1 ni bilo mogoče pretvoriti v PostScript. Nekateri "
-"grafični predmeti iz dokumenta zato ne bodo prikazani.</p><p><b>Mogoč razlog:"
-"</b> Program <strong>pdf2ps</strong> mogoče ni nameščen na računalniku, ali "
-"pa ga ni mogoče najti v iskanih mapah.</p><p><b>Kaj lahko storite:</b> "
-"Program <strong>pdf2ps</strong> je običajno del distribucije Ghostscript "
-"sistema za tolmačenje PostScripta. Če Ghostscript ni nameščen, ga sedaj "
-"lahko namestite. Če zagotovo veste, da je Ghostscript nameščen, poskusite "
-"uporabiti <strong>pdf2ps</strong> iz ukazne vrstice in preverite, ali deluje."
-"</p><p><em>PATH:</em> %2</p></qt>"
-
-#: dviFile.cpp:414
-#, kde-format
-msgid ""
-"<qt><p>The PDF-file %1 could not be converted to PostScript. Some graphic "
-"elements in your document will therefore not be displayed.</p><p><b>Possible "
-"reason:</b> The file %1 might be broken, or might not be a PDF-file at all. "
-"This is the output of the <strong>pdf2ps</strong> program that Okular used:</"
-"p><p><strong>%2</strong></p></qt>"
-msgstr ""
-"<qt><p>Datoteke PDF %1 ni mogoče pretvoriti v PostScript. Nekateri grafični "
-"elementi iz dokumenta zato ne bodo prikazani.</p><p><b>Mogoč razlog:</b> "
-"Datoteka %1 je morda poškodovana, ali pa mogoče sploh ni datoteka PDF. To je "
-"izpis programa <strong>pdf2ps</strong>, ki ga je uporabil Okular:</"
-"p><p><strong>%2</strong></p></qt>"
-
-#: dviRenderer.cpp:231 dviRenderer.cpp:468
-#, kde-format
-msgid "File corruption. %1"
-msgstr "Okvarjena datoteka. %1"
-
-#: dviRenderer.cpp:362
-#, kde-format
-msgid "Not all PostScript files could be embedded into your document. %1"
-msgstr "V dokument ni bilo mogoče vstaviti vseh datotek PostScript. %1"
-
-#: dviRenderer.cpp:365
-msgid "All external PostScript files were embedded into your document."
-msgstr "Vse zunanje datoteke PostScript so bile vstavljene v vaš dokument."
-
-#: dviRenderer.cpp:453
-#, kde-format
-msgid "The specified file '%1' does not exist."
-msgstr "Navedena datoteka '%1' ne obstaja."
-
-#: dviRenderer.cpp:612
-#, kde-format
-msgid ""
-"You have asked Okular to locate the place in the DVI file which corresponds "
-"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
-"contain the necessary source file information. "
-msgstr ""
-"Od Okularja ste zahtevali, da najde mesto v datoteki DVI, ki ustreza vrstici "
-"%1 v datoteki TeX %2. Izgleda pa, da datoteka DVI ne vsebuje zahtevanih "
-"podrobnosti o izvorni datoteki. "
-
-#: dviRenderer.cpp:652
-#, kde-format
-msgid ""
-"Okular was not able to locate the place in the DVI file which corresponds to "
-"line %1 in the TeX-file %2."
-msgstr ""
-"Okular ni mogel najti mesta v datoteki DVI, ki ustreza vrstici %1 v datoteki "
-"TeX %2."
-
-#: dviRenderer_draw.cpp:261
-msgid "The DVI code set a character of an unknown font."
-msgstr "Koda DVI je nastavila znak iz neznane pisave."
-
-#: dviRenderer_draw.cpp:290 dviRenderer_prescan.cpp:648
-#, kde-format
-msgid "The DVI code referred to font #%1, which was not previously defined."
-msgstr "Koda DVI se nanaša na pisavo #%1, ki pa še ni bila določena."
-
-#: dviRenderer_draw.cpp:375
-msgid "The stack was not empty when the EOP command was encountered."
-msgstr "Sklad ni bil prazen, ko je prišel na vrsto ukaz EOP."
-
-#: dviRenderer_draw.cpp:387
-msgid "The stack was empty when a POP command was encountered."
-msgstr "Sklad je bil prazen, ko je prišel na vrsto ukaz POP."
-
-#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
-msgid "The DVI code referred to a font which was not previously defined."
-msgstr "Koda DVI se je navezovala na pisavo, ki prej še ni bila določena."
-
-#: dviRenderer_draw.cpp:570
-msgid "An illegal command was encountered."
-msgstr "Okular je naletel na neveljaven ukaz."
-
-#: dviRenderer_draw.cpp:575
-#, kde-format
-msgid "The unknown op-code %1 was encountered."
-msgstr "Okular je naletel na neznano operacijsko kodo %1."
-
-#: dviRenderer_prescan.cpp:86
-#, kde-format
-msgid "Embedding %1"
-msgstr "Vgrajevanje %1"
-
-#: dviRenderer_prescan.cpp:101
-#, kde-format
-msgid ""
-"Page %1: The PDF file <strong>%2</strong> could not be converted to "
-"PostScript.<br>"
-msgstr ""
-"Stran %1: dokument PDF <strong>%2</strong> ne more biti pretvorjen v "
-"PostScript.<br>"
-
-#: dviRenderer_prescan.cpp:103
-#, kde-format
-msgid ""
-"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
-msgstr "Stran %1: datoteke PostScript <strong>%2</strong> ni mogoče najti.<br>"
-
-#: dviRenderer_prescan.cpp:252
-#, kde-format
-msgid "The papersize data '%1' could not be parsed."
-msgstr "Podatka o velikosti papirja »%1« ni mogoče razčleniti."
-
-#: fontpool.cpp:209
-#, kde-format
-msgid ""
-"<qt><p>Okular was not able to locate all the font files which are necessary "
-"to display the current DVI file. Your document might be unreadable.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Okular ni mogel najti vseh datotek s pisavami, ki so potrebne za "
-"prikaz te datoteke DVI. Vašega dokumenta morda ne bo mogoče prebrati.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-
-#: fontpool.cpp:280
-#, kde-format
-msgid ""
-"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
-"font files could not be located, and your document might be unreadable.<br/"
-">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
-"your system, or it cannot be found in the current search path.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Med zaganjanjem <em>kpsewhich</em> je prišlo do težav. Zaradi tega ni "
-"bilo mogoče najti nekaterih datotek s pisavami in zato bo vaš dokument morda "
-"neberljiv.<br/>Mogoč vzrok: program <em>kpsewhich</em> morda ni nameščen ali "
-"pa ga ni bilo mogoče najti v trenutni poti za iskanje.</p><p><small><b>PATH:"
-"</b> %1</small></p><p><small>%2</small></p></qt>"
-
-#: fontpool.cpp:299
-#, kde-format
-msgid ""
-"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
-"error %2). As a result, some font files could not be located, and your "
-"document might be unreadable.</qt>"
-msgstr ""
-"<qt>Ustvarjanje pisav s <em>kpsewhich</em> je bilo prekinjeno (izhodna koda "
-"%1, napaka %2). Posledično nekaterih datotek s pisavami ni bilo mogoče "
-"najti, dokumenta pa morda ne bo mogoče prebrati.</qt>"
-
-#: fontpool.cpp:477
-#, kde-format
-msgid "Currently generating %1 at %2 dpi..."
-msgstr "Trenutno ustvarjam %1 pri %2 točk/palec ..."
-
-#: generator_dvi.cpp:54
-msgid "DVI Backend"
-msgstr "Zaledje za DVI"
-
-#: generator_dvi.cpp:56
-msgid "A DVI file renderer"
-msgstr "Izrisovalnik datotek DVI"
-
-#: generator_dvi.cpp:58
-msgid "© 2006 Luigi Toscano"
-msgstr "© 2006 Luigi Toscano"
-
-#: generator_dvi.cpp:356
-msgid "Generator/Date"
-msgstr "Ustvarjalec/datum"
-
-#: generator_dvi.cpp:455
-msgid "Font file not found"
-msgstr "Ni mogoče najti datoteke s pisavo"
-
 #: pageSize.cpp:324
 msgid "portrait"
 msgstr "pokončno"
@@ -331,226 +503,13 @@ msgstr "pokončno"
 msgid "landscape"
 msgstr "ležeče"
 
-#: psgs.cpp:263
-msgid ""
-"The version of Ghostview that is installed on this computer does not contain "
-"any of the Ghostview device drivers that are known to Okular. PostScript "
-"support has therefore been turned off in Okular."
-msgstr ""
-"Različica GhostViewa, ki je nameščena na računalniku, ne vsebuje nobenih "
-"gonilnikov za naprave, ki bi jih Okular poznal. Zato je bila Okularjeva "
-"podpora za PostScript izklopljena."
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Uroš Manačinski,Jure Repinc,Andrej Mernik"
 
-#: psgs.cpp:267
-msgid ""
-"<qt><p>The Ghostview program, which Okular uses internally to display the "
-"PostScript graphics that is included in this DVI file, is generally able to "
-"write its output in a variety of formats. The sub-programs that Ghostview "
-"uses for these tasks are called 'device drivers'; there is one device driver "
-"for each format that Ghostview is able to write. Different versions of "
-"Ghostview often have different sets of device drivers available. It seems "
-"that the version of Ghostview that is installed on this computer does not "
-"contain <strong>any</strong> of the device drivers that are known to Okular."
-"</p><p>It seems unlikely that a regular installation of Ghostview would not "
-"contain these drivers. This error may therefore point to a serious "
-"misconfiguration of the Ghostview installation on your computer.</p><p>If "
-"you want to fix the problems with Ghostview, you can use the command "
-"<strong>gs --help</strong> to display the list of device drivers contained "
-"in Ghostview. Among others, Okular can use the 'png256', 'jpeg' and 'pnm' "
-"drivers. Note that Okular needs to be restarted to re-enable PostScript "
-"support.</p></qt>"
-msgstr ""
-"<qt><p>Program GhostView, ki ga uporablja Okular notranje za prikaz grafike "
-"PostScript, ki je vključena v ta dokument DVI, je splošno zmožen shraniti "
-"svoj izhod v različnih vrstah. Pod-programi, ki jih GhostView uporabi za "
-"takšne naloge so znani kot »gonilniki za naprave«. Za vsako vrsto, ki jo je "
-"GhostView zmožen izpisati, je na voljo en tak gonilnik. V različnih "
-"različicah GhostViewa so pogosto na voljo različni gonilniki. Kot kaže "
-"različica GhostViewa, ki je nameščena na tem računalniku, ne vsebuje "
-"<strong>nobenega</strong> gonilnika, ki bi ga Okular prepoznal. </"
-"p><p>Neobičajno je, da namestitev GhostViewa ne bi vsebovala teh gonilnikov. "
-"Napaka morda kaže na resnejšo napako v namestitvi GhostViewa.</p><p>Če "
-"želite odpraviti težave z GhostView, lahko uporabite ukaz <strong>gs --help</"
-"strong>, ki prikaže seznam gonilnikov. Med drugimi Okular lahko uporablja "
-"gonilnike »png256«, »jpeg« in »pnm«. Da bi omogočili podporo za PostScript, "
-"morate znova zagnati Okular.</p></qt>"
-
-#: special.cpp:37
-msgid "That makes 25 errors. Further error messages will not be printed."
-msgstr "To je 25 napak. Nadaljnja sporočila o napakah ne bodo izpisana."
-
-#: special.cpp:218
-#, kde-format
-msgid ""
-"Error in DVIfile '%1', page %2. Color pop command issued when the color "
-"stack is empty."
-msgstr ""
-"Napaka v datoteki DVI »%1«, stran %2. Izdan je bil ukaz za odvzem barve s "
-"sklada, vendar je sklad prazen."
-
-#: special.cpp:303
-#, kde-format
-msgid ""
-"Malformed parameter in the epsf special command.\n"
-"Expected a float to follow %1 in %2"
-msgstr ""
-"Napačen parameter posebnega ukaza epsf.\n"
-"V %2 je bilo pričakovano, da bo %1 sledilo število s plavajočo vejico"
-
-#: special.cpp:434
-#, kde-format
-msgid ""
-"File not found: \n"
-" %1"
-msgstr ""
-"Datoteke ni bilo mogoče najti:\n"
-" %1"
-
-#: special.cpp:681
-#, kde-format
-msgid ""
-"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
-"special."
-msgstr ""
-"Napaka v datoteki DVI »%1«, stran %2. Ni bilo mogoče ugotoviti kota "
-"zasukanega besedila."
-
-#: special.cpp:704
-#, kde-format
-msgid "The special command '%1' is not implemented."
-msgstr "Poseben ukaz »%1« ni podprt."
-
-#: TeXFont_PFB.cpp:42
-#, kde-format
-msgid ""
-"The font file %1 could be opened and read, but its font format is "
-"unsupported."
-msgstr ""
-"Datoteko s pisavo %1 je bilo mogoče odpreti in prebrati, vendar ta oblika "
-"pisave še ni podprta."
-
-#: TeXFont_PFB.cpp:48
-#, kde-format
-msgid "The font file %1 is broken, or it could not be opened or read."
-msgstr ""
-"Datoteka s pisavo %1 je pokvarjena, ali pa je ni bilo mogoče odpreti oziroma "
-"prebrati."
-
-#: TeXFont_PFB.cpp:169
-#, kde-format
-msgid ""
-"FreeType reported an error when setting the character size for font file %1."
-msgstr ""
-"FreeType je med nastavljanjem velikosti znakov za datoteko s pisavo %1 javil "
-"napako."
-
-#: TeXFont_PFB.cpp:185
-#, kde-format
-msgid "FreeType is unable to load glyph #%1 from font file %2."
-msgstr "FreeType ni mogel naložiti pismenke #%1 iz datoteke s pisavo %2."
-
-#: TeXFont_PFB.cpp:197
-#, kde-format
-msgid "FreeType is unable to render glyph #%1 from font file %2."
-msgstr "FreeType ne more izrisati pismenke #%1 iz datoteke s pisavo %2."
-
-#: TeXFont_PFB.cpp:210
-#, kde-format
-msgid "Glyph #%1 is empty."
-msgstr "Pismenka #%1 je prazna"
-
-#: TeXFont_PFB.cpp:211
-#, kde-format
-msgid "Glyph #%1 from font file %2 is empty."
-msgstr "Pismenka #%1 iz datoteke s pisavami %2 je prazna."
-
-#: TeXFont_PFB.cpp:279
-#, kde-format
-msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
-msgstr ""
-"FreeType ne more naložiti metrike za pismenko #%1 iz datoteke s pisavo %2."
-
-#: TeXFont_PK.cpp:90
-#, kde-format
-msgid "Cannot open font file %1."
-msgstr "Datoteke s pisavo %1 ni mogoče odpreti."
-
-#: TeXFont_PK.cpp:139
-#, kde-format
-msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
-msgstr "TexFont_PK::operator[]: znak %1 v pisavi %2 ni določen"
-
-#: TeXFont_PK.cpp:455
-#, kde-format
-msgid "Unexpected %1 in PK file %2"
-msgstr "Nepričakovan %1 v datoteki PK %2"
-
-#: TeXFont_PK.cpp:522
-#, kde-format
-msgid "The character %1 is too large in file %2"
-msgstr "Znak %1 je v datoteki %2 prevelik"
-
-#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
-#, kde-format
-msgid "Wrong number of bits stored:  char. %1, font %2"
-msgstr "Shranjeno je napačno število bitov: znak %1, pisava %2"
-
-#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
-#, kde-format
-msgid "Bad pk file (%1), too many bits"
-msgstr "Slaba datoteka pk (%1), preveč bitov"
-
-#: TeXFont_PK.cpp:742
-msgid "Font has non-square aspect ratio "
-msgstr "Pisava nima enake višine in širine"
-
-#: TeXFontDefinition.cpp:107
-#, kde-format
-msgid "Cannot find font %1, file %2."
-msgstr "Ni mogoče najti pisave %1, datoteke %2."
-
-#: TeXFontDefinition.cpp:123
-#, kde-format
-msgid "Checksum mismatch for font file %1"
-msgstr "Neujemanje z nadzorno vsoto za datoteko s pisavo %1"
-
-#: TeXFontDefinition.cpp:171
-#, kde-format
-msgid "Cannot recognize format for font file %1"
-msgstr "Ni mogoče prepoznati vrste datoteke s pisavo %1"
-
-#: util.cpp:77
-msgid ""
-"Fatal error.\n"
-"\n"
-msgstr ""
-"Usodna napaka.\n"
-"\n"
-
-#: util.cpp:79
-msgid ""
-"\n"
-"\n"
-"This probably means that either you found a bug in Okular,\n"
-"or that the DVI file, or auxiliary files (such as font files, \n"
-"or virtual font files) were really badly broken.\n"
-"Okular will abort after this message. If you believe that you \n"
-"found a bug, or that Okular should behave better in this situation\n"
-"please report the problem."
-msgstr ""
-"\n"
-"\n"
-"To verjetno pomeni, da ste našli napako v Okularju,\n"
-"ali pa da je datoteka DVI, oziroma dodatna datoteka\n"
-"(npr. datoteka s pisavo), močno pokvarjena.\n"
-"Okular bo po tem sporočilu prekinil opravilo. Če\n"
-"menite, da ste našli napako, ali pa da bi se moral\n"
-"Okular odzvati bolje, pošljite poročilo o napaki."
-
-#: vf.cpp:182
-#, kde-format
-msgid "Wrong command byte found in VF macro list: %1"
-msgstr "V seznamu makrov VF je bilo mogoče najti napačen bajt ukaza: %1"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "uros.manacinski@gmail.com,jlp@holodeck1.com,andrejm@ubuntu.si"
 
 #~ msgid ""
 #~ "<p>Okular relies on the <b>kpsewhich</b> program to locate font files on "

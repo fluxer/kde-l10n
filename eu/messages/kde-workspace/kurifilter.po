@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kurifilter\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-30 01:55+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2014-02-21 19:49+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
@@ -72,8 +72,21 @@ msgstr ""
 "ezaugarriarentzako euskarria barnean duten aplikazioen sarrera trepetan, "
 "adib Konqueror.</para>"
 
+#: kuriikwsfilter.cpp:125
+msgid "No preferred search providers were found."
+msgstr "Ez da bilaketa-hornitzaile hobetsirik aurkitu."
+
+#: kuriikwsfilter.cpp:144
+msgid "No search providers were found."
+msgstr "Ez da bilaketa-hornitzailerik aurkitu."
+
+#: kurisearchfilter.cpp:87
+msgid "Search F&ilters"
+msgstr "Bilaketa-&iragazkiak"
+
+#. i18n: file: ikwsopts_ui.ui:17
 #. i18n: ectx: property (toolTip), widget (QCheckBox, cbEnableShortcuts)
-#: ikwsopts_ui.ui:17
+#: rc.cpp:3
 msgid ""
 "<html><head/><body><p>Enable or disable web shortcuts. </p><p>Web shortcuts "
 "allow you to quickly access or search for information located online or on "
@@ -90,53 +103,63 @@ msgstr ""
 "bereizlea eta bilatzeko terminoa, hala nola <span style=\" font-weight:600;"
 "\">gg:KDE</span>.</p></body></html>"
 
+#. i18n: file: ikwsopts_ui.ui:20
 #. i18n: ectx: property (text), widget (QCheckBox, cbEnableShortcuts)
-#: ikwsopts_ui.ui:20
+#: rc.cpp:6
 msgid "&Enable Web shortcuts"
 msgstr "&Gaitu web-lasterbideak"
 
+#. i18n: file: ikwsopts_ui.ui:30
 #. i18n: ectx: property (text), widget (QCheckBox, cbUseSelectedShortcutsOnly)
-#: ikwsopts_ui.ui:30
+#: rc.cpp:9
 msgid "&Use preferred shortcuts only"
 msgstr "&Erabili lasterbide hobetsiak bakarrik"
 
+#. i18n: file: ikwsopts_ui.ui:37
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, searchLineEdit)
-#: ikwsopts_ui.ui:37
+#: rc.cpp:12
 msgid "Search for shortcut"
 msgstr "Bilatu lasterbidea"
 
+#. i18n: file: ikwsopts_ui.ui:71
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbNew)
-#: ikwsopts_ui.ui:71
+#: rc.cpp:15
 msgid "Add a new Web shortcut"
 msgstr "Gehitu beste web-lasterbide bat"
 
+#. i18n: file: ikwsopts_ui.ui:74
 #. i18n: ectx: property (text), widget (QPushButton, pbNew)
-#: ikwsopts_ui.ui:74
+#: rc.cpp:18
 msgid "&New..."
 msgstr "&Berria..."
 
+#. i18n: file: ikwsopts_ui.ui:84
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbChange)
-#: ikwsopts_ui.ui:84
+#: rc.cpp:21
 msgid "Modify the highlighted Web shortcut"
 msgstr "Aldatu nabarmendutako web-lasterbidea"
 
+#. i18n: file: ikwsopts_ui.ui:87
 #. i18n: ectx: property (text), widget (QPushButton, pbChange)
-#: ikwsopts_ui.ui:87
+#: rc.cpp:24
 msgid "Chan&ge..."
 msgstr "Alda&tu..."
 
+#. i18n: file: ikwsopts_ui.ui:97
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbDelete)
-#: ikwsopts_ui.ui:97
+#: rc.cpp:27
 msgid "Delete the highlighted Web shortcut"
 msgstr "Ezabatu nabarmendutako web-lasterbidea"
 
+#. i18n: file: ikwsopts_ui.ui:100
 #. i18n: ectx: property (text), widget (QPushButton, pbDelete)
-#: ikwsopts_ui.ui:100
+#: rc.cpp:30
 msgid "De&lete"
 msgstr "Ez&abatu"
 
+#. i18n: file: ikwsopts_ui.ui:138
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbDefaultEngine)
-#: ikwsopts_ui.ui:138
+#: rc.cpp:33
 msgid ""
 "<qt>\n"
 "Select the search engine to use for input boxes that provide automatic "
@@ -151,13 +174,15 @@ msgstr ""
 "b>.\n"
 "</qt>"
 
+#. i18n: file: ikwsopts_ui.ui:141
 #. i18n: ectx: property (text), widget (QLabel, lbDefaultEngine)
-#: ikwsopts_ui.ui:141
+#: rc.cpp:38
 msgid "Default Web &shortcut:"
 msgstr "Web-&lasterbide lehenetsia:"
 
+#. i18n: file: ikwsopts_ui.ui:166
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cmbDefaultEngine)
-#: ikwsopts_ui.ui:166
+#: rc.cpp:41
 msgid ""
 "<html><head/><body><p>Select a default web shortcut. </p><p>This allows "
 "applications to automatically convert the typed word or phrase to web "
@@ -171,113 +196,60 @@ msgstr ""
 "p><p>Funtzionalitate hori desgaitzeko, hautatu <span style=\" font-"
 "weight:600;\">Bat ere ez</span> zerrendatik. </p></body></html>"
 
+#. i18n: file: ikwsopts_ui.ui:182
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbDelimiter)
-#: ikwsopts_ui.ui:182
+#: rc.cpp:44
 msgid ""
 "Choose the delimiter that separates the keyword from the phrase or word to "
 "be searched."
 msgstr ""
 "Aukeratu gakoa eta bilatu beharreko esaldia edo hitza bereizteko elementua."
 
+#. i18n: file: ikwsopts_ui.ui:185
 #. i18n: ectx: property (text), widget (QLabel, lbDelimiter)
-#: ikwsopts_ui.ui:185
+#: rc.cpp:47
 msgid "&Keyword delimiter:"
 msgstr "&Gako-bereizlea:"
 
+#. i18n: file: ikwsopts_ui.ui:204
 #. i18n: ectx: property (toolTip), widget (KComboBox, cmbDelimiter)
-#: ikwsopts_ui.ui:204
+#: rc.cpp:50
 msgid "Choose a delimiter to mark the Web shortcut keyword."
 msgstr "Aukeratu web-lasterbidearen gako-hitza markatzeko bereizlea."
 
+#. i18n: file: ikwsopts_ui.ui:208
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbDelimiter)
-#: ikwsopts_ui.ui:208
+#: rc.cpp:53
 msgctxt "Colon as keyword delimiter"
 msgid "Colon"
 msgstr "Bi puntu"
 
+#. i18n: file: ikwsopts_ui.ui:213
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbDelimiter)
-#: ikwsopts_ui.ui:213
+#: rc.cpp:56
 msgctxt "Space as keyword delimiter"
 msgid "Space"
 msgstr "Zuriunea"
 
-#: kuriikwsfilter.cpp:125
-msgid "No preferred search providers were found."
-msgstr "Ez da bilaketa-hornitzaile hobetsirik aurkitu."
-
-#: kuriikwsfilter.cpp:144
-msgid "No search providers were found."
-msgstr "Ez da bilaketa-hornitzailerik aurkitu."
-
-#: kurisearchfilter.cpp:87
-msgid "Search F&ilters"
-msgstr "Bilaketa-&iragazkiak"
-
-#: searchproviderdlg.cpp:50
-msgctxt "@item:inlistbox The default character set"
-msgid "Default"
-msgstr "Lehenetsia"
-
-#: searchproviderdlg.cpp:54
-msgid "Modify Web Shortcut"
-msgstr "Aldatu web-lasterbideak"
-
-#: searchproviderdlg.cpp:64
-msgid "New Web Shortcut"
-msgstr "Web-lasterbide berria"
-
-#: searchproviderdlg.cpp:117
-#, kde-format
-msgid ""
-"The shortcut \"%1\" is already assigned to \"%2\". Please choose a different "
-"one."
-msgstr "\"%1\" lasterbidea jada esleitu zaio honi: \"%2\". Aukeratu beste bat."
-
-#: searchproviderdlg.cpp:122
-#, kde-format
-msgctxt "- web short cut (e.g. gg): what it refers to (e.g. Google)"
-msgid "- %1: \"%2\""
-msgstr "- %1: \"%2\""
-
-#: searchproviderdlg.cpp:126
-#, kde-format
-msgid ""
-"The following shortcuts are already assigned. Please choose different ones.\n"
-"%1"
-msgstr ""
-"Lasterbide hauek dagoeneko esleituta daude. Aukeratu beste batzuk.\n"
-"%1"
-
-#: searchproviderdlg.cpp:138
-msgid ""
-"The Shortcut URL does not contain a \\{...} placeholder for the user query.\n"
-"This means that the same page is always going to be visited, regardless of "
-"the text typed in with the shortcut."
-msgstr ""
-"Lasterbidearen URLak ez dauka \\{...} leku-markarik erabiltzailearen "
-"kontsultarako.\n"
-"Horrek esan nahi du orri bera bisitatuko dela beti, lasterbidearen ondoan "
-"edozein testu idazten dela ere."
-
-#: searchproviderdlg.cpp:141
-msgid "Keep It"
-msgstr "Mantendu"
-
+#. i18n: file: searchproviderdlg_ui.ui:17
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbName)
-#: searchproviderdlg_ui.ui:17
+#: rc.cpp:59
 msgid "Enter the human-readable name of the search provider here."
 msgstr "Idatzi hemen bilaketa-hornitzailearen izen ulergarria."
 
+#. i18n: file: searchproviderdlg_ui.ui:23
 #. i18n: ectx: property (text), widget (QLabel, lbName)
-#: searchproviderdlg_ui.ui:23
+#: rc.cpp:62
 msgid "Shortcut &name:"
 msgstr "Lasterbidearen i&zena:"
 
+#. i18n: file: searchproviderdlg_ui.ui:42
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbQuery)
+#. i18n: file: searchproviderdlg_ui.ui:64
 #. i18n: ectx: property (toolTip), widget (KLineEdit, leQuery)
+#. i18n: file: searchproviderdlg_ui.ui:70
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, leQuery)
-#: searchproviderdlg_ui.ui:42 searchproviderdlg_ui.ui:64
-#: searchproviderdlg_ui.ui:70
+#: rc.cpp:65 rc.cpp:74 rc.cpp:80
 msgid ""
 "<qt>\n"
 "Enter the URI that is used to perform a search on the search engine here.<br/"
@@ -308,22 +280,26 @@ msgstr ""
 "zerrendaren ezkerraldean bat-etortzerik ez bada.\n"
 "</qt>"
 
+#. i18n: file: searchproviderdlg_ui.ui:48
 #. i18n: ectx: property (text), widget (QLabel, lbQuery)
-#: searchproviderdlg_ui.ui:48
+#: rc.cpp:71
 msgid "Shortcut &URL:"
 msgstr "Lasterbidearen &URLa:"
 
+#. i18n: file: searchproviderdlg_ui.ui:86
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cbCharset)
-#: searchproviderdlg_ui.ui:86
+#: rc.cpp:86
 msgid "Select the character set that will be used to encode your search query."
 msgstr ""
 "Hautatu zure bilaketa-kontsulta kodetzeko erabili beharreko karaktere jokoa."
 
+#. i18n: file: searchproviderdlg_ui.ui:95
 #. i18n: ectx: property (toolTip), widget (KLineEdit, leShortcut)
+#. i18n: file: searchproviderdlg_ui.ui:100
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, leShortcut)
+#. i18n: file: searchproviderdlg_ui.ui:122
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbShortcut)
-#: searchproviderdlg_ui.ui:95 searchproviderdlg_ui.ui:100
-#: searchproviderdlg_ui.ui:122
+#: rc.cpp:89 rc.cpp:94 rc.cpp:105
 msgid ""
 "<qt>\n"
 "The shortcuts entered here can be used as a pseudo-URI scheme in KDE. For "
@@ -337,9 +313,11 @@ msgstr ""
 "bilaketa</b>\n"
 "</qt>"
 
+#. i18n: file: searchproviderdlg_ui.ui:110
 #. i18n: ectx: property (toolTip), widget (KLineEdit, leName)
+#. i18n: file: searchproviderdlg_ui.ui:113
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, leName)
-#: searchproviderdlg_ui.ui:110 searchproviderdlg_ui.ui:113
+#: rc.cpp:99 rc.cpp:102
 msgid ""
 "<html><head/><body><p>Enter the human-readable name of the web shortcut here."
 "</p></body></html>"
@@ -347,26 +325,77 @@ msgstr ""
 "<html><head/><body><p>Idatzi hemen web-lasterbidearen izen ulergarria.</p></"
 "body></html>"
 
+#. i18n: file: searchproviderdlg_ui.ui:125
 #. i18n: ectx: property (text), widget (QLabel, lbShortcut)
-#: searchproviderdlg_ui.ui:125
+#: rc.cpp:110
 msgid "&Shortcuts:"
 msgstr "&Lasterbideak:"
 
+#. i18n: file: searchproviderdlg_ui.ui:138
 #. i18n: ectx: property (whatsThis), widget (QLabel, lbCharset)
-#: searchproviderdlg_ui.ui:138
+#: rc.cpp:113
 msgid "Select the character set that will be used to encode your search query"
 msgstr ""
 "Hautatu zure bilaketa-kontsulta kodetzeko erabili beharreko karaktere jokoa"
 
+#. i18n: file: searchproviderdlg_ui.ui:141
 #. i18n: ectx: property (text), widget (QLabel, lbCharset)
-#: searchproviderdlg_ui.ui:141
+#: rc.cpp:116
 msgid "&Charset:"
 msgstr "&Karaktere jokoa:"
 
+#. i18n: file: searchproviderdlg_ui.ui:164
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbPaste)
-#: searchproviderdlg_ui.ui:164
+#: rc.cpp:119
 msgid "Insert query placeholder"
 msgstr "Txertatu itaun leku-marka"
+
+#: searchproviderdlg.cpp:50
+msgctxt "@item:inlistbox The default character set"
+msgid "Default"
+msgstr "Lehenetsia"
+
+#: searchproviderdlg.cpp:54
+msgid "Modify Web Shortcut"
+msgstr "Aldatu web-lasterbideak"
+
+#: searchproviderdlg.cpp:64
+msgid "New Web Shortcut"
+msgstr "Web-lasterbide berria"
+
+#: searchproviderdlg.cpp:117
+msgid ""
+"The shortcut \"%1\" is already assigned to \"%2\". Please choose a different "
+"one."
+msgstr "\"%1\" lasterbidea jada esleitu zaio honi: \"%2\". Aukeratu beste bat."
+
+#: searchproviderdlg.cpp:122
+msgctxt "- web short cut (e.g. gg): what it refers to (e.g. Google)"
+msgid "- %1: \"%2\""
+msgstr "- %1: \"%2\""
+
+#: searchproviderdlg.cpp:126
+msgid ""
+"The following shortcuts are already assigned. Please choose different ones.\n"
+"%1"
+msgstr ""
+"Lasterbide hauek dagoeneko esleituta daude. Aukeratu beste batzuk.\n"
+"%1"
+
+#: searchproviderdlg.cpp:138
+msgid ""
+"The Shortcut URL does not contain a \\{...} placeholder for the user query.\n"
+"This means that the same page is always going to be visited, regardless of "
+"the text typed in with the shortcut."
+msgstr ""
+"Lasterbidearen URLak ez dauka \\{...} leku-markarik erabiltzailearen "
+"kontsultarako.\n"
+"Horrek esan nahi du orri bera bisitatuko dela beti, lasterbidearen ondoan "
+"edozein testu idazten dela ere."
+
+#: searchproviderdlg.cpp:141
+msgid "Keep It"
+msgstr "Mantendu"
 
 #~ msgid ""
 #~ "<qt>\n"

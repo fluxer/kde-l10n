@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: filelight\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-07-24 06:31+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2013-05-22 16:41+0200\n"
 "Last-Translator: xavier <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -23,48 +23,205 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Joëlle Cornavin"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "jcorn@free.fr"
-
+#. i18n: file: misc/filelightpartui.rc:12
 #. i18n: ectx: ToolBar (viewToolBar)
-#: misc/filelightpartui.rc:12
+#: rc.cpp:3
 msgid "View Toolbar"
 msgstr "Barre d'affichage"
 
+#. i18n: file: misc/filelightui.rc:4
 #. i18n: ectx: Menu (file)
-#: misc/filelightui.rc:4
+#: rc.cpp:6
 msgid "&Scan"
 msgstr "Analy&se"
 
+#. i18n: file: misc/filelightui.rc:18
 #. i18n: ectx: Menu (view)
-#: misc/filelightui.rc:18
+#: rc.cpp:9
 msgid "&View"
 msgstr "&Affichage"
 
+#. i18n: file: misc/filelightui.rc:21
 #. i18n: ectx: ToolBar (mainToolBar)
-#: misc/filelightui.rc:21
+#: rc.cpp:12
 msgid "Main Toolbar"
 msgstr "Barre principale d'outils"
 
+#. i18n: file: misc/filelightui.rc:29
 #. i18n: ectx: ToolBar (locationToolBar)
-#: misc/filelightui.rc:29
+#: rc.cpp:15
 msgid "Location Toolbar"
 msgstr "Barre d'outils d'emplacement"
 
-#: src/app/historyAction.cpp:64
-msgctxt "Go to the last path viewed"
-msgid "Back"
-msgstr "Précédent"
+#. i18n: file: src/part/dialog.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
+#: rc.cpp:18
+msgid "Settings - Filelight"
+msgstr "Paramètres de Filelight"
 
-#: src/app/historyAction.cpp:65
-msgctxt "Go to forward in the history of paths viewed"
-msgid "Forward"
-msgstr "Suivant"
+#. i18n: file: src/part/dialog.ui:36
+#. i18n: ectx: attribute (title), widget (QWidget, Widget2)
+#: rc.cpp:21
+msgid "Scannin&g"
+msgstr "Analys&e en cours"
+
+#. i18n: file: src/part/dialog.ui:48
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:24
+msgid "Do &not scan these folders:"
+msgstr "&Ne pas analyser ces dossiers :"
+
+#. i18n: file: src/part/dialog.ui:88
+#. i18n: ectx: property (text), widget (QPushButton, m_removeButton)
+#: rc.cpp:27
+msgid "R&emove"
+msgstr "Supprim&er"
+
+#. i18n: file: src/part/dialog.ui:98
+#. i18n: ectx: property (text), widget (QPushButton, m_addButton)
+#: rc.cpp:30
+msgid "&Add..."
+msgstr "&Ajouter..."
+
+#. i18n: file: src/part/dialog.ui:174
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, dontScanRemoteMounts)
+#: rc.cpp:33
+msgid ""
+"Prevents scanning of filesystems that are not on this computer, e.g. NFS or "
+"Samba mounts."
+msgstr ""
+"Empêche l'analyse des systèmes de fichiers non présents sur cet ordinateur, "
+"par exemple, les montages « NFS » ou « Samba »."
+
+#. i18n: file: src/part/dialog.ui:177
+#. i18n: ectx: property (text), widget (QCheckBox, dontScanRemoteMounts)
+#: rc.cpp:36
+msgid "Exclude remote files&ystems"
+msgstr "Exclure les systèmes de &fichiers distants"
+
+#. i18n: file: src/part/dialog.ui:184
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, scanAcrossMounts)
+#: rc.cpp:39
+msgid ""
+"Allows scans to enter directories that are part of other filesystems. For "
+"example, when unchecked, this will usually prevent the contents of <b>/mnt</"
+"b> from being scanned if you scan <b>/</b>."
+msgstr ""
+"Permet qu'une analyse ait lieu dans des dossiers faisant partie d'autres "
+"systèmes de fichiers. Par exemple, si cette option n'est pas cochée, le "
+"contenu de <b>/mnt</b> sera ignoré lors de l'analyse de <b>/</b>."
+
+#. i18n: file: src/part/dialog.ui:187
+#. i18n: ectx: property (text), widget (QCheckBox, scanAcrossMounts)
+#: rc.cpp:42
+msgid "Scan across filesystem &boundaries"
+msgstr "Analyser d'un &bout à l'autre des limites du système de fichiers"
+
+#. i18n: file: src/part/dialog.ui:200
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, dontScanRemovableMedia)
+#: rc.cpp:45
+msgid "Prevents Filelight from scanning removable media (eg. CD-ROMs)."
+msgstr ""
+"Empêche Filelight d'analyser les média amovibles (par exemple, les CD-ROM)."
+
+#. i18n: file: src/part/dialog.ui:203
+#. i18n: ectx: property (text), widget (QCheckBox, dontScanRemovableMedia)
+#: rc.cpp:48
+msgid "E&xclude removable media"
+msgstr "E&xclure les média amovibles"
+
+#. i18n: file: src/part/dialog.ui:213
+#. i18n: ectx: attribute (title), widget (QWidget, Widget3)
+#: rc.cpp:51
+msgid "&Appearance"
+msgstr "&Apparence"
+
+#. i18n: file: src/part/dialog.ui:225
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:54
+msgid "Color scheme"
+msgstr "Schéma de couleurs"
+
+#. i18n: file: src/part/dialog.ui:251
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:57
+msgid "Co&ntrast"
+msgstr "Co&ntraste"
+
+#. i18n: file: src/part/dialog.ui:273
+#. i18n: ectx: property (whatsThis), widget (QSlider, contrastSlider)
+#: rc.cpp:60
+msgid "Here you can vary the contrast of the filemap in realtime."
+msgstr ""
+"Vous pouvez faire varier ici le contraste de la carte de fichiers en temps "
+"réel."
+
+#. i18n: file: src/part/dialog.ui:294
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, useAntialiasing)
+#: rc.cpp:63
+msgid ""
+"Anti-aliasing the filemap makes it clearer and prettier, unfortunately it "
+"also makes rendering very slow."
+msgstr ""
+"L'anticrénelage de la carte de fichiers la rend plus claire et plus jolie. "
+"Malheureusement, il ralentit considérablement le rendu."
+
+#. i18n: file: src/part/dialog.ui:297
+#. i18n: ectx: property (text), widget (QCheckBox, useAntialiasing)
+#: rc.cpp:66
+msgid "&Use anti-aliasing"
+msgstr "&Utiliser l'anticrénelage"
+
+#. i18n: file: src/part/dialog.ui:304
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, showSmallFiles)
+#: rc.cpp:69
+msgid ""
+"Some files are too small to be rendered on the filemap. Selecting this "
+"option makes these files visible by merging them all into a single \"multi-"
+"segment\"."
+msgstr ""
+"Certains fichiers sont trop petits pour être rendus sur la carte de "
+"fichiers. La sélection de cette option rend ces fichiers visibles en les "
+"fusionnant tous en un seul « multi-segment »."
+
+#. i18n: file: src/part/dialog.ui:307
+#. i18n: ectx: property (text), widget (QCheckBox, showSmallFiles)
+#: rc.cpp:72
+msgid "Show small files"
+msgstr "Afficher les petits fichiers"
+
+#. i18n: file: src/part/dialog.ui:317
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, varyLabelFontSizes)
+#: rc.cpp:75
+msgid ""
+"The font size of exploded labels can be varied relative to the depth of the "
+"directories they represent. This helps you spot the important labels more "
+"easily. Set a sensible minimum font size."
+msgstr ""
+"La taille de la police de caractères pour les étiquettes développées peut "
+"être ajustée en fonction de la profondeur des dossiers qu'elles "
+"représentent. Cette fonction contribue à différencier les étiquettes plus "
+"facilement. Définissez une taille de police minimale raisonnable."
+
+#. i18n: file: src/part/dialog.ui:320
+#. i18n: ectx: property (text), widget (QCheckBox, varyLabelFontSizes)
+#: rc.cpp:78
+msgid "Var&y label font sizes"
+msgstr "Faire var&ier la taille de police des étiquettes"
+
+#. i18n: file: src/part/dialog.ui:357
+#. i18n: ectx: property (whatsThis), widget (QLabel, minFontPitchLabel)
+#: rc.cpp:81
+msgid "The smallest font size Filelight can use to render labels."
+msgstr ""
+"La plus petite taille de police que Filelight peut utiliser pour rendre les "
+"étiquettes."
+
+#. i18n: file: src/part/dialog.ui:360
+#. i18n: ectx: property (text), widget (QLabel, minFontPitchLabel)
+#: rc.cpp:84
+msgid "Minimum font si&ze:"
+msgstr "Taille &minimale de police :"
 
 #: src/app/main.cpp:36
 msgid "Graphical disk-usage information"
@@ -139,6 +296,16 @@ msgstr "+[emplacement]"
 msgid "Scan 'path'"
 msgstr "Analyse de « PATH »"
 
+#: src/app/historyAction.cpp:64
+msgctxt "Go to the last path viewed"
+msgid "Back"
+msgstr "Précédent"
+
+#: src/app/historyAction.cpp:65
+msgctxt "Go to forward in the history of paths viewed"
+msgid "Forward"
+msgstr "Suivant"
+
 #: src/app/mainWindow.cpp:62
 msgid ""
 "Unable to load the Filelight Part.\n"
@@ -187,232 +354,7 @@ msgstr "Analyses &récentes"
 msgid "Select Folder to Scan"
 msgstr "Sélectionner un dossier à analyser"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
-#: src/part/dialog.ui:14
-msgid "Settings - Filelight"
-msgstr "Paramètres de Filelight"
-
-#. i18n: ectx: attribute (title), widget (QWidget, Widget2)
-#: src/part/dialog.ui:36
-msgid "Scannin&g"
-msgstr "Analys&e en cours"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: src/part/dialog.ui:48
-msgid "Do &not scan these folders:"
-msgstr "&Ne pas analyser ces dossiers :"
-
-#. i18n: ectx: property (text), widget (QPushButton, m_removeButton)
-#: src/part/dialog.ui:88
-msgid "R&emove"
-msgstr "Supprim&er"
-
-#. i18n: ectx: property (text), widget (QPushButton, m_addButton)
-#: src/part/dialog.ui:98
-msgid "&Add..."
-msgstr "&Ajouter..."
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, dontScanRemoteMounts)
-#: src/part/dialog.ui:174
-msgid ""
-"Prevents scanning of filesystems that are not on this computer, e.g. NFS or "
-"Samba mounts."
-msgstr ""
-"Empêche l'analyse des systèmes de fichiers non présents sur cet ordinateur, "
-"par exemple, les montages « NFS » ou « Samba »."
-
-#. i18n: ectx: property (text), widget (QCheckBox, dontScanRemoteMounts)
-#: src/part/dialog.ui:177
-msgid "Exclude remote files&ystems"
-msgstr "Exclure les systèmes de &fichiers distants"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, scanAcrossMounts)
-#: src/part/dialog.ui:184
-msgid ""
-"Allows scans to enter directories that are part of other filesystems. For "
-"example, when unchecked, this will usually prevent the contents of <b>/mnt</"
-"b> from being scanned if you scan <b>/</b>."
-msgstr ""
-"Permet qu'une analyse ait lieu dans des dossiers faisant partie d'autres "
-"systèmes de fichiers. Par exemple, si cette option n'est pas cochée, le "
-"contenu de <b>/mnt</b> sera ignoré lors de l'analyse de <b>/</b>."
-
-#. i18n: ectx: property (text), widget (QCheckBox, scanAcrossMounts)
-#: src/part/dialog.ui:187
-msgid "Scan across filesystem &boundaries"
-msgstr "Analyser d'un &bout à l'autre des limites du système de fichiers"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, dontScanRemovableMedia)
-#: src/part/dialog.ui:200
-msgid "Prevents Filelight from scanning removable media (eg. CD-ROMs)."
-msgstr ""
-"Empêche Filelight d'analyser les média amovibles (par exemple, les CD-ROM)."
-
-#. i18n: ectx: property (text), widget (QCheckBox, dontScanRemovableMedia)
-#: src/part/dialog.ui:203
-msgid "E&xclude removable media"
-msgstr "E&xclure les média amovibles"
-
-#. i18n: ectx: attribute (title), widget (QWidget, Widget3)
-#: src/part/dialog.ui:213
-msgid "&Appearance"
-msgstr "&Apparence"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/part/dialog.ui:225
-msgid "Color scheme"
-msgstr "Schéma de couleurs"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: src/part/dialog.ui:251
-msgid "Co&ntrast"
-msgstr "Co&ntraste"
-
-#. i18n: ectx: property (whatsThis), widget (QSlider, contrastSlider)
-#: src/part/dialog.ui:273
-msgid "Here you can vary the contrast of the filemap in realtime."
-msgstr ""
-"Vous pouvez faire varier ici le contraste de la carte de fichiers en temps "
-"réel."
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, useAntialiasing)
-#: src/part/dialog.ui:294
-msgid ""
-"Anti-aliasing the filemap makes it clearer and prettier, unfortunately it "
-"also makes rendering very slow."
-msgstr ""
-"L'anticrénelage de la carte de fichiers la rend plus claire et plus jolie. "
-"Malheureusement, il ralentit considérablement le rendu."
-
-#. i18n: ectx: property (text), widget (QCheckBox, useAntialiasing)
-#: src/part/dialog.ui:297
-msgid "&Use anti-aliasing"
-msgstr "&Utiliser l'anticrénelage"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, showSmallFiles)
-#: src/part/dialog.ui:304
-msgid ""
-"Some files are too small to be rendered on the filemap. Selecting this "
-"option makes these files visible by merging them all into a single \"multi-"
-"segment\"."
-msgstr ""
-"Certains fichiers sont trop petits pour être rendus sur la carte de "
-"fichiers. La sélection de cette option rend ces fichiers visibles en les "
-"fusionnant tous en un seul « multi-segment »."
-
-#. i18n: ectx: property (text), widget (QCheckBox, showSmallFiles)
-#: src/part/dialog.ui:307
-msgid "Show small files"
-msgstr "Afficher les petits fichiers"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, varyLabelFontSizes)
-#: src/part/dialog.ui:317
-msgid ""
-"The font size of exploded labels can be varied relative to the depth of the "
-"directories they represent. This helps you spot the important labels more "
-"easily. Set a sensible minimum font size."
-msgstr ""
-"La taille de la police de caractères pour les étiquettes développées peut "
-"être ajustée en fonction de la profondeur des dossiers qu'elles "
-"représentent. Cette fonction contribue à différencier les étiquettes plus "
-"facilement. Définissez une taille de police minimale raisonnable."
-
-#. i18n: ectx: property (text), widget (QCheckBox, varyLabelFontSizes)
-#: src/part/dialog.ui:320
-msgid "Var&y label font sizes"
-msgstr "Faire var&ier la taille de police des étiquettes"
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, minFontPitchLabel)
-#: src/part/dialog.ui:357
-msgid "The smallest font size Filelight can use to render labels."
-msgstr ""
-"La plus petite taille de police que Filelight peut utiliser pour rendre les "
-"étiquettes."
-
-#. i18n: ectx: property (text), widget (QLabel, minFontPitchLabel)
-#: src/part/dialog.ui:360
-msgid "Minimum font si&ze:"
-msgstr "Taille &minimale de police :"
-
-#: src/part/part.cpp:59
-msgid "Displays file usage in an easy to understand way."
-msgstr ""
-"Affiche l'utilisation des fichiers d'une manière facilement compréhensible."
-
-#: src/part/part.cpp:61
-msgid ""
-"(c) 2002-2004 Max Howell\n"
-"                (c) 2008-2013 Martin T. Sandsmark"
-msgstr ""
-"(c) 2002-2004 Max Howell\n"
-"                (c) 2008-2013 Martin T. Sandsmark"
-
-#: src/part/part.cpp:114
-msgid "Configure Filelight..."
-msgstr "Configurer Filelight..."
-
-#: src/part/part.cpp:168
-msgid "The entered URL cannot be parsed; it is invalid."
-msgstr ""
-"Impossible d'analyser syntaxiquement l'URL saisi. Il n'est pas valable."
-
-#: src/part/part.cpp:172
-#, kde-format
-msgid "Filelight only accepts absolute paths, eg. /%1"
-msgstr "Filelight n'accepte que les emplacements absolus, par exemple,  /%1"
-
-#: src/part/part.cpp:176
-#, kde-format
-msgid "Folder not found: %1"
-msgstr "Impossible de trouver le dossier : %1"
-
-#: src/part/part.cpp:180
-#, kde-format
-msgid ""
-"Unable to enter: %1\n"
-"You do not have access rights to this location."
-msgstr ""
-"Impossible de saisir : %1\n"
-"Vous ne disposez pas des droits d'accès nécessaires pour cet emplacement."
-
-#: src/part/part.cpp:201
-msgid "Aborting Scan..."
-msgstr "Interruption de l'analyse..."
-
-#: src/part/part.cpp:256
-#, kde-format
-msgid "Scanning: %1"
-msgstr "Analyse en cours : %1"
-
-#: src/part/part.cpp:292
-msgid "Scan completed, generating map..."
-msgstr "Analyse terminée, génération d'une carte..."
-
-#: src/part/part.cpp:302
-#, kde-format
-msgid "Scan failed: %1"
-msgstr "L'analyse a échoué : %1"
-
-#: src/part/part.cpp:320
-msgid "No files."
-msgstr "Aucun fichier."
-
-#: src/part/part.cpp:321
-#, kde-format
-msgid "1 file"
-msgid_plural "%1 files"
-msgstr[0] "1 fichier"
-msgstr[1] "%1 fichiers"
-
-#: src/part/progressBox.cpp:92
-#, kde-format
-msgid "%1 File"
-msgid_plural "%1 Files"
-msgstr[0] "%1 fichier"
-msgstr[1] "%1 fichiers"
-
 #: src/part/radialMap/builder.cpp:152
-#, kde-format
 msgid "1 file, with an average size of %2"
 msgid_plural "%1 files, with an average size of %2"
 msgstr[0] "1 fichier, avec une taille moyenne de %2"
@@ -428,7 +370,6 @@ msgstr ""
 "veuillez effectuer l'analyse à nouveau."
 
 #: src/part/radialMap/widgetEvents.cpp:159
-#, kde-format
 msgid "File: %1"
 msgid_plural "Files: %1"
 msgstr[0] "Fichier : %1"
@@ -469,7 +410,6 @@ msgid "&Delete"
 msgstr "&Supprimer"
 
 #: src/part/radialMap/widgetEvents.cpp:258
-#, kde-format
 msgid ""
 "<qt>The folder at <i>'%1'</i> will be <b>recursively</b> and <b>permanently</"
 "b> deleted.</qt>"
@@ -478,13 +418,97 @@ msgstr ""
 "<b>définitivement</b> supprimé.</qt>"
 
 #: src/part/radialMap/widgetEvents.cpp:259
-#, kde-format
 msgid "<qt><i>'%1'</i> will be <b>permanently</b> deleted.</qt>"
 msgstr "<qt><i> « %1 » </i> sera <b>définitivement</b> supprimé.</qt>"
 
 #: src/part/radialMap/widgetEvents.cpp:308
 msgid "Error while deleting"
 msgstr "Erreur lors de la suppression"
+
+#: src/part/summaryWidget.cpp:113
+msgctxt "Free space on the disks/partitions"
+msgid "Free"
+msgstr "Libre"
+
+#: src/part/summaryWidget.cpp:114
+msgctxt "Used space on the disks/partitions"
+msgid "Used"
+msgstr "Utilisé"
+
+#: src/part/summaryWidget.cpp:135
+msgctxt "Percent used disk space on the partition"
+msgid "</b> (%1% Used)"
+msgstr "</b> (%1 % utilisé)"
+
+#: src/part/part.cpp:59
+msgid "Displays file usage in an easy to understand way."
+msgstr ""
+"Affiche l'utilisation des fichiers d'une manière facilement compréhensible."
+
+#: src/part/part.cpp:61
+msgid ""
+"(c) 2002-2004 Max Howell\n"
+"                (c) 2008-2013 Martin T. Sandsmark"
+msgstr ""
+"(c) 2002-2004 Max Howell\n"
+"                (c) 2008-2013 Martin T. Sandsmark"
+
+#: src/part/part.cpp:114
+msgid "Configure Filelight..."
+msgstr "Configurer Filelight..."
+
+#: src/part/part.cpp:168
+msgid "The entered URL cannot be parsed; it is invalid."
+msgstr ""
+"Impossible d'analyser syntaxiquement l'URL saisi. Il n'est pas valable."
+
+#: src/part/part.cpp:172
+msgid "Filelight only accepts absolute paths, eg. /%1"
+msgstr "Filelight n'accepte que les emplacements absolus, par exemple,  /%1"
+
+#: src/part/part.cpp:176
+msgid "Folder not found: %1"
+msgstr "Impossible de trouver le dossier : %1"
+
+#: src/part/part.cpp:180
+msgid ""
+"Unable to enter: %1\n"
+"You do not have access rights to this location."
+msgstr ""
+"Impossible de saisir : %1\n"
+"Vous ne disposez pas des droits d'accès nécessaires pour cet emplacement."
+
+#: src/part/part.cpp:201
+msgid "Aborting Scan..."
+msgstr "Interruption de l'analyse..."
+
+#: src/part/part.cpp:256
+msgid "Scanning: %1"
+msgstr "Analyse en cours : %1"
+
+#: src/part/part.cpp:292
+msgid "Scan completed, generating map..."
+msgstr "Analyse terminée, génération d'une carte..."
+
+#: src/part/part.cpp:302
+msgid "Scan failed: %1"
+msgstr "L'analyse a échoué : %1"
+
+#: src/part/part.cpp:320
+msgid "No files."
+msgstr "Aucun fichier."
+
+#: src/part/part.cpp:321
+msgid "1 file"
+msgid_plural "%1 files"
+msgstr[0] "1 fichier"
+msgstr[1] "%1 fichiers"
+
+#: src/part/progressBox.cpp:92
+msgid "%1 File"
+msgid_plural "%1 Files"
+msgstr[0] "%1 fichier"
+msgstr[1] "%1 fichiers"
 
 #: src/part/settingsDialog.cpp:41
 msgid "Rainbow"
@@ -502,21 +526,13 @@ msgstr "Contraste élevé"
 msgid "That folder is already set to be excluded from scans"
 msgstr "Ce dossier est déjà défini comme à exclure des analyses"
 
-#: src/part/summaryWidget.cpp:113
-msgctxt "Free space on the disks/partitions"
-msgid "Free"
-msgstr "Libre"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Joëlle Cornavin"
 
-#: src/part/summaryWidget.cpp:114
-msgctxt "Used space on the disks/partitions"
-msgid "Used"
-msgstr "Utilisé"
-
-#: src/part/summaryWidget.cpp:135
-#, kde-format
-msgctxt "Percent used disk space on the partition"
-msgid "</b> (%1% Used)"
-msgstr "</b> (%1 % utilisé)"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "jcorn@free.fr"
 
 #~ msgid "Filelight"
 #~ msgstr "Filelight"

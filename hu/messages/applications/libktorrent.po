@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KTorrent 3.1\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-12-18 16:46+0100\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2012-02-14 16:13+0100\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -44,27 +44,31 @@ msgstr "UTP használata vagy sem"
 msgid "ktcli"
 msgstr "ktcli"
 
-#: src/bcodec/bdecoder.cpp:71
-#, kde-format
-msgid "Illegal token: %1"
-msgstr "Nem megengedett token: %1"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Átirányítás új hely nélkül"
 
-#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
-msgid "Decode error"
-msgstr "Dekódolási hiba"
+#: src/tracker/httptracker.cpp:285 src/tracker/httptracker.cpp:305
+#: src/tracker/httptracker.cpp:461
+msgid "Invalid response from tracker"
+msgstr "Érvénytelen válasz érkezett a követőtől"
 
-#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
-msgid "Unexpected end of input"
-msgstr "Váratlanul ért véget a bemenet"
+#: src/tracker/httptracker.cpp:298
+msgid "Invalid data from tracker"
+msgstr "Érvénytelen adat érkezett a követőtől"
 
-#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
-#, kde-format
-msgid "Cannot convert %1 to an int"
-msgstr "Nem sikerült egésszé alakítani: %1"
+#: src/tracker/httptracker.cpp:478
+msgid "Invalid tracker URL"
+msgstr "Érvénytelen követő-URL"
 
-#: src/bcodec/bdecoder.cpp:260
-msgid "Torrent is incomplete."
-msgstr "A torrent nem teljes."
+#: src/tracker/httptracker.cpp:556 src/tracker/udptracker.cpp:364
+#: src/tracker/udptracker.cpp:374
+msgid "Timeout contacting tracker %1"
+msgstr "Időtúllépés a követőhöz való kapcsolódás közben: %1"
+
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "%1 hosztnév nem oldható fel"
 
 #: src/datachecker/datacheckerjob.cpp:82
 msgid "Waiting for other data checks to finish"
@@ -79,90 +83,162 @@ msgid "Checking Data"
 msgstr "Adatellenőrzés"
 
 #: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/torrent/torrentcreator.cpp:124
+#: src/datachecker/singledatachecker.cpp:49 src/torrent/torrentcreator.cpp:124
 #: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#, kde-format
+#: src/diskio/multifilecache.cpp:706 src/diskio/multifilecache.cpp:745
 msgid "Cannot open file %1: %2"
 msgstr "Nem sikerült megnyitni ezt a fájlt: %1. %2"
 
-#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/torrent/torrentstats.cpp:73
+msgid "Not started"
+msgstr "Nincs elindítva"
+
+#: src/torrent/torrentstats.cpp:75
+msgid "Download completed"
+msgstr "Letöltés kész"
+
+#: src/torrent/torrentstats.cpp:77
+msgid "Seeding completed"
+msgstr "Feltöltés kész"
+
+#: src/torrent/torrentstats.cpp:79
+msgctxt "Status of a torrent file"
+msgid "Seeding"
+msgstr "Feltöltés"
+
+#: src/torrent/torrentstats.cpp:81
+msgid "Downloading"
+msgstr "Letöltés"
+
+#: src/torrent/torrentstats.cpp:83
+msgid "Stalled"
+msgstr "Akadozik"
+
+#: src/torrent/torrentstats.cpp:85
+msgid "Stopped"
+msgstr "Leállítva"
+
+#: src/torrent/torrentstats.cpp:87 src/interfaces/trackerinterface.cpp:60
+msgid "Error: %1"
+msgstr "Hiba: %1"
+
+#: src/torrent/torrentstats.cpp:89
+msgid "Allocating diskspace"
+msgstr "Lemezterület lefoglalása"
+
+#: src/torrent/torrentstats.cpp:91
+msgid "Queued for seeding"
+msgstr "Ütemezve feltöltéshez"
+
+#: src/torrent/torrentstats.cpp:91
+msgid "Queued for downloading"
+msgstr "Ütemezve letöltéshez"
+
+#: src/torrent/torrentstats.cpp:95
+msgid "Stopped. No space left on device."
+msgstr "Leállítva. Nincs elegendő lemezterület."
+
+#: src/torrent/torrentstats.cpp:97
+msgid "Paused"
+msgstr "Szüneteltetve"
+
+#: src/torrent/torrentstats.cpp:99
+msgid "Superseeding"
+msgstr "Szuper-feltöltés"
+
+#: src/torrent/torrentcontrol.cpp:300
+msgid "Error writing to disk, do you have enough diskspace?"
+msgstr "Hiba a lemezre íráskor, van elegendő lemezterülete?"
+
+#: src/torrent/torrentcontrol.cpp:546
+msgid ""
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
+msgstr ""
+"<b>%1</b> torrent betöltése sikertelen:<br/><b>%2</b><br/>A torrent "
+"valószínűleg sérült, vagy nem érvényes torrentfájl."
+
+#: src/torrent/torrentcontrol.cpp:576
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
+msgstr "Hiba történt a(z) <b>%1</b> betöltése közben: <br/><b>%2</b>"
+
+#: src/torrent/torrentcontrol.cpp:587
+msgid "Unable to create %1: %2"
+msgstr "A(z) %1 nem hozható létre: %2"
+
+#: src/torrent/torrentcontrol.cpp:602
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+"<b>%1</b> letöltése már folyamatban van, ezért a két követőlista "
+"összevonásra került."
+
+#: src/torrent/torrentcontrol.cpp:607
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "<b>%1</b> torrent letöltése már folyamatban van."
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Hibás torrent."
+
+#: src/torrent/torrent.cpp:165
+msgid "Unable to open torrent file %1: %2"
+msgstr "A(z) %1 torrentfájl nem nyitható meg: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Az indexfájl nem hozható létre: %1"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "%1 - a könyvtár nem létezik"
+
+#: src/bcodec/bdecoder.cpp:71
+msgid "Illegal token: %1"
+msgstr "Nem megengedett token: %1"
+
+#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
+msgid "Decode error"
+msgstr "Dekódolási hiba"
+
+#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
+msgid "Unexpected end of input"
+msgstr "Váratlanul ért véget a bemenet"
+
+#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
+msgid "Cannot convert %1 to an int"
+msgstr "Nem sikerült egésszé alakítani: %1"
+
+#: src/bcodec/bdecoder.cpp:260
+msgid "Torrent is incomplete."
+msgstr "A torrent nem teljes."
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+msgid "Failed to open %1: %2"
+msgstr "%1 megnyitása nem sikerült: %2"
+
+#: src/diskio/multifilecache.cpp:118 src/diskio/cache.cpp:170
 #: src/diskio/singlefilecache.cpp:85
-#, kde-format
 msgid "Failed to create %1: %2"
 msgstr "%1 létrehozása nem sikerült: %2"
 
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-#, kde-format
-msgid "Cannot open %1: %2"
-msgstr "A(z) %1 nem nyitható meg: %2"
-
-#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
-#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
-#, kde-format
-msgid "Cannot open %1 for writing: readonly filesystem"
-msgstr "%1 nem nyitható meg írásra: a fájlrendszer csak olvasható"
-
-#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
-#, kde-format
-msgid "Attempting to write beyond the maximum size of %1"
-msgstr "A(z) %1 maximális méretén túli írás kísérlete"
-
-#: src/diskio/cachefile.cpp:257
-#, kde-format
-msgid ""
-"Cannot expand file %1: attempting to grow the file beyond the maximum size"
-msgstr ""
-"A(z) %1 fájl nem növelhető meg: fájlnövelés próba a maximális méreten túl"
-
-#: src/diskio/cachefile.cpp:261
-#, kde-format
-msgid "Cannot expand file %1: %2"
-msgstr "A(z) %1 fájl nem bővíthető: %2"
-
-#: src/diskio/cachefile.cpp:380
-#, kde-format
-msgid "Error: Reading past the end of the file %1"
-msgstr "Hiba a(z) %1 fájl végének olvasásakor"
-
-#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
-#, kde-format
-msgid "Failed to seek file %1: %2"
-msgstr "Nem sikerült pozícionálni a(z) %1 fájlban: %2"
-
-#: src/diskio/cachefile.cpp:393
-#, kde-format
-msgid "Error reading from %1"
-msgstr "Hiba történt %1 olvasása közben"
-
-#: src/diskio/cachefile.cpp:436
-#, kde-format
-msgid "Failed to write to file %1: %2"
-msgstr "Nem sikerült írni a(z) %1 fájlba: %2"
-
-#: src/diskio/cachefile.cpp:503
-#, kde-format
-msgid "Cannot preallocate diskspace: %1"
-msgstr "Nem sikerült előre lefoglalni lemezterületet: %1"
-
 #: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-#, kde-format
 msgid "Cannot open index file %1: %2"
 msgstr "A(z) %1 index fájl nem nyitható meg: %2"
 
 #: src/diskio/dndfile.cpp:89
-#, kde-format
 msgid "Cannot create file %1: %2"
 msgstr "A(z) %1 fájl nem hozható létre: %2"
 
 #: src/diskio/dndfile.cpp:137
-#, kde-format
 msgid "Failed to write first chunk to DND file: %1"
 msgstr "Nem sikerült kiírni az első darabot a DND-fájlba: %1"
 
 #: src/diskio/dndfile.cpp:155
-#, kde-format
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Nem sikerült kiírni az utolsó darabot a DND-fájlba: %1"
 
@@ -185,33 +261,74 @@ msgctxt "@title job"
 msgid "Moving"
 msgstr "Mozgatás"
 
-#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
-#, kde-format
-msgid "Failed to open %1: %2"
-msgstr "%1 megnyitása nem sikerült: %2"
+#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
+#: src/util/fileops.cpp:406
+msgid "Cannot open %1: %2"
+msgstr "A(z) %1 nem nyitható meg: %2"
+
+#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
+#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
+msgid "Cannot open %1 for writing: readonly filesystem"
+msgstr "%1 nem nyitható meg írásra: a fájlrendszer csak olvasható"
+
+#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
+msgid "Attempting to write beyond the maximum size of %1"
+msgstr "A(z) %1 maximális méretén túli írás kísérlete"
+
+#: src/diskio/cachefile.cpp:257
+msgid ""
+"Cannot expand file %1: attempting to grow the file beyond the maximum size"
+msgstr ""
+"A(z) %1 fájl nem növelhető meg: fájlnövelés próba a maximális méreten túl"
+
+#: src/diskio/cachefile.cpp:261
+msgid "Cannot expand file %1: %2"
+msgstr "A(z) %1 fájl nem bővíthető: %2"
+
+#: src/diskio/cachefile.cpp:380
+msgid "Error: Reading past the end of the file %1"
+msgstr "Hiba a(z) %1 fájl végének olvasásakor"
+
+#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
+msgid "Failed to seek file %1: %2"
+msgstr "Nem sikerült pozícionálni a(z) %1 fájlban: %2"
+
+#: src/diskio/cachefile.cpp:393
+msgid "Error reading from %1"
+msgstr "Hiba történt %1 olvasása közben"
+
+#: src/diskio/cachefile.cpp:436
+msgid "Failed to write to file %1: %2"
+msgstr "Nem sikerült írni a(z) %1 fájlba: %2"
+
+#: src/diskio/cachefile.cpp:503
+msgid "Cannot preallocate diskspace: %1"
+msgstr "Nem sikerült előre lefoglalni lemezterületet: %1"
 
 #: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
 msgid "Unable to write to a piece mapped read only"
 msgstr "Nem lehet a csak olvashatónak feltérképezett darabba írni"
 
+#: src/download/webseed.cpp:52 src/download/webseed.cpp:99
+#: src/download/httpconnection.cpp:44
+msgid "Not connected"
+msgstr "Nincs kapcsolat"
+
+#: src/download/webseed.cpp:348 src/download/httpconnection.cpp:153
+msgid "Connection closed"
+msgstr "A kapcsolat bezárva"
+
+#: src/download/webseed.cpp:558
+msgid "Unused for %1 seconds (Too many connection failures)"
+msgstr "Nincs használatban %1 másodperce (Túl sok kapcsolódási hiba)"
+
 #: src/download/chunkdownload.cpp:383
-#, kde-format
 msgid "1 peer"
 msgid_plural "%1 peers"
 msgstr[0] "%1 partner"
 msgstr[1] "%1 partner"
 
-#: src/download/downloader.cpp:808
-msgid "Disabled because webseed does not match torrent"
-msgstr "Letiltva, mert a webfeltöltés nem egyezik a torrenttel"
-
-#: src/download/httpconnection.cpp:44 src/download/webseed.cpp:52
-#: src/download/webseed.cpp:99
-msgid "Not connected"
-msgstr "Nincs kapcsolat"
-
 #: src/download/httpconnection.cpp:115
-#, kde-format
 msgid "Resolving proxy %1:%2"
 msgstr "Proxy feloldása: %1:%2"
 
@@ -220,16 +337,10 @@ msgid "Not enough system resources available"
 msgstr "Nincs elég elérhető rendszer erőforrás"
 
 #: src/download/httpconnection.cpp:133
-#, kde-format
 msgid "Resolving hostname %1"
 msgstr "Gépnév feloldása: %1"
 
-#: src/download/httpconnection.cpp:153 src/download/webseed.cpp:348
-msgid "Connection closed"
-msgstr "A kapcsolat bezárva"
-
 #: src/download/httpconnection.cpp:160
-#, kde-format
 msgid "Error: request failed: %1"
 msgstr "Hiba történt, egy kérés nem sikerült: %1"
 
@@ -265,183 +376,11 @@ msgstr "Hiba történt, időtúllépés"
 msgid "Redirected without a new location."
 msgstr "Átirányítva új hely nélkül."
 
-#: src/download/webseed.cpp:558
-#, kde-format
-msgid "Unused for %1 seconds (Too many connection failures)"
-msgstr "Nincs használatban %1 másodperce (Túl sok kapcsolódási hiba)"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "OK"
-
-#: src/interfaces/trackerinterface.cpp:58
-#, kde-format
-msgid "Warning: %1"
-msgstr "Figyelmeztetés: %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Bejelentés"
-
-#: src/interfaces/trackerinterface.cpp:60 src/torrent/torrentstats.cpp:87
-#, kde-format
-msgid "Error: %1"
-msgstr "Hiba: %1"
-
-#: src/migrate/migrate.cpp:45
-#, kde-format
-msgid "The directory %1 does not exist"
-msgstr "%1 - a könyvtár nem létezik"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Ismeretlen kliens"
-
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Hibás torrent."
-
-#: src/torrent/torrent.cpp:165
-#, kde-format
-msgid "Unable to open torrent file %1: %2"
-msgstr "A(z) %1 torrentfájl nem nyitható meg: %2"
-
-#: src/torrent/torrentcontrol.cpp:300
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr "Hiba a lemezre íráskor, van elegendő lemezterülete?"
-
-#: src/torrent/torrentcontrol.cpp:546
-#, kde-format
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"<b>%1</b> torrent betöltése sikertelen:<br/><b>%2</b><br/>A torrent "
-"valószínűleg sérült, vagy nem érvényes torrentfájl."
-
-#: src/torrent/torrentcontrol.cpp:576
-#, kde-format
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr "Hiba történt a(z) <b>%1</b> betöltése közben: <br/><b>%2</b>"
-
-#: src/torrent/torrentcontrol.cpp:587
-#, kde-format
-msgid "Unable to create %1: %2"
-msgstr "A(z) %1 nem hozható létre: %2"
-
-#: src/torrent/torrentcontrol.cpp:602
-#, kde-format
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-"<b>%1</b> letöltése már folyamatban van, ezért a két követőlista "
-"összevonásra került."
-
-#: src/torrent/torrentcontrol.cpp:607
-#, kde-format
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "<b>%1</b> torrent letöltése már folyamatban van."
-
-#: src/torrent/torrentcreator.cpp:361
-#, kde-format
-msgid "Cannot create index file: %1"
-msgstr "Az indexfájl nem hozható létre: %1"
-
-#: src/torrent/torrentstats.cpp:73
-msgid "Not started"
-msgstr "Nincs elindítva"
-
-#: src/torrent/torrentstats.cpp:75
-msgid "Download completed"
-msgstr "Letöltés kész"
-
-#: src/torrent/torrentstats.cpp:77
-msgid "Seeding completed"
-msgstr "Feltöltés kész"
-
-#: src/torrent/torrentstats.cpp:79
-msgctxt "Status of a torrent file"
-msgid "Seeding"
-msgstr "Feltöltés"
-
-#: src/torrent/torrentstats.cpp:81
-msgid "Downloading"
-msgstr "Letöltés"
-
-#: src/torrent/torrentstats.cpp:83
-msgid "Stalled"
-msgstr "Akadozik"
-
-#: src/torrent/torrentstats.cpp:85
-msgid "Stopped"
-msgstr "Leállítva"
-
-#: src/torrent/torrentstats.cpp:89
-msgid "Allocating diskspace"
-msgstr "Lemezterület lefoglalása"
-
-#: src/torrent/torrentstats.cpp:91
-msgid "Queued for seeding"
-msgstr "Ütemezve feltöltéshez"
-
-#: src/torrent/torrentstats.cpp:91
-msgid "Queued for downloading"
-msgstr "Ütemezve letöltéshez"
-
-#: src/torrent/torrentstats.cpp:95
-msgid "Stopped. No space left on device."
-msgstr "Leállítva. Nincs elegendő lemezterület."
-
-#: src/torrent/torrentstats.cpp:97
-msgid "Paused"
-msgstr "Szüneteltetve"
-
-#: src/torrent/torrentstats.cpp:99
-msgid "Superseeding"
-msgstr "Szuper-feltöltés"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Átirányítás új hely nélkül"
-
-#: src/tracker/httptracker.cpp:285 src/tracker/httptracker.cpp:305
-#: src/tracker/httptracker.cpp:461
-msgid "Invalid response from tracker"
-msgstr "Érvénytelen válasz érkezett a követőtől"
-
-#: src/tracker/httptracker.cpp:298
-msgid "Invalid data from tracker"
-msgstr "Érvénytelen adat érkezett a követőtől"
-
-#: src/tracker/httptracker.cpp:478
-msgid "Invalid tracker URL"
-msgstr "Érvénytelen követő-URL"
-
-#: src/tracker/httptracker.cpp:556 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-#, kde-format
-msgid "Timeout contacting tracker %1"
-msgstr "Időtúllépés a követőhöz való kapcsolódás közben: %1"
-
-#: src/tracker/udptracker.cpp:401
-#, kde-format
-msgid "Unable to resolve hostname %1"
-msgstr "%1 hosztnév nem oldható fel"
-
-#: src/upnp/httprequest.cpp:96
-msgid "Connection closed unexpectedly"
-msgstr "A kapcsolat váratlanul lezárult"
-
-#: src/upnp/httprequest.cpp:155
-msgid "Operation timed out"
-msgstr "A művelet átlépte az időkorlátot"
+#: src/download/downloader.cpp:808
+msgid "Disabled because webseed does not match torrent"
+msgstr "Letiltva, mert a webfeltöltés nem egyezik a torrenttel"
 
 #: src/upnp/upnprouter.cpp:167
-#, kde-format
 msgid "Failed to download %1: %2"
 msgstr "A(z) %1 letöltése nem sikerült: %2"
 
@@ -462,78 +401,29 @@ msgstr ""
 msgid "Cannot find port forwarding service in the device's description."
 msgstr "Az eszköz leírásában nem található port-átirányítási szolgáltatás."
 
-#: src/util/file.cpp:84
-#, kde-format
-msgid "Cannot write to %1: %2"
-msgstr "Nem sikerült írni a(z) %1 fájlba: %2"
+#: src/upnp/httprequest.cpp:96
+msgid "Connection closed unexpectedly"
+msgstr "A kapcsolat váratlanul lezárult"
 
-#: src/util/file.cpp:98
-#, kde-format
-msgid "Cannot read from %1"
-msgstr "Nem sikerült olvasni: %1"
+#: src/upnp/httprequest.cpp:155
+msgid "Operation timed out"
+msgstr "A művelet átlépte az időkorlátot"
 
-#: src/util/fileops.cpp:101
-#, kde-format
-msgid "Cannot create directory %1"
-msgstr "%1 könyvtár nem hozható létre"
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Ismeretlen kliens"
 
-#: src/util/fileops.cpp:168
-#, kde-format
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Nem sikerült létrehozni ezt a linket: %1 -> %2 - %3"
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "OK"
 
-#: src/util/fileops.cpp:185
-#, kde-format
-msgid "Cannot move %1 to %2: %3"
-msgstr "Nem sikerült áthelyezni: %1 -> %2 - %3"
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr "Figyelmeztetés: %1"
 
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-#, kde-format
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Nem sikerült átmásolni: %1 -> %2 - %3"
-
-#: src/util/fileops.cpp:282
-#, kde-format
-msgid "Cannot delete %1: %2"
-msgstr "Nem sikerült törölni: %1 - %2"
-
-#: src/util/fileops.cpp:300
-#, kde-format
-msgid "Cannot create %1: %2"
-msgstr "Nem sikerült létrehozni: %1 - %2"
-
-#: src/util/fileops.cpp:318
-#, kde-format
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Nem sikerült lekérdezni a fájlméretet: %1 - %2"
-
-#: src/util/fileops.cpp:334
-#, kde-format
-msgid "Cannot calculate the filesize: %1"
-msgstr "Nem sikerült kiszámolni a fájlméretet: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-#, kde-format
-msgid "Cannot expand file: %1"
-msgstr "Nem sikerült kitömöríteni ezt a fájlt: %1"
-
-#: src/util/fileops.cpp:427
-#, kde-format
-msgid "Cannot seek in file: %1"
-msgstr "Nem sikerült pozícionálni a fájlban: %1"
-
-#: src/util/functions.cpp:234
-#, kde-format
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-#, kde-format
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "%1 nap "
-msgstr[1] "%1 nap "
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Bejelentés"
 
 #: src/util/logsystemmanager.cpp:33
 msgid "General"
@@ -566,6 +456,65 @@ msgstr "Hiba a lemezre írás közben"
 #: src/util/signalcatcher.cpp:80
 msgid "Error when reading from disk"
 msgstr "Hiba a lemez olvasása közben"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "%1 nap "
+msgstr[1] "%1 nap "
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "%1 könyvtár nem hozható létre"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "Nem sikerült létrehozni ezt a linket: %1 -> %2 - %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "Nem sikerült áthelyezni: %1 -> %2 - %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Nem sikerült átmásolni: %1 -> %2 - %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "Nem sikerült törölni: %1 - %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "Nem sikerült létrehozni: %1 - %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Nem sikerült lekérdezni a fájlméretet: %1 - %2"
+
+#: src/util/fileops.cpp:334
+msgid "Cannot calculate the filesize: %1"
+msgstr "Nem sikerült kiszámolni a fájlméretet: %1"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "Nem sikerült kitömöríteni ezt a fájlt: %1"
+
+#: src/util/fileops.cpp:427
+msgid "Cannot seek in file: %1"
+msgstr "Nem sikerült pozícionálni a fájlban: %1"
+
+#: src/util/file.cpp:84
+msgid "Cannot write to %1: %2"
+msgstr "Nem sikerült írni a(z) %1 fájlba: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Nem sikerült olvasni: %1"
 
 #~ msgid "Parse Error"
 #~ msgstr "Feldolgozási hiba"

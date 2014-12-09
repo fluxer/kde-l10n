@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmartcard\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-05 11:50+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2009-12-19 17:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -21,27 +21,22 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Otto Bruggeman,Rinse de Vries"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ottobruggeman@kde.nl,rinsedevries@kde.nl"
-
+#. i18n: file: nosmartcardbase.ui:24
 #. i18n: ectx: property (text), widget (QLabel)
-#: nosmartcardbase.ui:24
+#: rc.cpp:3
 msgid "<b>Unable to contact the KDE smartcard service.</b>"
 msgstr ""
 "<b>Er kon geen contact gemaakt worden met KDE's chipkaartenservice.</b>"
 
+#. i18n: file: nosmartcardbase.ui:35
 #. i18n: ectx: property (title), widget (QGroupBox)
-#: nosmartcardbase.ui:35
+#: rc.cpp:6
 msgid "Possible Reasons"
 msgstr "Mogelijke oorzaken"
 
+#. i18n: file: nosmartcardbase.ui:49
 #. i18n: ectx: property (text), widget (QLabel)
-#: nosmartcardbase.ui:49
+#: rc.cpp:9
 msgid ""
 "\n"
 "1) The KDE daemon, 'kded' is not running. You can restart it by running the "
@@ -59,55 +54,153 @@ msgstr ""
 "2) Uw KDE-bibliotheken hebben geen chipkaartondersteuning. U dient in dat "
 "geval het pakket kdelibs opnieuw te compileren met libpcsclite geïnstalleerd."
 
-#: smartcard.cpp:65
+#. i18n: file: smartcardbase.ui:31
+#. i18n: ectx: attribute (title), widget (QWidget)
+#: rc.cpp:15
+msgid "Smartcard Support"
+msgstr "Chipkaartondersteuning"
+
+#. i18n: file: smartcardbase.ui:42
+#. i18n: ectx: property (text), widget (QCheckBox)
+#: rc.cpp:18
+msgid "&Enable smartcard support"
+msgstr "Chipkaartondersteuning activ&eren"
+
+#. i18n: file: smartcardbase.ui:61
+#. i18n: ectx: property (text), widget (QCheckBox)
+#: rc.cpp:21
+msgid "Enable &polling to autodetect card events"
+msgstr "&Detectie van kaartgebeurtenissen activeren"
+
+#. i18n: file: smartcardbase.ui:64
+#. i18n: ectx: property (whatsThis), widget (QCheckBox)
+#: rc.cpp:24
+msgid ""
+"In most cases you should have this enabled. It allows KDE to automatically "
+"detect card insertion and reader hotplug events."
+msgstr ""
+"In de meeste gevallen dient u dit te activeren. KDE kan dan automatisch het "
+"insteken van de kaart detecteren, samen met andere 'hotplug events'."
+
+#. i18n: file: smartcardbase.ui:92
+#. i18n: ectx: property (text), widget (QCheckBox)
+#: rc.cpp:27
+msgid "Automatically &launch card manager if inserted card is unclaimed"
+msgstr ""
+"Kaartbeheerder automatisch ops&tarten als de ingestoken kaart niet geclaimd "
+"is"
+
+#. i18n: file: smartcardbase.ui:95
+#. i18n: ectx: property (whatsThis), widget (QCheckBox)
+#: rc.cpp:30
+msgid ""
+"When you insert a smartcard, KDE can automatically launch a management tool "
+"if no other application attempts to use the card."
+msgstr ""
+"Als u een chipkaart insteekt, dan kan KDE automatisch een beheerprogramma "
+"opstarten als geen enkel ander programma tracht de kaart te gebruiken."
+
+#. i18n: file: smartcardbase.ui:106
+#. i18n: ectx: property (text), widget (QCheckBox)
+#: rc.cpp:33
+msgid "&Beep on card insert and removal"
+msgstr "Gelui&dsignaal geven bij het insteken en uitnemen van de kaart"
+
+#. i18n: file: smartcardbase.ui:135
+#. i18n: ectx: attribute (title), widget (QWidget)
+#: rc.cpp:36
+msgid "Readers"
+msgstr "Lezers"
+
+#. i18n: file: smartcardbase.ui:152
+#. i18n: ectx: property (text), widget (K3ListView)
+#: rc.cpp:39
+msgid "Reader"
+msgstr "Lezer"
+
+#. i18n: file: smartcardbase.ui:163
+#. i18n: ectx: property (text), widget (K3ListView)
+#: rc.cpp:42
+msgid "Type"
+msgstr "Type"
+
+#. i18n: file: smartcardbase.ui:174
+#. i18n: ectx: property (text), widget (K3ListView)
+#: rc.cpp:45
+msgid "Subtype"
+msgstr "Subtype"
+
+#. i18n: file: smartcardbase.ui:185
+#. i18n: ectx: property (text), widget (K3ListView)
+#: rc.cpp:48
+msgid "SubSubtype"
+msgstr "Subsubtype"
+
+#. i18n: file: smartcardbase.ui:228
+#. i18n: ectx: property (title), widget (QGroupBox)
+#: rc.cpp:51
+msgid "PCSCLite Configuration"
+msgstr "PCSCLite-configuratie"
+
+#. i18n: file: smartcardbase.ui:251
+#. i18n: ectx: property (text), widget (QLabel)
+#: rc.cpp:54
+msgid ""
+"To add new readers you have to modify /etc/readers.conf file and re-start "
+"pcscd"
+msgstr ""
+"Om nieuwe koppen toe te voegen bewerkt u het bestand /etc/readers.conf en "
+"herstart u pcscd."
+
+#: smartcard.cpp:64
 msgid "kcmsmartcard"
 msgstr "kcmsmartcard"
 
-#: smartcard.cpp:65
+#: smartcard.cpp:64
 msgid "KDE Smartcard Control Module"
 msgstr "KDE Chipkaart Configuratiemodule"
 
-#: smartcard.cpp:67
+#: smartcard.cpp:66
 msgid "(c) 2001 George Staikos"
 msgstr "(c) 2001 George Staikos"
 
-#: smartcard.cpp:69
+#: smartcard.cpp:68
 msgid "George Staikos"
 msgstr "George Staikos"
 
-#: smartcard.cpp:79
+#: smartcard.cpp:78
 msgid "Change Module..."
 msgstr "Module wijzigen..."
 
-#: smartcard.cpp:134
+#: smartcard.cpp:133
 msgid "Unable to launch KCardChooser"
 msgstr "KCardChooser kon niet worden opgestart"
 
-#: smartcard.cpp:183
+#: smartcard.cpp:182
 msgid "No card inserted"
 msgstr "Geen kaart ingevoerd"
 
-#: smartcard.cpp:224
+#: smartcard.cpp:223
 msgid "Smart card support disabled"
 msgstr "Chipkaartondersteuning uitgeschakeld"
 
-#: smartcard.cpp:235
+#: smartcard.cpp:234
 msgid "No readers found. Check 'pcscd' is running"
 msgstr "Geen lezers gevonden. Controleer of 'pcscd' wel draait."
 
-#: smartcard.cpp:260 smartcard.cpp:280
+#: smartcard.cpp:259 smartcard.cpp:279
 msgid "NO ATR or no card inserted"
 msgstr "Geen ATR, of geen kaart ingevoerd"
 
-#: smartcard.cpp:292
+#: smartcard.cpp:291
 msgid "Managed by: "
 msgstr "Beheerd door: "
 
-#: smartcard.cpp:302
+#: smartcard.cpp:301
 msgid "No module managing this card"
 msgstr "Geen module die deze kaart beheert"
 
-#: smartcard.cpp:395
+#: smartcard.cpp:394
 msgid ""
 "<h1>smartcard</h1> This module allows you to configure KDE support for "
 "smartcards. These can be used for various tasks such as storing SSL "
@@ -117,86 +210,10 @@ msgstr ""
 "chipkaarten instellen. Chipkaarten kunnen worden gebruik voor diverse taken, "
 "zoals het opslaan van SSL-certificaten en het aanmelden op uw systeem."
 
-#. i18n: ectx: attribute (title), widget (QWidget)
-#: smartcardbase.ui:31
-msgid "Smartcard Support"
-msgstr "Chipkaartondersteuning"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Otto Bruggeman,Rinse de Vries"
 
-#. i18n: ectx: property (text), widget (QCheckBox)
-#: smartcardbase.ui:42
-msgid "&Enable smartcard support"
-msgstr "Chipkaartondersteuning activ&eren"
-
-#. i18n: ectx: property (text), widget (QCheckBox)
-#: smartcardbase.ui:61
-msgid "Enable &polling to autodetect card events"
-msgstr "&Detectie van kaartgebeurtenissen activeren"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox)
-#: smartcardbase.ui:64
-msgid ""
-"In most cases you should have this enabled. It allows KDE to automatically "
-"detect card insertion and reader hotplug events."
-msgstr ""
-"In de meeste gevallen dient u dit te activeren. KDE kan dan automatisch het "
-"insteken van de kaart detecteren, samen met andere 'hotplug events'."
-
-#. i18n: ectx: property (text), widget (QCheckBox)
-#: smartcardbase.ui:92
-msgid "Automatically &launch card manager if inserted card is unclaimed"
-msgstr ""
-"Kaartbeheerder automatisch ops&tarten als de ingestoken kaart niet geclaimd "
-"is"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox)
-#: smartcardbase.ui:95
-msgid ""
-"When you insert a smartcard, KDE can automatically launch a management tool "
-"if no other application attempts to use the card."
-msgstr ""
-"Als u een chipkaart insteekt, dan kan KDE automatisch een beheerprogramma "
-"opstarten als geen enkel ander programma tracht de kaart te gebruiken."
-
-#. i18n: ectx: property (text), widget (QCheckBox)
-#: smartcardbase.ui:106
-msgid "&Beep on card insert and removal"
-msgstr "Gelui&dsignaal geven bij het insteken en uitnemen van de kaart"
-
-#. i18n: ectx: attribute (title), widget (QWidget)
-#: smartcardbase.ui:135
-msgid "Readers"
-msgstr "Lezers"
-
-#. i18n: ectx: property (text), widget (K3ListView)
-#: smartcardbase.ui:152
-msgid "Reader"
-msgstr "Lezer"
-
-#. i18n: ectx: property (text), widget (K3ListView)
-#: smartcardbase.ui:163
-msgid "Type"
-msgstr "Type"
-
-#. i18n: ectx: property (text), widget (K3ListView)
-#: smartcardbase.ui:174
-msgid "Subtype"
-msgstr "Subtype"
-
-#. i18n: ectx: property (text), widget (K3ListView)
-#: smartcardbase.ui:185
-msgid "SubSubtype"
-msgstr "Subsubtype"
-
-#. i18n: ectx: property (title), widget (QGroupBox)
-#: smartcardbase.ui:228
-msgid "PCSCLite Configuration"
-msgstr "PCSCLite-configuratie"
-
-#. i18n: ectx: property (text), widget (QLabel)
-#: smartcardbase.ui:251
-msgid ""
-"To add new readers you have to modify /etc/readers.conf file and re-start "
-"pcscd"
-msgstr ""
-"Om nieuwe koppen toe te voegen bewerkt u het bestand /etc/readers.conf en "
-"herstart u pcscd."
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ottobruggeman@kde.nl,rinsedevries@kde.nl"

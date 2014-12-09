@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-12-18 16:46+0100\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2014-12-09 18:22+0000\n"
 "PO-Revision-Date: 2009-09-22 21:25+0300\n"
 "Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -48,28 +48,32 @@ msgstr "Показване на изскачащи съобщения в сис�
 msgid "ktcli"
 msgstr ""
 
-#: src/bcodec/bdecoder.cpp:71
-#, kde-format
-msgid "Illegal token: %1"
-msgstr "Невалиден символ: %1"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr ""
 
-#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
-msgid "Decode error"
-msgstr "Грешка при декодиране"
+#: src/tracker/httptracker.cpp:285 src/tracker/httptracker.cpp:305
+#: src/tracker/httptracker.cpp:461
+msgid "Invalid response from tracker"
+msgstr "Невалиден отговор от координиращия сървър"
 
-#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
-msgid "Unexpected end of input"
-msgstr "Неочакван край на въвеждането"
+#: src/tracker/httptracker.cpp:298
+msgid "Invalid data from tracker"
+msgstr "Невалидни данни от координиращия сървър"
 
-#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
-#, kde-format
-msgid "Cannot convert %1 to an int"
-msgstr "%1 не може да се преобразува в цяло число"
+#: src/tracker/httptracker.cpp:478
+msgid "Invalid tracker URL"
+msgstr "Невалиден адрес на координиращия сървър"
 
-#: src/bcodec/bdecoder.cpp:260
+#: src/tracker/httptracker.cpp:556 src/tracker/udptracker.cpp:364
+#: src/tracker/udptracker.cpp:374
+msgid "Timeout contacting tracker %1"
+msgstr ""
+
+#: src/tracker/udptracker.cpp:401
 #, fuzzy
-msgid "Torrent is incomplete."
-msgstr "Торентът е незавършен!"
+msgid "Unable to resolve hostname %1"
+msgstr "Невъзможно създаване на %1 : %2"
 
 #: src/datachecker/datacheckerjob.cpp:82
 msgid "Waiting for other data checks to finish"
@@ -85,89 +89,180 @@ msgid "Checking Data"
 msgstr "Проверка на данните"
 
 #: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/torrent/torrentcreator.cpp:124
+#: src/datachecker/singledatachecker.cpp:49 src/torrent/torrentcreator.cpp:124
 #: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#, kde-format
+#: src/diskio/multifilecache.cpp:706 src/diskio/multifilecache.cpp:745
 msgid "Cannot open file %1: %2"
 msgstr "Не може да бъде отворен файл %1: %2"
 
-#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/torrent/torrentstats.cpp:73
+msgid "Not started"
+msgstr "Не е стартиран"
+
+#: src/torrent/torrentstats.cpp:75
+msgid "Download completed"
+msgstr "Свалянето завършено"
+
+#: src/torrent/torrentstats.cpp:77
+msgid "Seeding completed"
+msgstr "Качването завършено"
+
+#: src/torrent/torrentstats.cpp:79
+#, fuzzy
+msgctxt "Status of a torrent file"
+msgid "Seeding"
+msgstr "Качване"
+
+#: src/torrent/torrentstats.cpp:81
+msgid "Downloading"
+msgstr "Сваляне"
+
+#: src/torrent/torrentstats.cpp:83
+msgid "Stalled"
+msgstr "Застой"
+
+#: src/torrent/torrentstats.cpp:85
+msgid "Stopped"
+msgstr "Спрян"
+
+#: src/torrent/torrentstats.cpp:87 src/interfaces/trackerinterface.cpp:60
+#, fuzzy
+msgid "Error: %1"
+msgstr "Грешка: "
+
+#: src/torrent/torrentstats.cpp:89
+msgid "Allocating diskspace"
+msgstr "Преразпределяне на дисково пространство"
+
+#: src/torrent/torrentstats.cpp:91
+#, fuzzy
+msgid "Queued for seeding"
+msgstr "В момента се свалят:"
+
+#: src/torrent/torrentstats.cpp:91
+#, fuzzy
+msgid "Queued for downloading"
+msgstr "В момента се свалят:"
+
+#: src/torrent/torrentstats.cpp:95
+msgid "Stopped. No space left on device."
+msgstr "Спрян. Няма свободно място."
+
+#: src/torrent/torrentstats.cpp:97
+msgid "Paused"
+msgstr ""
+
+#: src/torrent/torrentstats.cpp:99
+#, fuzzy
+msgid "Superseeding"
+msgstr "Качване"
+
+#: src/torrent/torrentcontrol.cpp:300
+msgid "Error writing to disk, do you have enough diskspace?"
+msgstr ""
+
+#: src/torrent/torrentcontrol.cpp:546
+#, fuzzy
+msgid ""
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
+msgstr ""
+"Възникна грешка при зареждането на торент файла. Вероятно торента е повреден "
+"или това въобще не е торент файл."
+
+#: src/torrent/torrentcontrol.cpp:576
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
+msgstr ""
+
+#: src/torrent/torrentcontrol.cpp:587
+#, fuzzy
+msgid "Unable to create %1: %2"
+msgstr "Невъзможно създаване на %1 : %2"
+
+#: src/torrent/torrentcontrol.cpp:602
+#, fuzzy
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+"Вие вече сваляте торент %1. Списъците с координиращи сървъри на двата "
+"торента бяха обединени."
+
+#: src/torrent/torrentcontrol.cpp:607
+#, fuzzy
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "Вече сваляте торент %1"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+#, fuzzy
+msgid "Corrupted torrent."
+msgstr "Повреден торент!"
+
+#: src/torrent/torrent.cpp:165
+#, fuzzy
+msgid "Unable to open torrent file %1: %2"
+msgstr " Не може да бъде отворен торент файл %1 : %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Не може да бъде създаден индексиращ файл: %1"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "Директория %1 не съществува"
+
+#: src/bcodec/bdecoder.cpp:71
+msgid "Illegal token: %1"
+msgstr "Невалиден символ: %1"
+
+#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
+msgid "Decode error"
+msgstr "Грешка при декодиране"
+
+#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
+msgid "Unexpected end of input"
+msgstr "Неочакван край на въвеждането"
+
+#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
+msgid "Cannot convert %1 to an int"
+msgstr "%1 не може да се преобразува в цяло число"
+
+#: src/bcodec/bdecoder.cpp:260
+#, fuzzy
+msgid "Torrent is incomplete."
+msgstr "Торентът е незавършен!"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+#, fuzzy
+msgid "Failed to open %1: %2"
+msgstr "Не може да бъде отворен %1: %2"
+
+#: src/diskio/multifilecache.cpp:118 src/diskio/cache.cpp:170
 #: src/diskio/singlefilecache.cpp:85
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Failed to create %1: %2"
 msgstr "Невъзможно създаване на %1 : %2"
 
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-#, fuzzy, kde-format
-msgid "Cannot open %1: %2"
-msgstr "Не може да бъде отворен %1: %2"
-
-#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
-#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
-#, fuzzy, kde-format
-msgid "Cannot open %1 for writing: readonly filesystem"
-msgstr "%1 не може да бъде отворен за запис - файлът е само за четене"
-
-#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
-#, kde-format
-msgid "Attempting to write beyond the maximum size of %1"
-msgstr ""
-
-#: src/diskio/cachefile.cpp:257
-#, kde-format
-msgid ""
-"Cannot expand file %1: attempting to grow the file beyond the maximum size"
-msgstr ""
-
-#: src/diskio/cachefile.cpp:261
-#, fuzzy, kde-format
-msgid "Cannot expand file %1: %2"
-msgstr "Файл %1 не може да бъде разширен: %2"
-
-#: src/diskio/cachefile.cpp:380
-#, fuzzy, kde-format
-msgid "Error: Reading past the end of the file %1"
-msgstr "Грешка : Четене на край на файла %1"
-
-#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
-#, fuzzy, kde-format
-msgid "Failed to seek file %1: %2"
-msgstr "Невъзможно създаване на %1 : %2"
-
-#: src/diskio/cachefile.cpp:393
-#, kde-format
-msgid "Error reading from %1"
-msgstr "Грешка при четене от %1"
-
-#: src/diskio/cachefile.cpp:436
-#, fuzzy, kde-format
-msgid "Failed to write to file %1: %2"
-msgstr "Невъзможно създаване на %1 : %2"
-
-#: src/diskio/cachefile.cpp:503
-#, fuzzy, kde-format
-msgid "Cannot preallocate diskspace: %1"
-msgstr "Невъзможно преразпределяне на дисковото пространство : %1"
-
 #: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Cannot open index file %1: %2"
 msgstr "Не може да бъде отворен кеш файл %1 : %2"
 
 #: src/diskio/dndfile.cpp:89
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Cannot create file %1: %2"
 msgstr "Не може да бъде създаден файл %1: %2"
 
 #: src/diskio/dndfile.cpp:137
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Failed to write first chunk to DND file: %1"
 msgstr "Неуспешен запис на първото парче в DND файл : %1"
 
 #: src/diskio/dndfile.cpp:155
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Неуспешен запис на последното парче в DND файл : %1"
 
@@ -193,34 +288,83 @@ msgctxt "@title job"
 msgid "Moving"
 msgstr "Средно преместване"
 
-#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
-#, fuzzy, kde-format
-msgid "Failed to open %1: %2"
+#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
+#: src/util/fileops.cpp:406
+#, fuzzy
+msgid "Cannot open %1: %2"
 msgstr "Не може да бъде отворен %1: %2"
+
+#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
+#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
+#, fuzzy
+msgid "Cannot open %1 for writing: readonly filesystem"
+msgstr "%1 не може да бъде отворен за запис - файлът е само за четене"
+
+#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
+msgid "Attempting to write beyond the maximum size of %1"
+msgstr ""
+
+#: src/diskio/cachefile.cpp:257
+msgid ""
+"Cannot expand file %1: attempting to grow the file beyond the maximum size"
+msgstr ""
+
+#: src/diskio/cachefile.cpp:261
+#, fuzzy
+msgid "Cannot expand file %1: %2"
+msgstr "Файл %1 не може да бъде разширен: %2"
+
+#: src/diskio/cachefile.cpp:380
+#, fuzzy
+msgid "Error: Reading past the end of the file %1"
+msgstr "Грешка : Четене на край на файла %1"
+
+#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
+#, fuzzy
+msgid "Failed to seek file %1: %2"
+msgstr "Невъзможно създаване на %1 : %2"
+
+#: src/diskio/cachefile.cpp:393
+msgid "Error reading from %1"
+msgstr "Грешка при четене от %1"
+
+#: src/diskio/cachefile.cpp:436
+#, fuzzy
+msgid "Failed to write to file %1: %2"
+msgstr "Невъзможно създаване на %1 : %2"
+
+#: src/diskio/cachefile.cpp:503
+#, fuzzy
+msgid "Cannot preallocate diskspace: %1"
+msgstr "Невъзможно преразпределяне на дисковото пространство : %1"
 
 #: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
 msgid "Unable to write to a piece mapped read only"
 msgstr ""
 
+#: src/download/webseed.cpp:52 src/download/webseed.cpp:99
+#: src/download/httpconnection.cpp:44
+#, fuzzy
+msgid "Not connected"
+msgstr "Качващи"
+
+#: src/download/webseed.cpp:348 src/download/httpconnection.cpp:153
+#, fuzzy
+msgid "Connection closed"
+msgstr "Връзки"
+
+#: src/download/webseed.cpp:558
+msgid "Unused for %1 seconds (Too many connection failures)"
+msgstr ""
+
 #: src/download/chunkdownload.cpp:383
-#, fuzzy, kde-format
+#, fuzzy
 msgid "1 peer"
 msgid_plural "%1 peers"
 msgstr[0] "Потребители"
 msgstr[1] "Потребители"
 
-#: src/download/downloader.cpp:808
-msgid "Disabled because webseed does not match torrent"
-msgstr ""
-
-#: src/download/httpconnection.cpp:44 src/download/webseed.cpp:52
-#: src/download/webseed.cpp:99
-#, fuzzy
-msgid "Not connected"
-msgstr "Качващи"
-
 #: src/download/httpconnection.cpp:115
-#, kde-format
 msgid "Resolving proxy %1:%2"
 msgstr ""
 
@@ -230,17 +374,11 @@ msgid "Not enough system resources available"
 msgstr "Няма достатъчно свободно дисково пространство."
 
 #: src/download/httpconnection.cpp:133
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Resolving hostname %1"
 msgstr "Невъзможно създаване на %1 : %2"
 
-#: src/download/httpconnection.cpp:153 src/download/webseed.cpp:348
-#, fuzzy
-msgid "Connection closed"
-msgstr "Връзки"
-
 #: src/download/httpconnection.cpp:160
-#, kde-format
 msgid "Error: request failed: %1"
 msgstr ""
 
@@ -279,190 +417,12 @@ msgstr ""
 msgid "Redirected without a new location."
 msgstr ""
 
-#: src/download/webseed.cpp:558
-#, kde-format
-msgid "Unused for %1 seconds (Too many connection failures)"
-msgstr ""
-
-#: src/interfaces/trackerinterface.cpp:58
-#, fuzzy
-msgid "OK"
-msgstr "О&К"
-
-#: src/interfaces/trackerinterface.cpp:58
-#, kde-format
-msgid "Warning: %1"
-msgstr ""
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Съобщаване"
-
-#: src/interfaces/trackerinterface.cpp:60 src/torrent/torrentstats.cpp:87
-#, fuzzy, kde-format
-msgid "Error: %1"
-msgstr "Грешка: "
-
-#: src/migrate/migrate.cpp:45
-#, kde-format
-msgid "The directory %1 does not exist"
-msgstr "Директория %1 не съществува"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Непознат клиент"
-
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-#, fuzzy
-msgid "Corrupted torrent."
-msgstr "Повреден торент!"
-
-#: src/torrent/torrent.cpp:165
-#, fuzzy, kde-format
-msgid "Unable to open torrent file %1: %2"
-msgstr " Не може да бъде отворен торент файл %1 : %2"
-
-#: src/torrent/torrentcontrol.cpp:300
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:546
-#, fuzzy, kde-format
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"Възникна грешка при зареждането на торент файла. Вероятно торента е повреден "
-"или това въобще не е торент файл."
-
-#: src/torrent/torrentcontrol.cpp:576
-#, kde-format
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:587
-#, fuzzy, kde-format
-msgid "Unable to create %1: %2"
-msgstr "Невъзможно създаване на %1 : %2"
-
-#: src/torrent/torrentcontrol.cpp:602
-#, fuzzy, kde-format
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-"Вие вече сваляте торент %1. Списъците с координиращи сървъри на двата "
-"торента бяха обединени."
-
-#: src/torrent/torrentcontrol.cpp:607
-#, fuzzy, kde-format
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "Вече сваляте торент %1"
-
-#: src/torrent/torrentcreator.cpp:361
-#, kde-format
-msgid "Cannot create index file: %1"
-msgstr "Не може да бъде създаден индексиращ файл: %1"
-
-#: src/torrent/torrentstats.cpp:73
-msgid "Not started"
-msgstr "Не е стартиран"
-
-#: src/torrent/torrentstats.cpp:75
-msgid "Download completed"
-msgstr "Свалянето завършено"
-
-#: src/torrent/torrentstats.cpp:77
-msgid "Seeding completed"
-msgstr "Качването завършено"
-
-#: src/torrent/torrentstats.cpp:79
-#, fuzzy
-msgctxt "Status of a torrent file"
-msgid "Seeding"
-msgstr "Качване"
-
-#: src/torrent/torrentstats.cpp:81
-msgid "Downloading"
-msgstr "Сваляне"
-
-#: src/torrent/torrentstats.cpp:83
-msgid "Stalled"
-msgstr "Застой"
-
-#: src/torrent/torrentstats.cpp:85
-msgid "Stopped"
-msgstr "Спрян"
-
-#: src/torrent/torrentstats.cpp:89
-msgid "Allocating diskspace"
-msgstr "Преразпределяне на дисково пространство"
-
-#: src/torrent/torrentstats.cpp:91
-#, fuzzy
-msgid "Queued for seeding"
-msgstr "В момента се свалят:"
-
-#: src/torrent/torrentstats.cpp:91
-#, fuzzy
-msgid "Queued for downloading"
-msgstr "В момента се свалят:"
-
-#: src/torrent/torrentstats.cpp:95
-msgid "Stopped. No space left on device."
-msgstr "Спрян. Няма свободно място."
-
-#: src/torrent/torrentstats.cpp:97
-msgid "Paused"
-msgstr ""
-
-#: src/torrent/torrentstats.cpp:99
-#, fuzzy
-msgid "Superseeding"
-msgstr "Качване"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr ""
-
-#: src/tracker/httptracker.cpp:285 src/tracker/httptracker.cpp:305
-#: src/tracker/httptracker.cpp:461
-msgid "Invalid response from tracker"
-msgstr "Невалиден отговор от координиращия сървър"
-
-#: src/tracker/httptracker.cpp:298
-msgid "Invalid data from tracker"
-msgstr "Невалидни данни от координиращия сървър"
-
-#: src/tracker/httptracker.cpp:478
-msgid "Invalid tracker URL"
-msgstr "Невалиден адрес на координиращия сървър"
-
-#: src/tracker/httptracker.cpp:556 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-#, kde-format
-msgid "Timeout contacting tracker %1"
-msgstr ""
-
-#: src/tracker/udptracker.cpp:401
-#, fuzzy, kde-format
-msgid "Unable to resolve hostname %1"
-msgstr "Невъзможно създаване на %1 : %2"
-
-#: src/upnp/httprequest.cpp:96
-#, fuzzy
-msgid "Connection closed unexpectedly"
-msgstr "Връзки"
-
-#: src/upnp/httprequest.cpp:155
-msgid "Operation timed out"
+#: src/download/downloader.cpp:808
+msgid "Disabled because webseed does not match torrent"
 msgstr ""
 
 #: src/upnp/upnprouter.cpp:167
-#, fuzzy, kde-format
+#, fuzzy
 msgid "Failed to download %1: %2"
 msgstr "Не може да бъде отворен %1: %2"
 
@@ -481,78 +441,31 @@ msgstr ""
 msgid "Cannot find port forwarding service in the device's description."
 msgstr "В списъка не може да бъде открито пренасочващо портовете устройство!"
 
-#: src/util/file.cpp:84
-#, fuzzy, kde-format
-msgid "Cannot write to %1: %2"
-msgstr "Невъзможен запис в %1 : %2"
+#: src/upnp/httprequest.cpp:96
+#, fuzzy
+msgid "Connection closed unexpectedly"
+msgstr "Връзки"
 
-#: src/util/file.cpp:98
-#, kde-format
-msgid "Cannot read from %1"
-msgstr "Не може да се чете от %1"
+#: src/upnp/httprequest.cpp:155
+msgid "Operation timed out"
+msgstr ""
 
-#: src/util/fileops.cpp:101
-#, fuzzy, kde-format
-msgid "Cannot create directory %1"
-msgstr "Не може да се създаде директория %1: %2"
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Непознат клиент"
 
-#: src/util/fileops.cpp:168
-#, kde-format
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Не може да се създаде препратка на %1 в %2: %3"
+#: src/interfaces/trackerinterface.cpp:58
+#, fuzzy
+msgid "OK"
+msgstr "О&К"
 
-#: src/util/fileops.cpp:185
-#, kde-format
-msgid "Cannot move %1 to %2: %3"
-msgstr "Не може да се премести %1 в %2: %3"
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr ""
 
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-#, kde-format
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Не може да се копира %1 в %2: %3"
-
-#: src/util/fileops.cpp:282
-#, kde-format
-msgid "Cannot delete %1: %2"
-msgstr "Не може да се изтрие %1: %2"
-
-#: src/util/fileops.cpp:300
-#, kde-format
-msgid "Cannot create %1: %2"
-msgstr "Не може да бъде създаден %1: %2"
-
-#: src/util/fileops.cpp:318
-#, kde-format
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Размерът на файла %1 не може да бъде изчислен: %2"
-
-#: src/util/fileops.cpp:334
-#, fuzzy, kde-format
-msgid "Cannot calculate the filesize: %1"
-msgstr "Размерът на файла не може да бъде изчислен : %2"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-#, fuzzy, kde-format
-msgid "Cannot expand file: %1"
-msgstr "Файл %1 не може да бъде разширен"
-
-#: src/util/fileops.cpp:427
-#, fuzzy, kde-format
-msgid "Cannot seek in file: %1"
-msgstr "Не може да се търси във файл: %1"
-
-#: src/util/functions.cpp:234
-#, fuzzy, kde-format
-msgid "%1/s"
-msgstr "%1 кБ/сек"
-
-#: src/util/functions.cpp:245
-#, fuzzy, kde-format
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "Данни:"
-msgstr[1] "Данни:"
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Съобщаване"
 
 #: src/util/logsystemmanager.cpp:33
 msgid "General"
@@ -589,6 +502,72 @@ msgstr "Грешка при четене от %1"
 #, fuzzy
 msgid "Error when reading from disk"
 msgstr "Грешка при четене от %1"
+
+#: src/util/functions.cpp:234
+#, fuzzy
+msgid "%1/s"
+msgstr "%1 кБ/сек"
+
+#: src/util/functions.cpp:245
+#, fuzzy
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "Данни:"
+msgstr[1] "Данни:"
+
+#: src/util/fileops.cpp:101
+#, fuzzy
+msgid "Cannot create directory %1"
+msgstr "Не може да се създаде директория %1: %2"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "Не може да се създаде препратка на %1 в %2: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "Не може да се премести %1 в %2: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Не може да се копира %1 в %2: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "Не може да се изтрие %1: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "Не може да бъде създаден %1: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Размерът на файла %1 не може да бъде изчислен: %2"
+
+#: src/util/fileops.cpp:334
+#, fuzzy
+msgid "Cannot calculate the filesize: %1"
+msgstr "Размерът на файла не може да бъде изчислен : %2"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+#, fuzzy
+msgid "Cannot expand file: %1"
+msgstr "Файл %1 не може да бъде разширен"
+
+#: src/util/fileops.cpp:427
+#, fuzzy
+msgid "Cannot seek in file: %1"
+msgstr "Не може да се търси във файл: %1"
+
+#: src/util/file.cpp:84
+#, fuzzy
+msgid "Cannot write to %1: %2"
+msgstr "Невъзможен запис в %1 : %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Не може да се чете от %1"
 
 #~ msgid "Parse Error"
 #~ msgstr "Грешка при обработка"
