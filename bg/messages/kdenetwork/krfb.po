@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: krfb\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-04-16 01:46+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2015-01-13 20:06+0000\n"
 "PO-Revision-Date: 2013-07-25 15:34+0300\n"
 "Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
 "Language-Team: Bulgarian <dict@ludost.net>\n"
@@ -20,14 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Ясен Праматаров,Златко Попов"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "yasen@lindeas.com,zlatkopopov@fsa-bg.org"
 
 #: connectiondialog.cpp:35
 msgid "New Connection"
@@ -42,10 +34,7 @@ msgid "Refuse Connection"
 msgstr "Отхвърляне на връзката"
 
 #: connectiondialog.cpp:81
-#, fuzzy, kde-format
-#| msgid ""
-#| "Somebody is requesting a connection to your computer. Granting this will "
-#| "allow the remote user to watch your desktop. "
+#, fuzzy
 msgid ""
 "You have requested to share your desktop with %1. If you proceed, you will "
 "allow the remote user to watch your desktop."
@@ -54,56 +43,16 @@ msgstr ""
 "да наблюдава екрана ви. "
 
 #: invitationsrfbclient.cpp:69
-#, kde-format
 msgid "Accepted connection from %1"
 msgstr "Приета е връзка от %1."
 
 #: invitationsrfbclient.cpp:75 tubesrfbclient.cpp:64
-#, kde-format
 msgid "Received connection from %1, on hold (waiting for confirmation)"
 msgstr "Връзката от %1 чака за потвърждение."
 
 #: invitationsrfbserver.cpp:46
-#, kde-format
 msgid "%1@%2 (shared desktop)"
 msgstr "%1@%2 (споделяне на работното място)"
-
-#. i18n: ectx: label, entry (useDefaultPort), group (TCP)
-#: krfb.kcfg:8
-msgid "Use the default port for VNC (5900)"
-msgstr "Използване на подразбиращ се порт за VNC (5900)"
-
-#. i18n: ectx: label, entry (port), group (TCP)
-#: krfb.kcfg:12
-msgid "This is the port on which krfb will listen."
-msgstr "Това е портът, на който ще слуша krfb."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_publishService)
-#. i18n: ectx: label, entry (publishService), group (TCP)
-#: krfb.kcfg:16 ui/configtcp.ui:22
-msgid "Announce the service on the local network"
-msgstr "Обявяване на услугата в локалната мрежа"
-
-#. i18n: ectx: label, entry (allowDesktopControl), group (Security)
-#: krfb.kcfg:22
-msgid "Allow remote connections to manage the desktop."
-msgstr "Разрешаване на отдалечени връзки да управляват работната среда."
-
-#. i18n: ectx: label, entry (allowUnattendedAccess), group (Security)
-#: krfb.kcfg:26
-msgid "Allow connections without an invitation."
-msgstr "Разрешаване на непоканени връзки."
-
-#. i18n: ectx: label, entry (unattendedAccessPassword), group (Security)
-#. i18n: ectx: label, entry (desktopSharingPassword), group (Security)
-#: krfb.kcfg:30 krfb.kcfg:33
-msgid "Password for uninvited connections."
-msgstr "Парола за непоканени връзки."
-
-#. i18n: ectx: label, entry (preferredFrameBufferPlugin), group (FrameBuffer)
-#: krfb.kcfg:38
-msgid "Preferred Frame Buffer Plugin"
-msgstr "Предпочитана приставка за фреймбуфер"
 
 #: main.cpp:42
 msgid "VNC-compatible server to share KDE desktops"
@@ -223,14 +172,6 @@ msgstr ""
 
 #: mainwindow.cpp:207
 #, fuzzy
-#| msgid ""
-#| "(<a href=\"whatsthis:This field contains the address of your computer and "
-#| "the display number, separated by a colon. The address is just a hint - "
-#| "you can use any address that can reach your computer. Desktop Sharing "
-#| "tries to guess your address from your network configuration, but does not "
-#| "always succeed in doing so. If your computer is behind a firewall it may "
-#| "have a different address or be unreachable for other computers.\">Help</"
-#| "a>)"
 msgid ""
 "This field contains the address of your computer and the port number, "
 "separated by a colon.\n"
@@ -250,13 +191,14 @@ msgstr ""
 "намира зад защитна стена (firewall), той може да бъде недостъпен за "
 "компютрите отвъд стената.\">помощ</a>)"
 
+#. i18n: file: ui/mainwidget.ui:83
 #. i18n: ectx: property (whatsThis), widget (QLabel, titleLabel)
+#. i18n: file: ui/mainwidget.ui:86
 #. i18n: ectx: property (text), widget (QLabel, titleLabel)
+#. i18n: file: ui/mainwidget.ui:114
 #. i18n: ectx: property (whatsThis), widget (QLabel, aboutLabel)
-#: mainwindow.cpp:208 mainwindow.cpp:215 ui/mainwidget.ui:83
-#: ui/mainwidget.ui:86 ui/mainwidget.ui:114
+#: mainwindow.cpp:208 mainwindow.cpp:215 rc.cpp:55 rc.cpp:58 rc.cpp:61
 #, fuzzy
-#| msgid "Desktop Sharing"
 msgid "KDE Desktop Sharing"
 msgstr "Споделяне на работното място"
 
@@ -278,13 +220,348 @@ msgstr "Мрежа"
 msgid "Security"
 msgstr "Сигурност"
 
+#. i18n: file: ui/configsecurity.ui:17
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowDesktopControl)
+#: rc.cpp:3
+msgid "Allow remote connections to control your desktop"
+msgstr "Разрешаване на отдалечени връзки да управляват работната среда"
+
+#. i18n: file: ui/configtcp.ui:22
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_publishService)
+#. i18n: file: krfb.kcfg:16
+#. i18n: ectx: label, entry (publishService), group (TCP)
+#: rc.cpp:6 rc.cpp:151
+msgid "Announce the service on the local network"
+msgstr "Обявяване на услугата в локалната мрежа"
+
+#. i18n: file: ui/configtcp.ui:32
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useDefaultPort)
+#: rc.cpp:9
+msgid "Use default port"
+msgstr "Използване на подразбиращ се порт"
+
+#. i18n: file: ui/configtcp.ui:50
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:12
+msgid "Listening port:"
+msgstr "Порт:"
+
+#. i18n: file: ui/connectionwidget.ui:47
+#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
+#: rc.cpp:15
+msgid "Attention"
+msgstr "Внимание"
+
+#. i18n: file: ui/connectionwidget.ui:72
+#. i18n: ectx: property (text), widget (QLabel, mainTextLabel)
+#: rc.cpp:18
+msgid ""
+"Somebody is requesting a connection to your computer. Granting this will "
+"allow the remote user to watch your desktop. "
+msgstr ""
+"Някой е заявил връзка с компютъра ви. Ако разрешите достъпа му, той ще може "
+"да наблюдава екрана ви. "
+
+#. i18n: file: ui/connectionwidget.ui:102
+#. i18n: ectx: property (text), widget (QLabel, TextLabel1)
+#: rc.cpp:21
+msgid "Remote system:"
+msgstr "Отдалечен компютър:"
+
+#. i18n: file: ui/connectionwidget.ui:118
+#. i18n: ectx: property (text), widget (QLabel, remoteHost)
+#: rc.cpp:24
+msgid "123.234.123.234"
+msgstr "123.234.123.234"
+
+#. i18n: file: ui/connectionwidget.ui:136
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbAllowRemoteControl)
+#. i18n: file: ui/tubesconnectionwidget.ui:101
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbAllowRemoteControl)
+#: rc.cpp:27 rc.cpp:139
+msgid ""
+"If you turn this option on, the remote user can enter keystrokes and use "
+"your mouse pointer. This gives them full control over your computer, so be "
+"careful. When the option is disabled the remote user can only watch your "
+"screen."
+msgstr ""
+"Ако включите тази отметка, отдалеченият потребител ще може да въвежда знаци "
+"и да използва показалеца на мишка. Това му дава пълен контрол върху вашия "
+"компютър, защото той може да прави всичко, което може да правите и вие. Ако "
+"отметката е изключена, отдалеченият потребител ще може само да наблюдава "
+"екрана на компютъра ви."
+
+#. i18n: file: ui/connectionwidget.ui:139
+#. i18n: ectx: property (text), widget (QCheckBox, cbAllowRemoteControl)
+#. i18n: file: ui/tubesconnectionwidget.ui:104
+#. i18n: ectx: property (text), widget (QCheckBox, cbAllowRemoteControl)
+#: rc.cpp:30 rc.cpp:142
+msgid "Allow remote user to &control keyboard and mouse"
+msgstr "&Разрешаване на поканения да контролира клавиатурата и мишката"
+
+#. i18n: file: ui/invitewidget.ui:40
+#. i18n: ectx: property (text), widget (QLabel, TextLabel2)
+#: rc.cpp:33
+msgid "Welcome to KDE Desktop Sharing"
+msgstr "Добре дошли в програмата за споделяне на работното място"
+
+#. i18n: file: ui/invitewidget.ui:50
+#. i18n: ectx: property (text), widget (QLabel, helpLabel)
+#: rc.cpp:36
+msgid ""
+"KDE Desktop Sharing allows you to invite somebody at a remote location to "
+"watch and possibly control your desktop. <a href=\"whatsthis\">More about "
+"invitations...</a>"
+msgstr ""
+
+#. i18n: file: ui/invitewidget.ui:105
+#. i18n: ectx: property (whatsThis), widget (QPushButton, btnCreateInvite)
+#: rc.cpp:39
+msgid ""
+"Create a new invitation and display the connection data. Use this option if "
+"you want to invite somebody personally, for example, to give the connection "
+"data over the phone."
+msgstr ""
+"Създаване на персонална покана и показване на данните за връзка. Използвайте "
+"тази възможност, ако искате да поканите някого еднократно. Трябва да "
+"предадете данните за връзка на отдалечения потребител по някакъв начин. "
+"Примерно по телефона."
+
+#. i18n: file: ui/invitewidget.ui:108
+#. i18n: ectx: property (text), widget (QPushButton, btnCreateInvite)
+#: rc.cpp:42
+msgid "Create &Personal Invitation..."
+msgstr "&Създаване на лична покана..."
+
+#. i18n: file: ui/invitewidget.ui:115
+#. i18n: ectx: property (whatsThis), widget (QPushButton, btnEmailInvite)
+#: rc.cpp:45
+msgid ""
+"This button will start your email application with a pre-configured text "
+"that explains to the recipient how to connect to your computer. "
+msgstr ""
+"Създаване на персонална покана и изпращане на е-писмо до поканения. Ако "
+"натиснете бутона, ще бъдат генерирани нови данни и ще бъде отворен "
+"стандартния пощенски клиент с предварително дефинирано писмо, което ще "
+"съдържа обяснения за отдалечения потребител как да се свърже към работното "
+"ви място. Вие трябва да попълните някои данни и да изпратите писмото."
+
+#. i18n: file: ui/invitewidget.ui:118
+#. i18n: ectx: property (text), widget (QPushButton, btnEmailInvite)
+#: rc.cpp:48
+msgid "Invite via &Email..."
+msgstr "&Покана по е-поща..."
+
+#. i18n: file: ui/invitewidget.ui:125
+#. i18n: ectx: property (text), widget (QPushButton, btnManageInvite)
+#: rc.cpp:52
+#, no-c-format
+msgid "&Manage Invitations (%1)..."
+msgstr "&Управление на поканите (%1)..."
+
+#. i18n: file: ui/mainwidget.ui:117
+#. i18n: ectx: property (text), widget (QLabel, aboutLabel)
+#: rc.cpp:64
+msgid ""
+"KDE Desktop Sharing allows you to grant permission to someone at a remote "
+"location for viewing and possibly controlling your desktop."
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:145
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, enableSharingCheckBox)
+#: rc.cpp:67
+#, fuzzy
+msgid "Starts/Stops Remote Desktop Sharing"
+msgstr "Управление на поканите"
+
+#. i18n: file: ui/mainwidget.ui:148
+#. i18n: ectx: property (text), widget (QCheckBox, enableSharingCheckBox)
+#: rc.cpp:70
+#, fuzzy
+msgid "&Enable Desktop Sharing"
+msgstr "Споделяне на работното място"
+
+#. i18n: file: ui/mainwidget.ui:170
+#. i18n: ectx: property (title), widget (QGroupBox, detailsGroupBox)
+#: rc.cpp:73
+#, fuzzy
+msgid "Connection Details"
+msgstr "Connection side image"
+
+#. i18n: file: ui/mainwidget.ui:193
+#. i18n: ectx: property (text), widget (QLabel, addressLabel)
+#: rc.cpp:76
+msgid "&Address"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:214
+#. i18n: ectx: property (whatsThis), widget (QToolButton, addressAboutButton)
+#: rc.cpp:79
+msgid "More about this address"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:217
+#. i18n: ectx: property (text), widget (QToolButton, addressAboutButton)
+#. i18n: file: ui/mainwidget.ui:397
+#. i18n: ectx: property (text), widget (QToolButton, unattendedAboutButton)
+#: rc.cpp:82 rc.cpp:121
+msgid "About"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:235
+#. i18n: ectx: property (whatsThis), widget (QLabel, addressDisplayLabel)
+#: rc.cpp:85
+msgid ""
+"Address required by remote users to connect to your desktop. Click about "
+"button on the right for more info."
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:238
+#. i18n: ectx: property (text), widget (QLabel, addressDisplayLabel)
+#: rc.cpp:88
+msgid "127.0.0.1 : 5900"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:269
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: rc.cpp:91
+#, fuzzy
+msgid "&Password"
+msgstr "<b>Парола:</b>"
+
+#. i18n: file: ui/mainwidget.ui:290
+#. i18n: ectx: property (whatsThis), widget (QToolButton, passwordEditButton)
+#: rc.cpp:94
+#, fuzzy
+msgid "Edit/Save Desktop Sharing Password"
+msgstr "Грешка при опит за споделяне на работното място"
+
+#. i18n: file: ui/mainwidget.ui:293
+#. i18n: ectx: property (text), widget (QToolButton, passwordEditButton)
+#: rc.cpp:97
+msgid "Edit"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:311
+#. i18n: ectx: property (whatsThis), widget (QLabel, passwordDisplayLabel)
+#: rc.cpp:100
+msgid ""
+"Password required by remote users to connect to your desktop. Click the edit "
+"button on the right to change password."
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:314
+#. i18n: ectx: property (text), widget (QLabel, passwordDisplayLabel)
+#: rc.cpp:103
+msgid "TemporaryPassword"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:340
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, unattendedGroupBox)
+#. i18n: file: ui/mainwidget.ui:378
+#. i18n: ectx: property (text), widget (QLabel, unattendedAboutLabel)
+#: rc.cpp:106 rc.cpp:115
+msgid ""
+"Unattended Access allows a remote user with the password to gain control to "
+"your desktop without your explicit confirmation."
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:343
+#. i18n: ectx: property (title), widget (QGroupBox, unattendedGroupBox)
+#: rc.cpp:109
+msgid "Unattended Access"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:375
+#. i18n: ectx: property (whatsThis), widget (QLabel, unattendedAboutLabel)
+#: rc.cpp:112
+msgid ""
+"Unattended Access allows a remote user with the password to gain control to "
+"your desktop without your explicit confirmation. Click \"About\" button on "
+"right to know more."
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:394
+#. i18n: ectx: property (whatsThis), widget (QToolButton, unattendedAboutButton)
+#: rc.cpp:118
+msgid "Know more about Unattended Access"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:437
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, enableUnattendedCheckBox)
+#: rc.cpp:124
+msgid ""
+"Starts/Stops unattended access to your desktop. Click on button on right to "
+"change password, and \"About\" button to know more."
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:440
+#. i18n: ectx: property (text), widget (QCheckBox, enableUnattendedCheckBox)
+#: rc.cpp:127
+msgid "Enable &Unattended Access"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:465
+#. i18n: ectx: property (whatsThis), widget (KPushButton, unattendedPasswordButton)
+#: rc.cpp:130
+msgid "Change password for Unattended Access"
+msgstr ""
+
+#. i18n: file: ui/mainwidget.ui:468
+#. i18n: ectx: property (text), widget (KPushButton, unattendedPasswordButton)
+#: rc.cpp:133
+msgid "&Change Unattended Password"
+msgstr ""
+
+#. i18n: file: ui/tubesconnectionwidget.ui:48
+#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
+#: rc.cpp:136
+msgid "Confirmation"
+msgstr "Потвърждение"
+
+#. i18n: file: krfb.kcfg:8
+#. i18n: ectx: label, entry (useDefaultPort), group (TCP)
+#: rc.cpp:145
+msgid "Use the default port for VNC (5900)"
+msgstr "Използване на подразбиращ се порт за VNC (5900)"
+
+#. i18n: file: krfb.kcfg:12
+#. i18n: ectx: label, entry (port), group (TCP)
+#: rc.cpp:148
+msgid "This is the port on which krfb will listen."
+msgstr "Това е портът, на който ще слуша krfb."
+
+#. i18n: file: krfb.kcfg:22
+#. i18n: ectx: label, entry (allowDesktopControl), group (Security)
+#: rc.cpp:154
+msgid "Allow remote connections to manage the desktop."
+msgstr "Разрешаване на отдалечени връзки да управляват работната среда."
+
+#. i18n: file: krfb.kcfg:26
+#. i18n: ectx: label, entry (allowUnattendedAccess), group (Security)
+#: rc.cpp:157
+msgid "Allow connections without an invitation."
+msgstr "Разрешаване на непоканени връзки."
+
+#. i18n: file: krfb.kcfg:30
+#. i18n: ectx: label, entry (unattendedAccessPassword), group (Security)
+#. i18n: file: krfb.kcfg:33
+#. i18n: ectx: label, entry (desktopSharingPassword), group (Security)
+#: rc.cpp:160 rc.cpp:163
+msgid "Password for uninvited connections."
+msgstr "Парола за непоканени връзки."
+
+#. i18n: file: krfb.kcfg:38
+#. i18n: ectx: label, entry (preferredFrameBufferPlugin), group (FrameBuffer)
+#: rc.cpp:166
+msgid "Preferred Frame Buffer Plugin"
+msgstr "Предпочитана приставка за фреймбуфер"
+
 #: rfbservermanager.cpp:216
-#, kde-format
 msgid "The remote user %1 is now connected."
 msgstr "Отдалеченият потребител %1 е свързан."
 
 #: rfbservermanager.cpp:230
-#, kde-format
 msgid "The remote user %1 disconnected."
 msgstr "Отдалеченият потребител %1 е изключен."
 
@@ -301,7 +578,6 @@ msgid "Desktop Sharing - disconnected"
 msgstr "Споделяне на работното място - изключване"
 
 #: trayicon.cpp:119 trayicon.cpp:141
-#, kde-format
 msgid "Desktop Sharing - connected with %1"
 msgstr "Споделяне на работното място - свързан с %1"
 
@@ -309,256 +585,13 @@ msgstr "Споделяне на работното място - свързан �
 msgid "Desktop Sharing - connected"
 msgstr "Споделяне на работното място - свързан"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowDesktopControl)
-#: ui/configsecurity.ui:17
-msgid "Allow remote connections to control your desktop"
-msgstr "Разрешаване на отдалечени връзки да управляват работната среда"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ясен Праматаров,Златко Попов"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useDefaultPort)
-#: ui/configtcp.ui:32
-msgid "Use default port"
-msgstr "Използване на подразбиращ се порт"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/configtcp.ui:50
-msgid "Listening port:"
-msgstr "Порт:"
-
-#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
-#: ui/connectionwidget.ui:47
-msgid "Attention"
-msgstr "Внимание"
-
-#. i18n: ectx: property (text), widget (QLabel, mainTextLabel)
-#: ui/connectionwidget.ui:72
-msgid ""
-"Somebody is requesting a connection to your computer. Granting this will "
-"allow the remote user to watch your desktop. "
-msgstr ""
-"Някой е заявил връзка с компютъра ви. Ако разрешите достъпа му, той ще може "
-"да наблюдава екрана ви. "
-
-#. i18n: ectx: property (text), widget (QLabel, TextLabel1)
-#: ui/connectionwidget.ui:102
-msgid "Remote system:"
-msgstr "Отдалечен компютър:"
-
-#. i18n: ectx: property (text), widget (QLabel, remoteHost)
-#: ui/connectionwidget.ui:118
-msgid "123.234.123.234"
-msgstr "123.234.123.234"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, cbAllowRemoteControl)
-#: ui/connectionwidget.ui:136 ui/tubesconnectionwidget.ui:101
-msgid ""
-"If you turn this option on, the remote user can enter keystrokes and use "
-"your mouse pointer. This gives them full control over your computer, so be "
-"careful. When the option is disabled the remote user can only watch your "
-"screen."
-msgstr ""
-"Ако включите тази отметка, отдалеченият потребител ще може да въвежда знаци "
-"и да използва показалеца на мишка. Това му дава пълен контрол върху вашия "
-"компютър, защото той може да прави всичко, което може да правите и вие. Ако "
-"отметката е изключена, отдалеченият потребител ще може само да наблюдава "
-"екрана на компютъра ви."
-
-#. i18n: ectx: property (text), widget (QCheckBox, cbAllowRemoteControl)
-#: ui/connectionwidget.ui:139 ui/tubesconnectionwidget.ui:104
-msgid "Allow remote user to &control keyboard and mouse"
-msgstr "&Разрешаване на поканения да контролира клавиатурата и мишката"
-
-#. i18n: ectx: property (text), widget (QLabel, TextLabel2)
-#: ui/invitewidget.ui:40
-msgid "Welcome to KDE Desktop Sharing"
-msgstr "Добре дошли в програмата за споделяне на работното място"
-
-#. i18n: ectx: property (text), widget (QLabel, helpLabel)
-#: ui/invitewidget.ui:50
-msgid ""
-"KDE Desktop Sharing allows you to invite somebody at a remote location to "
-"watch and possibly control your desktop. <a href=\"whatsthis\">More about "
-"invitations...</a>"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, btnCreateInvite)
-#: ui/invitewidget.ui:105
-msgid ""
-"Create a new invitation and display the connection data. Use this option if "
-"you want to invite somebody personally, for example, to give the connection "
-"data over the phone."
-msgstr ""
-"Създаване на персонална покана и показване на данните за връзка. Използвайте "
-"тази възможност, ако искате да поканите някого еднократно. Трябва да "
-"предадете данните за връзка на отдалечения потребител по някакъв начин. "
-"Примерно по телефона."
-
-#. i18n: ectx: property (text), widget (QPushButton, btnCreateInvite)
-#: ui/invitewidget.ui:108
-msgid "Create &Personal Invitation..."
-msgstr "&Създаване на лична покана..."
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, btnEmailInvite)
-#: ui/invitewidget.ui:115
-msgid ""
-"This button will start your email application with a pre-configured text "
-"that explains to the recipient how to connect to your computer. "
-msgstr ""
-"Създаване на персонална покана и изпращане на е-писмо до поканения. Ако "
-"натиснете бутона, ще бъдат генерирани нови данни и ще бъде отворен "
-"стандартния пощенски клиент с предварително дефинирано писмо, което ще "
-"съдържа обяснения за отдалечения потребител как да се свърже към работното "
-"ви място. Вие трябва да попълните някои данни и да изпратите писмото."
-
-#. i18n: ectx: property (text), widget (QPushButton, btnEmailInvite)
-#: ui/invitewidget.ui:118
-msgid "Invite via &Email..."
-msgstr "&Покана по е-поща..."
-
-#. i18n: ectx: property (text), widget (QPushButton, btnManageInvite)
-#: ui/invitewidget.ui:125
-#, no-c-format, kde-format
-msgid "&Manage Invitations (%1)..."
-msgstr "&Управление на поканите (%1)..."
-
-#. i18n: ectx: property (text), widget (QLabel, aboutLabel)
-#: ui/mainwidget.ui:117
-msgid ""
-"KDE Desktop Sharing allows you to grant permission to someone at a remote "
-"location for viewing and possibly controlling your desktop."
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, enableSharingCheckBox)
-#: ui/mainwidget.ui:145
-#, fuzzy
-#| msgid "Manage Invitations - Desktop Sharing"
-msgid "Starts/Stops Remote Desktop Sharing"
-msgstr "Управление на поканите"
-
-#. i18n: ectx: property (text), widget (QCheckBox, enableSharingCheckBox)
-#: ui/mainwidget.ui:148
-#, fuzzy
-#| msgid "Desktop Sharing"
-msgid "&Enable Desktop Sharing"
-msgstr "Споделяне на работното място"
-
-#. i18n: ectx: property (title), widget (QGroupBox, detailsGroupBox)
-#: ui/mainwidget.ui:170
-#, fuzzy
-#| msgid "Connection side image"
-msgid "Connection Details"
-msgstr "Connection side image"
-
-#. i18n: ectx: property (text), widget (QLabel, addressLabel)
-#: ui/mainwidget.ui:193
-msgid "&Address"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QToolButton, addressAboutButton)
-#: ui/mainwidget.ui:214
-msgid "More about this address"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QToolButton, addressAboutButton)
-#. i18n: ectx: property (text), widget (QToolButton, unattendedAboutButton)
-#: ui/mainwidget.ui:217 ui/mainwidget.ui:397
-msgid "About"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, addressDisplayLabel)
-#: ui/mainwidget.ui:235
-msgid ""
-"Address required by remote users to connect to your desktop. Click about "
-"button on the right for more info."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, addressDisplayLabel)
-#: ui/mainwidget.ui:238
-msgid "127.0.0.1 : 5900"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
-#: ui/mainwidget.ui:269
-#, fuzzy
-#| msgid "<b>Password:</b>"
-msgid "&Password"
-msgstr "<b>Парола:</b>"
-
-#. i18n: ectx: property (whatsThis), widget (QToolButton, passwordEditButton)
-#: ui/mainwidget.ui:290
-#, fuzzy
-#| msgid "Desktop Sharing Error"
-msgid "Edit/Save Desktop Sharing Password"
-msgstr "Грешка при опит за споделяне на работното място"
-
-#. i18n: ectx: property (text), widget (QToolButton, passwordEditButton)
-#: ui/mainwidget.ui:293
-msgid "Edit"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, passwordDisplayLabel)
-#: ui/mainwidget.ui:311
-msgid ""
-"Password required by remote users to connect to your desktop. Click the edit "
-"button on the right to change password."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, passwordDisplayLabel)
-#: ui/mainwidget.ui:314
-msgid "TemporaryPassword"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, unattendedGroupBox)
-#. i18n: ectx: property (text), widget (QLabel, unattendedAboutLabel)
-#: ui/mainwidget.ui:340 ui/mainwidget.ui:378
-msgid ""
-"Unattended Access allows a remote user with the password to gain control to "
-"your desktop without your explicit confirmation."
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, unattendedGroupBox)
-#: ui/mainwidget.ui:343
-msgid "Unattended Access"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QLabel, unattendedAboutLabel)
-#: ui/mainwidget.ui:375
-msgid ""
-"Unattended Access allows a remote user with the password to gain control to "
-"your desktop without your explicit confirmation. Click \"About\" button on "
-"right to know more."
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QToolButton, unattendedAboutButton)
-#: ui/mainwidget.ui:394
-msgid "Know more about Unattended Access"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, enableUnattendedCheckBox)
-#: ui/mainwidget.ui:437
-msgid ""
-"Starts/Stops unattended access to your desktop. Click on button on right to "
-"change password, and \"About\" button to know more."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, enableUnattendedCheckBox)
-#: ui/mainwidget.ui:440
-msgid "Enable &Unattended Access"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (KPushButton, unattendedPasswordButton)
-#: ui/mainwidget.ui:465
-msgid "Change password for Unattended Access"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (KPushButton, unattendedPasswordButton)
-#: ui/mainwidget.ui:468
-msgid "&Change Unattended Password"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
-#: ui/tubesconnectionwidget.ui:48
-msgid "Confirmation"
-msgstr "Потвърждение"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "yasen@lindeas.com,zlatkopopov@fsa-bg.org"
 
 #~ msgid "Failed login attempt from %1: wrong password"
 #~ msgstr "Неуспешен опит за връзка от %1, поради грешна парола."
