@@ -1,7 +1,6 @@
 add_subdirectory(applications)
 add_subdirectory(kdeaccessibility)
 add_subdirectory(kdeadmin)
-add_subdirectory(kdeartwork)
 add_subdirectory(kdegraphics)
 add_subdirectory(kdelibs)
 add_subdirectory(kdemultimedia)
