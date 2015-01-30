@@ -1,1 +1,1 @@
-add_subdirectory(oxygen-icons)
+add_subdirectory(ariya-icons)
