@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okular\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-01-31 01:09+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2011-10-31 19:00+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
@@ -57,7 +57,7 @@ msgstr "Mota:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: file: conf/dlgpresentationbase.ui:71
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: conf/widgetannottools.cpp:286 rc.cpp:111 rc.cpp:210
+#: conf/widgetannottools.cpp:286 rc.cpp:141 rc.cpp:240
 msgid "Appearance"
 msgstr "Itxura"
 
@@ -114,6 +114,59 @@ msgstr "Aurkezpena"
 msgid "Edit annotation tool"
 msgstr "Oharraren propietateak"
 
+#: conf/dlgpresentation.cpp:28
+msgctxt "@label:listbox The current screen, for the presentation mode"
+msgid "Current Screen"
+msgstr "Uneko pantaila"
+
+#: conf/dlgpresentation.cpp:29
+msgctxt "@label:listbox The default screen for the presentation mode"
+msgid "Default Screen"
+msgstr "Pantaila lehenetsia"
+
+#: conf/dlgpresentation.cpp:33
+msgctxt "@label:listbox %1 is the screen number (0, 1, ...)"
+msgid "Screen %1"
+msgstr "%1 pantaila"
+
+#: conf/dlgpresentation.cpp:48
+msgctxt "Advance every %1 seconds"
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " segundo"
+msgstr[1] " segundo"
+
+#: conf/dlgperformance.cpp:43
+msgid ""
+"Keeps used memory as low as possible. Do not reuse anything. (For systems "
+"with low memory.)"
+msgstr ""
+"Erabilitako memoria ahalik eta baxuena mantentzen saiatzen da. Ez ezer "
+"berrerabili (memoria gutxiko sistementzat)"
+
+#: conf/dlgperformance.cpp:46
+msgid ""
+"A good compromise between memory usage and speed gain. Preload next page and "
+"boost searches. (For systems with 256MB of memory, typically.)"
+msgstr ""
+"Memoriaren erabilera eta abiaduraren arteko oreka. Aurre-kargatu hurrengo "
+"orria eta bizkortu bilaketak (256 MB-eko memoria duten sistementzat)"
+
+#: conf/dlgperformance.cpp:49
+msgid ""
+"Keeps everything in memory. Preload next pages. Boost searches. (For systems "
+"with more than 512MB of memory.)"
+msgstr ""
+"Dena memorian mantentzen du. Hurrengo orriak aurre-kargatu. Bizkortu "
+"bilaketak (512 MB baina gehiago duten sistementzat)"
+
+#: conf/dlgperformance.cpp:53
+#, no-c-format
+msgid ""
+"Loads and keeps everything in memory. Preload all pages. (Will use at "
+"maximum 50% of your total memory or your free memory, whatever is bigger.)"
+msgstr ""
+
 #: conf/preferencesdialog.cpp:40
 msgid "General"
 msgstr "Orokorra"
@@ -163,66 +216,13 @@ msgstr "Oharraren propietateak"
 
 #. i18n: file: conf/dlgeditorbase.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: conf/preferencesdialog.cpp:56 rc.cpp:99
+#: conf/preferencesdialog.cpp:56 rc.cpp:333
 msgid "Editor"
 msgstr "Editorea"
 
 #: conf/preferencesdialog.cpp:56
 msgid "Editor Options"
 msgstr "Editorearen aukerak"
-
-#: conf/dlgperformance.cpp:43
-msgid ""
-"Keeps used memory as low as possible. Do not reuse anything. (For systems "
-"with low memory.)"
-msgstr ""
-"Erabilitako memoria ahalik eta baxuena mantentzen saiatzen da. Ez ezer "
-"berrerabili (memoria gutxiko sistementzat)"
-
-#: conf/dlgperformance.cpp:46
-msgid ""
-"A good compromise between memory usage and speed gain. Preload next page and "
-"boost searches. (For systems with 256MB of memory, typically.)"
-msgstr ""
-"Memoriaren erabilera eta abiaduraren arteko oreka. Aurre-kargatu hurrengo "
-"orria eta bizkortu bilaketak (256 MB-eko memoria duten sistementzat)"
-
-#: conf/dlgperformance.cpp:49
-msgid ""
-"Keeps everything in memory. Preload next pages. Boost searches. (For systems "
-"with more than 512MB of memory.)"
-msgstr ""
-"Dena memorian mantentzen du. Hurrengo orriak aurre-kargatu. Bizkortu "
-"bilaketak (512 MB baina gehiago duten sistementzat)"
-
-#: conf/dlgperformance.cpp:53
-#, no-c-format
-msgid ""
-"Loads and keeps everything in memory. Preload all pages. (Will use at "
-"maximum 50% of your total memory or your free memory, whatever is bigger.)"
-msgstr ""
-
-#: conf/dlgpresentation.cpp:28
-msgctxt "@label:listbox The current screen, for the presentation mode"
-msgid "Current Screen"
-msgstr "Uneko pantaila"
-
-#: conf/dlgpresentation.cpp:29
-msgctxt "@label:listbox The default screen for the presentation mode"
-msgid "Default Screen"
-msgstr "Pantaila lehenetsia"
-
-#: conf/dlgpresentation.cpp:33
-msgctxt "@label:listbox %1 is the screen number (0, 1, ...)"
-msgid "Screen %1"
-msgstr "%1 pantaila"
-
-#: conf/dlgpresentation.cpp:48
-msgctxt "Advance every %1 seconds"
-msgid " second"
-msgid_plural " seconds"
-msgstr[0] " segundo"
-msgstr[1] " segundo"
 
 #: conf/dlgeditor.cpp:28
 msgctxt "Text editor"
@@ -277,23 +277,22 @@ msgstr ""
 "</ul>\n"
 "Ez bada %f zehazten, fitxategi-izena zehaztutako komandoari erantsiko zaio."
 
-#: core/generator.cpp:629
-msgid "Plain &Text..."
-msgstr "&Testu soila..."
+#: core/sourcereference.cpp:92
+msgctxt "'source' is a source file"
+msgid "Source: %1"
+msgstr "Iturburua: %1"
 
-#: core/generator.cpp:632
-msgid "PDF"
-msgstr "PDF"
+#: core/chooseenginedialog.cpp:22
+msgid "Backend Selection"
+msgstr "Motorraren hautapena"
 
-#: core/generator.cpp:637
-msgctxt "This is the document format"
-msgid "OpenDocument Text"
-msgstr "OpenDocument testua"
-
-#: core/generator.cpp:641
-msgctxt "This is the document format"
-msgid "HTML"
-msgstr "HTML"
+#: core/chooseenginedialog.cpp:33
+msgid ""
+"<qt>More than one backend found for the MIME type:<br /><b>%1</b> (%2).<br /"
+"><br />Please select which one to use:</qt>"
+msgstr ""
+"<qt>Motor bat baino gehiago aurkitu dira honako MIME motarentzako:<br /><b>"
+"%1</b> (%2).<br /><br />Hautatu bat erabiltzeko:</qt>"
 
 #: core/documentcommands.cpp:65
 #, fuzzy
@@ -351,87 +350,6 @@ msgstr ""
 msgctxt "Edit the state of a group of form buttons"
 msgid "edit form button states"
 msgstr ""
-
-#: core/action.cpp:106
-msgid "Go to page %1"
-msgstr "Joan %1 orrialdera"
-
-#: core/action.cpp:107
-msgid "Open external file"
-msgstr "Ireki kanpoko fitxategia"
-
-#: core/action.cpp:165
-msgid "Execute '%1'..."
-msgstr "Exekutatu '%1'..."
-
-#: core/action.cpp:264
-msgid "First Page"
-msgstr "Aurreneko orrialdea"
-
-#: core/action.cpp:266 ui/presentationwidget.cpp:161
-msgid "Previous Page"
-msgstr "Aurreko orrialdea"
-
-#: core/action.cpp:268 ui/presentationwidget.cpp:177
-msgid "Next Page"
-msgstr "Hurrengo orrialdea"
-
-#: core/action.cpp:270
-msgid "Last Page"
-msgstr "Azken orrialdea"
-
-#: core/action.cpp:272
-msgid "Back"
-msgstr "Atzera"
-
-#: core/action.cpp:274
-msgid "Forward"
-msgstr "Aurrera"
-
-#: core/action.cpp:276
-msgid "Quit"
-msgstr "Irten"
-
-#: core/action.cpp:278
-msgid "Start Presentation"
-msgstr "Hasi aurkezpena"
-
-#: core/action.cpp:280
-msgid "End Presentation"
-msgstr "Amaitu aurkezpena"
-
-#: core/action.cpp:282
-msgid "Find..."
-msgstr "Bilatu..."
-
-#: core/action.cpp:284
-msgid "Go To Page..."
-msgstr "Joan orrialdera..."
-
-#: core/action.cpp:331
-msgid "Play sound..."
-msgstr "Erreproduzitu soinua..."
-
-#: core/action.cpp:394
-msgid "Play movie..."
-msgstr "Erreproduzitu filmea..."
-
-#: core/sourcereference.cpp:92
-msgctxt "'source' is a source file"
-msgid "Source: %1"
-msgstr "Iturburua: %1"
-
-#: core/chooseenginedialog.cpp:22
-msgid "Backend Selection"
-msgstr "Motorraren hautapena"
-
-#: core/chooseenginedialog.cpp:33
-msgid ""
-"<qt>More than one backend found for the MIME type:<br /><b>%1</b> (%2).<br /"
-"><br />Please select which one to use:</qt>"
-msgstr ""
-"<qt>Motor bat baino gehiago aurkitu dira honako MIME motarentzako:<br /><b>"
-"%1</b> (%2).<br /><br />Hautatu bat erabiltzeko:</qt>"
 
 #: core/document.cpp:193
 msgctxt "paper size"
@@ -890,83 +808,286 @@ msgstr "Fitxategi-tamaina"
 msgid "Page Size"
 msgstr "Orri-tamaina"
 
+#: core/action.cpp:106
+msgid "Go to page %1"
+msgstr "Joan %1 orrialdera"
+
+#: core/action.cpp:107
+msgid "Open external file"
+msgstr "Ireki kanpoko fitxategia"
+
+#: core/action.cpp:165
+msgid "Execute '%1'..."
+msgstr "Exekutatu '%1'..."
+
+#: core/action.cpp:264
+msgid "First Page"
+msgstr "Aurreneko orrialdea"
+
+#: core/action.cpp:266 ui/presentationwidget.cpp:161
+msgid "Previous Page"
+msgstr "Aurreko orrialdea"
+
+#: core/action.cpp:268 ui/presentationwidget.cpp:177
+msgid "Next Page"
+msgstr "Hurrengo orrialdea"
+
+#: core/action.cpp:270
+msgid "Last Page"
+msgstr "Azken orrialdea"
+
+#: core/action.cpp:272
+msgid "Back"
+msgstr "Atzera"
+
+#: core/action.cpp:274
+msgid "Forward"
+msgstr "Aurrera"
+
+#: core/action.cpp:276
+msgid "Quit"
+msgstr "Irten"
+
+#: core/action.cpp:278
+msgid "Start Presentation"
+msgstr "Hasi aurkezpena"
+
+#: core/action.cpp:280
+msgid "End Presentation"
+msgstr "Amaitu aurkezpena"
+
+#: core/action.cpp:282
+msgid "Find..."
+msgstr "Bilatu..."
+
+#: core/action.cpp:284
+msgid "Go To Page..."
+msgstr "Joan orrialdera..."
+
+#: core/action.cpp:331
+msgid "Play sound..."
+msgstr "Erreproduzitu soinua..."
+
+#: core/action.cpp:394
+msgid "Play movie..."
+msgstr "Erreproduzitu filmea..."
+
+#: core/generator.cpp:629
+msgid "Plain &Text..."
+msgstr "&Testu soila..."
+
+#: core/generator.cpp:632
+msgid "PDF"
+msgstr "PDF"
+
+#: core/generator.cpp:637
+msgctxt "This is the document format"
+msgid "OpenDocument Text"
+msgstr "OpenDocument testua"
+
+#: core/generator.cpp:641
+msgctxt "This is the document format"
+msgid "HTML"
+msgstr "HTML"
+
 #: core/textdocumentsettings.cpp:41
 #, fuzzy
 msgid "&Default Font:"
 msgstr "Zoom &lehenetsia:"
 
-#: ui/guiutils.cpp:83
-msgid "Geometry"
-msgstr "Geometria"
-
-#: ui/guiutils.cpp:89 ui/annotationwidgets.cpp:539
-msgid "Highlight"
-msgstr "Nabarmendu"
-
-#: ui/guiutils.cpp:92 ui/annotationwidgets.cpp:540
-#: ui/pageviewannotator.cpp:1094
-#, fuzzy
-msgid "Squiggle"
-msgstr "Zirrimarra"
-
-#: ui/guiutils.cpp:95 ui/annotationwidgets.cpp:541
-#: ui/pageviewannotator.cpp:1102
-msgid "Underline"
-msgstr "Azpimarratua"
-
-#: ui/guiutils.cpp:98
-#, fuzzy
-msgid "Strike Out"
-msgstr "Marratua"
-
-#: ui/guiutils.cpp:109
-msgid "Caret"
-msgstr "Kurtsorea"
-
-#: ui/guiutils.cpp:112
-msgid "File Attachment"
-msgstr "Fitxategi eranskina"
-
-#: ui/guiutils.cpp:115
-msgid "Sound"
-msgstr "Soinua"
-
-#: ui/guiutils.cpp:118
-msgid "Movie"
-msgstr "Filmea"
-
-#: ui/guiutils.cpp:121
-#, fuzzy
-msgctxt "Caption for a screen annotation"
-msgid "Screen"
-msgstr "Pantaila:"
-
-#: ui/guiutils.cpp:124
-msgctxt "Caption for a widget annotation"
-msgid "Widget"
+#: ui/side_reviews.cpp:61
+msgid ""
+"<div align=center><h3>No annotations</h3>To create new annotations press F6 "
+"or select <i>Tools -&gt; Review</i> from the menu.</div>"
 msgstr ""
+"<div align=center><h3>Oharrik ez</h3>Ohar berriak sortzeko sakatu F6 edo "
+"hautatu <i>Tresnak -&gt; Berrikusi</i> menutik.</div>"
 
-#: ui/guiutils.cpp:136
-msgctxt "Unknown author"
-msgid "Unknown"
-msgstr "Ezezaguna"
+#: ui/side_reviews.cpp:128
+msgid "Group by Page"
+msgstr "Elkartu orrialdearen arabera"
 
-#: ui/guiutils.cpp:153 ui/presentationwidget.cpp:350
+#: ui/side_reviews.cpp:133
+msgid "Group by Author"
+msgstr "Elkartu egilearen arabera"
+
+#: ui/side_reviews.cpp:141
+msgid "Show reviews for current page only"
+msgstr "Erakutsi uneko orriaren berrikuspenak soilik"
+
+#: ui/presentationwidget.cpp:149
+msgctxt "[document title/filename] – Presentation"
+msgid "%1 – Presentation"
+msgstr "%1 – Aurkezpena"
+
+#: ui/presentationwidget.cpp:200
+msgid "Switch Screen"
+msgstr "Aldatu pantaila"
+
+#: ui/presentationwidget.cpp:207
+msgctxt "%1 is the screen number (0, 1, ...)"
+msgid "Screen %1"
+msgstr "%1 pantaila"
+
+#: ui/presentationwidget.cpp:214
+msgid "Exit Presentation Mode"
+msgstr "Irten aurkezpen modutik"
+
+#: ui/presentationwidget.cpp:348
+msgid "Title: %1"
+msgstr "Izenburua: %1"
+
+#: ui/presentationwidget.cpp:350 ui/guiutils.cpp:153
 msgid "Author: %1"
 msgstr "Egilea: %1"
 
-#: ui/guiutils.cpp:204 ui/propertiesdialog.cpp:241
-msgid "Where do you want to save %1?"
-msgstr "Non nahi duzu %1 gordetzea?"
+#: ui/presentationwidget.cpp:352
+msgid "Pages: %1"
+msgstr "Orrialdeak: %1"
 
-#: ui/guiutils.cpp:213 ui/propertiesdialog.cpp:254
-msgid "Could not open \"%1\" for writing. File was not saved."
-msgstr "Ezin izan da \"%1\" ireki idazteko. Fitxategia ez da gorde."
+#: ui/presentationwidget.cpp:353
+msgid "Click to begin"
+msgstr "Egin klik hasteko"
+
+#: ui/presentationwidget.cpp:497
+#, fuzzy
+msgctxt "For Presentation"
+msgid "Pause"
+msgstr "Pausatu"
+
+#: ui/presentationwidget.cpp:502
+#, fuzzy
+msgctxt "For Presentation"
+msgid "Play"
+msgstr "Erreproduzitu"
+
+#: ui/presentationwidget.cpp:1420
+msgid ""
+"There are two ways of exiting presentation mode, you can press either ESC "
+"key or click with the quit button that appears when placing the mouse in the "
+"top-right corner. Of course you can cycle windows (Alt+TAB by default)"
+msgstr ""
+"Aurkezpen modutik irteteeko bi modu daude: Ihes tekla sakatzea edo sagua "
+"eskuineko goiko eskuinean kokatzean azaltzen den irtetzeko botoian klik "
+"egitea. Noski, lehioen artean ere mugi zaitezke (Alt+TAB lehenespenez)"
+
+#: ui/presentationwidget.cpp:1540
+msgctxt ""
+"Reason for inhibiting the screensaver activation, when the presentation mode "
+"is active"
+msgid "Giving a presentation"
+msgstr "Aurkezpena ematea"
+
+#: ui/sidebar.cpp:705 ui/annotationwidgets.cpp:333 shell/main.cpp:24
+#: part.cpp:158
+msgid "Okular"
+msgstr "Okular"
+
+#: ui/sidebar.cpp:706
+msgid "Show Text"
+msgstr "Erakutsi testua"
+
+#: ui/sidebar.cpp:722
+msgid "Small Icons"
+msgstr "Ikono txikiak"
+
+#: ui/sidebar.cpp:723
+msgid "Normal Icons"
+msgstr "Ikono normalak"
+
+#: ui/sidebar.cpp:724
+msgid "Large Icons"
+msgstr "Ikono handiak"
 
 #: ui/minibar.cpp:188
 msgctxt "Layouted like: '5 [pages] of 10'"
 msgid "of"
 msgstr " / "
+
+#: ui/annotwindow.cpp:54
+msgid "Close this note"
+msgstr "Itxi ohar hau"
+
+#: ui/annotwindow.cpp:96 ui/findbar.cpp:64
+msgid "Options"
+msgstr "Aukerak"
+
+#: ui/annotwindow.cpp:107
+msgid ""
+"This annotation may contain LaTeX code.\n"
+"Click here to render."
+msgstr ""
+"Ohar honek LaTeX kodea izan dezake.\n"
+"Klikatu hemen errendatzeko."
+
+#: ui/annotwindow.cpp:358
+msgid "Cannot find latex executable."
+msgstr "Ezin aurkitu latex exekutagarria."
+
+#: ui/annotwindow.cpp:358 ui/annotwindow.cpp:363 ui/annotwindow.cpp:368
+#: ui/annotwindow.cpp:373
+msgid "LaTeX rendering failed"
+msgstr "LaTeX errendatzeak huts egin du"
+
+#: ui/annotwindow.cpp:363
+msgid "Cannot find dvipng executable."
+msgstr "Ezin aurkitu dvipng exekutagarria."
+
+#: ui/annotwindow.cpp:368
+msgid "A problem occurred during the execution of the 'latex' command."
+msgstr ""
+
+#: ui/annotwindow.cpp:373
+msgid "A problem occurred during the execution of the 'dvipng' command."
+msgstr ""
+
+#: ui/bookmarklist.cpp:110
+msgctxt "%1 is the file name"
+msgid ""
+"%1\n"
+"\n"
+"One bookmark"
+msgid_plural ""
+"%1\n"
+"\n"
+"%2 bookmarks"
+msgstr[0] ""
+"%1\n"
+"\n"
+"Laster-marka bat"
+msgstr[1] ""
+"%1\n"
+"\n"
+"%2 laster-marka"
+
+#: ui/bookmarklist.cpp:155
+msgid "Current document only"
+msgstr "Uneko dokumentua soilik"
+
+#: ui/bookmarklist.cpp:248
+msgid "Go to This Bookmark"
+msgstr "Joan laster-marka honetara"
+
+#: ui/bookmarklist.cpp:249 ui/bookmarklist.cpp:276 part.cpp:624 part.cpp:2080
+msgid "Rename Bookmark"
+msgstr "Aldatu laster-markaren izena"
+
+#: ui/bookmarklist.cpp:250 part.cpp:1909 part.cpp:2464
+msgid "Remove Bookmark"
+msgstr "Kendu laster-marka"
+
+#: ui/bookmarklist.cpp:275
+msgctxt "Opens the selected document"
+msgid "Open Document"
+msgstr "Ireki dokumentua"
+
+#: ui/bookmarklist.cpp:277
+msgid "Remove Bookmarks"
+msgstr "Kendu laster-markak"
+
+#: ui/annotationmodel.cpp:305 part.cpp:2461
+msgid "Page %1"
+msgstr "%1 orria"
 
 #: ui/annotationwidgets.cpp:201
 msgid "&Color:"
@@ -1038,11 +1159,6 @@ msgstr "Eskuinera"
 #: ui/annotationwidgets.cpp:327
 msgid "Stamp Symbol"
 msgstr "Zigiluaren ikurra"
-
-#: ui/annotationwidgets.cpp:333 ui/sidebar.cpp:705 shell/main.cpp:24
-#: part.cpp:158
-msgid "Okular"
-msgstr "Okular"
 
 #: ui/annotationwidgets.cpp:334
 msgid "Bookmark"
@@ -1141,6 +1257,21 @@ msgstr "Barneko kolorea:"
 msgid "Type:"
 msgstr "Mota:"
 
+#: ui/annotationwidgets.cpp:539 ui/guiutils.cpp:89
+msgid "Highlight"
+msgstr "Nabarmendu"
+
+#: ui/annotationwidgets.cpp:540 ui/guiutils.cpp:92
+#: ui/pageviewannotator.cpp:1094
+#, fuzzy
+msgid "Squiggle"
+msgstr "Zirrimarra"
+
+#: ui/annotationwidgets.cpp:541 ui/guiutils.cpp:95
+#: ui/pageviewannotator.cpp:1102
+msgid "Underline"
+msgstr "Azpimarratua"
+
 #: ui/annotationwidgets.cpp:542 ui/pageviewannotator.cpp:1100
 msgid "Strike out"
 msgstr "Marratua"
@@ -1217,106 +1348,403 @@ msgctxt "Symbol for caret annotations"
 msgid "P"
 msgstr "P"
 
-#: ui/bookmarklist.cpp:110
-msgctxt "%1 is the file name"
+#: ui/tts.cpp:55
+msgid "Starting Jovie Text-to-Speech service Failed: %1"
+msgstr "Jovie testutik-hizketara zerbitzua abiarazteak huts egin du: %1"
+
+#: ui/searchlineedit.cpp:257
 msgid ""
-"%1\n"
-"\n"
-"One bookmark"
-msgid_plural ""
-"%1\n"
-"\n"
-"%2 bookmarks"
-msgstr[0] ""
-"%1\n"
-"\n"
-"Laster-marka bat"
-msgstr[1] ""
-"%1\n"
-"\n"
-"%2 laster-marka"
+"End of document reached.\n"
+"Continue from the beginning?"
+msgstr ""
+"Dokumentuaren amaierara iritsi da.\n"
+"Jarraitu hasieratik?"
 
-#: ui/bookmarklist.cpp:155
-msgid "Current document only"
-msgstr "Uneko dokumentua soilik"
-
-#: ui/bookmarklist.cpp:248
-msgid "Go to This Bookmark"
-msgstr "Joan laster-marka honetara"
-
-#: ui/bookmarklist.cpp:249 ui/bookmarklist.cpp:276 part.cpp:624 part.cpp:2080
-msgid "Rename Bookmark"
-msgstr "Aldatu laster-markaren izena"
-
-#: ui/bookmarklist.cpp:250 part.cpp:1909 part.cpp:2464
-msgid "Remove Bookmark"
-msgstr "Kendu laster-marka"
-
-#: ui/bookmarklist.cpp:275
-msgctxt "Opens the selected document"
-msgid "Open Document"
-msgstr "Ireki dokumentua"
-
-#: ui/bookmarklist.cpp:277
-msgid "Remove Bookmarks"
-msgstr "Kendu laster-markak"
-
-#: ui/side_reviews.cpp:61
+#: ui/searchlineedit.cpp:257
 msgid ""
-"<div align=center><h3>No annotations</h3>To create new annotations press F6 "
-"or select <i>Tools -&gt; Review</i> from the menu.</div>"
+"Beginning of document reached.\n"
+"Continue from the bottom?"
 msgstr ""
-"<div align=center><h3>Oharrik ez</h3>Ohar berriak sortzeko sakatu F6 edo "
-"hautatu <i>Tresnak -&gt; Berrikusi</i> menutik.</div>"
+"Dokumentuaren hasierara iritsi da.\n"
+"Jarraitu amaieratik?"
 
-#: ui/side_reviews.cpp:128
-msgid "Group by Page"
-msgstr "Elkartu orrialdearen arabera"
+#: ui/searchwidget.cpp:40
+msgid "Enter at least 3 letters to filter pages"
+msgstr "Sartu gutxienez 3 letra orriak iragazteko"
 
-#: ui/side_reviews.cpp:133
-msgid "Group by Author"
-msgstr "Elkartu egilearen arabera"
+#: ui/searchwidget.cpp:50
+msgid "Case Sensitive"
+msgstr "Kontuan izan maiuskula/minuskulak"
 
-#: ui/side_reviews.cpp:141
-msgid "Show reviews for current page only"
-msgstr "Erakutsi uneko orriaren berrikuspenak soilik"
+#: ui/searchwidget.cpp:52
+msgid "Match Phrase"
+msgstr "Esaldiarekin bat egin "
 
-#: ui/annotwindow.cpp:54
-msgid "Close this note"
-msgstr "Itxi ohar hau"
+#: ui/searchwidget.cpp:53
+msgid "Match All Words"
+msgstr "Hitz guztiekin bat egin "
 
-#: ui/annotwindow.cpp:96 ui/findbar.cpp:64
-msgid "Options"
-msgstr "Aukerak"
+#: ui/searchwidget.cpp:54
+msgid "Match Any Word"
+msgstr "Edozein hitzekin bat egin "
 
-#: ui/annotwindow.cpp:107
+#: ui/searchwidget.cpp:73
+msgid "Filter Options"
+msgstr "Iragaziaren aukerak"
+
+#: ui/toolaction.cpp:21
+msgid "Selection Tools"
+msgstr "Hautapen tresna"
+
+#: ui/toolaction.cpp:73 ui/toolaction.cpp:85
 msgid ""
-"This annotation may contain LaTeX code.\n"
-"Click here to render."
+"Click to use the current selection tool\n"
+"Click and hold to choose another selection tool"
 msgstr ""
-"Ohar honek LaTeX kodea izan dezake.\n"
-"Klikatu hemen errendatzeko."
+"Egin klik uneko hautapen tresna erabiltzeko.\n"
+"Egin klik eta mantendu beste hautapen tresna aukeratzeko"
 
-#: ui/annotwindow.cpp:358
-msgid "Cannot find latex executable."
-msgstr "Ezin aurkitu latex exekutagarria."
+#: ui/annotationpropertiesdialog.cpp:57
+msgid "&Appearance"
+msgstr "&Itxura"
 
-#: ui/annotwindow.cpp:358 ui/annotwindow.cpp:363 ui/annotwindow.cpp:368
-#: ui/annotwindow.cpp:373
-msgid "LaTeX rendering failed"
-msgstr "LaTeX errendatzeak huts egin du"
+#: ui/annotationpropertiesdialog.cpp:62
+msgid "&General"
+msgstr "O&rokorra"
 
-#: ui/annotwindow.cpp:363
-msgid "Cannot find dvipng executable."
-msgstr "Ezin aurkitu dvipng exekutagarria."
+#. i18n: file: conf/dlgannotationsbase.ui:55
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/annotationpropertiesdialog.cpp:65 rc.cpp:132
+msgid "&Author:"
+msgstr "&Egilea:"
 
-#: ui/annotwindow.cpp:368
-msgid "A problem occurred during the execution of the 'latex' command."
+#: ui/annotationpropertiesdialog.cpp:73
+msgid "Created: %1"
+msgstr "Sorrera-data: %1"
+
+#: ui/annotationpropertiesdialog.cpp:78 ui/annotationpropertiesdialog.cpp:178
+msgid "Modified: %1"
+msgstr "Aldaketa-data: %1"
+
+#: ui/annotationpropertiesdialog.cpp:118
+#, fuzzy
+msgid "Pop-up Note Properties"
+msgstr "Oharraren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:120
+msgid "Inline Note Properties"
+msgstr "Barneko oharraren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:124
+#, fuzzy
+msgid "Straight Line Properties"
+msgstr "Lerroaren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:126
+#, fuzzy
+msgid "Polygon Properties"
+msgstr "Soinuaren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:129
+msgid "Geometry Properties"
+msgstr "Geometriaren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:132
+#, fuzzy
+msgid "Text Markup Properties"
+msgstr "Zigiluaren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:135
+msgid "Stamp Properties"
+msgstr "Zigiluaren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:138
+#, fuzzy
+msgid "Freehand Line Properties"
+msgstr "Lerroaren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:141
+msgid "Caret Properties"
+msgstr "Kurtsorearen propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:144
+msgid "File Attachment Properties"
+msgstr "Erantsitako fitxategiaren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:147
+msgid "Sound Properties"
+msgstr "Soinuaren propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:150
+msgid "Movie Properties"
+msgstr "Filmearen propietateak"
+
+#: ui/annotationpropertiesdialog.cpp:153
+msgid "Annotation Properties"
+msgstr "Oharraren propietateak"
+
+#: ui/embeddedfilesdialog.cpp:35
+msgctxt "Unknown date"
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: ui/embeddedfilesdialog.cpp:40
+msgctxt "@title:window"
+msgid "Embedded Files"
+msgstr "Kapsulatuko fitxategiak"
+
+#: ui/embeddedfilesdialog.cpp:49
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Izena"
+
+#: ui/embeddedfilesdialog.cpp:50
+msgctxt "@title:column"
+msgid "Description"
+msgstr "Azalpena"
+
+#: ui/embeddedfilesdialog.cpp:51
+msgctxt "@title:column"
+msgid "Size"
+msgstr "Tamaina"
+
+#: ui/embeddedfilesdialog.cpp:52
+msgctxt "@title:column"
+msgid "Created"
+msgstr "Sorrera-data"
+
+#: ui/embeddedfilesdialog.cpp:53
+msgctxt "@title:column"
+msgid "Modified"
+msgstr "Aldaketa-data"
+
+#: ui/embeddedfilesdialog.cpp:114
+msgctxt "@action:inmenu"
+msgid "&Save As..."
+msgstr "Gorde &honela..."
+
+#: ui/videowidget.cpp:132
+msgctxt "start the movie playback"
+msgid "Play"
+msgstr "Erreproduzitu"
+
+#: ui/videowidget.cpp:137
+msgctxt "pause the movie playback"
+msgid "Pause"
+msgstr "Pausatu"
+
+#: ui/videowidget.cpp:254
+msgctxt "stop the movie playback"
+msgid "Stop"
+msgstr "Gelditu"
+
+#: ui/propertiesdialog.cpp:45
+msgid "Unknown File"
+msgstr "Fitxategi ezezaguna"
+
+#: ui/propertiesdialog.cpp:50 ui/annotationpopup.cpp:77
+#: ui/annotationpopup.cpp:109 part.cpp:693
+msgid "&Properties"
+msgstr "&Propietateak"
+
+#: ui/propertiesdialog.cpp:57
+msgid "No document opened."
+msgstr "Ez da dokumenturik ireki."
+
+#: ui/propertiesdialog.cpp:65
+msgid "%1 Properties"
+msgstr "%1(r)en propietateak"
+
+#: ui/propertiesdialog.cpp:123
+msgctxt "mimetype information, example: \"PDF Document (application/pdf)\""
+msgid "%1 (%2)"
 msgstr ""
 
-#: ui/annotwindow.cpp:373
-msgid "A problem occurred during the execution of the 'dvipng' command."
-msgstr ""
+#: ui/propertiesdialog.cpp:136
+msgid "%1:"
+msgstr "%1:"
+
+#: ui/propertiesdialog.cpp:148
+msgid "&Fonts"
+msgstr "&Letra-tipoak"
+
+#: ui/propertiesdialog.cpp:171
+msgid "Reading font information..."
+msgstr "Letra-tipoaren informazioa irakurtzen..."
+
+#: ui/propertiesdialog.cpp:236
+msgctxt "@action:inmenu"
+msgid "&Extract Font"
+msgstr "&Erauzi letra-tipoa"
+
+#: ui/propertiesdialog.cpp:241 ui/guiutils.cpp:204
+msgid "Where do you want to save %1?"
+msgstr "Non nahi duzu %1 gordetzea?"
+
+#: ui/propertiesdialog.cpp:254 ui/guiutils.cpp:213
+msgid "Could not open \"%1\" for writing. File was not saved."
+msgstr "Ezin izan da \"%1\" ireki idazteko. Fitxategia ez da gorde."
+
+#: ui/propertiesdialog.cpp:288
+msgid "Type 1"
+msgstr "1 mota"
+
+#: ui/propertiesdialog.cpp:291
+msgid "Type 1C"
+msgstr "1C mota"
+
+#: ui/propertiesdialog.cpp:294
+msgctxt "OT means OpenType"
+msgid "Type 1C (OT)"
+msgstr "1C mota (OT)"
+
+#: ui/propertiesdialog.cpp:297
+msgid "Type 3"
+msgstr "3 mota"
+
+#: ui/propertiesdialog.cpp:300
+msgid "TrueType"
+msgstr "TrueType"
+
+#: ui/propertiesdialog.cpp:303
+msgctxt "OT means OpenType"
+msgid "TrueType (OT)"
+msgstr "TrueType (OT)"
+
+#: ui/propertiesdialog.cpp:306
+msgid "CID Type 0"
+msgstr "CID 0 mota"
+
+#: ui/propertiesdialog.cpp:309
+msgid "CID Type 0C"
+msgstr "CID 0C mota"
+
+#: ui/propertiesdialog.cpp:312
+msgctxt "OT means OpenType"
+msgid "CID Type 0C (OT)"
+msgstr "CID 0C mota (OT)"
+
+#: ui/propertiesdialog.cpp:315
+msgid "CID TrueType"
+msgstr "CID TrueType"
+
+#: ui/propertiesdialog.cpp:318
+msgctxt "OT means OpenType"
+msgid "CID TrueType (OT)"
+msgstr "CID TrueType (OT)"
+
+#: ui/propertiesdialog.cpp:321
+msgid "TeX PK"
+msgstr "TeX PK"
+
+#: ui/propertiesdialog.cpp:324
+msgid "TeX virtual"
+msgstr "TeX alegiazkoa"
+
+#: ui/propertiesdialog.cpp:327
+msgid "TeX Font Metric"
+msgstr "TeX letra-tipoaren metrika"
+
+#: ui/propertiesdialog.cpp:330
+msgid "TeX FreeType-handled"
+msgstr "TeX FreeType kudeatuta"
+
+#: ui/propertiesdialog.cpp:333
+msgctxt "Unknown font type"
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: ui/propertiesdialog.cpp:347
+msgid "Embedded (subset)"
+msgstr "Kapsulatua (azpimultzoa)"
+
+#: ui/propertiesdialog.cpp:350
+msgid "Fully embedded"
+msgstr "Erabat kapsulatua"
+
+#: ui/propertiesdialog.cpp:361
+msgid "No"
+msgstr "Ez"
+
+#: ui/propertiesdialog.cpp:364
+msgid "Yes (subset)"
+msgstr "Bai (azpimultzoa)"
+
+#: ui/propertiesdialog.cpp:367
+msgid "Yes"
+msgstr "Bai"
+
+#: ui/propertiesdialog.cpp:386
+msgctxt "font name not available (empty)"
+msgid "[n/a]"
+msgstr "[e/e]"
+
+#: ui/propertiesdialog.cpp:401
+msgid "Unknown font"
+msgstr "Letra-tipo ezezaguna"
+
+#: ui/propertiesdialog.cpp:405
+msgid "Embedded: %1"
+msgstr "Kapsulatua: %1"
+
+#: ui/propertiesdialog.cpp:438
+msgid "Name"
+msgstr "Izena"
+
+#: ui/propertiesdialog.cpp:439
+msgid "Type"
+msgstr "Mota"
+
+#: ui/propertiesdialog.cpp:440
+msgid "File"
+msgstr "Fitxategia"
+
+#: ui/findbar.cpp:36 ui/presentationsearchbar.cpp:64
+msgid "Close"
+msgstr "Itxi"
+
+#: ui/findbar.cpp:40
+msgctxt "Find text"
+msgid "F&ind:"
+msgstr "&Bilatu"
+
+#: ui/findbar.cpp:50
+msgid "Text to search for"
+msgstr "Testua bilatzeko"
+
+#: ui/findbar.cpp:55
+msgctxt "Find and go to the next search match"
+msgid "Next"
+msgstr "Hurrengoa"
+
+#: ui/findbar.cpp:56
+msgid "Jump to next match"
+msgstr "Joan bat datorren hurrengora"
+
+#: ui/findbar.cpp:59
+msgctxt "Find and go to the previous search match"
+msgid "Previous"
+msgstr "Aurrekoa"
+
+#: ui/findbar.cpp:60
+msgid "Jump to previous match"
+msgstr "Joan bat datorren aurrekora"
+
+#: ui/findbar.cpp:65
+msgid "Modify search behavior"
+msgstr "Aldatu bilaketaren portaera"
+
+#: ui/findbar.cpp:67
+msgid "Case sensitive"
+msgstr "Maiuskulak/Minuskulak"
+
+#: ui/findbar.cpp:69
+msgid "From current page"
+msgstr "Uneko orrialdetik"
+
+#: ui/thumbnaillist.cpp:991
+msgid "Show bookmarked pages only"
+msgstr "Erakutsi laster-markatutako orriak bakarrik"
 
 #: ui/annotationpopup.cpp:60
 msgid "Annotation"
@@ -1332,15 +1760,14 @@ msgstr "&Ireki laster-oharra"
 msgid "&Delete"
 msgstr "&Ezabatu"
 
-#: ui/annotationpopup.cpp:77 ui/annotationpopup.cpp:109
-#: ui/propertiesdialog.cpp:50 part.cpp:693
-msgid "&Properties"
-msgstr "&Propietateak"
-
 #: ui/annotationpopup.cpp:86 ui/annotationpopup.cpp:117
 msgctxt "%1 is the name of the file to save"
 msgid "&Save '%1'..."
 msgstr "&Gorde '%1'..."
+
+#: ui/presentationsearchbar.cpp:78
+msgid "Find Next"
+msgstr "Bilatu hurrengoa"
 
 #: ui/pageview.cpp:432
 msgid "Zoom"
@@ -1573,19 +2000,19 @@ msgstr "Joan %1 orrialdera"
 
 #. i18n: file: conf/dlggeneralbase.ui:355
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ZoomMode)
-#: ui/pageview.cpp:3742 part.cpp:2468 rc.cpp:189
+#: ui/pageview.cpp:3742 part.cpp:2468 rc.cpp:219
 msgid "Fit Width"
 msgstr "Doitu zabalerara"
 
 #. i18n: file: conf/dlggeneralbase.ui:360
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ZoomMode)
-#: ui/pageview.cpp:3742 rc.cpp:192
+#: ui/pageview.cpp:3742 rc.cpp:222
 msgid "Fit Page"
 msgstr "Doitu orrialdera"
 
 #. i18n: file: conf/dlggeneralbase.ui:365
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ZoomMode)
-#: ui/pageview.cpp:3742 rc.cpp:195
+#: ui/pageview.cpp:3742 rc.cpp:225
 msgid "Auto Fit"
 msgstr ""
 
@@ -1597,37 +2024,37 @@ msgstr "Ezkutatu inprimakiak"
 msgid "Show Forms"
 msgstr "Erakutsi inprimakiak"
 
-#: ui/pageview.cpp:4023
+#: ui/pageview.cpp:4022
 msgid "Search for '%1' with"
 msgstr "Bilatu '%1' honekin"
 
-#: ui/pageview.cpp:4038
+#: ui/pageview.cpp:4037
 msgid "Configure Web Shortcuts..."
 msgstr "Konfiguratu web lasterbideak..."
 
-#: ui/pageview.cpp:4528
+#: ui/pageview.cpp:4526
 msgid "Welcome"
 msgstr "Ongi etorri"
 
-#: ui/pageview.cpp:4632
+#: ui/pageview.cpp:4628
 msgid "Select zooming area. Right-click to zoom out."
 msgstr ""
 "Hautatu zooma egiteko area. Egin klik eskuineko botoiarekin zooma "
 "txikiagotzeko."
 
-#: ui/pageview.cpp:4647
+#: ui/pageview.cpp:4643
 msgid "Click to see the magnified view."
 msgstr ""
 
-#: ui/pageview.cpp:4658
+#: ui/pageview.cpp:4654
 msgid "Draw a rectangle around the text/graphics to copy."
 msgstr "Marraztu laukizuzena testu/grafikoen inguruan kopiatzeko."
 
-#: ui/pageview.cpp:4674
+#: ui/pageview.cpp:4670
 msgid "Select text"
 msgstr "Hautatu testua"
 
-#: ui/pageview.cpp:4691
+#: ui/pageview.cpp:4687
 msgid ""
 "Draw a rectangle around the table, then click near edges to divide up; press "
 "Esc to clear."
@@ -1635,203 +2062,84 @@ msgstr ""
 "Marraztu laukizuzen bat taularen inguruan, ondoren klikatu ertzen ondoan "
 "erdibitzeko; sakatu Esk garbitzeko."
 
-#: ui/pageview.cpp:4728
+#: ui/pageview.cpp:4724
 msgid "Annotations author"
 msgstr "Egilearen oharrak"
 
-#: ui/pageview.cpp:4729
+#: ui/pageview.cpp:4725
 msgid "Please insert your name or initials:"
 msgstr "Sartu zure izena:"
-
-#: ui/fileprinterpreview.cpp:119
-msgid "Could not load print preview part"
-msgstr "Ezin izan da inprimatzeko aurrebistaren zatia kargatu"
-
-#: ui/fileprinterpreview.cpp:134
-msgid "Print Preview"
-msgstr "Inprimatzeko aurrebista"
-
-#: ui/annotationmodel.cpp:305 part.cpp:2461
-msgid "Page %1"
-msgstr "%1 orria"
-
-#: ui/presentationwidget.cpp:149
-msgctxt "[document title/filename] – Presentation"
-msgid "%1 – Presentation"
-msgstr "%1 – Aurkezpena"
-
-#: ui/presentationwidget.cpp:200
-msgid "Switch Screen"
-msgstr "Aldatu pantaila"
-
-#: ui/presentationwidget.cpp:207
-msgctxt "%1 is the screen number (0, 1, ...)"
-msgid "Screen %1"
-msgstr "%1 pantaila"
-
-#: ui/presentationwidget.cpp:214
-msgid "Exit Presentation Mode"
-msgstr "Irten aurkezpen modutik"
-
-#: ui/presentationwidget.cpp:348
-msgid "Title: %1"
-msgstr "Izenburua: %1"
-
-#: ui/presentationwidget.cpp:352
-msgid "Pages: %1"
-msgstr "Orrialdeak: %1"
-
-#: ui/presentationwidget.cpp:353
-msgid "Click to begin"
-msgstr "Egin klik hasteko"
-
-#: ui/presentationwidget.cpp:497
-#, fuzzy
-msgctxt "For Presentation"
-msgid "Pause"
-msgstr "Pausatu"
-
-#: ui/presentationwidget.cpp:502
-#, fuzzy
-msgctxt "For Presentation"
-msgid "Play"
-msgstr "Erreproduzitu"
-
-#: ui/presentationwidget.cpp:1420
-msgid ""
-"There are two ways of exiting presentation mode, you can press either ESC "
-"key or click with the quit button that appears when placing the mouse in the "
-"top-right corner. Of course you can cycle windows (Alt+TAB by default)"
-msgstr ""
-"Aurkezpen modutik irteteeko bi modu daude: Ihes tekla sakatzea edo sagua "
-"eskuineko goiko eskuinean kokatzean azaltzen den irtetzeko botoian klik "
-"egitea. Noski, lehioen artean ere mugi zaitezke (Alt+TAB lehenespenez)"
-
-#: ui/presentationwidget.cpp:1540
-msgctxt ""
-"Reason for inhibiting the screensaver activation, when the presentation mode "
-"is active"
-msgid "Giving a presentation"
-msgstr "Aurkezpena ematea"
 
 #: ui/formwidgets.cpp:624 shell/shell.cpp:376
 msgid "*|All Files"
 msgstr "*|Fitxategi denak"
 
-#: ui/tts.cpp:55
-msgid "Starting Jovie Text-to-Speech service Failed: %1"
-msgstr "Jovie testutik-hizketara zerbitzua abiarazteak huts egin du: %1"
+#: ui/guiutils.cpp:83
+msgid "Geometry"
+msgstr "Geometria"
 
-#: ui/searchwidget.cpp:40
-msgid "Enter at least 3 letters to filter pages"
-msgstr "Sartu gutxienez 3 letra orriak iragazteko"
+#: ui/guiutils.cpp:98
+#, fuzzy
+msgid "Strike Out"
+msgstr "Marratua"
 
-#: ui/searchwidget.cpp:50
-msgid "Case Sensitive"
-msgstr "Kontuan izan maiuskula/minuskulak"
+#: ui/guiutils.cpp:109
+msgid "Caret"
+msgstr "Kurtsorea"
 
-#: ui/searchwidget.cpp:52
-msgid "Match Phrase"
-msgstr "Esaldiarekin bat egin "
+#: ui/guiutils.cpp:112
+msgid "File Attachment"
+msgstr "Fitxategi eranskina"
 
-#: ui/searchwidget.cpp:53
-msgid "Match All Words"
-msgstr "Hitz guztiekin bat egin "
+#: ui/guiutils.cpp:115
+msgid "Sound"
+msgstr "Soinua"
 
-#: ui/searchwidget.cpp:54
-msgid "Match Any Word"
-msgstr "Edozein hitzekin bat egin "
+#: ui/guiutils.cpp:118
+msgid "Movie"
+msgstr "Filmea"
 
-#: ui/searchwidget.cpp:73
-msgid "Filter Options"
-msgstr "Iragaziaren aukerak"
+#: ui/guiutils.cpp:121
+#, fuzzy
+msgctxt "Caption for a screen annotation"
+msgid "Screen"
+msgstr "Pantaila:"
 
-#: ui/findbar.cpp:36 ui/presentationsearchbar.cpp:64
-msgid "Close"
-msgstr "Itxi"
+#: ui/guiutils.cpp:124
+msgctxt "Caption for a widget annotation"
+msgid "Widget"
+msgstr ""
 
-#: ui/findbar.cpp:40
-msgctxt "Find text"
-msgid "F&ind:"
-msgstr "&Bilatu"
-
-#: ui/findbar.cpp:50
-msgid "Text to search for"
-msgstr "Testua bilatzeko"
-
-#: ui/findbar.cpp:55
-msgctxt "Find and go to the next search match"
-msgid "Next"
-msgstr "Hurrengoa"
-
-#: ui/findbar.cpp:56
-msgid "Jump to next match"
-msgstr "Joan bat datorren hurrengora"
-
-#: ui/findbar.cpp:59
-msgctxt "Find and go to the previous search match"
-msgid "Previous"
-msgstr "Aurrekoa"
-
-#: ui/findbar.cpp:60
-msgid "Jump to previous match"
-msgstr "Joan bat datorren aurrekora"
-
-#: ui/findbar.cpp:65
-msgid "Modify search behavior"
-msgstr "Aldatu bilaketaren portaera"
-
-#: ui/findbar.cpp:67
-msgid "Case sensitive"
-msgstr "Maiuskulak/Minuskulak"
-
-#: ui/findbar.cpp:69
-msgid "From current page"
-msgstr "Uneko orrialdetik"
-
-#: ui/embeddedfilesdialog.cpp:35
-msgctxt "Unknown date"
+#: ui/guiutils.cpp:136
+msgctxt "Unknown author"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: ui/embeddedfilesdialog.cpp:40
-msgctxt "@title:window"
-msgid "Embedded Files"
-msgstr "Kapsulatuko fitxategiak"
+#: ui/ktreeviewsearchline.cpp:461
+msgid "Search Options"
+msgstr "Bilaketa aukerak"
 
-#: ui/embeddedfilesdialog.cpp:49
-msgctxt "@title:column"
-msgid "Name"
-msgstr "Izena"
+#: ui/ktreeviewsearchline.cpp:462
+msgctxt "Enable case sensitive search in the side navigation panels"
+msgid "Case Sensitive"
+msgstr "Bereizi maius/minus"
 
-#: ui/embeddedfilesdialog.cpp:50
-msgctxt "@title:column"
-msgid "Description"
-msgstr "Azalpena"
+#: ui/ktreeviewsearchline.cpp:465
+msgctxt "Enable regular expression search in the side navigation panels"
+msgid "Regular Expression"
+msgstr "Adierazpen erregularra"
 
-#: ui/embeddedfilesdialog.cpp:51
-msgctxt "@title:column"
-msgid "Size"
-msgstr "Tamaina"
+#: ui/ktreeviewsearchline.cpp:471
+msgid "Search Columns"
+msgstr "Bilatu zutabeak"
 
-#: ui/embeddedfilesdialog.cpp:52
-msgctxt "@title:column"
-msgid "Created"
-msgstr "Sorrera-data"
+#: ui/ktreeviewsearchline.cpp:473
+msgid "All Visible Columns"
+msgstr "Zutabe ikusgai guztiak"
 
-#: ui/embeddedfilesdialog.cpp:53
-msgctxt "@title:column"
-msgid "Modified"
-msgstr "Aldaketa-data"
-
-#: ui/embeddedfilesdialog.cpp:114
-msgctxt "@action:inmenu"
-msgid "&Save As..."
-msgstr "Gorde &honela..."
-
-#: ui/thumbnaillist.cpp:991
-msgid "Show bookmarked pages only"
-msgstr "Erakutsi laster-markatutako orriak bakarrik"
+#: ui/ktreeviewsearchline.cpp:630
+msgid "S&earch:"
+msgstr "&Bilatu:"
 
 #: ui/pageviewannotator.cpp:162
 msgid "Text of the new note:"
@@ -1914,321 +2222,38 @@ msgstr "Azpimarratua"
 msgid "Highlighter"
 msgstr "Nabarmendu"
 
-#: ui/toolaction.cpp:21
-msgid "Selection Tools"
-msgstr "Hautapen tresna"
+#: ui/fileprinterpreview.cpp:119
+msgid "Could not load print preview part"
+msgstr "Ezin izan da inprimatzeko aurrebistaren zatia kargatu"
 
-#: ui/toolaction.cpp:73 ui/toolaction.cpp:85
-msgid ""
-"Click to use the current selection tool\n"
-"Click and hold to choose another selection tool"
-msgstr ""
-"Egin klik uneko hautapen tresna erabiltzeko.\n"
-"Egin klik eta mantendu beste hautapen tresna aukeratzeko"
+#: ui/fileprinterpreview.cpp:134
+msgid "Print Preview"
+msgstr "Inprimatzeko aurrebista"
 
-#: ui/videowidget.cpp:135
-msgctxt "start the movie playback"
-msgid "Play"
-msgstr "Erreproduzitu"
+#: shell/main.cpp:30
+msgid "Page of the document to be shown"
+msgstr "Dokumentuaren orrialdea erakusteko"
 
-#: ui/videowidget.cpp:140
-msgctxt "pause the movie playback"
-msgid "Pause"
-msgstr "Pausatu"
+#: shell/main.cpp:31
+msgid "Start the document in presentation mode"
+msgstr "Hasi dokumentua aurkezpen moduan"
 
-#: ui/videowidget.cpp:257
-msgctxt "stop the movie playback"
-msgid "Stop"
-msgstr "Gelditu"
-
-#: ui/propertiesdialog.cpp:45
-msgid "Unknown File"
-msgstr "Fitxategi ezezaguna"
-
-#: ui/propertiesdialog.cpp:57
-msgid "No document opened."
-msgstr "Ez da dokumenturik ireki."
-
-#: ui/propertiesdialog.cpp:65
-msgid "%1 Properties"
-msgstr "%1(r)en propietateak"
-
-#: ui/propertiesdialog.cpp:123
-msgctxt "mimetype information, example: \"PDF Document (application/pdf)\""
-msgid "%1 (%2)"
+#: shell/main.cpp:32
+msgid "Start with print dialog"
 msgstr ""
 
-#: ui/propertiesdialog.cpp:136
-msgid "%1:"
-msgstr "%1:"
+#: shell/main.cpp:33
+msgid "\"Unique instance\" control"
+msgstr "\"Instantzia esklusiboa\" kontrola"
 
-#: ui/propertiesdialog.cpp:148
-msgid "&Fonts"
-msgstr "&Letra-tipoak"
-
-#: ui/propertiesdialog.cpp:171
-msgid "Reading font information..."
-msgstr "Letra-tipoaren informazioa irakurtzen..."
-
-#: ui/propertiesdialog.cpp:236
-msgctxt "@action:inmenu"
-msgid "&Extract Font"
-msgstr "&Erauzi letra-tipoa"
-
-#: ui/propertiesdialog.cpp:288
-msgid "Type 1"
-msgstr "1 mota"
-
-#: ui/propertiesdialog.cpp:291
-msgid "Type 1C"
-msgstr "1C mota"
-
-#: ui/propertiesdialog.cpp:294
-msgctxt "OT means OpenType"
-msgid "Type 1C (OT)"
-msgstr "1C mota (OT)"
-
-#: ui/propertiesdialog.cpp:297
-msgid "Type 3"
-msgstr "3 mota"
-
-#: ui/propertiesdialog.cpp:300
-msgid "TrueType"
-msgstr "TrueType"
-
-#: ui/propertiesdialog.cpp:303
-msgctxt "OT means OpenType"
-msgid "TrueType (OT)"
-msgstr "TrueType (OT)"
-
-#: ui/propertiesdialog.cpp:306
-msgid "CID Type 0"
-msgstr "CID 0 mota"
-
-#: ui/propertiesdialog.cpp:309
-msgid "CID Type 0C"
-msgstr "CID 0C mota"
-
-#: ui/propertiesdialog.cpp:312
-msgctxt "OT means OpenType"
-msgid "CID Type 0C (OT)"
-msgstr "CID 0C mota (OT)"
-
-#: ui/propertiesdialog.cpp:315
-msgid "CID TrueType"
-msgstr "CID TrueType"
-
-#: ui/propertiesdialog.cpp:318
-msgctxt "OT means OpenType"
-msgid "CID TrueType (OT)"
-msgstr "CID TrueType (OT)"
-
-#: ui/propertiesdialog.cpp:321
-msgid "TeX PK"
-msgstr "TeX PK"
-
-#: ui/propertiesdialog.cpp:324
-msgid "TeX virtual"
-msgstr "TeX alegiazkoa"
-
-#: ui/propertiesdialog.cpp:327
-msgid "TeX Font Metric"
-msgstr "TeX letra-tipoaren metrika"
-
-#: ui/propertiesdialog.cpp:330
-msgid "TeX FreeType-handled"
-msgstr "TeX FreeType kudeatuta"
-
-#: ui/propertiesdialog.cpp:333
-msgctxt "Unknown font type"
-msgid "Unknown"
-msgstr "Ezezaguna"
-
-#: ui/propertiesdialog.cpp:347
-msgid "Embedded (subset)"
-msgstr "Kapsulatua (azpimultzoa)"
-
-#: ui/propertiesdialog.cpp:350
-msgid "Fully embedded"
-msgstr "Erabat kapsulatua"
-
-#: ui/propertiesdialog.cpp:361
-msgid "No"
-msgstr "Ez"
-
-#: ui/propertiesdialog.cpp:364
-msgid "Yes (subset)"
-msgstr "Bai (azpimultzoa)"
-
-#: ui/propertiesdialog.cpp:367
-msgid "Yes"
-msgstr "Bai"
-
-#: ui/propertiesdialog.cpp:386
-msgctxt "font name not available (empty)"
-msgid "[n/a]"
-msgstr "[e/e]"
-
-#: ui/propertiesdialog.cpp:401
-msgid "Unknown font"
-msgstr "Letra-tipo ezezaguna"
-
-#: ui/propertiesdialog.cpp:405
-msgid "Embedded: %1"
-msgstr "Kapsulatua: %1"
-
-#: ui/propertiesdialog.cpp:438
-msgid "Name"
-msgstr "Izena"
-
-#: ui/propertiesdialog.cpp:439
-msgid "Type"
-msgstr "Mota"
-
-#: ui/propertiesdialog.cpp:440
-msgid "File"
-msgstr "Fitxategia"
-
-#: ui/searchlineedit.cpp:257
-msgid ""
-"End of document reached.\n"
-"Continue from the beginning?"
+#: shell/main.cpp:34
+msgid "Not raise window"
 msgstr ""
-"Dokumentuaren amaierara iritsi da.\n"
-"Jarraitu hasieratik?"
 
-#: ui/searchlineedit.cpp:257
-msgid ""
-"Beginning of document reached.\n"
-"Continue from the bottom?"
+#: shell/main.cpp:35
+msgid "Document to open. Specify '-' to read from stdin."
 msgstr ""
-"Dokumentuaren hasierara iritsi da.\n"
-"Jarraitu amaieratik?"
-
-#: ui/ktreeviewsearchline.cpp:461
-msgid "Search Options"
-msgstr "Bilaketa aukerak"
-
-#: ui/ktreeviewsearchline.cpp:462
-msgctxt "Enable case sensitive search in the side navigation panels"
-msgid "Case Sensitive"
-msgstr "Bereizi maius/minus"
-
-#: ui/ktreeviewsearchline.cpp:465
-msgctxt "Enable regular expression search in the side navigation panels"
-msgid "Regular Expression"
-msgstr "Adierazpen erregularra"
-
-#: ui/ktreeviewsearchline.cpp:471
-msgid "Search Columns"
-msgstr "Bilatu zutabeak"
-
-#: ui/ktreeviewsearchline.cpp:473
-msgid "All Visible Columns"
-msgstr "Zutabe ikusgai guztiak"
-
-#: ui/ktreeviewsearchline.cpp:630
-msgid "S&earch:"
-msgstr "&Bilatu:"
-
-#: ui/sidebar.cpp:706
-msgid "Show Text"
-msgstr "Erakutsi testua"
-
-#: ui/sidebar.cpp:722
-msgid "Small Icons"
-msgstr "Ikono txikiak"
-
-#: ui/sidebar.cpp:723
-msgid "Normal Icons"
-msgstr "Ikono normalak"
-
-#: ui/sidebar.cpp:724
-msgid "Large Icons"
-msgstr "Ikono handiak"
-
-#: ui/presentationsearchbar.cpp:78
-msgid "Find Next"
-msgstr "Bilatu hurrengoa"
-
-#: ui/annotationpropertiesdialog.cpp:57
-msgid "&Appearance"
-msgstr "&Itxura"
-
-#: ui/annotationpropertiesdialog.cpp:62
-msgid "&General"
-msgstr "O&rokorra"
-
-#. i18n: file: conf/dlgannotationsbase.ui:55
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/annotationpropertiesdialog.cpp:65 rc.cpp:90
-msgid "&Author:"
-msgstr "&Egilea:"
-
-#: ui/annotationpropertiesdialog.cpp:73
-msgid "Created: %1"
-msgstr "Sorrera-data: %1"
-
-#: ui/annotationpropertiesdialog.cpp:78 ui/annotationpropertiesdialog.cpp:178
-msgid "Modified: %1"
-msgstr "Aldaketa-data: %1"
-
-#: ui/annotationpropertiesdialog.cpp:118
-#, fuzzy
-msgid "Pop-up Note Properties"
-msgstr "Oharraren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:120
-msgid "Inline Note Properties"
-msgstr "Barneko oharraren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:124
-#, fuzzy
-msgid "Straight Line Properties"
-msgstr "Lerroaren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:126
-#, fuzzy
-msgid "Polygon Properties"
-msgstr "Soinuaren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:129
-msgid "Geometry Properties"
-msgstr "Geometriaren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:132
-#, fuzzy
-msgid "Text Markup Properties"
-msgstr "Zigiluaren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:135
-msgid "Stamp Properties"
-msgstr "Zigiluaren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:138
-#, fuzzy
-msgid "Freehand Line Properties"
-msgstr "Lerroaren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:141
-msgid "Caret Properties"
-msgstr "Kurtsorearen propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:144
-msgid "File Attachment Properties"
-msgstr "Erantsitako fitxategiaren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:147
-msgid "Sound Properties"
-msgstr "Soinuaren propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:150
-msgid "Movie Properties"
-msgstr "Filmearen propietateak"
-
-#: ui/annotationpropertiesdialog.cpp:153
-msgid "Annotation Properties"
-msgstr "Oharraren propietateak"
+"Dokumentua irekitzeko. Zehaztu '-' sarrera estandarretik (stdin) irakurtzeko."
 
 #: shell/shell.cpp:77 shell/shell.cpp:129
 msgid "Unable to find the Okular component."
@@ -2268,31 +2293,6 @@ msgstr "Aurreko orrialdea"
 #: shell/shell.cpp:379
 msgid "Open Document"
 msgstr "Ireki dokumentua"
-
-#: shell/main.cpp:30
-msgid "Page of the document to be shown"
-msgstr "Dokumentuaren orrialdea erakusteko"
-
-#: shell/main.cpp:31
-msgid "Start the document in presentation mode"
-msgstr "Hasi dokumentua aurkezpen moduan"
-
-#: shell/main.cpp:32
-msgid "Start with print dialog"
-msgstr ""
-
-#: shell/main.cpp:33
-msgid "\"Unique instance\" control"
-msgstr "\"Instantzia esklusiboa\" kontrola"
-
-#: shell/main.cpp:34
-msgid "Not raise window"
-msgstr ""
-
-#: shell/main.cpp:35
-msgid "Document to open. Specify '-' to read from stdin."
-msgstr ""
-"Dokumentua irekitzeko. Zehaztu '-' sarrera estandarretik (stdin) irakurtzeko."
 
 #: shell/okular_main.cpp:127
 msgid "Error: Can't open more than one document with the --unique switch"
@@ -2738,164 +2738,248 @@ msgstr ""
 msgid "No Bookmarks"
 msgstr "Laster-markarik ez"
 
-#. i18n: file: part-viewermode.rc:5
-#. i18n: ectx: Menu (file)
 #. i18n: file: part.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:3 rc.cpp:21
+#. i18n: file: part-viewermode.rc:5
+#. i18n: ectx: Menu (file)
+#: rc.cpp:3 rc.cpp:33
 msgid "&File"
 msgstr "&Fitxategia"
 
-#. i18n: file: part-viewermode.rc:9
-#. i18n: ectx: Menu (settings)
-#. i18n: file: part.rc:84
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:6 rc.cpp:42
-msgid "&Settings"
-msgstr "E&zarpenak"
-
-#. i18n: file: part-viewermode.rc:14
-#. i18n: ectx: Menu (help)
-#. i18n: file: part.rc:90
-#. i18n: ectx: Menu (help)
-#: rc.cpp:9 rc.cpp:45
-msgid "&Help"
-msgstr "&Laguntza"
-
-#. i18n: file: part-viewermode.rc:31
-#. i18n: ectx: Menu (view_orientation)
-#. i18n: file: part.rc:40
-#. i18n: ectx: Menu (view_orientation)
-#: rc.cpp:12 rc.cpp:30
-msgid "&Orientation"
-msgstr "&Orientazioa"
-
-#. i18n: file: part-viewermode.rc:50
-#. i18n: ectx: Menu (okular_bookmarks)
-#. i18n: file: part.rc:62
-#. i18n: ectx: Menu (bookmarks)
-#: rc.cpp:15 rc.cpp:36
-msgid "&Bookmarks"
-msgstr "Laster-&markak"
-
-#. i18n: file: part-viewermode.rc:63
-#. i18n: ectx: ToolBar (OkularViewerToolBar)
-#: rc.cpp:18
-#, fuzzy
-msgid "Viewer Toolbar"
-msgstr "Tresna-barra nagusia"
-
 #. i18n: file: part.rc:16
 #. i18n: ectx: Menu (edit)
-#: rc.cpp:24
+#: rc.cpp:6
 msgid "&Edit"
 msgstr "&Editatu"
 
 #. i18n: file: part.rc:28
 #. i18n: ectx: Menu (view)
-#: rc.cpp:27
+#: rc.cpp:9
 msgid "&View"
 msgstr "&Ikusi"
 
+#. i18n: file: part.rc:40
+#. i18n: ectx: Menu (view_orientation)
+#. i18n: file: part-viewermode.rc:31
+#. i18n: ectx: Menu (view_orientation)
+#: rc.cpp:12 rc.cpp:42
+msgid "&Orientation"
+msgstr "&Orientazioa"
+
 #. i18n: file: part.rc:50
 #. i18n: ectx: Menu (go)
-#: rc.cpp:33
+#: rc.cpp:15
 msgid "&Go"
 msgstr "&Joan"
 
+#. i18n: file: part.rc:62
+#. i18n: ectx: Menu (bookmarks)
+#. i18n: file: part-viewermode.rc:50
+#. i18n: ectx: Menu (okular_bookmarks)
+#: rc.cpp:18 rc.cpp:45
+msgid "&Bookmarks"
+msgstr "Laster-&markak"
+
 #. i18n: file: part.rc:70
 #. i18n: ectx: Menu (tools)
-#: rc.cpp:39
+#: rc.cpp:21
 msgid "&Tools"
 msgstr "&Tresnak"
+
+#. i18n: file: part.rc:84
+#. i18n: ectx: Menu (settings)
+#. i18n: file: part-viewermode.rc:9
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:24 rc.cpp:36
+msgid "&Settings"
+msgstr "E&zarpenak"
+
+#. i18n: file: part.rc:90
+#. i18n: ectx: Menu (help)
+#. i18n: file: part-viewermode.rc:14
+#. i18n: ectx: Menu (help)
+#: rc.cpp:27 rc.cpp:39
+msgid "&Help"
+msgstr "&Laguntza"
 
 #. i18n: file: part.rc:94
 #. i18n: ectx: ToolBar (mainToolBar)
 #. i18n: file: shell/shell.rc:22
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:48 rc.cpp:51
+#: rc.cpp:30 rc.cpp:51
 msgid "Main Toolbar"
 msgstr "Tresna-barra nagusia"
 
+#. i18n: file: part-viewermode.rc:63
+#. i18n: ectx: ToolBar (OkularViewerToolBar)
+#: rc.cpp:48
+#, fuzzy
+msgid "Viewer Toolbar"
+msgstr "Tresna-barra nagusia"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:28
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HighlightImages)
+#: rc.cpp:54
+msgid "Draw border around &Images"
+msgstr "Marraztu ertza &irudien inguruan"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:35
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HighlightLinks)
+#: rc.cpp:57
+msgid "Draw border around &Links"
+msgstr "Marraztu ertza &esteken inguruan"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:45
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ChangeColors)
+#: rc.cpp:60
+msgid "Change &colors"
+msgstr "Aldatu &koloreak"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:63
+#. i18n: ectx: property (text), widget (QLabel, warn)
+#: rc.cpp:63
+msgid "Warning: these options can badly affect drawing speed."
+msgstr "Abisua: aukera hauek marrazketa-abiaduran eragin txarra izan dezakete."
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:78
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:66
+msgid "Color mode:"
+msgstr "Kolore modua:"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:89
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
+#: rc.cpp:69
+msgid "Invert Colors"
+msgstr "Alderantzikatu koloreak"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:94
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
+#: rc.cpp:72
+msgid "Change Paper Color"
+msgstr "Aldatu paperaren kolorea"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:99
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
+#: rc.cpp:75
+msgid "Change Dark & Light Colors"
+msgstr "Aldatu kolore argiak eta ilunak"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:104
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
+#: rc.cpp:78
+msgid "Convert to Black & White"
+msgstr "Bihurtu zuri-beltzera"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:165
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:81
+msgid "Paper color:"
+msgstr "Paperaren kolorea:"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:218
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:84
+msgid "Dark color:"
+msgstr "Kolore iluna:"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:250
+#. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
+#: rc.cpp:87
+msgid "Light color:"
+msgstr "Kolore argia:"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:291
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:90
+msgid "Threshold:"
+msgstr "Atalasea:"
+
+#. i18n: file: conf/dlgaccessibilitybase.ui:323
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
+#: rc.cpp:93
+msgid "Contrast:"
+msgstr "Kontrastea:"
+
 #. i18n: file: conf/dlgperformancebase.ui:23
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:54
+#: rc.cpp:96
 msgid "CPU Usage"
 msgstr "PUZ-aren erabilera"
 
 #. i18n: file: conf/dlgperformancebase.ui:51
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableCompositing)
-#: rc.cpp:57
+#: rc.cpp:99
 msgid "Enable &transparency effects"
 msgstr "Gaitu &gardentasun-efektuak"
 
 #. i18n: file: conf/dlgperformancebase.ui:101
 #. i18n: ectx: property (title), widget (KButtonGroup, kcfg_MemoryLevel)
-#: rc.cpp:60
+#: rc.cpp:102
 msgid "Memory Usage"
 msgstr "Memoriaren erabilera"
 
 #. i18n: file: conf/dlgperformancebase.ui:129
 #. i18n: ectx: property (text), widget (QRadioButton, lowRadio)
-#: rc.cpp:63
+#: rc.cpp:105
 msgid "&Low"
 msgstr "&Baxua"
 
 #. i18n: file: conf/dlgperformancebase.ui:136
 #. i18n: ectx: property (text), widget (QRadioButton, normalRadio)
-#: rc.cpp:66
+#: rc.cpp:108
 msgid "&Normal (default)"
 msgstr "&Normala (lehenetsia)"
 
 #. i18n: file: conf/dlgperformancebase.ui:143
 #. i18n: ectx: property (text), widget (QRadioButton, aggressiveRadio)
-#: rc.cpp:69
+#: rc.cpp:111
 msgid "&Aggressive"
 msgstr "&Oldarkorra"
 
 #. i18n: file: conf/dlgperformancebase.ui:150
 #. i18n: ectx: property (text), widget (QRadioButton, greedyRadio)
-#: rc.cpp:72
+#: rc.cpp:114
 msgid "&Greedy"
 msgstr ""
 
 #. i18n: file: conf/dlgperformancebase.ui:216
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:75
+#: rc.cpp:117
 #, fuzzy
 msgid "Rendering"
 msgstr "Azpimarratua"
 
 #. i18n: file: conf/dlgperformancebase.ui:222
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_TextAntialias)
-#: rc.cpp:78
+#: rc.cpp:120
 #, fuzzy
 msgid "Enable Text Antialias"
 msgstr "Gaitu transizioak"
 
 #. i18n: file: conf/dlgperformancebase.ui:229
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_GraphicsAntialias)
-#: rc.cpp:81
+#: rc.cpp:123
 #, fuzzy
 msgid "Enable Graphics Antialias"
 msgstr "Gaitu transizioak"
 
 #. i18n: file: conf/dlgperformancebase.ui:236
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_TextHinting)
-#: rc.cpp:84
+#: rc.cpp:126
 #, fuzzy
 msgid "Enable Text Hinting"
 msgstr "Gaitu transizioak"
 
 #. i18n: file: conf/dlgannotationsbase.ui:31
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:87
+#: rc.cpp:129
 msgid "Identity"
 msgstr "Identitatea"
 
 #. i18n: file: conf/dlgannotationsbase.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:93
+#: rc.cpp:135
 msgid ""
 "<b>Note</b>: the information here is used only for comments and reviews. "
 "Information inserted here will not be transmitted without your knowledge."
@@ -2906,122 +2990,100 @@ msgstr ""
 
 #. i18n: file: conf/dlgannotationsbase.ui:87
 #. i18n: ectx: property (title), widget (QGroupBox, annotToolsGroup)
-#: rc.cpp:96
+#: rc.cpp:138
 #, fuzzy
 msgid "Annotation tools"
 msgstr "Oharra"
 
-#. i18n: file: conf/dlgeditorbase.ui:25
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:102
-msgid "Editor:"
-msgstr "Editorea:"
-
-#. i18n: file: conf/dlgeditorbase.ui:32
-#. i18n: ectx: property (whatsThis), widget (QComboBox, kcfg_ExternalEditor)
-#: rc.cpp:105
-msgctxt "@info:whatsthis"
-msgid ""
-"Choose the editor you want to launch when Okular wants to open a source file."
-msgstr ""
-"Aukeratu abiaraztea nahi duzun editorea Okular-ek iturburuko fitxategi bat "
-"irekitzea nahi duenean."
-
-#. i18n: file: conf/dlgeditorbase.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:108
-msgid "Command:"
-msgstr "Komandoa:"
-
 #. i18n: file: conf/dlggeneralbase.ui:40
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowScrollBars)
-#: rc.cpp:114
+#: rc.cpp:144
 msgid "Show scroll&bars"
 msgstr "Erakutsi &korritze-barrak"
 
 #. i18n: file: conf/dlggeneralbase.ui:50
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncThumbnailsViewport)
-#: rc.cpp:117
+#: rc.cpp:147
 msgid "Link the &thumbnails with the page"
 msgstr "Estekatu &koadro txikiak orriarekin"
 
 #. i18n: file: conf/dlggeneralbase.ui:57
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowOSD)
-#: rc.cpp:120
+#: rc.cpp:150
 msgid "Show &hints and info messages"
 msgstr "Erakutsi &argibideak eta informazio-mezuak"
 
 #. i18n: file: conf/dlggeneralbase.ui:64
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DisplayDocumentTitle)
-#: rc.cpp:123
+#: rc.cpp:153
 #, fuzzy
 msgid "Display document title in titlebar if available"
 msgstr "Bistaratu dokumentuaren izenburua izenburu-barran"
 
 #. i18n: file: conf/dlggeneralbase.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:126
+#: rc.cpp:156
 #, fuzzy
 msgid "When not displaying document title:"
 msgstr "Bistaratu dokumentuaren izenburua izenburu-barran"
 
 #. i18n: file: conf/dlggeneralbase.ui:99
 #. i18n: ectx: property (text), widget (QRadioButton, radioFileName)
-#: rc.cpp:129
+#: rc.cpp:159
 msgid "Display file name only"
 msgstr ""
 
 #. i18n: file: conf/dlggeneralbase.ui:109
 #. i18n: ectx: property (text), widget (QRadioButton, radioFilePath)
-#: rc.cpp:132
+#: rc.cpp:162
 msgid "Display full file path"
 msgstr ""
 
 #. i18n: file: conf/dlggeneralbase.ui:173
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:135
+#: rc.cpp:165
 msgid "Program Features"
 msgstr "Programaren eginbideak"
 
 #. i18n: file: conf/dlggeneralbase.ui:193
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShellOpenFileInTabs)
-#: rc.cpp:138
+#: rc.cpp:168
 msgid "Open new files in &tabs"
 msgstr ""
 
 #. i18n: file: conf/dlggeneralbase.ui:200
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ObeyDRM)
-#: rc.cpp:141
+#: rc.cpp:171
 msgid "&Obey DRM limitations"
 msgstr "&Kasu egin DRM murriztapenei"
 
 #. i18n: file: conf/dlggeneralbase.ui:207
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_WatchFile)
-#: rc.cpp:144
+#: rc.cpp:174
 msgid "&Reload document on file change"
 msgstr "&Birkargatu dokumentua fitxategia aldatzean"
 
 #. i18n: file: conf/dlggeneralbase.ui:214
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ChooseGenerators)
-#: rc.cpp:147
+#: rc.cpp:177
 msgid "Show backend selection dialog"
 msgstr "Erakutsi motorraren hautapenaren elkarrizketa-koadroa"
 
 #. i18n: file: conf/dlggeneralbase.ui:262
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:150
+#: rc.cpp:180
 msgid "View Options"
 msgstr "Ikuspegiaren aukerak"
 
 #. i18n: file: conf/dlggeneralbase.ui:268
 #. i18n: ectx: property (text), widget (QLabel, columnLabel)
-#: rc.cpp:153
+#: rc.cpp:183
 msgid "Overview &columns:"
 msgstr "Ikuspegi orokorraren &zutabeak:"
 
 #. i18n: file: conf/dlggeneralbase.ui:291
 #. i18n: ectx: property (toolTip), widget (QLabel, scrollOverlapLabel)
-#: rc.cpp:156
+#: rc.cpp:186
 msgid ""
 "Defines how much of the current viewing area will still be visible when "
 "pressing the Page Up/Down keys."
@@ -3031,13 +3093,13 @@ msgstr ""
 
 #. i18n: file: conf/dlggeneralbase.ui:294
 #. i18n: ectx: property (text), widget (QLabel, scrollOverlapLabel)
-#: rc.cpp:159
+#: rc.cpp:189
 msgid "&Page Up/Down overlap:"
 msgstr "Orri Gora/Behera gainezartzea:"
 
 #. i18n: file: conf/dlggeneralbase.ui:307
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_ScrollOverlap)
-#: rc.cpp:163
+#: rc.cpp:193
 #, no-c-format
 msgid "%"
 msgstr "%"
@@ -3046,7 +3108,7 @@ msgstr "%"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #. i18n: file: conf/dlggeneralbase.ui:342
 #. i18n: ectx: property (toolTip), widget (QComboBox, kcfg_ZoomMode)
-#: rc.cpp:166 rc.cpp:177
+#: rc.cpp:196 rc.cpp:207
 msgid ""
 "Defines the default zoom mode for files which were never opened before.\n"
 "For files which were opened before the previous zoom is applied."
@@ -3059,7 +3121,7 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
 #. i18n: file: conf/dlggeneralbase.ui:346
 #. i18n: ectx: property (whatsThis), widget (QComboBox, kcfg_ZoomMode)
-#: rc.cpp:170 rc.cpp:181
+#: rc.cpp:200 rc.cpp:211
 msgctxt "@info:whatsthis"
 msgid ""
 "Defines the default zoom mode for files which were never opened before.\n"
@@ -3071,304 +3133,242 @@ msgstr ""
 
 #. i18n: file: conf/dlggeneralbase.ui:328
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:174
+#: rc.cpp:204
 msgid "&Default Zoom:"
 msgstr "Zoom &lehenetsia:"
 
 #. i18n: file: conf/dlggeneralbase.ui:350
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ZoomMode)
-#: rc.cpp:186
+#: rc.cpp:216
 #, no-c-format
 msgid "100%"
 msgstr "%100"
 
 #. i18n: file: conf/dlgpresentationbase.ui:19
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:198
+#: rc.cpp:228
 msgid "Navigation"
 msgstr "Nabigazioa"
 
 #. i18n: file: conf/dlgpresentationbase.ui:39
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesAdvance)
-#: rc.cpp:201
+#: rc.cpp:231
 msgid "Advance every:"
 msgstr "Aurreratze-denbora:"
 
 #. i18n: file: conf/dlgpresentationbase.ui:49
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_SlidesAdvanceTime)
-#: rc.cpp:204
+#: rc.cpp:234
 msgid " sec."
 msgstr " seg."
 
 #. i18n: file: conf/dlgpresentationbase.ui:61
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesLoop)
-#: rc.cpp:207
+#: rc.cpp:237
 msgid "Loop after last page"
 msgstr "Begiztatu azken orriaren ondoren"
 
 #. i18n: file: conf/dlgpresentationbase.ui:79
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:213
+#: rc.cpp:243
 msgid "Background color:"
 msgstr "Atzeko planoren kolorea:"
 
 #. i18n: file: conf/dlgpresentationbase.ui:92
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:216
+#: rc.cpp:246
 msgid "Pencil color:"
 msgstr "Arkatzaren kolorea:"
 
 #. i18n: file: conf/dlgpresentationbase.ui:105
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:219
+#: rc.cpp:249
 msgid "Mouse cursor:"
 msgstr "Saguaren kurtsorea:"
 
 #. i18n: file: conf/dlgpresentationbase.ui:116
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesCursor)
-#: rc.cpp:222
+#: rc.cpp:252
 msgid "Hidden After Delay"
 msgstr "Ezkutatu atzerapenaren ondoren"
 
 #. i18n: file: conf/dlgpresentationbase.ui:121
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesCursor)
-#: rc.cpp:225
+#: rc.cpp:255
 msgid "Always Visible"
 msgstr "Beti ikusgai"
 
 #. i18n: file: conf/dlgpresentationbase.ui:126
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesCursor)
-#: rc.cpp:228
+#: rc.cpp:258
 msgid "Always Hidden"
 msgstr "Beti ezkutatuta"
 
 #. i18n: file: conf/dlgpresentationbase.ui:136
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesShowProgress)
-#: rc.cpp:231
+#: rc.cpp:261
 msgid "Show &progress indicator"
 msgstr "Erakutsi &aurrerapenaren adierazlea"
 
 #. i18n: file: conf/dlgpresentationbase.ui:143
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SlidesShowSummary)
-#: rc.cpp:234
+#: rc.cpp:264
 msgid "Show s&ummary page"
 msgstr "Erakutsi &laburpen-orria"
 
 #. i18n: file: conf/dlgpresentationbase.ui:153
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_SlidesTransitionsEnabled)
-#: rc.cpp:237
+#: rc.cpp:267
 msgid "Enable transitions"
 msgstr "Gaitu transizioak"
 
 #. i18n: file: conf/dlgpresentationbase.ui:165
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:240
+#: rc.cpp:270
 msgid "Default transition:"
 msgstr "Transizio lehenetsia:"
 
 #. i18n: file: conf/dlgpresentationbase.ui:176
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:243
+#: rc.cpp:273
 msgid "Blinds Vertical"
 msgstr "Pertsiana bertikalak"
 
 #. i18n: file: conf/dlgpresentationbase.ui:181
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:246
+#: rc.cpp:276
 msgid "Blinds Horizontal"
 msgstr "Pertsiana horizontalak"
 
 #. i18n: file: conf/dlgpresentationbase.ui:186
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:249
+#: rc.cpp:279
 msgid "Box In"
 msgstr "Estali barrurantz"
 
 #. i18n: file: conf/dlgpresentationbase.ui:191
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:252
+#: rc.cpp:282
 msgid "Box Out"
 msgstr "Estali kanporantz"
 
 #. i18n: file: conf/dlgpresentationbase.ui:196
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:255
+#: rc.cpp:285
 msgid "Dissolve"
 msgstr "Disolbatu"
 
 #. i18n: file: conf/dlgpresentationbase.ui:201
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:258
+#: rc.cpp:288
 msgid "Glitter Down"
 msgstr "Sartu behetik"
 
 #. i18n: file: conf/dlgpresentationbase.ui:206
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:261
+#: rc.cpp:291
 msgid "Glitter Right"
 msgstr "Sartu eskuinetik"
 
 #. i18n: file: conf/dlgpresentationbase.ui:211
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:264
+#: rc.cpp:294
 msgid "Glitter Right-Down"
 msgstr "Sartu eskuin-behetik"
 
 #. i18n: file: conf/dlgpresentationbase.ui:216
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:267
+#: rc.cpp:297
 msgid "Random Transition"
 msgstr "Ausazko transizioa"
 
 #. i18n: file: conf/dlgpresentationbase.ui:221
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:270
+#: rc.cpp:300
 msgid "Replace"
 msgstr "Ordeztu"
 
 #. i18n: file: conf/dlgpresentationbase.ui:226
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:273
+#: rc.cpp:303
 msgid "Split Horizontal In"
 msgstr "Zatitu horizontalki barnerantz"
 
 #. i18n: file: conf/dlgpresentationbase.ui:231
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:276
+#: rc.cpp:306
 msgid "Split Horizontal Out"
 msgstr "Zatitu horizontalki kanporantz"
 
 #. i18n: file: conf/dlgpresentationbase.ui:236
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:279
+#: rc.cpp:309
 msgid "Split Vertical In"
 msgstr "Zatitu bertikalki barnerantz"
 
 #. i18n: file: conf/dlgpresentationbase.ui:241
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:282
+#: rc.cpp:312
 msgid "Split Vertical Out"
 msgstr "Zatitu bertikalki kanporantz"
 
 #. i18n: file: conf/dlgpresentationbase.ui:246
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:285
+#: rc.cpp:315
 msgid "Wipe Down"
 msgstr "Ekortu behera"
 
 #. i18n: file: conf/dlgpresentationbase.ui:251
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:288
+#: rc.cpp:318
 msgid "Wipe Right"
 msgstr "Ekortu eskuinera"
 
 #. i18n: file: conf/dlgpresentationbase.ui:256
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:291
+#: rc.cpp:321
 msgid "Wipe Left"
 msgstr "Ekortu ezkerrera"
 
 #. i18n: file: conf/dlgpresentationbase.ui:261
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SlidesTransition)
-#: rc.cpp:294
+#: rc.cpp:324
 msgid "Wipe Up"
 msgstr "Ekortu gora"
 
 #. i18n: file: conf/dlgpresentationbase.ui:272
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: rc.cpp:297
+#: rc.cpp:327
 msgid "Placement"
 msgstr "Kokalekua"
 
 #. i18n: file: conf/dlgpresentationbase.ui:278
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:300
+#: rc.cpp:330
 msgid "Screen:"
 msgstr "Pantaila:"
 
-#. i18n: file: conf/dlgaccessibilitybase.ui:28
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HighlightImages)
-#: rc.cpp:303
-msgid "Draw border around &Images"
-msgstr "Marraztu ertza &irudien inguruan"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:35
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HighlightLinks)
-#: rc.cpp:306
-msgid "Draw border around &Links"
-msgstr "Marraztu ertza &esteken inguruan"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:45
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ChangeColors)
-#: rc.cpp:309
-msgid "Change &colors"
-msgstr "Aldatu &koloreak"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:63
-#. i18n: ectx: property (text), widget (QLabel, warn)
-#: rc.cpp:312
-msgid "Warning: these options can badly affect drawing speed."
-msgstr "Abisua: aukera hauek marrazketa-abiaduran eragin txarra izan dezakete."
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:78
+#. i18n: file: conf/dlgeditorbase.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:315
-msgid "Color mode:"
-msgstr "Kolore modua:"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:89
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
-#: rc.cpp:318
-msgid "Invert Colors"
-msgstr "Alderantzikatu koloreak"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:94
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
-#: rc.cpp:321
-msgid "Change Paper Color"
-msgstr "Aldatu paperaren kolorea"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:99
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
-#: rc.cpp:324
-msgid "Change Dark & Light Colors"
-msgstr "Aldatu kolore argiak eta ilunak"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:104
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_RenderMode)
-#: rc.cpp:327
-msgid "Convert to Black & White"
-msgstr "Bihurtu zuri-beltzera"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:165
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:330
-msgid "Paper color:"
-msgstr "Paperaren kolorea:"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:218
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:333
-msgid "Dark color:"
-msgstr "Kolore iluna:"
-
-#. i18n: file: conf/dlgaccessibilitybase.ui:250
-#. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
 #: rc.cpp:336
-msgid "Light color:"
-msgstr "Kolore argia:"
+msgid "Editor:"
+msgstr "Editorea:"
 
-#. i18n: file: conf/dlgaccessibilitybase.ui:291
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: file: conf/dlgeditorbase.ui:32
+#. i18n: ectx: property (whatsThis), widget (QComboBox, kcfg_ExternalEditor)
 #: rc.cpp:339
-msgid "Threshold:"
-msgstr "Atalasea:"
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the editor you want to launch when Okular wants to open a source file."
+msgstr ""
+"Aukeratu abiaraztea nahi duzun editorea Okular-ek iturburuko fitxategi bat "
+"irekitzea nahi duenean."
 
-#. i18n: file: conf/dlgaccessibilitybase.ui:323
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
+#. i18n: file: conf/dlgeditorbase.ui:70
+#. i18n: ectx: property (text), widget (QLabel, label_2)
 #: rc.cpp:342
-msgid "Contrast:"
-msgstr "Kontrastea:"
+msgid "Command:"
+msgstr "Komandoa:"
 
 #: aboutdata.h:24
 msgid "Okular, a universal document viewer"

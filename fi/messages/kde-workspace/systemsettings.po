@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: systemsettings\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-01-31 01:09+0000\n"
+"POT-Creation-Date: 2015-02-28 21:37+0000\n"
 "PO-Revision-Date: 2014-10-15 22:36+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
@@ -63,14 +63,6 @@ msgstr "Yleiskuva"
 msgid "Keyboard Shortcut: %1"
 msgstr "Pikanäppäin: %1"
 
-#: core/ExternalAppModule.cpp:34
-msgid "%1 is an external application and has been automatically launched"
-msgstr "%1 on ulkoinen sovellus ja se käynnistetään automaattisesti"
-
-#: core/ExternalAppModule.cpp:35
-msgid "Relaunch %1"
-msgstr "Käynnistä uudelleen %1"
-
 #: core/ModuleView.cpp:83
 msgid "Reset all current changes to previous values"
 msgstr "Palauta kaikki muutokset aikaisempiin arvoihinsa"
@@ -87,41 +79,42 @@ msgstr ""
 msgid "Apply Settings"
 msgstr "Hyväksy asetukset"
 
-#. i18n: file: core/externalModule.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, ExternalModule)
-#: rc.cpp:3
-msgid "Dialog"
-msgstr "Valintaikkuna"
+#: core/ExternalAppModule.cpp:34
+msgid "%1 is an external application and has been automatically launched"
+msgstr "%1 on ulkoinen sovellus ja se käynnistetään automaattisesti"
 
-#. i18n: file: app/systemsettings.kcfg:9
-#. i18n: ectx: label, entry (ShowToolTips), group (Main)
-#: rc.cpp:6
-msgid "Determines whether detailed tooltips should be used"
-msgstr "Määrittelee pitäisikö käyttää tarkkaa työkaluvihjettä"
+#: core/ExternalAppModule.cpp:35
+msgid "Relaunch %1"
+msgstr "Käynnistä uudelleen %1"
 
-#. i18n: file: app/systemsettings.kcfg:13
-#. i18n: ectx: label, entry (ActiveView), group (Main)
-#: rc.cpp:9
-msgid "Internal name for the view used"
-msgstr "Käytetyn näkymän sisäinen nimi"
+# pmap: =:gen=Järjestelmäasetusten:
+# pmap: =:elat=Järjestelmäasetuksista:
+# pmap: =:yleisnimi=kyllä:
+#: app/main.cpp:37
+msgid "System Settings"
+msgstr "Järjestelmäasetukset"
 
-#. i18n: file: app/configDialog.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, GbViewStyle)
-#: rc.cpp:12
-msgid "View Style"
-msgstr "Näkymätyyli"
+#: app/main.cpp:37
+msgid "Central configuration center for KDE."
+msgstr "KDE:n asetuskeskus."
 
-#. i18n: file: app/configDialog.ui:24
-#. i18n: ectx: property (text), widget (QCheckBox, ChTooltips)
-#: rc.cpp:15
-msgid "Show detailed tooltips"
-msgstr "Näytä tarkat työkaluvihjeet"
+#: app/main.cpp:38
+msgid "Maintainer"
+msgstr "Ylläpitäjä"
 
-#. i18n: file: app/systemsettingsui.rc:16
-#. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:18
-msgid "About System Settings"
-msgstr "Tietoa järjestelmäasetuksista"
+#: app/main.cpp:40
+msgid "Will Stephenson"
+msgstr "Will Stephenson"
+
+#: app/main.cpp:40
+msgid "Internal module representation, internal module model"
+msgstr "Sisäinen moduuliesitys, sisäinen moduulimalli"
+
+#: app/ToolTips/tooltipmanager.cpp:228
+msgid "<i>Contains 1 item</i>"
+msgid_plural "<i>Contains %1 items</i>"
+msgstr[0] "<i>Sisältää 1 tietueen</i>"
+msgstr[1] "<i>Sisältää %1 tietuetta</i>"
 
 #: app/SettingsBase.cpp:58
 msgctxt "Search through a list of control modules"
@@ -173,31 +166,38 @@ msgstr "Tietoa nykyisestä näkymästä"
 msgid "About %1"
 msgstr "Tietoa osiosta %1|/|Tietoa $[yleisnimi_pienellä $[elat %1] ]"
 
-# pmap: =:gen=Järjestelmäasetusten:
-# pmap: =:elat=Järjestelmäasetuksista:
-# pmap: =:yleisnimi=kyllä:
-#: app/main.cpp:37
-msgid "System Settings"
-msgstr "Järjestelmäasetukset"
+#. i18n: file: core/externalModule.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, ExternalModule)
+#: rc.cpp:3
+msgid "Dialog"
+msgstr "Valintaikkuna"
 
-#: app/main.cpp:37
-msgid "Central configuration center for KDE."
-msgstr "KDE:n asetuskeskus."
+#. i18n: file: app/systemsettingsui.rc:16
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:6
+msgid "About System Settings"
+msgstr "Tietoa järjestelmäasetuksista"
 
-#: app/main.cpp:38
-msgid "Maintainer"
-msgstr "Ylläpitäjä"
+#. i18n: file: app/configDialog.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, GbViewStyle)
+#: rc.cpp:9
+msgid "View Style"
+msgstr "Näkymätyyli"
 
-#: app/main.cpp:40
-msgid "Will Stephenson"
-msgstr "Will Stephenson"
+#. i18n: file: app/configDialog.ui:24
+#. i18n: ectx: property (text), widget (QCheckBox, ChTooltips)
+#: rc.cpp:12
+msgid "Show detailed tooltips"
+msgstr "Näytä tarkat työkaluvihjeet"
 
-#: app/main.cpp:40
-msgid "Internal module representation, internal module model"
-msgstr "Sisäinen moduuliesitys, sisäinen moduulimalli"
+#. i18n: file: app/systemsettings.kcfg:9
+#. i18n: ectx: label, entry (ShowToolTips), group (Main)
+#: rc.cpp:15
+msgid "Determines whether detailed tooltips should be used"
+msgstr "Määrittelee pitäisikö käyttää tarkkaa työkaluvihjettä"
 
-#: app/ToolTips/tooltipmanager.cpp:228
-msgid "<i>Contains 1 item</i>"
-msgid_plural "<i>Contains %1 items</i>"
-msgstr[0] "<i>Sisältää 1 tietueen</i>"
-msgstr[1] "<i>Sisältää %1 tietuetta</i>"
+#. i18n: file: app/systemsettings.kcfg:13
+#. i18n: ectx: label, entry (ActiveView), group (Main)
+#: rc.cpp:18
+msgid "Internal name for the view used"
+msgstr "Käytetyn näkymän sisäinen nimi"

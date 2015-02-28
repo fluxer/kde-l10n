@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2014-12-09 18:22+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2014-03-19 20:39+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -25,18 +25,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#. i18n: file: conf/dlgintegration.ui:93
-#. i18n: ectx: property (text), widget (KPushButton, increase)
-#: conf/verificationpreferences.cpp:35 rc.cpp:108
-msgid "&Increase Priority"
-msgstr "&Αύξηση προτεραιότητας"
-
-#. i18n: file: conf/dlgintegration.ui:100
-#. i18n: ectx: property (text), widget (KPushButton, decrease)
-#: conf/verificationpreferences.cpp:36 rc.cpp:111
-msgid "&Decrease Priority"
-msgstr "&Μείωση προτεραιότητας"
 
 #: conf/autopastemodel.cpp:174
 msgid "Pattern"
@@ -54,9 +42,13 @@ msgstr "Ακολουθίες διαφυγής"
 msgid "Regular expression"
 msgstr "Κανονική έκφραση"
 
-#: conf/pluginselector.cpp:26 conf/preferencesdialog.cpp:78
-msgid "Plugins"
-msgstr "Πρόσθετα"
+#: conf/integrationpreferences.cpp:32
+msgid "Include"
+msgstr "Συμπερίληψη"
+
+#: conf/integrationpreferences.cpp:33
+msgid "Exclude"
+msgstr "Εξαίρεση"
 
 #: conf/preferencesdialog.cpp:51
 msgid "Xml"
@@ -96,7 +88,7 @@ msgstr "Διαχείριση των ομάδων"
 
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:23
 #. i18n: ectx: property (title), widget (QGroupBox, networkGroupBox)
-#: conf/preferencesdialog.cpp:73 rc.cpp:341
+#: conf/preferencesdialog.cpp:73 rc.cpp:335
 msgid "Network"
 msgstr "Δίκτυο"
 
@@ -130,17 +122,25 @@ msgstr "Προχωρημένα"
 msgid "Advanced Options"
 msgstr "Προχωρημένες επιλογές"
 
+#: conf/preferencesdialog.cpp:78 conf/pluginselector.cpp:26
+msgid "Plugins"
+msgstr "Πρόσθετα"
+
 #: conf/preferencesdialog.cpp:78
 msgid "Transfer Plugins"
 msgstr "Πρόσθετα μεταφοράς"
 
-#: conf/integrationpreferences.cpp:32
-msgid "Include"
-msgstr "Συμπερίληψη"
+#. i18n: file: conf/dlgintegration.ui:93
+#. i18n: ectx: property (text), widget (KPushButton, increase)
+#: conf/verificationpreferences.cpp:35 rc.cpp:12
+msgid "&Increase Priority"
+msgstr "&Αύξηση προτεραιότητας"
 
-#: conf/integrationpreferences.cpp:33
-msgid "Exclude"
-msgstr "Εξαίρεση"
+#. i18n: file: conf/dlgintegration.ui:100
+#. i18n: ectx: property (text), widget (KPushButton, decrease)
+#: conf/verificationpreferences.cpp:36 rc.cpp:15
+msgid "&Decrease Priority"
+msgstr "&Μείωση προτεραιότητας"
 
 #: conf/dlgwebinterface.cpp:44 conf/dlgwebinterface.cpp:59
 msgid "Could not open KWallet"
@@ -150,78 +150,357 @@ msgstr "Αδυναμία ανοίγματος του KWallet"
 msgid "New Group"
 msgstr "Νέα ομάδα"
 
-#: core/transfertreemodel.cpp:645
-msgctxt "name of download"
-msgid "Name"
-msgstr "Όνομα"
+#: core/transfergrouphandler.cpp:97
+msgid "1 Item"
+msgid_plural "%1 Items"
+msgstr[0] "1 αντικείμενο"
+msgstr[1] "%1 αντικείμενα"
 
-#: core/transfertreemodel.cpp:647
-msgctxt "status of download"
+#: core/transfergrouphandler.cpp:113 core/transferhandler.cpp:150
+#: ui/transferdetails.cpp:90
+msgid "%1/s"
+msgstr "%1/δ"
+
+#: core/transfergrouphandler.cpp:169
+msgctxt "start transfergroup downloads"
+msgid "Start"
+msgstr "Εκκίνηση"
+
+#: core/transfergrouphandler.cpp:175
+msgctxt "stop transfergroup downloads"
+msgid "Stop"
+msgstr "Σταμάτημα"
+
+#: core/transfer.cpp:34
+msgid "Downloading...."
+msgstr "Λήψη..."
+
+#: core/transfer.cpp:228 core/transfer.cpp:247
+#: transfer-plugins/bittorrent/bttransfer.cpp:298
+#: transfer-plugins/contentfetch/contentfetch.cpp:69
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:85
+msgctxt "transfer state: stopped"
+msgid "Stopped"
+msgstr "Σταματημένο"
+
+#: core/filemodel.cpp:283
+msgctxt "file in a filesystem"
+msgid "File"
+msgstr "Αρχείο"
+
+#: core/filemodel.cpp:283
+msgctxt "status of the download"
 msgid "Status"
 msgstr "Κατάσταση"
 
-#: core/transfertreemodel.cpp:649
-msgctxt "size of download"
+#: core/filemodel.cpp:283
+msgctxt "size of the download"
 msgid "Size"
 msgstr "Μέγεθος"
 
-#: core/transfertreemodel.cpp:651
-msgctxt "progress of download"
-msgid "Progress"
-msgstr "Πρόοδος"
+#: core/filemodel.cpp:283
+msgctxt "checksum of a file"
+msgid "Checksum"
+msgstr "Άθροισμα ελέγχου"
 
-#: core/transfertreemodel.cpp:653
-msgctxt "speed of download"
-msgid "Speed"
-msgstr "Ταχύτητα"
+#: core/filemodel.cpp:283
+msgctxt "signature of a file"
+msgid "Signature"
+msgstr "Υπογραφή"
 
-#: core/transfertreemodel.cpp:655
-msgctxt "remaining time of download"
-msgid "Remaining Time"
-msgstr "Χρόνος που απομένει"
+#: core/kget.cpp:118
+msgid "Are you sure that you want to remove the group named %1?"
+msgstr "Επιθυμείτε σίγουρα την αφαίρεση της ομάδας με το όνομα %1;"
 
-#: core/verificationmodel.cpp:151
-msgctxt "the type of the hash, e.g. MD5"
-msgid "Type"
-msgstr "Τύπος"
+#: core/kget.cpp:119
+msgid "Remove Group"
+msgstr "Αφαίρεση ομάδας"
 
-#: core/verificationmodel.cpp:153
-msgctxt "the used hash for verification"
-msgid "Hash"
-msgstr "Τιμή κατατεμαχισμού"
+#: core/kget.cpp:143
+msgid "Are you sure that you want to remove the following groups?"
+msgstr "Επιθυμείτε σίγουρα την αφαίρεση των παρακάτω ομάδων;"
 
-#: core/verificationmodel.cpp:155
-msgctxt "verification-result of a file, can be true/false"
-msgid "Verified"
-msgstr "Επαληθεύτηκε"
+#: core/kget.cpp:145
+msgid "Remove groups"
+msgstr "Αφαίρεση ομάδων"
 
-#: core/kgetkjobadapter.cpp:45
-msgid "KGet Transfer"
-msgstr "Μεταφορά KGet"
-
-#: core/kgetglobaljob.cpp:56
-msgid "KGet is downloading %1 file"
-msgid_plural "KGet is downloading %1 files"
-msgstr[0] "Το KGet πραγματοποιεί τη λήψη %1 αρχείου"
-msgstr[1] "Το KGet πραγματοποιεί τη λήψη %1 αρχείων"
-
-#: core/signature.cpp:228
-msgid "The key to verify the signature is missing, do you want to download it?"
-msgstr ""
-"Το κλειδί για την επαλήθευση της υπογραφής λείπει, θέλετε να γίνει η λήψη "
-"του;"
-
-#: core/signature.cpp:250
+#: core/kget.cpp:253
 msgid ""
-"The signature could not be verified for %1. See transfer settings for more "
-"information."
+"<p>The following transfer has been added to the download list:</p><p style="
+"\"font-size: small;\">%1</p>"
 msgstr ""
-"Δεν ήταν δυνατή η επαλήθευση της υπογραφής για το %1. Δείτε στις ρυθμίσεις "
-"μεταφορών για περισσότερες πληροφορίες."
+"<p>Η παρακάτω μεταφορά προστέθηκε στην λίστα λήψεων:</p><p style=\"font-"
+"size: small;\">%1</p>"
 
-#: core/signature.cpp:251
-msgid "Signature not verified"
-msgstr "Η υπογραφή δεν επαληθεύτηκε"
+#: core/kget.cpp:254 core/kget.cpp:351
+msgid "Download added"
+msgstr "Η λήψη προστέθηκε"
+
+#: core/kget.cpp:346
+msgid "<p>The following transfer has been added to the download list:</p>"
+msgstr "<p>Η παρακάτω μεταφορά προστέθηκε στην λίστα λήψεων:</p>"
+
+#: core/kget.cpp:348
+msgid "<p>The following transfers have been added to the download list:</p>"
+msgstr "<p>Οι παρακάτω μεταφορές προστέθηκαν στην λίστα λήψεων:</p>"
+
+#: core/kget.cpp:506 core/kget.cpp:554
+msgid "My Downloads"
+msgstr "Οι λήψεις μου"
+
+#: core/kget.cpp:564
+msgid ""
+"The file %1 already exists.\n"
+"Overwrite?"
+msgstr ""
+"Το αρχείο %1 υπάρχει ήδη.\n"
+"Αντικατάσταση;"
+
+#: core/kget.cpp:565
+msgid "Overwrite existing file?"
+msgstr "Αντικατάσταση υπάρχοντος αρχείου;"
+
+#: core/kget.cpp:578 ui/metalinkcreator/metalinkcreator.cpp:178
+msgid "Unable to save to: %1"
+msgstr "Αδυναμία αποθήκευσης στο: %1"
+
+#: core/kget.cpp:880
+msgid ""
+"<p>The following URL cannot be downloaded, its protocol is not supported by "
+"KGet:</p>"
+msgid_plural ""
+"<p>The following URLs cannot be downloaded, their protocols are not "
+"supported by KGet:</p>"
+msgstr[0] ""
+"<p>Δεν είναι δυνατή η λήψη του παρακάτω URL, το συγκεκριμένο πρωτόκολλο δεν "
+"υποστηρίζεται από το KGet:</p>"
+msgstr[1] ""
+"<p>Δεν είναι δυνατή η λήψη των παρακάτω URL, τα συγκεκριμένα πρωτόκολλα δεν "
+"υποστηρίζονται από το KGet:</p>"
+
+#: core/kget.cpp:890
+msgid "Protocol unsupported"
+msgstr "Το πρωτόκολλο δεν υποστηρίζεται"
+
+#: core/kget.cpp:944 ui/newtransferdialog.cpp:50
+msgid "New Download"
+msgstr "Νέα λήψη"
+
+#: core/kget.cpp:944
+msgid "Enter URL:"
+msgstr "Εισάγετε URL:"
+
+#: core/kget.cpp:981
+msgid "Save As"
+msgstr "Αποθήκευση ως"
+
+#: core/kget.cpp:994 core/urlchecker.cpp:362
+msgid ""
+"Malformed URL:\n"
+"%1"
+msgstr ""
+"Το URL είναι λάθος μορφής:\n"
+"%1"
+
+#: core/kget.cpp:1001 core/urlchecker.cpp:364
+msgid ""
+"Malformed URL, protocol missing:\n"
+"%1"
+msgstr ""
+"Μη έγκυρη μορφή URL, λείπει το πρωτόκολλο:\n"
+"%1"
+
+#: core/kget.cpp:1012 core/urlchecker.cpp:420
+msgid ""
+"You have already completed a download from the location: \n"
+"\n"
+"%1\n"
+"\n"
+"Download it again?"
+msgstr ""
+"Έχετε ήδη ολοκληρώσει μια λήψη από την συγκεκριμένη τοποθεσία: \n"
+"\n"
+"%1\n"
+"\n"
+"Να γίνει ξανά η λήψη;"
+
+#: core/kget.cpp:1013 core/urlchecker.cpp:636
+msgid "Download it again?"
+msgstr "Να γίνει ξανά η λήψη;"
+
+#: core/kget.cpp:1025 core/urlchecker.cpp:422
+msgid ""
+"You have a download in progress from the location: \n"
+"\n"
+"%1\n"
+"\n"
+"Delete it and download again?"
+msgstr ""
+"Υπάρχει μια λήψη σε εξέλιξη από την παρακάτω τοποθεσία: \n"
+"\n"
+"%1\n"
+"\n"
+"Να διαγραφεί και να γίνει λήψη ξανά;"
+
+#: core/kget.cpp:1026 core/urlchecker.cpp:633
+msgid "Delete it and download again?"
+msgstr "Να διαγραφεί και να γίνει η λήψη ξανά;"
+
+#: core/kget.cpp:1049 core/kget.cpp:1056
+msgid "Directory is not writable"
+msgstr "Ο κατάλογος δεν είναι εγγράψιμος"
+
+#: core/kget.cpp:1084
+msgid ""
+"You have already downloaded that file from another location.\n"
+"\n"
+"Download and delete the previous one?"
+msgstr ""
+"Έχει γίνει ήδη η λήψη του συγκεκριμένου αρχείου από μια άλλη τοποθεσία.\n"
+"\n"
+"Να γίνει η λήψη και να διαγραφεί το προηγούμενο αρχείο;"
+
+#: core/kget.cpp:1085 core/urlchecker.cpp:645
+msgid "File already downloaded. Download anyway?"
+msgstr ""
+"Έχει γίνει ήδη η λήψη του συγκεκριμένου αρχείου. Να γίνει η λήψη ούτως ή "
+"άλλως;"
+
+#: core/kget.cpp:1094
+msgid "You are already downloading the same file"
+msgstr "Γίνεται ήδη λήψη του ίδιου αρχείου"
+
+#: core/kget.cpp:1098 core/kget.cpp:1101 core/urlchecker.cpp:648
+#: core/urlchecker.cpp:744 transfer-plugins/metalink/metalink.cpp:710
+#: transfer-plugins/metalink/abstractmetalink.cpp:483
+msgid "File already exists"
+msgstr "Το αρχείο υπάρχει ήδη"
+
+#: core/kget.cpp:1206
+msgid "Internet connection established, resuming transfers."
+msgstr "Επίτευξη σύνδεσης στο διαδίκτυο, συνέχιση των μεταφορών."
+
+#: core/kget.cpp:1211
+msgid "No internet connection, stopping transfers."
+msgstr "Χωρίς σύνδεση στο διαδίκτυο, σταμάτημα των μεταφορών."
+
+#: core/kget.cpp:1225
+msgid "Plugin loader could not load the plugin: %1."
+msgstr "Ο φορτωτής πρόσθετων δεν μπόρεσε να φορτώσει το πρόσθετο: %1"
+
+#: core/kget.cpp:1243
+msgid ""
+"Not deleting\n"
+"%1\n"
+"as it is a directory."
+msgstr ""
+"Δε διαγράφεται το\n"
+"%1\n"
+"καθώς είναι κατάλογος."
+
+#: core/kget.cpp:1253
+msgid ""
+"Not deleting\n"
+"%1\n"
+"as it is not a local file."
+msgstr ""
+"Δε διαγράφεται το\n"
+"%1\n"
+"καθώς δεν είναι ένα τοπικό αρχείο."
+
+#: core/kget.cpp:1364
+msgid ""
+"<p>The following file has finished downloading:</p><p style=\"font-size: "
+"small;\">%1</p>"
+msgstr ""
+"<p>Ολοκληρώθηκε η λήψη του παρακάτω αρχείου:</p><p style=\"font-size: small;"
+"\">%1</p>"
+
+#: core/kget.cpp:1365
+msgid "Download completed"
+msgstr "Η λήψη ολοκληρώθηκε"
+
+#: core/kget.cpp:1368
+msgid ""
+"<p>The following transfer has been started:</p><p style=\"font-size: small;"
+"\">%1</p>"
+msgstr ""
+"<p>Η παρακάτω μεταφορά ξεκίνησε:</p><p style=\"font-size: small;\">%1</p>"
+
+#: core/kget.cpp:1369
+msgid "Download started"
+msgstr "Η λήψη ξεκίνησε"
+
+#: core/kget.cpp:1371 core/datasourcefactory.cpp:279
+#: core/datasourcefactory.cpp:624 transfer-plugins/metalink/metalink.cpp:195
+#: transfer-plugins/metalink/metalinkhttp.cpp:236
+#: transfer-plugins/metalink/metalinkxml.cpp:192
+#: ui/metalinkcreator/metalinkcreator.cpp:161
+#: ui/metalinkcreator/metalinkcreator.cpp:178
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: core/kget.cpp:1371
+msgid ""
+"<p>There has been an error in the following transfer:</p><p style=\"font-"
+"size: small;\">%1</p><p>The error message is:</p><p style=\"font-size: small;"
+"\">%2</p>"
+msgstr ""
+"<p>Παρουσιάστηκε ένα σφάλμα στην παρακάτω μεταφορά:</p><p style=\"font-size: "
+"small;\">%1</p><p>Το μήνυμα λάθους είναι το παρακάτω:</p><p style=\"font-"
+"size: small;\">%2</p>"
+
+#: core/kget.cpp:1376
+msgid "Resolve"
+msgstr "Επίλυση"
+
+#: core/kget.cpp:1428
+msgid "KGet is now closing, as all downloads have completed."
+msgstr "Το KGet θα τερματίσει τώρα γιατί έχουν ολοκληρωθεί όλες οι λήψεις."
+
+#: core/kget.cpp:1432
+msgid "The computer will now turn off, as all downloads have completed."
+msgstr "Ο υπολογιστής θα κλείσει τώρα γιατί έχουν ολοκληρωθεί όλες οι λήψεις."
+
+#: core/kget.cpp:1432
+msgctxt "Shutting down computer"
+msgid "Shutdown"
+msgstr "Τερματισμός"
+
+#: core/kget.cpp:1435
+msgid "The computer will now suspend to disk, as all downloads have completed."
+msgstr ""
+"Τώρα θα γίνει αναστολή του υπολογιστή στο δίσκο, γιατί έχουν ολοκληρωθεί "
+"όλες οι λήψεις."
+
+#: core/kget.cpp:1435
+msgctxt "Hibernating computer"
+msgid "Hibernating"
+msgstr "Νάρκωση"
+
+#: core/kget.cpp:1438
+msgid "The computer will now suspend to RAM, as all downloads have completed."
+msgstr ""
+"Τώρα θα γίνει αναστολή του υπολογιστή στη μνήμη, γιατί έχουν ολοκληρωθεί "
+"όλες οι λήψεις."
+
+#: core/kget.cpp:1438
+msgctxt "Suspending computer"
+msgid "Suspending"
+msgstr "Γίνεται αναστολή του υπολογιστή"
+
+#: core/kget.cpp:1446
+msgctxt "abort the proposed action"
+msgid "Abort"
+msgstr "Εγκατάλειψη"
+
+#: core/kget.cpp:1457
+msgid "<p>All transfers have been finished.</p>"
+msgstr "<p>Όλες οι μεταφορές ολοκληρώθηκαν.</p>"
+
+#: core/kget.cpp:1458
+msgid "Downloads completed"
+msgstr "Οι λήψεις ολοκληρώθηκαν"
 
 #: core/transferhandler.cpp:137
 #: transfer-plugins/bittorrent/btdetailswidget.cpp:27
@@ -249,10 +528,25 @@ msgstr "μη διαθέσιμο"
 msgid "Stalled"
 msgstr "Σταματημένο"
 
-#: core/transferhandler.cpp:150 core/transfergrouphandler.cpp:113
-#: ui/transferdetails.cpp:90
-msgid "%1/s"
-msgstr "%1/δ"
+#: core/keydownloader.cpp:73
+msgid ""
+"No server for downloading keys is specified in settings. Downloading aborted."
+msgstr ""
+"Δεν έχει καθοριστεί εξυπηρετητής για τη λήψη κλειδιών στις ρυθμίσεις. Η λήψη "
+"εγκαταλείφθηκε."
+
+#: core/keydownloader.cpp:74 core/keydownloader.cpp:94
+msgid "No key server"
+msgstr "Κανένας εξυπηρετητής κλειδιών"
+
+#: core/keydownloader.cpp:93
+msgid ""
+"No useful key server found, key not downloaded. Add more servers to the "
+"settings or restart KGet and retry downloading."
+msgstr ""
+"Δεν βρέθηκε κάποιος χρήσιμος εξυπηρετητής κλειδιών, δεν έγινε λήψη του "
+"κλειδιού. Προσθέστε περισσότερους εξυπηρετητές στις ρυθμίσεις ή "
+"επανεκκινήστε το KGet και προσπαθήστε να κάνετε λήψη ξανά."
 
 #: core/urlchecker.cpp:47
 msgid "Question"
@@ -291,8 +585,9 @@ msgstr "Ο προορισμός λήψης δεν είναι εγγράψιμο�
 msgid "No URL specified."
 msgstr "Δεν έχετε καθορίσει το URL."
 
-#: core/urlchecker.cpp:322 transfer-plugins/bittorrent/bttransfer.cpp:256
+#: core/urlchecker.cpp:322
 #: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:94
+#: transfer-plugins/bittorrent/bttransfer.cpp:256
 msgid "Malformed URL."
 msgstr "Κακοδιατυπωμένο URL."
 
@@ -334,22 +629,6 @@ msgid ""
 "%1"
 msgstr ""
 "Ο προορισμός λήψης δεν είναι εγγράψιμος:\n"
-"%1"
-
-#: core/urlchecker.cpp:362 core/kget.cpp:994
-msgid ""
-"Malformed URL:\n"
-"%1"
-msgstr ""
-"Το URL είναι λάθος μορφής:\n"
-"%1"
-
-#: core/urlchecker.cpp:364 core/kget.cpp:1001
-msgid ""
-"Malformed URL, protocol missing:\n"
-"%1"
-msgstr ""
-"Μη έγκυρη μορφή URL, λείπει το πρωτόκολλο:\n"
 "%1"
 
 #: core/urlchecker.cpp:366
@@ -404,34 +683,6 @@ msgstr ""
 "Το αρχείο υπάρχει ήδη.\n"
 "%1\n"
 "Να αντικατασταθεί;"
-
-#: core/urlchecker.cpp:420 core/kget.cpp:1012
-msgid ""
-"You have already completed a download from the location: \n"
-"\n"
-"%1\n"
-"\n"
-"Download it again?"
-msgstr ""
-"Έχετε ήδη ολοκληρώσει μια λήψη από την συγκεκριμένη τοποθεσία: \n"
-"\n"
-"%1\n"
-"\n"
-"Να γίνει ξανά η λήψη;"
-
-#: core/urlchecker.cpp:422 core/kget.cpp:1025
-msgid ""
-"You have a download in progress from the location: \n"
-"\n"
-"%1\n"
-"\n"
-"Delete it and download again?"
-msgstr ""
-"Υπάρχει μια λήψη σε εξέλιξη από την παρακάτω τοποθεσία: \n"
-"\n"
-"%1\n"
-"\n"
-"Να διαγραφεί και να γίνει λήψη ξανά;"
 
 #: core/urlchecker.cpp:452
 msgid "Malformed URLs."
@@ -579,322 +830,69 @@ msgstr ""
 "\n"
 "Να διαγραφούν και να γίνει λήψη ξανά;"
 
-#: core/urlchecker.cpp:633 core/kget.cpp:1026
-msgid "Delete it and download again?"
-msgstr "Να διαγραφεί και να γίνει η λήψη ξανά;"
+#: core/kgetglobaljob.cpp:56
+msgid "KGet is downloading %1 file"
+msgid_plural "KGet is downloading %1 files"
+msgstr[0] "Το KGet πραγματοποιεί τη λήψη %1 αρχείου"
+msgstr[1] "Το KGet πραγματοποιεί τη λήψη %1 αρχείων"
 
-#: core/urlchecker.cpp:636 core/kget.cpp:1013
-msgid "Download it again?"
-msgstr "Να γίνει ξανά η λήψη;"
+#: core/transfertreemodel.cpp:645
+msgctxt "name of download"
+msgid "Name"
+msgstr "Όνομα"
 
-#: core/urlchecker.cpp:645 core/kget.cpp:1085
-msgid "File already downloaded. Download anyway?"
-msgstr ""
-"Έχει γίνει ήδη η λήψη του συγκεκριμένου αρχείου. Να γίνει η λήψη ούτως ή "
-"άλλως;"
-
-#: core/urlchecker.cpp:648 core/urlchecker.cpp:744 core/kget.cpp:1098
-#: core/kget.cpp:1101 transfer-plugins/metalink/abstractmetalink.cpp:483
-#: transfer-plugins/metalink/metalink.cpp:710
-msgid "File already exists"
-msgstr "Το αρχείο υπάρχει ήδη"
-
-#: core/kget.cpp:118
-msgid "Are you sure that you want to remove the group named %1?"
-msgstr "Επιθυμείτε σίγουρα την αφαίρεση της ομάδας με το όνομα %1;"
-
-#: core/kget.cpp:119
-msgid "Remove Group"
-msgstr "Αφαίρεση ομάδας"
-
-#: core/kget.cpp:143
-msgid "Are you sure that you want to remove the following groups?"
-msgstr "Επιθυμείτε σίγουρα την αφαίρεση των παρακάτω ομάδων;"
-
-#: core/kget.cpp:145
-msgid "Remove groups"
-msgstr "Αφαίρεση ομάδων"
-
-#: core/kget.cpp:253
-msgid ""
-"<p>The following transfer has been added to the download list:</p><p style="
-"\"font-size: small;\">%1</p>"
-msgstr ""
-"<p>Η παρακάτω μεταφορά προστέθηκε στην λίστα λήψεων:</p><p style=\"font-"
-"size: small;\">%1</p>"
-
-#: core/kget.cpp:254 core/kget.cpp:351
-msgid "Download added"
-msgstr "Η λήψη προστέθηκε"
-
-#: core/kget.cpp:346
-msgid "<p>The following transfer has been added to the download list:</p>"
-msgstr "<p>Η παρακάτω μεταφορά προστέθηκε στην λίστα λήψεων:</p>"
-
-#: core/kget.cpp:348
-msgid "<p>The following transfers have been added to the download list:</p>"
-msgstr "<p>Οι παρακάτω μεταφορές προστέθηκαν στην λίστα λήψεων:</p>"
-
-#: core/kget.cpp:506 core/kget.cpp:554
-msgid "My Downloads"
-msgstr "Οι λήψεις μου"
-
-#: core/kget.cpp:564
-msgid ""
-"The file %1 already exists.\n"
-"Overwrite?"
-msgstr ""
-"Το αρχείο %1 υπάρχει ήδη.\n"
-"Αντικατάσταση;"
-
-#: core/kget.cpp:565
-msgid "Overwrite existing file?"
-msgstr "Αντικατάσταση υπάρχοντος αρχείου;"
-
-#: core/kget.cpp:578 ui/metalinkcreator/metalinkcreator.cpp:178
-msgid "Unable to save to: %1"
-msgstr "Αδυναμία αποθήκευσης στο: %1"
-
-#: core/kget.cpp:880
-msgid ""
-"<p>The following URL cannot be downloaded, its protocol is not supported by "
-"KGet:</p>"
-msgid_plural ""
-"<p>The following URLs cannot be downloaded, their protocols are not "
-"supported by KGet:</p>"
-msgstr[0] ""
-"<p>Δεν είναι δυνατή η λήψη του παρακάτω URL, το συγκεκριμένο πρωτόκολλο δεν "
-"υποστηρίζεται από το KGet:</p>"
-msgstr[1] ""
-"<p>Δεν είναι δυνατή η λήψη των παρακάτω URL, τα συγκεκριμένα πρωτόκολλα δεν "
-"υποστηρίζονται από το KGet:</p>"
-
-#: core/kget.cpp:890
-msgid "Protocol unsupported"
-msgstr "Το πρωτόκολλο δεν υποστηρίζεται"
-
-#: core/kget.cpp:944 ui/newtransferdialog.cpp:50
-msgid "New Download"
-msgstr "Νέα λήψη"
-
-#: core/kget.cpp:944
-msgid "Enter URL:"
-msgstr "Εισάγετε URL:"
-
-#: core/kget.cpp:981
-msgid "Save As"
-msgstr "Αποθήκευση ως"
-
-#: core/kget.cpp:1049 core/kget.cpp:1056
-msgid "Directory is not writable"
-msgstr "Ο κατάλογος δεν είναι εγγράψιμος"
-
-#: core/kget.cpp:1084
-msgid ""
-"You have already downloaded that file from another location.\n"
-"\n"
-"Download and delete the previous one?"
-msgstr ""
-"Έχει γίνει ήδη η λήψη του συγκεκριμένου αρχείου από μια άλλη τοποθεσία.\n"
-"\n"
-"Να γίνει η λήψη και να διαγραφεί το προηγούμενο αρχείο;"
-
-#: core/kget.cpp:1094
-msgid "You are already downloading the same file"
-msgstr "Γίνεται ήδη λήψη του ίδιου αρχείου"
-
-#: core/kget.cpp:1206
-msgid "Internet connection established, resuming transfers."
-msgstr "Επίτευξη σύνδεσης στο διαδίκτυο, συνέχιση των μεταφορών."
-
-#: core/kget.cpp:1211
-msgid "No internet connection, stopping transfers."
-msgstr "Χωρίς σύνδεση στο διαδίκτυο, σταμάτημα των μεταφορών."
-
-#: core/kget.cpp:1225
-msgid "Plugin loader could not load the plugin: %1."
-msgstr "Ο φορτωτής πρόσθετων δεν μπόρεσε να φορτώσει το πρόσθετο: %1"
-
-#: core/kget.cpp:1243
-msgid ""
-"Not deleting\n"
-"%1\n"
-"as it is a directory."
-msgstr ""
-"Δε διαγράφεται το\n"
-"%1\n"
-"καθώς είναι κατάλογος."
-
-#: core/kget.cpp:1253
-msgid ""
-"Not deleting\n"
-"%1\n"
-"as it is not a local file."
-msgstr ""
-"Δε διαγράφεται το\n"
-"%1\n"
-"καθώς δεν είναι ένα τοπικό αρχείο."
-
-#: core/kget.cpp:1361
-msgid ""
-"<p>The following file has finished downloading:</p><p style=\"font-size: "
-"small;\">%1</p>"
-msgstr ""
-"<p>Ολοκληρώθηκε η λήψη του παρακάτω αρχείου:</p><p style=\"font-size: small;"
-"\">%1</p>"
-
-#: core/kget.cpp:1362
-msgid "Download completed"
-msgstr "Η λήψη ολοκληρώθηκε"
-
-#: core/kget.cpp:1365
-msgid ""
-"<p>The following transfer has been started:</p><p style=\"font-size: small;"
-"\">%1</p>"
-msgstr ""
-"<p>Η παρακάτω μεταφορά ξεκίνησε:</p><p style=\"font-size: small;\">%1</p>"
-
-#: core/kget.cpp:1366
-msgid "Download started"
-msgstr "Η λήψη ξεκίνησε"
-
-#: core/kget.cpp:1368 core/datasourcefactory.cpp:279
-#: core/datasourcefactory.cpp:624
-#: transfer-plugins/metalink/metalinkhttp.cpp:236
-#: transfer-plugins/metalink/metalinkxml.cpp:192
-#: transfer-plugins/metalink/metalink.cpp:195
-#: ui/metalinkcreator/metalinkcreator.cpp:161
-#: ui/metalinkcreator/metalinkcreator.cpp:178
-msgid "Error"
-msgstr "Σφάλμα"
-
-#: core/kget.cpp:1368
-msgid ""
-"<p>There has been an error in the following transfer:</p><p style=\"font-"
-"size: small;\">%1</p><p>The error message is:</p><p style=\"font-size: small;"
-"\">%2</p>"
-msgstr ""
-"<p>Παρουσιάστηκε ένα σφάλμα στην παρακάτω μεταφορά:</p><p style=\"font-size: "
-"small;\">%1</p><p>Το μήνυμα λάθους είναι το παρακάτω:</p><p style=\"font-"
-"size: small;\">%2</p>"
-
-#: core/kget.cpp:1373
-msgid "Resolve"
-msgstr "Επίλυση"
-
-#: core/kget.cpp:1425
-msgid "KGet is now closing, as all downloads have completed."
-msgstr "Το KGet θα τερματίσει τώρα γιατί έχουν ολοκληρωθεί όλες οι λήψεις."
-
-#: core/kget.cpp:1429
-msgid "The computer will now turn off, as all downloads have completed."
-msgstr "Ο υπολογιστής θα κλείσει τώρα γιατί έχουν ολοκληρωθεί όλες οι λήψεις."
-
-#: core/kget.cpp:1429
-msgctxt "Shutting down computer"
-msgid "Shutdown"
-msgstr "Τερματισμός"
-
-#: core/kget.cpp:1432
-msgid "The computer will now suspend to disk, as all downloads have completed."
-msgstr ""
-"Τώρα θα γίνει αναστολή του υπολογιστή στο δίσκο, γιατί έχουν ολοκληρωθεί "
-"όλες οι λήψεις."
-
-#: core/kget.cpp:1432
-msgctxt "Hibernating computer"
-msgid "Hibernating"
-msgstr "Νάρκωση"
-
-#: core/kget.cpp:1435
-msgid "The computer will now suspend to RAM, as all downloads have completed."
-msgstr ""
-"Τώρα θα γίνει αναστολή του υπολογιστή στη μνήμη, γιατί έχουν ολοκληρωθεί "
-"όλες οι λήψεις."
-
-#: core/kget.cpp:1435
-msgctxt "Suspending computer"
-msgid "Suspending"
-msgstr "Γίνεται αναστολή του υπολογιστή"
-
-#: core/kget.cpp:1443
-msgctxt "abort the proposed action"
-msgid "Abort"
-msgstr "Εγκατάλειψη"
-
-#: core/kget.cpp:1453
-msgid "<p>All transfers have been finished.</p>"
-msgstr "<p>Όλες οι μεταφορές ολοκληρώθηκαν.</p>"
-
-#: core/kget.cpp:1454
-msgid "Downloads completed"
-msgstr "Οι λήψεις ολοκληρώθηκαν"
-
-#: core/transfer.cpp:34
-msgid "Downloading...."
-msgstr "Λήψη..."
-
-#: core/transfer.cpp:228 core/transfer.cpp:247
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:85
-#: transfer-plugins/contentfetch/contentfetch.cpp:69
-#: transfer-plugins/bittorrent/bttransfer.cpp:298
-msgctxt "transfer state: stopped"
-msgid "Stopped"
-msgstr "Σταματημένο"
-
-#: core/filemodel.cpp:283
-msgctxt "file in a filesystem"
-msgid "File"
-msgstr "Αρχείο"
-
-#: core/filemodel.cpp:283
-msgctxt "status of the download"
+#: core/transfertreemodel.cpp:647
+msgctxt "status of download"
 msgid "Status"
 msgstr "Κατάσταση"
 
-#: core/filemodel.cpp:283
-msgctxt "size of the download"
+#: core/transfertreemodel.cpp:649
+msgctxt "size of download"
 msgid "Size"
 msgstr "Μέγεθος"
 
-#: core/filemodel.cpp:283
-msgctxt "checksum of a file"
-msgid "Checksum"
-msgstr "Άθροισμα ελέγχου"
+#: core/transfertreemodel.cpp:651
+msgctxt "progress of download"
+msgid "Progress"
+msgstr "Πρόοδος"
 
-#: core/filemodel.cpp:283
-msgctxt "signature of a file"
-msgid "Signature"
-msgstr "Υπογραφή"
+#: core/transfertreemodel.cpp:653
+msgctxt "speed of download"
+msgid "Speed"
+msgstr "Ταχύτητα"
 
-#: core/linkimporter.cpp:90
-msgid "Error trying to get %1"
-msgstr "Σφάλμα κατά την ανάκτηση %1"
-
-#: core/keydownloader.cpp:73
-msgid ""
-"No server for downloading keys is specified in settings. Downloading aborted."
-msgstr ""
-"Δεν έχει καθοριστεί εξυπηρετητής για τη λήψη κλειδιών στις ρυθμίσεις. Η λήψη "
-"εγκαταλείφθηκε."
-
-#: core/keydownloader.cpp:74 core/keydownloader.cpp:94
-msgid "No key server"
-msgstr "Κανένας εξυπηρετητής κλειδιών"
-
-#: core/keydownloader.cpp:93
-msgid ""
-"No useful key server found, key not downloaded. Add more servers to the "
-"settings or restart KGet and retry downloading."
-msgstr ""
-"Δεν βρέθηκε κάποιος χρήσιμος εξυπηρετητής κλειδιών, δεν έγινε λήψη του "
-"κλειδιού. Προσθέστε περισσότερους εξυπηρετητές στις ρυθμίσεις ή "
-"επανεκκινήστε το KGet και προσπαθήστε να κάνετε λήψη ξανά."
+#: core/transfertreemodel.cpp:655
+msgctxt "remaining time of download"
+msgid "Remaining Time"
+msgstr "Χρόνος που απομένει"
 
 #: core/kget.h:357 ui/tray.cpp:41 main.cpp:103 mainwindow.cpp:90
 #: mainwindow.cpp:519
 msgid "KGet"
 msgstr "KGet"
+
+#: core/kgetkjobadapter.cpp:45
+msgid "KGet Transfer"
+msgstr "Μεταφορά KGet"
+
+#: core/linkimporter.cpp:90
+msgid "Error trying to get %1"
+msgstr "Σφάλμα κατά την ανάκτηση %1"
+
+#: core/verificationmodel.cpp:151
+msgctxt "the type of the hash, e.g. MD5"
+msgid "Type"
+msgstr "Τύπος"
+
+#: core/verificationmodel.cpp:153
+msgctxt "the used hash for verification"
+msgid "Hash"
+msgstr "Τιμή κατατεμαχισμού"
+
+#: core/verificationmodel.cpp:155
+msgctxt "verification-result of a file, can be true/false"
+msgid "Verified"
+msgstr "Επαληθεύτηκε"
 
 #: core/datasourcefactory.cpp:279
 msgid "Filesize is larger than maximum file size supported by VFAT."
@@ -907,137 +905,44 @@ msgctxt "A mirror is removed when the file has the wrong download size"
 msgid "%1 removed as it did report a wrong file size."
 msgstr "Αφαίρεση του %1 επειδή ανάφερε ένα εσφαλμένο μέγεθος αρχείου."
 
-#: core/transfergrouphandler.cpp:97
-msgid "1 Item"
-msgid_plural "%1 Items"
-msgstr[0] "1 αντικείμενο"
-msgstr[1] "%1 αντικείμενα"
+#: core/signature.cpp:228
+msgid "The key to verify the signature is missing, do you want to download it?"
+msgstr ""
+"Το κλειδί για την επαλήθευση της υπογραφής λείπει, θέλετε να γίνει η λήψη "
+"του;"
 
-#: core/transfergrouphandler.cpp:169
-msgctxt "start transfergroup downloads"
-msgid "Start"
-msgstr "Εκκίνηση"
-
-#: core/transfergrouphandler.cpp:175
-msgctxt "stop transfergroup downloads"
-msgid "Stop"
-msgstr "Σταμάτημα"
-
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:50
-msgctxt "transfer state: running"
-msgid "Running...."
-msgstr "Εκτελείται...."
-
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:113
-msgctxt "Transfer State:Finished"
-msgid "Finished"
-msgstr "Ολοκληρώθηκε"
-
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:156
-msgid "Download failed, could not access this URL."
-msgstr "Η λήψη απέτυχε, δεν ήταν δυνατή η πρόσβαση στο URL."
-
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:166
+#: core/signature.cpp:250
 msgid ""
-"This URL does not allow multiple connections,\n"
-"the download will take longer."
+"The signature could not be verified for %1. See transfer settings for more "
+"information."
 msgstr ""
-"Το URL δεν επιτρέπει πολλαπλές συνδέσεις,\n"
-"η λήψη θα διαρκέσει περισσότερο."
+"Δεν ήταν δυνατή η επαλήθευση της υπογραφής για το %1. Δείτε στις ρυθμίσεις "
+"μεταφορών για περισσότερες πληροφορίες."
 
-#: transfer-plugins/metalink/metalinkhttp.cpp:159
-msgid "The download could not be verified, try to repair it?"
-msgstr ""
-"Δεν ήταν δυνατή η επαλήθευση της λήψης, θέλετε να γίνει προσπάθεια επισκευής;"
+#: core/signature.cpp:251
+msgid "Signature not verified"
+msgstr "Η υπογραφή δεν επαληθεύτηκε"
 
-#: transfer-plugins/metalink/metalinkhttp.cpp:236
-#: transfer-plugins/metalink/metalinkxml.cpp:192
-#: transfer-plugins/metalink/metalink.cpp:195
-msgid "Download failed, no working URLs were found."
-msgstr "Η λήψη απέτυχε, δεν βρέθηκαν URL σε λειτουργία."
+#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:23
+msgid "Insert Engine"
+msgstr "Εισαγωγή μηχανής"
 
-#: transfer-plugins/metalink/metalinkxml.cpp:75
-#: transfer-plugins/metalink/metalink.cpp:79
-msgid "Downloading Metalink File...."
-msgstr "Λήψη του αρχείου μετασυνδέσμου..."
+#. i18n: file: transfer-plugins/mirrorsearch/dlgengineediting.ui:16
+#. i18n: ectx: property (text), widget (QLabel, engineNameLabel)
+#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:28 rc.cpp:159
+msgid "Engine name:"
+msgstr "Όνομα μηχανής:"
 
-#: transfer-plugins/metalink/metalinkxml.cpp:109
-#: transfer-plugins/metalink/metalink.cpp:113
-msgid ""
-"A newer version of this Metalink might exist, do you want to download it?"
-msgstr ""
-"Μπορεί να υπάρχει μια νεώτερη έκδοση αυτού του μετασυνδέσμου, επιθυμείτε τη "
-"λήψη του;"
-
-#: transfer-plugins/metalink/metalinkxml.cpp:110
-#: transfer-plugins/metalink/metalink.cpp:114
-msgid "Redownload Metalink"
-msgstr "Επανάληψη λήψης του μετασυνδέσμου"
-
-#: transfer-plugins/metalink/abstractmetalink.cpp:219
-#: transfer-plugins/metalink/metalink.cpp:483
-msgid ""
-"The download could not be verified, do you want to repair (if repairing does "
-"not work the download would be restarted) it?"
-msgstr ""
-"Δεν ήταν δυνατή η επαλήθευση της λήψης, επιθυμείτε την επισκευή της (αν η "
-"επισκευή δεν είναι επιτυχής θα γίνει επανεκκίνηση της λήψης) ;"
-
-#: transfer-plugins/metalink/fileselectiondlg.cpp:31
-msgid "File Selection"
-msgstr "Επιλογή αρχείου"
-
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:252
-#: transfer-plugins/kio/transferKio.cpp:274
-msgid "The download (%1) could not be verified. Do you want to repair it?"
-msgstr "Δεν ήταν δυνατή η επαλήθευση της λήψης (%1). Θέλετε να γίνει επισκευή;"
-
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:255
-#: transfer-plugins/kio/transferKio.cpp:277
-msgid "The download (%1) could not be verified. Do you want to redownload it?"
-msgstr ""
-"Δεν ήταν δυνατή η επαλήθευση της λήψης (%1). Θέλετε να γίνει η λήψη ξανά;"
-
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:259
-#: transfer-plugins/kio/transferKio.cpp:281
-msgid "Verification failed."
-msgstr "Η επαλήθευση απέτυχε."
-
-#: transfer-plugins/multisegmentkio/segment.cpp:295
-msgid "Failed to write to the file."
-msgstr "Αποτυχία εγγραφής στο αρχείο."
-
-#: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.cpp:116
-msgctxt "Configure script"
-msgid "Configure script"
-msgstr "Διαμόρφωση σεναρίου"
-
-#: transfer-plugins/contentfetch/contentfetch.cpp:52
-msgctxt "Transfer state: processing script"
-msgid "Processing script...."
-msgstr "Επεξεργασία σεναρίου..."
-
-#: transfer-plugins/contentfetch/contentfetch.cpp:83
-msgctxt "Transfer State: Finished"
-msgid "Finished"
-msgstr "Ολοκληρώθηκε"
-
-#: transfer-plugins/contentfetch/contentfetch.cpp:92
-msgctxt "Transfer State: Aborted"
-msgid "Aborted"
-msgstr "Εγκαταλείφθηκε"
-
-#: transfer-plugins/contentfetch/dlgscriptediting.cpp:25
-msgid "Add New Script"
-msgstr "Προσθήκη νέου σεναρίου"
-
-#: transfer-plugins/contentfetch/dlgscriptediting.cpp:37
-msgid "Edit Script"
-msgstr "Επεξεργασία σεναρίου"
-
-#: transfer-plugins/contentfetch/dlgscriptediting.cpp:48
-msgid "Set Script File"
-msgstr "Ορισμός αρχείου σεναρίου"
+#. i18n: file: transfer-plugins/mirrorsearch/dlgengineediting.ui:30
+#. i18n: ectx: property (text), widget (QLabel, urlLabel)
+#. i18n: file: ui/metalinkcreator/commondata.ui:170
+#. i18n: ectx: property (text), widget (QLabel, label_21)
+#. i18n: file: ui/newtransferwidget.ui:24
+#. i18n: ectx: property (text), widget (QLabel, urlLabel)
+#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:29 rc.cpp:162 rc.cpp:569
+#: rc.cpp:866
+msgid "URL:"
+msgstr "URL:"
 
 #: transfer-plugins/checksumsearch/checksumsearch.cpp:30
 msgid "Append"
@@ -1074,82 +979,53 @@ msgctxt "the type of the checksum e.g. md5"
 msgid "Checksum type"
 msgstr "Τύπος αθροίσματος ελέγχου"
 
-#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:23
-msgid "Insert Engine"
-msgstr "Εισαγωγή μηχανής"
+#: transfer-plugins/kio/transferKio.cpp:96
+msgctxt "transfer state: connecting"
+msgid "Connecting...."
+msgstr "Γίνεται σύνδεση..."
 
-#. i18n: file: transfer-plugins/mirrorsearch/dlgengineediting.ui:16
-#. i18n: ectx: property (text), widget (QLabel, engineNameLabel)
-#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:28 rc.cpp:285
-msgid "Engine name:"
-msgstr "Όνομα μηχανής:"
+#: transfer-plugins/kio/transferKio.cpp:274
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:252
+msgid "The download (%1) could not be verified. Do you want to repair it?"
+msgstr "Δεν ήταν δυνατή η επαλήθευση της λήψης (%1). Θέλετε να γίνει επισκευή;"
 
-#. i18n: file: transfer-plugins/mirrorsearch/dlgengineediting.ui:30
-#. i18n: ectx: property (text), widget (QLabel, urlLabel)
-#. i18n: file: ui/metalinkcreator/commondata.ui:170
-#. i18n: ectx: property (text), widget (QLabel, label_21)
-#. i18n: file: ui/newtransferwidget.ui:24
-#. i18n: ectx: property (text), widget (QLabel, urlLabel)
-#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:29 rc.cpp:288 rc.cpp:590
-#: rc.cpp:866
-msgid "URL:"
-msgstr "URL:"
-
-#: transfer-plugins/bittorrent/bttransferfactory.cpp:34
-msgid "Cannot initialize libktorrent. Torrent support might not work."
+#: transfer-plugins/kio/transferKio.cpp:277
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:255
+msgid "The download (%1) could not be verified. Do you want to redownload it?"
 msgstr ""
-"Αδύνατη η αρχικοποίηση του libktorrent. Η υποστήριξη των torrent μπορεί να "
-"μην δουλεύει."
+"Δεν ήταν δυνατή η επαλήθευση της λήψης (%1). Θέλετε να γίνει η λήψη ξανά;"
 
-#: transfer-plugins/bittorrent/bttransferfactory.cpp:84
-msgid "&Advanced Details"
-msgstr "&Προχωρημένες λεπτομέρειες"
+#: transfer-plugins/kio/transferKio.cpp:281
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:259
+msgid "Verification failed."
+msgstr "Η επαλήθευση απέτυχε."
 
-#: transfer-plugins/bittorrent/bttransferfactory.cpp:90
-msgid "&Scan Files"
-msgstr "&Σάρωση αρχείων"
+#: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:376
+#: transfer-plugins/bittorrent/advanceddetails/torrentfilelistmodel.cpp:69
+msgid "File"
+msgstr "Αρχείο"
 
-#: transfer-plugins/bittorrent/bttransfer.cpp:132
-msgid "Downloading Torrent File...."
-msgstr "Λήψη αρχείου Torrent..."
+#. i18n: file: ui/history/transferhistory.ui:90
+#. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
+#: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:377
+#: transfer-plugins/bittorrent/advanceddetails/torrentfilelistmodel.cpp:70
+#: rc.cpp:773
+msgid "Size"
+msgstr "Μέγεθος"
 
-#: transfer-plugins/bittorrent/bttransfer.cpp:160
-msgctxt "changing the destination of the file"
-msgid "Changing destination"
-msgstr "Αλλαγή προορισμού"
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:21
+#. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
+#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:86 rc.cpp:195
+msgid "Add Tracker"
+msgstr "Προσθήκη ιχνηλάτη"
 
-#: transfer-plugins/bittorrent/bttransfer.cpp:174
-#: transfer-plugins/bittorrent/bttransfer.cpp:277
-msgctxt "transfer state: downloading"
-msgid "Downloading...."
-msgstr "Λήψη..."
+#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:86
+msgid "Enter the URL of the tracker:"
+msgstr "Εισάγετε το URL του ιχνηλάτη"
 
-#: transfer-plugins/bittorrent/bttransfer.cpp:216
-#: transfer-plugins/bittorrent/bttransfer.cpp:294
-msgctxt "transfer state: finished"
-msgid "Finished"
-msgstr "Ολοκληρώθηκε"
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:251
-msgid "Cannot add a tracker to a private torrent."
-msgstr "Αδυναμία προσθήκης ενός ιχνηλάτη σε ιδιωτικό torrent."
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:412
-msgid "Torrent file does not exist"
-msgstr "Το αρχείο torrent δεν υπάρχει"
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:417
-msgid "Analyzing torrent...."
-msgstr "Ανάλυση torrent..."
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:429
-msgid "Cannot initialize port..."
-msgstr "Αδύνατη η αρχικοποίηση της θύρας..."
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:498
-msgctxt "Transfer status: seeding"
-msgid "Seeding...."
-msgstr "Προσφορά πηγής...."
+#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:101
+msgid "There already is a tracker named <b>%1</b>."
+msgstr "Υπάρχει ήδη ένας ιχνηλάτης με το όνομα <b>%1</b>."
 
 #: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:210
 msgid "Chunk"
@@ -1193,25 +1069,31 @@ msgstr "Ταχύτητα λήψης του κομματιού"
 msgid "Which files the chunk is located in"
 msgstr "Τα αρχεία στα οποία βρίσκεται το κομμάτι"
 
-#: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:92
-msgid "Cannot add the webseed %1, it is already part of the list of webseeds."
-msgstr ""
-"Αδυναμία προσθήκης της πηγής ιστού %1, καθώς είναι ήδη στη λίστα των πηγών "
-"ιστού."
+#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:32
+#. i18n: ectx: property (text), widget (QTreeWidget, enginesTreeWidget)
+#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:124
+#: ui/linkview/kget_linkview.cpp:94 rc.cpp:171
+msgid "URL"
+msgstr "URL"
 
-#: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:109
-msgid "Cannot remove webseed %1, it is part of the torrent."
-msgstr "Αδυναμία αφαίρεσης της πηγής ιστού %1, καθώς είναι τμήμα του torrent."
+#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:125
+msgid "Speed"
+msgstr "Ταχύτητα"
+
+#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:126
+#: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:318
+msgid "Downloaded"
+msgstr "Λήφθηκαν"
+
+#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:127
+#: transfer-plugins/bittorrent/advanceddetails/trackermodel.cpp:148
+#: ui/history/transferhistory.cpp:250
+msgid "Status"
+msgstr "Κατάσταση"
 
 #: transfer-plugins/bittorrent/advanceddetails/trackermodel.cpp:147
 msgid "Url"
 msgstr "Url"
-
-#: transfer-plugins/bittorrent/advanceddetails/trackermodel.cpp:148
-#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:127
-#: ui/history/transferhistory.cpp:250
-msgid "Status"
-msgstr "Κατάσταση"
 
 #: transfer-plugins/bittorrent/advanceddetails/trackermodel.cpp:149
 msgid "Seeders"
@@ -1228,108 +1110,6 @@ msgstr "Αριθμός λήψεων"
 #: transfer-plugins/bittorrent/advanceddetails/trackermodel.cpp:152
 msgid "Next Update"
 msgstr "Επόμενη ενημέρωση"
-
-#: transfer-plugins/bittorrent/advanceddetails/torrentfilelistmodel.cpp:69
-#: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:376
-msgid "File"
-msgstr "Αρχείο"
-
-#. i18n: file: ui/history/transferhistory.ui:90
-#. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: transfer-plugins/bittorrent/advanceddetails/torrentfilelistmodel.cpp:70
-#: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:377
-#: rc.cpp:734
-msgid "Size"
-msgstr "Μέγεθος"
-
-#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:32
-#. i18n: ectx: property (text), widget (QTreeWidget, enginesTreeWidget)
-#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:124
-#: ui/linkview/kget_linkview.cpp:94 rc.cpp:276
-msgid "URL"
-msgstr "URL"
-
-#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:125
-msgid "Speed"
-msgstr "Ταχύτητα"
-
-#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:126
-#: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:318
-msgid "Downloaded"
-msgstr "Λήφθηκαν"
-
-#: transfer-plugins/bittorrent/advanceddetails/peerview.cpp:52
-msgid "Kick Peer"
-msgstr "Απομάκρυνση ομότιμου κόμβου"
-
-#: transfer-plugins/bittorrent/advanceddetails/peerview.cpp:53
-msgid "Ban Peer"
-msgstr "Απαγόρευση ομότιμου κόμβου"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:66
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:70
-msgid "Priority"
-msgstr "Προτεραιότητα"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:67
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:71
-msgid "Preview"
-msgstr "Προεπισκόπηση"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:69
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:73
-#, no-c-format
-msgctxt "Percent of File Downloaded"
-msgid "% Complete"
-msgstr "% ολοκληρωμένο"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:78
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:82
-msgctxt "Download first"
-msgid "First"
-msgstr "Πρώτο"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:79
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:83
-msgctxt "Download last"
-msgid "Last"
-msgstr "Τελευταίο"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:84
-msgctxt "Download Normal (not as first or last)"
-msgid "Normal"
-msgstr "Κανονικά"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:135
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:158
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:163
-msgctxt "Preview available"
-msgid "Available"
-msgstr "Διαθέσιμη"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:137
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:160
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:142
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:165
-msgctxt "Preview pending"
-msgid "Pending"
-msgstr "Σε εκκρεμότητα"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:140
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:163
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:145
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:168
-msgctxt "No preview available"
-msgid "No"
-msgstr "Όχι"
-
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:144
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:167
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:150
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:170
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:176
-msgid "%1 %"
-msgstr "%1 %"
 
 #: transfer-plugins/bittorrent/advanceddetails/fileview.cpp:66
 msgctxt "Open file"
@@ -1382,6 +1162,76 @@ msgstr[1] ""
 msgid "Select a directory to move the data to."
 msgstr "Επιλέξτε κατάλογο για την μετακίνηση των δεδομένων."
 
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:70
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:66
+msgid "Priority"
+msgstr "Προτεραιότητα"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:71
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:67
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:73
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:69
+#, no-c-format
+msgctxt "Percent of File Downloaded"
+msgid "% Complete"
+msgstr "% ολοκληρωμένο"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:82
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:78
+msgctxt "Download first"
+msgid "First"
+msgstr "Πρώτο"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:83
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:79
+msgctxt "Download last"
+msgid "Last"
+msgstr "Τελευταίο"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:88
+msgctxt "Download normally(not as first or last)"
+msgid "Normal"
+msgstr "Κανονικά"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:140
+msgctxt "preview available"
+msgid "Available"
+msgstr "Διαθέσιμη"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:142
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:165
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:137
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:160
+msgctxt "Preview pending"
+msgid "Pending"
+msgstr "Σε εκκρεμότητα"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:145
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:168
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:140
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:163
+msgctxt "No preview available"
+msgid "No"
+msgstr "Όχι"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:150
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:170
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:176
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:144
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:167
+msgid "%1 %"
+msgstr "%1 %"
+
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:163
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:135
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:158
+msgctxt "Preview available"
+msgid "Available"
+msgstr "Διαθέσιμη"
+
 #: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:51
 #: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:55
 msgid "Advanced Details for %1"
@@ -1395,15 +1245,28 @@ msgstr "Ιχνηλάτες"
 msgid "Webseeds"
 msgstr "Πηγές ιστού"
 
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:88
-msgctxt "Download normally(not as first or last)"
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:84
+msgctxt "Download Normal (not as first or last)"
 msgid "Normal"
 msgstr "Κανονικά"
 
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:140
-msgctxt "preview available"
-msgid "Available"
-msgstr "Διαθέσιμη"
+#: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:92
+msgid "Cannot add the webseed %1, it is already part of the list of webseeds."
+msgstr ""
+"Αδυναμία προσθήκης της πηγής ιστού %1, καθώς είναι ήδη στη λίστα των πηγών "
+"ιστού."
+
+#: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:109
+msgid "Cannot remove webseed %1, it is part of the torrent."
+msgstr "Αδυναμία αφαίρεσης της πηγής ιστού %1, καθώς είναι τμήμα του torrent."
+
+#: transfer-plugins/bittorrent/advanceddetails/peerview.cpp:52
+msgid "Kick Peer"
+msgstr "Απομάκρυνση ομότιμου κόμβου"
+
+#: transfer-plugins/bittorrent/advanceddetails/peerview.cpp:53
+msgid "Ban Peer"
+msgstr "Απαγόρευση ομότιμου κόμβου"
 
 #: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:152
 msgctxt "Choked"
@@ -1569,20 +1432,6 @@ msgid "Whether we are interested in downloading from this peer"
 msgstr ""
 "Αν ενδιαφερόμαστε ή όχι για τη λήψη δεδομένων από αυτόν τον ομότιμο κόμβο"
 
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:21
-#. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
-#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:86 rc.cpp:305
-msgid "Add Tracker"
-msgstr "Προσθήκη ιχνηλάτη"
-
-#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:86
-msgid "Enter the URL of the tracker:"
-msgstr "Εισάγετε το URL του ιχνηλάτη"
-
-#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:101
-msgid "There already is a tracker named <b>%1</b>."
-msgstr "Υπάρχει ήδη ένας ιχνηλάτης με το όνομα <b>%1</b>."
-
 #: transfer-plugins/bittorrent/btsettingswidget.cpp:37
 msgid "Select a default torrent folder"
 msgstr "Επιλογή προκαθορισμένου φακέλου torrent"
@@ -1590,6 +1439,62 @@ msgstr "Επιλογή προκαθορισμένου φακέλου torrent"
 #: transfer-plugins/bittorrent/btsettingswidget.cpp:39
 msgid "Select a default temporary folder"
 msgstr "Επιλέξτε έναν προκαθορισμένο φάκελο προσωρινής αποθήκευσης"
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:132
+msgid "Downloading Torrent File...."
+msgstr "Λήψη αρχείου Torrent..."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:160
+msgctxt "changing the destination of the file"
+msgid "Changing destination"
+msgstr "Αλλαγή προορισμού"
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:174
+#: transfer-plugins/bittorrent/bttransfer.cpp:277
+msgctxt "transfer state: downloading"
+msgid "Downloading...."
+msgstr "Λήψη..."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:216
+#: transfer-plugins/bittorrent/bttransfer.cpp:294
+msgctxt "transfer state: finished"
+msgid "Finished"
+msgstr "Ολοκληρώθηκε"
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:251
+msgid "Cannot add a tracker to a private torrent."
+msgstr "Αδυναμία προσθήκης ενός ιχνηλάτη σε ιδιωτικό torrent."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:412
+msgid "Torrent file does not exist"
+msgstr "Το αρχείο torrent δεν υπάρχει"
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:417
+msgid "Analyzing torrent...."
+msgstr "Ανάλυση torrent..."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:429
+msgid "Cannot initialize port..."
+msgstr "Αδύνατη η αρχικοποίηση της θύρας..."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:498
+msgctxt "Transfer status: seeding"
+msgid "Seeding...."
+msgstr "Προσφορά πηγής...."
+
+#: transfer-plugins/bittorrent/bttransferfactory.cpp:34
+msgid "Cannot initialize libktorrent. Torrent support might not work."
+msgstr ""
+"Αδύνατη η αρχικοποίηση του libktorrent. Η υποστήριξη των torrent μπορεί να "
+"μην δουλεύει."
+
+#: transfer-plugins/bittorrent/bttransferfactory.cpp:84
+msgid "&Advanced Details"
+msgstr "&Προχωρημένες λεπτομέρειες"
+
+#: transfer-plugins/bittorrent/bttransferfactory.cpp:90
+msgid "&Scan Files"
+msgstr "&Σάρωση αρχείων"
 
 #: transfer-plugins/bittorrent/scandlg.cpp:101
 #: transfer-plugins/bittorrent/scandlg.cpp:160
@@ -1601,10 +1506,193 @@ msgstr "Σφάλμα κατά τη σάρωση δεδομένων: %1"
 msgid "Scanning data of <b>%1</b> :"
 msgstr "Σάρωση δεδομένων του <b>%1</b>:"
 
-#: transfer-plugins/kio/transferKio.cpp:96
-msgctxt "transfer state: connecting"
-msgid "Connecting...."
-msgstr "Γίνεται σύνδεση..."
+#: transfer-plugins/multisegmentkio/segment.cpp:295
+msgid "Failed to write to the file."
+msgstr "Αποτυχία εγγραφής στο αρχείο."
+
+#: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.cpp:116
+msgctxt "Configure script"
+msgid "Configure script"
+msgstr "Διαμόρφωση σεναρίου"
+
+#: transfer-plugins/contentfetch/contentfetch.cpp:52
+msgctxt "Transfer state: processing script"
+msgid "Processing script...."
+msgstr "Επεξεργασία σεναρίου..."
+
+#: transfer-plugins/contentfetch/contentfetch.cpp:83
+msgctxt "Transfer State: Finished"
+msgid "Finished"
+msgstr "Ολοκληρώθηκε"
+
+#: transfer-plugins/contentfetch/contentfetch.cpp:92
+msgctxt "Transfer State: Aborted"
+msgid "Aborted"
+msgstr "Εγκαταλείφθηκε"
+
+#: transfer-plugins/contentfetch/dlgscriptediting.cpp:25
+msgid "Add New Script"
+msgstr "Προσθήκη νέου σεναρίου"
+
+#: transfer-plugins/contentfetch/dlgscriptediting.cpp:37
+msgid "Edit Script"
+msgstr "Επεξεργασία σεναρίου"
+
+#: transfer-plugins/contentfetch/dlgscriptediting.cpp:48
+msgid "Set Script File"
+msgstr "Ορισμός αρχείου σεναρίου"
+
+#: transfer-plugins/metalink/metalink.cpp:79
+#: transfer-plugins/metalink/metalinkxml.cpp:75
+msgid "Downloading Metalink File...."
+msgstr "Λήψη του αρχείου μετασυνδέσμου..."
+
+#: transfer-plugins/metalink/metalink.cpp:113
+#: transfer-plugins/metalink/metalinkxml.cpp:109
+msgid ""
+"A newer version of this Metalink might exist, do you want to download it?"
+msgstr ""
+"Μπορεί να υπάρχει μια νεώτερη έκδοση αυτού του μετασυνδέσμου, επιθυμείτε τη "
+"λήψη του;"
+
+#: transfer-plugins/metalink/metalink.cpp:114
+#: transfer-plugins/metalink/metalinkxml.cpp:110
+msgid "Redownload Metalink"
+msgstr "Επανάληψη λήψης του μετασυνδέσμου"
+
+#: transfer-plugins/metalink/metalink.cpp:195
+#: transfer-plugins/metalink/metalinkhttp.cpp:236
+#: transfer-plugins/metalink/metalinkxml.cpp:192
+msgid "Download failed, no working URLs were found."
+msgstr "Η λήψη απέτυχε, δεν βρέθηκαν URL σε λειτουργία."
+
+#: transfer-plugins/metalink/metalink.cpp:483
+#: transfer-plugins/metalink/abstractmetalink.cpp:219
+msgid ""
+"The download could not be verified, do you want to repair (if repairing does "
+"not work the download would be restarted) it?"
+msgstr ""
+"Δεν ήταν δυνατή η επαλήθευση της λήψης, επιθυμείτε την επισκευή της (αν η "
+"επισκευή δεν είναι επιτυχής θα γίνει επανεκκίνηση της λήψης) ;"
+
+#: transfer-plugins/metalink/fileselectiondlg.cpp:31
+msgid "File Selection"
+msgstr "Επιλογή αρχείου"
+
+#: transfer-plugins/metalink/metalinkhttp.cpp:159
+msgid "The download could not be verified, try to repair it?"
+msgstr ""
+"Δεν ήταν δυνατή η επαλήθευση της λήψης, θέλετε να γίνει προσπάθεια επισκευής;"
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:50
+msgctxt "transfer state: running"
+msgid "Running...."
+msgstr "Εκτελείται...."
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:113
+msgctxt "Transfer State:Finished"
+msgid "Finished"
+msgstr "Ολοκληρώθηκε"
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:156
+msgid "Download failed, could not access this URL."
+msgstr "Η λήψη απέτυχε, δεν ήταν δυνατή η πρόσβαση στο URL."
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:166
+msgid ""
+"This URL does not allow multiple connections,\n"
+"the download will take longer."
+msgstr ""
+"Το URL δεν επιτρέπει πολλαπλές συνδέσεις,\n"
+"η λήψη θα διαρκέσει περισσότερο."
+
+#: ui/groupsettingsdialog.cpp:21
+msgid "Group Settings for %1"
+msgstr "Ρυθμίσεις ομάδας για το %1"
+
+#: ui/metalinkcreator/metalinkcreator.cpp:90
+msgid "Create a Metalink"
+msgstr "Δημιουργία ενός μετασυνδέσμου"
+
+#: ui/metalinkcreator/metalinkcreator.cpp:117
+msgid "Add at least one file."
+msgstr "Προσθέστε τουλάχιστον ένα αρχείο."
+
+#: ui/metalinkcreator/metalinkcreator.cpp:119
+msgid "You need to set mirrors for the entries with an icon."
+msgstr ""
+"Χρειάζεται να ρυθμίσετε καθρεπτισμούς για τις καταχωρήσεις με εικονίδιο."
+
+#: ui/metalinkcreator/metalinkcreator.cpp:132
+msgid "General optional information for the metalink."
+msgstr "Γενικές προαιρετικές πληροφορίες μετασυνδέσμου."
+
+#: ui/metalinkcreator/metalinkcreator.cpp:161
+msgid "Unable to load: %1"
+msgstr "Αδυναμία φόρτωσης: %1"
+
+#: ui/metalinkcreator/metalinkcreator.cpp:188
+msgid "Metalink Version 4.0 file (*.meta4)"
+msgstr "Αρχείο Metalink έκδοση 4.0 (*.meta4)"
+
+#: ui/metalinkcreator/metalinkcreator.cpp:188
+msgid "Metalink Version 3.0 file (*.metalink)"
+msgstr "Αρχείο Metalink έκδοση 3.0 (*.metalink)"
+
+#: ui/metalinkcreator/metalinkcreator.cpp:195
+msgid "Define the saving location."
+msgstr "Καθορισμός της τοποθεσίας αποθήκευσης."
+
+#: ui/metalinkcreator/metalinkcreator.cpp:241
+msgctxt "file as in file on hard drive"
+msgid "Files"
+msgstr "Αρχεία"
+
+#: ui/metalinkcreator/dragdlg.cpp:67
+msgid "Import dropped files"
+msgstr "Εισαγωγή απορριφθέντων αρχείων"
+
+#: ui/metalinkcreator/dragdlg.cpp:90 ui/metalinkcreator/filedlg.cpp:66
+#: ui/metalinkcreator/filedlg.cpp:174
+msgctxt "comma, to seperate members of a list"
+msgid ","
+msgstr ","
+
+#: ui/metalinkcreator/filedlg.cpp:115
+msgid "File Properties"
+msgstr "Ιδιότητες αρχείου"
+
+#: ui/metalinkcreator/filedlg.cpp:127
+msgid "Enter a filename."
+msgstr "Εισάγετε ένα όνομα αρχείου."
+
+#: ui/metalinkcreator/filedlg.cpp:130
+msgid "The filename exists already, choose a different one."
+msgstr "Το όνομα αρχείου υπάρχει ήδη, επιλέξτε κάποιο άλλο."
+
+#: ui/metalinkcreator/filedlg.cpp:133
+msgid "Enter at least one URL."
+msgstr "Εισάγετε τουλάχιστο ένα URL."
+
+#: ui/renamefile.cpp:32
+msgid "Rename File"
+msgstr "Μετονομασία αρχείου"
+
+#: ui/renamefile.cpp:41
+msgid "Rename %1 to:"
+msgstr "Μετονομασία του %1 σε:"
+
+#: ui/renamefile.cpp:44
+msgid "&Rename"
+msgstr "&Μετονομασία"
+
+#: ui/transfersview.cpp:127
+msgid "Select columns"
+msgstr "Επιλογή στηλών"
+
+#: ui/transfersview.cpp:315
+msgid "Transfer Details"
+msgstr "Λεπτομέρειες μεταφοράς"
 
 #: ui/signaturedlg.cpp:37
 msgctxt "trust level"
@@ -1735,69 +1823,184 @@ msgstr ""
 "Το χαρακτηριστικό δεν υποστηρίζεται, καθώς το KGet δεν έχει μεταγλωττιστεί "
 "με υποστήριξη QPGME."
 
-#: ui/metalinkcreator/filedlg.cpp:66 ui/metalinkcreator/filedlg.cpp:174
-#: ui/metalinkcreator/dragdlg.cpp:90
-msgctxt "comma, to seperate members of a list"
-msgid ","
-msgstr ","
+#: ui/tray.cpp:45
+msgid "Download Manager"
+msgstr "Διαχειριστής λήψεων"
 
-#: ui/metalinkcreator/filedlg.cpp:115
-msgid "File Properties"
-msgstr "Ιδιότητες αρχείου"
+#: ui/contextmenu.cpp:118 mainwindow.cpp:198
+msgid "Delete Group"
+msgid_plural "Delete Groups"
+msgstr[0] "Διαγραφή ομάδας"
+msgstr[1] "Διαγραφή ομάδων"
 
-#: ui/metalinkcreator/filedlg.cpp:127
-msgid "Enter a filename."
-msgstr "Εισάγετε ένα όνομα αρχείου."
+#: ui/contextmenu.cpp:122 mainwindow.cpp:204
+msgid "Rename Group..."
+msgid_plural "Rename Groups..."
+msgstr[0] "Μετονομασία ομάδας..."
+msgstr[1] "Μετονομασία ομάδων..."
 
-#: ui/metalinkcreator/filedlg.cpp:130
-msgid "The filename exists already, choose a different one."
-msgstr "Το όνομα αρχείου υπάρχει ήδη, επιλέξτε κάποιο άλλο."
+#. i18n: file: ui/mirror/mirroradddlg.ui:72
+#. i18n: ectx: property (specialValueText), widget (KIntNumInput, priority)
+#: ui/mirror/mirrormodel.cpp:214 ui/mirror/mirrormodel.cpp:232 rc.cpp:701
+msgid "not specified"
+msgstr "ακαθόριστο"
 
-#: ui/metalinkcreator/filedlg.cpp:133
-msgid "Enter at least one URL."
-msgstr "Εισάγετε τουλάχιστο ένα URL."
+#: ui/mirror/mirrormodel.cpp:388
+msgctxt "Mirror as in server, in url"
+msgid "Mirror"
+msgstr "Καθρεπτισμός"
 
-#: ui/metalinkcreator/dragdlg.cpp:67
-msgid "Import dropped files"
-msgstr "Εισαγωγή απορριφθέντων αρχείων"
+#: ui/mirror/mirrormodel.cpp:391
+msgctxt "The priority of the mirror"
+msgid "Priority"
+msgstr "Προτεραιότητα"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:90
-msgid "Create a Metalink"
-msgstr "Δημιουργία ενός μετασυνδέσμου"
+#: ui/mirror/mirrormodel.cpp:396
+msgctxt "Number of paralell connections to the mirror"
+msgid "Connections"
+msgstr "Συνδέσεις"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:117
-msgid "Add at least one file."
-msgstr "Προσθέστε τουλάχιστον ένα αρχείο."
+#: ui/mirror/mirrormodel.cpp:398
+msgctxt "Location = country"
+msgid "Location"
+msgstr "Χώρα"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:119
-msgid "You need to set mirrors for the entries with an icon."
-msgstr ""
-"Χρειάζεται να ρυθμίσετε καθρεπτισμούς για τις καταχωρήσεις με εικονίδιο."
+#: ui/mirror/mirrorsettings.cpp:52
+msgid "Add mirror"
+msgstr "Προσθήκη καθρεπτισμού"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:132
-msgid "General optional information for the metalink."
-msgstr "Γενικές προαιρετικές πληροφορίες μετασυνδέσμου."
+#: ui/mirror/mirrorsettings.cpp:149
+msgid "Modify the used mirrors"
+msgstr "Τροποποίηση των χρησιμοποιημένων καθρεπτισμών."
 
-#: ui/metalinkcreator/metalinkcreator.cpp:161
-msgid "Unable to load: %1"
-msgstr "Αδυναμία φόρτωσης: %1"
+#: ui/transferdetails.cpp:69
+msgid "Average speed: %1/s"
+msgstr "Μέσος όρος ταχύτητας: %1/s"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:188
-msgid "Metalink Version 4.0 file (*.meta4)"
-msgstr "Αρχείο Metalink έκδοση 4.0 (*.meta4)"
+#: ui/transferdetails.cpp:74
+msgid "%1 of %2"
+msgstr "%1 από %2"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:188
-msgid "Metalink Version 3.0 file (*.metalink)"
-msgstr "Αρχείο Metalink έκδοση 3.0 (*.metalink)"
+#: ui/history/transferhistory.cpp:49
+msgid "Transfer History"
+msgstr "Ιστορικό μεταφοράς"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:195
-msgid "Define the saving location."
-msgstr "Καθορισμός της τοποθεσίας αποθήκευσης."
+#: ui/history/transferhistory.cpp:82
+msgid "&Open File"
+msgstr "Ά&νοιγμα αρχείου"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:241
-msgctxt "file as in file on hard drive"
-msgid "Files"
-msgstr "Αρχεία"
+#: ui/history/transferhistory.cpp:216
+msgctxt "The transfer is running"
+msgid "Running"
+msgstr "Εκτελείται"
+
+#: ui/history/transferhistory.cpp:218
+msgctxt "The transfer is stopped"
+msgid "Stopped"
+msgstr "Σταματημένο"
+
+#: ui/history/transferhistory.cpp:220
+msgctxt "The transfer is aborted"
+msgid "Aborted"
+msgstr "Εγκαταλείφθηκε"
+
+#: ui/history/transferhistory.cpp:222
+msgctxt "The transfer is finished"
+msgid "Finished"
+msgstr "Ολοκληρώθηκε"
+
+#: ui/history/transferhistory.cpp:250
+msgid "Source File"
+msgstr "Πηγαίο αρχείο"
+
+#: ui/history/transferhistory.cpp:250
+msgid "Destination"
+msgstr "Προορισμός"
+
+#: ui/history/transferhistory.cpp:250
+msgid "Time"
+msgstr "Χρόνος"
+
+#: ui/history/transferhistory.cpp:250
+msgid "File Size"
+msgstr "Μέγεθος αρχείου"
+
+#: ui/history/transferhistory.cpp:260
+msgid "Less than 1MiB"
+msgstr "Λιγότερο από 1MiB"
+
+#: ui/history/transferhistory.cpp:262
+msgid "Between 1MiB-10MiB"
+msgstr "Ανάμεσα σε 1MiB-10MiB"
+
+#: ui/history/transferhistory.cpp:264
+msgid "Between 10MiB-100MiB"
+msgstr "Ανάμεσα σε 10MiB-100MiB"
+
+#: ui/history/transferhistory.cpp:266
+msgid "Between 100MiB-1GiB"
+msgstr "Ανάμεσα σε 100MiB-1GiB"
+
+#: ui/history/transferhistory.cpp:268
+msgid "More than 1GiB"
+msgstr "Περισσότερο από 1GiB"
+
+#: ui/history/transferhistory.cpp:271
+#: ui/history/transferhistorycategorizeddelegate.cpp:45
+msgid "Today"
+msgstr "Σήμερα"
+
+#: ui/history/transferhistory.cpp:272
+#: ui/history/transferhistorycategorizeddelegate.cpp:49
+msgid "Last week"
+msgstr "Τελευταία εβδομάδα"
+
+#: ui/history/transferhistory.cpp:273
+msgid "Last month"
+msgstr "Τελευταίος μήνας"
+
+#: ui/history/transferhistory.cpp:274
+#: ui/history/transferhistorycategorizeddelegate.cpp:57
+msgid "A long time ago"
+msgstr "Πολύ παλιότερα"
+
+#: ui/history/transferhistory.cpp:294
+msgctxt "the transfer has been finished"
+msgid "Finished"
+msgstr "Ολοκληρώθηκε"
+
+#: ui/history/transferhistoryitemdelegate.cpp:41
+msgid "Download again"
+msgstr "Λήψη ξανά"
+
+#: ui/history/transferhistoryitemdelegate.cpp:46
+msgctxt "Delete selected history-item"
+msgid "Delete selected"
+msgstr "Διαγραφή επιλεγμένου"
+
+#: ui/history/transferhistoryitemdelegate.cpp:51
+msgid "Open file"
+msgstr "Άνοιγμα αρχείου"
+
+#: ui/history/transferhistorycategorizeddelegate.cpp:53
+msgid "Last Month"
+msgstr "Τελευταίος μήνας"
+
+#: ui/history/transferhistorycategorizeddelegate.cpp:77
+msgid "Under 10MiB"
+msgstr "Κάτω από 10MiB"
+
+#: ui/history/transferhistorycategorizeddelegate.cpp:80
+msgid "Between 10MiB and 50MiB"
+msgstr "Ανάμεσα σε 10MiB και 50MiB"
+
+#: ui/history/transferhistorycategorizeddelegate.cpp:84
+msgid "Between 50MiB and 100MiB"
+msgstr "Ανάμεσα σε 50MiB και 100MiB"
+
+#: ui/history/transferhistorycategorizeddelegate.cpp:89
+msgid "More than 100MiB"
+msgstr "Περισσότερο από 100MiB"
 
 #: ui/linkview/kget_linkview.cpp:43
 msgid "Import Links"
@@ -1864,7 +2067,7 @@ msgstr "Όνομα αρχείου"
 
 #. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:37
 #. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
-#: ui/linkview/kget_linkview.cpp:164 rc.cpp:192
+#: ui/linkview/kget_linkview.cpp:164 rc.cpp:440
 msgid "Description"
 msgstr "Περιγραφή"
 
@@ -1887,7 +2090,7 @@ msgstr "&Επιλογή όλων των φιλτραρισμένων"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:180
 #. i18n: ectx: property (text), widget (KPushButton, selectAll)
-#: ui/linkview/kget_linkview.cpp:342 rc.cpp:671
+#: ui/linkview/kget_linkview.cpp:342 rc.cpp:806
 msgid "&Select All"
 msgstr "&Επιλογή όλων"
 
@@ -1897,47 +2100,13 @@ msgstr "&Αποεπιλογή όλων των φιλτραρισμένων"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:196
 #. i18n: ectx: property (text), widget (KPushButton, deselectAll)
-#: ui/linkview/kget_linkview.cpp:343 rc.cpp:674
+#: ui/linkview/kget_linkview.cpp:343 rc.cpp:809
 msgid "D&eselect All"
 msgstr "&Αποεπιλογή όλων"
 
 #: ui/linkview/kget_linkview.cpp:466
 msgid "Filter Column"
 msgstr "Φιλτράρισμα στήλης"
-
-#: ui/transfersettingsdialog.cpp:32
-msgid "Transfer Settings for %1"
-msgstr "Ρυθμίσεις μεταφοράς για το %1"
-
-#: ui/transfersettingsdialog.cpp:164
-msgid ""
-"Changing the destination did not work, the destination stays unmodified."
-msgstr ""
-"Η αλλαγή του προορισμού δεν δούλεψε, ο προορισμός παραμένει αμετάβλητος."
-
-#: ui/transfersettingsdialog.cpp:164
-msgid "Destination unmodified"
-msgstr "Αμετάβλητος προορισμός"
-
-#: ui/renamefile.cpp:32
-msgid "Rename File"
-msgstr "Μετονομασία αρχείου"
-
-#: ui/renamefile.cpp:41
-msgid "Rename %1 to:"
-msgstr "Μετονομασία του %1 σε:"
-
-#: ui/renamefile.cpp:44
-msgid "&Rename"
-msgstr "&Μετονομασία"
-
-#: ui/transferdetails.cpp:69
-msgid "Average speed: %1/s"
-msgstr "Μέσος όρος ταχύτητας: %1/s"
-
-#: ui/transferdetails.cpp:74
-msgid "%1 of %2"
-msgstr "%1 από %2"
 
 #: ui/verificationdialog.cpp:39
 msgid "Add checksum"
@@ -1955,160 +2124,19 @@ msgstr "Το %1 επαληθεύθηκε με επιτυχία"
 msgid "Verification successful"
 msgstr "Επιτυχής επαλήθευση"
 
-#: ui/history/transferhistorycategorizeddelegate.cpp:45
-#: ui/history/transferhistory.cpp:271
-msgid "Today"
-msgstr "Σήμερα"
+#: ui/transfersettingsdialog.cpp:32
+msgid "Transfer Settings for %1"
+msgstr "Ρυθμίσεις μεταφοράς για το %1"
 
-#: ui/history/transferhistorycategorizeddelegate.cpp:49
-#: ui/history/transferhistory.cpp:272
-msgid "Last week"
-msgstr "Τελευταία εβδομάδα"
+#: ui/transfersettingsdialog.cpp:164
+msgid ""
+"Changing the destination did not work, the destination stays unmodified."
+msgstr ""
+"Η αλλαγή του προορισμού δεν δούλεψε, ο προορισμός παραμένει αμετάβλητος."
 
-#: ui/history/transferhistorycategorizeddelegate.cpp:53
-msgid "Last Month"
-msgstr "Τελευταίος μήνας"
-
-#: ui/history/transferhistorycategorizeddelegate.cpp:57
-#: ui/history/transferhistory.cpp:274
-msgid "A long time ago"
-msgstr "Πολύ παλιότερα"
-
-#: ui/history/transferhistorycategorizeddelegate.cpp:77
-msgid "Under 10MiB"
-msgstr "Κάτω από 10MiB"
-
-#: ui/history/transferhistorycategorizeddelegate.cpp:80
-msgid "Between 10MiB and 50MiB"
-msgstr "Ανάμεσα σε 10MiB και 50MiB"
-
-#: ui/history/transferhistorycategorizeddelegate.cpp:84
-msgid "Between 50MiB and 100MiB"
-msgstr "Ανάμεσα σε 50MiB και 100MiB"
-
-#: ui/history/transferhistorycategorizeddelegate.cpp:89
-msgid "More than 100MiB"
-msgstr "Περισσότερο από 100MiB"
-
-#: ui/history/transferhistoryitemdelegate.cpp:41
-msgid "Download again"
-msgstr "Λήψη ξανά"
-
-#: ui/history/transferhistoryitemdelegate.cpp:46
-msgctxt "Delete selected history-item"
-msgid "Delete selected"
-msgstr "Διαγραφή επιλεγμένου"
-
-#: ui/history/transferhistoryitemdelegate.cpp:51
-msgid "Open file"
-msgstr "Άνοιγμα αρχείου"
-
-#: ui/history/transferhistory.cpp:49
-msgid "Transfer History"
-msgstr "Ιστορικό μεταφοράς"
-
-#: ui/history/transferhistory.cpp:82
-msgid "&Open File"
-msgstr "Ά&νοιγμα αρχείου"
-
-#: ui/history/transferhistory.cpp:216
-msgctxt "The transfer is running"
-msgid "Running"
-msgstr "Εκτελείται"
-
-#: ui/history/transferhistory.cpp:218
-msgctxt "The transfer is stopped"
-msgid "Stopped"
-msgstr "Σταματημένο"
-
-#: ui/history/transferhistory.cpp:220
-msgctxt "The transfer is aborted"
-msgid "Aborted"
-msgstr "Εγκαταλείφθηκε"
-
-#: ui/history/transferhistory.cpp:222
-msgctxt "The transfer is finished"
-msgid "Finished"
-msgstr "Ολοκληρώθηκε"
-
-#: ui/history/transferhistory.cpp:250
-msgid "Source File"
-msgstr "Πηγαίο αρχείο"
-
-#: ui/history/transferhistory.cpp:250
-msgid "Destination"
-msgstr "Προορισμός"
-
-#: ui/history/transferhistory.cpp:250
-msgid "Time"
-msgstr "Χρόνος"
-
-#: ui/history/transferhistory.cpp:250
-msgid "File Size"
-msgstr "Μέγεθος αρχείου"
-
-#: ui/history/transferhistory.cpp:260
-msgid "Less than 1MiB"
-msgstr "Λιγότερο από 1MiB"
-
-#: ui/history/transferhistory.cpp:262
-msgid "Between 1MiB-10MiB"
-msgstr "Ανάμεσα σε 1MiB-10MiB"
-
-#: ui/history/transferhistory.cpp:264
-msgid "Between 10MiB-100MiB"
-msgstr "Ανάμεσα σε 10MiB-100MiB"
-
-#: ui/history/transferhistory.cpp:266
-msgid "Between 100MiB-1GiB"
-msgstr "Ανάμεσα σε 100MiB-1GiB"
-
-#: ui/history/transferhistory.cpp:268
-msgid "More than 1GiB"
-msgstr "Περισσότερο από 1GiB"
-
-#: ui/history/transferhistory.cpp:273
-msgid "Last month"
-msgstr "Τελευταίος μήνας"
-
-#: ui/history/transferhistory.cpp:294
-msgctxt "the transfer has been finished"
-msgid "Finished"
-msgstr "Ολοκληρώθηκε"
-
-#. i18n: file: ui/mirror/mirroradddlg.ui:72
-#. i18n: ectx: property (specialValueText), widget (KIntNumInput, priority)
-#: ui/mirror/mirrormodel.cpp:214 ui/mirror/mirrormodel.cpp:232 rc.cpp:764
-msgid "not specified"
-msgstr "ακαθόριστο"
-
-#: ui/mirror/mirrormodel.cpp:388
-msgctxt "Mirror as in server, in url"
-msgid "Mirror"
-msgstr "Καθρεπτισμός"
-
-#: ui/mirror/mirrormodel.cpp:391
-msgctxt "The priority of the mirror"
-msgid "Priority"
-msgstr "Προτεραιότητα"
-
-#: ui/mirror/mirrormodel.cpp:396
-msgctxt "Number of paralell connections to the mirror"
-msgid "Connections"
-msgstr "Συνδέσεις"
-
-#: ui/mirror/mirrormodel.cpp:398
-msgctxt "Location = country"
-msgid "Location"
-msgstr "Χώρα"
-
-#: ui/mirror/mirrorsettings.cpp:52
-msgid "Add mirror"
-msgstr "Προσθήκη καθρεπτισμού"
-
-#: ui/mirror/mirrorsettings.cpp:149
-msgid "Modify the used mirrors"
-msgstr "Τροποποίηση των χρησιμοποιημένων καθρεπτισμών."
+#: ui/transfersettingsdialog.cpp:164
+msgid "Destination unmodified"
+msgstr "Αμετάβλητος προορισμός"
 
 #: ui/newtransferdialog.cpp:318
 msgid "Select at least one source url."
@@ -2118,14 +2146,6 @@ msgstr "Επιλέξτε τουλάχιστο ένα πηγαίο url."
 msgid "Files that exist already in the current folder have been marked."
 msgstr "Τα αρχεία που υπάρχουν ήδη στον τρέχων φάκελο έχουν σημειωθεί."
 
-#: ui/transfersview.cpp:127
-msgid "Select columns"
-msgstr "Επιλογή στηλών"
-
-#: ui/transfersview.cpp:315
-msgid "Transfer Details"
-msgstr "Λεπτομέρειες μεταφοράς"
-
 #: ui/droptarget.cpp:84
 msgctxt "fix position for droptarget"
 msgid "Sticky"
@@ -2133,7 +2153,7 @@ msgstr "Κολλημένο"
 
 #. i18n: file: conf/dlgadvanced.ui:34
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_AfterFinishAction)
-#: ui/droptarget.cpp:91 mainwindow.cpp:359 rc.cpp:21
+#: ui/droptarget.cpp:91 mainwindow.cpp:359 rc.cpp:93
 msgid "Quit KGet"
 msgstr "Έξοδος από το KGet"
 
@@ -2185,26 +2205,6 @@ msgstr "%1(%2% %3/%4) %5"
 #: ui/droptarget.cpp:448
 msgid "Ready"
 msgstr "Έτοιμο"
-
-#: ui/tray.cpp:45
-msgid "Download Manager"
-msgstr "Διαχειριστής λήψεων"
-
-#: ui/contextmenu.cpp:118 mainwindow.cpp:198
-msgid "Delete Group"
-msgid_plural "Delete Groups"
-msgstr[0] "Διαγραφή ομάδας"
-msgstr[1] "Διαγραφή ομάδων"
-
-#: ui/contextmenu.cpp:122 mainwindow.cpp:204
-msgid "Rename Group..."
-msgid_plural "Rename Groups..."
-msgstr[0] "Μετονομασία ομάδας..."
-msgstr[1] "Μετονομασία ομάδων..."
-
-#: ui/groupsettingsdialog.cpp:21
-msgid "Group Settings for %1"
-msgstr "Ρυθμίσεις ομάδας για το %1"
 
 #: extensions/webinterface/httpserver.cpp:42
 #: extensions/webinterface/httpserver.cpp:58
@@ -2768,140 +2768,46 @@ msgstr ""
 "προχωρημένους και απενεργοποιήστε τη \"Χρήση ως διαχειριστή λήψεων του "
 "Konqueror\"."
 
-#. i18n: file: conf/dlgwebinterface.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_WebinterfaceEnabled)
+#. i18n: file: conf/dlgintegration.ui:17
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KonquerorIntegration)
 #: rc.cpp:3
-msgid "Enable Web Interface"
-msgstr "Ενεργοποίηση διασύνδεσης ιστού"
+msgid "Use as download manager for Konqueror"
+msgstr "Να χρησιμοποιηθεί ως διαχειριστής λήψεων για το Konqueror"
 
-#. i18n: file: conf/dlgwebinterface.ui:32
-#. i18n: ectx: property (text), widget (QLabel, portLabel)
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:32
-#. i18n: ectx: property (text), widget (QLabel, portLabel)
-#: rc.cpp:6 rc.cpp:344
-msgid "Port:"
-msgstr "Θύρα:"
+#. i18n: file: conf/dlgintegration.ui:24
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_AutoPaste)
+#: rc.cpp:6
+msgid "Monitor Clipboard for Files to Download"
+msgstr "Παρακολούθηση προχείρου για αρχεία προς λήψη"
 
-#. i18n: file: conf/dlgwebinterface.ui:46
-#. i18n: ectx: property (text), widget (QLabel, userLabel)
+#. i18n: file: conf/dlgintegration.ui:36
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #: rc.cpp:9
-msgid "User:"
-msgstr "Χρήστης:"
-
-#. i18n: file: conf/dlgwebinterface.ui:60
-#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:87
-#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
-#: rc.cpp:12 rc.cpp:243
-msgid "Password:"
-msgstr "Κωδικός πρόσβασης:"
-
-#. i18n: file: conf/dlgadvanced.ui:17
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableSystemTray)
-#: rc.cpp:15
-msgid "Enable system tray icon"
-msgstr "Ενεργοποίηση του εικονιδίου πλαισίου συστήματος"
-
-#. i18n: file: conf/dlgadvanced.ui:26
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AfterFinishActionEnabled)
-#: rc.cpp:18
-msgid "Execute action after all downloads have been finished:"
-msgstr "Εκτέλεση ενέργειας όταν όλες οι λήψεις έχουν ολοκληρωθεί"
-
-#. i18n: file: conf/dlgadvanced.ui:42
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:24
-msgid "At startup:"
-msgstr "Στην εκκίνηση:"
-
-#. i18n: file: conf/dlgadvanced.ui:50
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
-#: rc.cpp:27
-msgid "Restore Download State"
-msgstr "Επαναφορά κατάστασης λήψης"
-
-#. i18n: file: conf/dlgadvanced.ui:55
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
-#: rc.cpp:30
-msgid "Start All Downloads"
-msgstr "Έναρξη όλων των λήψεων"
-
-#. i18n: file: conf/dlgadvanced.ui:60
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
-#: rc.cpp:33
-msgid "Stop All Downloads"
-msgstr "Σταμάτημα όλων των λήψεων"
-
-#. i18n: file: conf/dlgadvanced.ui:71
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:36
-msgid "History backend:"
-msgstr "Σύστημα υποστήριξης ιστορικού:"
-
-#. i18n: file: conf/dlgadvanced.ui:80
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_EnableKUIServerIntegration)
-#: rc.cpp:39
-msgid "Enable KDE Global Progress Tracking"
-msgstr "Ενεργοποίηση της εποπτείας καθολικής προόδου του KDE"
-
-#. i18n: file: conf/dlgadvanced.ui:92
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExportSingleTransfer)
-#: rc.cpp:42
-msgid "Show every single download "
-msgstr "Εμφάνιση κάθε ανεξάρτητης λήψης "
-
-#. i18n: file: conf/dlgadvanced.ui:99
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExportGlobalJob)
-#: rc.cpp:45
-msgid "Show overall progress"
-msgstr "Εμφάνιση συνολικής προόδου"
-
-#. i18n: file: conf/dlgadvanced.ui:109
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:48
-msgid "Handle existing Files/Transfers"
-msgstr "Διαχείριση υπαρχόντων αρχείων/μεταφορών"
-
-#. i18n: file: conf/dlgadvanced.ui:115
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesAlwaysAsk)
-#: rc.cpp:51
-msgid "Always ask"
-msgstr "Ερώτηση πάντα"
-
-#. i18n: file: conf/dlgadvanced.ui:122
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesAutomaticRename)
-#: rc.cpp:54
-msgid "Automatic rename"
-msgstr "Αυτόματη μετονομασία"
-
-#. i18n: file: conf/dlgadvanced.ui:129
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesOverwrite)
-#: rc.cpp:57
-msgid "Overwrite"
-msgstr "Αντικατάσταση"
+msgid "Case sensitive:"
+msgstr "Διάκριση πεζών/κεφαλαίων:"
 
 #. i18n: file: conf/dlgnetwork.ui:19
 #. i18n: ectx: property (text), widget (QLabel, lbl_maxnum)
-#: rc.cpp:60
+#: rc.cpp:18
 msgid "Maximum downloads per group:"
 msgstr "Μέγιστος αριθμός λήψεων ανά ομάδα:"
 
 #. i18n: file: conf/dlgnetwork.ui:26
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, kcfg_MaxConnections)
-#: rc.cpp:63
+#: rc.cpp:21
 msgctxt "no limit for maximum downloads has been set"
 msgid "No limit"
 msgstr "Χωρίς όριο"
 
 #. i18n: file: conf/dlgnetwork.ui:35
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_SpeedLimit)
-#: rc.cpp:66
+#: rc.cpp:24
 msgid "Speed Limit"
 msgstr "Όριο ταχύτητας"
 
 #. i18n: file: conf/dlgnetwork.ui:44
 #. i18n: ectx: property (text), widget (QLabel, dllimitlb)
-#: rc.cpp:69
+#: rc.cpp:27
 msgid "Global &download limit:"
 msgstr "Καθολικό όριο &λήψης:"
 
@@ -2919,73 +2825,95 @@ msgstr "Καθολικό όριο &λήψης:"
 #. i18n: ectx: property (suffix), widget (QSpinBox, uploadSpin)
 #. i18n: file: ui/transfersettingsdialog.ui:74
 #. i18n: ectx: property (suffix), widget (QSpinBox, downloadSpin)
-#: rc.cpp:72 rc.cpp:78 rc.cpp:84 rc.cpp:707 rc.cpp:713 rc.cpp:779 rc.cpp:785
+#: rc.cpp:30 rc.cpp:36 rc.cpp:42 rc.cpp:671 rc.cpp:677 rc.cpp:716 rc.cpp:722
 msgid " KiB/s"
 msgstr " KiB/s"
 
 #. i18n: file: conf/dlgnetwork.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:75
+#: rc.cpp:33
 msgid "Global &upload limit:"
 msgstr "Καθολικό όριο &αποστολής:"
 
 #. i18n: file: conf/dlgnetwork.ui:96
 #. i18n: ectx: property (text), widget (QLabel, lb_per_transfer)
-#: rc.cpp:81
+#: rc.cpp:39
 msgid "Per transfer:"
 msgstr "Ανά μεταφορά:"
 
 #. i18n: file: conf/dlgnetwork.ui:119
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_ReconnectOnBroken)
-#: rc.cpp:87
+#: rc.cpp:45
 msgid "Reconnect on Broken Connection"
 msgstr "Επανασύνδεση σε πρόβλημα σύνδεσης"
 
 #. i18n: file: conf/dlgnetwork.ui:128
 #. i18n: ectx: property (text), widget (QLabel, lb_retries_2)
-#: rc.cpp:90
+#: rc.cpp:48
 msgid "Number of retries:"
 msgstr "Αριθμός προσπαθειών:"
 
 #. i18n: file: conf/dlgnetwork.ui:142
 #. i18n: ectx: property (text), widget (QLabel, lb_after_2)
-#: rc.cpp:93
+#: rc.cpp:51
 msgid "Retry after:"
 msgstr "Προσπάθεια μετά από:"
 
 #. i18n: file: conf/dlgnetwork.ui:149
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_ReconnectDelay)
-#: rc.cpp:96
+#: rc.cpp:54
 msgid " sec"
 msgstr " sec"
 
-#. i18n: file: conf/dlgintegration.ui:17
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KonquerorIntegration)
-#: rc.cpp:99
-msgid "Use as download manager for Konqueror"
-msgstr "Να χρησιμοποιηθεί ως διαχειριστής λήψεων για το Konqueror"
+#. i18n: file: conf/dlgwebinterface.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_WebinterfaceEnabled)
+#: rc.cpp:57
+msgid "Enable Web Interface"
+msgstr "Ενεργοποίηση διασύνδεσης ιστού"
 
-#. i18n: file: conf/dlgintegration.ui:24
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_AutoPaste)
-#: rc.cpp:102
-msgid "Monitor Clipboard for Files to Download"
-msgstr "Παρακολούθηση προχείρου για αρχεία προς λήψη"
+#. i18n: file: conf/dlgwebinterface.ui:32
+#. i18n: ectx: property (text), widget (QLabel, portLabel)
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:32
+#. i18n: ectx: property (text), widget (QLabel, portLabel)
+#: rc.cpp:60 rc.cpp:338
+msgid "Port:"
+msgstr "Θύρα:"
 
-#. i18n: file: conf/dlgintegration.ui:36
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:105
-msgid "Case sensitive:"
-msgstr "Διάκριση πεζών/κεφαλαίων:"
+#. i18n: file: conf/dlgwebinterface.ui:46
+#. i18n: ectx: property (text), widget (QLabel, userLabel)
+#: rc.cpp:63
+msgid "User:"
+msgstr "Χρήστης:"
+
+#. i18n: file: conf/dlgwebinterface.ui:60
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:87
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: rc.cpp:66 rc.cpp:410
+msgid "Password:"
+msgstr "Κωδικός πρόσβασης:"
+
+#. i18n: file: conf/dlgappearance.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ShowDropTarget)
+#: rc.cpp:69
+msgid "Use Drop Target"
+msgstr "Χρήση σημείου ρίψης"
+
+#. i18n: file: conf/dlgappearance.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AnimateDropTarget)
+#: rc.cpp:72
+msgid "Enable animations"
+msgstr "Ενεργοποίηση κινούμενης εικόνας"
 
 #. i18n: file: conf/dlggroups.ui:17
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DirectoriesAsSuggestion)
-#: rc.cpp:114
+#: rc.cpp:75
 msgid "Use default folders for groups as suggestion"
 msgstr "Χρήση των προκαθορισμένων φακέλων για τις ομάδες ως πρόταση"
 
 #. i18n: file: conf/dlggroups.ui:24
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AskForDestination)
-#: rc.cpp:117
+#: rc.cpp:78
 msgid "Ask for destination if there are no default folders"
 msgstr "Ερώτηση για τον προορισμό αν δεν υπάρχουν προκαθορισμένοι φάκελοι"
 
@@ -2993,43 +2921,127 @@ msgstr "Ερώτηση για τον προορισμό αν δεν υπάρχο
 #. i18n: ectx: property (text), widget (KPushButton, rename)
 #. i18n: file: ui/transfersettingsdialog.ui:156
 #. i18n: ectx: property (text), widget (KPushButton, rename)
-#: rc.cpp:120 rc.cpp:806
+#: rc.cpp:81 rc.cpp:743
 msgid "Rename"
 msgstr "Μετονομασία"
 
 #. i18n: file: conf/dlggroups.ui:62
 #. i18n: ectx: property (text), widget (KIconButton, selectIcon)
-#: rc.cpp:123
+#: rc.cpp:84
 msgid "Select Icon..."
 msgstr "Επιλογή εικονιδίου..."
 
+#. i18n: file: conf/dlgadvanced.ui:17
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableSystemTray)
+#: rc.cpp:87
+msgid "Enable system tray icon"
+msgstr "Ενεργοποίηση του εικονιδίου πλαισίου συστήματος"
+
+#. i18n: file: conf/dlgadvanced.ui:26
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AfterFinishActionEnabled)
+#: rc.cpp:90
+msgid "Execute action after all downloads have been finished:"
+msgstr "Εκτέλεση ενέργειας όταν όλες οι λήψεις έχουν ολοκληρωθεί"
+
+#. i18n: file: conf/dlgadvanced.ui:42
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:96
+msgid "At startup:"
+msgstr "Στην εκκίνηση:"
+
+#. i18n: file: conf/dlgadvanced.ui:50
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
+#: rc.cpp:99
+msgid "Restore Download State"
+msgstr "Επαναφορά κατάστασης λήψης"
+
+#. i18n: file: conf/dlgadvanced.ui:55
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
+#: rc.cpp:102
+msgid "Start All Downloads"
+msgstr "Έναρξη όλων των λήψεων"
+
+#. i18n: file: conf/dlgadvanced.ui:60
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
+#: rc.cpp:105
+msgid "Stop All Downloads"
+msgstr "Σταμάτημα όλων των λήψεων"
+
+#. i18n: file: conf/dlgadvanced.ui:71
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:108
+msgid "History backend:"
+msgstr "Σύστημα υποστήριξης ιστορικού:"
+
+#. i18n: file: conf/dlgadvanced.ui:80
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_EnableKUIServerIntegration)
+#: rc.cpp:111
+msgid "Enable KDE Global Progress Tracking"
+msgstr "Ενεργοποίηση της εποπτείας καθολικής προόδου του KDE"
+
+#. i18n: file: conf/dlgadvanced.ui:92
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExportSingleTransfer)
+#: rc.cpp:114
+msgid "Show every single download "
+msgstr "Εμφάνιση κάθε ανεξάρτητης λήψης "
+
+#. i18n: file: conf/dlgadvanced.ui:99
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExportGlobalJob)
+#: rc.cpp:117
+msgid "Show overall progress"
+msgstr "Εμφάνιση συνολικής προόδου"
+
+#. i18n: file: conf/dlgadvanced.ui:109
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:120
+msgid "Handle existing Files/Transfers"
+msgstr "Διαχείριση υπαρχόντων αρχείων/μεταφορών"
+
+#. i18n: file: conf/dlgadvanced.ui:115
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesAlwaysAsk)
+#: rc.cpp:123
+msgid "Always ask"
+msgstr "Ερώτηση πάντα"
+
+#. i18n: file: conf/dlgadvanced.ui:122
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesAutomaticRename)
+#: rc.cpp:126
+msgid "Automatic rename"
+msgstr "Αυτόματη μετονομασία"
+
+#. i18n: file: conf/dlgadvanced.ui:129
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesOverwrite)
+#: rc.cpp:129
+msgid "Overwrite"
+msgstr "Αντικατάσταση"
+
 #. i18n: file: conf/verificationpreferences.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_ChecksumAutomaticVerification)
-#: rc.cpp:126
+#: rc.cpp:132
 msgid "Automatic checksums verification"
 msgstr "Αυτόματη επαλήθευση αθροίσματος ελέγχου"
 
 #. i18n: file: conf/verificationpreferences.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:129
+#: rc.cpp:135
 msgid "Used checksum:"
 msgstr "Χρησιμοποιημένο άθροισμα ελέγχου:"
 
 #. i18n: file: conf/verificationpreferences.ui:51
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_4)
-#: rc.cpp:132
+#: rc.cpp:138
 msgid "Weak (fastest)"
 msgstr "Αδύναμη (γρηγορότερο)"
 
 #. i18n: file: conf/verificationpreferences.ui:58
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_5)
-#: rc.cpp:135
+#: rc.cpp:141
 msgid "Strong (recommended)"
 msgstr "Δυνατή (συστήνεται)"
 
 #. i18n: file: conf/verificationpreferences.ui:65
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_6)
-#: rc.cpp:138
+#: rc.cpp:144
 msgid "Strongest (slowest)"
 msgstr "Ισχυρή (αργό)"
 
@@ -3039,273 +3051,159 @@ msgstr "Ισχυρή (αργό)"
 #. i18n: ectx: property (text), widget (KPushButton, signature)
 #. i18n: file: ui/signaturedlg.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, sigGroup)
-#: rc.cpp:141 rc.cpp:812 rc.cpp:824
+#: rc.cpp:147 rc.cpp:749 rc.cpp:824
 msgid "Signature"
 msgstr "Υπογραφή"
 
 #. i18n: file: conf/verificationpreferences.ui:84
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SignatureAutomaticVerification)
-#: rc.cpp:144
+#: rc.cpp:150
 msgid "Automatic verification"
 msgstr "Αυτόματη επαλήθευση"
 
 #. i18n: file: conf/verificationpreferences.ui:91
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_SignatureAutomaticDownloading)
-#: rc.cpp:147
+#: rc.cpp:153
 msgid "Automatic downloading of missing keys"
 msgstr "Αυτόματη λήψη των ελλειπόντων κλειδιών"
 
 #. i18n: file: conf/verificationpreferences.ui:114
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:150
+#: rc.cpp:156
 msgid "Keyservers:"
 msgstr "Εξυπηρετητές κλειδιών:"
 
-#. i18n: file: conf/dlgappearance.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ShowDropTarget)
-#: rc.cpp:153
-msgid "Use Drop Target"
-msgstr "Χρήση σημείου ρίψης"
-
-#. i18n: file: conf/dlgappearance.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AnimateDropTarget)
-#: rc.cpp:156
-msgid "Enable animations"
-msgstr "Ενεργοποίηση κινούμενης εικόνας"
-
-#. i18n: file: transfer-plugins/mmsthreads/dlgmms.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:56
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:159 rc.cpp:168 rc.cpp:174
-msgid "Number of connections per URL:"
-msgstr "Αριθμός συνδέσεων ανά URL:"
-
-#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:162
-msgid "Number of simultaneous file downloads:"
-msgstr "Αριθμός ταυτόχρονων λήψεων αρχείων:"
-
-#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:165
-msgid "Number of mirrors per file:"
-msgstr "Αριθμός καθρεπτισμών ανά αρχείο:"
-
-#. i18n: file: transfer-plugins/metalink/fileselection.ui:17
-#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:171
-msgid "Select the files you want to be downloaded."
-msgstr "Επιλέξτε τα αρχεία που επιθυμείτε να γίνει η λήψη τους."
-
-#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:44
-#. i18n: ectx: property (text), widget (QCheckBox, enginesCheckBox)
-#: rc.cpp:177
-msgid "Use search engines"
-msgstr "Χρήση μηχανών αναζήτησης"
-
-#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:51
-#. i18n: ectx: property (text), widget (QCheckBox, verificationCheckBox)
-#: rc.cpp:180
-msgid "Search for verification information"
-msgstr "Αναζήτηση για πληροφορίες επαλήθευσης"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:16
-#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:183
-msgid "User Scripts"
-msgstr "Σενάρια χρήστη"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:27
-#. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
-#: rc.cpp:186
-msgid "Path"
-msgstr "Διαδρομή"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:32
-#. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
-#: rc.cpp:189
-msgid "RegExp"
-msgstr "Καν.έκφραση"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:60
-#. i18n: ectx: property (text), widget (QPushButton, newScriptButton)
-#: rc.cpp:195
-msgid "New Script...."
-msgstr "Νέο σενάριο..."
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:67
-#. i18n: ectx: property (text), widget (QPushButton, removeScriptButton)
-#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:62
-#. i18n: ectx: property (text), widget (QPushButton, removeEngineBt)
-#: rc.cpp:198 rc.cpp:282
-msgid "Remove"
-msgstr "Αφαίρεση"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:74
-#. i18n: ectx: property (text), widget (QPushButton, editScriptButton)
-#: rc.cpp:201
-msgid "Edit...."
-msgstr "Επεξεργασία..."
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:81
-#. i18n: ectx: property (text), widget (QPushButton, configureScriptButton)
-#: rc.cpp:204
-msgid "Configure...."
-msgstr "Διαμόρφωση..."
-
-#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:29
-#. i18n: ectx: property (text), widget (QLabel, scriptUrlRegexpLabel)
-#: rc.cpp:207
-msgid "Regexp:"
-msgstr "Καν.έκφραση:"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:36
-#. i18n: ectx: property (text), widget (QLabel, scriptPathLabel)
-#: rc.cpp:210
-msgid "Path:"
-msgstr "Διαδρομή:"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:43
-#. i18n: ectx: property (text), widget (QLabel, scriptDescriptionLabel)
-#. i18n: file: ui/metalinkcreator/commondata.ui:32
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:213 rc.cpp:551
-msgid "Description:"
-msgstr "Περιγραφή:"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, fileSettingGroupBox)
-#: rc.cpp:216
-msgid "File Settings"
-msgstr "Ρυθμίσεις αρχείων"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:25
-#. i18n: ectx: property (text), widget (QLabel, fileNameLabel)
-#. i18n: file: ui/metalinkcreator/filedlg.ui:54
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:219 rc.cpp:485
-msgid "Filename:"
-msgstr "Όνομα αρχείου:"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:33
-#. i18n: ectx: property (text), item, widget (KComboBox, fileNameComboBox)
-#: rc.cpp:222
-msgid "Use Normalized Name"
-msgstr "Χρήση κανονικοποιημένου ονόματος"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:38
-#. i18n: ectx: property (text), item, widget (KComboBox, fileNameComboBox)
-#: rc.cpp:225
-msgid "Use Literal Name"
-msgstr "Χρήση ακριβούς ονόματος"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:46
-#. i18n: ectx: property (text), widget (QLabel, qualityLabel)
-#: rc.cpp:228
-msgid "Quality:"
-msgstr "Ποιότητα:"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:54
-#. i18n: ectx: property (text), item, widget (KComboBox, qualityComboBox)
-#: rc.cpp:231
-msgid "Best Quality (.mp4)"
-msgstr "Βέλτιστη ποιότητα (.mp4)"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:59
-#. i18n: ectx: property (text), item, widget (KComboBox, qualityComboBox)
-#: rc.cpp:234
-msgid "Normal Quality (.flv)"
-msgstr "Κανονική ποιότητα (.flv)"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:70
-#. i18n: ectx: property (toolTip), widget (QGroupBox, loginGroupBox)
-#: rc.cpp:237
-msgid ""
-"Provide login info of your YouTube account in order to access restricted "
-"media."
-msgstr ""
-"Εισάγετε πληροφορίες σύνδεσης για τον λογαριασμό σας YouTube για να έχετε "
-"πρόσβαση στα περιορισμένα πολυμέσα."
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:73
-#. i18n: ectx: property (title), widget (QGroupBox, loginGroupBox)
-#: rc.cpp:240
-msgid "Login Info"
-msgstr "Πληροφορίες σύνδεσης"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:101
-#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
-#: rc.cpp:246
-msgid "Username:"
-msgstr "Όνομα χρήστη:"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:113
-#. i18n: ectx: property (toolTip), widget (QCheckBox, useNetrcCheck)
-#: rc.cpp:249
-msgid ".netrc must have a hostname called 'youtube'."
-msgstr "το .netrc θα πρέπει να περιέχει ένα όνομα υπολογιστή 'youtube'."
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:116
-#. i18n: ectx: property (text), widget (QCheckBox, useNetrcCheck)
-#: rc.cpp:252
-msgid "User .netrc file"
-msgstr "Αρχείο .netrc χρήστη"
-
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:19
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: rc.cpp:255
-msgid "Change string:"
-msgstr "Αλλαγή συμβολοσειράς:"
-
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:33
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:258
-msgid "Mode:"
-msgstr "Λειτουργία:"
-
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:43
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:261
-msgid "Checksum type:"
-msgstr "Τύπος αθροίσματος ελέγχου:"
-
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:77
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:264
-msgid "Result:"
-msgstr "Αποτέλεσμα:"
-
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:84
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:267
-msgid "label"
-msgstr "ετικέτα"
-
 #. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:16
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:270
+#: rc.cpp:165
 msgid "Search Engines"
 msgstr "Μηχανές αναζήτησης"
 
 #. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:27
 #. i18n: ectx: property (text), widget (QTreeWidget, enginesTreeWidget)
-#: rc.cpp:273
+#: rc.cpp:168
 msgid "Engine Name"
 msgstr "Όνομα μηχανής"
 
 #. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:55
 #. i18n: ectx: property (text), widget (QPushButton, newEngineBt)
-#: rc.cpp:279
+#: rc.cpp:174
 msgid "New Engine..."
 msgstr "Νέα μηχανή..."
 
+#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:62
+#. i18n: ectx: property (text), widget (QPushButton, removeEngineBt)
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:67
+#. i18n: ectx: property (text), widget (QPushButton, removeScriptButton)
+#: rc.cpp:177 rc.cpp:446
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:19
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: rc.cpp:180
+msgid "Change string:"
+msgstr "Αλλαγή συμβολοσειράς:"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:33
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:183
+msgid "Mode:"
+msgstr "Λειτουργία:"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:43
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:186
+msgid "Checksum type:"
+msgstr "Τύπος αθροίσματος ελέγχου:"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:77
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:189
+msgid "Result:"
+msgstr "Αποτέλεσμα:"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:84
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:192
+msgid "label"
+msgstr "ετικέτα"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:28
+#. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
+#: rc.cpp:198
+msgid "Remove Tracker"
+msgstr "Αφαίρεση ιχνηλάτη"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:35
+#. i18n: ectx: property (text), widget (KPushButton, m_change_tracker)
+#: rc.cpp:201
+msgid "Change Tracker"
+msgstr "Αλλαγή ιχνηλάτη"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:42
+#. i18n: ectx: property (text), widget (QPushButton, m_scrape)
+#: rc.cpp:204
+msgid "Update Trackers"
+msgstr "Ενημέρωση ιχνηλατών"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:62
+#. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
+#: rc.cpp:207
+msgid "Restore Defaults"
+msgstr "Επαναφορά προκαθορισμένων"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:154
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:210 rc.cpp:272
+msgid "Chunks"
+msgstr "Κομμάτια"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:23
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:213
+msgid "Total:"
+msgstr "Σύνολο:"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:59
+#. i18n: ectx: property (text), widget (QLabel, textLabel5)
+#: rc.cpp:216
+msgid "Currently downloading:"
+msgstr "Λήψεις σε εξέλιξη:"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:95
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:163
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:219 rc.cpp:275
+msgid "Downloaded:"
+msgstr "Ληφθέντα:"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:131
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:205
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:222 rc.cpp:293
+msgid "Excluded:"
+msgstr "Εξαιρέσεις:"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:167
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
+#: rc.cpp:225
+msgid "Left:"
+msgstr "Απομένουν:"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:203
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_8)
+#: rc.cpp:228
+msgid "Size:"
+msgstr "Μέγεθος:"
+
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/webseedstab.ui:21
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_webseed)
-#: rc.cpp:291
+#: rc.cpp:231
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -3341,203 +3239,25 @@ msgstr ""
 
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/webseedstab.ui:28
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
-#: rc.cpp:299
+#: rc.cpp:239
 msgid "Add Webseed"
 msgstr "Προσθήκη πηγής ιστού"
 
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/webseedstab.ui:50
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
-#: rc.cpp:302
+#: rc.cpp:242
 msgid "Remove Webseed"
 msgstr "Αφαίρεση πηγής ιστού"
 
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:28
-#. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
-#: rc.cpp:308
-msgid "Remove Tracker"
-msgstr "Αφαίρεση ιχνηλάτη"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:35
-#. i18n: ectx: property (text), widget (KPushButton, m_change_tracker)
-#: rc.cpp:311
-msgid "Change Tracker"
-msgstr "Αλλαγή ιχνηλάτη"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:42
-#. i18n: ectx: property (text), widget (QPushButton, m_scrape)
-#: rc.cpp:314
-msgid "Update Trackers"
-msgstr "Ενημέρωση ιχνηλατών"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:62
-#. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
-#: rc.cpp:317
-msgid "Restore Defaults"
-msgstr "Επαναφορά προκαθορισμένων"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:154
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:320 rc.cpp:437
-msgid "Chunks"
-msgstr "Κομμάτια"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:23
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:323
-msgid "Total:"
-msgstr "Σύνολο:"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:59
-#. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#: rc.cpp:326
-msgid "Currently downloading:"
-msgstr "Λήψεις σε εξέλιξη:"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:95
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:163
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:329 rc.cpp:440
-msgid "Downloaded:"
-msgstr "Ληφθέντα:"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:131
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:205
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:332 rc.cpp:458
-msgid "Excluded:"
-msgstr "Εξαιρέσεις:"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:167
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
-#: rc.cpp:335
-msgid "Left:"
-msgstr "Απομένουν:"
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:203
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_8)
-#: rc.cpp:338
-msgid "Size:"
-msgstr "Μέγεθος:"
-
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:49
-#. i18n: ectx: property (text), widget (QLabel, uploadLimitLabel)
-#: rc.cpp:347
-msgid "Upload limit per transfer:"
-msgstr "Όριο αποστολής ανά μεταφορά:"
-
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:56
-#. i18n: ectx: property (specialValueText), widget (QSpinBox, uploadBox)
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:76
-#. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadBox)
-#: rc.cpp:350 rc.cpp:359
-msgid "No Limit"
-msgstr "Χωρίς όριο"
-
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:59
-#. i18n: ectx: property (suffix), widget (QSpinBox, uploadBox)
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:79
-#. i18n: ectx: property (suffix), widget (QSpinBox, downloadBox)
-#: rc.cpp:353 rc.cpp:362
-msgid "KiB"
-msgstr "KiB"
-
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:69
-#. i18n: ectx: property (text), widget (QLabel, downloadLabel)
-#: rc.cpp:356
-msgid "Download limit per transfer:"
-msgstr "Όριο λήψης ανά μεταφορά:"
-
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:89
-#. i18n: ectx: property (text), widget (QCheckBox, utpBox)
-#: rc.cpp:365
-msgid "Enable UTP protocol"
-msgstr "Ενεργοποίηση πρωτοκόλλου UTP"
-
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:105
-#. i18n: ectx: property (title), widget (QGroupBox, folderGroupBox)
-#: rc.cpp:368
-msgid "Folders"
-msgstr "Φάκελοι"
-
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:117
-#. i18n: ectx: property (text), widget (QLabel, torrentFolderLabel)
-#: rc.cpp:371
-msgid "Default torrent folder:"
-msgstr "Προκαθορισμένος φάκελος torrent:"
-
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:137
-#. i18n: ectx: property (text), widget (QLabel, tempFolderLabel)
-#: rc.cpp:374
-msgid "Default temporary folder:"
-msgstr "Προκαθορισμένος προσωρινός φάκελος:"
-
-#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:154
-#. i18n: ectx: property (text), widget (QCheckBox, preallocBox)
-#: rc.cpp:377
-msgid "Pre-allocate disk space"
-msgstr "Προδέσμευση χώρου στο δίσκο"
-
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:16
-#. i18n: ectx: property (text), widget (QLabel, torrent_label)
-#: rc.cpp:380
-msgid "Scanning data of torrent:"
-msgstr "Σάρωση δεδομένων του torrent:"
-
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:30
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:383
-msgid "Number of chunks found:"
-msgstr "Αριθμός κομματιών που βρέθηκαν:"
-
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:40
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:386
-msgid "Number of chunks failed:"
-msgstr "Αριθμός αποτυχημένων κομματιών:"
-
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:50
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:389
-msgid "Number of chunks not downloaded:"
-msgstr "Αριθμός μη ληφθέντων κομματιών:"
-
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:57
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:392
-msgid "Number of chunks downloaded:"
-msgstr "Αριθμός ληφθέντων κομματιών:"
-
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:77
-#. i18n: ectx: property (text), widget (QLabel, chunks_found)
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:102
-#. i18n: ectx: property (text), widget (QLabel, chunks_failed)
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:124
-#. i18n: ectx: property (text), widget (QLabel, chunks_not_downloaded)
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:137
-#. i18n: ectx: property (text), widget (QLabel, chunks_downloaded)
-#: rc.cpp:395 rc.cpp:398 rc.cpp:401 rc.cpp:404
-msgid "0"
-msgstr "0"
-
-#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:183
-#. i18n: ectx: property (text), widget (KPushButton, cancel)
-#: rc.cpp:407
-msgid "Cancel"
-msgstr "Ακύρωση"
-
 #. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:29
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:410
+#: rc.cpp:245
 msgid "Stats"
 msgstr "Στατιστικά"
 
 #. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:47
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:413
+#: rc.cpp:248
 msgid "Seeders:"
 msgstr "Πηγές:"
 
@@ -3557,46 +3277,46 @@ msgstr "Πηγές:"
 #. i18n: ectx: property (text), widget (QLabel, chunksAllLabel)
 #. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:212
 #. i18n: ectx: property (text), widget (QLabel, chunksExcludedLabel)
-#: rc.cpp:416 rc.cpp:422 rc.cpp:428 rc.cpp:434 rc.cpp:443 rc.cpp:449
-#: rc.cpp:455 rc.cpp:461
+#: rc.cpp:251 rc.cpp:257 rc.cpp:263 rc.cpp:269 rc.cpp:278 rc.cpp:284
+#: rc.cpp:290 rc.cpp:296
 msgid "<n>"
 msgstr "<n>"
 
 #. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:73
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:419
+#: rc.cpp:254
 msgid "Download speed:"
 msgstr "Ταχύτητα λήψης:"
 
 #. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:99
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:425
+#: rc.cpp:260
 msgid "Leechers:"
 msgstr "Παραλήπτες:"
 
 #. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:125
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:431
+#: rc.cpp:266
 msgid "Upload speed:"
 msgstr "Ταχύτητα αποστολής:"
 
 #. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:177
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:446
+#: rc.cpp:281
 msgctxt "chunks left"
 msgid "Left:"
 msgstr "Απομένουν:"
 
 #. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:191
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:452
+#: rc.cpp:287
 msgctxt "all chunks"
 msgid "All:"
 msgstr "Όλα:"
 
 #. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:240
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:464
+#: rc.cpp:299
 msgctxt "source-file"
 msgid "Source:"
 msgstr "Πηγή:"
@@ -3605,9 +3325,289 @@ msgstr "Πηγή:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: ui/transferdetailsfrm.ui:44
 #. i18n: ectx: property (text), widget (QLabel, destLabel)
-#: rc.cpp:467 rc.cpp:470
+#: rc.cpp:302 rc.cpp:470
 msgid "Saving to:"
 msgstr "Αποθήκευση σε:"
+
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:16
+#. i18n: ectx: property (text), widget (QLabel, torrent_label)
+#: rc.cpp:305
+msgid "Scanning data of torrent:"
+msgstr "Σάρωση δεδομένων του torrent:"
+
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:30
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:308
+msgid "Number of chunks found:"
+msgstr "Αριθμός κομματιών που βρέθηκαν:"
+
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:40
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:311
+msgid "Number of chunks failed:"
+msgstr "Αριθμός αποτυχημένων κομματιών:"
+
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:50
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:314
+msgid "Number of chunks not downloaded:"
+msgstr "Αριθμός μη ληφθέντων κομματιών:"
+
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:57
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:317
+msgid "Number of chunks downloaded:"
+msgstr "Αριθμός ληφθέντων κομματιών:"
+
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:77
+#. i18n: ectx: property (text), widget (QLabel, chunks_found)
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:102
+#. i18n: ectx: property (text), widget (QLabel, chunks_failed)
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:124
+#. i18n: ectx: property (text), widget (QLabel, chunks_not_downloaded)
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:137
+#. i18n: ectx: property (text), widget (QLabel, chunks_downloaded)
+#: rc.cpp:320 rc.cpp:323 rc.cpp:326 rc.cpp:329
+msgid "0"
+msgstr "0"
+
+#. i18n: file: transfer-plugins/bittorrent/scandlg.ui:183
+#. i18n: ectx: property (text), widget (KPushButton, cancel)
+#: rc.cpp:332
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:49
+#. i18n: ectx: property (text), widget (QLabel, uploadLimitLabel)
+#: rc.cpp:341
+msgid "Upload limit per transfer:"
+msgstr "Όριο αποστολής ανά μεταφορά:"
+
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:56
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, uploadBox)
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:76
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadBox)
+#: rc.cpp:344 rc.cpp:353
+msgid "No Limit"
+msgstr "Χωρίς όριο"
+
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:59
+#. i18n: ectx: property (suffix), widget (QSpinBox, uploadBox)
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:79
+#. i18n: ectx: property (suffix), widget (QSpinBox, downloadBox)
+#: rc.cpp:347 rc.cpp:356
+msgid "KiB"
+msgstr "KiB"
+
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:69
+#. i18n: ectx: property (text), widget (QLabel, downloadLabel)
+#: rc.cpp:350
+msgid "Download limit per transfer:"
+msgstr "Όριο λήψης ανά μεταφορά:"
+
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:89
+#. i18n: ectx: property (text), widget (QCheckBox, utpBox)
+#: rc.cpp:359
+msgid "Enable UTP protocol"
+msgstr "Ενεργοποίηση πρωτοκόλλου UTP"
+
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:105
+#. i18n: ectx: property (title), widget (QGroupBox, folderGroupBox)
+#: rc.cpp:362
+msgid "Folders"
+msgstr "Φάκελοι"
+
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:117
+#. i18n: ectx: property (text), widget (QLabel, torrentFolderLabel)
+#: rc.cpp:365
+msgid "Default torrent folder:"
+msgstr "Προκαθορισμένος φάκελος torrent:"
+
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:137
+#. i18n: ectx: property (text), widget (QLabel, tempFolderLabel)
+#: rc.cpp:368
+msgid "Default temporary folder:"
+msgstr "Προκαθορισμένος προσωρινός φάκελος:"
+
+#. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:154
+#. i18n: ectx: property (text), widget (QCheckBox, preallocBox)
+#: rc.cpp:371
+msgid "Pre-allocate disk space"
+msgstr "Προδέσμευση χώρου στο δίσκο"
+
+#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:56
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: file: transfer-plugins/mmsthreads/dlgmms.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:374 rc.cpp:461 rc.cpp:467
+msgid "Number of connections per URL:"
+msgstr "Αριθμός συνδέσεων ανά URL:"
+
+#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:44
+#. i18n: ectx: property (text), widget (QCheckBox, enginesCheckBox)
+#: rc.cpp:377
+msgid "Use search engines"
+msgstr "Χρήση μηχανών αναζήτησης"
+
+#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:51
+#. i18n: ectx: property (text), widget (QCheckBox, verificationCheckBox)
+#: rc.cpp:380
+msgid "Search for verification information"
+msgstr "Αναζήτηση για πληροφορίες επαλήθευσης"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, fileSettingGroupBox)
+#: rc.cpp:383
+msgid "File Settings"
+msgstr "Ρυθμίσεις αρχείων"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:25
+#. i18n: ectx: property (text), widget (QLabel, fileNameLabel)
+#. i18n: file: ui/metalinkcreator/filedlg.ui:54
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: rc.cpp:386 rc.cpp:581
+msgid "Filename:"
+msgstr "Όνομα αρχείου:"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:33
+#. i18n: ectx: property (text), item, widget (KComboBox, fileNameComboBox)
+#: rc.cpp:389
+msgid "Use Normalized Name"
+msgstr "Χρήση κανονικοποιημένου ονόματος"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:38
+#. i18n: ectx: property (text), item, widget (KComboBox, fileNameComboBox)
+#: rc.cpp:392
+msgid "Use Literal Name"
+msgstr "Χρήση ακριβούς ονόματος"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:46
+#. i18n: ectx: property (text), widget (QLabel, qualityLabel)
+#: rc.cpp:395
+msgid "Quality:"
+msgstr "Ποιότητα:"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:54
+#. i18n: ectx: property (text), item, widget (KComboBox, qualityComboBox)
+#: rc.cpp:398
+msgid "Best Quality (.mp4)"
+msgstr "Βέλτιστη ποιότητα (.mp4)"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:59
+#. i18n: ectx: property (text), item, widget (KComboBox, qualityComboBox)
+#: rc.cpp:401
+msgid "Normal Quality (.flv)"
+msgstr "Κανονική ποιότητα (.flv)"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:70
+#. i18n: ectx: property (toolTip), widget (QGroupBox, loginGroupBox)
+#: rc.cpp:404
+msgid ""
+"Provide login info of your YouTube account in order to access restricted "
+"media."
+msgstr ""
+"Εισάγετε πληροφορίες σύνδεσης για τον λογαριασμό σας YouTube για να έχετε "
+"πρόσβαση στα περιορισμένα πολυμέσα."
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:73
+#. i18n: ectx: property (title), widget (QGroupBox, loginGroupBox)
+#: rc.cpp:407
+msgid "Login Info"
+msgstr "Πληροφορίες σύνδεσης"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:101
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: rc.cpp:413
+msgid "Username:"
+msgstr "Όνομα χρήστη:"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:113
+#. i18n: ectx: property (toolTip), widget (QCheckBox, useNetrcCheck)
+#: rc.cpp:416
+msgid ".netrc must have a hostname called 'youtube'."
+msgstr "το .netrc θα πρέπει να περιέχει ένα όνομα υπολογιστή 'youtube'."
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:116
+#. i18n: ectx: property (text), widget (QCheckBox, useNetrcCheck)
+#: rc.cpp:419
+msgid "User .netrc file"
+msgstr "Αρχείο .netrc χρήστη"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:29
+#. i18n: ectx: property (text), widget (QLabel, scriptUrlRegexpLabel)
+#: rc.cpp:422
+msgid "Regexp:"
+msgstr "Καν.έκφραση:"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:36
+#. i18n: ectx: property (text), widget (QLabel, scriptPathLabel)
+#: rc.cpp:425
+msgid "Path:"
+msgstr "Διαδρομή:"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:43
+#. i18n: ectx: property (text), widget (QLabel, scriptDescriptionLabel)
+#. i18n: file: ui/metalinkcreator/commondata.ui:32
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:428 rc.cpp:530
+msgid "Description:"
+msgstr "Περιγραφή:"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:16
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:431
+msgid "User Scripts"
+msgstr "Σενάρια χρήστη"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:27
+#. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
+#: rc.cpp:434
+msgid "Path"
+msgstr "Διαδρομή"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:32
+#. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
+#: rc.cpp:437
+msgid "RegExp"
+msgstr "Καν.έκφραση"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:60
+#. i18n: ectx: property (text), widget (QPushButton, newScriptButton)
+#: rc.cpp:443
+msgid "New Script...."
+msgstr "Νέο σενάριο..."
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:74
+#. i18n: ectx: property (text), widget (QPushButton, editScriptButton)
+#: rc.cpp:449
+msgid "Edit...."
+msgstr "Επεξεργασία..."
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:81
+#. i18n: ectx: property (text), widget (QPushButton, configureScriptButton)
+#: rc.cpp:452
+msgid "Configure...."
+msgstr "Διαμόρφωση..."
+
+#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:455
+msgid "Number of simultaneous file downloads:"
+msgstr "Αριθμός ταυτόχρονων λήψεων αρχείων:"
+
+#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:39
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:458
+msgid "Number of mirrors per file:"
+msgstr "Αριθμός καθρεπτισμών ανά αρχείο:"
+
+#. i18n: file: transfer-plugins/metalink/fileselection.ui:17
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:464
+msgid "Select the files you want to be downloaded."
+msgstr "Επιλέξτε τα αρχεία που επιθυμείτε να γίνει η λήψη τους."
 
 #. i18n: file: ui/transferdetailsfrm.ui:51
 #. i18n: ectx: property (text), widget (QLabel, sourceLabel)
@@ -3628,214 +3628,81 @@ msgstr "Κατάσταση:"
 msgid "Remaining Time:"
 msgstr "Χρόνος που απομένει:"
 
-#. i18n: file: ui/metalinkcreator/filedlg.ui:24
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: rc.cpp:482
-msgid "Required"
-msgstr "Απαιτείται"
-
-#. i18n: file: ui/metalinkcreator/filedlg.ui:95
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:488
-msgid "Used Mirrors:"
-msgstr "Χρησιμοποιημένοι καθρεπτισμοί:"
-
-#. i18n: file: ui/metalinkcreator/filedlg.ui:103
-#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: rc.cpp:491
-msgid "Recommended"
-msgstr "Συνιστώμενο"
-
-#. i18n: file: ui/metalinkcreator/filedlg.ui:111
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:494
-msgid "File size (in bytes):"
-msgstr "Μέγεθος αρχείου (σε bytes):"
-
-#. i18n: file: ui/metalinkcreator/filedlg.ui:121
-#. i18n: ectx: property (validChars), widget (KRestrictedLine, size)
-#: rc.cpp:497
-msgid "0123456789"
-msgstr "0123456789"
-
-#. i18n: file: ui/metalinkcreator/filedlg.ui:152
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: ui/signaturedlg.ui:34
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:500 rc.cpp:827
-msgid "Verification:"
-msgstr "Επαλήθευση:"
-
-#. i18n: file: ui/metalinkcreator/filedlg.ui:199
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:21
 #. i18n: ectx: attribute (title), widget (QWidget, Seite)
-#: rc.cpp:503
-msgid "Optional"
-msgstr "Προαιρετικό"
+#: rc.cpp:482
+msgctxt "General options."
+msgid "General"
+msgstr "Γενικά"
 
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:23
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:27
+#. i18n: ectx: property (text), widget (QCheckBox, partialChecksums)
+#: rc.cpp:485
+msgid "Create partial checksums"
+msgstr "Δημιουργία επιμέρους αθροισμάτων ελέγχου"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:40
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:488
+msgid "General URL:"
+msgstr "Γενικό URL:"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:66
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:491
+msgid ""
+"Automatically create checksums for the selected types. Keep in mind that "
+"this might take a while."
+msgstr ""
+"Αυτόματη δημιουργία αθροίσματος ελέγχου για τα επιλεγμένων είδη. Λάβετε "
+"υπόψη σας ότι αυτό ίσως απαιτήσει λίγο χρόνο."
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:92
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:494
+msgid ""
+"Enter URLs here if all the dropped files are on that server and in the same "
+"directory. For each dropped file the URL would consist of the entered part "
+"and the filename."
+msgstr ""
+"Εισάγετε διευθύνσεις URL εδώ εάν όλα τα αποτυχημένα αρχεία είναι σε αυτόν το "
+"διακομιστή και στον ίδιο κατάλογο. Για κάθε αποτυχημένο αρχείο το URL θα "
+"αποτελείται από το τμήμα που εισήχθη και το όνομα του αρχείου."
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:102
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:497
+msgid "Types of the checksums:"
+msgstr "Τύποι των αθροισμάτων ελέγχου:"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:115
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:500
+msgid "Create checksums:"
+msgstr "Δημιουργία αθροισμάτων ελέγχου:"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:129
+#. i18n: ectx: attribute (title), widget (QWidget, Seite_2)
+#: rc.cpp:503
+msgctxt "These entries are optional."
+msgid "Optional"
+msgstr "Προαιρετικές"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:141
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: rc.cpp:506
-msgid "General information:"
-msgstr "Γενικές πληροφορίες:"
+msgid "Optional data:"
+msgstr "Προαιρετικά δεδομένα"
 
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:30
-#. i18n: ectx: property (text), widget (QLabel, label_7)
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:166
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: rc.cpp:509
-msgid "Here you can enter optional general information on the metalink."
-msgstr ""
-"Εδώ μπορείτε να εισάγετε προαιρετικές γενικές πληροφορίες στον μετασύνδεσμο."
-
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:61
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:512
-msgid "Origin:"
-msgstr "Προέλευση:"
-
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:68
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, origin)
-#: rc.cpp:515
-msgid "Web URL to the metalink"
-msgstr "Διεύθυνση ιστού URL προς τον μετασύνδεσμο."
-
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:75
-#. i18n: ectx: property (toolTip), widget (QLabel, labelDynamic)
-#: rc.cpp:518
-msgid "Dynamic means that updated metalinks can be found at \"Origin\"."
-msgstr ""
-"Δυναμικό σημαίνει ότι τα ενημερωμένα metalinks μπορούν να βρεθούν στην "
-"\"Προέλευση\"."
-
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:78
-#. i18n: ectx: property (text), widget (QLabel, labelDynamic)
-#: rc.cpp:521
-msgid "Dynamic:"
-msgstr "Δυναμικό:"
-
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:110
-#. i18n: ectx: property (title), widget (QGroupBox, publishedGroupBox)
-#: rc.cpp:524
-msgid "Metalink published"
-msgstr "Δημοσιευμένα Metalink"
-
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:122
-#. i18n: ectx: property (text), widget (QLabel, label_30)
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:223
-#. i18n: ectx: property (text), widget (QLabel, label_29)
-#: rc.cpp:527 rc.cpp:545
-msgid "Date and time:"
-msgstr "Ημερομηνία και ώρα:"
-
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:132
-#. i18n: ectx: property (text), widget (QCheckBox, use_publishedtimeoffset)
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:213
-#. i18n: ectx: property (text), widget (QCheckBox, use_updatedtimeoffset)
-#: rc.cpp:530 rc.cpp:542
-msgid "Timezone offset:"
-msgstr "Μετατόπιση ζώνης ώρας:"
-
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:149
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:206
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:533 rc.cpp:539
-msgid "Negative offset:"
-msgstr "Αρνητική μετατόπιση:"
-
-#. i18n: file: ui/metalinkcreator/generalwidget.ui:178
-#. i18n: ectx: property (title), widget (QGroupBox, updatedGroupBox)
-#: rc.cpp:536
-msgid "Metalink updated"
-msgstr "Ενημερωμένα Metalink"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:548
-msgid "Identity"
-msgstr "Ταυτότητα"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:46
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:554
-msgid "Version:"
-msgstr "Έκδοση:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:56
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:557
-msgid "Logo:"
-msgstr "Λογότυπο:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:63
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, logo)
-#: rc.cpp:560
-msgid "URL to the logo"
-msgstr "URL του λογοτύπου"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:73
-#. i18n: ectx: property (toolTip), widget (QLabel, label_13)
-#: rc.cpp:563
-msgid "The language of the file"
-msgstr "Η γλώσσα του αρχείου"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:76
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:566
-msgid "Language:"
-msgstr "Γλώσσα:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:86
-#. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:569
-msgid "Operating systems:"
-msgstr "Λειτουργικά συστήματα:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:93
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, os)
-#: rc.cpp:572
-msgid "Supported OSes, separated with commas"
-msgstr "Τα υποστηριζόμενα λειτουργικά διαχωρισμένα με κόμμα"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:103
-#. i18n: ectx: property (text), widget (QLabel, label_18)
-#: rc.cpp:575
-msgid "Copyright:"
-msgstr "Πνευματικά δικαιώματα:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:141
-#. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:578
-msgid "Publisher:"
-msgstr "Εκδότης:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:150
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:581
-msgid "Name:"
-msgstr "Όνομα:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:157
-#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_name)
-#. i18n: file: ui/metalinkcreator/commondata.ui:177
-#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_url)
-#: rc.cpp:584 rc.cpp:593
-msgid "publisher"
-msgstr "εκδότης"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:160
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_name)
-#: rc.cpp:587
-msgid "Name of the publisher"
-msgstr "Όνομα του εκδότη"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:180
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_url)
-#: rc.cpp:596
-msgid "URL to the publisher"
-msgstr "URL στον εκδότη"
+msgid "Enter information that all chosen files share."
+msgstr "Εισάγετε τις πληροφορίες που όλα τα επιλεγμένα αρχεία μοιράζονται."
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:599
+#: rc.cpp:512
 msgid ""
 "This assistant allows you to create metalinks from scratch or base them on "
 "existing metalinks. A lot of the fields are optional or recommended, so "
@@ -3849,208 +3716,279 @@ msgstr ""
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:48
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:602
+#: rc.cpp:515
 msgid "Save created Metalink at:"
 msgstr "Αποθήκευση δημιουργημένου Metalink σε:"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:78
 #. i18n: ectx: property (text), widget (QRadioButton, createButton)
-#: rc.cpp:605
+#: rc.cpp:518
 msgid "Create new Metalink"
 msgstr "Δημιουργία νέου μετασυνδέσμου"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:88
 #. i18n: ectx: property (text), widget (QRadioButton, loadButton)
-#: rc.cpp:608
+#: rc.cpp:521
 msgid "Load existing Metalink:"
 msgstr "Φόρτωση ενός υπάρχοντος μετασυνδέσμου:"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:98
 #. i18n: ectx: property (filter), widget (KUrlRequester, load)
-#: rc.cpp:611
+#: rc.cpp:524
 msgid "*.metalink *.meta4|Metalink file (*.metalink *.meta4)"
 msgstr "*.metalink *.meta4|Αρχείο metalink (*.metalink *.meta4)"
 
+#. i18n: file: ui/metalinkcreator/commondata.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:527
+msgid "Identity"
+msgstr "Ταυτότητα"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:46
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:533
+msgid "Version:"
+msgstr "Έκδοση:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:56
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: rc.cpp:536
+msgid "Logo:"
+msgstr "Λογότυπο:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:63
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, logo)
+#: rc.cpp:539
+msgid "URL to the logo"
+msgstr "URL του λογοτύπου"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:73
+#. i18n: ectx: property (toolTip), widget (QLabel, label_13)
+#: rc.cpp:542
+msgid "The language of the file"
+msgstr "Η γλώσσα του αρχείου"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:76
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: rc.cpp:545
+msgid "Language:"
+msgstr "Γλώσσα:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:86
+#. i18n: ectx: property (text), widget (QLabel, label_14)
+#: rc.cpp:548
+msgid "Operating systems:"
+msgstr "Λειτουργικά συστήματα:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:93
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, os)
+#: rc.cpp:551
+msgid "Supported OSes, separated with commas"
+msgstr "Τα υποστηριζόμενα λειτουργικά διαχωρισμένα με κόμμα"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:103
+#. i18n: ectx: property (text), widget (QLabel, label_18)
+#: rc.cpp:554
+msgid "Copyright:"
+msgstr "Πνευματικά δικαιώματα:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:141
+#. i18n: ectx: property (text), widget (QLabel, label_20)
+#: rc.cpp:557
+msgid "Publisher:"
+msgstr "Εκδότης:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:150
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:560
+msgid "Name:"
+msgstr "Όνομα:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:157
+#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_name)
+#. i18n: file: ui/metalinkcreator/commondata.ui:177
+#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_url)
+#: rc.cpp:563 rc.cpp:572
+msgid "publisher"
+msgstr "εκδότης"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:160
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_name)
+#: rc.cpp:566
+msgid "Name of the publisher"
+msgstr "Όνομα του εκδότη"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:180
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_url)
+#: rc.cpp:575
+msgid "URL to the publisher"
+msgstr "URL στον εκδότη"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:24
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: rc.cpp:578
+msgid "Required"
+msgstr "Απαιτείται"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:95
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: rc.cpp:584
+msgid "Used Mirrors:"
+msgstr "Χρησιμοποιημένοι καθρεπτισμοί:"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:103
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: rc.cpp:587
+msgid "Recommended"
+msgstr "Συνιστώμενο"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:111
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: rc.cpp:590
+msgid "File size (in bytes):"
+msgstr "Μέγεθος αρχείου (σε bytes):"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:121
+#. i18n: ectx: property (validChars), widget (KRestrictedLine, size)
+#: rc.cpp:593
+msgid "0123456789"
+msgstr "0123456789"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:152
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: ui/signaturedlg.ui:34
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:596 rc.cpp:827
+msgid "Verification:"
+msgstr "Επαλήθευση:"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:199
+#. i18n: ectx: attribute (title), widget (QWidget, Seite)
+#: rc.cpp:599
+msgid "Optional"
+msgstr "Προαιρετικό"
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:23
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:602
+msgid "General information:"
+msgstr "Γενικές πληροφορίες:"
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:30
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:605
+msgid "Here you can enter optional general information on the metalink."
+msgstr ""
+"Εδώ μπορείτε να εισάγετε προαιρετικές γενικές πληροφορίες στον μετασύνδεσμο."
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:61
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:608
+msgid "Origin:"
+msgstr "Προέλευση:"
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:68
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, origin)
+#: rc.cpp:611
+msgid "Web URL to the metalink"
+msgstr "Διεύθυνση ιστού URL προς τον μετασύνδεσμο."
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:75
+#. i18n: ectx: property (toolTip), widget (QLabel, labelDynamic)
+#: rc.cpp:614
+msgid "Dynamic means that updated metalinks can be found at \"Origin\"."
+msgstr ""
+"Δυναμικό σημαίνει ότι τα ενημερωμένα metalinks μπορούν να βρεθούν στην "
+"\"Προέλευση\"."
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:78
+#. i18n: ectx: property (text), widget (QLabel, labelDynamic)
+#: rc.cpp:617
+msgid "Dynamic:"
+msgstr "Δυναμικό:"
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:110
+#. i18n: ectx: property (title), widget (QGroupBox, publishedGroupBox)
+#: rc.cpp:620
+msgid "Metalink published"
+msgstr "Δημοσιευμένα Metalink"
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:122
+#. i18n: ectx: property (text), widget (QLabel, label_30)
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:223
+#. i18n: ectx: property (text), widget (QLabel, label_29)
+#: rc.cpp:623 rc.cpp:641
+msgid "Date and time:"
+msgstr "Ημερομηνία και ώρα:"
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:132
+#. i18n: ectx: property (text), widget (QCheckBox, use_publishedtimeoffset)
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:213
+#. i18n: ectx: property (text), widget (QCheckBox, use_updatedtimeoffset)
+#: rc.cpp:626 rc.cpp:638
+msgid "Timezone offset:"
+msgstr "Μετατόπιση ζώνης ώρας:"
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:149
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:206
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:629 rc.cpp:635
+msgid "Negative offset:"
+msgstr "Αρνητική μετατόπιση:"
+
+#. i18n: file: ui/metalinkcreator/generalwidget.ui:178
+#. i18n: ectx: property (title), widget (QGroupBox, updatedGroupBox)
+#: rc.cpp:632
+msgid "Metalink updated"
+msgstr "Ενημερωμένα Metalink"
+
 #. i18n: file: ui/metalinkcreator/files.ui:26
 #. i18n: ectx: property (toolTip), widget (KPushButton, add_local_file)
-#: rc.cpp:614
+#: rc.cpp:644
 msgid "Adds local files adding a lot information automatically."
 msgstr "Προσθέτει τοπικά αρχεία προσθέτοντας πολλές πληροφορίες αυτόματα."
 
 #. i18n: file: ui/metalinkcreator/files.ui:29
 #. i18n: ectx: property (text), widget (KPushButton, add_local_file)
-#: rc.cpp:617
+#: rc.cpp:647
 msgid "Add local files"
 msgstr "Προσθήκη τοπικών αρχείων"
 
 #. i18n: file: ui/metalinkcreator/files.ui:66
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:620
+#: rc.cpp:650
 msgid "Adding local files..."
 msgstr "Προσθήκη τοπικών αρχείων..."
 
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:21
-#. i18n: ectx: attribute (title), widget (QWidget, Seite)
-#: rc.cpp:623
-msgctxt "General options."
-msgid "General"
-msgstr "Γενικά"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:27
-#. i18n: ectx: property (text), widget (QCheckBox, partialChecksums)
-#: rc.cpp:626
-msgid "Create partial checksums"
-msgstr "Δημιουργία επιμέρους αθροισμάτων ελέγχου"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:40
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:629
-msgid "General URL:"
-msgstr "Γενικό URL:"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:66
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:632
-msgid ""
-"Automatically create checksums for the selected types. Keep in mind that "
-"this might take a while."
-msgstr ""
-"Αυτόματη δημιουργία αθροίσματος ελέγχου για τα επιλεγμένων είδη. Λάβετε "
-"υπόψη σας ότι αυτό ίσως απαιτήσει λίγο χρόνο."
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:92
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:635
-msgid ""
-"Enter URLs here if all the dropped files are on that server and in the same "
-"directory. For each dropped file the URL would consist of the entered part "
-"and the filename."
-msgstr ""
-"Εισάγετε διευθύνσεις URL εδώ εάν όλα τα αποτυχημένα αρχεία είναι σε αυτόν το "
-"διακομιστή και στον ίδιο κατάλογο. Για κάθε αποτυχημένο αρχείο το URL θα "
-"αποτελείται από το τμήμα που εισήχθη και το όνομα του αρχείου."
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:102
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:638
-msgid "Types of the checksums:"
-msgstr "Τύποι των αθροισμάτων ελέγχου:"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:115
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:641
-msgid "Create checksums:"
-msgstr "Δημιουργία αθροισμάτων ελέγχου:"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:129
-#. i18n: ectx: attribute (title), widget (QWidget, Seite_2)
-#: rc.cpp:644
-msgctxt "These entries are optional."
-msgid "Optional"
-msgstr "Προαιρετικές"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:141
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:647
-msgid "Optional data:"
-msgstr "Προαιρετικά δεδομένα"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:166
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:650
-msgid "Enter information that all chosen files share."
-msgstr "Εισάγετε τις πληροφορίες που όλα τα επιλεγμένα αρχεία μοιράζονται."
-
-#. i18n: file: ui/linkview/importlinkdialog.ui:25
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:653
-msgid "&File with links to import:"
-msgstr "&Αρχείο δεσμών για εισαγωγή:"
-
-#. i18n: file: ui/linkview/importlinkdialog.ui:41
-#. i18n: ectx: property (text), widget (KPushButton, importLinks)
-#: rc.cpp:656
-msgid "&Import Links"
-msgstr "&Εισαγωγή δεσμών"
-
-#. i18n: file: ui/linkview/importlinkdialog.ui:58
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:659
-msgid "Show:"
-msgstr "Εμφάνιση:"
-
-#. i18n: file: ui/linkview/importlinkdialog.ui:68
-#. i18n: ectx: property (text), widget (QCheckBox, showWebContent)
-#: rc.cpp:662
-msgid "Show &web content"
-msgstr "Εμφάνιση περιεχομένου &ιστού"
-
-#. i18n: file: ui/linkview/importlinkdialog.ui:106
-#. i18n: ectx: property (toolTip), widget (KLineEdit, textFilter)
-#: rc.cpp:665
-msgid "You can use wildcards for filtering."
-msgstr "Μπορείτε να χρησιμοποιήσετε σύμβολα υποκατάστασης για το φιλτράρισμα."
-
-#. i18n: file: ui/linkview/importlinkdialog.ui:109
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, textFilter)
-#: rc.cpp:668
-msgid "Filter files here...."
-msgstr "Εδώ φιλτράρισμα των αρχείων..."
-
-#. i18n: file: ui/linkview/importlinkdialog.ui:212
-#. i18n: ectx: property (text), widget (KPushButton, invertSelection)
-#: rc.cpp:677
-msgid "Inver&t Selection"
-msgstr "Αντιστ&ροφή επιλογής"
-
-#. i18n: file: ui/verificationadddlg.ui:19
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:680
-msgctxt "hash type as in md5t, sha1 etc."
-msgid "Hash type:"
-msgstr "Τύπος τιμής κατατεμαχισμού"
-
-#. i18n: file: ui/verificationadddlg.ui:26
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:683
-msgctxt "hash as a hash of type md5, sha1 etc."
-msgid "Hash:"
-msgstr "Τιμή κατατεμαχισμού:"
-
-#. i18n: file: ui/verificationadddlg.ui:33
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, newHash)
-#: rc.cpp:686
-msgid "Enter a hash key"
-msgstr "Εισάγετε ένα κλειδί τιμής κατατεμαχισμού"
-
 #. i18n: file: ui/groupsettingsdialog.ui:32
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:689
+#: rc.cpp:653
 msgid "Group Settings"
 msgstr "Ρυθμίσεις ομάδας"
 
 #. i18n: file: ui/groupsettingsdialog.ui:44
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:692
+#: rc.cpp:656
 msgid "Default &folder:"
 msgstr "Προκαθορισμένος &φάκελος:"
 
 #. i18n: file: ui/groupsettingsdialog.ui:61
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
-#: rc.cpp:695
+#: rc.cpp:659
 msgid "Moves all transfers with the regular expression to this group"
 msgstr ""
 "Μετακίνηση όλων των μεταφορών της κανονικής έκφρασης σε αυτήν την ομάδα"
 
 #. i18n: file: ui/groupsettingsdialog.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:698
+#: rc.cpp:662
 msgid "Regular &expression:"
 msgstr "Κανονική &έκφραση:"
 
 #. i18n: file: ui/groupsettingsdialog.ui:74
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, regExpEdit)
-#: rc.cpp:701
+#: rc.cpp:665
 msgid "*movies*"
 msgstr "*ταινίες*"
 
@@ -4064,99 +4002,50 @@ msgstr "*ταινίες*"
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadSpin)
 #. i18n: file: ui/transfersettingsdialog.ui:87
 #. i18n: ectx: property (specialValueText), widget (QDoubleSpinBox, ratioSpin)
-#: rc.cpp:704 rc.cpp:710 rc.cpp:776 rc.cpp:782 rc.cpp:788
+#: rc.cpp:668 rc.cpp:674 rc.cpp:713 rc.cpp:719 rc.cpp:725
 msgctxt "No value has been set"
 msgid "Not set"
 msgstr "Δεν έχει οριστεί"
 
 #. i18n: file: ui/groupsettingsdialog.ui:119
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:716
+#: rc.cpp:680
 msgid "Maximum &download speed:"
 msgstr "Μέγιστη ταχύτητα &λήψης:"
 
 #. i18n: file: ui/groupsettingsdialog.ui:129
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:719
+#: rc.cpp:683
 msgid "Maximum &upload speed:"
 msgstr "Μέγιστη ταχύτητα &αποστολής:"
 
-#. i18n: file: ui/history/transferhistory.ui:27
-#. i18n: ectx: property (text), widget (QPushButton, clearButton)
-#: rc.cpp:722
-msgid "Clear History"
-msgstr "Καθαρισμός ιστορικού"
-
-#. i18n: file: ui/history/transferhistory.ui:47
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:725
-msgid "View Modes:"
-msgstr "Λειτουργίες προβολής:"
-
-#. i18n: file: ui/history/transferhistory.ui:77
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:728
-msgid "Select Ranges:"
-msgstr "Επιλογή ευρών:"
-
-#. i18n: file: ui/history/transferhistory.ui:85
-#. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: rc.cpp:731
-msgid "Date"
-msgstr "Ημερομηνία"
-
-#. i18n: file: ui/history/transferhistory.ui:95
-#. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: rc.cpp:737
-msgid "Host"
-msgstr "Υπολογιστής"
-
-#. i18n: file: ui/history/transferhistory.ui:106
-#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchBar)
-#: rc.cpp:740
-msgid "Filter history"
-msgstr "Φιλτράρισμα ιστορικού"
-
-#. i18n: file: ui/history/transferhistory.ui:120
-#. i18n: ectx: property (text), widget (KLineEdit, searchBar)
-#: rc.cpp:743
-msgctxt "delete selected transfer"
-msgid "Delete Selected"
-msgstr "Διαγραφή επιλεγμένων"
-
-#. i18n: file: ui/history/transferhistory.ui:125
-#. i18n: ectx: property (text), widget (KLineEdit, searchBar)
-#: rc.cpp:746
-msgid "Download"
-msgstr "Λήψη"
-
 #. i18n: file: ui/mirror/mirroradddlg.ui:19
 #. i18n: ectx: property (text), widget (QLabel, labelMirror)
-#: rc.cpp:749
+#: rc.cpp:686
 msgid "Mirror:"
 msgstr "Καθρεπτισμός:"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:26
 #. i18n: ectx: property (text), widget (QLabel, labelConnections)
-#: rc.cpp:752
+#: rc.cpp:689
 msgid "Number of connections:"
 msgstr "Αριθμός συνδέσεων:"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:33
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, url)
-#: rc.cpp:755
+#: rc.cpp:692
 msgid "Enter a URL"
 msgstr "Εισάγετε ένα URL"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:53
 #. i18n: ectx: property (text), widget (QLabel, labelPriority)
-#: rc.cpp:758
+#: rc.cpp:695
 msgid "Priority:"
 msgstr "Προτεραιότητα:"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:60
 #. i18n: ectx: property (toolTip), widget (KIntNumInput, priority)
-#: rc.cpp:761
+#: rc.cpp:698
 msgid "Optional: The priority of the mirror, 1 highest 999999 lowest."
 msgstr ""
 "Προαιρετικά: Η προτεραιότητα του καθρεπτισμού, 1 για υψηλότερη 999999 για "
@@ -4164,59 +4053,170 @@ msgstr ""
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:79
 #. i18n: ectx: property (text), widget (QLabel, labelLocation)
-#: rc.cpp:767
+#: rc.cpp:704
 msgid "Location:"
 msgstr "Τοποθεσία:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:23
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:770
+#: rc.cpp:707
 msgid "Transfer Settings"
 msgstr "Ρυθμίσεις μεταφοράς"
 
 #. i18n: file: ui/transfersettingsdialog.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:773
+#: rc.cpp:710
 msgid "Download des&tination:"
 msgstr "&Προορισμός λήψης:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:94
 #. i18n: ectx: property (text), widget (QLabel, labelUpload)
-#: rc.cpp:791
+#: rc.cpp:728
 msgid "&Upload limit:"
 msgstr "Όριο &αποστολής:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:104
 #. i18n: ectx: property (text), widget (QLabel, labelDownload)
-#: rc.cpp:794
+#: rc.cpp:731
 msgid "&Download limit:"
 msgstr "Όριο &λήψης:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:114
 #. i18n: ectx: property (text), widget (QLabel, labelShareRatio)
-#: rc.cpp:797
+#: rc.cpp:734
 msgid "Maximum &share ratio:"
 msgstr "Μέγιστη &κοινόχρηστη αναλογία:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:143
 #. i18n: ectx: property (toolTip), widget (KPushButton, mirrors)
-#: rc.cpp:800
+#: rc.cpp:737
 msgid "Modify the mirrors used for downloading."
 msgstr "Επεξεργασία των καθρεπτισμών που χρησιμοποιούνται για τις λήψεις."
 
 #. i18n: file: ui/transfersettingsdialog.ui:146
 #. i18n: ectx: property (text), widget (KPushButton, mirrors)
-#: rc.cpp:803
+#: rc.cpp:740
 msgctxt "The available mirrors (servers) for downloading"
 msgid "Mirrors"
 msgstr "Καθρεπτισμοί"
 
 #. i18n: file: ui/transfersettingsdialog.ui:166
 #. i18n: ectx: property (text), widget (KPushButton, verification)
-#: rc.cpp:809
+#: rc.cpp:746
 msgctxt "verification of the download (e.g. by using MD5)"
 msgid "Verification"
 msgstr "Επαλήθευση"
+
+#. i18n: file: ui/verificationadddlg.ui:19
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:752
+msgctxt "hash type as in md5t, sha1 etc."
+msgid "Hash type:"
+msgstr "Τύπος τιμής κατατεμαχισμού"
+
+#. i18n: file: ui/verificationadddlg.ui:26
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:755
+msgctxt "hash as a hash of type md5, sha1 etc."
+msgid "Hash:"
+msgstr "Τιμή κατατεμαχισμού:"
+
+#. i18n: file: ui/verificationadddlg.ui:33
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, newHash)
+#: rc.cpp:758
+msgid "Enter a hash key"
+msgstr "Εισάγετε ένα κλειδί τιμής κατατεμαχισμού"
+
+#. i18n: file: ui/history/transferhistory.ui:27
+#. i18n: ectx: property (text), widget (QPushButton, clearButton)
+#: rc.cpp:761
+msgid "Clear History"
+msgstr "Καθαρισμός ιστορικού"
+
+#. i18n: file: ui/history/transferhistory.ui:47
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:764
+msgid "View Modes:"
+msgstr "Λειτουργίες προβολής:"
+
+#. i18n: file: ui/history/transferhistory.ui:77
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:767
+msgid "Select Ranges:"
+msgstr "Επιλογή ευρών:"
+
+#. i18n: file: ui/history/transferhistory.ui:85
+#. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
+#: rc.cpp:770
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#. i18n: file: ui/history/transferhistory.ui:95
+#. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
+#: rc.cpp:776
+msgid "Host"
+msgstr "Υπολογιστής"
+
+#. i18n: file: ui/history/transferhistory.ui:106
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchBar)
+#: rc.cpp:779
+msgid "Filter history"
+msgstr "Φιλτράρισμα ιστορικού"
+
+#. i18n: file: ui/history/transferhistory.ui:120
+#. i18n: ectx: property (text), widget (KLineEdit, searchBar)
+#: rc.cpp:782
+msgctxt "delete selected transfer"
+msgid "Delete Selected"
+msgstr "Διαγραφή επιλεγμένων"
+
+#. i18n: file: ui/history/transferhistory.ui:125
+#. i18n: ectx: property (text), widget (KLineEdit, searchBar)
+#: rc.cpp:785
+msgid "Download"
+msgstr "Λήψη"
+
+#. i18n: file: ui/linkview/importlinkdialog.ui:25
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:788
+msgid "&File with links to import:"
+msgstr "&Αρχείο δεσμών για εισαγωγή:"
+
+#. i18n: file: ui/linkview/importlinkdialog.ui:41
+#. i18n: ectx: property (text), widget (KPushButton, importLinks)
+#: rc.cpp:791
+msgid "&Import Links"
+msgstr "&Εισαγωγή δεσμών"
+
+#. i18n: file: ui/linkview/importlinkdialog.ui:58
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:794
+msgid "Show:"
+msgstr "Εμφάνιση:"
+
+#. i18n: file: ui/linkview/importlinkdialog.ui:68
+#. i18n: ectx: property (text), widget (QCheckBox, showWebContent)
+#: rc.cpp:797
+msgid "Show &web content"
+msgstr "Εμφάνιση περιεχομένου &ιστού"
+
+#. i18n: file: ui/linkview/importlinkdialog.ui:106
+#. i18n: ectx: property (toolTip), widget (KLineEdit, textFilter)
+#: rc.cpp:800
+msgid "You can use wildcards for filtering."
+msgstr "Μπορείτε να χρησιμοποιήσετε σύμβολα υποκατάστασης για το φιλτράρισμα."
+
+#. i18n: file: ui/linkview/importlinkdialog.ui:109
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, textFilter)
+#: rc.cpp:803
+msgid "Filter files here...."
+msgstr "Εδώ φιλτράρισμα των αρχείων..."
+
+#. i18n: file: ui/linkview/importlinkdialog.ui:212
+#. i18n: ectx: property (text), widget (KPushButton, invertSelection)
+#: rc.cpp:812
+msgid "Inver&t Selection"
+msgstr "Αντιστ&ροφή επιλογής"
 
 #. i18n: file: ui/verificationdialog.ui:42
 #. i18n: ectx: property (toolTip), widget (KPushButton, verify)
@@ -4356,40 +4356,40 @@ msgstr "Κύρια γραμμή εργαλείων"
 msgid "The width of the columns in the history view"
 msgstr "Το πλάτος των στηλών της προβολής ιστορικού"
 
-#. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:9
-#. i18n: ectx: label, entry (UrlRegexpList), group (UserScripts)
-#: rc.cpp:897
-msgid "List of the Regexp to match input URL"
-msgstr "Λίστα των κανονικών εκφράσεων που ταιριάζουν με το URL εισόδου"
+#. i18n: file: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:12
+#. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
+#. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:9
+#. i18n: ectx: label, entry (SearchStrings), group (ChecksumSearch)
+#: rc.cpp:897 rc.cpp:903
+msgid "List of the available search engines"
+msgstr "Λίστα διαθέσιμων μηχανών αναζήτησης"
 
-#. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:13
-#. i18n: ectx: label, entry (PathList), group (UserScripts)
+#. i18n: file: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:16
+#. i18n: ectx: label, entry (SearchEnginesUrlList), group (SearchEngines)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:13
 #. i18n: ectx: label, entry (UrlChangeModeList), group (ChecksumSearch)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:17
 #. i18n: ectx: label, entry (ChecksumTypeList), group (ChecksumSearch)
-#. i18n: file: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:16
-#. i18n: ectx: label, entry (SearchEnginesUrlList), group (SearchEngines)
-#: rc.cpp:900 rc.cpp:917 rc.cpp:920 rc.cpp:926
+#. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:13
+#. i18n: ectx: label, entry (PathList), group (UserScripts)
+#: rc.cpp:900 rc.cpp:906 rc.cpp:909 rc.cpp:915
 msgid "List of the available search engine URLs"
 msgstr "Λίστα διαθέσιμων URL μηχανών αναζήτησης"
 
+#. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:9
+#. i18n: ectx: label, entry (UrlRegexpList), group (UserScripts)
+#: rc.cpp:912
+msgid "List of the Regexp to match input URL"
+msgstr "Λίστα των κανονικών εκφράσεων που ταιριάζουν με το URL εισόδου"
+
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:21
 #. i18n: ectx: label, entry (DescriptionList), group (UserScripts)
-#: rc.cpp:903
+#: rc.cpp:918
 msgid "List of descriptions for user scripts"
 msgstr "Λίστα περιγραφών για τα σενάρια του χρήστη"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:25
 #. i18n: ectx: label, entry (EnableList), group (UserScripts)
-#: rc.cpp:906
+#: rc.cpp:921
 msgid "List of whether the script is enabled"
 msgstr "Λίστα κατάστασης των ενεργών σεναρίων"
-
-#. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:9
-#. i18n: ectx: label, entry (SearchStrings), group (ChecksumSearch)
-#. i18n: file: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:12
-#. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
-#: rc.cpp:914 rc.cpp:923
-msgid "List of the available search engines"
-msgstr "Λίστα διαθέσιμων μηχανών αναζήτησης"

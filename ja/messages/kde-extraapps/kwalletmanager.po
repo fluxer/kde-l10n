@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletmanager\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2014-12-09 18:22+0000\n"
+"POT-Creation-Date: 2015-02-28 21:37+0000\n"
 "PO-Revision-Date: 2009-12-21 00:36+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -23,6 +23,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+
+#: revokeauthbutton.cpp:29
+msgid "Revoke Authorization"
+msgstr ""
 
 #: kwalleteditor.cpp:98
 msgid "Search"
@@ -215,68 +219,6 @@ msgstr ""
 msgid "Error: XML file does not contain a wallet."
 msgstr "エラー: XML ファイルにウォレットはありません。"
 
-#: kwmapeditor.cpp:145
-msgid "Key"
-msgstr "キー"
-
-#: kwmapeditor.cpp:145
-msgid "Value"
-msgstr "値"
-
-#: kwmapeditor.cpp:162 kwmapeditor.cpp:213
-#, fuzzy
-msgid "Delete Entry"
-msgstr "新しいエントリ"
-
-#: kwmapeditor.cpp:233
-msgid "&New Entry"
-msgstr "新しいエントリ(&N)"
-
-#: disconnectappbutton.cpp:29
-#, fuzzy
-msgid "Disconnect"
-msgstr "接続切断(&T)"
-
-#: walletcontrolwidget.cpp:74
-msgid "&Close"
-msgstr ""
-
-#: walletcontrolwidget.cpp:91
-#, fuzzy
-msgctxt ""
-"the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
-"wallet name)"
-msgid "The '%1' wallet is currently open"
-msgstr "一つのウォレットが開いています。"
-
-#: walletcontrolwidget.cpp:94 kwalletpopup.cpp:44
-msgid "&Open..."
-msgstr "開く(&O)..."
-
-#: walletcontrolwidget.cpp:106
-msgid "The wallet is currently closed"
-msgstr ""
-
-#: walletcontrolwidget.cpp:118 kwalletmanager.cpp:216
-msgid ""
-"Unable to close wallet cleanly. It is probably in use by other applications. "
-"Do you wish to force it closed?"
-msgstr ""
-"ウォレットを正しく閉じられません。他のアプリケーションで使用されている可能性"
-"があります。強制的に閉じますか？"
-
-#: walletcontrolwidget.cpp:118 kwalletmanager.cpp:216
-msgid "Force Closure"
-msgstr "強制的に閉じる"
-
-#: walletcontrolwidget.cpp:118 kwalletmanager.cpp:216
-msgid "Do Not Force"
-msgstr "強制しない"
-
-#: walletcontrolwidget.cpp:122 kwalletmanager.cpp:220
-msgid "Unable to force the wallet closed. Error code was %1."
-msgstr "ウォレットを強制的に閉じられませんでした。エラーコード: %1"
-
 #: main.cpp:44 main.cpp:70
 msgid "KDE Wallet Manager"
 msgstr "KDE ウォレットマネージャ"
@@ -369,6 +311,26 @@ msgstr "ウォレットを設定(&W)..."
 msgid "Close &All Wallets"
 msgstr "すべてのウォレットを閉じる(&A)"
 
+#: kwalletmanager.cpp:216 walletcontrolwidget.cpp:118
+msgid ""
+"Unable to close wallet cleanly. It is probably in use by other applications. "
+"Do you wish to force it closed?"
+msgstr ""
+"ウォレットを正しく閉じられません。他のアプリケーションで使用されている可能性"
+"があります。強制的に閉じますか？"
+
+#: kwalletmanager.cpp:216 walletcontrolwidget.cpp:118
+msgid "Force Closure"
+msgstr "強制的に閉じる"
+
+#: kwalletmanager.cpp:216 walletcontrolwidget.cpp:118
+msgid "Do Not Force"
+msgstr "強制しない"
+
+#: kwalletmanager.cpp:220 walletcontrolwidget.cpp:122
+msgid "Unable to force the wallet closed. Error code was %1."
+msgstr "ウォレットを強制的に閉じられませんでした。エラーコード: %1"
+
 #: kwalletmanager.cpp:236
 msgid "Error opening wallet %1."
 msgstr "ウォレット <resource>%1</resource> を開くときにエラーが発生しました。"
@@ -399,131 +361,39 @@ msgstr "本当にウォレット <resource>%1</resource> を削除しますか�
 msgid "Unable to delete the wallet. Error code was %1."
 msgstr "ウォレットを削除できませんでした。エラーコード: %1"
 
-#. i18n: file: walletcontrolwidget.ui:28
-#. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
-#: rc.cpp:3
-msgid "KSqueezedTextLabel"
-msgstr ""
+#: kwmapeditor.cpp:145
+msgid "Key"
+msgstr "キー"
 
-#. i18n: file: walletcontrolwidget.ui:35
-#. i18n: ectx: property (text), widget (QPushButton, _openClose)
-#: rc.cpp:6
+#: kwmapeditor.cpp:145
+msgid "Value"
+msgstr "値"
+
+#: kwmapeditor.cpp:162 kwmapeditor.cpp:213
 #, fuzzy
-msgid "Open..."
+msgid "Delete Entry"
+msgstr "新しいエントリ"
+
+#: kwmapeditor.cpp:233
+msgid "&New Entry"
+msgstr "新しいエントリ(&N)"
+
+#: disconnectappbutton.cpp:29
+#, fuzzy
+msgid "Disconnect"
+msgstr "接続切断(&T)"
+
+#: kwalletpopup.cpp:44 walletcontrolwidget.cpp:94
+msgid "&Open..."
 msgstr "開く(&O)..."
 
-#. i18n: file: walletcontrolwidget.ui:58
-#. i18n: ectx: property (text), widget (QPushButton, _changePassword)
-#: rc.cpp:9
-#, fuzzy
-msgid "Change Password..."
+#: kwalletpopup.cpp:50
+msgid "Change &Password..."
 msgstr "パスワードを変更(&P)..."
 
-#. i18n: file: walletcontrolwidget.ui:76
-#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
-#: rc.cpp:12
-#, fuzzy
-msgid "Contents"
-msgstr "内容を隠す(&C)"
-
-#. i18n: file: walletcontrolwidget.ui:115
-#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
-#: rc.cpp:15
-msgid "Applications"
-msgstr ""
-
-#. i18n: file: kbetterthankdialogbase.ui:43
-#. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
-#: rc.cpp:18
-msgid "&Replace"
-msgstr "置換(&R)"
-
-#. i18n: file: kbetterthankdialogbase.ui:53
-#. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
-#: rc.cpp:21
-msgid "Replace &All"
-msgstr "すべて置換(&A)"
-
-#. i18n: file: kbetterthankdialogbase.ui:60
-#. i18n: ectx: property (text), widget (QPushButton, _deny)
-#: rc.cpp:24
-msgid "&Skip"
-msgstr "スキップ(&S)"
-
-#. i18n: file: kbetterthankdialogbase.ui:67
-#. i18n: ectx: property (text), widget (QPushButton, _denyForever)
-#: rc.cpp:27
-msgid "Skip A&ll"
-msgstr "すべてスキップ(&L)"
-
-#. i18n: file: walletwidget.ui:142
-#. i18n: ectx: property (text), widget (QToolButton, _hideContents)
-#: rc.cpp:30
-msgid "Hide &Contents"
-msgstr "内容を隠す(&C)"
-
-#. i18n: file: walletwidget.ui:218
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:33
-#, fuzzy
-msgid ""
-"This is a binary data entry.  It cannot be edited as its format is unknown "
-"and application specific."
-msgstr ""
-"これはバイナリデータのエントリです。フォーマットが不明で特定のアプリケーショ"
-"ンのものなので編集できません。"
-
-#. i18n: file: walletwidget.ui:268
-#. i18n: ectx: property (text), widget (QToolButton, _showContents)
-#: rc.cpp:36
-msgid "Show &Contents"
-msgstr "内容を表示(&C)"
-
-#. i18n: file: walletwidget.ui:331
-#. i18n: ectx: property (text), widget (KPushButton, _undoChanges)
-#: rc.cpp:39
-msgid "&Undo"
-msgstr "元に戻す(&U)"
-
-#. i18n: file: walletwidget.ui:341
-#. i18n: ectx: property (text), widget (KPushButton, _saveChanges)
-#: rc.cpp:42
-msgid "&Save"
-msgstr "保存(&S)"
-
-#. i18n: file: kwalletmanager.rc:4
-#. i18n: ectx: Menu (file)
-#: rc.cpp:45
-msgid "&File"
-msgstr "ファイル(&F)"
-
-#. i18n: file: kwalletmanager.rc:17
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:48
-msgid "&Settings"
-msgstr "設定(&S)"
-
-#. i18n: file: kwalletmanager.rc:20
-#. i18n: ectx: Menu (help)
-#: rc.cpp:51
-msgid "&Help"
-msgstr "ヘルプ(&H)"
-
-#. i18n: file: applicationsmanager.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:54
-msgid "These applications are currently connected to this wallet:"
-msgstr ""
-
-#. i18n: file: applicationsmanager.ui:64
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:57
-msgid "These applications are authorized to access this wallet:"
-msgstr ""
-
-#: revokeauthbutton.cpp:29
-msgid "Revoke Authorization"
-msgstr ""
+#: kwalletpopup.cpp:65
+msgid "Disconnec&t"
+msgstr "接続切断(&T)"
 
 #: allyourbase.cpp:217
 msgid "An entry by the name '%1' already exists. Would you like to continue?"
@@ -559,10 +429,140 @@ msgstr ""
 "元のフォルダを削除しようとしたときに予期しないエラーが発生しましたが、フォル"
 "ダのコピーには成功しました。"
 
-#: kwalletpopup.cpp:50
-msgid "Change &Password..."
+#: walletcontrolwidget.cpp:74
+msgid "&Close"
+msgstr ""
+
+#: walletcontrolwidget.cpp:91
+#, fuzzy
+msgctxt ""
+"the 'kdewallet' is currently open (e.g. %1 will be replaced with current "
+"wallet name)"
+msgid "The '%1' wallet is currently open"
+msgstr "一つのウォレットが開いています。"
+
+#: walletcontrolwidget.cpp:106
+msgid "The wallet is currently closed"
+msgstr ""
+
+#. i18n: file: applicationsmanager.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:3
+msgid "These applications are currently connected to this wallet:"
+msgstr ""
+
+#. i18n: file: applicationsmanager.ui:64
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:6
+msgid "These applications are authorized to access this wallet:"
+msgstr ""
+
+#. i18n: file: walletcontrolwidget.ui:28
+#. i18n: ectx: property (text), widget (KSqueezedTextLabel, _stateLabel)
+#: rc.cpp:9
+msgid "KSqueezedTextLabel"
+msgstr ""
+
+#. i18n: file: walletcontrolwidget.ui:35
+#. i18n: ectx: property (text), widget (QPushButton, _openClose)
+#: rc.cpp:12
+#, fuzzy
+msgid "Open..."
+msgstr "開く(&O)..."
+
+#. i18n: file: walletcontrolwidget.ui:58
+#. i18n: ectx: property (text), widget (QPushButton, _changePassword)
+#: rc.cpp:15
+#, fuzzy
+msgid "Change Password..."
 msgstr "パスワードを変更(&P)..."
 
-#: kwalletpopup.cpp:65
-msgid "Disconnec&t"
-msgstr "接続切断(&T)"
+#. i18n: file: walletcontrolwidget.ui:76
+#. i18n: ectx: attribute (title), widget (QWidget, _contentsTab)
+#: rc.cpp:18
+#, fuzzy
+msgid "Contents"
+msgstr "内容を隠す(&C)"
+
+#. i18n: file: walletcontrolwidget.ui:115
+#. i18n: ectx: attribute (title), widget (QWidget, _appsTab)
+#: rc.cpp:21
+msgid "Applications"
+msgstr ""
+
+#. i18n: file: kwalletmanager.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:24
+msgid "&File"
+msgstr "ファイル(&F)"
+
+#. i18n: file: kwalletmanager.rc:17
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:27
+msgid "&Settings"
+msgstr "設定(&S)"
+
+#. i18n: file: kwalletmanager.rc:20
+#. i18n: ectx: Menu (help)
+#: rc.cpp:30
+msgid "&Help"
+msgstr "ヘルプ(&H)"
+
+#. i18n: file: walletwidget.ui:142
+#. i18n: ectx: property (text), widget (QToolButton, _hideContents)
+#: rc.cpp:33
+msgid "Hide &Contents"
+msgstr "内容を隠す(&C)"
+
+#. i18n: file: walletwidget.ui:218
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: rc.cpp:36
+#, fuzzy
+msgid ""
+"This is a binary data entry.  It cannot be edited as its format is unknown "
+"and application specific."
+msgstr ""
+"これはバイナリデータのエントリです。フォーマットが不明で特定のアプリケーショ"
+"ンのものなので編集できません。"
+
+#. i18n: file: walletwidget.ui:268
+#. i18n: ectx: property (text), widget (QToolButton, _showContents)
+#: rc.cpp:39
+msgid "Show &Contents"
+msgstr "内容を表示(&C)"
+
+#. i18n: file: walletwidget.ui:331
+#. i18n: ectx: property (text), widget (KPushButton, _undoChanges)
+#: rc.cpp:42
+msgid "&Undo"
+msgstr "元に戻す(&U)"
+
+#. i18n: file: walletwidget.ui:341
+#. i18n: ectx: property (text), widget (KPushButton, _saveChanges)
+#: rc.cpp:45
+msgid "&Save"
+msgstr "保存(&S)"
+
+#. i18n: file: kbetterthankdialogbase.ui:43
+#. i18n: ectx: property (text), widget (QPushButton, _allowOnce)
+#: rc.cpp:48
+msgid "&Replace"
+msgstr "置換(&R)"
+
+#. i18n: file: kbetterthankdialogbase.ui:53
+#. i18n: ectx: property (text), widget (QPushButton, _allowAlways)
+#: rc.cpp:51
+msgid "Replace &All"
+msgstr "すべて置換(&A)"
+
+#. i18n: file: kbetterthankdialogbase.ui:60
+#. i18n: ectx: property (text), widget (QPushButton, _deny)
+#: rc.cpp:54
+msgid "&Skip"
+msgstr "スキップ(&S)"
+
+#. i18n: file: kbetterthankdialogbase.ui:67
+#. i18n: ectx: property (text), widget (QPushButton, _denyForever)
+#: rc.cpp:57
+msgid "Skip A&ll"
+msgstr "すべてスキップ(&L)"

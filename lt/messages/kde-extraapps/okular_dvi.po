@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okular_dvi\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2014-12-09 18:22+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2012-10-28 17:44+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -18,6 +18,97 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Lokalize 1.5\n"
+
+#: TeXFontDefinition.cpp:107
+msgid "Cannot find font %1, file %2."
+msgstr "Nepavyksta rasto šrifto %1, failas %2."
+
+#: TeXFontDefinition.cpp:123
+msgid "Checksum mismatch for font file %1"
+msgstr ""
+
+#: TeXFontDefinition.cpp:171
+msgid "Cannot recognize format for font file %1"
+msgstr "Nepavyksta atpažinti šriftų failo %1 formato"
+
+#: dviRenderer_prescan.cpp:86
+msgid "Embedding %1"
+msgstr ""
+
+#: dviRenderer_prescan.cpp:101
+msgid ""
+"Page %1: The PDF file <strong>%2</strong> could not be converted to "
+"PostScript.<br>"
+msgstr ""
+
+#: dviRenderer_prescan.cpp:103
+msgid ""
+"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
+msgstr ""
+
+#: dviRenderer_prescan.cpp:252
+msgid "The papersize data '%1' could not be parsed."
+msgstr ""
+
+#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
+msgid "The DVI code referred to font #%1, which was not previously defined."
+msgstr ""
+
+#: fontpool.cpp:209
+msgid ""
+"<qt><p>Okular was not able to locate all the font files which are necessary "
+"to display the current DVI file. Your document might be unreadable.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+
+#: fontpool.cpp:280
+msgid ""
+"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
+"font files could not be located, and your document might be unreadable.<br/"
+">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
+"your system, or it cannot be found in the current search path.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+
+#: fontpool.cpp:299
+msgid ""
+"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
+"error %2). As a result, some font files could not be located, and your "
+"document might be unreadable.</qt>"
+msgstr ""
+
+#: fontpool.cpp:477
+#, fuzzy
+msgid "Currently generating %1 at %2 dpi..."
+msgstr "Dabar generuojama %1 – %2 dpi"
+
+#: TeXFont_PK.cpp:90
+msgid "Cannot open font file %1."
+msgstr "Nepavyksta atverti šriftų failo %1."
+
+#: TeXFont_PK.cpp:139
+msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
+msgstr ""
+
+#: TeXFont_PK.cpp:455
+msgid "Unexpected %1 in PK file %2"
+msgstr ""
+
+#: TeXFont_PK.cpp:522
+msgid "The character %1 is too large in file %2"
+msgstr ""
+
+#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
+msgid "Wrong number of bits stored:  char. %1, font %2"
+msgstr ""
+
+#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
+msgid "Bad pk file (%1), too many bits"
+msgstr ""
+
+#: TeXFont_PK.cpp:742
+msgid "Font has non-square aspect ratio "
+msgstr ""
 
 #: psgs.cpp:263
 msgid ""
@@ -44,6 +135,42 @@ msgid ""
 "in Ghostview. Among others, Okular can use the 'png256', 'jpeg' and 'pnm' "
 "drivers. Note that Okular needs to be restarted to re-enable PostScript "
 "support.</p></qt>"
+msgstr ""
+
+#: pageSize.cpp:324
+msgid "portrait"
+msgstr "Stačias"
+
+#: pageSize.cpp:326
+msgid "landscape"
+msgstr "Gulsčias"
+
+#: dviRenderer_draw.cpp:261
+msgid "The DVI code set a character of an unknown font."
+msgstr ""
+
+#: dviRenderer_draw.cpp:375
+msgid "The stack was not empty when the EOP command was encountered."
+msgstr ""
+
+#: dviRenderer_draw.cpp:387
+msgid "The stack was empty when a POP command was encountered."
+msgstr ""
+
+#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
+msgid "The DVI code referred to a font which was not previously defined."
+msgstr ""
+
+#: dviRenderer_draw.cpp:570
+msgid "An illegal command was encountered."
+msgstr "Sutikta netinkama komanda."
+
+#: dviRenderer_draw.cpp:575
+msgid "The unknown op-code %1 was encountered."
+msgstr ""
+
+#: vf.cpp:182
+msgid "Wrong command byte found in VF macro list: %1"
 msgstr ""
 
 #: dviFile.cpp:111
@@ -98,115 +225,6 @@ msgid ""
 "p><p><strong>%2</strong></p></qt>"
 msgstr ""
 
-#: special.cpp:37
-msgid "That makes 25 errors. Further error messages will not be printed."
-msgstr ""
-
-#: special.cpp:218
-msgid ""
-"Error in DVIfile '%1', page %2. Color pop command issued when the color "
-"stack is empty."
-msgstr ""
-
-#: special.cpp:303
-msgid ""
-"Malformed parameter in the epsf special command.\n"
-"Expected a float to follow %1 in %2"
-msgstr ""
-
-#: special.cpp:434
-msgid ""
-"File not found: \n"
-" %1"
-msgstr ""
-"Failas nerastas: \n"
-" %1"
-
-#: special.cpp:681
-msgid ""
-"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
-"special."
-msgstr ""
-
-#: special.cpp:704
-msgid "The special command '%1' is not implemented."
-msgstr ""
-
-#: util.cpp:77
-msgid ""
-"Fatal error.\n"
-"\n"
-msgstr ""
-"Kritinė klaida.\n"
-"\n"
-
-#: util.cpp:79
-msgid ""
-"\n"
-"\n"
-"This probably means that either you found a bug in Okular,\n"
-"or that the DVI file, or auxiliary files (such as font files, \n"
-"or virtual font files) were really badly broken.\n"
-"Okular will abort after this message. If you believe that you \n"
-"found a bug, or that Okular should behave better in this situation\n"
-"please report the problem."
-msgstr ""
-
-#: dviRenderer_prescan.cpp:86
-msgid "Embedding %1"
-msgstr ""
-
-#: dviRenderer_prescan.cpp:101
-msgid ""
-"Page %1: The PDF file <strong>%2</strong> could not be converted to "
-"PostScript.<br>"
-msgstr ""
-
-#: dviRenderer_prescan.cpp:103
-msgid ""
-"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
-msgstr ""
-
-#: dviRenderer_prescan.cpp:252
-msgid "The papersize data '%1' could not be parsed."
-msgstr ""
-
-#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
-msgid "The DVI code referred to font #%1, which was not previously defined."
-msgstr ""
-
-#: dviRenderer.cpp:231 dviRenderer.cpp:468
-#, fuzzy
-msgid "File corruption. %1"
-msgstr ""
-"Failas nerastas: \n"
-" %1"
-
-#: dviRenderer.cpp:362
-msgid "Not all PostScript files could be embedded into your document. %1"
-msgstr ""
-
-#: dviRenderer.cpp:365
-msgid "All external PostScript files were embedded into your document."
-msgstr ""
-
-#: dviRenderer.cpp:453
-msgid "The specified file '%1' does not exist."
-msgstr ""
-
-#: dviRenderer.cpp:612
-msgid ""
-"You have asked Okular to locate the place in the DVI file which corresponds "
-"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
-"contain the necessary source file information. "
-msgstr ""
-
-#: dviRenderer.cpp:652
-msgid ""
-"Okular was not able to locate the place in the DVI file which corresponds to "
-"line %1 in the TeX-file %2."
-msgstr ""
-
 #: TeXFont_PFB.cpp:42
 msgid ""
 "The font file %1 could be opened and read, but its font format is "
@@ -243,72 +261,56 @@ msgstr ""
 msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
 msgstr ""
 
-#: TeXFontDefinition.cpp:107
-msgid "Cannot find font %1, file %2."
-msgstr "Nepavyksta rasto šrifto %1, failas %2."
+#: dviRenderer.cpp:231 dviRenderer.cpp:468
+#, fuzzy
+msgid "File corruption. %1"
+msgstr ""
+"Failas nerastas: \n"
+" %1"
 
-#: TeXFontDefinition.cpp:123
-msgid "Checksum mismatch for font file %1"
+#: dviRenderer.cpp:362
+msgid "Not all PostScript files could be embedded into your document. %1"
 msgstr ""
 
-#: TeXFontDefinition.cpp:171
-msgid "Cannot recognize format for font file %1"
-msgstr "Nepavyksta atpažinti šriftų failo %1 formato"
-
-#: dviRenderer_draw.cpp:261
-msgid "The DVI code set a character of an unknown font."
+#: dviRenderer.cpp:365
+msgid "All external PostScript files were embedded into your document."
 msgstr ""
 
-#: dviRenderer_draw.cpp:375
-msgid "The stack was not empty when the EOP command was encountered."
+#: dviRenderer.cpp:453
+msgid "The specified file '%1' does not exist."
 msgstr ""
 
-#: dviRenderer_draw.cpp:387
-msgid "The stack was empty when a POP command was encountered."
+#: dviRenderer.cpp:612
+msgid ""
+"You have asked Okular to locate the place in the DVI file which corresponds "
+"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
+"contain the necessary source file information. "
 msgstr ""
 
-#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
-msgid "The DVI code referred to a font which was not previously defined."
+#: dviRenderer.cpp:652
+msgid ""
+"Okular was not able to locate the place in the DVI file which corresponds to "
+"line %1 in the TeX-file %2."
 msgstr ""
 
-#: dviRenderer_draw.cpp:570
-msgid "An illegal command was encountered."
-msgstr "Sutikta netinkama komanda."
-
-#: dviRenderer_draw.cpp:575
-msgid "The unknown op-code %1 was encountered."
+#: util.cpp:77
+msgid ""
+"Fatal error.\n"
+"\n"
 msgstr ""
+"Kritinė klaida.\n"
+"\n"
 
-#: vf.cpp:182
-msgid "Wrong command byte found in VF macro list: %1"
-msgstr ""
-
-#: TeXFont_PK.cpp:90
-msgid "Cannot open font file %1."
-msgstr "Nepavyksta atverti šriftų failo %1."
-
-#: TeXFont_PK.cpp:139
-msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
-msgstr ""
-
-#: TeXFont_PK.cpp:455
-msgid "Unexpected %1 in PK file %2"
-msgstr ""
-
-#: TeXFont_PK.cpp:522
-msgid "The character %1 is too large in file %2"
-msgstr ""
-
-#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
-msgid "Wrong number of bits stored:  char. %1, font %2"
-msgstr ""
-
-#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
-msgid "Bad pk file (%1), too many bits"
-msgstr ""
-
-#: TeXFont_PK.cpp:742
-msgid "Font has non-square aspect ratio "
+#: util.cpp:79
+msgid ""
+"\n"
+"\n"
+"This probably means that either you found a bug in Okular,\n"
+"or that the DVI file, or auxiliary files (such as font files, \n"
+"or virtual font files) were really badly broken.\n"
+"Okular will abort after this message. If you believe that you \n"
+"found a bug, or that Okular should behave better in this situation\n"
+"please report the problem."
 msgstr ""
 
 #: generator_dvi.cpp:54
@@ -330,34 +332,6 @@ msgstr "Generatorius/Data"
 #: generator_dvi.cpp:455
 msgid "Font file not found"
 msgstr "Šrifto failas nerastas"
-
-#: fontpool.cpp:209
-msgid ""
-"<qt><p>Okular was not able to locate all the font files which are necessary "
-"to display the current DVI file. Your document might be unreadable.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-
-#: fontpool.cpp:280
-msgid ""
-"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
-"font files could not be located, and your document might be unreadable.<br/"
-">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
-"your system, or it cannot be found in the current search path.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-
-#: fontpool.cpp:299
-msgid ""
-"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
-"error %2). As a result, some font files could not be located, and your "
-"document might be unreadable.</qt>"
-msgstr ""
-
-#: fontpool.cpp:477
-#, fuzzy
-msgid "Currently generating %1 at %2 dpi..."
-msgstr "Dabar generuojama %1 – %2 dpi"
 
 #: dviexport.cpp:129
 msgid ""
@@ -404,10 +378,36 @@ msgid ""
 "report.</qt>"
 msgstr ""
 
-#: pageSize.cpp:324
-msgid "portrait"
-msgstr "Stačias"
+#: special.cpp:37
+msgid "That makes 25 errors. Further error messages will not be printed."
+msgstr ""
 
-#: pageSize.cpp:326
-msgid "landscape"
-msgstr "Gulsčias"
+#: special.cpp:218
+msgid ""
+"Error in DVIfile '%1', page %2. Color pop command issued when the color "
+"stack is empty."
+msgstr ""
+
+#: special.cpp:303
+msgid ""
+"Malformed parameter in the epsf special command.\n"
+"Expected a float to follow %1 in %2"
+msgstr ""
+
+#: special.cpp:434
+msgid ""
+"File not found: \n"
+" %1"
+msgstr ""
+"Failas nerastas: \n"
+" %1"
+
+#: special.cpp:681
+msgid ""
+"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
+"special."
+msgstr ""
+
+#: special.cpp:704
+msgid "The special command '%1' is not implemented."
+msgstr ""

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-01-31 01:09+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2012-01-18 11:58+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -25,74 +25,36 @@ msgstr ""
 "X-Generator: Lokalize 0.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: examples/ktcli/main.cpp:60
-msgid "Torrent to open"
-msgstr "Torrent na otvorenie"
+#: src/torrent/torrentcontrol.cpp:300
+msgid "Error writing to disk, do you have enough diskspace?"
+msgstr "Chyba zápisu na disk. Máte dostatok miesta?"
 
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-msgid "Port to use"
-msgstr "Port pre použitie"
+#: src/torrent/torrentcontrol.cpp:546
+msgid ""
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
+msgstr ""
+"Pri načítaní torrentu <b>%1</b> došlo k chybe:<br/><b>%2</b><br/>Torrent je "
+"pravdepodobne poškodený alebo to nie je platný torrent."
 
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr "Či povoliť alebo nepovoliť šifrovanie"
+#: src/torrent/torrentcontrol.cpp:576
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
+msgstr "Nastala chyba počas čítania <b>%1</b>:<br/><b>%2</b>"
 
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr "Či povoliť alebo nepovoliť výmenu peerov"
+#: src/torrent/torrentcontrol.cpp:587
+msgid "Unable to create %1: %2"
+msgstr "Nie je možné vytvoriť %1: %2"
 
-#: examples/ktcli/main.cpp:65
-msgid "Whether or not to use utp"
-msgstr "Či povoliť alebo nepovoliť použitie utp"
+#: src/torrent/torrentcontrol.cpp:602
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+"Torrent <b>%1</b> už sťahujete. Zoznam trackerov oboch torrentov bol zlúčený."
 
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
-msgstr "ktcli"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Presmerovať bez umiestnenia presmerovania"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "Neplatná odpoveď od trackeru"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "Neplatné dáta z trackeru"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "Neplatné URL trackeru"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "Vypršal časový limit pri kontaktovaní trackera %1"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "Nie je možné rozpoznať meno hostiteľa %1"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr "Čakanie na ukončenie ostatných kontrol dát"
-
-#: src/datachecker/datacheckerjob.cpp:88 src/torrent/torrentstats.cpp:93
-msgid "Checking data"
-msgstr "Kontrolujem dáta"
-
-#: src/datachecker/datacheckerjob.cpp:141
-msgid "Checking Data"
-msgstr "Kontrola dát"
-
-#: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/torrent/torrentcreator.cpp:124
-#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#: src/diskio/multifilecache.cpp:706 src/diskio/multifilecache.cpp:745
-msgid "Cannot open file %1: %2"
-msgstr "Nie je možné otvoriť súbor %1: %2"
+#: src/torrent/torrentcontrol.cpp:607
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "Torrent <b>%1</b> už sťahujete."
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -139,6 +101,10 @@ msgstr "Zaradené na zdieľanie"
 msgid "Queued for downloading"
 msgstr "Zaradené na sťahovanie"
 
+#: src/torrent/torrentstats.cpp:93 src/datachecker/datacheckerjob.cpp:88
+msgid "Checking data"
+msgstr "Kontrolujem dáta"
+
 #: src/torrent/torrentstats.cpp:95
 msgid "Stopped. No space left on device."
 msgstr "Zastavené. Nie je miesto na disku."
@@ -151,37 +117,6 @@ msgstr "Pozastavené"
 msgid "Superseeding"
 msgstr "Zdieľam"
 
-#: src/torrent/torrentcontrol.cpp:300
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr "Chyba zápisu na disk. Máte dostatok miesta?"
-
-#: src/torrent/torrentcontrol.cpp:546
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"Pri načítaní torrentu <b>%1</b> došlo k chybe:<br/><b>%2</b><br/>Torrent je "
-"pravdepodobne poškodený alebo to nie je platný torrent."
-
-#: src/torrent/torrentcontrol.cpp:576
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr "Nastala chyba počas čítania <b>%1</b>:<br/><b>%2</b>"
-
-#: src/torrent/torrentcontrol.cpp:587
-msgid "Unable to create %1: %2"
-msgstr "Nie je možné vytvoriť %1: %2"
-
-#: src/torrent/torrentcontrol.cpp:602
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-"Torrent <b>%1</b> už sťahujete. Zoznam trackerov oboch torrentov bol zlúčený."
-
-#: src/torrent/torrentcontrol.cpp:607
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "Torrent <b>%1</b> už sťahujete."
-
 #: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
 #: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
 #: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
@@ -193,126 +128,23 @@ msgstr "Poškodený torrent."
 msgid "Unable to open torrent file %1: %2"
 msgstr "Nie je možné otvoriť súbor torrentu %1: %2"
 
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
+#: src/datachecker/multidatachecker.cpp:209
+msgid "Cannot open file %1: %2"
+msgstr "Nie je možné otvoriť súbor %1: %2"
+
 #: src/torrent/torrentcreator.cpp:361
 msgid "Cannot create index file: %1"
 msgstr "Nie je možné vytvoriť indexový súbor: %1"
 
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "Adresár %1 neexistuje"
-
-#: src/bcodec/bdecoder.cpp:71
-msgid "Illegal token: %1"
-msgstr "Neplatný token: %1"
-
-#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
-msgid "Decode error"
-msgstr "Chyba v dekódování"
-
-#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
-msgid "Unexpected end of input"
-msgstr "Neočakávaný koniec vstupu"
-
-#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
-msgid "Cannot convert %1 to an int"
-msgstr "Nie je možné previesť %1 na celé číslo"
-
-#: src/bcodec/bdecoder.cpp:260
-msgid "Torrent is incomplete."
-msgstr "Torrent nie je kompletný."
-
-#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
-msgid "Failed to open %1: %2"
-msgstr "Nepodarilo sa otvoriť: %1: %2"
-
-#: src/diskio/multifilecache.cpp:118 src/diskio/cache.cpp:170
-#: src/diskio/singlefilecache.cpp:85
-msgid "Failed to create %1: %2"
-msgstr "Nepodarilo sa vytvoriť: %1: %2"
-
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-msgid "Cannot open index file %1: %2"
-msgstr "Nie je možné otvoriť indexový súbor %1: %2"
-
-#: src/diskio/dndfile.cpp:89
-msgid "Cannot create file %1: %2"
-msgstr "Nie je možné vytvoriť súbor %1: %2"
-
-#: src/diskio/dndfile.cpp:137
-msgid "Failed to write first chunk to DND file: %1"
-msgstr "Zlyhalo zapisovanie prvého bloku do súboru DND: %1"
-
-#: src/diskio/dndfile.cpp:155
-msgid "Failed to write last chunk to DND file: %1"
-msgstr "Zlyhalo zapisovanie posledného bloku do súboru DND: %1"
-
-#: src/diskio/movedatafilesjob.cpp:140
-msgid "Waiting for other move jobs to finish"
-msgstr "Čakanie na ukončenie ostatných presunov"
-
-#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
-msgctxt "The source of a file operation"
-msgid "Source"
-msgstr "Zdroj"
-
-#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
-msgctxt "The destination of a file operation"
-msgid "Destination"
-msgstr "Cieľ"
-
-#: src/diskio/movedatafilesjob.cpp:180
-msgctxt "@title job"
-msgid "Moving"
-msgstr "Presúvanie"
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-msgid "Cannot open %1: %2"
-msgstr "Nie je možné otvoriť %1: %2"
-
-#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
-#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
-msgid "Cannot open %1 for writing: readonly filesystem"
-msgstr "Nie je možné otvoriť %1 na zápis: súborový systém iba na čítanie"
-
-#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
-msgid "Attempting to write beyond the maximum size of %1"
-msgstr "Pokus o zápis za maximálnu veľkosť %1"
-
-#: src/diskio/cachefile.cpp:257
-msgid ""
-"Cannot expand file %1: attempting to grow the file beyond the maximum size"
-msgstr ""
-"Nie je možné expandovať súbor %1: pokus o zväčšenie súboru za maximálnu "
-"veľkosť"
-
-#: src/diskio/cachefile.cpp:261
-msgid "Cannot expand file %1: %2"
-msgstr "Nie je možné rozšíriť súbor %1: %2"
-
-#: src/diskio/cachefile.cpp:380
-msgid "Error: Reading past the end of the file %1"
-msgstr "Chyba: Čítanie za koncom súboru %1"
-
-#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
-msgid "Failed to seek file %1: %2"
-msgstr "Nepodarilo sa hľadať v súbore %1: %2"
-
-#: src/diskio/cachefile.cpp:393
-msgid "Error reading from %1"
-msgstr "Chyba pri čítaní z %1"
-
-#: src/diskio/cachefile.cpp:436
-msgid "Failed to write to file %1: %2"
-msgstr "Nepodarilo sa zapísať do súboru %1: %2"
-
-#: src/diskio/cachefile.cpp:503
-msgid "Cannot preallocate diskspace: %1"
-msgstr "Nie je možné prealokovať diskový priestor: %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr "Nie je možné zapisovať do bloku namapovaného len na čítanie"
+#: src/download/chunkdownload.cpp:383
+msgid "1 peer"
+msgid_plural "%1 peers"
+msgstr[0] "1 peer"
+msgstr[1] "%1 peerovia"
+msgstr[2] "%1 peer"
 
 #: src/download/webseed.cpp:52 src/download/webseed.cpp:99
 #: src/download/httpconnection.cpp:44
@@ -326,13 +158,6 @@ msgstr "Spojenie zavreté"
 #: src/download/webseed.cpp:558
 msgid "Unused for %1 seconds (Too many connection failures)"
 msgstr "Nepoužité %1 sekúnd (priveľa zlyhaní pripojenia)"
-
-#: src/download/chunkdownload.cpp:383
-msgid "1 peer"
-msgid_plural "%1 peers"
-msgstr[0] "1 peer"
-msgstr[1] "%1 peerovia"
-msgstr[2] "%1 peer"
 
 #: src/download/httpconnection.cpp:115
 msgid "Resolving proxy %1:%2"
@@ -386,37 +211,118 @@ msgstr "Presmerované bez nového umiestnenia"
 msgid "Disabled because webseed does not match torrent"
 msgstr "Zakázané, pretože webový seed nesúhlasí s torrentom"
 
-#: src/upnp/upnprouter.cpp:167
-msgid "Failed to download %1: %2"
-msgstr "Zlyhalo stiahnutie %1: %2"
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+msgid "Cannot open index file %1: %2"
+msgstr "Nie je možné otvoriť indexový súbor %1: %2"
 
-#: src/upnp/upnprouter.cpp:178
-msgid "Error parsing router description."
-msgstr "Chyba pri analýze popisu routera."
+#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
+msgid "Failed to open %1: %2"
+msgstr "Nepodarilo sa otvoriť: %1: %2"
 
-#: src/upnp/upnprouter.cpp:216
+#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
+#: src/diskio/cache.cpp:170
+msgid "Failed to create %1: %2"
+msgstr "Nepodarilo sa vytvoriť: %1: %2"
+
+#: src/diskio/dndfile.cpp:89
+msgid "Cannot create file %1: %2"
+msgstr "Nie je možné vytvoriť súbor %1: %2"
+
+#: src/diskio/dndfile.cpp:137
+msgid "Failed to write first chunk to DND file: %1"
+msgstr "Zlyhalo zapisovanie prvého bloku do súboru DND: %1"
+
+#: src/diskio/dndfile.cpp:155
+msgid "Failed to write last chunk to DND file: %1"
+msgstr "Zlyhalo zapisovanie posledného bloku do súboru DND: %1"
+
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr "Nie je možné zapisovať do bloku namapovaného len na čítanie"
+
+#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
+#: src/util/fileops.cpp:406
+msgid "Cannot open %1: %2"
+msgstr "Nie je možné otvoriť %1: %2"
+
+#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
+#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
+msgid "Cannot open %1 for writing: readonly filesystem"
+msgstr "Nie je možné otvoriť %1 na zápis: súborový systém iba na čítanie"
+
+#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
+msgid "Attempting to write beyond the maximum size of %1"
+msgstr "Pokus o zápis za maximálnu veľkosť %1"
+
+#: src/diskio/cachefile.cpp:257
 msgid ""
-"Forwarding failed:\n"
-"Device does not have a WANIPConnection or WANPPPConnection."
+"Cannot expand file %1: attempting to grow the file beyond the maximum size"
 msgstr ""
-"Forwardovanie zlyhalo:\n"
-"Zariadenie nemá WANIPConnection alebo WANPPPConnection."
+"Nie je možné expandovať súbor %1: pokus o zväčšenie súboru za maximálnu "
+"veľkosť"
 
-#: src/upnp/upnprouter.cpp:314
-msgid "Cannot find port forwarding service in the device's description."
-msgstr "Nie je možné nájsť forwardovaciu službu v popise zariadenia."
+#: src/diskio/cachefile.cpp:261
+msgid "Cannot expand file %1: %2"
+msgstr "Nie je možné rozšíriť súbor %1: %2"
 
-#: src/upnp/httprequest.cpp:96
-msgid "Connection closed unexpectedly"
-msgstr "Spojenie nečakane zatvorené"
+#: src/diskio/cachefile.cpp:380
+msgid "Error: Reading past the end of the file %1"
+msgstr "Chyba: Čítanie za koncom súboru %1"
 
-#: src/upnp/httprequest.cpp:155
-msgid "Operation timed out"
-msgstr "Vypršal čas operácie"
+#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
+msgid "Failed to seek file %1: %2"
+msgstr "Nepodarilo sa hľadať v súbore %1: %2"
 
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Neznámy klient"
+#: src/diskio/cachefile.cpp:393
+msgid "Error reading from %1"
+msgstr "Chyba pri čítaní z %1"
+
+#: src/diskio/cachefile.cpp:436
+msgid "Failed to write to file %1: %2"
+msgstr "Nepodarilo sa zapísať do súboru %1: %2"
+
+#: src/diskio/cachefile.cpp:503
+msgid "Cannot preallocate diskspace: %1"
+msgstr "Nie je možné prealokovať diskový priestor: %1"
+
+#: src/diskio/movedatafilesjob.cpp:140
+msgid "Waiting for other move jobs to finish"
+msgstr "Čakanie na ukončenie ostatných presunov"
+
+#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
+msgctxt "The source of a file operation"
+msgid "Source"
+msgstr "Zdroj"
+
+#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
+msgctxt "The destination of a file operation"
+msgid "Destination"
+msgstr "Cieľ"
+
+#: src/diskio/movedatafilesjob.cpp:180
+msgctxt "@title job"
+msgid "Moving"
+msgstr "Presúvanie"
+
+#: src/bcodec/bdecoder.cpp:71
+msgid "Illegal token: %1"
+msgstr "Neplatný token: %1"
+
+#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
+msgid "Decode error"
+msgstr "Chyba v dekódování"
+
+#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
+msgid "Unexpected end of input"
+msgstr "Neočakávaný koniec vstupu"
+
+#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
+msgid "Cannot convert %1 to an int"
+msgstr "Nie je možné previesť %1 na celé číslo"
+
+#: src/bcodec/bdecoder.cpp:260
+msgid "Torrent is incomplete."
+msgstr "Torrent nie je kompletný."
 
 #: src/interfaces/trackerinterface.cpp:58
 msgid "OK"
@@ -429,6 +335,10 @@ msgstr "Upozornenie: %1"
 #: src/interfaces/trackerinterface.cpp:59
 msgid "Announcing"
 msgstr "Pripájam sa"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "Adresár %1 neexistuje"
 
 #: src/util/logsystemmanager.cpp:33
 msgid "General"
@@ -453,25 +363,6 @@ msgstr "Diskové I/O"
 #: src/util/logsystemmanager.cpp:38
 msgid "µTP"
 msgstr "µTP"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "Chyba zapisovania na disk"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "Chyba čítania z disku"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 deň "
-msgstr[1] "%1 dní "
-msgstr[2] "%1 "
 
 #: src/util/fileops.cpp:101
 msgid "Cannot create directory %1"
@@ -514,6 +405,25 @@ msgstr "Nie je možné rozšířiť súbor : %1"
 msgid "Cannot seek in file: %1"
 msgstr "Nie je možné hľadať v súbore: %1"
 
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "Chyba zapisovania na disk"
+
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "Chyba čítania z disku"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 deň "
+msgstr[1] "%1 dní "
+msgstr[2] "%1 "
+
 #: src/util/file.cpp:84
 msgid "Cannot write to %1: %2"
 msgstr "Nie je možné zapísať do %1: %2"
@@ -521,3 +431,93 @@ msgstr "Nie je možné zapísať do %1: %2"
 #: src/util/file.cpp:98
 msgid "Cannot read from %1"
 msgstr "Nie je možné čítať z %1"
+
+#: src/upnp/upnprouter.cpp:167
+msgid "Failed to download %1: %2"
+msgstr "Zlyhalo stiahnutie %1: %2"
+
+#: src/upnp/upnprouter.cpp:178
+msgid "Error parsing router description."
+msgstr "Chyba pri analýze popisu routera."
+
+#: src/upnp/upnprouter.cpp:216
+msgid ""
+"Forwarding failed:\n"
+"Device does not have a WANIPConnection or WANPPPConnection."
+msgstr ""
+"Forwardovanie zlyhalo:\n"
+"Zariadenie nemá WANIPConnection alebo WANPPPConnection."
+
+#: src/upnp/upnprouter.cpp:314
+msgid "Cannot find port forwarding service in the device's description."
+msgstr "Nie je možné nájsť forwardovaciu službu v popise zariadenia."
+
+#: src/upnp/httprequest.cpp:96
+msgid "Connection closed unexpectedly"
+msgstr "Spojenie nečakane zatvorené"
+
+#: src/upnp/httprequest.cpp:155
+msgid "Operation timed out"
+msgstr "Vypršal čas operácie"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Neznámy klient"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr "Čakanie na ukončenie ostatných kontrol dát"
+
+#: src/datachecker/datacheckerjob.cpp:141
+msgid "Checking Data"
+msgstr "Kontrola dát"
+
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "Neplatná odpoveď od trackeru"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "Neplatné dáta z trackeru"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "Neplatné URL trackeru"
+
+#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
+#: src/tracker/udptracker.cpp:374
+msgid "Timeout contacting tracker %1"
+msgstr "Vypršal časový limit pri kontaktovaní trackera %1"
+
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Presmerovať bez umiestnenia presmerovania"
+
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "Nie je možné rozpoznať meno hostiteľa %1"
+
+#: examples/ktcli/main.cpp:60
+msgid "Torrent to open"
+msgstr "Torrent na otvorenie"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+msgid "Port to use"
+msgstr "Port pre použitie"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr "Či povoliť alebo nepovoliť šifrovanie"
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr "Či povoliť alebo nepovoliť výmenu peerov"
+
+#: examples/ktcli/main.cpp:65
+msgid "Whether or not to use utp"
+msgstr "Či povoliť alebo nepovoliť použitie utp"
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr "ktcli"

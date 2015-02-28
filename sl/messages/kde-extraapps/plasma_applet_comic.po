@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_comic\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-01-31 01:09+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2013-11-26 18:00+0100\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -21,6 +21,40 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+
+#: comicarchivedialog.cpp:32
+msgid "Create %1 Comic Book Archive"
+msgstr "Ustvari arhiv stripa %1"
+
+#: comicarchivejob.cpp:144
+msgid "No zip file is existing, aborting."
+msgstr "Datoteka zip ne obstaja, preklicujem."
+
+#: comicarchivejob.cpp:171
+msgid "An error happened for identifier %1."
+msgstr "Za določilnik %1 je prišlo do napake."
+
+#: comicarchivejob.cpp:244
+msgid "Failed creating the file with identifier %1."
+msgstr "Ustvarjanje datoteke z določilnikom %1 ni uspelo."
+
+#: comicarchivejob.cpp:346
+msgid "Creating Comic Book Archive"
+msgstr "Ustvarjanje arhiva stripov"
+
+#: comicarchivejob.cpp:374
+msgid "Failed adding a file to the archive."
+msgstr "Dodajanje datoteke v arhiv ni uspelo."
+
+#: comicarchivejob.cpp:391
+msgid "Could not create the archive at the specified location."
+msgstr "Arhiva na navedenem mestu ni bilo mogoče ustvariti."
+
+#. i18n: file: comicSettings.ui:32
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: comicarchivejob.cpp:402 comicsaver.cpp:88 rc.cpp:87
+msgid "Comic"
+msgstr "Strip"
 
 #: comic.cpp:126
 msgctxt "here strip means comic strip"
@@ -76,40 +110,6 @@ msgstr "Napredno"
 #: comic.cpp:531
 msgid "Archiving comic failed"
 msgstr "Arhiviranje stripa ni uspelo"
-
-#: comicarchivedialog.cpp:32
-msgid "Create %1 Comic Book Archive"
-msgstr "Ustvari arhiv stripa %1"
-
-#: comicarchivejob.cpp:144
-msgid "No zip file is existing, aborting."
-msgstr "Datoteka zip ne obstaja, preklicujem."
-
-#: comicarchivejob.cpp:171
-msgid "An error happened for identifier %1."
-msgstr "Za določilnik %1 je prišlo do napake."
-
-#: comicarchivejob.cpp:244
-msgid "Failed creating the file with identifier %1."
-msgstr "Ustvarjanje datoteke z določilnikom %1 ni uspelo."
-
-#: comicarchivejob.cpp:346
-msgid "Creating Comic Book Archive"
-msgstr "Ustvarjanje arhiva stripov"
-
-#: comicarchivejob.cpp:374
-msgid "Failed adding a file to the archive."
-msgstr "Dodajanje datoteke v arhiv ni uspelo."
-
-#: comicarchivejob.cpp:391
-msgid "Could not create the archive at the specified location."
-msgstr "Arhiva na navedenem mestu ni bilo mogoče ustvariti."
-
-#. i18n: file: comicSettings.ui:32
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: comicarchivejob.cpp:402 comicsaver.cpp:88 rc.cpp:39
-msgid "Comic"
-msgstr "Strip"
 
 #: comicdata.cpp:112
 msgctxt "an abbreviation for Number"
@@ -215,115 +215,51 @@ msgstr "Pokaži &avtorja stripa:"
 msgid "Show comic &URL:"
 msgstr "Pokaži &URL stripa:"
 
-#. i18n: file: comicSettings.ui:97
-#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton_GHNS)
-#: rc.cpp:42
-msgid "Download new comics"
-msgstr "Prejmi nove stripe"
-
-#. i18n: file: comicSettings.ui:100
-#. i18n: ectx: property (text), widget (QPushButton, pushButton_GHNS)
-#: rc.cpp:45
-msgid "&Get New Comics..."
-msgstr "&Dobi nove stripe ..."
-
-#. i18n: file: comicSettings.ui:128
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_middle)
-#: rc.cpp:48
-msgid "&Middle-click on the comic to show it at its original size"
-msgstr "&Srednji klik na strip ga v njegovi izvirni velikosti"
-
-#. i18n: file: comicSettings.ui:144
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:51
-msgid "Update"
-msgstr "Posodobi"
-
-#. i18n: file: comicSettings.ui:156
-#. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:54
-msgid "Automatically update comic plugins:"
-msgstr "Samodejno posodobi vstave vstavke s stripi:"
-
-#. i18n: file: comicSettings.ui:172
-#. i18n: ectx: property (suffix), widget (QSpinBox, updateIntervall)
-#: rc.cpp:57
-msgid " days"
-msgstr " dni"
-
-#. i18n: file: comicSettings.ui:175
-#. i18n: ectx: property (prefix), widget (QSpinBox, updateIntervall)
-#. i18n: file: comicSettings.ui:204
-#. i18n: ectx: property (prefix), widget (QSpinBox, updateIntervallComicStrips)
-#: rc.cpp:60 rc.cpp:72
-msgid "every "
-msgstr "vsakih "
-
-#. i18n: file: comicSettings.ui:178
-#. i18n: ectx: property (specialValueText), widget (QSpinBox, updateIntervall)
-#. i18n: file: comicSettings.ui:207
-#. i18n: ectx: property (specialValueText), widget (QSpinBox, updateIntervallComicStrips)
-#: rc.cpp:63 rc.cpp:75
-msgid "never"
-msgstr "nikoli"
-
-#. i18n: file: comicSettings.ui:185
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:66
-msgid "Check for new comic strips:"
-msgstr "Preveri za novimi slikami stripa:"
-
-#. i18n: file: comicSettings.ui:201
-#. i18n: ectx: property (suffix), widget (QSpinBox, updateIntervallComicStrips)
-#: rc.cpp:69
-msgid " minutes"
-msgstr " minut"
-
 #. i18n: file: comicarchivedialog.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:78
+#: rc.cpp:39
 msgid "Destination:"
 msgstr "Cilj:"
 
 #. i18n: file: comicarchivedialog.ui:30
 #. i18n: ectx: property (filter), widget (KUrlRequester, dest)
-#: rc.cpp:81
+#: rc.cpp:42
 msgid "*.cbz|Comic Book Archive (Zip)"
 msgstr "*.cbz|Arhiv stripov (Zip)"
 
 #. i18n: file: comicarchivedialog.ui:56
 #. i18n: ectx: property (statusTip), widget (QLabel, label)
-#: rc.cpp:84
+#: rc.cpp:45
 msgid "The range of comic strips to archive."
 msgstr "Obseg slik stripa, ki naj se arhivirajo."
 
 #. i18n: file: comicarchivedialog.ui:59
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:87
+#: rc.cpp:48
 msgid "Range:"
 msgstr "Obseg:"
 
 #. i18n: file: comicarchivedialog.ui:67
 #. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
-#: rc.cpp:90
+#: rc.cpp:51
 msgid "All"
 msgstr "Vse"
 
 #. i18n: file: comicarchivedialog.ui:72
 #. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
-#: rc.cpp:93
+#: rc.cpp:54
 msgid "From beginning to ..."
 msgstr "Od začetka do ..."
 
 #. i18n: file: comicarchivedialog.ui:77
 #. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
-#: rc.cpp:96
+#: rc.cpp:57
 msgid "From end to ..."
 msgstr "Od konca do ..."
 
 #. i18n: file: comicarchivedialog.ui:82
 #. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
-#: rc.cpp:99
+#: rc.cpp:60
 msgid "Manual range"
 msgstr "Ročni obseg"
 
@@ -333,7 +269,7 @@ msgstr "Ročni obseg"
 #. i18n: ectx: property (text), widget (QLabel, fromNumberLabel)
 #. i18n: file: comicarchivedialog.ui:176
 #. i18n: ectx: property (text), widget (QLabel, fromStringLabel)
-#: rc.cpp:102 rc.cpp:114 rc.cpp:120
+#: rc.cpp:63 rc.cpp:75 rc.cpp:81
 msgctxt "in a range: from to"
 msgid "From:"
 msgstr "Od:"
@@ -344,7 +280,7 @@ msgstr "Od:"
 #. i18n: ectx: property (text), widget (QLabel, toNumberLabel)
 #. i18n: file: comicarchivedialog.ui:183
 #. i18n: ectx: property (text), widget (QLabel, toStringLabel)
-#: rc.cpp:105 rc.cpp:117 rc.cpp:123
+#: rc.cpp:66 rc.cpp:78 rc.cpp:84
 msgctxt "in a range: from to"
 msgid "To:"
 msgstr "Do:"
@@ -353,9 +289,73 @@ msgstr "Do:"
 #. i18n: ectx: property (displayFormat), widget (QDateEdit, fromDate)
 #. i18n: file: comicarchivedialog.ui:124
 #. i18n: ectx: property (displayFormat), widget (QDateEdit, toDate)
-#: rc.cpp:108 rc.cpp:111
+#: rc.cpp:69 rc.cpp:72
 msgid "dd.MM.yyyy"
 msgstr "dd.MM.yyyy"
+
+#. i18n: file: comicSettings.ui:97
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton_GHNS)
+#: rc.cpp:90
+msgid "Download new comics"
+msgstr "Prejmi nove stripe"
+
+#. i18n: file: comicSettings.ui:100
+#. i18n: ectx: property (text), widget (QPushButton, pushButton_GHNS)
+#: rc.cpp:93
+msgid "&Get New Comics..."
+msgstr "&Dobi nove stripe ..."
+
+#. i18n: file: comicSettings.ui:128
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_middle)
+#: rc.cpp:96
+msgid "&Middle-click on the comic to show it at its original size"
+msgstr "&Srednji klik na strip ga v njegovi izvirni velikosti"
+
+#. i18n: file: comicSettings.ui:144
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: rc.cpp:99
+msgid "Update"
+msgstr "Posodobi"
+
+#. i18n: file: comicSettings.ui:156
+#. i18n: ectx: property (text), widget (QLabel, label_14)
+#: rc.cpp:102
+msgid "Automatically update comic plugins:"
+msgstr "Samodejno posodobi vstave vstavke s stripi:"
+
+#. i18n: file: comicSettings.ui:172
+#. i18n: ectx: property (suffix), widget (QSpinBox, updateIntervall)
+#: rc.cpp:105
+msgid " days"
+msgstr " dni"
+
+#. i18n: file: comicSettings.ui:175
+#. i18n: ectx: property (prefix), widget (QSpinBox, updateIntervall)
+#. i18n: file: comicSettings.ui:204
+#. i18n: ectx: property (prefix), widget (QSpinBox, updateIntervallComicStrips)
+#: rc.cpp:108 rc.cpp:120
+msgid "every "
+msgstr "vsakih "
+
+#. i18n: file: comicSettings.ui:178
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, updateIntervall)
+#. i18n: file: comicSettings.ui:207
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, updateIntervallComicStrips)
+#: rc.cpp:111 rc.cpp:123
+msgid "never"
+msgstr "nikoli"
+
+#. i18n: file: comicSettings.ui:185
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:114
+msgid "Check for new comic strips:"
+msgstr "Preveri za novimi slikami stripa:"
+
+#. i18n: file: comicSettings.ui:201
+#. i18n: ectx: property (suffix), widget (QSpinBox, updateIntervallComicStrips)
+#: rc.cpp:117
+msgid " minutes"
+msgstr " minut"
 
 #: stripselector.cpp:42 stripselector.cpp:113
 msgid "Go to Strip"

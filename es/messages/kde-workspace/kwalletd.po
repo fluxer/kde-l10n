@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletd\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-01-13 20:06+0000\n"
+"POT-Creation-Date: 2015-02-28 21:37+0000\n"
 "PO-Revision-Date: 2014-07-06 16:59+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -20,46 +20,139 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: knewwalletdialog.cpp:64
+#: backend/backendpersisthandler.cpp:487
 msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. This is used "
-"to store sensitive data in a secure fashion. Please choose the new wallet's "
-"type below or click cancel to deny the application's request.</qt>"
+"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
+"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
+"configuration, then try again!</qt>"
 msgstr ""
-"<qt>KDE ha solicitado crear una nueva cartera con el nombre «<b>%1</b>». "
-"Esto se usa para almacenar información importante de un modo seguro. Escoja "
-"el nuevo tipo de la cartera abajo, o pulse «Cancelar» si desea denegar la "
-"petición de la aplicación.</qt>"
+"<qt>Error al intentar inicializar OpenPGP mientras se procedía a guardar la "
+"cartera <b>%1</b>. El código de error es <b>%2</b>. Por favor, corrija la "
+"configuración del sistema y pruebe de nuevo.</qt>"
 
-#: knewwalletdialog.cpp:66
+#: backend/backendpersisthandler.cpp:495
 msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. This is used to store sensitive data in a secure fashion. "
-"Please choose the new wallet's type below or click cancel to deny the "
-"application's request.</qt>"
+"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
+"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
 msgstr ""
-"<qt>La aplicación «<b>%1</b>» ha solicitado crear una nueva cartera con el "
-"nombre «<b>%2</b>». Esto se usa para almacenar información importante de un "
-"modo seguro. Escoja el nuevo tipo de la cartera abajo, o pulse «Cancelar» si "
-"desea denegar la petición de la aplicación.</qt>"
+"<qt>Error al intentar inicializar OpenPGP mientras se procedía a guardar la "
+"cartera <b>%1</b>. Por favor, corrija la configuración del sistema y pruebe "
+"de nuevo.</qt>"
 
-#: knewwalletdialog.cpp:127 knewwalletdialog.cpp:133 kwalletwizard.cpp:161
-#: kwalletwizard.cpp:165
+#: backend/backendpersisthandler.cpp:546
 msgid ""
-"The QGpgME library failed to initialize for the OpenPGP protocol. Please "
-"check your system's configuration then try again."
+"<qt>Encryption error while attempting to save the wallet <b>%1</b>. Error "
+"code is <b>%2 (%3)</b>. Please fix your system configuration, then try again!"
+"</qt>"
 msgstr ""
-"Ha fallado la inicialización de la biblioteca QGpgME para el protocolo "
-"OpenPGP. Por favor, compruebe la configuración del sistema y vuelva a "
-"intentarlo."
+"<qt>Error de cifrado mientras se procedía a guardar la cartera <b>%1</b>. El "
+"código de error es <b>%2 (%3)</b>. Por favor, corrija la configuración del "
+"sistema y pruebe de nuevo.</qt>"
 
-#: knewwalletdialog.cpp:153
+#: backend/backendpersisthandler.cpp:558
 msgid ""
-"Seems that your system has no keys suitable for encryption. Please set-up at "
-"least an encryption key, then try again."
+"<qt>File handling error while attempting to save the wallet <b>%1</b>. Error "
+"was <b>%2</b>. Please fix your system configuration, then try again!</qt>"
 msgstr ""
-"Parece que su sistema no dispone de claves adecuadas para cifrar. Por favor, "
-"configure al menos una clave de cifrado y vuelva a intentarlo."
+"<qt>Error de manejo de archivos mientras se procedía a guardar la cartera <b>"
+"%1</b>. El error es <b>%2</b> Por favor, corrija la configuración del "
+"sistema y pruebe de nuevo.</qt>"
+
+#: backend/backendpersisthandler.cpp:571
+msgid ""
+"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
+"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
+"configuration, then try again!</qt>"
+msgstr ""
+"<qt>Error al intentar inicializar OpenPGP mientras se procedía a abrir la "
+"cartera <b>%1</b>. El código de error es <b>%2</b>. Por favor, corrija la "
+"configuración del sistema y pruebe de nuevo.</qt>"
+
+#: backend/backendpersisthandler.cpp:589
+msgid ""
+"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
+"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
+msgstr ""
+"<qt>Error al intentar inicializar OpenPGP mientras se procedía a abrir la "
+"cartera <b>%1</b>. Por favor, corrija la configuración del sistema y pruebe "
+"de nuevo.</qt>"
+
+#: backend/backendpersisthandler.cpp:599
+msgid "Retry"
+msgstr "Reintentar"
+
+#: backend/backendpersisthandler.cpp:601
+msgid ""
+"<qt>Error when attempting to decrypt the wallet <b>%1</b> using GPG. If "
+"you're using a SmartCard, please ensure it's inserted then try again."
+"<br><br>GPG error was <b>%2</b></qt>"
+msgstr ""
+"<qt>Error al intentar descifrar la cartera <b>%1</b> usando GPG. Si está "
+"usando una SmartCard, asegúrese de que está insertada y vuelva a intentarlo "
+"de nuevo.<br><br>El error GPG es <b>%2</b></qt>"
+
+#: backend/backendpersisthandler.cpp:602
+msgid "kwalletd GPG backend"
+msgstr "Motor GPG para kwalletd"
+
+#: backend/backendpersisthandler.cpp:646
+msgid ""
+"<qt>Error when attempting to open the wallet <b>%1</b>. The wallet was "
+"encrypted using the GPG Key ID <b>%2</b> but this key was not found on your "
+"system.</qt>"
+msgstr ""
+"<qt>Error al intentar abrir la cartera <b>%1</b>. La cartera estaba cifrada "
+"usando la ID de clave GPG <b>%2</b>, pero esta clave no se ha encontrado en "
+"el sistema.</qt>"
+
+#: backend/kwalletbackend.cc:236
+msgid "Already open."
+msgstr "Archivo ya abierto."
+
+#: backend/kwalletbackend.cc:238
+msgid "Error opening file."
+msgstr "Error al abrir archivo."
+
+#: backend/kwalletbackend.cc:240
+msgid "Not a wallet file."
+msgstr "No es un archivo de cartera."
+
+#: backend/kwalletbackend.cc:242
+msgid "Unsupported file format revision."
+msgstr "Revisión de formato de archivo no soportado."
+
+#: backend/kwalletbackend.cc:244
+msgid "Unknown encryption scheme."
+msgstr "Esquema de cifrado desconocido."
+
+#: backend/kwalletbackend.cc:246
+msgid "Corrupt file?"
+msgstr "¿Archivo dañado?"
+
+#: backend/kwalletbackend.cc:248
+msgid "Error validating wallet integrity. Possibly corrupted."
+msgstr ""
+"Error validando la integridad de la cartera. Es posible que esté dañada."
+
+#: backend/kwalletbackend.cc:252
+msgid "Read error - possibly incorrect password."
+msgstr "Error de lectura - posiblemente contraseña incorrecta."
+
+#: backend/kwalletbackend.cc:254
+msgid "Decryption error."
+msgstr "Descripción de descifrado."
+
+#: backend/kwalletbackend.cc:423
+msgid ""
+"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
+msgstr ""
+"Ha fallado la sincronización de la cartera <b>%1</b> con el disco. Los "
+"códigos de error son:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Por favor, envíe un informe de error usando esta información "
+"en bugs.kde.org"
 
 #: main.cpp:150 main.cpp:151 kwalletd.cpp:424 kwalletd.cpp:538
 #: kwalletd.cpp:627 kwalletd.cpp:726 kwalletd.cpp:828 kwalletd.cpp:847
@@ -104,6 +197,63 @@ msgstr "Valentin Rusu"
 #: main.cpp:156
 msgid "GPG backend support"
 msgstr "Implementación del motor GPG"
+
+#: kwalletwizard.cpp:53
+msgid "KWallet"
+msgstr "KWallet"
+
+#: kwalletwizard.cpp:161 kwalletwizard.cpp:165 knewwalletdialog.cpp:127
+#: knewwalletdialog.cpp:133
+msgid ""
+"The QGpgME library failed to initialize for the OpenPGP protocol. Please "
+"check your system's configuration then try again."
+msgstr ""
+"Ha fallado la inicialización de la biblioteca QGpgME para el protocolo "
+"OpenPGP. Por favor, compruebe la configuración del sistema y vuelva a "
+"intentarlo."
+
+#: kwalletwizard.cpp:277
+msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
+msgstr "<qt>La contraseña está vacía. <b>(Aviso: esto es inseguro)</b>.</qt>"
+
+#: kwalletwizard.cpp:279
+msgid "Passwords match."
+msgstr "Las contraseñas coinciden."
+
+#: kwalletwizard.cpp:282
+msgid "Passwords do not match."
+msgstr "Las contraseñas no coinciden."
+
+#: knewwalletdialog.cpp:64
+msgid ""
+"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. This is used "
+"to store sensitive data in a secure fashion. Please choose the new wallet's "
+"type below or click cancel to deny the application's request.</qt>"
+msgstr ""
+"<qt>KDE ha solicitado crear una nueva cartera con el nombre «<b>%1</b>». "
+"Esto se usa para almacenar información importante de un modo seguro. Escoja "
+"el nuevo tipo de la cartera abajo, o pulse «Cancelar» si desea denegar la "
+"petición de la aplicación.</qt>"
+
+#: knewwalletdialog.cpp:66
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
+"'<b>%2</b>'. This is used to store sensitive data in a secure fashion. "
+"Please choose the new wallet's type below or click cancel to deny the "
+"application's request.</qt>"
+msgstr ""
+"<qt>La aplicación «<b>%1</b>» ha solicitado crear una nueva cartera con el "
+"nombre «<b>%2</b>». Esto se usa para almacenar información importante de un "
+"modo seguro. Escoja el nuevo tipo de la cartera abajo, o pulse «Cancelar» si "
+"desea denegar la petición de la aplicación.</qt>"
+
+#: knewwalletdialog.cpp:153
+msgid ""
+"Seems that your system has no keys suitable for encryption. Please set-up at "
+"least an encryption key, then try again."
+msgstr ""
+"Parece que su sistema no dispone de claves adecuadas para cifrar. Por favor, "
+"configure al menos una clave de cifrado y vuelva a intentarlo."
 
 #: kwalletd.cpp:531
 msgid ""
@@ -257,165 +407,9 @@ msgstr ""
 "Se han producido diversos intentos fallidos de acceso a la cartera. Puede "
 "que haya una aplicación desbocada."
 
-#. i18n: file: kbetterthankdialogbase.ui:50
-#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
-#: rc.cpp:3
-msgid "Allow &Once"
-msgstr "Permitir una ve&z"
-
-#. i18n: file: kbetterthankdialogbase.ui:60
-#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
-#: rc.cpp:6
-msgid "Allow &Always"
-msgstr "Permitir sie&mpre"
-
-#. i18n: file: kbetterthankdialogbase.ui:67
-#. i18n: ectx: property (text), widget (KPushButton, _deny)
-#: rc.cpp:9
-msgid "&Deny"
-msgstr "&Denegar"
-
-#. i18n: file: kbetterthankdialogbase.ui:74
-#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
-#: rc.cpp:12
-msgid "Deny &Forever"
-msgstr "Denegar &siempre"
-
-#. i18n: file: kwalletwizardpageexplanation.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:15
-msgid ""
-"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
-"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
-"The data is only written in the encrypted form of your choice - blowfish "
-"algorithm with your password as the key or using a GPG encryption key. When "
-"a wallet is opened, the wallet manager application will launch and display "
-"an icon in the system tray. You can use this application to manage all of "
-"your wallets. It even permits you to drag wallets and wallet contents, "
-"allowing you to easily copy a wallet to a remote system.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>El sistema de carteras de KDE almacena sus datos en un "
-"archivo de <span style=\" font-style:italic;\">cartera</span> en su disco "
-"duro local. Los datos se cifran utilizando únicamente el modo que haya "
-"elegido (el algoritmo blowfish con su contraseña como clave, o usando una "
-"clave de cifrado GPG). Cuando se abre una cartera, se inicia la aplicación "
-"de gestión de carteras y se muestra un icono en la bandeja del sistema. "
-"Puede usar esta aplicación para gestionar todas sus carteras. También le "
-"permite arrastrar a ella carteras y su contenido, lo que le facilita copiar "
-"una cartera a un sistema remoto.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:18
-msgid ""
-"<html><head/><body><p>The GPG-based wallet use a GPG encryption key to "
-"securely encrypt data on disk. The key must be available when decrypting is "
-"needed or your wallet will not be accessible. For example, if you choose a "
-"SmartCard-based encryption key, the GPG system will prompt you to enter it "
-"and its associated PIN when attempting to open the wallet. <b>NOTE:</b> only "
-"\"ultimate-level\" trusted keys are shown in this list.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>La cartera basada en GPG usa una clave de cifrado GPG "
-"para cifrar los datos en el disco. Esta clave debe estar disponible cuando "
-"necesite descifrar; en caso contrario, no podrá acceder a la cartera. Por "
-"ejemplo, si escoge una clave de cifrado basada en SmartCard, el sistema GPG "
-"le pedirá que la introduzca, así como su PIN asociado, cuando intente abrir "
-"una cartera. <b>Nota:</b> en esta lista solo se muestran las claves de "
-"confianza «total».</p></body></html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:21
-msgid "Select encryption GPG key:"
-msgstr "Seleccione la clave de cifrado GPG:"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:78
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:24
-msgid ""
-"Unable to locate at least one <b>encrypting GPG key</b>. KDE Wallet needs "
-"such <b>encrypting key</b> to securely store passwords or other sensitive "
-"data on disk. If you still want to setup a GPG-based wallet, then cancel "
-"this wizard, set-up an <b>encrypting GPG key</b>, then retry this assistant. "
-"Otherwise, you may still click back, then choose a classic, blowfish "
-"encrypted file format on the previous page."
-msgstr ""
-"No ha sido posible localizar al menos una <b>clave de cifrado GPG</b>. La "
-"cartera de KDE necesita dicha <b>clave de cifrado</b> para guardar de forma "
-"segura contraseñas y otros datos sensibles en el disco. Si sigue queriendo "
-"configurar una cartera basada en GPG, cancele este asistente, prepare una "
-"<b>clave de cifrado GPG</b> y vuelva a lanzar este asistente. En caso "
-"contrario, todavía puede volver atrás y elegir en la página anterior un "
-"formato de archivo clásico que use el algoritmo de cifrado blowfish."
-
-#. i18n: file: kwalletwizardpageintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#. i18n: file: knewwalletdialogintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:27 rc.cpp:84
-msgid "The KDE Wallet System"
-msgstr "El sistema de cartera de KDE"
-
-#. i18n: file: kwalletwizardpageintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:30
-msgid ""
-"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
-"passwords and other personal information on disk in an encrypted file, "
-"preventing others from viewing the information.  This wizard will tell you "
-"about KWallet and help you configure it for the first time."
-msgstr ""
-"Bienvenido a KWallet, la cartera de KDE. KWallet le permite almacenar sus "
-"contraseñas y otra información personal en el disco en un archivo cifrado, "
-"impidiendo que otros vean la información. Este asistente le informará acerca "
-"de KWallet y le ayudará a configurarlo por primera vez."
-
-#. i18n: file: kwalletwizardpageintro.ui:69
-#. i18n: ectx: property (text), widget (QRadioButton, _basic)
-#: rc.cpp:33
-msgid "&Basic setup (recommended)"
-msgstr "Configuración &básica (recomendado)"
-
-#. i18n: file: kwalletwizardpageintro.ui:79
-#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
-#: rc.cpp:36
-msgid "&Advanced setup"
-msgstr "Configuración &avanzada"
-
-#. i18n: file: kwalletwizardpageoptions.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:39
-msgid ""
-"The KDE Wallet system allows you to control the level of security of your "
-"personal data.  Some of these settings do impact usability.  While the "
-"default settings are generally acceptable for most users, you may wish to "
-"change some of them.  You may further tune these settings from the KWallet "
-"control module."
-msgstr ""
-"La cartera de KDE le permite controlar el nivel de seguridad de sus datos. "
-"Algunas de estas opciones de configuración pueden tener impacto en la "
-"usabilidad. Las preferencias predeterminadas son, por lo general, aceptables "
-"para la mayor parte de los usuarios, aunque es posible que usted desee "
-"modificar algunas de ellas. Puede ajustar dichas preferencias desde el "
-"módulo de control de KWallet."
-
-#. i18n: file: kwalletwizardpageoptions.ui:48
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: rc.cpp:42
-msgid "Automatically close idle wallets"
-msgstr "Cerrar automáticamente carteras ociosas"
-
-#. i18n: file: kwalletwizardpageoptions.ui:55
-#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
-#: rc.cpp:45
-msgid "Store network passwords and local passwords in separate wallet files"
-msgstr ""
-"Almacenar contraseñas de red y contraseñas locales en archivos cartera "
-"separados"
-
 #. i18n: file: kwalletwizardpagepasswordgpg.ui:17
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:48
+#: rc.cpp:3
 msgid ""
 "<html><head/><body><p>Various applications may attempt to use the KDE wallet "
 "to store passwords or other information such as web form data and cookies. "
@@ -442,13 +436,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
 #. i18n: file: kwalletwizardpagepassword.ui:29
 #. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#: rc.cpp:51 rc.cpp:100
+#: rc.cpp:6 rc.cpp:66
 msgid "Yes, I wish to use the KDE wallet to store my personal information."
 msgstr "Sí, deseo usar la cartera KDE para almacenar mi información personal."
 
 #. i18n: file: kwalletwizardpagepasswordgpg.ui:46
 #. i18n: ectx: property (title), widget (QGroupBox, _groupBox)
-#: rc.cpp:54
+#: rc.cpp:9
 msgid "What kind of encryption do you wish?"
 msgstr "¿Qué tipo de cifrado desea usar?"
 
@@ -456,7 +450,7 @@ msgstr "¿Qué tipo de cifrado desea usar?"
 #. i18n: ectx: property (text), widget (QRadioButton, _radioGpg)
 #. i18n: file: knewwalletdialogintro.ui:73
 #. i18n: ectx: property (text), widget (QRadioButton, radioGpg)
-#: rc.cpp:57 rc.cpp:94
+#: rc.cpp:12 rc.cpp:85
 msgid "Use GPG encryption, for better protection"
 msgstr "Usar cifrado GPG, para una mejor protección"
 
@@ -464,7 +458,7 @@ msgstr "Usar cifrado GPG, para una mejor protección"
 #. i18n: ectx: property (text), widget (QRadioButton, _radioBlowfish)
 #. i18n: file: knewwalletdialogintro.ui:66
 #. i18n: ectx: property (text), widget (QRadioButton, radioBlowfish)
-#: rc.cpp:60 rc.cpp:91
+#: rc.cpp:15 rc.cpp:82
 msgid "Classic, blowfish encrypted file"
 msgstr "Clásico, archivo cifrado con blowfish"
 
@@ -472,7 +466,7 @@ msgstr "Clásico, archivo cifrado con blowfish"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
 #. i18n: file: kwalletwizardpagepassword.ui:88
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:63 rc.cpp:103
+#: rc.cpp:18 rc.cpp:69
 msgid "Enter a new password:"
 msgstr "Introduzca una nueva contraseña:"
 
@@ -480,19 +474,73 @@ msgstr "Introduzca una nueva contraseña:"
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
 #. i18n: file: kwalletwizardpagepassword.ui:104
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:66 rc.cpp:106
+#: rc.cpp:21 rc.cpp:72
 msgid "Verify password:"
 msgstr "Verificar contraseña:"
 
+#. i18n: file: kwalletwizardpageoptions.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:24
+msgid ""
+"The KDE Wallet system allows you to control the level of security of your "
+"personal data.  Some of these settings do impact usability.  While the "
+"default settings are generally acceptable for most users, you may wish to "
+"change some of them.  You may further tune these settings from the KWallet "
+"control module."
+msgstr ""
+"La cartera de KDE le permite controlar el nivel de seguridad de sus datos. "
+"Algunas de estas opciones de configuración pueden tener impacto en la "
+"usabilidad. Las preferencias predeterminadas son, por lo general, aceptables "
+"para la mayor parte de los usuarios, aunque es posible que usted desee "
+"modificar algunas de ellas. Puede ajustar dichas preferencias desde el "
+"módulo de control de KWallet."
+
+#. i18n: file: kwalletwizardpageoptions.ui:48
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: rc.cpp:27
+msgid "Automatically close idle wallets"
+msgstr "Cerrar automáticamente carteras ociosas"
+
+#. i18n: file: kwalletwizardpageoptions.ui:55
+#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
+#: rc.cpp:30
+msgid "Store network passwords and local passwords in separate wallet files"
+msgstr ""
+"Almacenar contraseñas de red y contraseñas locales en archivos cartera "
+"separados"
+
+#. i18n: file: kwalletwizardpageexplanation.ui:17
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:33
+msgid ""
+"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
+"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
+"The data is only written in the encrypted form of your choice - blowfish "
+"algorithm with your password as the key or using a GPG encryption key. When "
+"a wallet is opened, the wallet manager application will launch and display "
+"an icon in the system tray. You can use this application to manage all of "
+"your wallets. It even permits you to drag wallets and wallet contents, "
+"allowing you to easily copy a wallet to a remote system.</p></body></html>"
+msgstr ""
+"<html><head/><body><p>El sistema de carteras de KDE almacena sus datos en un "
+"archivo de <span style=\" font-style:italic;\">cartera</span> en su disco "
+"duro local. Los datos se cifran utilizando únicamente el modo que haya "
+"elegido (el algoritmo blowfish con su contraseña como clave, o usando una "
+"clave de cifrado GPG). Cuando se abre una cartera, se inicia la aplicación "
+"de gestión de carteras y se muestra un icono en la bandeja del sistema. "
+"Puede usar esta aplicación para gestionar todas sus carteras. También le "
+"permite arrastrar a ella carteras y su contenido, lo que le facilita copiar "
+"una cartera a un sistema remoto.</p></body></html>"
+
 #. i18n: file: knewwalletdialoggpg.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:69
+#: rc.cpp:36
 msgid "Please select the signing key from the list below:"
 msgstr "Por favor, seleccione la clave para firmar en la lista inferior:"
 
 #. i18n: file: knewwalletdialoggpg.ui:24
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:72
+#: rc.cpp:39
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:600;\">NOTE:</span> this "
 "list shows only \"ultimate-level\" trusted keys</p></body></html>"
@@ -502,41 +550,59 @@ msgstr ""
 
 #. i18n: file: knewwalletdialoggpg.ui:59
 #. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:75
+#: rc.cpp:42
 msgid "Name"
 msgstr "Nombre"
 
 #. i18n: file: knewwalletdialoggpg.ui:64
 #. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:78
+#: rc.cpp:45
 msgid "E-Mail"
 msgstr "Correo electrónico"
 
 #. i18n: file: knewwalletdialoggpg.ui:69
 #. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:81
+#: rc.cpp:48
 msgid "Key-ID"
 msgstr "ID de la clave"
 
-#. i18n: file: knewwalletdialogintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, labelIntro)
-#: rc.cpp:88
-#, no-c-format
+#. i18n: file: kwalletwizardpageintro.ui:17
+#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
+#. i18n: file: knewwalletdialogintro.ui:17
+#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:51 rc.cpp:75
+msgid "The KDE Wallet System"
+msgstr "El sistema de cartera de KDE"
+
+#. i18n: file: kwalletwizardpageintro.ui:30
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:54
 msgid ""
-"<html><head/><body><p>The application '<span style=\" font-weight:600;\">%1</"
-"span>' has requested to open the KDE wallet. This is used to store sensitive "
-"data in a secure fashion. Please choose the new wallet's type below or click "
-"cancel to deny the application's request.</p></body></html>"
+"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
+"passwords and other personal information on disk in an encrypted file, "
+"preventing others from viewing the information.  This wizard will tell you "
+"about KWallet and help you configure it for the first time."
 msgstr ""
-"<html><head/><body><p>La aplicación «<span style=\"font-weight:600;\">%1</"
-"span>» ha solicitado abrir la cartera de KDE. Esto se usa para almacenar "
-"información importante de un modo seguro. Por favor, escoja el nuevo tipo de "
-"cartera más abajo, o cancele si desea denegar la petición de la aplicación.</"
-"p></body></html>"
+"Bienvenido a KWallet, la cartera de KDE. KWallet le permite almacenar sus "
+"contraseñas y otra información personal en el disco en un archivo cifrado, "
+"impidiendo que otros vean la información. Este asistente le informará acerca "
+"de KWallet y le ayudará a configurarlo por primera vez."
+
+#. i18n: file: kwalletwizardpageintro.ui:69
+#. i18n: ectx: property (text), widget (QRadioButton, _basic)
+#: rc.cpp:57
+msgid "&Basic setup (recommended)"
+msgstr "Configuración &básica (recomendado)"
+
+#. i18n: file: kwalletwizardpageintro.ui:79
+#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
+#: rc.cpp:60
+msgid "&Advanced setup"
+msgstr "Configuración &avanzada"
 
 #. i18n: file: kwalletwizardpagepassword.ui:16
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:97
+#: rc.cpp:63
 msgid ""
 "Various applications may attempt to use the KDE wallet to store passwords or "
 "other information such as web form data and cookies.  If you would like "
@@ -552,152 +618,86 @@ msgstr ""
 "recuperar si se pierde, y permitirá a todo aquel que la obtenga acceso a la "
 "información contenida en la cartera."
 
-#: kwalletwizard.cpp:53
-msgid "KWallet"
-msgstr "KWallet"
-
-#: kwalletwizard.cpp:277
-msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
-msgstr "<qt>La contraseña está vacía. <b>(Aviso: esto es inseguro)</b>.</qt>"
-
-#: kwalletwizard.cpp:279
-msgid "Passwords match."
-msgstr "Las contraseñas coinciden."
-
-#: kwalletwizard.cpp:282
-msgid "Passwords do not match."
-msgstr "Las contraseñas no coinciden."
-
-#: backend/backendpersisthandler.cpp:487
+#. i18n: file: knewwalletdialogintro.ui:30
+#. i18n: ectx: property (text), widget (QLabel, labelIntro)
+#: rc.cpp:79
+#, no-c-format
 msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
+"<html><head/><body><p>The application '<span style=\" font-weight:600;\">%1</"
+"span>' has requested to open the KDE wallet. This is used to store sensitive "
+"data in a secure fashion. Please choose the new wallet's type below or click "
+"cancel to deny the application's request.</p></body></html>"
 msgstr ""
-"<qt>Error al intentar inicializar OpenPGP mientras se procedía a guardar la "
-"cartera <b>%1</b>. El código de error es <b>%2</b>. Por favor, corrija la "
-"configuración del sistema y pruebe de nuevo.</qt>"
+"<html><head/><body><p>La aplicación «<span style=\"font-weight:600;\">%1</"
+"span>» ha solicitado abrir la cartera de KDE. Esto se usa para almacenar "
+"información importante de un modo seguro. Por favor, escoja el nuevo tipo de "
+"cartera más abajo, o cancele si desea denegar la petición de la aplicación.</"
+"p></body></html>"
 
-#: backend/backendpersisthandler.cpp:495
+#. i18n: file: kbetterthankdialogbase.ui:50
+#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
+#: rc.cpp:88
+msgid "Allow &Once"
+msgstr "Permitir una ve&z"
+
+#. i18n: file: kbetterthankdialogbase.ui:60
+#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
+#: rc.cpp:91
+msgid "Allow &Always"
+msgstr "Permitir sie&mpre"
+
+#. i18n: file: kbetterthankdialogbase.ui:67
+#. i18n: ectx: property (text), widget (KPushButton, _deny)
+#: rc.cpp:94
+msgid "&Deny"
+msgstr "&Denegar"
+
+#. i18n: file: kbetterthankdialogbase.ui:74
+#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
+#: rc.cpp:97
+msgid "Deny &Forever"
+msgstr "Denegar &siempre"
+
+#. i18n: file: kwalletwizardpagegpgkey.ui:24
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:100
 msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
+"<html><head/><body><p>The GPG-based wallet use a GPG encryption key to "
+"securely encrypt data on disk. The key must be available when decrypting is "
+"needed or your wallet will not be accessible. For example, if you choose a "
+"SmartCard-based encryption key, the GPG system will prompt you to enter it "
+"and its associated PIN when attempting to open the wallet. <b>NOTE:</b> only "
+"\"ultimate-level\" trusted keys are shown in this list.</p></body></html>"
 msgstr ""
-"<qt>Error al intentar inicializar OpenPGP mientras se procedía a guardar la "
-"cartera <b>%1</b>. Por favor, corrija la configuración del sistema y pruebe "
-"de nuevo.</qt>"
+"<html><head/><body><p>La cartera basada en GPG usa una clave de cifrado GPG "
+"para cifrar los datos en el disco. Esta clave debe estar disponible cuando "
+"necesite descifrar; en caso contrario, no podrá acceder a la cartera. Por "
+"ejemplo, si escoge una clave de cifrado basada en SmartCard, el sistema GPG "
+"le pedirá que la introduzca, así como su PIN asociado, cuando intente abrir "
+"una cartera. <b>Nota:</b> en esta lista solo se muestran las claves de "
+"confianza «total».</p></body></html>"
 
-#: backend/backendpersisthandler.cpp:546
+#. i18n: file: kwalletwizardpagegpgkey.ui:39
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:103
+msgid "Select encryption GPG key:"
+msgstr "Seleccione la clave de cifrado GPG:"
+
+#. i18n: file: kwalletwizardpagegpgkey.ui:78
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:106
 msgid ""
-"<qt>Encryption error while attempting to save the wallet <b>%1</b>. Error "
-"code is <b>%2 (%3)</b>. Please fix your system configuration, then try again!"
-"</qt>"
+"Unable to locate at least one <b>encrypting GPG key</b>. KDE Wallet needs "
+"such <b>encrypting key</b> to securely store passwords or other sensitive "
+"data on disk. If you still want to setup a GPG-based wallet, then cancel "
+"this wizard, set-up an <b>encrypting GPG key</b>, then retry this assistant. "
+"Otherwise, you may still click back, then choose a classic, blowfish "
+"encrypted file format on the previous page."
 msgstr ""
-"<qt>Error de cifrado mientras se procedía a guardar la cartera <b>%1</b>. El "
-"código de error es <b>%2 (%3)</b>. Por favor, corrija la configuración del "
-"sistema y pruebe de nuevo.</qt>"
-
-#: backend/backendpersisthandler.cpp:558
-msgid ""
-"<qt>File handling error while attempting to save the wallet <b>%1</b>. Error "
-"was <b>%2</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Error de manejo de archivos mientras se procedía a guardar la cartera <b>"
-"%1</b>. El error es <b>%2</b> Por favor, corrija la configuración del "
-"sistema y pruebe de nuevo.</qt>"
-
-#: backend/backendpersisthandler.cpp:571
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-"<qt>Error al intentar inicializar OpenPGP mientras se procedía a abrir la "
-"cartera <b>%1</b>. El código de error es <b>%2</b>. Por favor, corrija la "
-"configuración del sistema y pruebe de nuevo.</qt>"
-
-#: backend/backendpersisthandler.cpp:589
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Error al intentar inicializar OpenPGP mientras se procedía a abrir la "
-"cartera <b>%1</b>. Por favor, corrija la configuración del sistema y pruebe "
-"de nuevo.</qt>"
-
-#: backend/backendpersisthandler.cpp:599
-msgid "Retry"
-msgstr "Reintentar"
-
-#: backend/backendpersisthandler.cpp:601
-msgid ""
-"<qt>Error when attempting to decrypt the wallet <b>%1</b> using GPG. If "
-"you're using a SmartCard, please ensure it's inserted then try again."
-"<br><br>GPG error was <b>%2</b></qt>"
-msgstr ""
-"<qt>Error al intentar descifrar la cartera <b>%1</b> usando GPG. Si está "
-"usando una SmartCard, asegúrese de que está insertada y vuelva a intentarlo "
-"de nuevo.<br><br>El error GPG es <b>%2</b></qt>"
-
-#: backend/backendpersisthandler.cpp:602
-msgid "kwalletd GPG backend"
-msgstr "Motor GPG para kwalletd"
-
-#: backend/backendpersisthandler.cpp:646
-msgid ""
-"<qt>Error when attempting to open the wallet <b>%1</b>. The wallet was "
-"encrypted using the GPG Key ID <b>%2</b> but this key was not found on your "
-"system.</qt>"
-msgstr ""
-"<qt>Error al intentar abrir la cartera <b>%1</b>. La cartera estaba cifrada "
-"usando la ID de clave GPG <b>%2</b>, pero esta clave no se ha encontrado en "
-"el sistema.</qt>"
-
-#: backend/kwalletbackend.cc:236
-msgid "Already open."
-msgstr "Archivo ya abierto."
-
-#: backend/kwalletbackend.cc:238
-msgid "Error opening file."
-msgstr "Error al abrir archivo."
-
-#: backend/kwalletbackend.cc:240
-msgid "Not a wallet file."
-msgstr "No es un archivo de cartera."
-
-#: backend/kwalletbackend.cc:242
-msgid "Unsupported file format revision."
-msgstr "Revisión de formato de archivo no soportado."
-
-#: backend/kwalletbackend.cc:244
-msgid "Unknown encryption scheme."
-msgstr "Esquema de cifrado desconocido."
-
-#: backend/kwalletbackend.cc:246
-msgid "Corrupt file?"
-msgstr "¿Archivo dañado?"
-
-#: backend/kwalletbackend.cc:248
-msgid "Error validating wallet integrity. Possibly corrupted."
-msgstr ""
-"Error validando la integridad de la cartera. Es posible que esté dañada."
-
-#: backend/kwalletbackend.cc:252
-msgid "Read error - possibly incorrect password."
-msgstr "Error de lectura - posiblemente contraseña incorrecta."
-
-#: backend/kwalletbackend.cc:254
-msgid "Decryption error."
-msgstr "Descripción de descifrado."
-
-#: backend/kwalletbackend.cc:423
-msgid ""
-"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
-msgstr ""
-"Ha fallado la sincronización de la cartera <b>%1</b> con el disco. Los "
-"códigos de error son:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Por favor, envíe un informe de error usando esta información "
-"en bugs.kde.org"
+"No ha sido posible localizar al menos una <b>clave de cifrado GPG</b>. La "
+"cartera de KDE necesita dicha <b>clave de cifrado</b> para guardar de forma "
+"segura contraseñas y otros datos sensibles en el disco. Si sigue queriendo "
+"configurar una cartera basada en GPG, cancele este asistente, prepare una "
+"<b>clave de cifrado GPG</b> y vuelva a lanzar este asistente. En caso "
+"contrario, todavía puede volver atrás y elegir en la página anterior un "
+"formato de archivo clásico que use el algoritmo de cifrado blowfish."

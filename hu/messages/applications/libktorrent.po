@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KTorrent 3.1\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-01-31 01:09+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2012-02-14 16:13+0100\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -20,74 +20,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.4\n"
 
-#: examples/ktcli/main.cpp:60
-msgid "Torrent to open"
-msgstr "Megnyitandó torrent"
+#: src/torrent/torrentcontrol.cpp:300
+msgid "Error writing to disk, do you have enough diskspace?"
+msgstr "Hiba a lemezre íráskor, van elegendő lemezterülete?"
 
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-msgid "Port to use"
-msgstr "A használt port"
+#: src/torrent/torrentcontrol.cpp:546
+msgid ""
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
+msgstr ""
+"<b>%1</b> torrent betöltése sikertelen:<br/><b>%2</b><br/>A torrent "
+"valószínűleg sérült, vagy nem érvényes torrentfájl."
 
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr "Titkosítás engedélyezése vagy tiltása"
+#: src/torrent/torrentcontrol.cpp:576
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
+msgstr "Hiba történt a(z) <b>%1</b> betöltése közben: <br/><b>%2</b>"
 
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr "A partnercsere engedélyezése vagy tiltása"
+#: src/torrent/torrentcontrol.cpp:587
+msgid "Unable to create %1: %2"
+msgstr "A(z) %1 nem hozható létre: %2"
 
-#: examples/ktcli/main.cpp:65
-msgid "Whether or not to use utp"
-msgstr "UTP használata vagy sem"
+#: src/torrent/torrentcontrol.cpp:602
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+"<b>%1</b> letöltése már folyamatban van, ezért a két követőlista "
+"összevonásra került."
 
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
-msgstr "ktcli"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Átirányítás új hely nélkül"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "Érvénytelen válasz érkezett a követőtől"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "Érvénytelen adat érkezett a követőtől"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "Érvénytelen követő-URL"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "Időtúllépés a követőhöz való kapcsolódás közben: %1"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "%1 hosztnév nem oldható fel"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr "Várakozás a további adatellenőrzés befejezésére"
-
-#: src/datachecker/datacheckerjob.cpp:88 src/torrent/torrentstats.cpp:93
-msgid "Checking data"
-msgstr "Adatellenőrzés"
-
-#: src/datachecker/datacheckerjob.cpp:141
-msgid "Checking Data"
-msgstr "Adatellenőrzés"
-
-#: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/torrent/torrentcreator.cpp:124
-#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#: src/diskio/multifilecache.cpp:706 src/diskio/multifilecache.cpp:745
-msgid "Cannot open file %1: %2"
-msgstr "Nem sikerült megnyitni ezt a fájlt: %1. %2"
+#: src/torrent/torrentcontrol.cpp:607
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "<b>%1</b> torrent letöltése már folyamatban van."
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -134,6 +97,10 @@ msgstr "Ütemezve feltöltéshez"
 msgid "Queued for downloading"
 msgstr "Ütemezve letöltéshez"
 
+#: src/torrent/torrentstats.cpp:93 src/datachecker/datacheckerjob.cpp:88
+msgid "Checking data"
+msgstr "Adatellenőrzés"
+
 #: src/torrent/torrentstats.cpp:95
 msgid "Stopped. No space left on device."
 msgstr "Leállítva. Nincs elegendő lemezterület."
@@ -146,38 +113,6 @@ msgstr "Szüneteltetve"
 msgid "Superseeding"
 msgstr "Szuper-feltöltés"
 
-#: src/torrent/torrentcontrol.cpp:300
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr "Hiba a lemezre íráskor, van elegendő lemezterülete?"
-
-#: src/torrent/torrentcontrol.cpp:546
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"<b>%1</b> torrent betöltése sikertelen:<br/><b>%2</b><br/>A torrent "
-"valószínűleg sérült, vagy nem érvényes torrentfájl."
-
-#: src/torrent/torrentcontrol.cpp:576
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr "Hiba történt a(z) <b>%1</b> betöltése közben: <br/><b>%2</b>"
-
-#: src/torrent/torrentcontrol.cpp:587
-msgid "Unable to create %1: %2"
-msgstr "A(z) %1 nem hozható létre: %2"
-
-#: src/torrent/torrentcontrol.cpp:602
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-"<b>%1</b> letöltése már folyamatban van, ezért a két követőlista "
-"összevonásra került."
-
-#: src/torrent/torrentcontrol.cpp:607
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "<b>%1</b> torrent letöltése már folyamatban van."
-
 #: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
 #: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
 #: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
@@ -189,125 +124,22 @@ msgstr "Hibás torrent."
 msgid "Unable to open torrent file %1: %2"
 msgstr "A(z) %1 torrentfájl nem nyitható meg: %2"
 
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
+#: src/datachecker/multidatachecker.cpp:209
+msgid "Cannot open file %1: %2"
+msgstr "Nem sikerült megnyitni ezt a fájlt: %1. %2"
+
 #: src/torrent/torrentcreator.cpp:361
 msgid "Cannot create index file: %1"
 msgstr "Az indexfájl nem hozható létre: %1"
 
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "%1 - a könyvtár nem létezik"
-
-#: src/bcodec/bdecoder.cpp:71
-msgid "Illegal token: %1"
-msgstr "Nem megengedett token: %1"
-
-#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
-msgid "Decode error"
-msgstr "Dekódolási hiba"
-
-#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
-msgid "Unexpected end of input"
-msgstr "Váratlanul ért véget a bemenet"
-
-#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
-msgid "Cannot convert %1 to an int"
-msgstr "Nem sikerült egésszé alakítani: %1"
-
-#: src/bcodec/bdecoder.cpp:260
-msgid "Torrent is incomplete."
-msgstr "A torrent nem teljes."
-
-#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
-msgid "Failed to open %1: %2"
-msgstr "%1 megnyitása nem sikerült: %2"
-
-#: src/diskio/multifilecache.cpp:118 src/diskio/cache.cpp:170
-#: src/diskio/singlefilecache.cpp:85
-msgid "Failed to create %1: %2"
-msgstr "%1 létrehozása nem sikerült: %2"
-
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-msgid "Cannot open index file %1: %2"
-msgstr "A(z) %1 index fájl nem nyitható meg: %2"
-
-#: src/diskio/dndfile.cpp:89
-msgid "Cannot create file %1: %2"
-msgstr "A(z) %1 fájl nem hozható létre: %2"
-
-#: src/diskio/dndfile.cpp:137
-msgid "Failed to write first chunk to DND file: %1"
-msgstr "Nem sikerült kiírni az első darabot a DND-fájlba: %1"
-
-#: src/diskio/dndfile.cpp:155
-msgid "Failed to write last chunk to DND file: %1"
-msgstr "Nem sikerült kiírni az utolsó darabot a DND-fájlba: %1"
-
-#: src/diskio/movedatafilesjob.cpp:140
-msgid "Waiting for other move jobs to finish"
-msgstr "Várakozás a további mozgó feladatok befejezésére"
-
-#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
-msgctxt "The source of a file operation"
-msgid "Source"
-msgstr "Forrás"
-
-#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
-msgctxt "The destination of a file operation"
-msgid "Destination"
-msgstr "Cél"
-
-#: src/diskio/movedatafilesjob.cpp:180
-msgctxt "@title job"
-msgid "Moving"
-msgstr "Mozgatás"
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-msgid "Cannot open %1: %2"
-msgstr "A(z) %1 nem nyitható meg: %2"
-
-#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
-#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
-msgid "Cannot open %1 for writing: readonly filesystem"
-msgstr "%1 nem nyitható meg írásra: a fájlrendszer csak olvasható"
-
-#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
-msgid "Attempting to write beyond the maximum size of %1"
-msgstr "A(z) %1 maximális méretén túli írás kísérlete"
-
-#: src/diskio/cachefile.cpp:257
-msgid ""
-"Cannot expand file %1: attempting to grow the file beyond the maximum size"
-msgstr ""
-"A(z) %1 fájl nem növelhető meg: fájlnövelés próba a maximális méreten túl"
-
-#: src/diskio/cachefile.cpp:261
-msgid "Cannot expand file %1: %2"
-msgstr "A(z) %1 fájl nem bővíthető: %2"
-
-#: src/diskio/cachefile.cpp:380
-msgid "Error: Reading past the end of the file %1"
-msgstr "Hiba a(z) %1 fájl végének olvasásakor"
-
-#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
-msgid "Failed to seek file %1: %2"
-msgstr "Nem sikerült pozícionálni a(z) %1 fájlban: %2"
-
-#: src/diskio/cachefile.cpp:393
-msgid "Error reading from %1"
-msgstr "Hiba történt %1 olvasása közben"
-
-#: src/diskio/cachefile.cpp:436
-msgid "Failed to write to file %1: %2"
-msgstr "Nem sikerült írni a(z) %1 fájlba: %2"
-
-#: src/diskio/cachefile.cpp:503
-msgid "Cannot preallocate diskspace: %1"
-msgstr "Nem sikerült előre lefoglalni lemezterületet: %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr "Nem lehet a csak olvashatónak feltérképezett darabba írni"
+#: src/download/chunkdownload.cpp:383
+msgid "1 peer"
+msgid_plural "%1 peers"
+msgstr[0] "%1 partner"
+msgstr[1] "%1 partner"
 
 #: src/download/webseed.cpp:52 src/download/webseed.cpp:99
 #: src/download/httpconnection.cpp:44
@@ -321,12 +153,6 @@ msgstr "A kapcsolat bezárva"
 #: src/download/webseed.cpp:558
 msgid "Unused for %1 seconds (Too many connection failures)"
 msgstr "Nincs használatban %1 másodperce (Túl sok kapcsolódási hiba)"
-
-#: src/download/chunkdownload.cpp:383
-msgid "1 peer"
-msgid_plural "%1 peers"
-msgstr[0] "%1 partner"
-msgstr[1] "%1 partner"
 
 #: src/download/httpconnection.cpp:115
 msgid "Resolving proxy %1:%2"
@@ -380,38 +206,117 @@ msgstr "Átirányítva új hely nélkül."
 msgid "Disabled because webseed does not match torrent"
 msgstr "Letiltva, mert a webfeltöltés nem egyezik a torrenttel"
 
-#: src/upnp/upnprouter.cpp:167
-msgid "Failed to download %1: %2"
-msgstr "A(z) %1 letöltése nem sikerült: %2"
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+msgid "Cannot open index file %1: %2"
+msgstr "A(z) %1 index fájl nem nyitható meg: %2"
 
-#: src/upnp/upnprouter.cpp:178
-msgid "Error parsing router description."
-msgstr "Nem sikerült feldolgozni a router leírását."
+#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
+msgid "Failed to open %1: %2"
+msgstr "%1 megnyitása nem sikerült: %2"
 
-#: src/upnp/upnprouter.cpp:216
+#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
+#: src/diskio/cache.cpp:170
+msgid "Failed to create %1: %2"
+msgstr "%1 létrehozása nem sikerült: %2"
+
+#: src/diskio/dndfile.cpp:89
+msgid "Cannot create file %1: %2"
+msgstr "A(z) %1 fájl nem hozható létre: %2"
+
+#: src/diskio/dndfile.cpp:137
+msgid "Failed to write first chunk to DND file: %1"
+msgstr "Nem sikerült kiírni az első darabot a DND-fájlba: %1"
+
+#: src/diskio/dndfile.cpp:155
+msgid "Failed to write last chunk to DND file: %1"
+msgstr "Nem sikerült kiírni az utolsó darabot a DND-fájlba: %1"
+
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr "Nem lehet a csak olvashatónak feltérképezett darabba írni"
+
+#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
+#: src/util/fileops.cpp:406
+msgid "Cannot open %1: %2"
+msgstr "A(z) %1 nem nyitható meg: %2"
+
+#: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
+#: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
+msgid "Cannot open %1 for writing: readonly filesystem"
+msgstr "%1 nem nyitható meg írásra: a fájlrendszer csak olvasható"
+
+#: src/diskio/cachefile.cpp:129 src/diskio/cachefile.cpp:420
+msgid "Attempting to write beyond the maximum size of %1"
+msgstr "A(z) %1 maximális méretén túli írás kísérlete"
+
+#: src/diskio/cachefile.cpp:257
 msgid ""
-"Forwarding failed:\n"
-"Device does not have a WANIPConnection or WANPPPConnection."
+"Cannot expand file %1: attempting to grow the file beyond the maximum size"
 msgstr ""
-"Sikertelen átirányítás: \n"
-"Az eszköz nem rendelkezik WANIPConnection vagy WANPPPConnection "
-"lehetőségekkel."
+"A(z) %1 fájl nem növelhető meg: fájlnövelés próba a maximális méreten túl"
 
-#: src/upnp/upnprouter.cpp:314
-msgid "Cannot find port forwarding service in the device's description."
-msgstr "Az eszköz leírásában nem található port-átirányítási szolgáltatás."
+#: src/diskio/cachefile.cpp:261
+msgid "Cannot expand file %1: %2"
+msgstr "A(z) %1 fájl nem bővíthető: %2"
 
-#: src/upnp/httprequest.cpp:96
-msgid "Connection closed unexpectedly"
-msgstr "A kapcsolat váratlanul lezárult"
+#: src/diskio/cachefile.cpp:380
+msgid "Error: Reading past the end of the file %1"
+msgstr "Hiba a(z) %1 fájl végének olvasásakor"
 
-#: src/upnp/httprequest.cpp:155
-msgid "Operation timed out"
-msgstr "A művelet átlépte az időkorlátot"
+#: src/diskio/cachefile.cpp:385 src/diskio/cachefile.cpp:432
+msgid "Failed to seek file %1: %2"
+msgstr "Nem sikerült pozícionálni a(z) %1 fájlban: %2"
 
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Ismeretlen kliens"
+#: src/diskio/cachefile.cpp:393
+msgid "Error reading from %1"
+msgstr "Hiba történt %1 olvasása közben"
+
+#: src/diskio/cachefile.cpp:436
+msgid "Failed to write to file %1: %2"
+msgstr "Nem sikerült írni a(z) %1 fájlba: %2"
+
+#: src/diskio/cachefile.cpp:503
+msgid "Cannot preallocate diskspace: %1"
+msgstr "Nem sikerült előre lefoglalni lemezterületet: %1"
+
+#: src/diskio/movedatafilesjob.cpp:140
+msgid "Waiting for other move jobs to finish"
+msgstr "Várakozás a további mozgó feladatok befejezésére"
+
+#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
+msgctxt "The source of a file operation"
+msgid "Source"
+msgstr "Forrás"
+
+#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
+msgctxt "The destination of a file operation"
+msgid "Destination"
+msgstr "Cél"
+
+#: src/diskio/movedatafilesjob.cpp:180
+msgctxt "@title job"
+msgid "Moving"
+msgstr "Mozgatás"
+
+#: src/bcodec/bdecoder.cpp:71
+msgid "Illegal token: %1"
+msgstr "Nem megengedett token: %1"
+
+#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
+msgid "Decode error"
+msgstr "Dekódolási hiba"
+
+#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
+msgid "Unexpected end of input"
+msgstr "Váratlanul ért véget a bemenet"
+
+#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
+msgid "Cannot convert %1 to an int"
+msgstr "Nem sikerült egésszé alakítani: %1"
+
+#: src/bcodec/bdecoder.cpp:260
+msgid "Torrent is incomplete."
+msgstr "A torrent nem teljes."
 
 #: src/interfaces/trackerinterface.cpp:58
 msgid "OK"
@@ -424,6 +329,10 @@ msgstr "Figyelmeztetés: %1"
 #: src/interfaces/trackerinterface.cpp:59
 msgid "Announcing"
 msgstr "Bejelentés"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "%1 - a könyvtár nem létezik"
 
 #: src/util/logsystemmanager.cpp:33
 msgid "General"
@@ -448,24 +357,6 @@ msgstr "Lemez bemenet/kimenet"
 #: src/util/logsystemmanager.cpp:38
 msgid "µTP"
 msgstr "µTP"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "Hiba a lemezre írás közben"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "Hiba a lemez olvasása közben"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "%1 nap "
-msgstr[1] "%1 nap "
 
 #: src/util/fileops.cpp:101
 msgid "Cannot create directory %1"
@@ -508,6 +399,24 @@ msgstr "Nem sikerült kitömöríteni ezt a fájlt: %1"
 msgid "Cannot seek in file: %1"
 msgstr "Nem sikerült pozícionálni a fájlban: %1"
 
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "Hiba a lemezre írás közben"
+
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "Hiba a lemez olvasása közben"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "%1 nap "
+msgstr[1] "%1 nap "
+
 #: src/util/file.cpp:84
 msgid "Cannot write to %1: %2"
 msgstr "Nem sikerült írni a(z) %1 fájlba: %2"
@@ -515,3 +424,94 @@ msgstr "Nem sikerült írni a(z) %1 fájlba: %2"
 #: src/util/file.cpp:98
 msgid "Cannot read from %1"
 msgstr "Nem sikerült olvasni: %1"
+
+#: src/upnp/upnprouter.cpp:167
+msgid "Failed to download %1: %2"
+msgstr "A(z) %1 letöltése nem sikerült: %2"
+
+#: src/upnp/upnprouter.cpp:178
+msgid "Error parsing router description."
+msgstr "Nem sikerült feldolgozni a router leírását."
+
+#: src/upnp/upnprouter.cpp:216
+msgid ""
+"Forwarding failed:\n"
+"Device does not have a WANIPConnection or WANPPPConnection."
+msgstr ""
+"Sikertelen átirányítás: \n"
+"Az eszköz nem rendelkezik WANIPConnection vagy WANPPPConnection "
+"lehetőségekkel."
+
+#: src/upnp/upnprouter.cpp:314
+msgid "Cannot find port forwarding service in the device's description."
+msgstr "Az eszköz leírásában nem található port-átirányítási szolgáltatás."
+
+#: src/upnp/httprequest.cpp:96
+msgid "Connection closed unexpectedly"
+msgstr "A kapcsolat váratlanul lezárult"
+
+#: src/upnp/httprequest.cpp:155
+msgid "Operation timed out"
+msgstr "A művelet átlépte az időkorlátot"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Ismeretlen kliens"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr "Várakozás a további adatellenőrzés befejezésére"
+
+#: src/datachecker/datacheckerjob.cpp:141
+msgid "Checking Data"
+msgstr "Adatellenőrzés"
+
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "Érvénytelen válasz érkezett a követőtől"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "Érvénytelen adat érkezett a követőtől"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "Érvénytelen követő-URL"
+
+#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
+#: src/tracker/udptracker.cpp:374
+msgid "Timeout contacting tracker %1"
+msgstr "Időtúllépés a követőhöz való kapcsolódás közben: %1"
+
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Átirányítás új hely nélkül"
+
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "%1 hosztnév nem oldható fel"
+
+#: examples/ktcli/main.cpp:60
+msgid "Torrent to open"
+msgstr "Megnyitandó torrent"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+msgid "Port to use"
+msgstr "A használt port"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr "Titkosítás engedélyezése vagy tiltása"
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr "A partnercsere engedélyezése vagy tiltása"
+
+#: examples/ktcli/main.cpp:65
+msgid "Whether or not to use utp"
+msgstr "UTP használata vagy sem"
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr "ktcli"

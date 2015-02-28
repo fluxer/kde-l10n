@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okular_dvi\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2014-12-09 18:22+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2014-07-18 05:17+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -18,6 +18,109 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: TeXFontDefinition.cpp:107
+msgid "Cannot find font %1, file %2."
+msgstr "Ei leitud fondi %1 faili %2."
+
+#: TeXFontDefinition.cpp:123
+msgid "Checksum mismatch for font file %1"
+msgstr "Fondifaili %1 kontrollsumma ei klapi"
+
+#: TeXFontDefinition.cpp:171
+msgid "Cannot recognize format for font file %1"
+msgstr "Fondifaili %1 vormingut ei tuntud ära"
+
+#: dviRenderer_prescan.cpp:86
+msgid "Embedding %1"
+msgstr "%1 põimimine"
+
+#: dviRenderer_prescan.cpp:101
+msgid ""
+"Page %1: The PDF file <strong>%2</strong> could not be converted to "
+"PostScript.<br>"
+msgstr ""
+"Lehekülg %1: PDF-faili <strong>%2</strong> ei saa teisendada PostScript-"
+"failiks.<br>"
+
+#: dviRenderer_prescan.cpp:103
+msgid ""
+"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
+msgstr "Lehekülg %1: PostScript-faili <strong>%2</strong> ei leitud.<br>"
+
+#: dviRenderer_prescan.cpp:252
+msgid "The papersize data '%1' could not be parsed."
+msgstr "Paberisuuruse andmete '%1' parsimine nurjus."
+
+#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
+msgid "The DVI code referred to font #%1, which was not previously defined."
+msgstr "DVI koodis on viide fondile #%1, mis on eelnevalt määratlemata."
+
+#: fontpool.cpp:209
+msgid ""
+"<qt><p>Okular was not able to locate all the font files which are necessary "
+"to display the current DVI file. Your document might be unreadable.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Okular ei leidnud kõiki fondifaile, mis on vajalikud käesoleva DVI-"
+"faili näitamiseks. Seetõttu võib dokument olla loetamatu.</"
+"p><p><small><b>OTSINGUTEE:</b> %1</small></p><p><small>%2</small></p></qt>"
+
+#: fontpool.cpp:280
+msgid ""
+"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
+"font files could not be located, and your document might be unreadable.<br/"
+">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
+"your system, or it cannot be found in the current search path.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Tekkis probleeme programmi <em>kpsewhich</em> käivitamisel. Seepärast "
+"ei leitud mõningaid fondifaile ja sinu dokument ei pruugi olla loetav.<br/"
+">Võimalikud põhjused: programm <em>kpsewhich</em> ei ole vahest süsteemi "
+"paigaldatud või siis ei leitud seda kehtivalt otsinguteelt.</"
+"p><p><small><b>OTSINGUTEE:</b> %1</small></p><p><small>%2</small></p></qt>"
+
+#: fontpool.cpp:299
+msgid ""
+"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
+"error %2). As a result, some font files could not be located, and your "
+"document might be unreadable.</qt>"
+msgstr ""
+"<qt>Fondi genereerimine <em>kpsewhich</em>'iga katkes (väljuti koodiga %1, "
+"viga %2). Seepärast ei suudetud tuvastada mõningaid fondifaile ning dokument "
+"ei pruugi olla loetav.</qt>"
+
+#: fontpool.cpp:477
+msgid "Currently generating %1 at %2 dpi..."
+msgstr "Parasjagu tekitatakse %1 %2 dpi juures..."
+
+#: TeXFont_PK.cpp:90
+msgid "Cannot open font file %1."
+msgstr "Fondifaili %1 avamine nurjus."
+
+#: TeXFont_PK.cpp:139
+msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
+msgstr "TexFont_PK::operator[]: Sümbol %1 pole defineeritud fondis %2 "
+
+#: TeXFont_PK.cpp:455
+msgid "Unexpected %1 in PK file %2"
+msgstr "Ootamatu %1 PK-failis %2"
+
+#: TeXFont_PK.cpp:522
+msgid "The character %1 is too large in file %2"
+msgstr "Sümbol %1 on liiga suur failis %2"
+
+#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
+msgid "Wrong number of bits stored:  char. %1, font %2"
+msgstr "Vale arv bitte salvestatud: sümbol %1, font %2"
+
+#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
+msgid "Bad pk file (%1), too many bits"
+msgstr "Halb pk-fail (%1), liiga palju bitte"
+
+#: TeXFont_PK.cpp:742
+msgid "Font has non-square aspect ratio "
+msgstr "Fondil ei ole ruudukujuline kõrguse/laiuse suhe"
 
 #: psgs.cpp:263
 msgid ""
@@ -62,6 +165,42 @@ msgstr ""
 "Ghostview seadmedraiverite nimekirja. Muu hulgas võib Okular kasutada "
 "draivereid 'png256', 'jpeg' ja 'pnm'. Pane tähele, et PostScripti toetuse "
 "taasrakendamiseks tuleb Okular sulgeda ja taaskäivitada.</p></qt>"
+
+#: pageSize.cpp:324
+msgid "portrait"
+msgstr "püstpaigutus"
+
+#: pageSize.cpp:326
+msgid "landscape"
+msgstr "rõhtpaigutus"
+
+#: dviRenderer_draw.cpp:261
+msgid "The DVI code set a character of an unknown font."
+msgstr "DVI kood määras tundmatu fondi sümboli."
+
+#: dviRenderer_draw.cpp:375
+msgid "The stack was not empty when the EOP command was encountered."
+msgstr "Pinu ei olnud tühi, kui tuvastati EOP käsk."
+
+#: dviRenderer_draw.cpp:387
+msgid "The stack was empty when a POP command was encountered."
+msgstr "Pinu oli tühi, kui tuvastati POP käsk."
+
+#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
+msgid "The DVI code referred to a font which was not previously defined."
+msgstr "DVI koodis on viide fondile, mis on eelnevalt määratlemata."
+
+#: dviRenderer_draw.cpp:570
+msgid "An illegal command was encountered."
+msgstr "Tuvastati lubamatu käsk."
+
+#: dviRenderer_draw.cpp:575
+msgid "The unknown op-code %1 was encountered."
+msgstr "Tuvastati tundmatu opkood %1."
+
+#: vf.cpp:182
+msgid "Wrong command byte found in VF macro list: %1"
+msgstr "Vale käsubait VF makro nimekirjas: %1"
 
 #: dviFile.cpp:111
 msgid "The DVI file does not start with the preamble."
@@ -132,132 +271,6 @@ msgstr ""
 "%1 võib olla katki või ei ole see üldse PDF-fail. See on Okulari kasutatud "
 "programmi <strong>pdf2ps</strong> väljund:</p><p><strong>%2</strong></p></qt>"
 
-#: special.cpp:37
-msgid "That makes 25 errors. Further error messages will not be printed."
-msgstr "Siin on juba 25 viga. Rohkem veateateid ei näidata."
-
-#: special.cpp:218
-msgid ""
-"Error in DVIfile '%1', page %2. Color pop command issued when the color "
-"stack is empty."
-msgstr ""
-"Viga DVI-failis '%1' leheküljel %2. Anti värvi pop-käsk, samas kui värvipinu "
-"on tühi."
-
-#: special.cpp:303
-msgid ""
-"Malformed parameter in the epsf special command.\n"
-"Expected a float to follow %1 in %2"
-msgstr ""
-"Vigane parameeter epsf erikäsus.\n"
-"Oodati ujukomaarvu järgnemist %1-le %2-s"
-
-#: special.cpp:434
-msgid ""
-"File not found: \n"
-" %1"
-msgstr ""
-"Faili ei leitud: \n"
-" %1"
-
-#: special.cpp:681
-msgid ""
-"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
-"special."
-msgstr ""
-"Viga DVI-failis \"%1\" leheküljel %2. Teksti pöördenurga interpreteerimine "
-"nurjus."
-
-#: special.cpp:704
-msgid "The special command '%1' is not implemented."
-msgstr "Erikäsk '%1' ei ole rakendatud."
-
-#: util.cpp:77
-msgid ""
-"Fatal error.\n"
-"\n"
-msgstr ""
-"Saatuslik viga.\n"
-"\n"
-
-#: util.cpp:79
-msgid ""
-"\n"
-"\n"
-"This probably means that either you found a bug in Okular,\n"
-"or that the DVI file, or auxiliary files (such as font files, \n"
-"or virtual font files) were really badly broken.\n"
-"Okular will abort after this message. If you believe that you \n"
-"found a bug, or that Okular should behave better in this situation\n"
-"please report the problem."
-msgstr ""
-"\n"
-"\n"
-"See tähendab tavaliselt, et sa kas leidsid vea Okularis\n"
-"või on DVI-fail või abifailid (näiteks fondifailid \n"
-"või virtuaalsed fondifailid) põhjalikult katki.\n"
-"Okular lõpetab töö pärast seda teadet. Kui sa arvad, et \n"
-"leidsid vea või et Okular peaks sellises olukorras paremini käituma,\n"
-"saada palun vearaport."
-
-#: dviRenderer_prescan.cpp:86
-msgid "Embedding %1"
-msgstr "%1 põimimine"
-
-#: dviRenderer_prescan.cpp:101
-msgid ""
-"Page %1: The PDF file <strong>%2</strong> could not be converted to "
-"PostScript.<br>"
-msgstr ""
-"Lehekülg %1: PDF-faili <strong>%2</strong> ei saa teisendada PostScript-"
-"failiks.<br>"
-
-#: dviRenderer_prescan.cpp:103
-msgid ""
-"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
-msgstr "Lehekülg %1: PostScript-faili <strong>%2</strong> ei leitud.<br>"
-
-#: dviRenderer_prescan.cpp:252
-msgid "The papersize data '%1' could not be parsed."
-msgstr "Paberisuuruse andmete '%1' parsimine nurjus."
-
-#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
-msgid "The DVI code referred to font #%1, which was not previously defined."
-msgstr "DVI koodis on viide fondile #%1, mis on eelnevalt määratlemata."
-
-#: dviRenderer.cpp:231 dviRenderer.cpp:468
-msgid "File corruption. %1"
-msgstr "Fail on riknenud. %1"
-
-#: dviRenderer.cpp:362
-msgid "Not all PostScript files could be embedded into your document. %1"
-msgstr "Sinu dokumenti ei saa põimida kõiki PostScript-faile. %1"
-
-#: dviRenderer.cpp:365
-msgid "All external PostScript files were embedded into your document."
-msgstr "Kõik välised PostScript-failid põimiti sinu dokumenti."
-
-#: dviRenderer.cpp:453
-msgid "The specified file '%1' does not exist."
-msgstr "Määratud faili '%1' ei ole olemas."
-
-#: dviRenderer.cpp:612
-msgid ""
-"You have asked Okular to locate the place in the DVI file which corresponds "
-"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
-"contain the necessary source file information. "
-msgstr ""
-"Sa tahad, et Okular leiaks koha DVI-failis, mis vastab reale %1 TeXi failis "
-"%2. Tundub siiski, et see DVI-fail ei sisalda vajalikku infot lähtefaili "
-"kohta. "
-
-#: dviRenderer.cpp:652
-msgid ""
-"Okular was not able to locate the place in the DVI file which corresponds to "
-"line %1 in the TeX-file %2."
-msgstr ""
-"Okular ei leidnud kohta DVI-failis, mis vastaks reale %1 TeXi failis %2."
-
 #: TeXFont_PFB.cpp:42
 msgid ""
 "The font file %1 could be opened and read, but its font format is "
@@ -293,73 +306,66 @@ msgstr "Glüüf #%1 fondifailist %2 on tühi."
 msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
 msgstr "FreeType ei suutnud avada fondifaili %2 glüüfi #%1 meetrikat."
 
-#: TeXFontDefinition.cpp:107
-msgid "Cannot find font %1, file %2."
-msgstr "Ei leitud fondi %1 faili %2."
+#: dviRenderer.cpp:231 dviRenderer.cpp:468
+msgid "File corruption. %1"
+msgstr "Fail on riknenud. %1"
 
-#: TeXFontDefinition.cpp:123
-msgid "Checksum mismatch for font file %1"
-msgstr "Fondifaili %1 kontrollsumma ei klapi"
+#: dviRenderer.cpp:362
+msgid "Not all PostScript files could be embedded into your document. %1"
+msgstr "Sinu dokumenti ei saa põimida kõiki PostScript-faile. %1"
 
-#: TeXFontDefinition.cpp:171
-msgid "Cannot recognize format for font file %1"
-msgstr "Fondifaili %1 vormingut ei tuntud ära"
+#: dviRenderer.cpp:365
+msgid "All external PostScript files were embedded into your document."
+msgstr "Kõik välised PostScript-failid põimiti sinu dokumenti."
 
-#: dviRenderer_draw.cpp:261
-msgid "The DVI code set a character of an unknown font."
-msgstr "DVI kood määras tundmatu fondi sümboli."
+#: dviRenderer.cpp:453
+msgid "The specified file '%1' does not exist."
+msgstr "Määratud faili '%1' ei ole olemas."
 
-#: dviRenderer_draw.cpp:375
-msgid "The stack was not empty when the EOP command was encountered."
-msgstr "Pinu ei olnud tühi, kui tuvastati EOP käsk."
+#: dviRenderer.cpp:612
+msgid ""
+"You have asked Okular to locate the place in the DVI file which corresponds "
+"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
+"contain the necessary source file information. "
+msgstr ""
+"Sa tahad, et Okular leiaks koha DVI-failis, mis vastab reale %1 TeXi failis "
+"%2. Tundub siiski, et see DVI-fail ei sisalda vajalikku infot lähtefaili "
+"kohta. "
 
-#: dviRenderer_draw.cpp:387
-msgid "The stack was empty when a POP command was encountered."
-msgstr "Pinu oli tühi, kui tuvastati POP käsk."
+#: dviRenderer.cpp:652
+msgid ""
+"Okular was not able to locate the place in the DVI file which corresponds to "
+"line %1 in the TeX-file %2."
+msgstr ""
+"Okular ei leidnud kohta DVI-failis, mis vastaks reale %1 TeXi failis %2."
 
-#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
-msgid "The DVI code referred to a font which was not previously defined."
-msgstr "DVI koodis on viide fondile, mis on eelnevalt määratlemata."
+#: util.cpp:77
+msgid ""
+"Fatal error.\n"
+"\n"
+msgstr ""
+"Saatuslik viga.\n"
+"\n"
 
-#: dviRenderer_draw.cpp:570
-msgid "An illegal command was encountered."
-msgstr "Tuvastati lubamatu käsk."
-
-#: dviRenderer_draw.cpp:575
-msgid "The unknown op-code %1 was encountered."
-msgstr "Tuvastati tundmatu opkood %1."
-
-#: vf.cpp:182
-msgid "Wrong command byte found in VF macro list: %1"
-msgstr "Vale käsubait VF makro nimekirjas: %1"
-
-#: TeXFont_PK.cpp:90
-msgid "Cannot open font file %1."
-msgstr "Fondifaili %1 avamine nurjus."
-
-#: TeXFont_PK.cpp:139
-msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
-msgstr "TexFont_PK::operator[]: Sümbol %1 pole defineeritud fondis %2 "
-
-#: TeXFont_PK.cpp:455
-msgid "Unexpected %1 in PK file %2"
-msgstr "Ootamatu %1 PK-failis %2"
-
-#: TeXFont_PK.cpp:522
-msgid "The character %1 is too large in file %2"
-msgstr "Sümbol %1 on liiga suur failis %2"
-
-#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
-msgid "Wrong number of bits stored:  char. %1, font %2"
-msgstr "Vale arv bitte salvestatud: sümbol %1, font %2"
-
-#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
-msgid "Bad pk file (%1), too many bits"
-msgstr "Halb pk-fail (%1), liiga palju bitte"
-
-#: TeXFont_PK.cpp:742
-msgid "Font has non-square aspect ratio "
-msgstr "Fondil ei ole ruudukujuline kõrguse/laiuse suhe"
+#: util.cpp:79
+msgid ""
+"\n"
+"\n"
+"This probably means that either you found a bug in Okular,\n"
+"or that the DVI file, or auxiliary files (such as font files, \n"
+"or virtual font files) were really badly broken.\n"
+"Okular will abort after this message. If you believe that you \n"
+"found a bug, or that Okular should behave better in this situation\n"
+"please report the problem."
+msgstr ""
+"\n"
+"\n"
+"See tähendab tavaliselt, et sa kas leidsid vea Okularis\n"
+"või on DVI-fail või abifailid (näiteks fondifailid \n"
+"või virtuaalsed fondifailid) põhjalikult katki.\n"
+"Okular lõpetab töö pärast seda teadet. Kui sa arvad, et \n"
+"leidsid vea või et Okular peaks sellises olukorras paremini käituma,\n"
+"saada palun vearaport."
 
 #: generator_dvi.cpp:54
 msgid "DVI Backend"
@@ -380,44 +386,6 @@ msgstr "Autor/Kuupäev"
 #: generator_dvi.cpp:455
 msgid "Font file not found"
 msgstr "Fondifaili ei leitud"
-
-#: fontpool.cpp:209
-msgid ""
-"<qt><p>Okular was not able to locate all the font files which are necessary "
-"to display the current DVI file. Your document might be unreadable.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Okular ei leidnud kõiki fondifaile, mis on vajalikud käesoleva DVI-"
-"faili näitamiseks. Seetõttu võib dokument olla loetamatu.</"
-"p><p><small><b>OTSINGUTEE:</b> %1</small></p><p><small>%2</small></p></qt>"
-
-#: fontpool.cpp:280
-msgid ""
-"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
-"font files could not be located, and your document might be unreadable.<br/"
-">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
-"your system, or it cannot be found in the current search path.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Tekkis probleeme programmi <em>kpsewhich</em> käivitamisel. Seepärast "
-"ei leitud mõningaid fondifaile ja sinu dokument ei pruugi olla loetav.<br/"
-">Võimalikud põhjused: programm <em>kpsewhich</em> ei ole vahest süsteemi "
-"paigaldatud või siis ei leitud seda kehtivalt otsinguteelt.</"
-"p><p><small><b>OTSINGUTEE:</b> %1</small></p><p><small>%2</small></p></qt>"
-
-#: fontpool.cpp:299
-msgid ""
-"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
-"error %2). As a result, some font files could not be located, and your "
-"document might be unreadable.</qt>"
-msgstr ""
-"<qt>Fondi genereerimine <em>kpsewhich</em>'iga katkes (väljuti koodiga %1, "
-"viga %2). Seepärast ei suudetud tuvastada mõningaid fondifaile ning dokument "
-"ei pruugi olla loetav.</qt>"
-
-#: fontpool.cpp:477
-msgid "Currently generating %1 at %2 dpi..."
-msgstr "Parasjagu tekitatakse %1 %2 dpi juures..."
 
 #: dviexport.cpp:129
 msgid ""
@@ -486,10 +454,42 @@ msgstr ""
 "veast. Võib-olla soovid sa heita pilgu <strong>dokumendi info</strong> "
 "dialoogile, mille sa leiad menüüst Fail, nägemaks vea täpset kirjeldust.</qt>"
 
-#: pageSize.cpp:324
-msgid "portrait"
-msgstr "püstpaigutus"
+#: special.cpp:37
+msgid "That makes 25 errors. Further error messages will not be printed."
+msgstr "Siin on juba 25 viga. Rohkem veateateid ei näidata."
 
-#: pageSize.cpp:326
-msgid "landscape"
-msgstr "rõhtpaigutus"
+#: special.cpp:218
+msgid ""
+"Error in DVIfile '%1', page %2. Color pop command issued when the color "
+"stack is empty."
+msgstr ""
+"Viga DVI-failis '%1' leheküljel %2. Anti värvi pop-käsk, samas kui värvipinu "
+"on tühi."
+
+#: special.cpp:303
+msgid ""
+"Malformed parameter in the epsf special command.\n"
+"Expected a float to follow %1 in %2"
+msgstr ""
+"Vigane parameeter epsf erikäsus.\n"
+"Oodati ujukomaarvu järgnemist %1-le %2-s"
+
+#: special.cpp:434
+msgid ""
+"File not found: \n"
+" %1"
+msgstr ""
+"Faili ei leitud: \n"
+" %1"
+
+#: special.cpp:681
+msgid ""
+"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
+"special."
+msgstr ""
+"Viga DVI-failis \"%1\" leheküljel %2. Teksti pöördenurga interpreteerimine "
+"nurjus."
+
+#: special.cpp:704
+msgid "The special command '%1' is not implemented."
+msgstr "Erikäsk '%1' ei ole rakendatud."

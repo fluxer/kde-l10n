@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okular_dvi\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2014-12-09 18:22+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2013-07-05 22:41-0400\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
@@ -18,6 +18,110 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.5\n"
+
+#: TeXFontDefinition.cpp:107
+msgid "Cannot find font %1, file %2."
+msgstr "找不到字体 %1，文件 %2。"
+
+#: TeXFontDefinition.cpp:123
+msgid "Checksum mismatch for font file %1"
+msgstr "字体文件 %1 的校验和不匹配"
+
+#: TeXFontDefinition.cpp:171
+msgid "Cannot recognize format for font file %1"
+msgstr "无法识别字体文件 %1 的格式"
+
+#: dviRenderer_prescan.cpp:86
+msgid "Embedding %1"
+msgstr "嵌入的 %1"
+
+#: dviRenderer_prescan.cpp:101
+msgid ""
+"Page %1: The PDF file <strong>%2</strong> could not be converted to "
+"PostScript.<br>"
+msgstr "第 %1 页：无法将 PDF 文件 <strong>%2</strong> 转换为 PostScript。<br>"
+
+#: dviRenderer_prescan.cpp:103
+msgid ""
+"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
+msgstr "第 %1 页：找不到 PostScript 文件 <strong>%2</strong>。<br>"
+
+#: dviRenderer_prescan.cpp:252
+msgid "The papersize data '%1' could not be parsed."
+msgstr "无法解析纸张尺寸数据“%1”"
+
+#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
+msgid "The DVI code referred to font #%1, which was not previously defined."
+msgstr "DVI 代码关联到先前未曾定义的字体 #%1。"
+
+#: fontpool.cpp:209
+#, fuzzy
+msgid ""
+"<qt><p>Okular was not able to locate all the font files which are necessary "
+"to display the current DVI file. Your document might be unreadable.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Okular 无法定位显示当前 DVI 文件所需的全部字体文件。您可能无法阅读此文"
+"档。</p></qt>"
+
+#: fontpool.cpp:280
+#, fuzzy
+msgid ""
+"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
+"font files could not be located, and your document might be unreadable.<br/"
+">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
+"your system, or it cannot be found in the current search path.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<p>运行 <b>kpsewhich</b> 时发生问题，这导致一些字体文件无法被定位，且您可能无"
+"法阅读此文档。</p><p><b>可能的原因：</b>大概您的系统中未安装 kpsewhich 程序，"
+"或在当前的搜索路径中找不到它。</p><p><b>您可以这么做：</b>kpsewhich 程序一般"
+"被包含在 TeX 排版系统中一同发行。如果您的系统中没有安装 TeX，可以安装 TeX "
+"Live(www.tug.org/texlive)。如果您确认已安装 TeX，请尝试从命令行使用 "
+"kpsewhich 程序确证它可以工作。</p>"
+
+#: fontpool.cpp:299
+#, fuzzy
+msgid ""
+"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
+"error %2). As a result, some font files could not be located, and your "
+"document might be unreadable.</qt>"
+msgstr ""
+"<qt><p>由 <b>kpsewhich</b> 提供的字体生成器已终止(退出代码 %1，错误 %2)。因"
+"而，有些字体文件无法定位，您的文档可能无法阅读。</p></qt>"
+
+#: fontpool.cpp:477
+#, fuzzy
+msgid "Currently generating %1 at %2 dpi..."
+msgstr "正在以 %2 dpi 生成 %1"
+
+#: TeXFont_PK.cpp:90
+msgid "Cannot open font file %1."
+msgstr "无法打开字体文件 %1。"
+
+#: TeXFont_PK.cpp:139
+msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
+msgstr "TexFont_PK::operator[]：在字体 %2 中没有字符 %1 的定义"
+
+#: TeXFont_PK.cpp:455
+msgid "Unexpected %1 in PK file %2"
+msgstr "在 PK 文件 %2 中出现未预料的 %1"
+
+#: TeXFont_PK.cpp:522
+msgid "The character %1 is too large in file %2"
+msgstr "文件 %2 中的字符 %1 过大"
+
+#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
+msgid "Wrong number of bits stored:  char. %1, font %2"
+msgstr "错误的数位储存值：字符 %1，字体 %2"
+
+#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
+msgid "Bad pk file (%1), too many bits"
+msgstr "损坏的 PK 文件(%1)，比特位过多。"
+
+#: TeXFont_PK.cpp:742
+msgid "Font has non-square aspect ratio "
+msgstr "字体不是方形的纵横比"
 
 #: psgs.cpp:263
 #, fuzzy
@@ -58,6 +162,42 @@ msgstr ""
 "strong> 命令显示出 Ghostview 所包含设备驱动的列表，其中 Okular 可以使"
 "用“png256”、“jpeg”和“pnm”这几个驱动。注意要让 Okular 恢复对 PostScript 的支"
 "持，您需重新启动它。</p></qt>"
+
+#: pageSize.cpp:324
+msgid "portrait"
+msgstr "纵向"
+
+#: pageSize.cpp:326
+msgid "landscape"
+msgstr "横向"
+
+#: dviRenderer_draw.cpp:261
+msgid "The DVI code set a character of an unknown font."
+msgstr "DVI 代码设定了未知字体中的字符。"
+
+#: dviRenderer_draw.cpp:375
+msgid "The stack was not empty when the EOP command was encountered."
+msgstr "遇到 EOP 指令时栈不为空。"
+
+#: dviRenderer_draw.cpp:387
+msgid "The stack was empty when a POP command was encountered."
+msgstr "遇到 POP 指令时栈为空。"
+
+#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
+msgid "The DVI code referred to a font which was not previously defined."
+msgstr "DVI 代码关联到了一个先前未定义的字体。"
+
+#: dviRenderer_draw.cpp:570
+msgid "An illegal command was encountered."
+msgstr "遇到非法指令。"
+
+#: dviRenderer_draw.cpp:575
+msgid "The unknown op-code %1 was encountered."
+msgstr "遇到未知的 op 代码 %1。"
+
+#: vf.cpp:182
+msgid "Wrong command byte found in VF macro list: %1"
+msgstr "在 VF 宏列表中发现错误的指令字节：%1"
 
 #: dviFile.cpp:111
 msgid "The DVI file does not start with the preamble."
@@ -125,126 +265,6 @@ msgstr ""
 "件。这是 Okular 调用 <strong>pdf2ps</strong> 程序时的输出：</p><p><strong>"
 "%2</strong></p></qt>"
 
-#: special.cpp:37
-msgid "That makes 25 errors. Further error messages will not be printed."
-msgstr "产生了 25 个错误，更多错误信息不会被印出。"
-
-#: special.cpp:218
-msgid ""
-"Error in DVIfile '%1', page %2. Color pop command issued when the color "
-"stack is empty."
-msgstr ""
-"错误发生于 DVI 文件“%1”的第 %2 页。这是当颜色堆栈为空时引发的颜色 pop 指令的"
-"问题。"
-
-#: special.cpp:303
-msgid ""
-"Malformed parameter in the epsf special command.\n"
-"Expected a float to follow %1 in %2"
-msgstr ""
-"epsf 特殊指令的参数畸形。\n"
-"在 %2 中，%1 后面应该是浮点数。"
-
-#: special.cpp:434
-msgid ""
-"File not found: \n"
-" %1"
-msgstr ""
-"找不到文件：\n"
-" %1"
-
-#: special.cpp:681
-msgid ""
-"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
-"special."
-msgstr "错误发生于 DVI 文件“%1”的第 %2 页，无法解析文本旋转角度的指令。"
-
-#: special.cpp:704
-msgid "The special command '%1' is not implemented."
-msgstr "特殊指令“%1”尚未实现。"
-
-#: util.cpp:77
-msgid ""
-"Fatal error.\n"
-"\n"
-msgstr ""
-"严重错误。\n"
-"\n"
-
-#: util.cpp:79
-msgid ""
-"\n"
-"\n"
-"This probably means that either you found a bug in Okular,\n"
-"or that the DVI file, or auxiliary files (such as font files, \n"
-"or virtual font files) were really badly broken.\n"
-"Okular will abort after this message. If you believe that you \n"
-"found a bug, or that Okular should behave better in this situation\n"
-"please report the problem."
-msgstr ""
-"\n"
-"\n"
-"出现这问题可能是因为您发现了 Okular 的一个缺陷，\n"
-"或是 DVI 文件与辅助文件(如字体文件或虚拟字体文件)本身已严重损坏。\n"
-"在此消息结束后 Okular 程序将中止，如果您确信自己发现了一个缺陷，\n"
-"或觉得 Okular 在遇到这种情况时能采用更佳的行为方式，请向我们报告。"
-
-#: dviRenderer_prescan.cpp:86
-msgid "Embedding %1"
-msgstr "嵌入的 %1"
-
-#: dviRenderer_prescan.cpp:101
-msgid ""
-"Page %1: The PDF file <strong>%2</strong> could not be converted to "
-"PostScript.<br>"
-msgstr "第 %1 页：无法将 PDF 文件 <strong>%2</strong> 转换为 PostScript。<br>"
-
-#: dviRenderer_prescan.cpp:103
-msgid ""
-"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
-msgstr "第 %1 页：找不到 PostScript 文件 <strong>%2</strong>。<br>"
-
-#: dviRenderer_prescan.cpp:252
-msgid "The papersize data '%1' could not be parsed."
-msgstr "无法解析纸张尺寸数据“%1”"
-
-#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
-msgid "The DVI code referred to font #%1, which was not previously defined."
-msgstr "DVI 代码关联到先前未曾定义的字体 #%1。"
-
-#: dviRenderer.cpp:231 dviRenderer.cpp:468
-#, fuzzy
-msgid "File corruption. %1"
-msgstr ""
-"找不到文件：\n"
-" %1"
-
-#: dviRenderer.cpp:362
-msgid "Not all PostScript files could be embedded into your document. %1"
-msgstr ""
-
-#: dviRenderer.cpp:365
-msgid "All external PostScript files were embedded into your document."
-msgstr ""
-
-#: dviRenderer.cpp:453
-#, fuzzy
-msgid "The specified file '%1' does not exist."
-msgstr "特殊指令“%1”尚未实现。"
-
-#: dviRenderer.cpp:612
-msgid ""
-"You have asked Okular to locate the place in the DVI file which corresponds "
-"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
-"contain the necessary source file information. "
-msgstr ""
-
-#: dviRenderer.cpp:652
-msgid ""
-"Okular was not able to locate the place in the DVI file which corresponds to "
-"line %1 in the TeX-file %2."
-msgstr ""
-
 #: TeXFont_PFB.cpp:42
 msgid ""
 "The font file %1 could be opened and read, but its font format is "
@@ -280,73 +300,64 @@ msgstr "字体文件 %2 中的字符 #%1 为空。"
 msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
 msgstr "FreeType 无法装入字体文件 %2 中字符 #%1 的描述信息。"
 
-#: TeXFontDefinition.cpp:107
-msgid "Cannot find font %1, file %2."
-msgstr "找不到字体 %1，文件 %2。"
+#: dviRenderer.cpp:231 dviRenderer.cpp:468
+#, fuzzy
+msgid "File corruption. %1"
+msgstr ""
+"找不到文件：\n"
+" %1"
 
-#: TeXFontDefinition.cpp:123
-msgid "Checksum mismatch for font file %1"
-msgstr "字体文件 %1 的校验和不匹配"
+#: dviRenderer.cpp:362
+msgid "Not all PostScript files could be embedded into your document. %1"
+msgstr ""
 
-#: TeXFontDefinition.cpp:171
-msgid "Cannot recognize format for font file %1"
-msgstr "无法识别字体文件 %1 的格式"
+#: dviRenderer.cpp:365
+msgid "All external PostScript files were embedded into your document."
+msgstr ""
 
-#: dviRenderer_draw.cpp:261
-msgid "The DVI code set a character of an unknown font."
-msgstr "DVI 代码设定了未知字体中的字符。"
+#: dviRenderer.cpp:453
+#, fuzzy
+msgid "The specified file '%1' does not exist."
+msgstr "特殊指令“%1”尚未实现。"
 
-#: dviRenderer_draw.cpp:375
-msgid "The stack was not empty when the EOP command was encountered."
-msgstr "遇到 EOP 指令时栈不为空。"
+#: dviRenderer.cpp:612
+msgid ""
+"You have asked Okular to locate the place in the DVI file which corresponds "
+"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
+"contain the necessary source file information. "
+msgstr ""
 
-#: dviRenderer_draw.cpp:387
-msgid "The stack was empty when a POP command was encountered."
-msgstr "遇到 POP 指令时栈为空。"
+#: dviRenderer.cpp:652
+msgid ""
+"Okular was not able to locate the place in the DVI file which corresponds to "
+"line %1 in the TeX-file %2."
+msgstr ""
 
-#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
-msgid "The DVI code referred to a font which was not previously defined."
-msgstr "DVI 代码关联到了一个先前未定义的字体。"
+#: util.cpp:77
+msgid ""
+"Fatal error.\n"
+"\n"
+msgstr ""
+"严重错误。\n"
+"\n"
 
-#: dviRenderer_draw.cpp:570
-msgid "An illegal command was encountered."
-msgstr "遇到非法指令。"
-
-#: dviRenderer_draw.cpp:575
-msgid "The unknown op-code %1 was encountered."
-msgstr "遇到未知的 op 代码 %1。"
-
-#: vf.cpp:182
-msgid "Wrong command byte found in VF macro list: %1"
-msgstr "在 VF 宏列表中发现错误的指令字节：%1"
-
-#: TeXFont_PK.cpp:90
-msgid "Cannot open font file %1."
-msgstr "无法打开字体文件 %1。"
-
-#: TeXFont_PK.cpp:139
-msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
-msgstr "TexFont_PK::operator[]：在字体 %2 中没有字符 %1 的定义"
-
-#: TeXFont_PK.cpp:455
-msgid "Unexpected %1 in PK file %2"
-msgstr "在 PK 文件 %2 中出现未预料的 %1"
-
-#: TeXFont_PK.cpp:522
-msgid "The character %1 is too large in file %2"
-msgstr "文件 %2 中的字符 %1 过大"
-
-#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
-msgid "Wrong number of bits stored:  char. %1, font %2"
-msgstr "错误的数位储存值：字符 %1，字体 %2"
-
-#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
-msgid "Bad pk file (%1), too many bits"
-msgstr "损坏的 PK 文件(%1)，比特位过多。"
-
-#: TeXFont_PK.cpp:742
-msgid "Font has non-square aspect ratio "
-msgstr "字体不是方形的纵横比"
+#: util.cpp:79
+msgid ""
+"\n"
+"\n"
+"This probably means that either you found a bug in Okular,\n"
+"or that the DVI file, or auxiliary files (such as font files, \n"
+"or virtual font files) were really badly broken.\n"
+"Okular will abort after this message. If you believe that you \n"
+"found a bug, or that Okular should behave better in this situation\n"
+"please report the problem."
+msgstr ""
+"\n"
+"\n"
+"出现这问题可能是因为您发现了 Okular 的一个缺陷，\n"
+"或是 DVI 文件与辅助文件(如字体文件或虚拟字体文件)本身已严重损坏。\n"
+"在此消息结束后 Okular 程序将中止，如果您确信自己发现了一个缺陷，\n"
+"或觉得 Okular 在遇到这种情况时能采用更佳的行为方式，请向我们报告。"
 
 #: generator_dvi.cpp:54
 msgid "DVI Backend"
@@ -367,47 +378,6 @@ msgstr "创建者/日期"
 #: generator_dvi.cpp:455
 msgid "Font file not found"
 msgstr "字体文件未找到"
-
-#: fontpool.cpp:209
-#, fuzzy
-msgid ""
-"<qt><p>Okular was not able to locate all the font files which are necessary "
-"to display the current DVI file. Your document might be unreadable.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Okular 无法定位显示当前 DVI 文件所需的全部字体文件。您可能无法阅读此文"
-"档。</p></qt>"
-
-#: fontpool.cpp:280
-#, fuzzy
-msgid ""
-"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
-"font files could not be located, and your document might be unreadable.<br/"
-">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
-"your system, or it cannot be found in the current search path.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<p>运行 <b>kpsewhich</b> 时发生问题，这导致一些字体文件无法被定位，且您可能无"
-"法阅读此文档。</p><p><b>可能的原因：</b>大概您的系统中未安装 kpsewhich 程序，"
-"或在当前的搜索路径中找不到它。</p><p><b>您可以这么做：</b>kpsewhich 程序一般"
-"被包含在 TeX 排版系统中一同发行。如果您的系统中没有安装 TeX，可以安装 TeX "
-"Live(www.tug.org/texlive)。如果您确认已安装 TeX，请尝试从命令行使用 "
-"kpsewhich 程序确证它可以工作。</p>"
-
-#: fontpool.cpp:299
-#, fuzzy
-msgid ""
-"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
-"error %2). As a result, some font files could not be located, and your "
-"document might be unreadable.</qt>"
-msgstr ""
-"<qt><p>由 <b>kpsewhich</b> 提供的字体生成器已终止(退出代码 %1，错误 %2)。因"
-"而，有些字体文件无法定位，您的文档可能无法阅读。</p></qt>"
-
-#: fontpool.cpp:477
-#, fuzzy
-msgid "Currently generating %1 at %2 dpi..."
-msgstr "正在以 %2 dpi 生成 %1"
 
 #: dviexport.cpp:129
 #, fuzzy
@@ -473,10 +443,40 @@ msgstr ""
 "<qt>用于导出文件的外部程序“dvips”报告了一个错误。也许您想要查看文件菜单下的"
 "<strong>文档信息对话框</strong>以查询精确的错误报告。</qt>"
 
-#: pageSize.cpp:324
-msgid "portrait"
-msgstr "纵向"
+#: special.cpp:37
+msgid "That makes 25 errors. Further error messages will not be printed."
+msgstr "产生了 25 个错误，更多错误信息不会被印出。"
 
-#: pageSize.cpp:326
-msgid "landscape"
-msgstr "横向"
+#: special.cpp:218
+msgid ""
+"Error in DVIfile '%1', page %2. Color pop command issued when the color "
+"stack is empty."
+msgstr ""
+"错误发生于 DVI 文件“%1”的第 %2 页。这是当颜色堆栈为空时引发的颜色 pop 指令的"
+"问题。"
+
+#: special.cpp:303
+msgid ""
+"Malformed parameter in the epsf special command.\n"
+"Expected a float to follow %1 in %2"
+msgstr ""
+"epsf 特殊指令的参数畸形。\n"
+"在 %2 中，%1 后面应该是浮点数。"
+
+#: special.cpp:434
+msgid ""
+"File not found: \n"
+" %1"
+msgstr ""
+"找不到文件：\n"
+" %1"
+
+#: special.cpp:681
+msgid ""
+"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
+"special."
+msgstr "错误发生于 DVI 文件“%1”的第 %2 页，无法解析文本旋转角度的指令。"
+
+#: special.cpp:704
+msgid "The special command '%1' is not implemented."
+msgstr "特殊指令“%1”尚未实现。"

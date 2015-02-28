@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmix\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2014-12-09 18:22+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2014-05-24 13:02+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -21,346 +21,132 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: backends/mixer_oss4.cpp:496 backends/mixer_oss.cpp:234
+#: apps/kmixctrl.cpp:37
+msgid "kmixctrl - kmix volume save/restore utility"
+msgstr "K‑mikskontrola — upisivanje i obnavljanje jačina"
+
+#: apps/kmixctrl.cpp:42
+msgid "KMixCtrl"
+msgstr "K‑mikskontrola"
+
+#: apps/kmixctrl.cpp:44
+msgid "(c) 2000 by Stefan Schimanski"
+msgstr "© 2000, Štefan Šimanski"
+
+#: apps/kmixctrl.cpp:46 apps/main.cpp:53
+msgid "Stefan Schimanski"
+msgstr "Štefan Šimanski"
+
+#: apps/kmixctrl.cpp:52
+msgid "Save current volumes as default"
+msgstr "Sačuvaj trenutne jačine kao podrazumijevane"
+
+#: apps/kmixctrl.cpp:54
+msgid "Restore default volumes"
+msgstr "Vrati na podrazumijevane jačine"
+
+#: apps/main.cpp:33
+msgid "KMix - KDE's full featured mini mixer"
+msgstr "K‑mikseta — KDE‑ova sveobuhvatna mini mikseta"
+
+#: apps/main.cpp:37
+msgid "KMix"
+msgstr "K‑mikseta"
+
+#: apps/main.cpp:39
+msgid "(c) 1996-2013 The KMix Authors"
+msgstr "© 1996–2013, autori K‑miksete"
+
+#: apps/main.cpp:42
+msgid "Christian Esken"
+msgstr "Kristijan Esken"
+
+#: apps/main.cpp:42
+msgid "Original author and current maintainer"
+msgstr "Prvobitni autor i trenutni održavalac"
+
+#: apps/main.cpp:43
+msgid "Colin Guthrie"
+msgstr "Kolin Gatri"
+
+#: apps/main.cpp:43
+msgid "PulseAudio support"
+msgstr "Podrška za PulseAudio"
+
+#: apps/main.cpp:44
+msgid "Helio Chissini de Castro"
+msgstr "Helio Ćisini de Kastro"
+
+#: apps/main.cpp:44
+msgid "ALSA 0.9x port"
+msgstr "Prenošenje na Alsu 0.9"
+
+#: apps/main.cpp:45
+msgid "Brian Hanson"
+msgstr "Brajan Henson"
+
+#: apps/main.cpp:45
+msgid "Solaris support"
+msgstr "Podrška za Solaris"
+
+#. i18n("Helge Deller")      , ki18n("HP/UX port"), "deller@gmx.de");
+#. The initial support was for ALSA 0.5. The new code is not based on it IIRC.
+#. i18n("Nick Lopez")        , ki18n("Initial ALSA port"), "kimo_sabe@usa.net");
+#. Credit Policy: Authors who did a discrete part, like the Dataengine, OSD, help on specific platforms or soundcards.
+#: apps/main.cpp:52
+msgid "Igor Poboiko"
+msgstr "Igor Pobojko"
+
+#: apps/main.cpp:52
+msgid "Plasma Dataengine"
+msgstr "Plasma datomotor"
+
+#: apps/main.cpp:53
+msgid "Temporary maintainer"
+msgstr "Privremeni održavalac"
+
+#: apps/main.cpp:54
+msgid "Sebestyen Zoltan"
+msgstr "Zoltan Šebešćen"
+
+#: apps/main.cpp:54 apps/main.cpp:55
+msgid "*BSD fixes"
+msgstr "Ispravke za BSD"
+
+#: apps/main.cpp:55
+msgid "Lennart Augustsson"
+msgstr "Lenart Avgustson"
+
+#: apps/main.cpp:56
+msgid "Nadeem Hasan"
+msgstr "Nadim Hasan"
+
+#: apps/main.cpp:56
+msgid "Mute and volume preview, other fixes"
+msgstr "Isključivanje zvuka i pregled jačina, druge ispravke"
+
+#: apps/main.cpp:57
+msgid "Erwin Mascher"
+msgstr "Ervin Mašer"
+
+#: apps/main.cpp:57
+msgid "Improving support for emu10k1 based soundcards"
+msgstr "Poboljšanje podrške za zvučne kartice zasnovane na EMU10k1"
+
+#: apps/main.cpp:58
+msgid "Valentin Rusu"
+msgstr "Valanten Rizi"
+
+#: apps/main.cpp:58
+msgid "TerraTec DMX6Fire support"
+msgstr "Podrška za TerraTecov DMX 6Fire"
+
+#: apps/main.cpp:63
 msgid ""
-"kmix: You do not have permission to access the mixer device.\n"
-"Login as root and do a 'chmod a+rw /dev/mixer*' to allow the access."
+"Inhibits the unhiding of the KMix main window, if KMix is already running."
 msgstr ""
-"K‑mikseta: Nemate dozvolu da pristup uređaju miksete.\n"
-"Prijavite se kao <icode>root</icode> i izvršite <icode>chmod a+rw /dev/"
-"mixer*</icode> da biste omogućili pristup."
-
-#: backends/mixer_oss4.cpp:500
-msgid ""
-"kmix: Mixer cannot be found.\n"
-"Please check that the soundcard is installed and the\n"
-"soundcard driver is loaded.\n"
-"On Linux you might need to use 'insmod' to load the driver.\n"
-"Use 'soundon' when using OSS4 from 4front."
-msgstr ""
-"K‑mikseta: Ne mogu da nađem miksetu.\n"
-"Provjerite da li je zvučna kartica instalirana\n"
-"i da li je učitan drajver za nju.\n"
-"Pod Linuxom vam možda treba <command>insmod</command> da biste\n"
-"učitali drajver.\n"
-"Upotrijebite <command>soundon</command> ako koristite OSS 4 od 4Fronta."
-
-#: backends/mixer_backend.cpp:306
-msgid ""
-"kmix:You do not have permission to access the mixer device.\n"
-"Please check your operating systems manual to allow the access."
-msgstr ""
-"K‑mikseta: Nemate dozvolu da pristupite uređaju miksete.\n"
-"Pogledajte u uputstvu operativnog sistema kako da omogućite pristup."
-
-#: backends/mixer_backend.cpp:310
-msgid "kmix: Could not write to mixer."
-msgstr "K‑mikseta: Ne mogu da pišem u miksetu."
-
-#: backends/mixer_backend.cpp:313
-msgid "kmix: Could not read from mixer."
-msgstr "K‑mikseta: Ne mogu da čitam iz miksete."
-
-#: backends/mixer_backend.cpp:316
-msgid ""
-"kmix: Mixer cannot be found.\n"
-"Please check that the soundcard is installed and that\n"
-"the soundcard driver is loaded.\n"
-msgstr ""
-"K‑mikseta: Ne mogu da nađem miksetu.\n"
-"Provjerite da li je zvučna kartica instalirana\n"
-"i da li je učitan drajver za nju.\n"
-
-#: backends/mixer_backend.cpp:321
-msgid "kmix: Unknown error. Please report how you produced this error."
-msgstr ""
-"K‑mikseta: Nepoznata greška. Molimo vas da prijavite kako ste je izazvali."
-
-# >> @item mixer device name
-#: backends/mixer_sun.cpp:68
-msgid "Master Volume"
-msgstr "glavna jačina"
-
-# >> @item mixer device name
-#: backends/mixer_sun.cpp:69
-msgid "Internal Speaker"
-msgstr "unutrašnji biper"
-
-# >> @item mixer device name
-#: backends/mixer_sun.cpp:70
-msgid "Headphone"
-msgstr "slušalice"
-
-# >> @item mixer device name
-#: backends/mixer_sun.cpp:71
-msgid "Line Out"
-msgstr "izlazna linija"
-
-# >> @item mixer device name
-#: backends/mixer_sun.cpp:72
-msgid "Record Monitor"
-msgstr "monitor snimanja"
-
-# >> @item mixer device name
-#: backends/mixer_sun.cpp:73 backends/mixer_oss.cpp:60
-msgid "Microphone"
-msgstr "mikrofon"
-
-# >> @item mixer device name
-#: backends/mixer_sun.cpp:74
-msgid "Line In"
-msgstr "ulazna linija"
-
-# >> @item mixer device name
-#: backends/mixer_sun.cpp:75 backends/mixer_oss.cpp:60
-msgid "CD"
-msgstr "CD"
-
-#: backends/mixer_sun.cpp:240
-msgid ""
-"kmix: You do not have permission to access the mixer device.\n"
-"Ask your system administrator to fix /dev/audioctl to allow access."
-msgstr ""
-"K‑mikseta: Nemate dozvolu da pristupite uređaju miksete.\n"
-"Tražite sistem-administratoru da omogući pristup <icode>/dev/audioctl</"
-"icode>."
-
-#: backends/mixer_backend_i18n.cpp:24
-msgid "Recording level of the microphone input."
-msgstr "Nivo snimanja na ulazu mikrofona."
-
-#: backends/mixer_backend_i18n.cpp:25
-msgid ""
-"Controls the volume of the front speakers or all speakers (depending on your "
-"soundcard model). If you use a digital output, you might need to also use "
-"other controls like ADC or DAC. For headphones, soundcards often supply a "
-"Headphone control."
-msgstr ""
-"Upravlja jačinom prednjih ili svih zvučnika (u zavisnosti od modela zvučne "
-"kartice). Ako koristite digitalni izlaz, možda ćete morati da koristite i "
-"kontrole ADC‑a ili DAC‑a. Zvučne kartice obično daju i kontrolu za slušalice."
-
-#: backends/mixer_backend_i18n.cpp:26
-msgid ""
-"Most media, such as MP3s or Videos, are played back using the PCM channel. "
-"As such, the playback volume of such media is controlled by both this and "
-"the Master or Headphone channels."
-msgstr ""
-"Većina medijuma, poput MP3 numera ili filmova, pušta se preko PCM kanala. "
-"Zato se jačinom zvuka za te medijume upravlja i preko ovog i preko glavnog "
-"kanala (ili kanala za slušalice)."
-
-#: backends/mixer_backend_i18n.cpp:27
-msgid ""
-"Controls the headphone volume. Some soundcards include a switch that must be "
-"manually activated to enable the headphone output."
-msgstr ""
-"Upravlja jačinom zvuka na slušalicama. Neke zvučne kartice imaju prekidač "
-"koji treba ručno aktivirati za izlaz na slušalice."
-
-#: backends/mixer_backend_i18n.cpp:28
-msgid "---"
-msgstr "---"
-
-#: backends/mixer_pulse.cpp:340 backends/mixer_pulse.cpp:399
-msgid "Unknown Application"
-msgstr "Nepoznat program"
-
-#: backends/mixer_pulse.cpp:447 backends/mixer_pulse.cpp:483
-msgid "Event Sounds"
-msgstr "Zvuci događaja"
-
-# >> @item mixer device name
-#: backends/mixer_pulse.cpp:1101
-msgid "Playback Devices"
-msgstr "uređaji za puštanje"
-
-# >> @item mixer device name
-#: backends/mixer_pulse.cpp:1109
-msgid "Capture Devices"
-msgstr "uređaji za hvatanje"
-
-# >> @item mixer device name
-#: backends/mixer_pulse.cpp:1117 backends/mixer_mpris2.cpp:52
-msgid "Playback Streams"
-msgstr "tokovi puštanja"
-
-# >> @item mixer device name
-#: backends/mixer_pulse.cpp:1128
-msgid "Capture Streams"
-msgstr "tokovi hvatanja"
-
-#: backends/mixer_pulse.cpp:1229
-msgid "Volume Control Feedback Sound"
-msgstr "Odzivni zvuk kontrole jačine"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:58
-msgid "Volume"
-msgstr "jačina"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:58
-msgid "Bass"
-msgstr "bas"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:58
-msgid "Treble"
-msgstr "sopran"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:59
-msgid "Synth"
-msgstr "sintisajzer"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:59
-msgid "Pcm"
-msgstr "PCM"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:59
-msgid "Speaker"
-msgstr "biper"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:60
-msgid "Line"
-msgstr "linija"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:61
-msgid "Mix"
-msgstr "miks"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:61
-msgid "Pcm2"
-msgstr "PCM 2"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:61
-msgid "RecMon"
-msgstr "monitor snimanja"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:62
-msgid "IGain"
-msgstr "ulazno pojačanje"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:62
-msgid "OGain"
-msgstr "izlazno pojačanje"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:62
-msgid "Line1"
-msgstr "linija 1"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:63
-msgid "Line2"
-msgstr "linija 2"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:63
-msgid "Line3"
-msgstr "linija 3"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:63
-msgid "Digital1"
-msgstr "digitalni 1"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:64
-msgid "Digital2"
-msgstr "digitalni 2"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:64
-msgid "Digital3"
-msgstr "digitalni 3"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:64
-msgid "PhoneIn"
-msgstr "telefonski ulaz"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:65
-msgid "PhoneOut"
-msgstr "telefonski izlaz"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:65
-msgid "Video"
-msgstr "video"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:65
-msgid "Radio"
-msgstr "radio"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:66
-msgid "Monitor"
-msgstr "monitor"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:66
-msgid "3D-depth"
-msgstr "3D dubina"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:66
-msgid "3D-center"
-msgstr "3D centar"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:67 backends/mixer_oss.cpp:68 core/mixdevice.cpp:133
-msgid "unknown"
-msgstr "nepoznato"
-
-# >> @item mixer device name
-#: backends/mixer_oss.cpp:68
-msgid "unused"
-msgstr "nekorišćeno"
-
-#: backends/mixer_oss.cpp:238
-msgid ""
-"kmix: Mixer cannot be found.\n"
-"Please check that the soundcard is installed and the\n"
-"soundcard driver is loaded.\n"
-"On Linux you might need to use 'insmod' to load the driver.\n"
-"Use 'soundon' when using commercial OSS."
-msgstr ""
-"K‑mikseta: Ne mogu da nađem miksetu.\n"
-"Provjerite da li je zvučna kartica instalirana\n"
-"i da li je učitan drajver za nju.\n"
-"Pod Linuxom vam možda treba <command>insmod</command> da biste\n"
-"učitali drajver.\n"
-"Upotrijebite <command>soundon</command> ako koristite komercijalni OSS."
-
-#: backends/mixer_alsa9.cpp:960
-msgid ""
-"You do not have permission to access the alsa mixer device.\n"
-"Please verify if all alsa devices are properly created."
-msgstr ""
-"Nemate dozvolu da pristupite alsa uređaju miksete.\n"
-"Provjerite da li su alsa uređaji pravilno napravljeni."
-
-#: backends/mixer_alsa9.cpp:964
-msgid ""
-"Alsa mixer cannot be found.\n"
-"Please check that the soundcard is installed and the\n"
-"soundcard driver is loaded.\n"
-msgstr ""
-"K‑mikseta: Ne mogu da nađem alsa miksetu.\n"
-"Provjerite da li je zvučna kartica instalirana\n"
-"i da li je učitan drajver za nju.\n"
+"Ne dozvoljava prikazivanje glavnog prozora K‑miksete, ako je K‑mikseta već u "
+"pogonu."
 
 #: apps/kmix.cpp:195
 msgid "Audio Setup"
@@ -460,141 +246,14 @@ msgstr "Pomoćni program ili nije instaliran ili ne funkcioniše."
 msgid "Error"
 msgstr "Greška"
 
-#: apps/kmix.cpp:1348 gui/dialogselectmaster.cpp:113 gui/dialogaddview.cpp:132
-#: gui/dialogchoosebackends.cpp:88
+#: apps/kmix.cpp:1348 gui/dialogchoosebackends.cpp:88
+#: gui/dialogselectmaster.cpp:113 gui/dialogaddview.cpp:132
 msgid "No sound card is installed or currently plugged in."
 msgstr "Nema nijedne instalirane niti utaknute zvučne kartice."
 
 #: apps/kmix.cpp:1361
 msgid "KDE Mixer"
 msgstr "KDE mikseta"
-
-#: apps/main.cpp:33
-msgid "KMix - KDE's full featured mini mixer"
-msgstr "K‑mikseta — KDE‑ova sveobuhvatna mini mikseta"
-
-#: apps/main.cpp:37
-msgid "KMix"
-msgstr "K‑mikseta"
-
-#: apps/main.cpp:39
-msgid "(c) 1996-2013 The KMix Authors"
-msgstr "© 1996–2013, autori K‑miksete"
-
-#: apps/main.cpp:42
-msgid "Christian Esken"
-msgstr "Kristijan Esken"
-
-#: apps/main.cpp:42
-msgid "Original author and current maintainer"
-msgstr "Prvobitni autor i trenutni održavalac"
-
-#: apps/main.cpp:43
-msgid "Colin Guthrie"
-msgstr "Kolin Gatri"
-
-#: apps/main.cpp:43
-msgid "PulseAudio support"
-msgstr "Podrška za PulseAudio"
-
-#: apps/main.cpp:44
-msgid "Helio Chissini de Castro"
-msgstr "Helio Ćisini de Kastro"
-
-#: apps/main.cpp:44
-msgid "ALSA 0.9x port"
-msgstr "Prenošenje na Alsu 0.9"
-
-#: apps/main.cpp:45
-msgid "Brian Hanson"
-msgstr "Brajan Henson"
-
-#: apps/main.cpp:45
-msgid "Solaris support"
-msgstr "Podrška za Solaris"
-
-#. i18n("Helge Deller")      , ki18n("HP/UX port"), "deller@gmx.de");
-#. The initial support was for ALSA 0.5. The new code is not based on it IIRC.
-#. i18n("Nick Lopez")        , ki18n("Initial ALSA port"), "kimo_sabe@usa.net");
-#. Credit Policy: Authors who did a discrete part, like the Dataengine, OSD, help on specific platforms or soundcards.
-#: apps/main.cpp:52
-msgid "Igor Poboiko"
-msgstr "Igor Pobojko"
-
-#: apps/main.cpp:52
-msgid "Plasma Dataengine"
-msgstr "Plasma datomotor"
-
-#: apps/main.cpp:53 apps/kmixctrl.cpp:46
-msgid "Stefan Schimanski"
-msgstr "Štefan Šimanski"
-
-#: apps/main.cpp:53
-msgid "Temporary maintainer"
-msgstr "Privremeni održavalac"
-
-#: apps/main.cpp:54
-msgid "Sebestyen Zoltan"
-msgstr "Zoltan Šebešćen"
-
-#: apps/main.cpp:54 apps/main.cpp:55
-msgid "*BSD fixes"
-msgstr "Ispravke za BSD"
-
-#: apps/main.cpp:55
-msgid "Lennart Augustsson"
-msgstr "Lenart Avgustson"
-
-#: apps/main.cpp:56
-msgid "Nadeem Hasan"
-msgstr "Nadim Hasan"
-
-#: apps/main.cpp:56
-msgid "Mute and volume preview, other fixes"
-msgstr "Isključivanje zvuka i pregled jačina, druge ispravke"
-
-#: apps/main.cpp:57
-msgid "Erwin Mascher"
-msgstr "Ervin Mašer"
-
-#: apps/main.cpp:57
-msgid "Improving support for emu10k1 based soundcards"
-msgstr "Poboljšanje podrške za zvučne kartice zasnovane na EMU10k1"
-
-#: apps/main.cpp:58
-msgid "Valentin Rusu"
-msgstr "Valanten Rizi"
-
-#: apps/main.cpp:58
-msgid "TerraTec DMX6Fire support"
-msgstr "Podrška za TerraTecov DMX 6Fire"
-
-#: apps/main.cpp:63
-msgid ""
-"Inhibits the unhiding of the KMix main window, if KMix is already running."
-msgstr ""
-"Ne dozvoljava prikazivanje glavnog prozora K‑miksete, ako je K‑mikseta već u "
-"pogonu."
-
-#: apps/kmixctrl.cpp:37
-msgid "kmixctrl - kmix volume save/restore utility"
-msgstr "K‑mikskontrola — upisivanje i obnavljanje jačina"
-
-#: apps/kmixctrl.cpp:42
-msgid "KMixCtrl"
-msgstr "K‑mikskontrola"
-
-#: apps/kmixctrl.cpp:44
-msgid "(c) 2000 by Stefan Schimanski"
-msgstr "© 2000, Štefan Šimanski"
-
-#: apps/kmixctrl.cpp:52
-msgid "Save current volumes as default"
-msgstr "Sačuvaj trenutne jačine kao podrazumijevane"
-
-#: apps/kmixctrl.cpp:54
-msgid "Restore default volumes"
-msgstr "Vrati na podrazumijevane jačine"
 
 #: core/volume.cpp:50
 msgctxt "Channel name"
@@ -653,71 +312,61 @@ msgstr "Zvučni drajveri u upotrebi:"
 msgid "Experimental multiple-Driver mode activated"
 msgstr "Aktiviran eksperimentalni režim višestrukih drajvera"
 
-#. i18n: file: kmixui.rc:10
-#. i18n: ectx: Menu (file)
-#: rc.cpp:3
-msgid "&File"
-msgstr "&Fajl"
+# >> @item mixer device name
+#: core/mixdevice.cpp:133 backends/mixer_oss.cpp:67 backends/mixer_oss.cpp:68
+msgid "unknown"
+msgstr "nepoznato"
 
-#. i18n: file: kmixui.rc:21
-#. i18n: ectx: Menu (help)
-#: rc.cpp:6
-msgid "&Help"
-msgstr "&Pomoć"
+# >> @title:window
+#: gui/viewbase.cpp:102 gui/dialogviewconfiguration.cpp:161
+msgid "Configure Channels"
+msgstr "Podešavanje kanala"
 
-#. i18n: file: colorwidget.ui:20
-#. i18n: ectx: property (text), widget (QCheckBox, customColors)
-#: rc.cpp:9
-msgid "&Use custom colors"
-msgstr "&Posebne boje"
+#: gui/viewbase.cpp:163
+msgid "&Channels"
+msgstr "&Kanali"
 
-#. i18n: file: colorwidget.ui:30
-#. i18n: ectx: property (title), widget (QGroupBox, activeColors)
-#: rc.cpp:12
-msgid "Active"
-msgstr "Aktivno"
+#: gui/viewbase.cpp:216
+msgid "Device Settings"
+msgstr "Postavke uređaja"
 
-#. i18n: file: colorwidget.ui:52
-#. i18n: ectx: property (text), widget (QLabel, TextLabel3)
-#: rc.cpp:15
-msgid "&Silent:"
-msgstr "&Utišano:"
+#: gui/dialogviewconfiguration.cpp:175
+msgid "Configuration of the channels. Drag icon to update."
+msgstr "Podešavanje kanala. Prevucite ikonu da ažurirate."
 
-#. i18n: file: colorwidget.ui:96
-#. i18n: ectx: property (text), widget (QLabel, labelLoad)
-#: rc.cpp:18
-msgid "&Loud:"
-msgstr "&Glasno:"
+#: gui/dialogviewconfiguration.cpp:267 gui/dialogviewconfiguration.cpp:365
+msgid "Visible channels"
+msgstr "Vidljivi kanali"
 
-#. i18n: file: colorwidget.ui:112
-#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
-#: rc.cpp:21
-msgid "&Background:"
-msgstr "&Pozadina:"
+#: gui/dialogviewconfiguration.cpp:270 gui/dialogviewconfiguration.cpp:366
+msgid "Available channels"
+msgstr "Dostupni kanali"
 
-#. i18n: file: colorwidget.ui:131
-#. i18n: ectx: property (title), widget (QGroupBox, mutedColors)
-#: rc.cpp:24
-msgid "Muted"
-msgstr "Isključeno"
+#: gui/dialogviewconfiguration.cpp:363
+msgid "Show the selected channel"
+msgstr "Prikaži izabrani kanal"
 
-#. i18n: file: colorwidget.ui:143
-#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
-#: rc.cpp:27
-msgid "Lou&d:"
-msgstr "&Glasno:"
+#: gui/dialogviewconfiguration.cpp:364
+msgid "Hide the selected channel"
+msgstr "Sakrij izabrani kanal"
 
-#. i18n: file: colorwidget.ui:159
-#. i18n: ectx: property (text), widget (QLabel, TextLabel8)
-#: rc.cpp:30
-msgid "Backgrou&nd:"
-msgstr "&Pozadina:"
+# >> @option:check
+#: gui/mdwenum.cpp:60 gui/mdwslider.cpp:109
+msgid "&Hide"
+msgstr "&Sakriveno"
 
-#. i18n: file: colorwidget.ui:175
-#. i18n: ectx: property (text), widget (QLabel, TextLabel7)
-#: rc.cpp:33
-msgid "Silen&t:"
-msgstr "&Utišano:"
+#: gui/mdwenum.cpp:63 gui/mdwslider.cpp:132
+msgid "C&onfigure Shortcuts..."
+msgstr "P&odesi prečice..."
+
+#: gui/dialogchoosebackends.cpp:81
+msgid "Select the Mixers to display in the sound menu"
+msgstr "Izaberite miksete za prikaz u meniju zvuka."
+
+# >> @title:window
+#: gui/dialogchoosebackends.cpp:104
+msgid "Select Mixers"
+msgstr "Izbor mikseta"
 
 # >> @title:window
 #: gui/dialogselectmaster.cpp:42 gui/dialogselectmaster.cpp:155
@@ -761,6 +410,53 @@ msgstr "Mikseta:"
 msgid "Select the design for the new view:"
 msgstr "Izgled novog prikaza:"
 
+# >> @option:check
+#: gui/mdwslider.cpp:103
+msgid "&Split Channels"
+msgstr "&Razdvojeni kanali"
+
+# >> @option:check
+#: gui/mdwslider.cpp:116
+msgid "&Muted"
+msgstr "&Isključeno"
+
+# >> @option:check
+#: gui/mdwslider.cpp:122
+msgid "Set &Record Source"
+msgstr "&Izvor za snimanje"
+
+#: gui/mdwslider.cpp:127
+msgid "Mo&ve"
+msgstr "&Premesti"
+
+#: gui/mdwslider.cpp:181
+msgid "Toggle Mute"
+msgstr "Isključeno/uključeno"
+
+#: gui/mdwslider.cpp:294
+msgid "capture"
+msgstr "hvatanje"
+
+#: gui/mdwslider.cpp:350
+msgid "Capture/Uncapture %1"
+msgstr "Uhvati/otpusti %1"
+
+#: gui/mdwslider.cpp:351
+msgid "Mute/Unmute %1"
+msgstr "Isključi/uključi %1"
+
+#: gui/mdwslider.cpp:581
+msgid "Capture"
+msgstr "Hvatanje"
+
+#: gui/mdwslider.cpp:618
+msgid "%1 (capture)"
+msgstr "%1 (hvatanje)"
+
+#: gui/mdwslider.cpp:1216
+msgid "Automatic According to Category"
+msgstr "Automatsko prema kategoriji"
+
 #: gui/kmixdockwidget.cpp:58
 msgid "Volume Control"
 msgstr "Kontrola jačine"
@@ -780,15 +476,6 @@ msgstr "Jačina na %1%"
 #: gui/kmixdockwidget.cpp:178
 msgid " (Muted)"
 msgstr " (isključen)"
-
-# >> @option:check
-#: gui/mdwenum.cpp:60 gui/mdwslider.cpp:109
-msgid "&Hide"
-msgstr "&Sakriveno"
-
-#: gui/mdwenum.cpp:63 gui/mdwslider.cpp:132
-msgid "C&onfigure Shortcuts..."
-msgstr "P&odesi prečice..."
 
 # >! Contexts.
 #: gui/kmixprefdlg.cpp:58
@@ -924,53 +611,6 @@ msgstr "Mikseta"
 msgid "Load volume profile %1"
 msgstr "Učitaj profil jačine %1"
 
-# >> @option:check
-#: gui/mdwslider.cpp:103
-msgid "&Split Channels"
-msgstr "&Razdvojeni kanali"
-
-# >> @option:check
-#: gui/mdwslider.cpp:116
-msgid "&Muted"
-msgstr "&Isključeno"
-
-# >> @option:check
-#: gui/mdwslider.cpp:122
-msgid "Set &Record Source"
-msgstr "&Izvor za snimanje"
-
-#: gui/mdwslider.cpp:127
-msgid "Mo&ve"
-msgstr "&Premesti"
-
-#: gui/mdwslider.cpp:181
-msgid "Toggle Mute"
-msgstr "Isključeno/uključeno"
-
-#: gui/mdwslider.cpp:294
-msgid "capture"
-msgstr "hvatanje"
-
-#: gui/mdwslider.cpp:350
-msgid "Capture/Uncapture %1"
-msgstr "Uhvati/otpusti %1"
-
-#: gui/mdwslider.cpp:351
-msgid "Mute/Unmute %1"
-msgstr "Isključi/uključi %1"
-
-#: gui/mdwslider.cpp:581
-msgid "Capture"
-msgstr "Hvatanje"
-
-#: gui/mdwslider.cpp:618
-msgid "%1 (capture)"
-msgstr "%1 (hvatanje)"
-
-#: gui/mdwslider.cpp:1216
-msgid "Automatic According to Category"
-msgstr "Automatsko prema kategoriji"
-
 #: gui/viewsliders.cpp:226
 msgid "Nothing is capturing audio."
 msgstr "Ništa ne hvata audio."
@@ -987,44 +627,404 @@ msgstr "Nema uređaja za hvatanje."
 msgid "No playback devices."
 msgstr "Nema uređaja za puštanje."
 
-#: gui/dialogchoosebackends.cpp:81
-msgid "Select the Mixers to display in the sound menu"
-msgstr "Izaberite miksete za prikaz u meniju zvuka."
+#: backends/mixer_backend_i18n.cpp:24
+msgid "Recording level of the microphone input."
+msgstr "Nivo snimanja na ulazu mikrofona."
 
-# >> @title:window
-#: gui/dialogchoosebackends.cpp:104
-msgid "Select Mixers"
-msgstr "Izbor mikseta"
+#: backends/mixer_backend_i18n.cpp:25
+msgid ""
+"Controls the volume of the front speakers or all speakers (depending on your "
+"soundcard model). If you use a digital output, you might need to also use "
+"other controls like ADC or DAC. For headphones, soundcards often supply a "
+"Headphone control."
+msgstr ""
+"Upravlja jačinom prednjih ili svih zvučnika (u zavisnosti od modela zvučne "
+"kartice). Ako koristite digitalni izlaz, možda ćete morati da koristite i "
+"kontrole ADC‑a ili DAC‑a. Zvučne kartice obično daju i kontrolu za slušalice."
 
-# >> @title:window
-#: gui/dialogviewconfiguration.cpp:161 gui/viewbase.cpp:102
-msgid "Configure Channels"
-msgstr "Podešavanje kanala"
+#: backends/mixer_backend_i18n.cpp:26
+msgid ""
+"Most media, such as MP3s or Videos, are played back using the PCM channel. "
+"As such, the playback volume of such media is controlled by both this and "
+"the Master or Headphone channels."
+msgstr ""
+"Većina medijuma, poput MP3 numera ili filmova, pušta se preko PCM kanala. "
+"Zato se jačinom zvuka za te medijume upravlja i preko ovog i preko glavnog "
+"kanala (ili kanala za slušalice)."
 
-#: gui/dialogviewconfiguration.cpp:175
-msgid "Configuration of the channels. Drag icon to update."
-msgstr "Podešavanje kanala. Prevucite ikonu da ažurirate."
+#: backends/mixer_backend_i18n.cpp:27
+msgid ""
+"Controls the headphone volume. Some soundcards include a switch that must be "
+"manually activated to enable the headphone output."
+msgstr ""
+"Upravlja jačinom zvuka na slušalicama. Neke zvučne kartice imaju prekidač "
+"koji treba ručno aktivirati za izlaz na slušalice."
 
-#: gui/dialogviewconfiguration.cpp:267 gui/dialogviewconfiguration.cpp:365
-msgid "Visible channels"
-msgstr "Vidljivi kanali"
+#: backends/mixer_backend_i18n.cpp:28
+msgid "---"
+msgstr "---"
 
-#: gui/dialogviewconfiguration.cpp:270 gui/dialogviewconfiguration.cpp:366
-msgid "Available channels"
-msgstr "Dostupni kanali"
+#: backends/mixer_pulse.cpp:340 backends/mixer_pulse.cpp:399
+msgid "Unknown Application"
+msgstr "Nepoznat program"
 
-#: gui/dialogviewconfiguration.cpp:363
-msgid "Show the selected channel"
-msgstr "Prikaži izabrani kanal"
+#: backends/mixer_pulse.cpp:447 backends/mixer_pulse.cpp:483
+msgid "Event Sounds"
+msgstr "Zvuci događaja"
 
-#: gui/dialogviewconfiguration.cpp:364
-msgid "Hide the selected channel"
-msgstr "Sakrij izabrani kanal"
+# >> @item mixer device name
+#: backends/mixer_pulse.cpp:1101
+msgid "Playback Devices"
+msgstr "uređaji za puštanje"
 
-#: gui/viewbase.cpp:163
-msgid "&Channels"
-msgstr "&Kanali"
+# >> @item mixer device name
+#: backends/mixer_pulse.cpp:1109
+msgid "Capture Devices"
+msgstr "uređaji za hvatanje"
 
-#: gui/viewbase.cpp:216
-msgid "Device Settings"
-msgstr "Postavke uređaja"
+# >> @item mixer device name
+#: backends/mixer_pulse.cpp:1117 backends/mixer_mpris2.cpp:52
+msgid "Playback Streams"
+msgstr "tokovi puštanja"
+
+# >> @item mixer device name
+#: backends/mixer_pulse.cpp:1128
+msgid "Capture Streams"
+msgstr "tokovi hvatanja"
+
+#: backends/mixer_pulse.cpp:1229
+msgid "Volume Control Feedback Sound"
+msgstr "Odzivni zvuk kontrole jačine"
+
+#: backends/mixer_backend.cpp:306
+msgid ""
+"kmix:You do not have permission to access the mixer device.\n"
+"Please check your operating systems manual to allow the access."
+msgstr ""
+"K‑mikseta: Nemate dozvolu da pristupite uređaju miksete.\n"
+"Pogledajte u uputstvu operativnog sistema kako da omogućite pristup."
+
+#: backends/mixer_backend.cpp:310
+msgid "kmix: Could not write to mixer."
+msgstr "K‑mikseta: Ne mogu da pišem u miksetu."
+
+#: backends/mixer_backend.cpp:313
+msgid "kmix: Could not read from mixer."
+msgstr "K‑mikseta: Ne mogu da čitam iz miksete."
+
+#: backends/mixer_backend.cpp:316
+msgid ""
+"kmix: Mixer cannot be found.\n"
+"Please check that the soundcard is installed and that\n"
+"the soundcard driver is loaded.\n"
+msgstr ""
+"K‑mikseta: Ne mogu da nađem miksetu.\n"
+"Provjerite da li je zvučna kartica instalirana\n"
+"i da li je učitan drajver za nju.\n"
+
+#: backends/mixer_backend.cpp:321
+msgid "kmix: Unknown error. Please report how you produced this error."
+msgstr ""
+"K‑mikseta: Nepoznata greška. Molimo vas da prijavite kako ste je izazvali."
+
+#: backends/mixer_alsa9.cpp:960
+msgid ""
+"You do not have permission to access the alsa mixer device.\n"
+"Please verify if all alsa devices are properly created."
+msgstr ""
+"Nemate dozvolu da pristupite alsa uređaju miksete.\n"
+"Provjerite da li su alsa uređaji pravilno napravljeni."
+
+#: backends/mixer_alsa9.cpp:964
+msgid ""
+"Alsa mixer cannot be found.\n"
+"Please check that the soundcard is installed and the\n"
+"soundcard driver is loaded.\n"
+msgstr ""
+"K‑mikseta: Ne mogu da nađem alsa miksetu.\n"
+"Provjerite da li je zvučna kartica instalirana\n"
+"i da li je učitan drajver za nju.\n"
+
+# >> @item mixer device name
+#: backends/mixer_sun.cpp:68
+msgid "Master Volume"
+msgstr "glavna jačina"
+
+# >> @item mixer device name
+#: backends/mixer_sun.cpp:69
+msgid "Internal Speaker"
+msgstr "unutrašnji biper"
+
+# >> @item mixer device name
+#: backends/mixer_sun.cpp:70
+msgid "Headphone"
+msgstr "slušalice"
+
+# >> @item mixer device name
+#: backends/mixer_sun.cpp:71
+msgid "Line Out"
+msgstr "izlazna linija"
+
+# >> @item mixer device name
+#: backends/mixer_sun.cpp:72
+msgid "Record Monitor"
+msgstr "monitor snimanja"
+
+# >> @item mixer device name
+#: backends/mixer_sun.cpp:73 backends/mixer_oss.cpp:60
+msgid "Microphone"
+msgstr "mikrofon"
+
+# >> @item mixer device name
+#: backends/mixer_sun.cpp:74
+msgid "Line In"
+msgstr "ulazna linija"
+
+# >> @item mixer device name
+#: backends/mixer_sun.cpp:75 backends/mixer_oss.cpp:60
+msgid "CD"
+msgstr "CD"
+
+#: backends/mixer_sun.cpp:240
+msgid ""
+"kmix: You do not have permission to access the mixer device.\n"
+"Ask your system administrator to fix /dev/audioctl to allow access."
+msgstr ""
+"K‑mikseta: Nemate dozvolu da pristupite uređaju miksete.\n"
+"Tražite sistem-administratoru da omogući pristup <icode>/dev/audioctl</"
+"icode>."
+
+#: backends/mixer_oss4.cpp:496 backends/mixer_oss.cpp:234
+msgid ""
+"kmix: You do not have permission to access the mixer device.\n"
+"Login as root and do a 'chmod a+rw /dev/mixer*' to allow the access."
+msgstr ""
+"K‑mikseta: Nemate dozvolu da pristup uređaju miksete.\n"
+"Prijavite se kao <icode>root</icode> i izvršite <icode>chmod a+rw /dev/"
+"mixer*</icode> da biste omogućili pristup."
+
+#: backends/mixer_oss4.cpp:500
+msgid ""
+"kmix: Mixer cannot be found.\n"
+"Please check that the soundcard is installed and the\n"
+"soundcard driver is loaded.\n"
+"On Linux you might need to use 'insmod' to load the driver.\n"
+"Use 'soundon' when using OSS4 from 4front."
+msgstr ""
+"K‑mikseta: Ne mogu da nađem miksetu.\n"
+"Provjerite da li je zvučna kartica instalirana\n"
+"i da li je učitan drajver za nju.\n"
+"Pod Linuxom vam možda treba <command>insmod</command> da biste\n"
+"učitali drajver.\n"
+"Upotrijebite <command>soundon</command> ako koristite OSS 4 od 4Fronta."
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:58
+msgid "Volume"
+msgstr "jačina"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:58
+msgid "Bass"
+msgstr "bas"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:58
+msgid "Treble"
+msgstr "sopran"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:59
+msgid "Synth"
+msgstr "sintisajzer"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:59
+msgid "Pcm"
+msgstr "PCM"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:59
+msgid "Speaker"
+msgstr "biper"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:60
+msgid "Line"
+msgstr "linija"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:61
+msgid "Mix"
+msgstr "miks"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:61
+msgid "Pcm2"
+msgstr "PCM 2"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:61
+msgid "RecMon"
+msgstr "monitor snimanja"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:62
+msgid "IGain"
+msgstr "ulazno pojačanje"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:62
+msgid "OGain"
+msgstr "izlazno pojačanje"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:62
+msgid "Line1"
+msgstr "linija 1"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:63
+msgid "Line2"
+msgstr "linija 2"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:63
+msgid "Line3"
+msgstr "linija 3"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:63
+msgid "Digital1"
+msgstr "digitalni 1"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:64
+msgid "Digital2"
+msgstr "digitalni 2"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:64
+msgid "Digital3"
+msgstr "digitalni 3"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:64
+msgid "PhoneIn"
+msgstr "telefonski ulaz"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:65
+msgid "PhoneOut"
+msgstr "telefonski izlaz"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:65
+msgid "Video"
+msgstr "video"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:65
+msgid "Radio"
+msgstr "radio"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:66
+msgid "Monitor"
+msgstr "monitor"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:66
+msgid "3D-depth"
+msgstr "3D dubina"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:66
+msgid "3D-center"
+msgstr "3D centar"
+
+# >> @item mixer device name
+#: backends/mixer_oss.cpp:68
+msgid "unused"
+msgstr "nekorišćeno"
+
+#: backends/mixer_oss.cpp:238
+msgid ""
+"kmix: Mixer cannot be found.\n"
+"Please check that the soundcard is installed and the\n"
+"soundcard driver is loaded.\n"
+"On Linux you might need to use 'insmod' to load the driver.\n"
+"Use 'soundon' when using commercial OSS."
+msgstr ""
+"K‑mikseta: Ne mogu da nađem miksetu.\n"
+"Provjerite da li je zvučna kartica instalirana\n"
+"i da li je učitan drajver za nju.\n"
+"Pod Linuxom vam možda treba <command>insmod</command> da biste\n"
+"učitali drajver.\n"
+"Upotrijebite <command>soundon</command> ako koristite komercijalni OSS."
+
+#. i18n: file: kmixui.rc:10
+#. i18n: ectx: Menu (file)
+#: rc.cpp:3
+msgid "&File"
+msgstr "&Fajl"
+
+#. i18n: file: kmixui.rc:21
+#. i18n: ectx: Menu (help)
+#: rc.cpp:6
+msgid "&Help"
+msgstr "&Pomoć"
+
+#. i18n: file: colorwidget.ui:20
+#. i18n: ectx: property (text), widget (QCheckBox, customColors)
+#: rc.cpp:9
+msgid "&Use custom colors"
+msgstr "&Posebne boje"
+
+#. i18n: file: colorwidget.ui:30
+#. i18n: ectx: property (title), widget (QGroupBox, activeColors)
+#: rc.cpp:12
+msgid "Active"
+msgstr "Aktivno"
+
+#. i18n: file: colorwidget.ui:52
+#. i18n: ectx: property (text), widget (QLabel, TextLabel3)
+#: rc.cpp:15
+msgid "&Silent:"
+msgstr "&Utišano:"
+
+#. i18n: file: colorwidget.ui:96
+#. i18n: ectx: property (text), widget (QLabel, labelLoad)
+#: rc.cpp:18
+msgid "&Loud:"
+msgstr "&Glasno:"
+
+#. i18n: file: colorwidget.ui:112
+#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
+#: rc.cpp:21
+msgid "&Background:"
+msgstr "&Pozadina:"
+
+#. i18n: file: colorwidget.ui:131
+#. i18n: ectx: property (title), widget (QGroupBox, mutedColors)
+#: rc.cpp:24
+msgid "Muted"
+msgstr "Isključeno"
+
+#. i18n: file: colorwidget.ui:143
+#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
+#: rc.cpp:27
+msgid "Lou&d:"
+msgstr "&Glasno:"
+
+#. i18n: file: colorwidget.ui:159
+#. i18n: ectx: property (text), widget (QLabel, TextLabel8)
+#: rc.cpp:30
+msgid "Backgrou&nd:"
+msgstr "&Pozadina:"
+
+#. i18n: file: colorwidget.ui:175
+#. i18n: ectx: property (text), widget (QLabel, TextLabel7)
+#: rc.cpp:33
+msgid "Silen&t:"
+msgstr "&Utišano:"

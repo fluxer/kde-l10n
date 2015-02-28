@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okular_dvi\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2014-12-09 18:22+0000\n"
+"POT-Creation-Date: 2015-02-28 21:38+0000\n"
 "PO-Revision-Date: 2014-08-13 03:16+0400\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -26,6 +26,111 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+
+#: TeXFontDefinition.cpp:107
+msgid "Cannot find font %1, file %2."
+msgstr "Невозможно открыть шрифт %1 из файла %2."
+
+#: TeXFontDefinition.cpp:123
+msgid "Checksum mismatch for font file %1"
+msgstr "Несовпадение контрольной суммы файла шрифта %1"
+
+#: TeXFontDefinition.cpp:171
+msgid "Cannot recognize format for font file %1"
+msgstr "Невозможно определить формат файла шрифта %1"
+
+#: dviRenderer_prescan.cpp:86
+msgid "Embedding %1"
+msgstr "Внедрение %1"
+
+#: dviRenderer_prescan.cpp:101
+msgid ""
+"Page %1: The PDF file <strong>%2</strong> could not be converted to "
+"PostScript.<br>"
+msgstr ""
+"Страница %1: невозможно преобразовать файл PDF <strong>%2</strong> в "
+"PostScript.<br>"
+
+#: dviRenderer_prescan.cpp:103
+msgid ""
+"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
+msgstr "Страница %1: файл PostScript <strong>%2</strong> не найден.<br>"
+
+#: dviRenderer_prescan.cpp:252
+msgid "The papersize data '%1' could not be parsed."
+msgstr "Невозможно обработать данные о размере страницы %1."
+
+#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
+msgid "The DVI code referred to font #%1, which was not previously defined."
+msgstr "Код DVI ссылается на шрифт №%1, который не был ранее определён."
+
+#: fontpool.cpp:209
+msgid ""
+"<qt><p>Okular was not able to locate all the font files which are necessary "
+"to display the current DVI file. Your document might be unreadable.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Невозможно найти все файлы шрифтов, которые необходимы для показа "
+"данного файла Okular. Возможно, документ будет нечитаем.</"
+"p><p><small><b>Значение переменной PATH:</b> %1</small></p><p><small>%2</"
+"small></p></qt>"
+
+#: fontpool.cpp:280
+msgid ""
+"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
+"font files could not be located, and your document might be unreadable.<br/"
+">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
+"your system, or it cannot be found in the current search path.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Невозможно запустить программу <em>kpsewhich</em>. Некоторые шрифты, "
+"используемые в документе, могут быть не найдены и документ может быть "
+"нечитаем.<br/>Возможная причина: программа <em>kpsewhich</em> не установлена "
+"на компьютере или недоступна через пути поиска программ.</"
+"p><p><small>Значение переменной <b>PATH:</b> %1</small></p><p><small>%2</"
+"small></p></qt>"
+
+#: fontpool.cpp:299
+msgid ""
+"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
+"error %2). As a result, some font files could not be located, and your "
+"document might be unreadable.</qt>"
+msgstr ""
+"<qt>Генерация шрифта с помощью <em>kpsewhich</em> была прервана (код "
+"возврата %1, ошибка %2). Как результат этого, некоторые файлы не созданы и "
+"документ может быть нечитаемым.</qt>"
+
+#: fontpool.cpp:477
+msgid "Currently generating %1 at %2 dpi..."
+msgstr "Создание %1 с %2 dpi..."
+
+#: TeXFont_PK.cpp:90
+msgid "Cannot open font file %1."
+msgstr "Невозможно открыть файл шрифта %1."
+
+#: TeXFont_PK.cpp:139
+msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
+msgstr "Символ %1 не определён в шрифте %2"
+
+#: TeXFont_PK.cpp:455
+msgid "Unexpected %1 in PK file %2"
+msgstr "Неизвестный элемент %1 в файле шрифта %2"
+
+#: TeXFont_PK.cpp:522
+msgid "The character %1 is too large in file %2"
+msgstr "Символ %1 в файле %2 слишком велик"
+
+#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
+msgid "Wrong number of bits stored:  char. %1, font %2"
+msgstr "Записано неверное число бит: символ %1, шрифт %2"
+
+#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
+msgid "Bad pk file (%1), too many bits"
+msgstr "Неверный файл шрифта pk (%1), слишком много бит"
+
+#: TeXFont_PK.cpp:742
+msgid "Font has non-square aspect ratio "
+msgstr "Шрифт имеет не равное 1 отношение ширины и высоты"
 
 #: psgs.cpp:263
 msgid ""
@@ -70,6 +175,42 @@ msgstr ""
 "драйверов устройств, доступных Ghostview. Okular может использовать драйвера "
 "png256, jpeg и pnm. Для того, чтобы включение поддержки PostScript вступило "
 "в силу, вам необходимо перезапустить операцию.</p></qt>"
+
+#: pageSize.cpp:324
+msgid "portrait"
+msgstr "книжная ориентация"
+
+#: pageSize.cpp:326
+msgid "landscape"
+msgstr "альбомная ориентация"
+
+#: dviRenderer_draw.cpp:261
+msgid "The DVI code set a character of an unknown font."
+msgstr "Код DVI содержит символ неизвестного шрифта."
+
+#: dviRenderer_draw.cpp:375
+msgid "The stack was not empty when the EOP command was encountered."
+msgstr "При интерпретации команды EOP стек не был пуст."
+
+#: dviRenderer_draw.cpp:387
+msgid "The stack was empty when a POP command was encountered."
+msgstr "При интерпретации команды POP стек был пуст."
+
+#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
+msgid "The DVI code referred to a font which was not previously defined."
+msgstr "Код DVI ссылается на шрифт, который не был ранее определён."
+
+#: dviRenderer_draw.cpp:570
+msgid "An illegal command was encountered."
+msgstr "Обнаружена неизвестная команда."
+
+#: dviRenderer_draw.cpp:575
+msgid "The unknown op-code %1 was encountered."
+msgstr "Обнаружен неизвестный код операции %1."
+
+#: vf.cpp:182
+msgid "Wrong command byte found in VF macro list: %1"
+msgstr "Недопустимый командный байт в списке макросов виртуального шрифта: %1"
 
 #: dviFile.cpp:111
 msgid "The DVI file does not start with the preamble."
@@ -142,134 +283,6 @@ msgstr ""
 "программы <strong>pdf2ps</strong>, используемой Okular:</p><p><strong>%2</"
 "strong></p></qt>"
 
-#: special.cpp:37
-msgid "That makes 25 errors. Further error messages will not be printed."
-msgstr ""
-"Произошло более 25 ошибок. Сообщения о последующих ошибках печататься не "
-"будут."
-
-#: special.cpp:218
-msgid ""
-"Error in DVIfile '%1', page %2. Color pop command issued when the color "
-"stack is empty."
-msgstr ""
-"Ошибка в файле DVI «%1», страница %2. Вызвана команда pop для цвета при "
-"отсутствии цветов в стеке."
-
-#: special.cpp:303
-msgid ""
-"Malformed parameter in the epsf special command.\n"
-"Expected a float to follow %1 in %2"
-msgstr ""
-"Недопустимый параметр в специальной команде epsf.\n"
-"Требуется указать вещественное число за %1 в %2"
-
-#: special.cpp:434
-msgid ""
-"File not found: \n"
-" %1"
-msgstr ""
-"Файл не найден: \n"
-" %1"
-
-#: special.cpp:681
-msgid ""
-"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
-"special."
-msgstr ""
-"Ошибка в файле DVI «%1», страница %2. Невозможно определить угол поворота "
-"текста."
-
-#: special.cpp:704
-msgid "The special command '%1' is not implemented."
-msgstr "Специальная команда «%1» не поддерживается."
-
-#: util.cpp:77
-msgid ""
-"Fatal error.\n"
-"\n"
-msgstr ""
-"Неисправимая ошибка.\n"
-"\n"
-
-#: util.cpp:79
-msgid ""
-"\n"
-"\n"
-"This probably means that either you found a bug in Okular,\n"
-"or that the DVI file, or auxiliary files (such as font files, \n"
-"or virtual font files) were really badly broken.\n"
-"Okular will abort after this message. If you believe that you \n"
-"found a bug, or that Okular should behave better in this situation\n"
-"please report the problem."
-msgstr ""
-"\n"
-"\n"
-"Скорее всего это значит, что либо вы обнаружили ошибку в Okular,\n"
-"либо что файл DVI или дополнительные файлы (файлы шрифтов или \n"
-"файлы виртуальных шрифтов) были серьёзно повреждены.\n"
-"После закрытия окна с этим сообщением произойдёт аварийное\n"
-"завершение работы Okular. Если вы уверены в том, что нашли \n"
-"ошибку или что Okular следует реагировать на эту ситуацию по другому,\n"
-"сообщите нам о вашей проблеме."
-
-#: dviRenderer_prescan.cpp:86
-msgid "Embedding %1"
-msgstr "Внедрение %1"
-
-#: dviRenderer_prescan.cpp:101
-msgid ""
-"Page %1: The PDF file <strong>%2</strong> could not be converted to "
-"PostScript.<br>"
-msgstr ""
-"Страница %1: невозможно преобразовать файл PDF <strong>%2</strong> в "
-"PostScript.<br>"
-
-#: dviRenderer_prescan.cpp:103
-msgid ""
-"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
-msgstr "Страница %1: файл PostScript <strong>%2</strong> не найден.<br>"
-
-#: dviRenderer_prescan.cpp:252
-msgid "The papersize data '%1' could not be parsed."
-msgstr "Невозможно обработать данные о размере страницы %1."
-
-#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
-msgid "The DVI code referred to font #%1, which was not previously defined."
-msgstr "Код DVI ссылается на шрифт №%1, который не был ранее определён."
-
-#: dviRenderer.cpp:231 dviRenderer.cpp:468
-msgid "File corruption. %1"
-msgstr "Файл повреждён. %1"
-
-#: dviRenderer.cpp:362
-msgid "Not all PostScript files could be embedded into your document. %1"
-msgstr "Не все файлы PostScript могут быть встроены в этот документ. %1"
-
-#: dviRenderer.cpp:365
-msgid "All external PostScript files were embedded into your document."
-msgstr "Все внешние файлы PostScript были встроены в этот документ."
-
-#: dviRenderer.cpp:453
-msgid "The specified file '%1' does not exist."
-msgstr "Указанный файл «%1» не существует."
-
-#: dviRenderer.cpp:612
-msgid ""
-"You have asked Okular to locate the place in the DVI file which corresponds "
-"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
-"contain the necessary source file information. "
-msgstr ""
-"Не удалось найти участок документа, связанный со строкой %1 в файле TeX %2. "
-"Скорее всего, файл DVI не содержит информацию об исходном файле. "
-
-#: dviRenderer.cpp:652
-msgid ""
-"Okular was not able to locate the place in the DVI file which corresponds to "
-"line %1 in the TeX-file %2."
-msgstr ""
-"Не удалось найти участок документа, связанный со строкой %1 в файле TeX %2."
-
 #: TeXFont_PFB.cpp:42
 msgid ""
 "The font file %1 could be opened and read, but its font format is "
@@ -308,73 +321,66 @@ msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
 msgstr ""
 "Программа FreeType не может загрузить параметры глифа №%1 из файла шрифта %2."
 
-#: TeXFontDefinition.cpp:107
-msgid "Cannot find font %1, file %2."
-msgstr "Невозможно открыть шрифт %1 из файла %2."
+#: dviRenderer.cpp:231 dviRenderer.cpp:468
+msgid "File corruption. %1"
+msgstr "Файл повреждён. %1"
 
-#: TeXFontDefinition.cpp:123
-msgid "Checksum mismatch for font file %1"
-msgstr "Несовпадение контрольной суммы файла шрифта %1"
+#: dviRenderer.cpp:362
+msgid "Not all PostScript files could be embedded into your document. %1"
+msgstr "Не все файлы PostScript могут быть встроены в этот документ. %1"
 
-#: TeXFontDefinition.cpp:171
-msgid "Cannot recognize format for font file %1"
-msgstr "Невозможно определить формат файла шрифта %1"
+#: dviRenderer.cpp:365
+msgid "All external PostScript files were embedded into your document."
+msgstr "Все внешние файлы PostScript были встроены в этот документ."
 
-#: dviRenderer_draw.cpp:261
-msgid "The DVI code set a character of an unknown font."
-msgstr "Код DVI содержит символ неизвестного шрифта."
+#: dviRenderer.cpp:453
+msgid "The specified file '%1' does not exist."
+msgstr "Указанный файл «%1» не существует."
 
-#: dviRenderer_draw.cpp:375
-msgid "The stack was not empty when the EOP command was encountered."
-msgstr "При интерпретации команды EOP стек не был пуст."
+#: dviRenderer.cpp:612
+msgid ""
+"You have asked Okular to locate the place in the DVI file which corresponds "
+"to line %1 in the TeX-file %2. It seems, however, that the DVI file does not "
+"contain the necessary source file information. "
+msgstr ""
+"Не удалось найти участок документа, связанный со строкой %1 в файле TeX %2. "
+"Скорее всего, файл DVI не содержит информацию об исходном файле. "
 
-#: dviRenderer_draw.cpp:387
-msgid "The stack was empty when a POP command was encountered."
-msgstr "При интерпретации команды POP стек был пуст."
+#: dviRenderer.cpp:652
+msgid ""
+"Okular was not able to locate the place in the DVI file which corresponds to "
+"line %1 in the TeX-file %2."
+msgstr ""
+"Не удалось найти участок документа, связанный со строкой %1 в файле TeX %2."
 
-#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
-msgid "The DVI code referred to a font which was not previously defined."
-msgstr "Код DVI ссылается на шрифт, который не был ранее определён."
+#: util.cpp:77
+msgid ""
+"Fatal error.\n"
+"\n"
+msgstr ""
+"Неисправимая ошибка.\n"
+"\n"
 
-#: dviRenderer_draw.cpp:570
-msgid "An illegal command was encountered."
-msgstr "Обнаружена неизвестная команда."
-
-#: dviRenderer_draw.cpp:575
-msgid "The unknown op-code %1 was encountered."
-msgstr "Обнаружен неизвестный код операции %1."
-
-#: vf.cpp:182
-msgid "Wrong command byte found in VF macro list: %1"
-msgstr "Недопустимый командный байт в списке макросов виртуального шрифта: %1"
-
-#: TeXFont_PK.cpp:90
-msgid "Cannot open font file %1."
-msgstr "Невозможно открыть файл шрифта %1."
-
-#: TeXFont_PK.cpp:139
-msgid "TexFont_PK::operator[]: Character %1 not defined in font %2"
-msgstr "Символ %1 не определён в шрифте %2"
-
-#: TeXFont_PK.cpp:455
-msgid "Unexpected %1 in PK file %2"
-msgstr "Неизвестный элемент %1 в файле шрифта %2"
-
-#: TeXFont_PK.cpp:522
-msgid "The character %1 is too large in file %2"
-msgstr "Символ %1 в файле %2 слишком велик"
-
-#: TeXFont_PK.cpp:623 TeXFont_PK.cpp:709
-msgid "Wrong number of bits stored:  char. %1, font %2"
-msgstr "Записано неверное число бит: символ %1, шрифт %2"
-
-#: TeXFont_PK.cpp:625 TeXFont_PK.cpp:711
-msgid "Bad pk file (%1), too many bits"
-msgstr "Неверный файл шрифта pk (%1), слишком много бит"
-
-#: TeXFont_PK.cpp:742
-msgid "Font has non-square aspect ratio "
-msgstr "Шрифт имеет не равное 1 отношение ширины и высоты"
+#: util.cpp:79
+msgid ""
+"\n"
+"\n"
+"This probably means that either you found a bug in Okular,\n"
+"or that the DVI file, or auxiliary files (such as font files, \n"
+"or virtual font files) were really badly broken.\n"
+"Okular will abort after this message. If you believe that you \n"
+"found a bug, or that Okular should behave better in this situation\n"
+"please report the problem."
+msgstr ""
+"\n"
+"\n"
+"Скорее всего это значит, что либо вы обнаружили ошибку в Okular,\n"
+"либо что файл DVI или дополнительные файлы (файлы шрифтов или \n"
+"файлы виртуальных шрифтов) были серьёзно повреждены.\n"
+"После закрытия окна с этим сообщением произойдёт аварийное\n"
+"завершение работы Okular. Если вы уверены в том, что нашли \n"
+"ошибку или что Okular следует реагировать на эту ситуацию по другому,\n"
+"сообщите нам о вашей проблеме."
 
 #: generator_dvi.cpp:54
 msgid "DVI Backend"
@@ -395,46 +401,6 @@ msgstr "Генератор/Дата"
 #: generator_dvi.cpp:455
 msgid "Font file not found"
 msgstr "Файл не найден"
-
-#: fontpool.cpp:209
-msgid ""
-"<qt><p>Okular was not able to locate all the font files which are necessary "
-"to display the current DVI file. Your document might be unreadable.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Невозможно найти все файлы шрифтов, которые необходимы для показа "
-"данного файла Okular. Возможно, документ будет нечитаем.</"
-"p><p><small><b>Значение переменной PATH:</b> %1</small></p><p><small>%2</"
-"small></p></qt>"
-
-#: fontpool.cpp:280
-msgid ""
-"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
-"font files could not be located, and your document might be unreadable.<br/"
-">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
-"your system, or it cannot be found in the current search path.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Невозможно запустить программу <em>kpsewhich</em>. Некоторые шрифты, "
-"используемые в документе, могут быть не найдены и документ может быть "
-"нечитаем.<br/>Возможная причина: программа <em>kpsewhich</em> не установлена "
-"на компьютере или недоступна через пути поиска программ.</"
-"p><p><small>Значение переменной <b>PATH:</b> %1</small></p><p><small>%2</"
-"small></p></qt>"
-
-#: fontpool.cpp:299
-msgid ""
-"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
-"error %2). As a result, some font files could not be located, and your "
-"document might be unreadable.</qt>"
-msgstr ""
-"<qt>Генерация шрифта с помощью <em>kpsewhich</em> была прервана (код "
-"возврата %1, ошибка %2). Как результат этого, некоторые файлы не созданы и "
-"документ может быть нечитаемым.</qt>"
-
-#: fontpool.cpp:477
-msgid "Currently generating %1 at %2 dpi..."
-msgstr "Создание %1 с %2 dpi..."
 
 #: dviexport.cpp:129
 msgid ""
@@ -505,10 +471,44 @@ msgstr ""
 "которое можно открыть из меню «Файл», содержится более полная информация об "
 "ошибке.</qt>"
 
-#: pageSize.cpp:324
-msgid "portrait"
-msgstr "книжная ориентация"
+#: special.cpp:37
+msgid "That makes 25 errors. Further error messages will not be printed."
+msgstr ""
+"Произошло более 25 ошибок. Сообщения о последующих ошибках печататься не "
+"будут."
 
-#: pageSize.cpp:326
-msgid "landscape"
-msgstr "альбомная ориентация"
+#: special.cpp:218
+msgid ""
+"Error in DVIfile '%1', page %2. Color pop command issued when the color "
+"stack is empty."
+msgstr ""
+"Ошибка в файле DVI «%1», страница %2. Вызвана команда pop для цвета при "
+"отсутствии цветов в стеке."
+
+#: special.cpp:303
+msgid ""
+"Malformed parameter in the epsf special command.\n"
+"Expected a float to follow %1 in %2"
+msgstr ""
+"Недопустимый параметр в специальной команде epsf.\n"
+"Требуется указать вещественное число за %1 в %2"
+
+#: special.cpp:434
+msgid ""
+"File not found: \n"
+" %1"
+msgstr ""
+"Файл не найден: \n"
+" %1"
+
+#: special.cpp:681
+msgid ""
+"Error in DVIfile '%1', page %2. Could not interpret angle in text rotation "
+"special."
+msgstr ""
+"Ошибка в файле DVI «%1», страница %2. Невозможно определить угол поворота "
+"текста."
+
+#: special.cpp:704
+msgid "The special command '%1' is not implemented."
+msgstr "Специальная команда «%1» не поддерживается."
