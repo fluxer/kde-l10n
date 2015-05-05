@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2009-11-10 11:27+0000\n"
 "Last-Translator: \n"
 "Language-Team:  <is@li.org>\n"
@@ -19,6 +19,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: KBabel 1.11.4\n"
+
+#: examples/ktcli/main.cpp:60
+#, fuzzy
+msgid "Torrent to open"
+msgstr "Skjal sem á að opna"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+#, fuzzy
+msgid "Port to use"
+msgstr "Ekki í notkun"
+
+#: examples/ktcli/main.cpp:63
+#, fuzzy
+msgid "Whether or not to enable encryption"
+msgstr "eða ekki til a sérsniðið."
+
+#: examples/ktcli/main.cpp:64
+#, fuzzy
+msgid "Whether or not to enable peer exchange"
+msgstr "eða ekki til."
+
+#: examples/ktcli/main.cpp:65
+#, fuzzy
+msgid "Whether or not to use utp"
+msgstr "eða ekki til."
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr ""
+
+#: src/migrate/migrate.cpp:45
+#, fuzzy
+msgid "The directory %1 does not exist"
+msgstr "Mappan %1 er ekki til"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+#, fuzzy
+msgid "Corrupted torrent."
+msgstr "Búa til a"
+
+#: src/torrent/torrent.cpp:165
+#, fuzzy
+msgid "Unable to open torrent file %1: %2"
+msgstr "Gat ekki opnað torrent skrá %1 : %2"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -55,6 +102,19 @@ msgstr ""
 #, fuzzy
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "Þú ert nú þegar að ná í torrent stauminn %1"
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+#, fuzzy
+msgid "Cannot open file %1: %2"
+msgstr "Gat ekki opnað skrá %1: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+#, fuzzy
+msgid "Cannot create index file: %1"
+msgstr "Gat ekki búið til yfirlitsskrá: %1"
 
 #: src/torrent/torrentstats.cpp:73
 #, fuzzy
@@ -131,31 +191,46 @@ msgstr "Í bið"
 msgid "Superseeding"
 msgstr "Sái"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-#, fuzzy
-msgid "Corrupted torrent."
-msgstr "Búa til a"
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr ""
 
-#: src/torrent/torrent.cpp:165
-#, fuzzy
-msgid "Unable to open torrent file %1: %2"
-msgstr "Gat ekki opnað torrent skrá %1 : %2"
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "Tókst ekki að greina vélarheiti %1"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
+#: src/tracker/httpannouncejob.cpp:144
 #, fuzzy
-msgid "Cannot open file %1: %2"
-msgstr "Gat ekki opnað skrá %1: %2"
+msgid "Redirect without a redirect location"
+msgstr "a nýtt."
 
-#: src/torrent/torrentcreator.cpp:361
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "Ógilt svar frá skrásetjara (tracker)"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "Ógild gögn frá skrásetjara (tracker)"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "Ógild slóð á skrásetjara (tracker)"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr ""
+
+#: src/datachecker/datacheckerjob.cpp:141
 #, fuzzy
-msgid "Cannot create index file: %1"
-msgstr "Gat ekki búið til yfirlitsskrá: %1"
+msgid "Checking Data"
+msgstr "Yfirfer gögn"
+
+#: src/peer/peerid.cpp:228
+#, fuzzy
+msgid "Unknown client"
+msgstr "Óþekktur biðlari"
 
 #: src/download/chunkdownload.cpp:383
 #, fuzzy
@@ -241,21 +316,147 @@ msgstr "a nýtt."
 msgid "Disabled because webseed does not match torrent"
 msgstr "allir af a"
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+#: src/util/signalcatcher.cpp:80
 #, fuzzy
-msgid "Cannot open index file %1: %2"
-msgstr "Get ekki opnað yfirlitsskrá %1 : %2"
+msgid "Error when writing to disk"
+msgstr "Villa við lestur frá %1"
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
+#: src/util/signalcatcher.cpp:80
 #, fuzzy
-msgid "Failed to open %1: %2"
-msgstr "Mistókst að opna %1 : %2"
+msgid "Error when reading from disk"
+msgstr "Villa við lestur frá %1"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/file.cpp:84
+#, fuzzy
+msgid "Cannot write to %1: %2"
+msgstr "Get ekki skrifað í %1 : %2"
+
+#: src/util/file.cpp:98
+#, fuzzy
+msgid "Cannot read from %1"
+msgstr "Get ekki lesið frá %1"
+
+#: src/util/functions.cpp:234
+#, fuzzy
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+#, fuzzy
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 dagur"
+msgstr[1] "1 dagur"
+
+#: src/util/fileops.cpp:101
+#, fuzzy
+msgid "Cannot create directory %1"
+msgstr "Get ekki búið til möppuna %1"
+
+#: src/util/fileops.cpp:168
+#, fuzzy
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "Get ekki gert tákntengi (symlink) fyrir %1 til %2: %3"
+
+#: src/util/fileops.cpp:185
+#, fuzzy
+msgid "Cannot move %1 to %2: %3"
+msgstr "Get ekki fært %1 í %2: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+#, fuzzy
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Get ekki afritað %1 í %2: %3"
+
+#: src/util/fileops.cpp:282
+#, fuzzy
+msgid "Cannot delete %1: %2"
+msgstr "Get ekki eytt %1: %2"
+
+#: src/util/fileops.cpp:300
+#, fuzzy
+msgid "Cannot create %1: %2"
+msgstr "Get ekki búið til %1: %2"
+
+#: src/util/fileops.cpp:318
+#, fuzzy
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Gat ekki reiknað skráarstærð %1: %2"
+
+#: src/util/fileops.cpp:334
+#, fuzzy
+msgid "Cannot calculate the filesize: %1"
+msgstr "Gat ekki reiknað skráarstærð : %1"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+#, fuzzy
+msgid "Cannot open %1: %2"
+msgstr "Gat ekki opnað %1 : %2"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+#, fuzzy
+msgid "Cannot expand file: %1"
+msgstr "Gat ekki afþjappað skrána: %1"
+
+#: src/util/fileops.cpp:427
+#, fuzzy
+msgid "Cannot seek in file: %1"
+msgstr "Gat ekki leitað í skránni: %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "Almennt"
+
+#: src/util/logsystemmanager.cpp:34
+#, fuzzy
+msgid "Connections"
+msgstr "Tengingar"
+
+#: src/util/logsystemmanager.cpp:35
+#, fuzzy
+msgid "Tracker"
+msgstr "Skrásetjari (tracker)"
+
+#: src/util/logsystemmanager.cpp:36
+#, fuzzy
+msgid "DHT"
+msgstr "DHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "Inntak/Úttak disks"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr ""
+
+#: src/interfaces/trackerinterface.cpp:58
+#, fuzzy
+msgid "OK"
+msgstr "Í lagi"
+
+#: src/interfaces/trackerinterface.cpp:58
+#, fuzzy
+msgid "Warning: %1"
+msgstr "1"
+
+#: src/interfaces/trackerinterface.cpp:59
+#, fuzzy
+msgid "Announcing"
+msgstr "Tilkynni"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 #, fuzzy
 msgid "Failed to create %1: %2"
 msgstr "Gat ekki búið til %1 : %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+#, fuzzy
+msgid "Failed to open %1: %2"
+msgstr "Mistókst að opna %1 : %2"
 
 #: src/diskio/dndfile.cpp:89
 #, fuzzy
@@ -271,16 +472,6 @@ msgstr "Gat ekki skrifað fyrsta bútinn í DND skrá: %1"
 #, fuzzy
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Gat ekki skrifað síðasta bútinn í DND skrá: %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr ""
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-#, fuzzy
-msgid "Cannot open %1: %2"
-msgstr "Gat ekki opnað %1 : %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -326,6 +517,15 @@ msgstr "Gat ekki skrifað í skrá %1 : %2"
 #, fuzzy
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Gat ekki tekið frá diskpláss : %1"
+
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr ""
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+#, fuzzy
+msgid "Cannot open index file %1: %2"
+msgstr "Get ekki opnað yfirlitsskrá %1 : %2"
 
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
@@ -374,136 +574,6 @@ msgstr "Gat ekki umbreytt %1 í heiltölu (int)"
 msgid "Torrent is incomplete."
 msgstr "er ókláraður."
 
-#: src/interfaces/trackerinterface.cpp:58
-#, fuzzy
-msgid "OK"
-msgstr "Í lagi"
-
-#: src/interfaces/trackerinterface.cpp:58
-#, fuzzy
-msgid "Warning: %1"
-msgstr "1"
-
-#: src/interfaces/trackerinterface.cpp:59
-#, fuzzy
-msgid "Announcing"
-msgstr "Tilkynni"
-
-#: src/migrate/migrate.cpp:45
-#, fuzzy
-msgid "The directory %1 does not exist"
-msgstr "Mappan %1 er ekki til"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "Almennt"
-
-#: src/util/logsystemmanager.cpp:34
-#, fuzzy
-msgid "Connections"
-msgstr "Tengingar"
-
-#: src/util/logsystemmanager.cpp:35
-#, fuzzy
-msgid "Tracker"
-msgstr "Skrásetjari (tracker)"
-
-#: src/util/logsystemmanager.cpp:36
-#, fuzzy
-msgid "DHT"
-msgstr "DHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "Inntak/Úttak disks"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr ""
-
-#: src/util/fileops.cpp:101
-#, fuzzy
-msgid "Cannot create directory %1"
-msgstr "Get ekki búið til möppuna %1"
-
-#: src/util/fileops.cpp:168
-#, fuzzy
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Get ekki gert tákntengi (symlink) fyrir %1 til %2: %3"
-
-#: src/util/fileops.cpp:185
-#, fuzzy
-msgid "Cannot move %1 to %2: %3"
-msgstr "Get ekki fært %1 í %2: %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-#, fuzzy
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Get ekki afritað %1 í %2: %3"
-
-#: src/util/fileops.cpp:282
-#, fuzzy
-msgid "Cannot delete %1: %2"
-msgstr "Get ekki eytt %1: %2"
-
-#: src/util/fileops.cpp:300
-#, fuzzy
-msgid "Cannot create %1: %2"
-msgstr "Get ekki búið til %1: %2"
-
-#: src/util/fileops.cpp:318
-#, fuzzy
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Gat ekki reiknað skráarstærð %1: %2"
-
-#: src/util/fileops.cpp:334
-#, fuzzy
-msgid "Cannot calculate the filesize: %1"
-msgstr "Gat ekki reiknað skráarstærð : %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-#, fuzzy
-msgid "Cannot expand file: %1"
-msgstr "Gat ekki afþjappað skrána: %1"
-
-#: src/util/fileops.cpp:427
-#, fuzzy
-msgid "Cannot seek in file: %1"
-msgstr "Gat ekki leitað í skránni: %1"
-
-#: src/util/signalcatcher.cpp:80
-#, fuzzy
-msgid "Error when writing to disk"
-msgstr "Villa við lestur frá %1"
-
-#: src/util/signalcatcher.cpp:80
-#, fuzzy
-msgid "Error when reading from disk"
-msgstr "Villa við lestur frá %1"
-
-#: src/util/functions.cpp:234
-#, fuzzy
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-#, fuzzy
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 dagur"
-msgstr[1] "1 dagur"
-
-#: src/util/file.cpp:84
-#, fuzzy
-msgid "Cannot write to %1: %2"
-msgstr "Get ekki skrifað í %1 : %2"
-
-#: src/util/file.cpp:98
-#, fuzzy
-msgid "Cannot read from %1"
-msgstr "Get ekki lesið frá %1"
-
 #: src/upnp/upnprouter.cpp:167
 #, fuzzy
 msgid "Failed to download %1: %2"
@@ -533,74 +603,4 @@ msgstr "Tenging."
 
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
-msgstr ""
-
-#: src/peer/peerid.cpp:228
-#, fuzzy
-msgid "Unknown client"
-msgstr "Óþekktur biðlari"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr ""
-
-#: src/datachecker/datacheckerjob.cpp:141
-#, fuzzy
-msgid "Checking Data"
-msgstr "Yfirfer gögn"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "Ógilt svar frá skrásetjara (tracker)"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "Ógild gögn frá skrásetjara (tracker)"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "Ógild slóð á skrásetjara (tracker)"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr ""
-
-#: src/tracker/httpannouncejob.cpp:144
-#, fuzzy
-msgid "Redirect without a redirect location"
-msgstr "a nýtt."
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "Tókst ekki að greina vélarheiti %1"
-
-#: examples/ktcli/main.cpp:60
-#, fuzzy
-msgid "Torrent to open"
-msgstr "Skjal sem á að opna"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-#, fuzzy
-msgid "Port to use"
-msgstr "Ekki í notkun"
-
-#: examples/ktcli/main.cpp:63
-#, fuzzy
-msgid "Whether or not to enable encryption"
-msgstr "eða ekki til a sérsniðið."
-
-#: examples/ktcli/main.cpp:64
-#, fuzzy
-msgid "Whether or not to enable peer exchange"
-msgstr "eða ekki til."
-
-#: examples/ktcli/main.cpp:65
-#, fuzzy
-msgid "Whether or not to use utp"
-msgstr "eða ekki til."
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
 msgstr ""

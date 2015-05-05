@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2012-02-03 18:30+0100\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,6 +21,45 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
+
+#: examples/ktcli/main.cpp:60
+msgid "Torrent to open"
+msgstr "Torrent a obrir"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+msgid "Port to use"
+msgstr "Port a usar"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr "Si habilitar o no l'encriptatge"
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr "Si activar o no l'intercanvi de parells"
+
+#: examples/ktcli/main.cpp:65
+msgid "Whether or not to use utp"
+msgstr "Si usar o no l'UTP"
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr "ktcli"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "El directori %1 no existeix"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "El torrent és corrupte."
+
+#: src/torrent/torrent.cpp:165
+msgid "Unable to open torrent file %1: %2"
+msgstr " No es pot obrir el fitxer torrent %1: %2"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -53,6 +92,17 @@ msgstr ""
 #: src/torrent/torrentcontrol.cpp:607
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "Ja esteu baixant el torrent <b>%1</b>."
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+msgid "Cannot open file %1: %2"
+msgstr "No es pot obrir el fitxer %1: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "No es pot crear el fitxer índex:%1"
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -115,27 +165,43 @@ msgstr "Pausada"
 msgid "Superseeding"
 msgstr "Super sembrat"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "El torrent és corrupte."
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr "Temps exhaurit en connectar amb el seguidor %1"
 
-#: src/torrent/torrent.cpp:165
-msgid "Unable to open torrent file %1: %2"
-msgstr " No es pot obrir el fitxer torrent %1: %2"
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "No s'ha pogut resoldre el nom de màquina %1"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
-msgid "Cannot open file %1: %2"
-msgstr "No es pot obrir el fitxer %1: %2"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "S'ha redireccionat sense cap ubicació nova"
 
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "No es pot crear el fitxer índex:%1"
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "Resposta no vàlida del seguidor"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "Dades no vàlides des del seguidor"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "URL no vàlid del seguidor"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr "S'està esperant que acabi la comprovació d'altres dades"
+
+#: src/datachecker/datacheckerjob.cpp:141
+msgid "Checking Data"
+msgstr "S'estan comprovant les dades"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Client desconegut"
 
 #: src/download/chunkdownload.cpp:383
 msgid "1 peer"
@@ -208,18 +274,122 @@ msgstr "S'ha redireccionat sense cap ubicació nova."
 msgid "Disabled because webseed does not match torrent"
 msgstr "S'ha deshabilitat perquè el sembrador web no coincideix amb el torrent"
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-msgid "Cannot open index file %1: %2"
-msgstr "No es pot obrir el fitxer d'índex %1: %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "Error en escriure al disc"
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
-msgid "Failed to open %1: %2"
-msgstr "Ha fallat en obrir %1: %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "Error en llegir des del disc"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/file.cpp:84
+msgid "Cannot write to %1: %2"
+msgstr "No es pot escriure a %1: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "No es pot llegir des de %1"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 dia "
+msgstr[1] "%1 dies "
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "No s'ha pogut crear el directori %1"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "No es pot crear l'enllaç simbòlic %1 a %2: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "No es pot moure %1 a %2: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "No es pot copiar %1 a %2: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "No es pot esborrar %1: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "No es pot crear %1: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "No es pot calcular la mida del fitxer %1: %2"
+
+#: src/util/fileops.cpp:334
+msgid "Cannot calculate the filesize: %1"
+msgstr "No es pot calcular la mida de fitxer: %1"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+msgid "Cannot open %1: %2"
+msgstr "No es pot obrir %1: %2"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "No es pot expandir el fitxer: %1"
+
+#: src/util/fileops.cpp:427
+msgid "Cannot seek in file: %1"
+msgstr "No es pot cercar en el fitxer: %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "General"
+
+#: src/util/logsystemmanager.cpp:34
+msgid "Connections"
+msgstr "Connexions"
+
+#: src/util/logsystemmanager.cpp:35
+msgid "Tracker"
+msgstr "Seguidor"
+
+#: src/util/logsystemmanager.cpp:36
+msgid "DHT"
+msgstr "DHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "E/S de disc"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr "µTP"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "Bé"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr "Atenció: %1"
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Anunci"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 msgid "Failed to create %1: %2"
 msgstr "Ha fallat en crear %1: %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+msgid "Failed to open %1: %2"
+msgstr "Ha fallat en obrir %1: %2"
 
 #: src/diskio/dndfile.cpp:89
 msgid "Cannot create file %1: %2"
@@ -232,15 +402,6 @@ msgstr "Ha fallat en escriure el primer tros al fitxer DND: %1"
 #: src/diskio/dndfile.cpp:155
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Ha fallat en escriure l'últim tros en el fitxer DND: %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr "No es pot escriure a una part assignada com a només de lectura"
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-msgid "Cannot open %1: %2"
-msgstr "No es pot obrir %1: %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -282,6 +443,14 @@ msgstr "Ha fallat en escriure el fitxer %1: %2"
 msgid "Cannot preallocate diskspace: %1"
 msgstr "No es pot preassignar espai en disc: %1"
 
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr "No es pot escriure a una part assignada com a només de lectura"
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+msgid "Cannot open index file %1: %2"
+msgstr "No es pot obrir el fitxer d'índex %1: %2"
+
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
 msgstr "S'està esperant que acabin altres tasques de moure"
@@ -321,113 +490,6 @@ msgstr "No es pot convertir %1 a un sencer"
 msgid "Torrent is incomplete."
 msgstr "El torrent és incomplet."
 
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "Bé"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "Warning: %1"
-msgstr "Atenció: %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Anunci"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "El directori %1 no existeix"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "General"
-
-#: src/util/logsystemmanager.cpp:34
-msgid "Connections"
-msgstr "Connexions"
-
-#: src/util/logsystemmanager.cpp:35
-msgid "Tracker"
-msgstr "Seguidor"
-
-#: src/util/logsystemmanager.cpp:36
-msgid "DHT"
-msgstr "DHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "E/S de disc"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr "µTP"
-
-#: src/util/fileops.cpp:101
-msgid "Cannot create directory %1"
-msgstr "No s'ha pogut crear el directori %1"
-
-#: src/util/fileops.cpp:168
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "No es pot crear l'enllaç simbòlic %1 a %2: %3"
-
-#: src/util/fileops.cpp:185
-msgid "Cannot move %1 to %2: %3"
-msgstr "No es pot moure %1 a %2: %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-msgid "Cannot copy %1 to %2: %3"
-msgstr "No es pot copiar %1 a %2: %3"
-
-#: src/util/fileops.cpp:282
-msgid "Cannot delete %1: %2"
-msgstr "No es pot esborrar %1: %2"
-
-#: src/util/fileops.cpp:300
-msgid "Cannot create %1: %2"
-msgstr "No es pot crear %1: %2"
-
-#: src/util/fileops.cpp:318
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "No es pot calcular la mida del fitxer %1: %2"
-
-#: src/util/fileops.cpp:334
-msgid "Cannot calculate the filesize: %1"
-msgstr "No es pot calcular la mida de fitxer: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-msgid "Cannot expand file: %1"
-msgstr "No es pot expandir el fitxer: %1"
-
-#: src/util/fileops.cpp:427
-msgid "Cannot seek in file: %1"
-msgstr "No es pot cercar en el fitxer: %1"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "Error en escriure al disc"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "Error en llegir des del disc"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 dia "
-msgstr[1] "%1 dies "
-
-#: src/util/file.cpp:84
-msgid "Cannot write to %1: %2"
-msgstr "No es pot escriure a %1: %2"
-
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "No es pot llegir des de %1"
-
 #: src/upnp/upnprouter.cpp:167
 msgid "Failed to download %1: %2"
 msgstr "Error en baixar %1: %2"
@@ -456,65 +518,3 @@ msgstr "La connexió s'ha tancat inesperadament"
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
 msgstr "L'operació ha excedit el temps"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Client desconegut"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr "S'està esperant que acabi la comprovació d'altres dades"
-
-#: src/datachecker/datacheckerjob.cpp:141
-msgid "Checking Data"
-msgstr "S'estan comprovant les dades"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "Resposta no vàlida del seguidor"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "Dades no vàlides des del seguidor"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "URL no vàlid del seguidor"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "Temps exhaurit en connectar amb el seguidor %1"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "S'ha redireccionat sense cap ubicació nova"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "No s'ha pogut resoldre el nom de màquina %1"
-
-#: examples/ktcli/main.cpp:60
-msgid "Torrent to open"
-msgstr "Torrent a obrir"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-msgid "Port to use"
-msgstr "Port a usar"
-
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr "Si habilitar o no l'encriptatge"
-
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr "Si activar o no l'intercanvi de parells"
-
-#: examples/ktcli/main.cpp:65
-msgid "Whether or not to use utp"
-msgstr "Si usar o no l'UTP"
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
-msgstr "ktcli"

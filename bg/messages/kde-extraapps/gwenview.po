@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwenview\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2013-07-23 09:53+0300\n"
 "Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
 "Language-Team: Bulgarian <dict@ludost.net>\n"
@@ -19,24 +19,661 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
+#. i18n: file: lib/redeyereduction/redeyereductionwidget.ui:24
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:3
+msgid "Size"
+msgstr "Големина"
+
+#. i18n: file: lib/redeyereduction/redeyereductionwidget.ui:63
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:6
+msgid "Click on the red eye you want to fix"
+msgstr "Щракнете върху червените очи, които искате да редактирате."
+
+#. i18n: file: lib/gwenviewconfig.kcfg:31
+#. i18n: ectx: whatsthis, entry (PercentageOfMemoryUsageWarning), group (General)
+#: rc.cpp:9
+msgid ""
+"The percentage of memory used by Gwenview before it\n"
+"            warns the user and suggest saving changes."
+msgstr ""
+"Процентът памет, който използва Gwenview преди \n"
+"            да предупреди и да пита за запис на промените."
+
+#. i18n: file: lib/gwenviewconfig.kcfg:38
+#. i18n: ectx: whatsthis, entry (BlackListedExtensions), group (General)
+#: rc.cpp:13
+#, fuzzy
+msgid ""
+"A list of filename extensions Gwenview should not try to\n"
+"            load. We exclude *.new as well because this is the extension\n"
+"            used for temporary files by KSaveFile."
+msgstr ""
+"Списък с файлови разширения, които Gwenview не трябва\n"
+"\t\t\tда зарежда. Намира приложение при изключване на\n"
+"\t\t\tнеобработени файлове, разпознати като TIFF или JPEG.\n"
+"\t\t\tИзключват се и *.new, защото разширението се ползва от\n"
+"\t\t\tвременните файлове на KSaveFile."
+
+#. i18n: file: lib/gwenviewconfig.kcfg:139
+#. i18n: ectx: whatsthis, entry (LockZoom), group (ImageView)
+#: rc.cpp:18
+msgid ""
+"Defines what happens when going to image B after having zoomed an area of "
+"image A.\n"
+"                When true: zoom and position is kept. When false: image B is "
+"zoomed out to fit the screen."
+msgstr ""
+
+#. i18n: file: lib/gwenviewconfig.kcfg:220
+#. i18n: ectx: label, entry (random), group (slide show)
+#: rc.cpp:22
+msgid "Display slide show images in random order"
+msgstr "Прожекция в произволен ред"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:224
+#. i18n: ectx: label, entry (fullscreen), group (slide show)
+#: rc.cpp:25
+msgid "Show slideshow in fullscreen mode"
+msgstr "Прожекция на цял екран"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:228
+#. i18n: ectx: label, entry (loop), group (slide show)
+#: rc.cpp:28
+msgid "Loop on images"
+msgstr "Циркулиране на изображения"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:232
+#. i18n: ectx: label, entry (stopAtEnd), group (slide show)
+#: rc.cpp:31
+msgid "Stop at last image of folder"
+msgstr "Спиране на последното изображение в директорията"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:236
+#. i18n: ectx: label, entry (interval), group (slide show)
+#: rc.cpp:34
+msgid "Interval between images (in seconds)"
+msgstr "Интервал между изображенията (в сек)"
+
+#. i18n: file: lib/print/printoptionspage.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, PrintOptionsPage)
+#: rc.cpp:40
+msgid "Image Settings"
+msgstr "Информация за изображение"
+
+#. i18n: file: lib/print/printoptionspage.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:43
+msgid "Image Position"
+msgstr "Позиция на изображението"
+
+#. i18n: file: lib/print/printoptionspage.ui:45
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:46
+msgid "Scaling"
+msgstr "Мащабиране"
+
+#. i18n: file: lib/print/printoptionspage.ui:51
+#. i18n: ectx: property (text), widget (QRadioButton, mNoScale)
+#: rc.cpp:49
+msgid "&No scaling"
+msgstr "&Без мащабиране"
+
+#. i18n: file: lib/print/printoptionspage.ui:61
+#. i18n: ectx: property (text), widget (QRadioButton, mScaleToPage)
+#: rc.cpp:52
+msgid "&Fit image to page"
+msgstr "&Запълване на страницата с изображението"
+
+#. i18n: file: lib/print/printoptionspage.ui:98
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintEnlargeSmallerImages)
+#. i18n: file: app/imageviewconfigpage.ui:201
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnlargeSmallerImages)
+#: rc.cpp:55 rc.cpp:160
+msgid "Enlarge smaller images"
+msgstr "Увеличаване на по-малките изображения"
+
+#. i18n: file: lib/print/printoptionspage.ui:123
+#. i18n: ectx: property (text), widget (QRadioButton, mScaleTo)
+#: rc.cpp:58
+msgid "&Scale to:"
+msgstr "&Мащабиране до:"
+
+#. i18n: file: lib/print/printoptionspage.ui:158
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:61
+msgctxt "Dimension separator, as in: '15 x 10 centimeters'"
+msgid "x"
+msgstr "x"
+
+#. i18n: file: lib/print/printoptionspage.ui:185
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
+#: rc.cpp:64
+msgid "Millimeters"
+msgstr "Милиметри"
+
+#. i18n: file: lib/print/printoptionspage.ui:190
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
+#: rc.cpp:67
+msgid "Centimeters"
+msgstr "Сантиметри"
+
+#. i18n: file: lib/print/printoptionspage.ui:195
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
+#: rc.cpp:70
+msgid "Inches"
+msgstr "Инчове"
+
+#. i18n: file: lib/print/printoptionspage.ui:224
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintKeepRatio)
+#: rc.cpp:73
+msgid "Keep ratio"
+msgstr "Запазване на съотношението"
+
+#. i18n: file: lib/crop/cropwidget.ui:20
+#. i18n: ectx: property (windowTitle), widget (QWidget, CropWidget)
+#: rc.cpp:76 lib/crop/cropwidget.cpp:191 lib/crop/cropimageoperation.cpp:71
+#: app/imageopscontextmanageritem.cpp:111
+msgid "Crop"
+msgstr "Изрязване"
+
+#. i18n: file: lib/crop/cropwidget.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, advancedCheckBox)
+#: rc.cpp:79
+msgid "Advanced settings"
+msgstr "Разширени настройки"
+
+#. i18n: file: lib/crop/cropwidget.ui:55
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:82
+msgid "Ratio:"
+msgstr "Съотношение:"
+
+#. i18n: file: lib/crop/cropwidget.ui:84
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:85
+msgid "Position:"
+msgstr "Позиция:"
+
+#. i18n: file: lib/crop/cropwidget.ui:117
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:88
+msgid "Size:"
+msgstr "Големина:"
+
+#. i18n: file: lib/resize/resizeimagewidget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, ResizeImageWidget)
+#: rc.cpp:91
+msgid "Image Resizing"
+msgstr "Преоразмеряване на изображение"
+
+#. i18n: file: lib/resize/resizeimagewidget.ui:20
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:94
+msgid "Enter the new size for this image."
+msgstr "Въведете новия размер за изображението."
+
+#. i18n: file: lib/resize/resizeimagewidget.ui:32
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:97
+msgid "Current size:"
+msgstr "Текущ размер:"
+
+#. i18n: file: lib/resize/resizeimagewidget.ui:88
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:100
+msgid "New Size:"
+msgstr "Нов размер:"
+
+#. i18n: file: lib/resize/resizeimagewidget.ui:135
+#. i18n: ectx: property (text), widget (QCheckBox, mKeepAspectCheckBox)
+#: rc.cpp:103
+msgid "Keep aspect ratio"
+msgstr "Запазване на съотношението"
+
+#. i18n: file: importer/progresspage.ui:30
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:106
+msgid "Importing documents..."
+msgstr "Внасяне на документи..."
+
+#. i18n: file: importer/importerconfigdialog.ui:17
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoRename)
+#: rc.cpp:109
+msgid "Rename documents automatically"
+msgstr "Автоматично преименуване на документите"
+
+#. i18n: file: importer/importerconfigdialog.ui:39
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:112
+msgid "Rename Format:"
+msgstr "Формат за преименуване:"
+
+#. i18n: file: importer/importerconfigdialog.ui:59
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:115
+msgid "Preview:"
+msgstr "Преглед:"
+
+#. i18n: file: importer/importerconfigdialog.ui:83
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:118
+msgid "<i>Type text or click the items below to customize the format</i>"
+msgstr ""
+"<i>Въведете текст или натиснете елементите по-долу, за да уточните формата</"
+"i>"
+
+#. i18n: file: importer/thumbnailpage.ui:173
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:121
+msgid "Select the documents to import"
+msgstr "Изберете документи за внасяне"
+
+#. i18n: file: importer/thumbnailpage.ui:185
+#. i18n: ectx: property (text), widget (QPushButton, mConfigureButton)
+#: rc.cpp:124
+msgid "Settings..."
+msgstr "Настройки..."
+
+#. i18n: file: importer/thumbnailpage.ui:201
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:127
+msgid "Enter the import destination"
+msgstr "Въведете местоназначението"
+
+#. i18n: file: importer/thumbnailpage.ui:220
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:130
+msgid "Listing content of:"
+msgstr "Показване съдържанието на:"
+
+#. i18n: file: part/gvpart.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:133
+msgid "&File"
+msgstr "&Файл"
+
+#. i18n: file: part/gvpart.rc:8
+#. i18n: ectx: Menu (view)
+#: rc.cpp:136
+msgid "&View"
+msgstr "&Изглед"
+
+#. i18n: file: part/gvpart.rc:15
+#. i18n: ectx: ToolBar (mainToolBar)
+#. i18n: file: app/gwenviewui.rc:81
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:139 rc.cpp:208
+msgid "Main Toolbar"
+msgstr "Главна лента с инструменти"
+
+#. i18n: file: app/imageviewconfigpage.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:142
+msgid "Transparent background:"
+msgstr "Прозрачен фон:"
+
+#. i18n: file: app/imageviewconfigpage.ui:38
+#. i18n: ectx: property (text), widget (QRadioButton, checkBoardRadioButton)
+#: rc.cpp:145
+msgid "&Check board"
+msgstr "&Шахматна дъска"
+
+#. i18n: file: app/imageviewconfigpage.ui:71
+#. i18n: ectx: property (text), widget (QRadioButton, solidColorRadioButton)
+#: rc.cpp:148
+msgid "&Solid color:"
+msgstr "Само &един цвят:"
+
+#. i18n: file: app/imageviewconfigpage.ui:119
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:151
+msgid "Mouse wheel behavior:"
+msgstr "Колелце на мишката:"
+
+#. i18n: file: app/imageviewconfigpage.ui:134
+#. i18n: ectx: property (text), widget (QRadioButton, mouseWheelScrollRadioButton)
+#: rc.cpp:154
+msgctxt "@option:radio action on mouse wheel"
+msgid "Scroll"
+msgstr "Превъртане"
+
+#. i18n: file: app/imageviewconfigpage.ui:161
+#. i18n: ectx: property (text), widget (QRadioButton, mouseWheelBrowseRadioButton)
+#: rc.cpp:157
+msgctxt "@option:radio action on mouse wheel"
+msgid "Browse"
+msgstr "Прелистване"
+
+#. i18n: file: app/imageviewconfigpage.ui:239
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:163
+msgid "Animations:"
+msgstr "Анимации:"
+
+#. i18n: file: app/imageviewconfigpage.ui:254
+#. i18n: ectx: property (text), widget (QRadioButton, glAnimationRadioButton)
+#: rc.cpp:166
+msgid "OpenGL"
+msgstr "OpenGL"
+
+#. i18n: file: app/imageviewconfigpage.ui:281
+#. i18n: ectx: property (text), widget (QRadioButton, softwareAnimationRadioButton)
+#: rc.cpp:169
+msgid "Software"
+msgstr "Софтуер"
+
+#. i18n: file: app/imageviewconfigpage.ui:305
+#. i18n: ectx: property (text), widget (QRadioButton, noAnimationRadioButton)
+#: rc.cpp:172
+msgid "None"
+msgstr "Без"
+
+#. i18n: file: app/imageviewconfigpage.ui:327
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:175
+msgid "<b>Thumbnail Bar</b>"
+msgstr "<b>Лента с умалени копия</b>"
+
+#. i18n: file: app/imageviewconfigpage.ui:334
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: rc.cpp:178
+msgid "Orientation:"
+msgstr "Ориентация:"
+
+#. i18n: file: app/imageviewconfigpage.ui:349
+#. i18n: ectx: property (text), widget (QRadioButton, horizontalRadioButton)
+#: rc.cpp:181
+msgid "Horizontal"
+msgstr "Хоризонтално"
+
+#. i18n: file: app/imageviewconfigpage.ui:373
+#. i18n: ectx: property (text), widget (QRadioButton, verticalRadioButton)
+#: rc.cpp:184
+msgid "Vertical"
+msgstr "Вертикално"
+
+#. i18n: file: app/imageviewconfigpage.ui:395
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:187
+msgid "Row count:"
+msgstr "Редове:"
+
+#. i18n: file: app/startmainpage.ui:34
+#. i18n: ectx: property (text), widget (QLabel, mHistoryDisabledLabel)
+#: rc.cpp:190
+msgid "History has been disabled."
+msgstr "Историята е изключена."
+
+#. i18n: file: app/startmainpage.ui:51
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: rc.cpp:193
+msgid "Recent Folders"
+msgstr "Последни директории"
+
+#. i18n: file: app/startmainpage.ui:65
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: rc.cpp:196
+msgid "Recent URLs"
+msgstr "Последни адреси"
+
+#. i18n: file: app/startmainpage.ui:109
+#. i18n: ectx: attribute (title), widget (QWidget, placesTab)
+#: rc.cpp:199
+msgid "Places"
+msgstr "Места"
+
+#. i18n: file: app/gwenviewui.rc:65
+#. i18n: ectx: Menu (plugins)
+#: rc.cpp:202
+msgid "&Plugins"
+msgstr "&Приставки"
+
+#. i18n: file: app/gwenviewui.rc:68
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:205
+msgid "&Settings"
+msgstr "&Настройки"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:211
+msgid "Slideshow"
+msgstr "Прожекция"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:29
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:214
+msgid "Interval:"
+msgstr "Интервал:"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:75
+#. i18n: ectx: property (text), widget (QCheckBox, mSlideShowLoopCheckBox)
+#: rc.cpp:217
+msgid "Loop"
+msgstr "Повторение"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:82
+#. i18n: ectx: property (text), widget (QCheckBox, mSlideShowRandomCheckBox)
+#: rc.cpp:220
+msgid "Random"
+msgstr "Случайно"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:92
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:223
+msgid "Image Information"
+msgstr "Данни на изображението"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:101
+#. i18n: ectx: property (text), widget (QPushButton, mConfigureDisplayedInformationButton)
+#: rc.cpp:226
+msgid "Select Image Information to Display..."
+msgstr "Избор на данни на изображението за показване..."
+
+#. i18n: file: app/fullscreenconfigwidget.ui:111
+#. i18n: ectx: property (title), widget (QGroupBox, mThumbnailGroupBox)
+#: rc.cpp:229
+msgid "Thumbnails"
+msgstr "Миниатюри"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:120
+#. i18n: ectx: property (text), widget (QCheckBox, mShowThumbnailsCheckBox)
+#: rc.cpp:232
+msgid "Show thumbnails"
+msgstr "Умалени копия"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:130
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:235
+msgid "Height:"
+msgstr "Височина:"
+
+#. i18n: file: app/browsemainpage.ui:88
+#. i18n: ectx: property (text), widget (Gwenview::StatusBarToolButton, mAddFilterButton)
+#: rc.cpp:238
+msgid "Add Filter"
+msgstr "Филтриране по"
+
+#. i18n: file: app/advancedconfigpage.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:241
+msgid "Cache:"
+msgstr "Кеш:"
+
+#. i18n: file: app/advancedconfigpage.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_DeleteThumbnailCacheOnExit)
+#: rc.cpp:244
+msgid "Delete thumbnail cache folder on exit"
+msgstr "Изтриване кеша на умалените копия при спиране на програмата"
+
+#. i18n: file: app/advancedconfigpage.ui:51
+#. i18n: ectx: property (text), widget (QLabel, cacheHelpLabel)
+#: rc.cpp:247
+msgid ""
+"Enable this option if you do not have a lot of disk space.<br/><br/><em>Be "
+"careful:</em> this will delete the folder named <filename>.thumbnails</"
+"filename> in your home folder, deleting all thumbnails previously generated "
+"by Gwenview and other applications."
+msgstr ""
+"Включете това, ако нямате много място на диска.<br/><br/><em> Внимание:</em> "
+"ще се изтрие папката <filename>.thumbnails</filename> в домашната ви папка, "
+"заедно с всички миниатюри, създадени от Gwenview или други програми."
+
+#. i18n: file: app/advancedconfigpage.ui:77
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:250
+msgid "History:"
+msgstr "История:"
+
+#. i18n: file: app/advancedconfigpage.ui:89
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HistoryEnabled)
+#: rc.cpp:253
+msgid "Remember folders and URLs"
+msgstr "Помнене на директориите и адресите"
+
+#. i18n: file: app/generalconfigpage.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:256
+msgid "Background color:"
+msgstr "Фонов цвят:"
+
+#. i18n: file: app/generalconfigpage.ui:82
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:259
+msgid "Videos:"
+msgstr "Видео:"
+
+#. i18n: file: app/generalconfigpage.ui:89
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ListVideos)
+#: rc.cpp:262
+msgid "Show videos"
+msgstr "Показване на видео"
+
+#: lib/document/loadingjob.cpp:57
+msgid "Could not load document %1"
+msgstr "Грешка при зареждане на документ: %1"
+
+#: lib/document/document.cpp:307
+msgctxt "@info"
+msgid "Gwenview cannot save this kind of documents."
+msgstr "Gwenview не може да запазва този вид документи."
+
+#: lib/document/savejob.cpp:105
+msgctxt "@info"
+msgid ""
+"Could not open file for writing, check that you have the necessary rights in "
+"<filename>%1</filename>."
+msgstr ""
+"Файлът не може да бъде отворен за запис. Проверете дали имате достатъчно "
+"права върху <filename>%1</filename>."
+
+#: lib/document/savejob.cpp:129
+msgctxt "@info"
+msgid ""
+"Could not overwrite file, check that you have the necessary rights to write "
+"in <filename>%1</filename>."
+msgstr ""
+"Файлът не може да бъде презаписан. Проверете дали имате достатъчно права за "
+"запис в <filename>%1</filename>."
+
+#: lib/document/documentjob.cpp:79 app/imageopscontextmanageritem.cpp:142
+msgctxt "@info"
+msgid "Gwenview cannot edit this kind of image."
+msgstr "Gwenview не може да редактира този вид изображения."
+
+#: lib/document/loadingdocumentimpl.cpp:136
+msgctxt "@info"
+msgid "Gwenview cannot display documents of type %1."
+msgstr "Gwenview не може да показва документи от вида %1."
+
+#: lib/document/loadingdocumentimpl.cpp:387
+msgctxt "@info"
+msgid "Could not open file %1"
+msgstr "Грешка при отваряне на файл %1"
+
+#: lib/document/loadingdocumentimpl.cpp:475
+msgctxt "@info"
+msgid "Loading meta information failed."
+msgstr "Зареждането на мета-информацията беше неуспешно."
+
+#: lib/document/loadingdocumentimpl.cpp:503
+msgctxt "@info"
+msgid "Loading image failed."
+msgstr "Зареждането на изображението беше неуспешно."
+
+#: lib/redeyereduction/redeyereductionimageoperation.cpp:77
+msgid "RedEyeReduction"
+msgstr "Червени_очи"
+
+#: lib/transformimageoperation.cpp:62
+msgctxt "(qtundo-format)"
+msgid "Rotate Right"
+msgstr "Завъртане надясно"
+
+#: lib/transformimageoperation.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Rotate Left"
+msgstr "Завъртане наляво"
+
+#: lib/transformimageoperation.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Mirror"
+msgstr "Огледално"
+
+#: lib/transformimageoperation.cpp:71
+msgctxt "(qtundo-format)"
+msgid "Flip"
+msgstr "Обръщане"
+
+#: lib/transformimageoperation.cpp:76
+msgctxt "(qtundo-format)"
+msgid "Transform"
+msgstr "Преобразуване"
+
+#: lib/print/printhelper.cpp:131
+msgid "Print Image"
+msgstr "Отпечатване на избображение"
+
 #: lib/statusbartoolbutton.cpp:107 lib/fullscreenbar.cpp:263
 msgctxt "@info:tooltip of custom toolbar button"
 msgid "%1"
 msgstr "%1"
 
-#: lib/jpegcontent.cpp:581
-msgctxt "@info"
-msgid "Could not open file for writing."
-msgstr "Файлът не може да бъде отворен за запис."
+#: lib/crop/cropwidget.cpp:140
+msgid "Square"
+msgstr "Квадрат"
 
-#: lib/jpegcontent.cpp:597
-msgctxt "@info"
-msgid "No data to store."
-msgstr "Няма данни, които да бъдат записани."
+#: lib/crop/cropwidget.cpp:141
+msgid "This Screen"
+msgstr "Този екран"
 
-#: lib/historymodel.cpp:145
-msgid "Last visited: %1"
-msgstr "Последно посещение: %1"
+#: lib/crop/cropwidget.cpp:142
+msgid "Landscape"
+msgstr "Хоризонтално"
+
+#: lib/crop/cropwidget.cpp:147 lib/crop/cropwidget.cpp:154
+msgid "ISO Size (A4, A3...)"
+msgstr "Размери по ISO (A4, A3...)"
+
+#: lib/crop/cropwidget.cpp:148 lib/crop/cropwidget.cpp:155
+msgid "US Letter"
+msgstr "US Letter"
+
+#: lib/crop/cropwidget.cpp:149
+msgid "Portrait"
+msgstr "Вертикално"
+
+#. i18n("%1:%2") because ':' should not be translated, it is
+#. used to parse the ratio string.
+#: lib/crop/cropwidget.cpp:164
+msgid "Width"
+msgstr "Широчина"
+
+#: lib/crop/cropwidget.cpp:164
+msgid "Height"
+msgstr "Височина"
 
 #: lib/imagemetainfomodel.cpp:244
 msgctxt "@item:intable Image file name"
@@ -88,199 +725,9 @@ msgctxt "@title:column"
 msgid "Value"
 msgstr "Стойност"
 
-#: lib/hud/hudwidget.cpp:108
-msgctxt "@info:tooltip"
-msgid "Close"
-msgstr "Затваряне"
-
-#: lib/document/document.cpp:307
-msgctxt "@info"
-msgid "Gwenview cannot save this kind of documents."
-msgstr "Gwenview не може да запазва този вид документи."
-
-#: lib/document/savejob.cpp:105
-msgctxt "@info"
-msgid ""
-"Could not open file for writing, check that you have the necessary rights in "
-"<filename>%1</filename>."
-msgstr ""
-"Файлът не може да бъде отворен за запис. Проверете дали имате достатъчно "
-"права върху <filename>%1</filename>."
-
-#: lib/document/savejob.cpp:129
-msgctxt "@info"
-msgid ""
-"Could not overwrite file, check that you have the necessary rights to write "
-"in <filename>%1</filename>."
-msgstr ""
-"Файлът не може да бъде презаписан. Проверете дали имате достатъчно права за "
-"запис в <filename>%1</filename>."
-
-#: lib/document/documentjob.cpp:79 app/imageopscontextmanageritem.cpp:142
-msgctxt "@info"
-msgid "Gwenview cannot edit this kind of image."
-msgstr "Gwenview не може да редактира този вид изображения."
-
-#: lib/document/loadingdocumentimpl.cpp:136
-msgctxt "@info"
-msgid "Gwenview cannot display documents of type %1."
-msgstr "Gwenview не може да показва документи от вида %1."
-
-#: lib/document/loadingdocumentimpl.cpp:387
-msgctxt "@info"
-msgid "Could not open file %1"
-msgstr "Грешка при отваряне на файл %1"
-
-#: lib/document/loadingdocumentimpl.cpp:475
-msgctxt "@info"
-msgid "Loading meta information failed."
-msgstr "Зареждането на мета-информацията беше неуспешно."
-
-#: lib/document/loadingdocumentimpl.cpp:503
-msgctxt "@info"
-msgid "Loading image failed."
-msgstr "Зареждането на изображението беше неуспешно."
-
-#: lib/document/loadingjob.cpp:57
-msgid "Could not load document %1"
-msgstr "Грешка при зареждане на документ: %1"
-
-#: lib/crop/cropwidget.cpp:140
-msgid "Square"
-msgstr "Квадрат"
-
-#: lib/crop/cropwidget.cpp:141
-msgid "This Screen"
-msgstr "Този екран"
-
-#: lib/crop/cropwidget.cpp:142
-msgid "Landscape"
-msgstr "Хоризонтално"
-
-#: lib/crop/cropwidget.cpp:147 lib/crop/cropwidget.cpp:154
-msgid "ISO Size (A4, A3...)"
-msgstr "Размери по ISO (A4, A3...)"
-
-#: lib/crop/cropwidget.cpp:148 lib/crop/cropwidget.cpp:155
-msgid "US Letter"
-msgstr "US Letter"
-
-#: lib/crop/cropwidget.cpp:149
-msgid "Portrait"
-msgstr "Вертикално"
-
-#. i18n("%1:%2") because ':' should not be translated, it is
-#. used to parse the ratio string.
-#: lib/crop/cropwidget.cpp:164
-msgid "Width"
-msgstr "Широчина"
-
-#: lib/crop/cropwidget.cpp:164
-msgid "Height"
-msgstr "Височина"
-
-#. i18n: file: lib/crop/cropwidget.ui:20
-#. i18n: ectx: property (windowTitle), widget (QWidget, CropWidget)
-#: lib/crop/cropwidget.cpp:191 lib/crop/cropimageoperation.cpp:71
-#: app/imageopscontextmanageritem.cpp:111 rc.cpp:34
-msgid "Crop"
-msgstr "Изрязване"
-
-#: lib/redeyereduction/redeyereductionimageoperation.cpp:77
-msgid "RedEyeReduction"
-msgstr "Червени_очи"
-
-#: lib/slideshow.cpp:189
-msgctxt "@item:inmenu toggle loop in slideshow"
-msgid "Loop"
-msgstr "Повторение"
-
-#: lib/slideshow.cpp:194
-msgctxt "@item:inmenu toggle random order in slideshow"
-msgid "Random"
-msgstr "Случайно"
-
-#: lib/documentview/documentviewcontroller.cpp:92 app/mainwindow.cpp:359
-#: app/browsemainpage.cpp:115 app/viewmainpage.cpp:420
-msgctxt "@title actions category - means actions changing smth in interface"
-msgid "View"
-msgstr "Изглед"
-
-#: lib/documentview/documentviewcontroller.cpp:98
-msgid "Zoom to Fit"
-msgstr "Оптимално"
-
-#: lib/documentview/documentviewcontroller.cpp:100
-msgctxt "@action:button Zoom to fit, shown in status bar, keep it short please"
-msgid "Fit"
-msgstr "Мащабиране"
-
-#: lib/documentview/documentviewcontroller.cpp:104
-msgctxt ""
-"@action:button Zoom to original size, shown in status bar, keep it short "
-"please"
-msgid "100%"
-msgstr "100%"
-
-#: lib/documentview/documentview.cpp:178
-msgctxt "@info:tooltip"
-msgid "Trash"
-msgstr "Кошче"
-
-#: lib/documentview/documentview.cpp:179
-msgctxt "@action:button"
-msgid "Deselect"
-msgstr "Размаркиране"
-
-#: lib/documentview/documentview.cpp:369
-msgid "Gwenview does not know how to display this kind of document"
-msgstr "Gwenview не знае как да покаже този документ"
-
-#: lib/documentview/documentview.cpp:467
-msgid "Loading <filename>%1</filename> failed"
-msgstr "Зареждането на <filename>%1</filename> беше неуспешно"
-
-#: lib/documentview/messageviewadapter.cpp:52
-msgid "No document selected"
-msgstr "Няма избран документ"
-
-#: lib/print/printhelper.cpp:131
-msgid "Print Image"
-msgstr "Отпечатване на избображение"
-
-#: lib/resize/resizeimagedialog.cpp:51 app/imageopscontextmanageritem.cpp:106
-msgid "Resize"
-msgstr "Преоразмеряване"
-
-#: lib/resize/resizeimageoperation.cpp:71
-msgctxt "(qtundo-format)"
-msgid "Resize"
-msgstr "Преоразмеряване"
-
-#: lib/transformimageoperation.cpp:62
-msgctxt "(qtundo-format)"
-msgid "Rotate Right"
-msgstr "Завъртане надясно"
-
-#: lib/transformimageoperation.cpp:65
-msgctxt "(qtundo-format)"
-msgid "Rotate Left"
-msgstr "Завъртане наляво"
-
-#: lib/transformimageoperation.cpp:68
-msgctxt "(qtundo-format)"
-msgid "Mirror"
-msgstr "Огледално"
-
-#: lib/transformimageoperation.cpp:71
-msgctxt "(qtundo-format)"
-msgid "Flip"
-msgstr "Обръщане"
-
-#: lib/transformimageoperation.cpp:76
-msgctxt "(qtundo-format)"
-msgid "Transform"
-msgstr "Преобразуване"
+#: lib/historymodel.cpp:145
+msgid "Last visited: %1"
+msgstr "Последно посещение: %1"
 
 #: lib/about.cpp:36
 msgid "Copyright 2000-2013 Gwenview authors"
@@ -302,10 +749,311 @@ msgstr "Benjamin Löwe"
 msgid "Developer"
 msgstr "Разработчик"
 
-#: app/imagemetainfodialog.cpp:128
+#: lib/resize/resizeimageoperation.cpp:71
+msgctxt "(qtundo-format)"
+msgid "Resize"
+msgstr "Преоразмеряване"
+
+#: lib/resize/resizeimagedialog.cpp:51 app/imageopscontextmanageritem.cpp:106
+msgid "Resize"
+msgstr "Преоразмеряване"
+
+#: lib/hud/hudwidget.cpp:108
+msgctxt "@info:tooltip"
+msgid "Close"
+msgstr "Затваряне"
+
+#: lib/documentview/documentviewcontroller.cpp:92 app/viewmainpage.cpp:420
+#: app/mainwindow.cpp:359 app/browsemainpage.cpp:115
+msgctxt "@title actions category - means actions changing smth in interface"
+msgid "View"
+msgstr "Изглед"
+
+#: lib/documentview/documentviewcontroller.cpp:98
+msgid "Zoom to Fit"
+msgstr "Оптимално"
+
+#: lib/documentview/documentviewcontroller.cpp:100
+msgctxt "@action:button Zoom to fit, shown in status bar, keep it short please"
+msgid "Fit"
+msgstr "Мащабиране"
+
+#: lib/documentview/documentviewcontroller.cpp:104
+msgctxt ""
+"@action:button Zoom to original size, shown in status bar, keep it short "
+"please"
+msgid "100%"
+msgstr "100%"
+
+#: lib/documentview/messageviewadapter.cpp:52
+msgid "No document selected"
+msgstr "Няма избран документ"
+
+#: lib/documentview/documentview.cpp:178
+msgctxt "@info:tooltip"
+msgid "Trash"
+msgstr "Кошче"
+
+#: lib/documentview/documentview.cpp:179
+msgctxt "@action:button"
+msgid "Deselect"
+msgstr "Размаркиране"
+
+#: lib/documentview/documentview.cpp:369
+msgid "Gwenview does not know how to display this kind of document"
+msgstr "Gwenview не знае как да покаже този документ"
+
+#: lib/documentview/documentview.cpp:467
+msgid "Loading <filename>%1</filename> failed"
+msgstr "Зареждането на <filename>%1</filename> беше неуспешно"
+
+#: lib/jpegcontent.cpp:581
+msgctxt "@info"
+msgid "Could not open file for writing."
+msgstr "Файлът не може да бъде отворен за запис."
+
+#: lib/jpegcontent.cpp:597
+msgctxt "@info"
+msgid "No data to store."
+msgstr "Няма данни, които да бъдат записани."
+
+#: lib/slideshow.cpp:189
+msgctxt "@item:inmenu toggle loop in slideshow"
+msgid "Loop"
+msgstr "Повторение"
+
+#: lib/slideshow.cpp:194
+msgctxt "@item:inmenu toggle random order in slideshow"
+msgid "Random"
+msgstr "Случайно"
+
+#: importer/importdialog.cpp:75
+msgid "One document has been imported."
+msgid_plural "%1 documents have been imported."
+msgstr[0] "Внесен е един документ."
+msgstr[1] "Внесени са %1 документа."
+
+#: importer/importdialog.cpp:80
+msgid "One document has been skipped because it had already been imported."
+msgid_plural ""
+"%1 documents have been skipped because they had already been imported."
+msgstr[0] "Един документ е пропуснат, защото вече е бил внесен."
+msgstr[1] "%1 документа са пропуснати, защото вече са били внесени."
+
+#: importer/importdialog.cpp:88
+msgid ""
+"One of them has been renamed because another document with the same name had "
+"already been imported."
+msgid_plural ""
+"%1 of them have been renamed because other documents with the same name had "
+"already been imported."
+msgstr[0] ""
+"Един от тях е преименуван, защото друг документ със същото име вече е бил "
+"внесен."
+msgstr[1] ""
+"%1 от тях са преименувани, защото други документи със същите имена вече са "
+"били внесени."
+
+#: importer/importdialog.cpp:97
+msgid "Delete the imported document from the device?"
+msgid_plural "Delete the %1 imported documents from the device?"
+msgstr[0] "Да се изтрие ли внесеният документ от устройството?"
+msgstr[1] "Да се изтрият ли внесените %1 документа от устройството?"
+
+#: importer/importdialog.cpp:102
+msgid "Delete the skipped document from the device?"
+msgid_plural "Delete the %1 skipped documents from the device?"
+msgstr[0] "Да се изтрие ли пропуснатият документ от устройството?"
+msgstr[1] "Да се изтрият ли пропуснатите %1 документа от устройството?"
+
+#: importer/importdialog.cpp:108
+msgctxt "Singular sentence is actually never used."
+msgid "Delete the imported or skipped document from the device?"
+msgid_plural "Delete the %1 imported and skipped documents from the device?"
+msgstr[0] "Да се изтрие ли внесеният или пропуснат документ от устройството?"
+msgstr[1] ""
+"Да се изтрият ли внесените или пропуснти %1 документа от устройството?"
+
+#: importer/importdialog.cpp:115
 msgctxt "@title:window"
-msgid "Image Information"
-msgstr "Данни на изображението"
+msgid "Import Finished"
+msgstr "Внасянето приключи"
+
+#: importer/importdialog.cpp:117
+msgid "Keep"
+msgstr "Запазване"
+
+#: importer/importdialog.cpp:130
+msgid ""
+"Failed to delete the document:\n"
+"%2"
+msgid_plural ""
+"Failed to delete documents:\n"
+"%2"
+msgstr[0] ""
+"Грешка при изтриване на документа:\n"
+"%2 при изтриване на документа:\n"
+"%2"
+msgstr[1] ""
+"Грешка при изтриване на документите:\n"
+"%2"
+
+#: importer/importdialog.cpp:134
+msgid "Retry"
+msgstr "Отново"
+
+#: importer/importdialog.cpp:135
+msgid "Ignore"
+msgstr "Пренебрегване"
+
+#: importer/importdialog.cpp:157
+msgid "What do you want to do now?"
+msgstr "Какво искате да направите?"
+
+#: importer/importdialog.cpp:159
+msgid "View Imported Documents with Gwenview"
+msgstr "Преглед на внесените документи с Gwenview"
+
+#: importer/importdialog.cpp:160
+msgid "Import more Documents"
+msgstr "Внасяне на още документи"
+
+#: importer/importdialog.cpp:161
+msgid "Quit"
+msgstr "Изход"
+
+#: importer/filenameformater.cpp:104
+msgid "Shooting date"
+msgstr "Дата на заснемане"
+
+#: importer/filenameformater.cpp:105
+msgid "Shooting time"
+msgstr "Час на заснемане"
+
+#: importer/filenameformater.cpp:106
+msgid "Original extension"
+msgstr "Оригинално разширение"
+
+#: importer/filenameformater.cpp:107
+msgid "Original extension, in lower case"
+msgstr "Оригинално разширение, с малки букви"
+
+#: importer/filenameformater.cpp:108
+msgid "Original filename"
+msgstr "Оригинално име на файла"
+
+#: importer/filenameformater.cpp:109
+msgid "Original filename, in lower case"
+msgstr "Оригинално име на файла, с малки букви"
+
+#: importer/importer.cpp:80
+msgid "Could not create destination folder."
+msgstr "Грешка при създаване на директорията."
+
+#: importer/importer.cpp:86
+msgid ""
+"Could not create temporary upload folder:\n"
+"%1"
+msgstr ""
+"Грешка при създаване на временната папка за качване:\n"
+"%1"
+
+#: importer/thumbnailpage.cpp:197
+msgid "Import Selected"
+msgstr "Внасяне на избраните"
+
+#: importer/thumbnailpage.cpp:201
+msgid "Import All"
+msgstr "Внасяне на всички"
+
+#: importer/main.cpp:42
+msgid "Gwenview Importer"
+msgstr "Внасяне (Gwenview)"
+
+#: importer/main.cpp:44
+msgid "Photo Importer"
+msgstr "Внасяне на снимки"
+
+#: importer/main.cpp:49
+msgid "Source folder"
+msgstr "Източник"
+
+#: importer/main.cpp:50
+msgid "Device UDI"
+msgstr "UDI на устройство"
+
+#: importer/importerconfigdialog.cpp:56
+msgctxt "%1 is the importer keyword, %2 is keyword explanation"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: part/gvpart.cpp:80
+msgctxt "@action"
+msgid "Properties"
+msgstr "Информация"
+
+#: part/gvpart.cpp:128
+msgid "Gwenview KPart"
+msgstr "Gwenview KPart"
+
+#: part/gvpart.cpp:130 app/main.cpp:119
+msgid "An Image Viewer"
+msgstr "Преглед на изображения"
+
+#: app/fileoperations.cpp:60
+msgctxt "@title:window"
+msgid "Copy To"
+msgstr "Копиране в"
+
+#: app/fileoperations.cpp:61
+msgctxt "@action:button"
+msgid "Copy"
+msgstr "Копиране"
+
+#: app/fileoperations.cpp:64
+msgctxt "@title:window"
+msgid "Move To"
+msgstr "Преместване в"
+
+#: app/fileoperations.cpp:65
+msgctxt "@action:button"
+msgid "Move"
+msgstr "Преместване"
+
+#: app/fileoperations.cpp:68
+msgctxt "@title:window"
+msgid "Link To"
+msgstr "Връзка към"
+
+#: app/fileoperations.cpp:69
+msgctxt "@action:button"
+msgid "Link"
+msgstr "Връзка"
+
+#: app/fileoperations.cpp:162
+msgid "Move Here"
+msgstr "Преместване"
+
+#: app/fileoperations.cpp:165
+msgid "Copy Here"
+msgstr "Копиране"
+
+#: app/fileoperations.cpp:168
+msgid "Link Here"
+msgstr "Създаване на връзка"
+
+#: app/fileoperations.cpp:172
+msgid "Cancel"
+msgstr "Отказ"
+
+#: app/fileoperations.cpp:193
+msgctxt "@title:window"
+msgid "Rename"
+msgstr "Преименуване"
+
+#: app/fileoperations.cpp:194
+msgid "Rename <filename>%1</filename> to:"
+msgstr "Преименуване на <filename>%1</filename> в:"
 
 #: app/kipiimagecollectionselector.cpp:55
 msgctxt "%1 is collection name, %2 is image count in collection"
@@ -314,11 +1062,288 @@ msgid_plural "%1 (%2 images)"
 msgstr[0] "%1 (%2 изображение)"
 msgstr[1] "%1 (%2 изображения)"
 
-#: app/mainwindow.cpp:358 app/browsemainpage.cpp:151
-#: app/fileopscontextmanageritem.cpp:165
+#: app/kipiuploadwidget.cpp:43
+msgid ""
+"Images will be uploaded here:\n"
+"%1"
+msgstr ""
+"Изображението ще бъде качено тук:\n"
+"%1"
+
+#: app/fullscreencontent.cpp:153
+msgctxt "@info:tooltip"
+msgid "Configure full screen mode"
+msgstr "Настройки на режима \"цял екран\""
+
+#: app/fullscreencontent.cpp:355
+msgctxt "@item:intext fullscreen meta info separator"
+msgid ", "
+msgstr ", "
+
+#: app/fullscreencontent.cpp:411
+msgctxt "Slideshow interval in seconds"
+msgid "%1 sec"
+msgid_plural "%1 secs"
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунди"
+
+#: app/filtercontroller.cpp:120
+msgid "Name contains"
+msgstr "Името съдържа"
+
+#: app/filtercontroller.cpp:121
+msgid "Name does not contain"
+msgstr "Името не съдържа"
+
+#: app/filtercontroller.cpp:226
+msgid "Date >="
+msgstr "Дата >="
+
+#: app/filtercontroller.cpp:227
+msgid "Date ="
+msgstr "Дата ="
+
+#: app/filtercontroller.cpp:228
+msgid "Date <="
+msgstr "Дата <="
+
+#: app/filtercontroller.cpp:345
+msgctxt "@action:inmenu"
+msgid "Filter by Name"
+msgstr "Име"
+
+#: app/filtercontroller.cpp:346
+msgctxt "@action:inmenu"
+msgid "Filter by Date"
+msgstr "Дата"
+
+#: app/savebar.cpp:87
+msgid ""
+"You have modified many images. To avoid memory problems, you should save "
+"your changes."
+msgstr ""
+"Променили сте много изображения. За да няма проблем с паметта, по-добре "
+"запишете промените."
+
+#: app/savebar.cpp:176
+msgid "Current image modified"
+msgstr "Променено"
+
+#: app/savebar.cpp:182
+msgid "Previous modified image"
+msgstr "Предишното променено"
+
+#: app/savebar.cpp:183
+msgid "Next modified image"
+msgstr "Следващото променено"
+
+#: app/savebar.cpp:199
+msgid "One image modified"
+msgid_plural "%1 images modified"
+msgstr[0] "1 промененно изображение"
+msgstr[1] "%1 променени изображения"
+
+#: app/savebar.cpp:201
+msgid "Go to first modified image"
+msgstr "Към първото променено изображение"
+
+#: app/savebar.cpp:203
+msgid "Go to it"
+msgstr "Към изображението"
+
+#: app/savebar.cpp:302 app/savebar.cpp:307
+msgid "Save All"
+msgstr "Запис на всички"
+
+#: app/gvcore.cpp:87
+msgctxt "@info"
+msgid "No image format selected."
+msgstr "Не е избран формат на изображението."
+
+#: app/gvcore.cpp:100
+msgctxt "@info"
+msgid "Gwenview cannot save images as %1."
+msgstr "Gwenview не може да записва изображения като %1."
+
+#: app/gvcore.cpp:235
+msgid "Save using another format"
+msgstr "Запис в друг формат"
+
+#: app/gvcore.cpp:238
+msgid "Gwenview cannot save images in '%1' format."
+msgstr "Gwenview не може да записва изображения във формат \"%1\"."
+
+#: app/gvcore.cpp:261
+msgctxt "@info"
+msgid ""
+"A file named <filename>%1</filename> already exists.\n"
+"Are you sure you want to overwrite it?"
+msgstr ""
+"Вече има файл <filename>%1</filename>.\n"
+"Искате ли да го презапишете?"
+
+#: app/gvcore.cpp:276 app/gvcore.cpp:299
+msgctxt "@info"
+msgid "<b>Saving <filename>%1</filename> failed:</b><br>%2"
+msgstr "<b>Записът на <filename>%1</filename> беше неуспешен:</b><br>%2"
+
+#: app/gvcore.cpp:319
+msgid "You are now viewing the new document."
+msgstr "Преглеждате новия документ."
+
+#: app/gvcore.cpp:321
+msgid "Go back to the original"
+msgstr "Връщане към оригинала"
+
+#: app/imageopscontextmanageritem.cpp:82
+msgctxt "@title actions category - means actions changing image"
+msgid "Edit"
+msgstr "Редактиране"
+
+#: app/imageopscontextmanageritem.cpp:85
+msgid "Rotate Left"
+msgstr "Завъртане наляво"
+
+#: app/imageopscontextmanageritem.cpp:86
+msgctxt "@info:tooltip"
+msgid "Rotate image to the left"
+msgstr "Завъртане на изображението наляво"
+
+#: app/imageopscontextmanageritem.cpp:92
+msgid "Rotate Right"
+msgstr "Завъртане надясно"
+
+#: app/imageopscontextmanageritem.cpp:93
+msgctxt "@info:tooltip"
+msgid "Rotate image to the right"
+msgstr "Завъртане на изображението надясно"
+
+#: app/imageopscontextmanageritem.cpp:98
+msgid "Mirror"
+msgstr "Огледално"
+
+#: app/imageopscontextmanageritem.cpp:102
+msgid "Flip"
+msgstr "Обръщане"
+
+#: app/imageopscontextmanageritem.cpp:116
+msgid "Red Eye Reduction"
+msgstr "Премахване на червени очи"
+
+#: app/imageopscontextmanageritem.cpp:154
+msgid "Image Operations"
+msgstr "Операции с изображение"
+
+#: app/imagemetainfodialog.cpp:128
+msgctxt "@title:window"
+msgid "Image Information"
+msgstr "Данни на изображението"
+
+#: app/viewmainpage.cpp:301 app/viewmainpage.cpp:432
+msgid "Synchronize"
+msgstr "Синхронизиране"
+
+#: app/viewmainpage.cpp:423
+msgid "Thumbnail Bar"
+msgstr "Умалени копия"
+
+#: app/viewmainpage.cpp:713
+msgctxt "@action:button"
+msgid "Discard Changes and Reload"
+msgstr "Отмяна на промените и презареждане"
+
+#: app/viewmainpage.cpp:715
+msgctxt "@info"
+msgid ""
+"This image has been modified. Reloading it will discard all your changes."
+msgstr ""
+"Изображението е променено. Ако го презаредите промените ще бъдат анулирани."
+
+#: app/kipiexportaction.cpp:52
+msgid "Last Used Plugin"
+msgstr "Последно използвана приставка"
+
+#: app/kipiexportaction.cpp:54
+msgid "Other Plugins"
+msgstr "Други приставки"
+
+#: app/kipiexportaction.cpp:64 app/kipiinterface.cpp:250
+msgid "No Plugin Found"
+msgstr "Няма открита приставка"
+
+#: app/kipiexportaction.cpp:72
+msgctxt "@action"
+msgid "Share"
+msgstr "Споделяне"
+
+#: app/kipiexportaction.cpp:78
+msgctxt "@info:tooltip"
+msgid "Share images using various services"
+msgstr "Споделяне на изображението чрез различни услуги"
+
+#: app/fileopscontextmanageritem.cpp:154
+msgid "File Operations"
+msgstr "Операции с файлове"
+
+#: app/fileopscontextmanageritem.cpp:165 app/mainwindow.cpp:358
+#: app/browsemainpage.cpp:151
 msgctxt "@title actions category"
 msgid "File"
 msgstr "Файл"
+
+#: app/fileopscontextmanageritem.cpp:166
+msgctxt "@title actions category"
+msgid "Edit"
+msgstr "Редактиране"
+
+#: app/fileopscontextmanageritem.cpp:181
+msgctxt "Verb"
+msgid "Copy To..."
+msgstr "Копиране в..."
+
+#: app/fileopscontextmanageritem.cpp:185
+msgctxt "Verb"
+msgid "Move To..."
+msgstr "Преместване в..."
+
+#: app/fileopscontextmanageritem.cpp:189
+msgctxt "Verb: create link to the file where user wants"
+msgid "Link To..."
+msgstr "Връзка към..."
+
+#: app/fileopscontextmanageritem.cpp:193
+msgctxt "Verb"
+msgid "Rename..."
+msgstr "Преименуване..."
+
+#: app/fileopscontextmanageritem.cpp:197
+msgctxt "Verb"
+msgid "Trash"
+msgstr "Кошче"
+
+#: app/fileopscontextmanageritem.cpp:202
+msgid "Delete"
+msgstr "Изтриване"
+
+#: app/fileopscontextmanageritem.cpp:207
+msgid "Restore"
+msgstr "Възстановяване"
+
+#: app/fileopscontextmanageritem.cpp:210
+msgid "Properties"
+msgstr "Информация"
+
+#: app/fileopscontextmanageritem.cpp:214
+msgid "Create Folder..."
+msgstr "Създаване на директория..."
+
+#: app/fileopscontextmanageritem.cpp:218
+msgid "Open With"
+msgstr "Отваряне с"
+
+#: app/fileopscontextmanageritem.cpp:410
+msgid "Other Application..."
+msgstr "Друга програма..."
 
 #: app/mainwindow.cpp:370
 msgctxt "@action reload the currently viewed image"
@@ -498,6 +1523,57 @@ msgstr ""
 msgid "Go to the First Document"
 msgstr "Към първото изображение"
 
+#: app/saveallhelper.cpp:58
+msgctxt "@info:progress saving all image changes"
+msgid "Saving..."
+msgstr "Запис..."
+
+#: app/saveallhelper.cpp:59
+msgid "&Stop"
+msgstr "&Стоп"
+
+#: app/saveallhelper.cpp:84
+msgctxt "@info"
+msgid "One document could not be saved:"
+msgid_plural "%1 documents could not be saved:"
+msgstr[0] "1 документ не може да бъде записан:"
+msgstr[1] "%1 документа не могат да бъдат записани:"
+
+#: app/saveallhelper.cpp:108
+msgctxt ""
+"@info %1 is the name of the document which failed to save, %2 is the reason "
+"for the failure"
+msgid "<filename>%1</filename>: %2"
+msgstr "<filename>%1</filename>: %2"
+
+#: app/main.cpp:117
+msgid "Gwenview"
+msgstr "Gwenview"
+
+#: app/main.cpp:124
+msgid "Start in fullscreen mode"
+msgstr "Стартиране в режим \"цял екран\""
+
+#: app/main.cpp:125
+msgid "Start in slideshow mode"
+msgstr "Стартиране в режим \"презентация\""
+
+#: app/main.cpp:126
+msgid "A starting file or folder"
+msgstr "Начален файл или директория"
+
+#: app/configdialog.cpp:72
+msgid "General"
+msgstr "Общи"
+
+#: app/configdialog.cpp:100
+msgid "Image View"
+msgstr "Преглед на изображения"
+
+#: app/configdialog.cpp:105
+msgid "Advanced"
+msgstr "Разширени"
+
 #: app/startmainpage.cpp:268
 msgid "Add to Places"
 msgstr "Добавяне към места"
@@ -514,142 +1590,86 @@ msgstr "Забравяне на тази директория"
 msgid "Forget All"
 msgstr "Забравяне на всичко"
 
-#: app/main.cpp:117
-msgid "Gwenview"
-msgstr "Gwenview"
+#: app/kipiinterface.cpp:249
+msgid "Loading..."
+msgstr "Зареждане..."
 
-#: app/main.cpp:119 part/gvpart.cpp:130
-msgid "An Image Viewer"
-msgstr "Преглед на изображения"
+#: app/kipiinterface.cpp:283
+msgctxt "@title:menu"
+msgid "Images"
+msgstr "Изображения"
 
-#: app/main.cpp:124
-msgid "Start in fullscreen mode"
-msgstr "Стартиране в режим \"цял екран\""
+#: app/kipiinterface.cpp:284
+msgctxt "@title:menu"
+msgid "Tools"
+msgstr "Инструменти"
 
-#: app/main.cpp:125
-msgid "Start in slideshow mode"
-msgstr "Стартиране в режим \"презентация\""
+#: app/kipiinterface.cpp:285
+msgctxt "@title:menu"
+msgid "Import"
+msgstr "Внасяне"
 
-#: app/main.cpp:126
-msgid "A starting file or folder"
-msgstr "Начален файл или директория"
+#: app/kipiinterface.cpp:286
+msgctxt "@title:menu"
+msgid "Export"
+msgstr "Изнасяне"
 
-#: app/savebar.cpp:87
-msgid ""
-"You have modified many images. To avoid memory problems, you should save "
-"your changes."
-msgstr ""
-"Променили сте много изображения. За да няма проблем с паметта, по-добре "
-"запишете промените."
+#: app/kipiinterface.cpp:287
+msgctxt "@title:menu"
+msgid "Batch Processing"
+msgstr "Групова обработка"
 
-#: app/savebar.cpp:176
-msgid "Current image modified"
-msgstr "Променено"
+#: app/kipiinterface.cpp:288
+msgctxt "@title:menu"
+msgid "Collections"
+msgstr "Колекции"
 
-#: app/savebar.cpp:182
-msgid "Previous modified image"
-msgstr "Предишното променено"
+#: app/infocontextmanageritem.cpp:156
+msgctxt ""
+"@item:intext %1 is a key, we append a colon to it. A value is displayed after"
+msgid "%1:"
+msgstr "%1:"
 
-#: app/savebar.cpp:183
-msgid "Next modified image"
-msgstr "Следващото променено"
+#: app/infocontextmanageritem.cpp:234
+msgctxt "@action show more image meta info"
+msgid "More..."
+msgstr "Още..."
 
-#: app/savebar.cpp:199
-msgid "One image modified"
-msgid_plural "%1 images modified"
-msgstr[0] "1 промененно изображение"
-msgstr[1] "%1 променени изображения"
+#: app/infocontextmanageritem.cpp:248
+msgctxt "@title:group"
+msgid "Meta Information"
+msgstr "Мета информация"
 
-#: app/savebar.cpp:201
-msgid "Go to first modified image"
-msgstr "Към първото променено изображение"
+#: app/infocontextmanageritem.cpp:341
+msgctxt "@label"
+msgid "%1 file selected"
+msgid_plural "%1 files selected"
+msgstr[0] "Маркиран е %1 файл"
+msgstr[1] "Маркирани са %1 файла"
 
-#: app/savebar.cpp:203
-msgid "Go to it"
-msgstr "Към изображението"
+#: app/infocontextmanageritem.cpp:343
+msgctxt "@label"
+msgid "%1 folder selected"
+msgid_plural "%1 folders selected"
+msgstr[0] "Маркирана е %1 директория"
+msgstr[1] "Маркирани са %1 директории"
 
-#: app/savebar.cpp:302 app/savebar.cpp:307
-msgid "Save All"
-msgstr "Запис на всички"
+#: app/infocontextmanageritem.cpp:346
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] "%1 директория"
+msgstr[1] "%1 директории"
 
-#: app/imageopscontextmanageritem.cpp:82
-msgctxt "@title actions category - means actions changing image"
-msgid "Edit"
-msgstr "Редактиране"
+#: app/infocontextmanageritem.cpp:346
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 файл"
+msgstr[1] "%1 файла"
 
-#: app/imageopscontextmanageritem.cpp:85
-msgid "Rotate Left"
-msgstr "Завъртане наляво"
-
-#: app/imageopscontextmanageritem.cpp:86
-msgctxt "@info:tooltip"
-msgid "Rotate image to the left"
-msgstr "Завъртане на изображението наляво"
-
-#: app/imageopscontextmanageritem.cpp:92
-msgid "Rotate Right"
-msgstr "Завъртане надясно"
-
-#: app/imageopscontextmanageritem.cpp:93
-msgctxt "@info:tooltip"
-msgid "Rotate image to the right"
-msgstr "Завъртане на изображението надясно"
-
-#: app/imageopscontextmanageritem.cpp:98
-msgid "Mirror"
-msgstr "Огледално"
-
-#: app/imageopscontextmanageritem.cpp:102
-msgid "Flip"
-msgstr "Обръщане"
-
-#: app/imageopscontextmanageritem.cpp:116
-msgid "Red Eye Reduction"
-msgstr "Премахване на червени очи"
-
-#: app/imageopscontextmanageritem.cpp:154
-msgid "Image Operations"
-msgstr "Операции с изображение"
-
-#: app/gvcore.cpp:87
-msgctxt "@info"
-msgid "No image format selected."
-msgstr "Не е избран формат на изображението."
-
-#: app/gvcore.cpp:100
-msgctxt "@info"
-msgid "Gwenview cannot save images as %1."
-msgstr "Gwenview не може да записва изображения като %1."
-
-#: app/gvcore.cpp:235
-msgid "Save using another format"
-msgstr "Запис в друг формат"
-
-#: app/gvcore.cpp:238
-msgid "Gwenview cannot save images in '%1' format."
-msgstr "Gwenview не може да записва изображения във формат \"%1\"."
-
-#: app/gvcore.cpp:261
-msgctxt "@info"
-msgid ""
-"A file named <filename>%1</filename> already exists.\n"
-"Are you sure you want to overwrite it?"
-msgstr ""
-"Вече има файл <filename>%1</filename>.\n"
-"Искате ли да го презапишете?"
-
-#: app/gvcore.cpp:276 app/gvcore.cpp:299
-msgctxt "@info"
-msgid "<b>Saving <filename>%1</filename> failed:</b><br>%2"
-msgstr "<b>Записът на <filename>%1</filename> беше неуспешен:</b><br>%2"
-
-#: app/gvcore.cpp:319
-msgid "You are now viewing the new document."
-msgstr "Преглеждате новия документ."
-
-#: app/gvcore.cpp:321
-msgid "Go back to the original"
-msgstr "Връщане към оригинала"
+#: app/infocontextmanageritem.cpp:346
+msgctxt "@label. The two parameters are strings like '2 folders' and '1 file'."
+msgid "%1 and %2 selected"
+msgstr "Маркирани %1 и %2"
 
 #: app/browsemainpage.cpp:117
 msgctxt "@action:inmenu Navigation Bar"
@@ -712,1023 +1732,3 @@ msgid "%1 document"
 msgid_plural "%1 documents"
 msgstr[0] "%1 документ"
 msgstr[1] "%1 документа"
-
-#: app/viewmainpage.cpp:301 app/viewmainpage.cpp:432
-msgid "Synchronize"
-msgstr "Синхронизиране"
-
-#: app/viewmainpage.cpp:423
-msgid "Thumbnail Bar"
-msgstr "Умалени копия"
-
-#: app/viewmainpage.cpp:713
-msgctxt "@action:button"
-msgid "Discard Changes and Reload"
-msgstr "Отмяна на промените и презареждане"
-
-#: app/viewmainpage.cpp:715
-msgctxt "@info"
-msgid ""
-"This image has been modified. Reloading it will discard all your changes."
-msgstr ""
-"Изображението е променено. Ако го презаредите промените ще бъдат анулирани."
-
-#: app/kipiexportaction.cpp:52
-msgid "Last Used Plugin"
-msgstr "Последно използвана приставка"
-
-#: app/kipiexportaction.cpp:54
-msgid "Other Plugins"
-msgstr "Други приставки"
-
-#: app/kipiexportaction.cpp:64 app/kipiinterface.cpp:250
-msgid "No Plugin Found"
-msgstr "Няма открита приставка"
-
-#: app/kipiexportaction.cpp:72
-msgctxt "@action"
-msgid "Share"
-msgstr "Споделяне"
-
-#: app/kipiexportaction.cpp:78
-msgctxt "@info:tooltip"
-msgid "Share images using various services"
-msgstr "Споделяне на изображението чрез различни услуги"
-
-#: app/filtercontroller.cpp:120
-msgid "Name contains"
-msgstr "Името съдържа"
-
-#: app/filtercontroller.cpp:121
-msgid "Name does not contain"
-msgstr "Името не съдържа"
-
-#: app/filtercontroller.cpp:226
-msgid "Date >="
-msgstr "Дата >="
-
-#: app/filtercontroller.cpp:227
-msgid "Date ="
-msgstr "Дата ="
-
-#: app/filtercontroller.cpp:228
-msgid "Date <="
-msgstr "Дата <="
-
-#: app/filtercontroller.cpp:345
-msgctxt "@action:inmenu"
-msgid "Filter by Name"
-msgstr "Име"
-
-#: app/filtercontroller.cpp:346
-msgctxt "@action:inmenu"
-msgid "Filter by Date"
-msgstr "Дата"
-
-#: app/kipiuploadwidget.cpp:43
-msgid ""
-"Images will be uploaded here:\n"
-"%1"
-msgstr ""
-"Изображението ще бъде качено тук:\n"
-"%1"
-
-#: app/saveallhelper.cpp:58
-msgctxt "@info:progress saving all image changes"
-msgid "Saving..."
-msgstr "Запис..."
-
-#: app/saveallhelper.cpp:59
-msgid "&Stop"
-msgstr "&Стоп"
-
-#: app/saveallhelper.cpp:84
-msgctxt "@info"
-msgid "One document could not be saved:"
-msgid_plural "%1 documents could not be saved:"
-msgstr[0] "1 документ не може да бъде записан:"
-msgstr[1] "%1 документа не могат да бъдат записани:"
-
-#: app/saveallhelper.cpp:108
-msgctxt ""
-"@info %1 is the name of the document which failed to save, %2 is the reason "
-"for the failure"
-msgid "<filename>%1</filename>: %2"
-msgstr "<filename>%1</filename>: %2"
-
-#: app/infocontextmanageritem.cpp:156
-msgctxt ""
-"@item:intext %1 is a key, we append a colon to it. A value is displayed after"
-msgid "%1:"
-msgstr "%1:"
-
-#: app/infocontextmanageritem.cpp:234
-msgctxt "@action show more image meta info"
-msgid "More..."
-msgstr "Още..."
-
-#: app/infocontextmanageritem.cpp:248
-msgctxt "@title:group"
-msgid "Meta Information"
-msgstr "Мета информация"
-
-#: app/infocontextmanageritem.cpp:341
-msgctxt "@label"
-msgid "%1 file selected"
-msgid_plural "%1 files selected"
-msgstr[0] "Маркиран е %1 файл"
-msgstr[1] "Маркирани са %1 файла"
-
-#: app/infocontextmanageritem.cpp:343
-msgctxt "@label"
-msgid "%1 folder selected"
-msgid_plural "%1 folders selected"
-msgstr[0] "Маркирана е %1 директория"
-msgstr[1] "Маркирани са %1 директории"
-
-#: app/infocontextmanageritem.cpp:346
-msgid "%1 folder"
-msgid_plural "%1 folders"
-msgstr[0] "%1 директория"
-msgstr[1] "%1 директории"
-
-#: app/infocontextmanageritem.cpp:346
-msgid "%1 file"
-msgid_plural "%1 files"
-msgstr[0] "%1 файл"
-msgstr[1] "%1 файла"
-
-#: app/infocontextmanageritem.cpp:346
-msgctxt "@label. The two parameters are strings like '2 folders' and '1 file'."
-msgid "%1 and %2 selected"
-msgstr "Маркирани %1 и %2"
-
-#: app/configdialog.cpp:72
-msgid "General"
-msgstr "Общи"
-
-#: app/configdialog.cpp:100
-msgid "Image View"
-msgstr "Преглед на изображения"
-
-#: app/configdialog.cpp:105
-msgid "Advanced"
-msgstr "Разширени"
-
-#: app/fileopscontextmanageritem.cpp:154
-msgid "File Operations"
-msgstr "Операции с файлове"
-
-#: app/fileopscontextmanageritem.cpp:166
-msgctxt "@title actions category"
-msgid "Edit"
-msgstr "Редактиране"
-
-#: app/fileopscontextmanageritem.cpp:181
-msgctxt "Verb"
-msgid "Copy To..."
-msgstr "Копиране в..."
-
-#: app/fileopscontextmanageritem.cpp:185
-msgctxt "Verb"
-msgid "Move To..."
-msgstr "Преместване в..."
-
-#: app/fileopscontextmanageritem.cpp:189
-msgctxt "Verb: create link to the file where user wants"
-msgid "Link To..."
-msgstr "Връзка към..."
-
-#: app/fileopscontextmanageritem.cpp:193
-msgctxt "Verb"
-msgid "Rename..."
-msgstr "Преименуване..."
-
-#: app/fileopscontextmanageritem.cpp:197
-msgctxt "Verb"
-msgid "Trash"
-msgstr "Кошче"
-
-#: app/fileopscontextmanageritem.cpp:202
-msgid "Delete"
-msgstr "Изтриване"
-
-#: app/fileopscontextmanageritem.cpp:207
-msgid "Restore"
-msgstr "Възстановяване"
-
-#: app/fileopscontextmanageritem.cpp:210
-msgid "Properties"
-msgstr "Информация"
-
-#: app/fileopscontextmanageritem.cpp:214
-msgid "Create Folder..."
-msgstr "Създаване на директория..."
-
-#: app/fileopscontextmanageritem.cpp:218
-msgid "Open With"
-msgstr "Отваряне с"
-
-#: app/fileopscontextmanageritem.cpp:410
-msgid "Other Application..."
-msgstr "Друга програма..."
-
-#: app/fullscreencontent.cpp:153
-msgctxt "@info:tooltip"
-msgid "Configure full screen mode"
-msgstr "Настройки на режима \"цял екран\""
-
-#: app/fullscreencontent.cpp:355
-msgctxt "@item:intext fullscreen meta info separator"
-msgid ", "
-msgstr ", "
-
-#: app/fullscreencontent.cpp:411
-msgctxt "Slideshow interval in seconds"
-msgid "%1 sec"
-msgid_plural "%1 secs"
-msgstr[0] "%1 секунда"
-msgstr[1] "%1 секунди"
-
-#: app/fileoperations.cpp:60
-msgctxt "@title:window"
-msgid "Copy To"
-msgstr "Копиране в"
-
-#: app/fileoperations.cpp:61
-msgctxt "@action:button"
-msgid "Copy"
-msgstr "Копиране"
-
-#: app/fileoperations.cpp:64
-msgctxt "@title:window"
-msgid "Move To"
-msgstr "Преместване в"
-
-#: app/fileoperations.cpp:65
-msgctxt "@action:button"
-msgid "Move"
-msgstr "Преместване"
-
-#: app/fileoperations.cpp:68
-msgctxt "@title:window"
-msgid "Link To"
-msgstr "Връзка към"
-
-#: app/fileoperations.cpp:69
-msgctxt "@action:button"
-msgid "Link"
-msgstr "Връзка"
-
-#: app/fileoperations.cpp:162
-msgid "Move Here"
-msgstr "Преместване"
-
-#: app/fileoperations.cpp:165
-msgid "Copy Here"
-msgstr "Копиране"
-
-#: app/fileoperations.cpp:168
-msgid "Link Here"
-msgstr "Създаване на връзка"
-
-#: app/fileoperations.cpp:172
-msgid "Cancel"
-msgstr "Отказ"
-
-#: app/fileoperations.cpp:193
-msgctxt "@title:window"
-msgid "Rename"
-msgstr "Преименуване"
-
-#: app/fileoperations.cpp:194
-msgid "Rename <filename>%1</filename> to:"
-msgstr "Преименуване на <filename>%1</filename> в:"
-
-#: app/kipiinterface.cpp:249
-msgid "Loading..."
-msgstr "Зареждане..."
-
-#: app/kipiinterface.cpp:283
-msgctxt "@title:menu"
-msgid "Images"
-msgstr "Изображения"
-
-#: app/kipiinterface.cpp:284
-msgctxt "@title:menu"
-msgid "Tools"
-msgstr "Инструменти"
-
-#: app/kipiinterface.cpp:285
-msgctxt "@title:menu"
-msgid "Import"
-msgstr "Внасяне"
-
-#: app/kipiinterface.cpp:286
-msgctxt "@title:menu"
-msgid "Export"
-msgstr "Изнасяне"
-
-#: app/kipiinterface.cpp:287
-msgctxt "@title:menu"
-msgid "Batch Processing"
-msgstr "Групова обработка"
-
-#: app/kipiinterface.cpp:288
-msgctxt "@title:menu"
-msgid "Collections"
-msgstr "Колекции"
-
-#: importer/main.cpp:42
-msgid "Gwenview Importer"
-msgstr "Внасяне (Gwenview)"
-
-#: importer/main.cpp:44
-msgid "Photo Importer"
-msgstr "Внасяне на снимки"
-
-#: importer/main.cpp:49
-msgid "Source folder"
-msgstr "Източник"
-
-#: importer/main.cpp:50
-msgid "Device UDI"
-msgstr "UDI на устройство"
-
-#: importer/importer.cpp:80
-msgid "Could not create destination folder."
-msgstr "Грешка при създаване на директорията."
-
-#: importer/importer.cpp:86
-msgid ""
-"Could not create temporary upload folder:\n"
-"%1"
-msgstr ""
-"Грешка при създаване на временната папка за качване:\n"
-"%1"
-
-#: importer/importerconfigdialog.cpp:56
-msgctxt "%1 is the importer keyword, %2 is keyword explanation"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: importer/filenameformater.cpp:104
-msgid "Shooting date"
-msgstr "Дата на заснемане"
-
-#: importer/filenameformater.cpp:105
-msgid "Shooting time"
-msgstr "Час на заснемане"
-
-#: importer/filenameformater.cpp:106
-msgid "Original extension"
-msgstr "Оригинално разширение"
-
-#: importer/filenameformater.cpp:107
-msgid "Original extension, in lower case"
-msgstr "Оригинално разширение, с малки букви"
-
-#: importer/filenameformater.cpp:108
-msgid "Original filename"
-msgstr "Оригинално име на файла"
-
-#: importer/filenameformater.cpp:109
-msgid "Original filename, in lower case"
-msgstr "Оригинално име на файла, с малки букви"
-
-#: importer/importdialog.cpp:75
-msgid "One document has been imported."
-msgid_plural "%1 documents have been imported."
-msgstr[0] "Внесен е един документ."
-msgstr[1] "Внесени са %1 документа."
-
-#: importer/importdialog.cpp:80
-msgid "One document has been skipped because it had already been imported."
-msgid_plural ""
-"%1 documents have been skipped because they had already been imported."
-msgstr[0] "Един документ е пропуснат, защото вече е бил внесен."
-msgstr[1] "%1 документа са пропуснати, защото вече са били внесени."
-
-#: importer/importdialog.cpp:88
-msgid ""
-"One of them has been renamed because another document with the same name had "
-"already been imported."
-msgid_plural ""
-"%1 of them have been renamed because other documents with the same name had "
-"already been imported."
-msgstr[0] ""
-"Един от тях е преименуван, защото друг документ със същото име вече е бил "
-"внесен."
-msgstr[1] ""
-"%1 от тях са преименувани, защото други документи със същите имена вече са "
-"били внесени."
-
-#: importer/importdialog.cpp:97
-msgid "Delete the imported document from the device?"
-msgid_plural "Delete the %1 imported documents from the device?"
-msgstr[0] "Да се изтрие ли внесеният документ от устройството?"
-msgstr[1] "Да се изтрият ли внесените %1 документа от устройството?"
-
-#: importer/importdialog.cpp:102
-msgid "Delete the skipped document from the device?"
-msgid_plural "Delete the %1 skipped documents from the device?"
-msgstr[0] "Да се изтрие ли пропуснатият документ от устройството?"
-msgstr[1] "Да се изтрият ли пропуснатите %1 документа от устройството?"
-
-#: importer/importdialog.cpp:108
-msgctxt "Singular sentence is actually never used."
-msgid "Delete the imported or skipped document from the device?"
-msgid_plural "Delete the %1 imported and skipped documents from the device?"
-msgstr[0] "Да се изтрие ли внесеният или пропуснат документ от устройството?"
-msgstr[1] ""
-"Да се изтрият ли внесените или пропуснти %1 документа от устройството?"
-
-#: importer/importdialog.cpp:115
-msgctxt "@title:window"
-msgid "Import Finished"
-msgstr "Внасянето приключи"
-
-#: importer/importdialog.cpp:117
-msgid "Keep"
-msgstr "Запазване"
-
-#: importer/importdialog.cpp:130
-msgid ""
-"Failed to delete the document:\n"
-"%2"
-msgid_plural ""
-"Failed to delete documents:\n"
-"%2"
-msgstr[0] ""
-"Грешка при изтриване на документа:\n"
-"%2 при изтриване на документа:\n"
-"%2"
-msgstr[1] ""
-"Грешка при изтриване на документите:\n"
-"%2"
-
-#: importer/importdialog.cpp:134
-msgid "Retry"
-msgstr "Отново"
-
-#: importer/importdialog.cpp:135
-msgid "Ignore"
-msgstr "Пренебрегване"
-
-#: importer/importdialog.cpp:157
-msgid "What do you want to do now?"
-msgstr "Какво искате да направите?"
-
-#: importer/importdialog.cpp:159
-msgid "View Imported Documents with Gwenview"
-msgstr "Преглед на внесените документи с Gwenview"
-
-#: importer/importdialog.cpp:160
-msgid "Import more Documents"
-msgstr "Внасяне на още документи"
-
-#: importer/importdialog.cpp:161
-msgid "Quit"
-msgstr "Изход"
-
-#: importer/thumbnailpage.cpp:197
-msgid "Import Selected"
-msgstr "Внасяне на избраните"
-
-#: importer/thumbnailpage.cpp:201
-msgid "Import All"
-msgstr "Внасяне на всички"
-
-#: part/gvpart.cpp:80
-msgctxt "@action"
-msgid "Properties"
-msgstr "Информация"
-
-#: part/gvpart.cpp:128
-msgid "Gwenview KPart"
-msgstr "Gwenview KPart"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:31
-#. i18n: ectx: whatsthis, entry (PercentageOfMemoryUsageWarning), group (General)
-#: rc.cpp:3
-msgid ""
-"The percentage of memory used by Gwenview before it\n"
-"            warns the user and suggest saving changes."
-msgstr ""
-"Процентът памет, който използва Gwenview преди \n"
-"            да предупреди и да пита за запис на промените."
-
-#. i18n: file: lib/gwenviewconfig.kcfg:38
-#. i18n: ectx: whatsthis, entry (BlackListedExtensions), group (General)
-#: rc.cpp:7
-#, fuzzy
-msgid ""
-"A list of filename extensions Gwenview should not try to\n"
-"            load. We exclude *.new as well because this is the extension\n"
-"            used for temporary files by KSaveFile."
-msgstr ""
-"Списък с файлови разширения, които Gwenview не трябва\n"
-"\t\t\tда зарежда. Намира приложение при изключване на\n"
-"\t\t\tнеобработени файлове, разпознати като TIFF или JPEG.\n"
-"\t\t\tИзключват се и *.new, защото разширението се ползва от\n"
-"\t\t\tвременните файлове на KSaveFile."
-
-#. i18n: file: lib/gwenviewconfig.kcfg:139
-#. i18n: ectx: whatsthis, entry (LockZoom), group (ImageView)
-#: rc.cpp:12
-msgid ""
-"Defines what happens when going to image B after having zoomed an area of "
-"image A.\n"
-"                When true: zoom and position is kept. When false: image B is "
-"zoomed out to fit the screen."
-msgstr ""
-
-#. i18n: file: lib/gwenviewconfig.kcfg:220
-#. i18n: ectx: label, entry (random), group (slide show)
-#: rc.cpp:16
-msgid "Display slide show images in random order"
-msgstr "Прожекция в произволен ред"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:224
-#. i18n: ectx: label, entry (fullscreen), group (slide show)
-#: rc.cpp:19
-msgid "Show slideshow in fullscreen mode"
-msgstr "Прожекция на цял екран"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:228
-#. i18n: ectx: label, entry (loop), group (slide show)
-#: rc.cpp:22
-msgid "Loop on images"
-msgstr "Циркулиране на изображения"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:232
-#. i18n: ectx: label, entry (stopAtEnd), group (slide show)
-#: rc.cpp:25
-msgid "Stop at last image of folder"
-msgstr "Спиране на последното изображение в директорията"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:236
-#. i18n: ectx: label, entry (interval), group (slide show)
-#: rc.cpp:28
-msgid "Interval between images (in seconds)"
-msgstr "Интервал между изображенията (в сек)"
-
-#. i18n: file: lib/crop/cropwidget.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, advancedCheckBox)
-#: rc.cpp:37
-msgid "Advanced settings"
-msgstr "Разширени настройки"
-
-#. i18n: file: lib/crop/cropwidget.ui:55
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:40
-msgid "Ratio:"
-msgstr "Съотношение:"
-
-#. i18n: file: lib/crop/cropwidget.ui:84
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:43
-msgid "Position:"
-msgstr "Позиция:"
-
-#. i18n: file: lib/crop/cropwidget.ui:117
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:46
-msgid "Size:"
-msgstr "Големина:"
-
-#. i18n: file: lib/redeyereduction/redeyereductionwidget.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:49
-msgid "Size"
-msgstr "Големина"
-
-#. i18n: file: lib/redeyereduction/redeyereductionwidget.ui:63
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:52
-msgid "Click on the red eye you want to fix"
-msgstr "Щракнете върху червените очи, които искате да редактирате."
-
-#. i18n: file: lib/print/printoptionspage.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, PrintOptionsPage)
-#: rc.cpp:55
-msgid "Image Settings"
-msgstr "Информация за изображение"
-
-#. i18n: file: lib/print/printoptionspage.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:58
-msgid "Image Position"
-msgstr "Позиция на изображението"
-
-#. i18n: file: lib/print/printoptionspage.ui:45
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:61
-msgid "Scaling"
-msgstr "Мащабиране"
-
-#. i18n: file: lib/print/printoptionspage.ui:51
-#. i18n: ectx: property (text), widget (QRadioButton, mNoScale)
-#: rc.cpp:64
-msgid "&No scaling"
-msgstr "&Без мащабиране"
-
-#. i18n: file: lib/print/printoptionspage.ui:61
-#. i18n: ectx: property (text), widget (QRadioButton, mScaleToPage)
-#: rc.cpp:67
-msgid "&Fit image to page"
-msgstr "&Запълване на страницата с изображението"
-
-#. i18n: file: lib/print/printoptionspage.ui:98
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintEnlargeSmallerImages)
-#. i18n: file: app/imageviewconfigpage.ui:201
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnlargeSmallerImages)
-#: rc.cpp:70 rc.cpp:190
-msgid "Enlarge smaller images"
-msgstr "Увеличаване на по-малките изображения"
-
-#. i18n: file: lib/print/printoptionspage.ui:123
-#. i18n: ectx: property (text), widget (QRadioButton, mScaleTo)
-#: rc.cpp:73
-msgid "&Scale to:"
-msgstr "&Мащабиране до:"
-
-#. i18n: file: lib/print/printoptionspage.ui:158
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:76
-msgctxt "Dimension separator, as in: '15 x 10 centimeters'"
-msgid "x"
-msgstr "x"
-
-#. i18n: file: lib/print/printoptionspage.ui:185
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
-#: rc.cpp:79
-msgid "Millimeters"
-msgstr "Милиметри"
-
-#. i18n: file: lib/print/printoptionspage.ui:190
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
-#: rc.cpp:82
-msgid "Centimeters"
-msgstr "Сантиметри"
-
-#. i18n: file: lib/print/printoptionspage.ui:195
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
-#: rc.cpp:85
-msgid "Inches"
-msgstr "Инчове"
-
-#. i18n: file: lib/print/printoptionspage.ui:224
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintKeepRatio)
-#: rc.cpp:88
-msgid "Keep ratio"
-msgstr "Запазване на съотношението"
-
-#. i18n: file: lib/resize/resizeimagewidget.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, ResizeImageWidget)
-#: rc.cpp:91
-msgid "Image Resizing"
-msgstr "Преоразмеряване на изображение"
-
-#. i18n: file: lib/resize/resizeimagewidget.ui:20
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:94
-msgid "Enter the new size for this image."
-msgstr "Въведете новия размер за изображението."
-
-#. i18n: file: lib/resize/resizeimagewidget.ui:32
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:97
-msgid "Current size:"
-msgstr "Текущ размер:"
-
-#. i18n: file: lib/resize/resizeimagewidget.ui:88
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:100
-msgid "New Size:"
-msgstr "Нов размер:"
-
-#. i18n: file: lib/resize/resizeimagewidget.ui:135
-#. i18n: ectx: property (text), widget (QCheckBox, mKeepAspectCheckBox)
-#: rc.cpp:103
-msgid "Keep aspect ratio"
-msgstr "Запазване на съотношението"
-
-#. i18n: file: app/generalconfigpage.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:106
-msgid "Background color:"
-msgstr "Фонов цвят:"
-
-#. i18n: file: app/generalconfigpage.ui:82
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:109
-msgid "Videos:"
-msgstr "Видео:"
-
-#. i18n: file: app/generalconfigpage.ui:89
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ListVideos)
-#: rc.cpp:112
-msgid "Show videos"
-msgstr "Показване на видео"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:115
-msgid "Slideshow"
-msgstr "Прожекция"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:29
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:118
-msgid "Interval:"
-msgstr "Интервал:"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:75
-#. i18n: ectx: property (text), widget (QCheckBox, mSlideShowLoopCheckBox)
-#: rc.cpp:121
-msgid "Loop"
-msgstr "Повторение"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:82
-#. i18n: ectx: property (text), widget (QCheckBox, mSlideShowRandomCheckBox)
-#: rc.cpp:124
-msgid "Random"
-msgstr "Случайно"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:92
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:127
-msgid "Image Information"
-msgstr "Данни на изображението"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:101
-#. i18n: ectx: property (text), widget (QPushButton, mConfigureDisplayedInformationButton)
-#: rc.cpp:130
-msgid "Select Image Information to Display..."
-msgstr "Избор на данни на изображението за показване..."
-
-#. i18n: file: app/fullscreenconfigwidget.ui:111
-#. i18n: ectx: property (title), widget (QGroupBox, mThumbnailGroupBox)
-#: rc.cpp:133
-msgid "Thumbnails"
-msgstr "Миниатюри"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:120
-#. i18n: ectx: property (text), widget (QCheckBox, mShowThumbnailsCheckBox)
-#: rc.cpp:136
-msgid "Show thumbnails"
-msgstr "Умалени копия"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:130
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:139
-msgid "Height:"
-msgstr "Височина:"
-
-#. i18n: file: app/startmainpage.ui:34
-#. i18n: ectx: property (text), widget (QLabel, mHistoryDisabledLabel)
-#: rc.cpp:142
-msgid "History has been disabled."
-msgstr "Историята е изключена."
-
-#. i18n: file: app/startmainpage.ui:51
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:145
-msgid "Recent Folders"
-msgstr "Последни директории"
-
-#. i18n: file: app/startmainpage.ui:65
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:148
-msgid "Recent URLs"
-msgstr "Последни адреси"
-
-#. i18n: file: app/startmainpage.ui:109
-#. i18n: ectx: attribute (title), widget (QWidget, placesTab)
-#: rc.cpp:151
-msgid "Places"
-msgstr "Места"
-
-#. i18n: file: app/advancedconfigpage.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:154
-msgid "Cache:"
-msgstr "Кеш:"
-
-#. i18n: file: app/advancedconfigpage.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_DeleteThumbnailCacheOnExit)
-#: rc.cpp:157
-msgid "Delete thumbnail cache folder on exit"
-msgstr "Изтриване кеша на умалените копия при спиране на програмата"
-
-#. i18n: file: app/advancedconfigpage.ui:51
-#. i18n: ectx: property (text), widget (QLabel, cacheHelpLabel)
-#: rc.cpp:160
-msgid ""
-"Enable this option if you do not have a lot of disk space.<br/><br/><em>Be "
-"careful:</em> this will delete the folder named <filename>.thumbnails</"
-"filename> in your home folder, deleting all thumbnails previously generated "
-"by Gwenview and other applications."
-msgstr ""
-"Включете това, ако нямате много място на диска.<br/><br/><em> Внимание:</em> "
-"ще се изтрие папката <filename>.thumbnails</filename> в домашната ви папка, "
-"заедно с всички миниатюри, създадени от Gwenview или други програми."
-
-#. i18n: file: app/advancedconfigpage.ui:77
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:163
-msgid "History:"
-msgstr "История:"
-
-#. i18n: file: app/advancedconfigpage.ui:89
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HistoryEnabled)
-#: rc.cpp:166
-msgid "Remember folders and URLs"
-msgstr "Помнене на директориите и адресите"
-
-#. i18n: file: app/browsemainpage.ui:88
-#. i18n: ectx: property (text), widget (Gwenview::StatusBarToolButton, mAddFilterButton)
-#: rc.cpp:169
-msgid "Add Filter"
-msgstr "Филтриране по"
-
-#. i18n: file: app/imageviewconfigpage.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:172
-msgid "Transparent background:"
-msgstr "Прозрачен фон:"
-
-#. i18n: file: app/imageviewconfigpage.ui:38
-#. i18n: ectx: property (text), widget (QRadioButton, checkBoardRadioButton)
-#: rc.cpp:175
-msgid "&Check board"
-msgstr "&Шахматна дъска"
-
-#. i18n: file: app/imageviewconfigpage.ui:71
-#. i18n: ectx: property (text), widget (QRadioButton, solidColorRadioButton)
-#: rc.cpp:178
-msgid "&Solid color:"
-msgstr "Само &един цвят:"
-
-#. i18n: file: app/imageviewconfigpage.ui:119
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:181
-msgid "Mouse wheel behavior:"
-msgstr "Колелце на мишката:"
-
-#. i18n: file: app/imageviewconfigpage.ui:134
-#. i18n: ectx: property (text), widget (QRadioButton, mouseWheelScrollRadioButton)
-#: rc.cpp:184
-msgctxt "@option:radio action on mouse wheel"
-msgid "Scroll"
-msgstr "Превъртане"
-
-#. i18n: file: app/imageviewconfigpage.ui:161
-#. i18n: ectx: property (text), widget (QRadioButton, mouseWheelBrowseRadioButton)
-#: rc.cpp:187
-msgctxt "@option:radio action on mouse wheel"
-msgid "Browse"
-msgstr "Прелистване"
-
-#. i18n: file: app/imageviewconfigpage.ui:239
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:193
-msgid "Animations:"
-msgstr "Анимации:"
-
-#. i18n: file: app/imageviewconfigpage.ui:254
-#. i18n: ectx: property (text), widget (QRadioButton, glAnimationRadioButton)
-#: rc.cpp:196
-msgid "OpenGL"
-msgstr "OpenGL"
-
-#. i18n: file: app/imageviewconfigpage.ui:281
-#. i18n: ectx: property (text), widget (QRadioButton, softwareAnimationRadioButton)
-#: rc.cpp:199
-msgid "Software"
-msgstr "Софтуер"
-
-#. i18n: file: app/imageviewconfigpage.ui:305
-#. i18n: ectx: property (text), widget (QRadioButton, noAnimationRadioButton)
-#: rc.cpp:202
-msgid "None"
-msgstr "Без"
-
-#. i18n: file: app/imageviewconfigpage.ui:327
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:205
-msgid "<b>Thumbnail Bar</b>"
-msgstr "<b>Лента с умалени копия</b>"
-
-#. i18n: file: app/imageviewconfigpage.ui:334
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:208
-msgid "Orientation:"
-msgstr "Ориентация:"
-
-#. i18n: file: app/imageviewconfigpage.ui:349
-#. i18n: ectx: property (text), widget (QRadioButton, horizontalRadioButton)
-#: rc.cpp:211
-msgid "Horizontal"
-msgstr "Хоризонтално"
-
-#. i18n: file: app/imageviewconfigpage.ui:373
-#. i18n: ectx: property (text), widget (QRadioButton, verticalRadioButton)
-#: rc.cpp:214
-msgid "Vertical"
-msgstr "Вертикално"
-
-#. i18n: file: app/imageviewconfigpage.ui:395
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:217
-msgid "Row count:"
-msgstr "Редове:"
-
-#. i18n: file: app/gwenviewui.rc:65
-#. i18n: ectx: Menu (plugins)
-#: rc.cpp:220
-msgid "&Plugins"
-msgstr "&Приставки"
-
-#. i18n: file: app/gwenviewui.rc:68
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:223
-msgid "&Settings"
-msgstr "&Настройки"
-
-#. i18n: file: app/gwenviewui.rc:81
-#. i18n: ectx: ToolBar (mainToolBar)
-#. i18n: file: part/gvpart.rc:15
-#. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:226 rc.cpp:262
-msgid "Main Toolbar"
-msgstr "Главна лента с инструменти"
-
-#. i18n: file: importer/thumbnailpage.ui:173
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:229
-msgid "Select the documents to import"
-msgstr "Изберете документи за внасяне"
-
-#. i18n: file: importer/thumbnailpage.ui:185
-#. i18n: ectx: property (text), widget (QPushButton, mConfigureButton)
-#: rc.cpp:232
-msgid "Settings..."
-msgstr "Настройки..."
-
-#. i18n: file: importer/thumbnailpage.ui:201
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:235
-msgid "Enter the import destination"
-msgstr "Въведете местоназначението"
-
-#. i18n: file: importer/thumbnailpage.ui:220
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:238
-msgid "Listing content of:"
-msgstr "Показване съдържанието на:"
-
-#. i18n: file: importer/importerconfigdialog.ui:17
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoRename)
-#: rc.cpp:241
-msgid "Rename documents automatically"
-msgstr "Автоматично преименуване на документите"
-
-#. i18n: file: importer/importerconfigdialog.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:244
-msgid "Rename Format:"
-msgstr "Формат за преименуване:"
-
-#. i18n: file: importer/importerconfigdialog.ui:59
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:247
-msgid "Preview:"
-msgstr "Преглед:"
-
-#. i18n: file: importer/importerconfigdialog.ui:83
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:250
-msgid "<i>Type text or click the items below to customize the format</i>"
-msgstr ""
-"<i>Въведете текст или натиснете елементите по-долу, за да уточните формата</"
-"i>"
-
-#. i18n: file: importer/progresspage.ui:30
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:253
-msgid "Importing documents..."
-msgstr "Внасяне на документи..."
-
-#. i18n: file: part/gvpart.rc:4
-#. i18n: ectx: Menu (file)
-#: rc.cpp:256
-msgid "&File"
-msgstr "&Файл"
-
-#. i18n: file: part/gvpart.rc:8
-#. i18n: ectx: Menu (view)
-#: rc.cpp:259
-msgid "&View"
-msgstr "&Изглед"

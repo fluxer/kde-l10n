@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2012-01-24 11:52+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -17,6 +17,45 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.2\n"
+
+#: examples/ktcli/main.cpp:60
+msgid "Torrent to open"
+msgstr "Торент, який слід відкрити"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+msgid "Port to use"
+msgstr "Порт, який слід використовувати"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr "Визначає, чи слід вмикати шифрування"
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr "Визначає, чи слід вмикати обмін даними вузлів"
+
+#: examples/ktcli/main.cpp:65
+msgid "Whether or not to use utp"
+msgstr "Визначає, чи слід використовувати UTP"
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr "ktcli"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "Каталогу %1 не існує"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Пошкоджений торент."
+
+#: src/torrent/torrent.cpp:165
+msgid "Unable to open torrent file %1: %2"
+msgstr " Не вдалося відкрити файл торента %1: %2"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -51,6 +90,17 @@ msgstr ""
 #: src/torrent/torrentcontrol.cpp:607
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "Ви вже звантажуєте торент <b>%1</b>."
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+msgid "Cannot open file %1: %2"
+msgstr "Не вдалося відкрити файл %1: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Не вдалося створити індексний файл: %1"
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -113,27 +163,43 @@ msgstr "Призупинено"
 msgid "Superseeding"
 msgstr "Суперпоширення"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Пошкоджений торент."
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr "Перевищення часу очікування на з’єднання з координатором %1"
 
-#: src/torrent/torrent.cpp:165
-msgid "Unable to open torrent file %1: %2"
-msgstr " Не вдалося відкрити файл торента %1: %2"
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "Не вдалося обробити назву вузла %1"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
-msgid "Cannot open file %1: %2"
-msgstr "Не вдалося відкрити файл %1: %2"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Переспрямування без зазначення нової адреси"
 
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "Не вдалося створити індексний файл: %1"
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "Некоректна відповідь координатора"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "Некоректні дані від координатора"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "Некоректна адреса URL координатора"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr "Очікування на завершення інших перевірок даних"
+
+#: src/datachecker/datacheckerjob.cpp:141
+msgid "Checking Data"
+msgstr "Перевірка даних"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Невідомий клієнт"
 
 #: src/download/chunkdownload.cpp:383
 msgid "1 peer"
@@ -210,18 +276,124 @@ msgstr "Переспрямовано без зазначення нової ад
 msgid "Disabled because webseed does not match torrent"
 msgstr "Вимкнено через те, що вебапоширювач не відповідає торенту"
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-msgid "Cannot open index file %1: %2"
-msgstr "Не вдалося відкрити файл покажчика %1: %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "Помилка під час спроби запису на диск"
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
-msgid "Failed to open %1: %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "Помилка під час спроби читання з диска"
+
+#: src/util/file.cpp:84
+msgid "Cannot write to %1: %2"
+msgstr "Не вдалося записати у %1: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Не вдалося прочитати з %1"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/с"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "%1 день "
+msgstr[1] "%1 дні "
+msgstr[2] "%1 днів "
+msgstr[3] "%1 день "
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "Не вдалося створити каталог %1"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "Не вдалося створити символічне посилання %1 до %2: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "Не вдалося пересунути %1 до %2: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Не вдалося скопіювати %1 до %2: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "Не вдалося вилучити %1: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "Не вдалося створити %1: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Не вдалося вирахувати розмір файла %1: %2"
+
+#: src/util/fileops.cpp:334
+msgid "Cannot calculate the filesize: %1"
+msgstr "Не вдалося обчислити розмір файла: %1"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+msgid "Cannot open %1: %2"
 msgstr "Не вдалося відкрити %1: %2"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "Не вдалося розгорнути файл: %1"
+
+#: src/util/fileops.cpp:427
+msgid "Cannot seek in file: %1"
+msgstr "Не вдалося виконати пошук у файлі: %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "Загальне"
+
+#: src/util/logsystemmanager.cpp:34
+msgid "Connections"
+msgstr "З'єднання"
+
+#: src/util/logsystemmanager.cpp:35
+msgid "Tracker"
+msgstr "Координатор"
+
+#: src/util/logsystemmanager.cpp:36
+msgid "DHT"
+msgstr "DHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "В/В диска"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr "µTP"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "Гаразд"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr "Попередження: %1"
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Оголошення"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 msgid "Failed to create %1: %2"
 msgstr "Не вдалося створити %1: %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+msgid "Failed to open %1: %2"
+msgstr "Не вдалося відкрити %1: %2"
 
 #: src/diskio/dndfile.cpp:89
 msgid "Cannot create file %1: %2"
@@ -234,16 +406,6 @@ msgstr "Не вдалося записати перший шматок в фай
 #: src/diskio/dndfile.cpp:155
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Не вдалося записати останній шматок в файл DND: %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr ""
-"Не можна виконувати запис до ділянки пам’яті позначеної лише для читання"
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-msgid "Cannot open %1: %2"
-msgstr "Не вдалося відкрити %1: %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -285,6 +447,15 @@ msgstr "Не вдалося записати в файл %1: %2"
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Не вдалося виділити місце на диску: %1"
 
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr ""
+"Не можна виконувати запис до ділянки пам’яті позначеної лише для читання"
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+msgid "Cannot open index file %1: %2"
+msgstr "Не вдалося відкрити файл покажчика %1: %2"
+
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
 msgstr "Очікування на завершення інших завдань з пересування"
@@ -324,115 +495,6 @@ msgstr "Не вдалося перетворити %1 в int"
 msgid "Torrent is incomplete."
 msgstr "Торент не повний."
 
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "Гаразд"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "Warning: %1"
-msgstr "Попередження: %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Оголошення"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "Каталогу %1 не існує"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "Загальне"
-
-#: src/util/logsystemmanager.cpp:34
-msgid "Connections"
-msgstr "З'єднання"
-
-#: src/util/logsystemmanager.cpp:35
-msgid "Tracker"
-msgstr "Координатор"
-
-#: src/util/logsystemmanager.cpp:36
-msgid "DHT"
-msgstr "DHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "В/В диска"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr "µTP"
-
-#: src/util/fileops.cpp:101
-msgid "Cannot create directory %1"
-msgstr "Не вдалося створити каталог %1"
-
-#: src/util/fileops.cpp:168
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Не вдалося створити символічне посилання %1 до %2: %3"
-
-#: src/util/fileops.cpp:185
-msgid "Cannot move %1 to %2: %3"
-msgstr "Не вдалося пересунути %1 до %2: %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Не вдалося скопіювати %1 до %2: %3"
-
-#: src/util/fileops.cpp:282
-msgid "Cannot delete %1: %2"
-msgstr "Не вдалося вилучити %1: %2"
-
-#: src/util/fileops.cpp:300
-msgid "Cannot create %1: %2"
-msgstr "Не вдалося створити %1: %2"
-
-#: src/util/fileops.cpp:318
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Не вдалося вирахувати розмір файла %1: %2"
-
-#: src/util/fileops.cpp:334
-msgid "Cannot calculate the filesize: %1"
-msgstr "Не вдалося обчислити розмір файла: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-msgid "Cannot expand file: %1"
-msgstr "Не вдалося розгорнути файл: %1"
-
-#: src/util/fileops.cpp:427
-msgid "Cannot seek in file: %1"
-msgstr "Не вдалося виконати пошук у файлі: %1"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "Помилка під час спроби запису на диск"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "Помилка під час спроби читання з диска"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/с"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "%1 день "
-msgstr[1] "%1 дні "
-msgstr[2] "%1 днів "
-msgstr[3] "%1 день "
-
-#: src/util/file.cpp:84
-msgid "Cannot write to %1: %2"
-msgstr "Не вдалося записати у %1: %2"
-
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "Не вдалося прочитати з %1"
-
 #: src/upnp/upnprouter.cpp:167
 msgid "Failed to download %1: %2"
 msgstr "Спроба звантаження %1 зазнала невдачі: %2"
@@ -460,65 +522,3 @@ msgstr "З'єднання несподівано розірвано"
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
 msgstr "Строк очікування на завершення операції перевищено"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Невідомий клієнт"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr "Очікування на завершення інших перевірок даних"
-
-#: src/datachecker/datacheckerjob.cpp:141
-msgid "Checking Data"
-msgstr "Перевірка даних"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "Некоректна відповідь координатора"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "Некоректні дані від координатора"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "Некоректна адреса URL координатора"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "Перевищення часу очікування на з’єднання з координатором %1"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Переспрямування без зазначення нової адреси"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "Не вдалося обробити назву вузла %1"
-
-#: examples/ktcli/main.cpp:60
-msgid "Torrent to open"
-msgstr "Торент, який слід відкрити"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-msgid "Port to use"
-msgstr "Порт, який слід використовувати"
-
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr "Визначає, чи слід вмикати шифрування"
-
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr "Визначає, чи слід вмикати обмін даними вузлів"
-
-#: examples/ktcli/main.cpp:65
-msgid "Whether or not to use utp"
-msgstr "Визначає, чи слід використовувати UTP"
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
-msgstr "ktcli"

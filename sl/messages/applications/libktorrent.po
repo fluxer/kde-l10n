@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2010-05-06 21:26+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -17,6 +17,51 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Lokalize 1.0\n"
+
+#: examples/ktcli/main.cpp:60
+#, fuzzy
+msgid "Torrent to open"
+msgstr "Dokument za odprtje"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+#, fuzzy
+msgid "Port to use"
+msgstr "Ni v uporabi"
+
+#: examples/ktcli/main.cpp:63
+#, fuzzy
+msgid "Whether or not to enable encryption"
+msgstr "Ali naj bo omogočen vrstni red prejemanja po meri."
+
+#: examples/ktcli/main.cpp:64
+#, fuzzy
+msgid "Whether or not to enable peer exchange"
+msgstr "Ali naj se uporabi izmenjava vrstnikov, združljiva z µTorrent."
+
+#: examples/ktcli/main.cpp:65
+#, fuzzy
+msgid "Whether or not to use utp"
+msgstr "Ali naj ikona v sistemski vrstici prikazuje pojavna obvestila."
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr ""
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "Mapa %1 ne obstaja"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Poškodovan torrent."
+
+#: src/torrent/torrent.cpp:165
+#, fuzzy
+msgid "Unable to open torrent file %1: %2"
+msgstr " Ni moč odpreti torrenta %1: %2"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -50,6 +95,17 @@ msgstr ""
 #: src/torrent/torrentcontrol.cpp:607
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "Torrent <b>%1</b> že prejemate."
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+msgid "Cannot open file %1: %2"
+msgstr "Ni moč odpreti datoteke %1: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Ni moč ustvariti indeksne datoteke: %1"
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -113,28 +169,44 @@ msgstr "Prekinjeno"
 msgid "Superseeding"
 msgstr "Sejanje"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Poškodovan torrent."
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr "Čas za povezavo s sledilnikom %1 je potekel"
 
-#: src/torrent/torrent.cpp:165
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "Ni moč razrešiti imena gostitelja %1"
+
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Preusmeritev brez nove lokacije"
+
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "Neveljaven odziv sledilnika"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "Neveljavni podatki s sledilnika"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "Neveljaven URL sledilnika"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr ""
+
+#: src/datachecker/datacheckerjob.cpp:141
 #, fuzzy
-msgid "Unable to open torrent file %1: %2"
-msgstr " Ni moč odpreti torrenta %1: %2"
+msgid "Checking Data"
+msgstr "Preverjanje podatkov"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
-msgid "Cannot open file %1: %2"
-msgstr "Ni moč odpreti datoteke %1: %2"
-
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "Ni moč ustvariti indeksne datoteke: %1"
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Neznan odjemalec"
 
 #: src/download/chunkdownload.cpp:383
 msgid "1 peer"
@@ -211,21 +283,133 @@ msgstr "Preusmerjen brez nove lokacije."
 msgid "Disabled because webseed does not match torrent"
 msgstr "Prikazuje vsa spletna semena za torrent"
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+#: src/util/signalcatcher.cpp:80
 #, fuzzy
-msgid "Cannot open index file %1: %2"
-msgstr "Ni moč odpreti indeksne datoteke %1: %2"
+msgid "Error when writing to disk"
+msgstr "Napaka pri branju iz %1"
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
+#: src/util/signalcatcher.cpp:80
 #, fuzzy
-msgid "Failed to open %1: %2"
+msgid "Error when reading from disk"
+msgstr "Napaka pri branju iz %1"
+
+#: src/util/file.cpp:84
+#, fuzzy
+msgid "Cannot write to %1: %2"
+msgstr "Ni moč pisati v %1: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Ni moč brati iz %1"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "%1 dni "
+msgstr[1] "%1 dan "
+msgstr[2] "%1 dneva "
+msgstr[3] "%1 dni "
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "Ni moč ustvariti mape %1"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "Ni moč ustvariti simbolne povezave od %1 do %2: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "Ni moč premakniti %1 v %2: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Ni moč skopirati %1 v %2: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "Ni moč zbrisati %1: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "Ni moč ustvariti %1: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Ni moč izračunati velikosti datoteke %1: %2"
+
+#: src/util/fileops.cpp:334
+#, fuzzy
+msgid "Cannot calculate the filesize: %1"
+msgstr "Ni moč izračunati velikosti datoteke: %1"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+#, fuzzy
+msgid "Cannot open %1: %2"
 msgstr "Ni moč odpreti %1: %2"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "Ni moč razširiti datoteke: %1"
+
+#: src/util/fileops.cpp:427
+#, fuzzy
+msgid "Cannot seek in file: %1"
+msgstr "Ni moč iskati v datoteki: %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "Splošno"
+
+#: src/util/logsystemmanager.cpp:34
+msgid "Connections"
+msgstr "Povezave"
+
+#: src/util/logsystemmanager.cpp:35
+msgid "Tracker"
+msgstr "Sledilnik"
+
+#: src/util/logsystemmanager.cpp:36
+msgid "DHT"
+msgstr "DHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "Pisanje/branje z diska"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr "µTP"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "V redu"
+
+#: src/interfaces/trackerinterface.cpp:58
+#, fuzzy
+msgid "Warning: %1"
+msgstr "Odpiranje %1"
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Najavljanje"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 #, fuzzy
 msgid "Failed to create %1: %2"
 msgstr "Ni moč ustvariti %1: %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+#, fuzzy
+msgid "Failed to open %1: %2"
+msgstr "Ni moč odpreti %1: %2"
 
 #: src/diskio/dndfile.cpp:89
 #, fuzzy
@@ -241,16 +425,6 @@ msgstr "Zapis prvega delčka v datoteko DND ni uspel: %1"
 #, fuzzy
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Zapis zadnjega delčka v datoteko DND ni uspel: %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr ""
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-#, fuzzy
-msgid "Cannot open %1: %2"
-msgstr "Ni moč odpreti %1: %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -299,6 +473,15 @@ msgstr "Ni bilo moč pisati v datoteko %1 : %2"
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Ni moč v naprej dodeliti prostora na disku: %1"
 
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr ""
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+#, fuzzy
+msgid "Cannot open index file %1: %2"
+msgstr "Ni moč odpreti indeksne datoteke %1: %2"
+
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
 msgstr ""
@@ -341,121 +524,6 @@ msgstr "Ni moč pretvoriti %1 v celo število"
 msgid "Torrent is incomplete."
 msgstr "Torrent ni zaključen."
 
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "V redu"
-
-#: src/interfaces/trackerinterface.cpp:58
-#, fuzzy
-msgid "Warning: %1"
-msgstr "Odpiranje %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Najavljanje"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "Mapa %1 ne obstaja"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "Splošno"
-
-#: src/util/logsystemmanager.cpp:34
-msgid "Connections"
-msgstr "Povezave"
-
-#: src/util/logsystemmanager.cpp:35
-msgid "Tracker"
-msgstr "Sledilnik"
-
-#: src/util/logsystemmanager.cpp:36
-msgid "DHT"
-msgstr "DHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "Pisanje/branje z diska"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr "µTP"
-
-#: src/util/fileops.cpp:101
-msgid "Cannot create directory %1"
-msgstr "Ni moč ustvariti mape %1"
-
-#: src/util/fileops.cpp:168
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Ni moč ustvariti simbolne povezave od %1 do %2: %3"
-
-#: src/util/fileops.cpp:185
-msgid "Cannot move %1 to %2: %3"
-msgstr "Ni moč premakniti %1 v %2: %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Ni moč skopirati %1 v %2: %3"
-
-#: src/util/fileops.cpp:282
-msgid "Cannot delete %1: %2"
-msgstr "Ni moč zbrisati %1: %2"
-
-#: src/util/fileops.cpp:300
-msgid "Cannot create %1: %2"
-msgstr "Ni moč ustvariti %1: %2"
-
-#: src/util/fileops.cpp:318
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Ni moč izračunati velikosti datoteke %1: %2"
-
-#: src/util/fileops.cpp:334
-#, fuzzy
-msgid "Cannot calculate the filesize: %1"
-msgstr "Ni moč izračunati velikosti datoteke: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-msgid "Cannot expand file: %1"
-msgstr "Ni moč razširiti datoteke: %1"
-
-#: src/util/fileops.cpp:427
-#, fuzzy
-msgid "Cannot seek in file: %1"
-msgstr "Ni moč iskati v datoteki: %1"
-
-#: src/util/signalcatcher.cpp:80
-#, fuzzy
-msgid "Error when writing to disk"
-msgstr "Napaka pri branju iz %1"
-
-#: src/util/signalcatcher.cpp:80
-#, fuzzy
-msgid "Error when reading from disk"
-msgstr "Napaka pri branju iz %1"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "%1 dni "
-msgstr[1] "%1 dan "
-msgstr[2] "%1 dneva "
-msgstr[3] "%1 dni "
-
-#: src/util/file.cpp:84
-#, fuzzy
-msgid "Cannot write to %1: %2"
-msgstr "Ni moč pisati v %1: %2"
-
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "Ni moč brati iz %1"
-
 #: src/upnp/upnprouter.cpp:167
 #, fuzzy
 msgid "Failed to download %1: %2"
@@ -487,72 +555,4 @@ msgstr "Povezava je bila nepričakovano prekinjena."
 
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
-msgstr ""
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Neznan odjemalec"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr ""
-
-#: src/datachecker/datacheckerjob.cpp:141
-#, fuzzy
-msgid "Checking Data"
-msgstr "Preverjanje podatkov"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "Neveljaven odziv sledilnika"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "Neveljavni podatki s sledilnika"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "Neveljaven URL sledilnika"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "Čas za povezavo s sledilnikom %1 je potekel"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Preusmeritev brez nove lokacije"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "Ni moč razrešiti imena gostitelja %1"
-
-#: examples/ktcli/main.cpp:60
-#, fuzzy
-msgid "Torrent to open"
-msgstr "Dokument za odprtje"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-#, fuzzy
-msgid "Port to use"
-msgstr "Ni v uporabi"
-
-#: examples/ktcli/main.cpp:63
-#, fuzzy
-msgid "Whether or not to enable encryption"
-msgstr "Ali naj bo omogočen vrstni red prejemanja po meri."
-
-#: examples/ktcli/main.cpp:64
-#, fuzzy
-msgid "Whether or not to enable peer exchange"
-msgstr "Ali naj se uporabi izmenjava vrstnikov, združljiva z µTorrent."
-
-#: examples/ktcli/main.cpp:65
-#, fuzzy
-msgid "Whether or not to use utp"
-msgstr "Ali naj ikona v sistemski vrstici prikazuje pojavna obvestila."
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
 msgstr ""

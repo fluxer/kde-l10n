@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dragonplayer\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2013-07-24 16:56+0200\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,6 +20,78 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
+#. i18n: file: src/app/videoSettingsWidget.ui:19
+#. i18n: ectx: property (text), widget (QLabel, brightnessLabel)
+#: rc.cpp:3
+msgid "Brightness:"
+msgstr "Svetlost:"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:42
+#. i18n: ectx: property (text), widget (QLabel, contrastLabel)
+#: rc.cpp:6
+msgid "Contrast:"
+msgstr "Kontrast:"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:65
+#. i18n: ectx: property (text), widget (QLabel, hueLabel)
+#: rc.cpp:9
+msgid "Hue:"
+msgstr "Odtenek:"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:88
+#. i18n: ectx: property (text), widget (QLabel, saturationLabel)
+#: rc.cpp:12
+msgid "Saturation:"
+msgstr "Nasičenost:"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:128
+#. i18n: ectx: property (text), widget (QPushButton, defaultsButton)
+#: rc.cpp:15
+msgid "Restore Defaults"
+msgstr "Obnovi privzete vrednosti"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:135
+#. i18n: ectx: property (text), widget (QPushButton, closeButton)
+#: rc.cpp:18
+msgid "Close"
+msgstr "Zapri"
+
+#. i18n: file: src/app/loadView.ui:19
+#. i18n: ectx: property (text), widget (KPushButton, m_playFileButton)
+#: rc.cpp:21
+msgid "Play File"
+msgstr "Predvajaj datoteko"
+
+#. i18n: file: src/app/loadView.ui:26
+#. i18n: ectx: property (text), widget (KPushButton, m_playDiskButton)
+#: rc.cpp:24 src/app/playDialog.cpp:68
+msgid "Play Disc"
+msgstr "Predvajaj disk"
+
+#. i18n: file: src/app/loadView.ui:33
+#. i18n: ectx: property (text), widget (QPushButton, m_playStreamButton)
+#: rc.cpp:27
+msgid "Play Stream"
+msgstr "Predvajaj pretok"
+
+#. i18n: file: misc/dragonplayerui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:30
+msgid "&Play"
+msgstr "&Predvajaj"
+
+#. i18n: file: misc/dragonplayerui.rc:15
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:33
+msgid "&Settings"
+msgstr "&Nastavitve"
+
+#. i18n: file: misc/dragonplayerui.rc:31
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:36
+msgid "Main Toolbar"
+msgstr "Glavna orodna vrstica"
+
 #: src/app/videoWindow.cpp:126
 msgid "&DVD Subtitle Selection"
 msgstr "Izbira podnapisov za &DVD"
@@ -27,6 +99,19 @@ msgstr "Izbira podnapisov za &DVD"
 #: src/app/videoWindow.cpp:136
 msgid "&Auto"
 msgstr "S&amodejno"
+
+#: src/app/actions.cpp:35
+msgid "Play"
+msgstr "Predvajaj"
+
+#: src/app/actions.cpp:36
+msgid "Pause"
+msgstr "Premor"
+
+#: src/app/actions.cpp:53
+msgctxt "Volume of sound output"
+msgid "Volume"
+msgstr "Glasnost"
 
 #: src/app/playlistFile.cpp:50
 msgid "The file is not a playlist"
@@ -48,15 +133,63 @@ msgstr ""
 msgid "Dragon Player could not open the file: %1"
 msgstr "Dragon Player ni mogel odpreti datoteke: %1"
 
-#: src/app/main.cpp:30 src/app/part.cpp:108
+#: src/app/discSelectionDialog.cpp:54
+msgctxt ""
+"%1 is the disc type, %2 is the name of the disc that the user can choose. "
+"Ex. 'DVD: OfficeSpace'"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: src/app/discSelectionDialog.cpp:75
+msgctxt "Digital Versatile Disc, but keep it short"
+msgid "DVD"
+msgstr "DVD"
+
+#: src/app/discSelectionDialog.cpp:77
+msgid "Video CD"
+msgstr "Video CD"
+
+#: src/app/discSelectionDialog.cpp:79
+msgid "Audio CD"
+msgstr "Glasbeni CD"
+
+#: src/app/discSelectionDialog.cpp:81
+msgid "Data CD"
+msgstr "Podatkovni CD"
+
+#: src/app/discSelectionDialog.cpp:93
+msgid "Select a Disc"
+msgstr "Izberite disk"
+
+#: src/app/discSelectionDialog.cpp:95
+msgid "Select a disc to play."
+msgstr "Izberite disk za predvajanje."
+
+#: src/app/adjustSizeButton.cpp:56
+msgid "Preferred Scale"
+msgstr "Prednostno merilo"
+
+#: src/app/adjustSizeButton.cpp:60
+msgid "Scale 100%"
+msgstr "100 % merilo"
+
+#: src/app/adjustSizeButton.cpp:69
+msgid "<b>Adjust video scale?</b>"
+msgstr "<b>Prilagodim merilo videa?</b>"
+
+#: src/app/part.cpp:66 src/app/mainWindow.cpp:334
+msgid "Position Slider"
+msgstr "Drsnik za položaj"
+
+#: src/app/part.cpp:108 src/app/main.cpp:30
 msgid "Dragon Player"
 msgstr "Dragon Player"
 
-#: src/app/main.cpp:31 src/app/part.cpp:109
+#: src/app/part.cpp:109 src/app/main.cpp:31
 msgid "A video player that has a usability focus"
 msgstr "Predvajalnik videa s poudarkom na uporabnosti"
 
-#: src/app/main.cpp:32 src/app/part.cpp:110
+#: src/app/part.cpp:110 src/app/main.cpp:32
 msgid ""
 "Copyright 2006, Max Howell\n"
 "Copyright 2007, Ian Monroe"
@@ -142,92 +275,6 @@ msgstr "Predvajaj »URL«"
 #: src/app/main.cpp:50
 msgid "Play DVD Video"
 msgstr "Predvajaj video DVD"
-
-#: src/app/playDialog.cpp:46
-msgid "Play Media"
-msgstr "Predvajaj"
-
-#: src/app/playDialog.cpp:56
-msgid "What media would you like to play?"
-msgstr "Kaj želite predvajati?"
-
-#: src/app/playDialog.cpp:64
-msgid "Play File..."
-msgstr "Predvajaj datoteko ..."
-
-#. i18n: file: src/app/loadView.ui:26
-#. i18n: ectx: property (text), widget (KPushButton, m_playDiskButton)
-#: src/app/playDialog.cpp:68 rc.cpp:6
-msgid "Play Disc"
-msgstr "Predvajaj disk"
-
-#: src/app/recentlyPlayedList.cpp:81
-msgid "Remove Entry"
-msgstr "Odstrani vnos"
-
-#: src/app/recentlyPlayedList.cpp:82
-msgid "Clear List"
-msgstr "Počisti seznam"
-
-#: src/app/recentlyPlayedList.cpp:116
-msgid ""
-"This file could not be found. Would you like to remove it from the playlist?"
-msgstr ""
-"Te datoteke ni bilo mogoče najti. Ali jo želite odstraniti s seznama "
-"predvajanja?"
-
-#: src/app/recentlyPlayedList.cpp:117
-msgid "File not found"
-msgstr "Datoteka ni bila najdena"
-
-#: src/app/actions.cpp:35
-msgid "Play"
-msgstr "Predvajaj"
-
-#: src/app/actions.cpp:36
-msgid "Pause"
-msgstr "Premor"
-
-#: src/app/actions.cpp:53
-msgctxt "Volume of sound output"
-msgid "Volume"
-msgstr "Glasnost"
-
-#: src/app/part.cpp:66 src/app/mainWindow.cpp:334
-msgid "Position Slider"
-msgstr "Drsnik za položaj"
-
-#: src/app/discSelectionDialog.cpp:54
-msgctxt ""
-"%1 is the disc type, %2 is the name of the disc that the user can choose. "
-"Ex. 'DVD: OfficeSpace'"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: src/app/discSelectionDialog.cpp:75
-msgctxt "Digital Versatile Disc, but keep it short"
-msgid "DVD"
-msgstr "DVD"
-
-#: src/app/discSelectionDialog.cpp:77
-msgid "Video CD"
-msgstr "Video CD"
-
-#: src/app/discSelectionDialog.cpp:79
-msgid "Audio CD"
-msgstr "Glasbeni CD"
-
-#: src/app/discSelectionDialog.cpp:81
-msgid "Data CD"
-msgstr "Podatkovni CD"
-
-#: src/app/discSelectionDialog.cpp:93
-msgid "Select a Disc"
-msgstr "Izberite disk"
-
-#: src/app/discSelectionDialog.cpp:95
-msgid "Select a disc to play."
-msgstr "Izberite disk za predvajanje."
 
 #: src/app/mainWindow.cpp:154
 msgid "Aspect &Ratio"
@@ -367,80 +414,33 @@ msgstr "Ničesar ni naloženega"
 msgid "Paused"
 msgstr "V premoru"
 
-#: src/app/adjustSizeButton.cpp:56
-msgid "Preferred Scale"
-msgstr "Prednostno merilo"
+#: src/app/playDialog.cpp:46
+msgid "Play Media"
+msgstr "Predvajaj"
 
-#: src/app/adjustSizeButton.cpp:60
-msgid "Scale 100%"
-msgstr "100 % merilo"
+#: src/app/playDialog.cpp:56
+msgid "What media would you like to play?"
+msgstr "Kaj želite predvajati?"
 
-#: src/app/adjustSizeButton.cpp:69
-msgid "<b>Adjust video scale?</b>"
-msgstr "<b>Prilagodim merilo videa?</b>"
+#: src/app/playDialog.cpp:64
+msgid "Play File..."
+msgstr "Predvajaj datoteko ..."
 
-#. i18n: file: src/app/loadView.ui:19
-#. i18n: ectx: property (text), widget (KPushButton, m_playFileButton)
-#: rc.cpp:3
-msgid "Play File"
-msgstr "Predvajaj datoteko"
+#: src/app/recentlyPlayedList.cpp:81
+msgid "Remove Entry"
+msgstr "Odstrani vnos"
 
-#. i18n: file: src/app/loadView.ui:33
-#. i18n: ectx: property (text), widget (QPushButton, m_playStreamButton)
-#: rc.cpp:9
-msgid "Play Stream"
-msgstr "Predvajaj pretok"
+#: src/app/recentlyPlayedList.cpp:82
+msgid "Clear List"
+msgstr "Počisti seznam"
 
-#. i18n: file: src/app/videoSettingsWidget.ui:19
-#. i18n: ectx: property (text), widget (QLabel, brightnessLabel)
-#: rc.cpp:12
-msgid "Brightness:"
-msgstr "Svetlost:"
+#: src/app/recentlyPlayedList.cpp:116
+msgid ""
+"This file could not be found. Would you like to remove it from the playlist?"
+msgstr ""
+"Te datoteke ni bilo mogoče najti. Ali jo želite odstraniti s seznama "
+"predvajanja?"
 
-#. i18n: file: src/app/videoSettingsWidget.ui:42
-#. i18n: ectx: property (text), widget (QLabel, contrastLabel)
-#: rc.cpp:15
-msgid "Contrast:"
-msgstr "Kontrast:"
-
-#. i18n: file: src/app/videoSettingsWidget.ui:65
-#. i18n: ectx: property (text), widget (QLabel, hueLabel)
-#: rc.cpp:18
-msgid "Hue:"
-msgstr "Odtenek:"
-
-#. i18n: file: src/app/videoSettingsWidget.ui:88
-#. i18n: ectx: property (text), widget (QLabel, saturationLabel)
-#: rc.cpp:21
-msgid "Saturation:"
-msgstr "Nasičenost:"
-
-#. i18n: file: src/app/videoSettingsWidget.ui:128
-#. i18n: ectx: property (text), widget (QPushButton, defaultsButton)
-#: rc.cpp:24
-msgid "Restore Defaults"
-msgstr "Obnovi privzete vrednosti"
-
-#. i18n: file: src/app/videoSettingsWidget.ui:135
-#. i18n: ectx: property (text), widget (QPushButton, closeButton)
-#: rc.cpp:27
-msgid "Close"
-msgstr "Zapri"
-
-#. i18n: file: misc/dragonplayerui.rc:4
-#. i18n: ectx: Menu (file)
-#: rc.cpp:30
-msgid "&Play"
-msgstr "&Predvajaj"
-
-#. i18n: file: misc/dragonplayerui.rc:15
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:33
-msgid "&Settings"
-msgstr "&Nastavitve"
-
-#. i18n: file: misc/dragonplayerui.rc:31
-#. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:36
-msgid "Main Toolbar"
-msgstr "Glavna orodna vrstica"
+#: src/app/recentlyPlayedList.cpp:117
+msgid "File not found"
+msgstr "Datoteka ni bila najdena"

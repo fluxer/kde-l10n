@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2009-10-31 23:24+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <Kdeveloper@kde.gr.jp>\n"
@@ -17,6 +17,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+
+#: examples/ktcli/main.cpp:60
+#, fuzzy
+msgid "Torrent to open"
+msgstr "torrent が不完全です。"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+#, fuzzy
+msgid "Port to use"
+msgstr "使用されていません"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr ""
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr ""
+
+#: examples/ktcli/main.cpp:65
+msgid "Whether or not to use utp"
+msgstr ""
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr ""
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "フォルダ <filename>%1</filename> は存在しません"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "torrent が壊れています。"
+
+#: src/torrent/torrent.cpp:165
+#, fuzzy
+msgid "Unable to open torrent file %1: %2"
+msgstr "torrent ファイル <filename>%1</filename> を開けません: %2"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -52,6 +94,17 @@ msgstr ""
 #, fuzzy
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "torrent <resource>%1</resource> は既にダウンロード中です"
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+msgid "Cannot open file %1: %2"
+msgstr "ファイル <filename>%1</filename> を開けません: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "インデックスファイルを作成できません: %1"
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -115,28 +168,44 @@ msgstr "一時停止"
 msgid "Superseeding"
 msgstr "シード中"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "torrent が壊れています。"
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr "トラッカー %1 への接続中にタイムアウト"
 
-#: src/torrent/torrent.cpp:165
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "ホスト名 %1 を解決できませんでした"
+
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "リダイレクト先なしでリダイレクトされました"
+
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "トラッカーから無効な応答"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "トラッカーから無効なデータ"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "無効なトラッカー URL"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr ""
+
+#: src/datachecker/datacheckerjob.cpp:141
 #, fuzzy
-msgid "Unable to open torrent file %1: %2"
-msgstr "torrent ファイル <filename>%1</filename> を開けません: %2"
+msgid "Checking Data"
+msgstr "データをチェック中"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
-msgid "Cannot open file %1: %2"
-msgstr "ファイル <filename>%1</filename> を開けません: %2"
-
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "インデックスファイルを作成できません: %1"
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "未知のクライアント"
 
 #: src/download/chunkdownload.cpp:383
 msgid "1 peer"
@@ -209,21 +278,133 @@ msgstr "新しい場所なしでリダイレクトされました。"
 msgid "Disabled because webseed does not match torrent"
 msgstr ""
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-#, fuzzy
-msgid "Cannot open index file %1: %2"
-msgstr "インデックスファイル <filename>%1</filename> を開けません: %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr ""
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
+#: src/util/signalcatcher.cpp:80
 #, fuzzy
-msgid "Failed to open %1: %2"
-msgstr "<filename>%1</filename> を開けませんでした: %2"
+msgid "Error when reading from disk"
+msgstr "<filename>%1</filename> からの読み取りエラー"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/file.cpp:84
+#, fuzzy
+msgid "Cannot write to %1: %2"
+msgstr "<filename>%1</filename> に書き込めません: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "<filename>%1</filename> から読み取れません"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/秒"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 日"
+msgstr[1] "%1 日"
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "フォルダ <filename>%1</filename> を作成できません"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr ""
+"<filename>%1</filename> のシンボリックリンク <filename>%2</filename> を作成で"
+"きません: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr ""
+"<filename>%1</filename> を <filename>%2</filename> に移動できません: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr ""
+"<filename>%1</filename> を <filename>%2</filename> にコピーできません: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "<filename>%1</filename> を削除できません: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "<filename>%1</filename> を作成できません: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "<filename>%1</filename> のファイルサイズを計算できません: %2"
+
+#: src/util/fileops.cpp:334
+#, fuzzy
+msgid "Cannot calculate the filesize: %1"
+msgstr "ファイルサイズを計算できません: %1"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+#, fuzzy
+msgid "Cannot open %1: %2"
+msgstr "<filename>%1</filename> を開けません: %2"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "ファイルを展開できません: %1"
+
+#: src/util/fileops.cpp:427
+#, fuzzy
+msgid "Cannot seek in file: %1"
+msgstr "ファイル内でシークできません: %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "全般"
+
+#: src/util/logsystemmanager.cpp:34
+msgid "Connections"
+msgstr "接続"
+
+#: src/util/logsystemmanager.cpp:35
+msgid "Tracker"
+msgstr "トラッカー"
+
+#: src/util/logsystemmanager.cpp:36
+msgid "DHT"
+msgstr "DHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "ディスク I/O (入出力)"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr ""
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "OK"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr ""
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "アナウンス"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 #, fuzzy
 msgid "Failed to create %1: %2"
 msgstr "<filename>%1</filename> を作成できませんでした: %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+#, fuzzy
+msgid "Failed to open %1: %2"
+msgstr "<filename>%1</filename> を開けませんでした: %2"
 
 #: src/diskio/dndfile.cpp:89
 #, fuzzy
@@ -239,16 +420,6 @@ msgstr "最初のピースを DND ファイルに書き込めませんでした:
 #, fuzzy
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "最後のピースを DND ファイルに書き込めませんでした: %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr ""
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-#, fuzzy
-msgid "Cannot open %1: %2"
-msgstr "<filename>%1</filename> を開けません: %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -297,6 +468,15 @@ msgstr "ファイル <filename>%1</filename> に書き込めませんでした: 
 msgid "Cannot preallocate diskspace: %1"
 msgstr "ディスク領域の事前割り当てができません: %1"
 
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr ""
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+#, fuzzy
+msgid "Cannot open index file %1: %2"
+msgstr "インデックスファイル <filename>%1</filename> を開けません: %2"
+
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
 msgstr ""
@@ -336,121 +516,6 @@ msgstr "%1 を整数に変換できません"
 msgid "Torrent is incomplete."
 msgstr "torrent が不完全です。"
 
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "OK"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "Warning: %1"
-msgstr ""
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "アナウンス"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "フォルダ <filename>%1</filename> は存在しません"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "全般"
-
-#: src/util/logsystemmanager.cpp:34
-msgid "Connections"
-msgstr "接続"
-
-#: src/util/logsystemmanager.cpp:35
-msgid "Tracker"
-msgstr "トラッカー"
-
-#: src/util/logsystemmanager.cpp:36
-msgid "DHT"
-msgstr "DHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "ディスク I/O (入出力)"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr ""
-
-#: src/util/fileops.cpp:101
-msgid "Cannot create directory %1"
-msgstr "フォルダ <filename>%1</filename> を作成できません"
-
-#: src/util/fileops.cpp:168
-msgid "Cannot symlink %1 to %2: %3"
-msgstr ""
-"<filename>%1</filename> のシンボリックリンク <filename>%2</filename> を作成で"
-"きません: %3"
-
-#: src/util/fileops.cpp:185
-msgid "Cannot move %1 to %2: %3"
-msgstr ""
-"<filename>%1</filename> を <filename>%2</filename> に移動できません: %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-msgid "Cannot copy %1 to %2: %3"
-msgstr ""
-"<filename>%1</filename> を <filename>%2</filename> にコピーできません: %3"
-
-#: src/util/fileops.cpp:282
-msgid "Cannot delete %1: %2"
-msgstr "<filename>%1</filename> を削除できません: %2"
-
-#: src/util/fileops.cpp:300
-msgid "Cannot create %1: %2"
-msgstr "<filename>%1</filename> を作成できません: %2"
-
-#: src/util/fileops.cpp:318
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "<filename>%1</filename> のファイルサイズを計算できません: %2"
-
-#: src/util/fileops.cpp:334
-#, fuzzy
-msgid "Cannot calculate the filesize: %1"
-msgstr "ファイルサイズを計算できません: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-msgid "Cannot expand file: %1"
-msgstr "ファイルを展開できません: %1"
-
-#: src/util/fileops.cpp:427
-#, fuzzy
-msgid "Cannot seek in file: %1"
-msgstr "ファイル内でシークできません: %1"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr ""
-
-#: src/util/signalcatcher.cpp:80
-#, fuzzy
-msgid "Error when reading from disk"
-msgstr "<filename>%1</filename> からの読み取りエラー"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/秒"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 日"
-msgstr[1] "%1 日"
-
-#: src/util/file.cpp:84
-#, fuzzy
-msgid "Cannot write to %1: %2"
-msgstr "<filename>%1</filename> に書き込めません: %2"
-
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "<filename>%1</filename> から読み取れません"
-
 #: src/upnp/upnprouter.cpp:167
 #, fuzzy
 msgid "Failed to download %1: %2"
@@ -477,69 +542,4 @@ msgstr "接続が閉じられました"
 
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
-msgstr ""
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "未知のクライアント"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr ""
-
-#: src/datachecker/datacheckerjob.cpp:141
-#, fuzzy
-msgid "Checking Data"
-msgstr "データをチェック中"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "トラッカーから無効な応答"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "トラッカーから無効なデータ"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "無効なトラッカー URL"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "トラッカー %1 への接続中にタイムアウト"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "リダイレクト先なしでリダイレクトされました"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "ホスト名 %1 を解決できませんでした"
-
-#: examples/ktcli/main.cpp:60
-#, fuzzy
-msgid "Torrent to open"
-msgstr "torrent が不完全です。"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-#, fuzzy
-msgid "Port to use"
-msgstr "使用されていません"
-
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr ""
-
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr ""
-
-#: examples/ktcli/main.cpp:65
-msgid "Whether or not to use utp"
-msgstr ""
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
 msgstr ""

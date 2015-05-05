@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio4\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:36+0000\n"
+"POT-Creation-Date: 2015-05-05 17:53+0000\n"
 "PO-Revision-Date: 2013-08-06 02:44+0900\n"
 "Last-Translator: Park Shinjo <peremen@gmail.com>\n"
 "Language-Team: Korean <kde@peremen.name>\n"
@@ -19,164 +19,643 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: kssl/sslui.cpp:52
-msgid ""
-"The remote host did not send any SSL certificates.\n"
-"Aborting because the identity of the host cannot be established."
-msgstr ""
-"원격 호스트에서 SSL 인증서를 보내지 않았습니다.\n"
-"호스트의 정체를 확인할 수 없으므로 중단합니다."
+#. i18n: file: kssl/sslinfo.ui:17
+#. i18n: ectx: property (text), widget (QLabel, encryptionIndicator)
+#: rc.cpp:3
+msgid "[padlock]"
+msgstr "[padlock]"
 
-#: kssl/sslui.cpp:71 kio/tcpslavebase.cpp:810
+#. i18n: file: kssl/sslinfo.ui:34
+#. i18n: ectx: property (text), widget (QLabel, addressTag)
+#: rc.cpp:6
+msgctxt "Web page address"
+msgid "Address:"
+msgstr "주소:"
+
+#. i18n: file: kssl/sslinfo.ui:54
+#. i18n: ectx: property (text), widget (QLabel, ipTag)
+#: rc.cpp:9
+msgid "IP address:"
+msgstr "IP 주소:"
+
+#. i18n: file: kssl/sslinfo.ui:74
+#. i18n: ectx: property (text), widget (QLabel, encryptionTag)
+#: rc.cpp:12
+msgid "Encryption:"
+msgstr "암호화:"
+
+#. i18n: file: kssl/sslinfo.ui:94
+#. i18n: ectx: property (text), widget (QLabel, detailsTag)
+#: rc.cpp:15
+msgid "Details:"
+msgstr "자세한 정보:"
+
+#. i18n: file: kssl/sslinfo.ui:114
+#. i18n: ectx: property (text), widget (QLabel, sslVersionTag)
+#: rc.cpp:18
+msgid "SSL version:"
+msgstr "SSL 버전:"
+
+#. i18n: file: kssl/sslinfo.ui:134
+#. i18n: ectx: property (text), widget (QLabel, certSelectorTag)
+#: rc.cpp:21
+msgid "Certificate chain:"
+msgstr "인증서 체인:"
+
+#. i18n: file: kssl/sslinfo.ui:163
+#. i18n: ectx: property (text), widget (QLabel, trustedTag)
+#: rc.cpp:24
+msgid "Trusted:"
+msgstr "신뢰함:"
+
+#. i18n: file: kssl/sslinfo.ui:183
+#. i18n: ectx: property (text), widget (QLabel, validityPeriodTag)
+#: rc.cpp:27
+msgid "Validity period:"
+msgstr "유효 기간:"
+
+#. i18n: file: kssl/sslinfo.ui:203
+#. i18n: ectx: property (text), widget (QLabel, serialTag)
+#: rc.cpp:30
+msgid "Serial number:"
+msgstr "시리얼 번호:"
+
+#. i18n: file: kssl/sslinfo.ui:223
+#. i18n: ectx: property (text), widget (QLabel, digestTag)
+#: rc.cpp:33
+msgid "MD5 digest:"
+msgstr "MD5 다이제스트:"
+
+#. i18n: file: kssl/sslinfo.ui:243
+#. i18n: ectx: property (text), widget (QLabel, sha1DigestTag)
+#: rc.cpp:36
+msgid "SHA1 digest:"
+msgstr "SHA1 다이제스트:"
+
+#. i18n: file: kssl/keygenwizard.ui:35
+#. i18n: ectx: property (text), widget (QLabel, TextLabel1)
+#: rc.cpp:39
 msgid ""
-"The server failed the authenticity check (%1).\n"
+"You have indicated that you wish to obtain or purchase a secure certificate. "
+"This wizard is intended to guide you through the procedure. You may cancel "
+"at any time, and this will abort the transaction."
+msgstr ""
+"인증서를 구입하거나 가져오기로 했습니다. 이 마법사는 전체 과정을 안내합니다. "
+"언제든지 이 단계를 취소할 수 있으며, 전체 트랜잭션이 중단됩니다."
+
+#. i18n: file: kssl/certificateparty.ui:28
+#. i18n: ectx: property (text), widget (QLabel, commonNameTag)
+#: rc.cpp:42
+msgid "Common name:"
+msgstr "공용 이름:"
+
+#. i18n: file: kssl/certificateparty.ui:38
+#. i18n: ectx: property (text), widget (QLabel, commonName)
+#: rc.cpp:45
+msgid "Acme Co."
+msgstr "(주) 거시기"
+
+#. i18n: file: kssl/certificateparty.ui:48
+#. i18n: ectx: property (text), widget (QLabel, organizationTag)
+#: rc.cpp:48
+msgid "Organization:"
+msgstr "조직:"
+
+#. i18n: file: kssl/certificateparty.ui:58
+#. i18n: ectx: property (text), widget (QLabel, organization)
+#: rc.cpp:51
+msgid "Acme Sundry Products Company"
+msgstr "주식회사 거시기"
+
+#. i18n: file: kssl/certificateparty.ui:68
+#. i18n: ectx: property (text), widget (QLabel, organizationalUnitTag)
+#: rc.cpp:54
+msgid "Organizational unit:"
+msgstr "조직 단위:"
+
+#. i18n: file: kssl/certificateparty.ui:78
+#. i18n: ectx: property (text), widget (QLabel, organizationalUnit)
+#: rc.cpp:57
+msgid "Fraud Department"
+msgstr "가짜 부서"
+
+#. i18n: file: kssl/certificateparty.ui:88
+#. i18n: ectx: property (text), widget (QLabel, countryTag)
+#: rc.cpp:60
+msgid "Country:"
+msgstr "나라:"
+
+#. i18n: file: kssl/certificateparty.ui:98
+#. i18n: ectx: property (text), widget (QLabel, country)
+#: rc.cpp:63
+msgid "Canada"
+msgstr "대한민국"
+
+#. i18n: file: kssl/certificateparty.ui:108
+#. i18n: ectx: property (text), widget (QLabel, stateTag)
+#: rc.cpp:66
+msgid "State:"
+msgstr "주(도):"
+
+#. i18n: file: kssl/certificateparty.ui:118
+#. i18n: ectx: property (text), widget (QLabel, state)
+#: rc.cpp:69
+msgid "Quebec"
+msgstr "경상남도"
+
+#. i18n: file: kssl/certificateparty.ui:128
+#. i18n: ectx: property (text), widget (QLabel, cityTag)
+#: rc.cpp:72
+msgid "City:"
+msgstr "도시:"
+
+#. i18n: file: kssl/certificateparty.ui:138
+#. i18n: ectx: property (text), widget (QLabel, city)
+#: rc.cpp:75
+msgid "Lakeridge Meadows"
+msgstr "마산시"
+
+#. i18n: file: kssl/kcm/displaycert.ui:23
+#. i18n: ectx: property (text), widget (QLabel, subjectHeading)
+#: rc.cpp:78
+msgid "<b>Subject Information</b>"
+msgstr "<b>대상 정보</b>"
+
+#. i18n: file: kssl/kcm/displaycert.ui:39
+#. i18n: ectx: property (text), widget (QLabel, issuerHeading)
+#: rc.cpp:81
+msgid "<b>Issuer Information</b>"
+msgstr "<b>발급자 정보</b>"
+
+#. i18n: file: kssl/kcm/displaycert.ui:55
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:84
+msgid "<b>Other</b>"
+msgstr "<b>기타</b>"
+
+#. i18n: file: kssl/kcm/displaycert.ui:64
+#. i18n: ectx: property (text), widget (QLabel, validityPeriodLabel)
+#: rc.cpp:87
+msgid "Validity period"
+msgstr "유효 기간"
+
+#. i18n: file: kssl/kcm/displaycert.ui:78
+#. i18n: ectx: property (text), widget (QLabel, serialNumberLabel)
+#: rc.cpp:90
+msgid "Serial number"
+msgstr "시리얼 번호"
+
+#. i18n: file: kssl/kcm/displaycert.ui:92
+#. i18n: ectx: property (text), widget (QLabel, md5DigestLabel)
+#: rc.cpp:93
+msgid "MD5 digest"
+msgstr "MD5 다이제스트"
+
+#. i18n: file: kssl/kcm/displaycert.ui:106
+#. i18n: ectx: property (text), widget (QLabel, sha1DigestLabel)
+#: rc.cpp:96
+msgid "SHA1 digest"
+msgstr "SHA1 다이제스트"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:24
+#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
+#: rc.cpp:99
+msgid "Organization / Common Name"
+msgstr "조직/공통 이름"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:29
+#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
+#: rc.cpp:102
+msgid "Organizational Unit"
+msgstr "조직 단위"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:42
+#. i18n: ectx: property (text), widget (QPushButton, displaySelection)
+#: rc.cpp:105
+msgid "Display..."
+msgstr "표시..."
+
+#. i18n: file: kssl/kcm/cacertificates.ui:68
+#. i18n: ectx: property (text), widget (KPushButton, disableSelection)
+#: rc.cpp:108
+msgid "Disable"
+msgstr "사용 안 함"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:78
+#. i18n: ectx: property (text), widget (QPushButton, enableSelection)
+#: rc.cpp:111
+msgid "Enable"
+msgstr "사용함"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:104
+#. i18n: ectx: property (text), widget (KPushButton, removeSelection)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:219
+#. i18n: ectx: property (text), widget (QPushButton, delFiletypeButton)
+#: rc.cpp:114 rc.cpp:232
+msgid "Remove"
+msgstr "삭제"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:111
+#. i18n: ectx: property (text), widget (KPushButton, add)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:209
+#. i18n: ectx: property (text), widget (QPushButton, addFiletypeButton)
+#: rc.cpp:117 rc.cpp:226
+msgid "Add..."
+msgstr "추가..."
+
+#. i18n: file: kssl/keygenwizard2.ui:35
+#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
+#: rc.cpp:120
+msgid ""
+"You must now provide a password for the certificate request. Please choose a "
+"very secure password as this will be used to encrypt your private key."
+msgstr ""
+"인증 요청의 암호를 입력해야 합니다. 이 암호로 개인 키를 암호화하기 때문에 충"
+"분히 강력한 암호를 입력하십시오."
+
+#. i18n: file: kssl/keygenwizard2.ui:48
+#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
+#: rc.cpp:123
+msgid "&Repeat password:"
+msgstr "암호 반복(&R):"
+
+#. i18n: file: kssl/keygenwizard2.ui:58
+#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
+#: rc.cpp:126
+msgid "&Choose password:"
+msgstr "암호 선택(&C):"
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:14
+#. i18n: ectx: property (whatsThis), widget (QLabel, nameLabel)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:27
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, nameEdit)
+#: rc.cpp:129 rc.cpp:135
+msgid ""
+"Type the name you want to give to this application here. This application "
+"will appear under this name in the applications menu and in the panel."
+msgstr ""
+"프로그램의 이름을 입력하십시오. 이 이름은 프로그램 메뉴와 패널에 동시에 사용"
+"됩니다."
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:17
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: rc.cpp:132 ../kfile/kfilewidget.cpp:528
+msgid "&Name:"
+msgstr "이름(&N):"
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:34
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:47
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, genNameEdit)
+#: rc.cpp:138 rc.cpp:144
+msgid ""
+"Type the description of this application, based on its use, here. Examples: "
+"a dial up application (KPPP) would be \"Dial up tool\"."
+msgstr ""
+"용도에 기반한 프로그램의 설명을 적으십시오. 예: 전화 접속 프로그램 (KPPP)의 "
+"경우 \"전화 접속 도구\"입니다."
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:37
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:141
+msgid "&Description:"
+msgstr "설명(&D):"
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:54
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel3)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:67
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, commentEdit)
+#: rc.cpp:147 rc.cpp:153
+msgid "Type any comment you think is useful here."
+msgstr "괜찮은 설명을 적으십시오."
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:57
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:150
+msgid "Comm&ent:"
+msgstr "설명(&E):"
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:85
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:111
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, commandEdit)
+#: rc.cpp:157 rc.cpp:175
+#, no-c-format
+msgid ""
+"Type the command to start this application here.\n"
 "\n"
+"Following the command, you can have several place holders which will be "
+"replaced with the actual values when the actual program is run:\n"
+"%f - a single file name\n"
+"%F - a list of files; use for applications that can open several local files "
+"at once\n"
+"%u - a single URL\n"
+"%U - a list of URLs\n"
+"%d - the directory of the file to open\n"
+"%D - a list of directories\n"
+"%i - the icon\n"
+"%m - the mini-icon\n"
+"%c - the caption"
 msgstr ""
-"서버 인증서가 유효성 검사를 통과하지 못했습니다. (%1)\n"
+"이 프로그램을 시작하는 명력을 입력하십시오.\n"
 "\n"
+"명령 다음 자리 비움자를 지정하면 실제 프로그램이 실행될 때 알맞은 값으로 대"
+"체\n"
+"됩니다.\n"
+"%f - 단일 파일 이름\n"
+"%F - 파일 목록. 여러 파일을 동시에 열 수 있는 프로그램에 사용하십시오\n"
+"%u - 단일 URL\n"
+"%U - URL 목록\n"
+"%d - 파일이 있는 디렉터리\n"
+"%D - 디렉터리 목록\n"
+"%i - 아이콘\n"
+"%m - 작은 아이콘\n"
+"%c - 창 제목"
 
-#: kssl/sslui.cpp:80 kssl/sslui.cpp:119 kio/tcpslavebase.cpp:821
-#: kio/tcpslavebase.cpp:834 kio/tcpslavebase.cpp:948 kio/tcpslavebase.cpp:960
-msgid "Server Authentication"
-msgstr "서버 인증"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#: rc.cpp:171
+msgid "Co&mmand:"
+msgstr "명령(&M):"
 
-#: kssl/sslui.cpp:81 kio/tcpslavebase.cpp:822 kio/slaveinterface.cpp:422
-msgid "&Details"
-msgstr "자세히(&D)"
-
-#: kssl/sslui.cpp:82 kio/tcpslavebase.cpp:822 kio/slaveinterface.cpp:428
-msgid "Co&ntinue"
-msgstr "계속(&N)"
-
-#: kssl/sslui.cpp:116 kio/tcpslavebase.cpp:831
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:118
+#. i18n: ectx: property (whatsThis), widget (QPushButton, browseButton)
+#: rc.cpp:189
 msgid ""
-"Would you like to accept this certificate forever without being prompted?"
-msgstr "이 인증서를 확인하지 않고 계속 받아들이시겠습니까?"
+"Click here to browse your file system in order to find the desired "
+"executable."
+msgstr "실행 파일을 찾아보려면 누르십시오."
 
-#: kssl/sslui.cpp:120 kio/tcpslavebase.cpp:835 kio/slaveinterface.cpp:424
-msgid "&Forever"
-msgstr "영원히(&F)"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:121
+#. i18n: ectx: property (text), widget (QPushButton, browseButton)
+#: rc.cpp:192 kfile/kicondialog.cpp:381
+msgid "&Browse..."
+msgstr "찾아보기(&B)..."
 
-#: kssl/sslui.cpp:121 kio/tcpslavebase.cpp:836 kio/slaveinterface.cpp:430
-msgid "&Current Session only"
-msgstr "이 세션만(&C)"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:130
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel5)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:143
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, pathEdit)
+#: rc.cpp:195 rc.cpp:201
+msgid "Sets the working directory for your application."
+msgstr "프로그램의 작업 디렉터리를 설정합니다."
 
-#: kssl/ksslkeygen.cpp:82
-msgid "KDE Certificate Request"
-msgstr "KDE 인증서 요청"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:133
+#. i18n: ectx: property (text), widget (QLabel, textLabel5)
+#: rc.cpp:198
+msgid "&Work path:"
+msgstr "작업 경로(&W):"
 
-#: kssl/ksslkeygen.cpp:89
-msgid "KDE Certificate Request - Password"
-msgstr "KDE 인증서 요청 - 암호"
-
-#: kssl/ksslkeygen.cpp:124
-msgid "Unsupported key size."
-msgstr "지원하지 않는 키 크기입니다."
-
-#: kssl/ksslkeygen.cpp:124 kssl/ksslinfodialog.cpp:65
-msgid "KDE SSL Information"
-msgstr "KDE SSL 정보"
-
-#: kssl/ksslkeygen.cpp:130
-msgid "KDE"
-msgstr "KDE"
-
-#: kssl/ksslkeygen.cpp:131
-msgid "Please wait while the encryption keys are generated..."
-msgstr "암호화 키를 만드는 동안 기다려 주십시오..."
-
-#: kssl/ksslkeygen.cpp:144
-msgid "Do you wish to store the passphrase in your wallet file?"
-msgstr "지갑 파일에 암호를 저장하시겠습니까?"
-
-#: kssl/ksslkeygen.cpp:144
-msgid "Store"
-msgstr "저장"
-
-#: kssl/ksslkeygen.cpp:144
-msgid "Do Not Store"
-msgstr "저장하지 않음"
-
-#: kssl/ksslkeygen.cpp:260
-msgid "2048 (High Grade)"
-msgstr "2048 (높은 등급)"
-
-#: kssl/ksslkeygen.cpp:261
-msgid "1024 (Medium Grade)"
-msgstr "1024 (중간 등급)"
-
-#: kssl/ksslkeygen.cpp:262
-msgid "768  (Low Grade)"
-msgstr "768  (낮은 등급)"
-
-#: kssl/ksslkeygen.cpp:263
-msgid "512  (Low Grade)"
-msgstr "512  (낮은 등급)"
-
-#: kssl/ksslkeygen.cpp:265
-msgid "No SSL support."
-msgstr "SSL 지원 없음."
-
-#: kssl/ksslcertdialog.cpp:58
-msgid "Certificate"
-msgstr "인증서"
-
-#: kssl/ksslcertdialog.cpp:66
-msgid "Save selection for this host."
-msgstr "이 호스트에 대해서 설정 저장하기."
-
-#: kssl/ksslcertdialog.cpp:75
-msgid "Send certificate"
-msgstr "인증서 보내기"
-
-#: kssl/ksslcertdialog.cpp:79
-msgid "Do not send a certificate"
-msgstr "인증서 보내지 않기"
-
-#: kssl/ksslcertdialog.cpp:84
-msgid "KDE SSL Certificate Dialog"
-msgstr "KDE SSL 인증서 대화상자"
-
-#: kssl/ksslcertdialog.cpp:136
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:157
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel7)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:178
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, filetypeList)
+#: rc.cpp:204 rc.cpp:212
 msgid ""
-"The server <b>%1</b> requests a certificate.<br /><br />Select a certificate "
-"to use from the list below:"
+"<qt><p>This list should show the types of file that your application can "
+"handle. This list is organized by <u>mimetypes</u>.</p>\n"
+"<p>MIME, Multipurpose Internet (e)Mail Extension, is a standard protocol for "
+"identifying the type of data based on filename extensions and correspondent "
+"<u>mimetypes</u>. Example: the \"bmp\" part that comes after the dot in "
+"flower.bmp indicates that it is a specific kind of image, <u>image/x-bmp</"
+"u>. To know which application should open each type of file, the system "
+"should be informed about the abilities of each application to handle these "
+"extensions and mimetypes.</p>\n"
+"<p>If you want to associate this application with one or more mimetypes that "
+"are not in this list, click on the button <b>Add</b> below. If there are one "
+"or more filetypes that this application cannot handle, you may want to "
+"remove them from the list clicking on the button <b>Remove</b> below.</p></"
+"qt>"
 msgstr ""
-"서버 <b>%1</b>에서 인증서를 요청했습니다.<br /><br />아래 목록에서 사용할 인"
-"증서를 선택하십시오:"
+"<qt><p>이 목록은 현재 프로그램에서 처리할 수 있는 파일 형식을 포함하고 있습니"
+"다. 이 목록은 <u>MIME 형식</u> 기준으로 정렬되어 있습니다.</p>\n"
+"<p>MIME, 다중 목적 이메일 확장은 파일 이름 확장자와 이에 해당하는 <u>MIME 형"
+"식</u>을 기준으로 데이터의 종류를 찾아내는 표준 프로토콜입니다. 예를 들어 "
+"flower.bmp의 점(.) 다음에 오는 \"bmp\" 문자열은 이 파일이 비트맵 이미지, "
+"<u>image-x/bmp</u> 형식임을 나타냅니다. 프로그램이 열 수 있는 파일 형식에 대"
+"해서 알기 위해서, 각각 프로그램은 시스템에 처리할 수 있는 확장자와 MIME 형식"
+"에 대해서 알려줍니다.</p>\n"
+"<p>이 프로그램을 목록에 없는 하나 이상의 MIME 형식과 연결하려면 아래에 있는 "
+"<b>추가</b>단추를 누르십시오. 이 프로그램이 처리할 수 없는 파일 형식이 있다"
+"면 <b>삭제</b> 단추를 누르십시오.</p></qt>"
 
-#: kssl/kcm/kcmssl.cpp:40
-msgid "SSL Configuration Module"
-msgstr "SSL 설정 모듈"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:160
+#. i18n: ectx: property (text), widget (QLabel, textLabel7)
+#: rc.cpp:209
+msgid "&Supported file types:"
+msgstr "지원하는 파일 형식(&S):"
 
-#: kssl/kcm/kcmssl.cpp:42
-msgid "Copyright 2010 Andreas Hartmetz"
-msgstr "저작권자 2010 Andreas Hartmetz"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:191
+#. i18n: ectx: property (text), widget (QTreeWidget, filetypeList)
+#: rc.cpp:217
+msgid "Mimetype"
+msgstr "MIME 형식"
 
-#: kssl/kcm/kcmssl.cpp:43
-msgid "Andreas Hartmetz"
-msgstr "Andreas Hartmetz"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:196
+#. i18n: ectx: property (text), widget (QTreeWidget, filetypeList)
+#: rc.cpp:220
+msgid "Description"
+msgstr "설명"
 
-#: kssl/kcm/kcmssl.cpp:55
-msgid "SSL Signers"
-msgstr "SSL 서명자"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:206
+#. i18n: ectx: property (whatsThis), widget (QPushButton, addFiletypeButton)
+#: rc.cpp:223
+msgid ""
+"Click on this button if you want to add a type of file (mimetype) that your "
+"application can handle."
+msgstr ""
+"프로그램에서 처리할 수 있는 파일 형식(MIME 형식)을 추가하려면 이 단추를 누르"
+"십시오."
 
-#: kssl/kcm/cacertificatespage.cpp:131
-msgid "System certificates"
-msgstr "시스템 인증서"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:216
+#. i18n: ectx: property (whatsThis), widget (QPushButton, delFiletypeButton)
+#: rc.cpp:229
+msgid ""
+"If you want to remove a type of file (mimetype) that your application cannot "
+"handle, select the mimetype in the list above and click on this button."
+msgstr ""
+"프로그램에서 처리할 수 없는 파일 형식(MIME 형식)을 삭제하려면 목록에서 선택"
+"한 후 이 단추를 누르십시오."
 
-#: kssl/kcm/cacertificatespage.cpp:138
-msgid "User-added certificates"
-msgstr "사용자 추가 인증서"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:242
+#. i18n: ectx: property (whatsThis), widget (QPushButton, advancedButton)
+#: rc.cpp:235
+msgid ""
+"Click here to modify the way this application will run, launch feedback, D-"
+"Bus options or to run it as a different user."
+msgstr ""
+"여기를 누르면 이 프로그램이 실행되는 방법, 실행 피드백, D-Bus 옵션 또는 다른 "
+"사용자로 실행되는 방법을 수정할 수 있습니다."
 
-#: kssl/kcm/cacertificatespage.cpp:295
-msgid "Pick Certificates"
-msgstr "인증서 선택"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:245
+#. i18n: ectx: property (text), widget (QPushButton, advancedButton)
+#: rc.cpp:238
+msgid "Ad&vanced Options"
+msgstr "고급 옵션(&V)"
 
-#: kssl/kcm/displaycertdialog.cpp:54 kssl/ksslinfodialog.cpp:217
-msgctxt "%1 is the effective date of the certificate, %2 is the expiry date"
-msgid "%1 to %2"
-msgstr "%1부터 %2까지"
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:11
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
+#: rc.cpp:241
+msgctxt ""
+"@title:group Title of a group that lets the user choose options about the "
+"terminal when launching a program"
+msgid "Terminal"
+msgstr "터미널"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:33
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, terminalCheck)
+#: rc.cpp:244
+msgid ""
+"Check this option if the application you want to run is a text mode "
+"application or if you want the information that is provided by the terminal "
+"emulator window."
+msgstr ""
+"이 프로그램이 텍스트 모드 프로그램이거나 터미널로 출력되는 정보를 보려면 선택"
+"하십시오."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:36
+#. i18n: ectx: property (text), widget (QCheckBox, terminalCheck)
+#: rc.cpp:247
+msgid "&Run in terminal"
+msgstr "터미널에서 실행(&R)"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:43
+#. i18n: ectx: property (text), widget (QLabel, terminalEditLabel)
+#: rc.cpp:250
+msgid "&Terminal options:"
+msgstr "터미널 옵션(&T):"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:53
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, terminalCloseCheck)
+#: rc.cpp:253
+msgid ""
+"Check this option if the text mode application offers relevant information "
+"on exit. Keeping the terminal emulator open allows you to retrieve this "
+"information."
+msgstr ""
+"텍스트 모드 프로그램이 끝날 때 유용한 정보를 제공한다면 선택하십시오. 터미널 "
+"에뮬레이터를 열어 두면 이 정보를 볼 수 있습니다."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:56
+#. i18n: ectx: property (text), widget (QCheckBox, terminalCloseCheck)
+#: rc.cpp:256
+msgid "Do not &close when command exits"
+msgstr "명령이 끝나도 닫지 않기(&C)"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:69
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2_2)
+#: rc.cpp:259
+msgctxt ""
+"@title:group Title of a group that lets the user choose which user to use "
+"when launching a program"
+msgid "User"
+msgstr "사용자"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:75
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, suidCheck)
+#: rc.cpp:262
+msgid ""
+"Check this option if you want to run this application with a different user "
+"id. Every process has a different user id associated with it. This id code "
+"determines file access and other permissions. The password of the user is "
+"required to use this option."
+msgstr ""
+"이 프로그램을 다른 UID로 실행하려면 이 옵션을 선택하십시오. 모든 프로세스는 "
+"연결되어 있는 사용자 ID를 가지고 있습니다. 이 ID 코드는 파일 접근과 기타 권한"
+"을 결정합니다. 이 옵션을 사용하면 선택한 사용자의 암호가 필요합니다."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:78
+#. i18n: ectx: property (text), widget (QCheckBox, suidCheck)
+#: rc.cpp:265
+msgid "Ru&n as a different user"
+msgstr "다른 사용자로 실행(&N)"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:101
+#. i18n: ectx: property (whatsThis), widget (QLabel, suidEditLabel)
+#: rc.cpp:268
+msgid "Enter the user name you want to run the application as."
+msgstr "프로그램을 실행할 사용자 이름을 입력하십시오."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:104
+#. i18n: ectx: property (text), widget (QLabel, suidEditLabel)
+#: rc.cpp:271
+msgid "&Username:"
+msgstr "사용자 이름(&U):"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:114
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, suidEdit)
+#: rc.cpp:274
+msgid "Enter the user name you want to run the application as here."
+msgstr "여기에 프로그램을 실행할 사용자 이름을 입력하십시오."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:124
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup4)
+#: rc.cpp:277
+msgctxt ""
+"@title:group Title of a group that lets the user choose options regargin "
+"program startup"
+msgid "Startup"
+msgstr "시작"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:130
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, startupInfoCheck)
+#: rc.cpp:280
+msgid ""
+"Check this option if you want to make clear that your application has "
+"started. This visual feedback may appear as a busy cursor or in the taskbar."
+msgstr ""
+"프로그램이 시작된 것을 명확하게 하려면 선택하십시오. 이 시각 피드백은 작업 표"
+"시줄이나 바쁨 커서로 표시됩니다."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:133
+#. i18n: ectx: property (text), widget (QCheckBox, startupInfoCheck)
+#: rc.cpp:283
+msgid "Enable &launch feedback"
+msgstr "실행 피드백 사용하기(&L)"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:140
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, systrayCheck)
+#: rc.cpp:286
+msgid ""
+"Check this option if you want to have a system tray handle for your "
+"application."
+msgstr "프로그램을 시스템 트레이에서 사용하려면 이 옵션을 선택하십시오."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:143
+#. i18n: ectx: property (text), widget (QCheckBox, systrayCheck)
+#: rc.cpp:289
+msgid "&Place in system tray"
+msgstr "시스템 트레이에 두기(&P)"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:150
+#. i18n: ectx: property (text), widget (QLabel, textLabel12)
+#: rc.cpp:292
+msgid "&D-Bus registration:"
+msgstr "D-Bus 등록(&D):"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:161
+#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
+#: rc.cpp:295
+msgid "None"
+msgstr "없음"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:166
+#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
+#: rc.cpp:298
+msgid "Multiple Instances"
+msgstr "다중 인스턴스"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:171
+#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
+#: rc.cpp:301
+msgid "Single Instance"
+msgstr "단일 인스턴스"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:176
+#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
+#: rc.cpp:304
+msgid "Run Until Finished"
+msgstr "끝날 때까지 실행하기"
 
 #: kssl/ksslcertificate.cpp:204
 msgid "Signature Algorithm: "
@@ -481,13 +960,61 @@ msgstr "인증서가 상대적이지 않습니다."
 msgid "The certificate is invalid."
 msgstr "인증서가 잘못되었습니다."
 
-#: kssl/ksslutils.cpp:78
-msgid "GMT"
-msgstr "GMT"
+#: kssl/ksslkeygen.cpp:82
+msgid "KDE Certificate Request"
+msgstr "KDE 인증서 요청"
 
-#: kssl/ksslpemcallback.cpp:37
-msgid "Certificate password"
-msgstr "인증서 암호"
+#: kssl/ksslkeygen.cpp:89
+msgid "KDE Certificate Request - Password"
+msgstr "KDE 인증서 요청 - 암호"
+
+#: kssl/ksslkeygen.cpp:124
+msgid "Unsupported key size."
+msgstr "지원하지 않는 키 크기입니다."
+
+#: kssl/ksslkeygen.cpp:124 kssl/ksslinfodialog.cpp:65
+msgid "KDE SSL Information"
+msgstr "KDE SSL 정보"
+
+#: kssl/ksslkeygen.cpp:130
+msgid "KDE"
+msgstr "KDE"
+
+#: kssl/ksslkeygen.cpp:131
+msgid "Please wait while the encryption keys are generated..."
+msgstr "암호화 키를 만드는 동안 기다려 주십시오..."
+
+#: kssl/ksslkeygen.cpp:144
+msgid "Do you wish to store the passphrase in your wallet file?"
+msgstr "지갑 파일에 암호를 저장하시겠습니까?"
+
+#: kssl/ksslkeygen.cpp:144
+msgid "Store"
+msgstr "저장"
+
+#: kssl/ksslkeygen.cpp:144
+msgid "Do Not Store"
+msgstr "저장하지 않음"
+
+#: kssl/ksslkeygen.cpp:260
+msgid "2048 (High Grade)"
+msgstr "2048 (높은 등급)"
+
+#: kssl/ksslkeygen.cpp:261
+msgid "1024 (Medium Grade)"
+msgstr "1024 (중간 등급)"
+
+#: kssl/ksslkeygen.cpp:262
+msgid "768  (Low Grade)"
+msgstr "768  (낮은 등급)"
+
+#: kssl/ksslkeygen.cpp:263
+msgid "512  (Low Grade)"
+msgstr "512  (낮은 등급)"
+
+#: kssl/ksslkeygen.cpp:265
+msgid "No SSL support."
+msgstr "SSL 지원 없음."
 
 #: kssl/ksslinfodialog.cpp:73
 msgctxt "The receiver of the SSL certificate"
@@ -549,180 +1076,460 @@ msgctxt "The certificate is trusted"
 msgid "Yes"
 msgstr "예"
 
-#: misc/ktelnetservice.cpp:39
-msgid "telnet service"
-msgstr "텔넷 서비스"
+#: kssl/ksslinfodialog.cpp:217 kssl/kcm/displaycertdialog.cpp:54
+msgctxt "%1 is the effective date of the certificate, %2 is the expiry date"
+msgid "%1 to %2"
+msgstr "%1부터 %2까지"
 
-#: misc/ktelnetservice.cpp:40
-msgid "telnet protocol handler"
-msgstr "텔넷 프로토콜 처리기"
-
-#: misc/ktelnetservice.cpp:74
-msgid "You do not have permission to access the %1 protocol."
-msgstr "%1 프로토콜에 접근할 수 있는 권한이 없습니다."
-
-#: misc/kpac/script.cpp:752
-msgid "Could not find 'FindProxyForURL' or 'FindProxyForURLEx'"
-msgstr "'FindProxyForURL'이나 'FindProxyForURLEx'를 찾을 수 없음"
-
-#: misc/kpac/script.cpp:763
-msgid "Got an invalid reply when calling %1"
-msgstr "%1을(를) 호출한 결과 잘못된 응답을 받음"
-
-#: misc/kpac/proxyscout.cpp:239
+#: kssl/sslui.cpp:52
 msgid ""
-"The proxy configuration script is invalid:\n"
-"%1"
+"The remote host did not send any SSL certificates.\n"
+"Aborting because the identity of the host cannot be established."
 msgstr ""
-"프록시 설정 스크립트가 잘못됨:\n"
-"%1"
+"원격 호스트에서 SSL 인증서를 보내지 않았습니다.\n"
+"호스트의 정체를 확인할 수 없으므로 중단합니다."
 
-#: misc/kpac/proxyscout.cpp:351
+#: kssl/sslui.cpp:71 kio/tcpslavebase.cpp:810
 msgid ""
-"The proxy configuration script returned an error:\n"
-"%1"
+"The server failed the authenticity check (%1).\n"
+"\n"
 msgstr ""
-"프록시 설정 스크립트에서 오류를 반환했습니다:\n"
-"%1"
+"서버 인증서가 유효성 검사를 통과하지 못했습니다. (%1)\n"
+"\n"
 
-#: misc/kpac/discovery.cpp:112
-msgid "Could not find a usable proxy configuration script"
-msgstr "사용 가능한 프록시 설정 스크립트를 찾을 수 없음"
+#: kssl/sslui.cpp:80 kssl/sslui.cpp:119 kio/tcpslavebase.cpp:821
+#: kio/tcpslavebase.cpp:834 kio/tcpslavebase.cpp:948 kio/tcpslavebase.cpp:960
+msgid "Server Authentication"
+msgstr "서버 인증"
 
-#: misc/kpac/downloader.cpp:93
+#: kssl/sslui.cpp:81 kio/slaveinterface.cpp:420 kio/tcpslavebase.cpp:822
+msgid "&Details"
+msgstr "자세히(&D)"
+
+#: kssl/sslui.cpp:82 kio/slaveinterface.cpp:426 kio/tcpslavebase.cpp:822
+msgid "Co&ntinue"
+msgstr "계속(&N)"
+
+#: kssl/sslui.cpp:116 kio/tcpslavebase.cpp:831
 msgid ""
-"Could not download the proxy configuration script:\n"
-"%1"
+"Would you like to accept this certificate forever without being prompted?"
+msgstr "이 인증서를 확인하지 않고 계속 받아들이시겠습니까?"
+
+#: kssl/sslui.cpp:120 kio/slaveinterface.cpp:422 kio/tcpslavebase.cpp:835
+msgid "&Forever"
+msgstr "영원히(&F)"
+
+#: kssl/sslui.cpp:121 kio/slaveinterface.cpp:428 kio/tcpslavebase.cpp:836
+msgid "&Current Session only"
+msgstr "이 세션만(&C)"
+
+#: kssl/kcm/kcmssl.cpp:40
+msgid "SSL Configuration Module"
+msgstr "SSL 설정 모듈"
+
+#: kssl/kcm/kcmssl.cpp:42
+msgid "Copyright 2010 Andreas Hartmetz"
+msgstr "저작권자 2010 Andreas Hartmetz"
+
+#: kssl/kcm/kcmssl.cpp:43
+msgid "Andreas Hartmetz"
+msgstr "Andreas Hartmetz"
+
+#: kssl/kcm/kcmssl.cpp:55
+msgid "SSL Signers"
+msgstr "SSL 서명자"
+
+#: kssl/kcm/cacertificatespage.cpp:131
+msgid "System certificates"
+msgstr "시스템 인증서"
+
+#: kssl/kcm/cacertificatespage.cpp:138
+msgid "User-added certificates"
+msgstr "사용자 추가 인증서"
+
+#: kssl/kcm/cacertificatespage.cpp:295
+msgid "Pick Certificates"
+msgstr "인증서 선택"
+
+#: kssl/ksslutils.cpp:78
+msgid "GMT"
+msgstr "GMT"
+
+#: kssl/ksslpemcallback.cpp:37
+msgid "Certificate password"
+msgstr "인증서 암호"
+
+#: kssl/ksslcertdialog.cpp:58
+msgid "Certificate"
+msgstr "인증서"
+
+#: kssl/ksslcertdialog.cpp:66
+msgid "Save selection for this host."
+msgstr "이 호스트에 대해서 설정 저장하기."
+
+#: kssl/ksslcertdialog.cpp:75
+msgid "Send certificate"
+msgstr "인증서 보내기"
+
+#: kssl/ksslcertdialog.cpp:79
+msgid "Do not send a certificate"
+msgstr "인증서 보내지 않기"
+
+#: kssl/ksslcertdialog.cpp:84
+msgid "KDE SSL Certificate Dialog"
+msgstr "KDE SSL 인증서 대화상자"
+
+#: kssl/ksslcertdialog.cpp:136
+msgid ""
+"The server <b>%1</b> requests a certificate.<br /><br />Select a certificate "
+"to use from the list below:"
 msgstr ""
-"프록시 설정 스크립트를 다운로드할 수 없음:\n"
-"%1"
-
-#: misc/kpac/downloader.cpp:95
-msgid "Could not download the proxy configuration script"
-msgstr "프록시 설정 스크립트를 다운로드할 수 없음"
-
-#: misc/kmailservice.cpp:30
-msgid "KMailService"
-msgstr "KMailService"
-
-#: misc/kmailservice.cpp:30
-msgid "Mail service"
-msgstr "우편 서비스"
+"서버 <b>%1</b>에서 인증서를 요청했습니다.<br /><br />아래 목록에서 사용할 인"
+"증서를 선택하십시오:"
 
 #: httpfilter/httpfilter.cc:179
 msgid "Receiving corrupt data."
 msgstr "잘못된 데이터를 받았습니다."
 
-#: kio/job.cpp:126
-msgctxt "@title job"
-msgid "Moving"
-msgstr "이동 중"
+#: bookmarks/kbookmark.cc:308
+msgid "--- separator ---"
+msgstr "--- 구분자 ---"
 
-#: kio/job.cpp:127 kio/job.cpp:134 kio/job.cpp:159 kio/fileundomanager.cpp:121
-msgctxt "The source of a file operation"
-msgid "Source"
-msgstr "원본"
+#: bookmarks/kbookmarkmanager.cc:443
+msgid ""
+"Unable to save bookmarks in %1. Reported error was: %2. This error message "
+"will only be shown once. The cause of the error needs to be fixed as quickly "
+"as possible, which is most likely a full hard drive."
+msgstr ""
+"책갈피를 %1에 저장할 수 없습니다. 보고된 오류는 다음과 같습니다: %2. 이 오류 "
+"메시지는 한 번만 표시됩니다. 이 원인의 오류는 가능한 한 빨리 수정되어야 하"
+"며, 대개 하드 디스크 드라이브 전체의 오류입니다."
 
-#: kio/job.cpp:128 kio/job.cpp:135 kio/fileundomanager.cpp:122
-msgctxt "The destination of a file operation"
-msgid "Destination"
-msgstr "대상"
+#: bookmarks/kbookmarkimporter_opera.cc:121
+#: bookmarks/kbookmarkimporter_opera.cc:125
+msgid "*.adr|Opera Bookmark Files (*.adr)"
+msgstr "*.adr|Opera 책갈피 파일 (*.adr)"
 
-#: kio/job.cpp:133
-msgctxt "@title job"
-msgid "Copying"
-msgstr "복사 중"
+#: bookmarks/kbookmarkimporter_ns.cc:122 bookmarks/kbookmarkimporter_ns.cc:126
+msgid "*.html|HTML Files (*.html)"
+msgstr "*.html|HTML 파일 (*.html)"
 
-#: kio/job.cpp:140
-msgctxt "@title job"
-msgid "Creating directory"
-msgstr "디렉터리 생성 중"
+#: bookmarks/kbookmarkimporter_ns.cc:167
+msgid "<!-- This file was generated by Konqueror -->"
+msgstr "<!-- 이 파일은 Konqueror에서 만들었습니다 -->"
 
-#: kio/job.cpp:141 kio/fileundomanager.cpp:118
-msgid "Directory"
-msgstr "디렉터리"
+#: bookmarks/kbookmarkimporter_ns.cc:170 bookmarks/kbookmarkimporter_ns.cc:171
+#: ../kfile/kfilewidget.cpp:2523
+msgid "Bookmarks"
+msgstr "책갈피"
 
-#: kio/job.cpp:146
-msgctxt "@title job"
-msgid "Deleting"
-msgstr "삭제 중"
+#: bookmarks/kbookmarkdialog.cc:41
+msgctxt "@action:button"
+msgid "Update"
+msgstr "업데이트"
 
-#: kio/job.cpp:147 kio/job.cpp:153 kio/fileundomanager.cpp:125
-msgid "File"
-msgstr "파일"
+#: bookmarks/kbookmarkdialog.cc:42
+msgctxt "@title:window"
+msgid "Bookmark Properties"
+msgstr "책갈피 속성"
 
-#: kio/job.cpp:152
-msgctxt "@title job"
-msgid "Examining"
-msgstr "검사 중"
+#: bookmarks/kbookmarkdialog.cc:70 bookmarks/kbookmarkdialog.cc:102
+msgctxt "@action:button"
+msgid "Add"
+msgstr "추가"
 
-#: kio/job.cpp:158
-msgctxt "@title job"
-msgid "Transferring"
-msgstr "전송 중"
+#: bookmarks/kbookmarkdialog.cc:71
+msgctxt "@title:window"
+msgid "Add Bookmark"
+msgstr "책갈피 추가하기"
 
-#: kio/job.cpp:164
-msgctxt "@title job"
-msgid "Mounting"
-msgstr "마운트 중"
+#: bookmarks/kbookmarkdialog.cc:72 bookmarks/kbookmarkdialog.cc:104
+#: bookmarks/kbookmarkdialog.cc:131
+msgctxt "@action:button"
+msgid "&New Folder..."
+msgstr "새 폴더(&N)..."
 
-#: kio/job.cpp:165
-msgid "Device"
-msgstr "장치"
+#: bookmarks/kbookmarkdialog.cc:103
+msgctxt "@title:window"
+msgid "Add Bookmarks"
+msgstr "책갈피 추가하기"
 
-#: kio/job.cpp:166 kio/job.cpp:172
-msgid "Mountpoint"
-msgstr "마운트 지점"
+#: bookmarks/kbookmarkdialog.cc:132 ../kfile/kdirselectdialog.cpp:266
+msgctxt "@title:window"
+msgid "Select Folder"
+msgstr "폴더 선택"
 
-#: kio/job.cpp:171
-msgctxt "@title job"
-msgid "Unmounting"
-msgstr "마운트 해제 중"
+#: bookmarks/kbookmarkdialog.cc:159 ../kfile/knewfilemenu.cpp:1036
+#: ../kfile/kdirselectdialog.cpp:135
+msgctxt "@title:window"
+msgid "New Folder"
+msgstr "새 폴더"
 
-#: kio/job.cpp:2192 kio/paste.cpp:101 kio/global.cpp:646 kio/copyjob.cpp:1401
-#: kio/copyjob.cpp:1984
-msgid "File Already Exists"
-msgstr "파일이 이미 존재함"
+#: bookmarks/kbookmarkdialog.cc:292
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "이름:"
 
-#: kio/slavebase.cpp:1304 kio/global.cpp:1071
+#: bookmarks/kbookmarkdialog.cc:297
+msgctxt "@label:textbox"
+msgid "Location:"
+msgstr "위치:"
+
+#: bookmarks/kbookmarkdialog.cc:302
+msgctxt "@label:textbox"
+msgid "Comment:"
+msgstr "설명:"
+
+#: bookmarks/kbookmarkdialog.cc:331
+msgctxt "@title:window"
+msgid "Create New Bookmark Folder"
+msgstr "새 책갈피 폴더 만들기"
+
+#: bookmarks/kbookmarkdialog.cc:332
+msgctxt "@title:window"
+msgid "Create New Bookmark Folder in %1"
+msgstr "%1에 새 책갈피 폴더 만들기"
+
+#: bookmarks/kbookmarkdialog.cc:335
+msgctxt "@label:textbox"
+msgid "New folder:"
+msgstr "새 폴더:"
+
+#: bookmarks/kbookmarkdialog.cc:374
+msgctxt "name of the container of all browser bookmarks"
+msgid "Bookmarks"
+msgstr "책갈피"
+
+#: bookmarks/konqbookmarkmenu.cc:61 bookmarks/konqbookmarkmenu.cc:78
+msgid "Hide in toolbar"
+msgstr "도구 모음에서 숨기기"
+
+#: bookmarks/konqbookmarkmenu.cc:61 bookmarks/konqbookmarkmenu.cc:78
+msgid "Show in toolbar"
+msgstr "도구 모음에서 보기"
+
+#: bookmarks/konqbookmarkmenu.cc:71
+msgid "Open in New Window"
+msgstr "새 창으로 열기"
+
+#: bookmarks/konqbookmarkmenu.cc:72
+msgid "Open in New Tab"
+msgstr "새 탭으로 열기"
+
+#: bookmarks/kbookmarkmenu.cc:267
+msgid "Add Bookmark Here"
+msgstr "여기를 책갈피에 추가하기"
+
+#: bookmarks/kbookmarkmenu.cc:272
+msgid "Open Folder in Bookmark Editor"
+msgstr "책갈피 편집기에서 폴더 열기"
+
+#: bookmarks/kbookmarkmenu.cc:275
+msgid "Delete Folder"
+msgstr "폴더 지우기"
+
+#: bookmarks/kbookmarkmenu.cc:281 ../kfile/kdiroperator.cpp:1958
+msgid "Properties"
+msgstr "속성"
+
+#: bookmarks/kbookmarkmenu.cc:286
+msgid "Copy Link Address"
+msgstr "링크 주소 복사"
+
+#: bookmarks/kbookmarkmenu.cc:289
+msgid "Delete Bookmark"
+msgstr "책갈피 지우기"
+
+#: bookmarks/kbookmarkmenu.cc:295 bookmarks/kbookmarkmenu.cc:454
+msgid "Open Folder in Tabs"
+msgstr "폴더를 탭으로 열기"
+
+#: bookmarks/kbookmarkmenu.cc:320
+msgid "Cannot add bookmark with empty URL."
+msgstr "빈 URL의 책갈피를 추가할 수 없습니다."
+
+#: bookmarks/kbookmarkmenu.cc:352
+msgid ""
+"Are you sure you wish to remove the bookmark folder\n"
+"\"%1\"?"
+msgstr "책갈피 폴더 \"%1\"을(를) 삭제하시겠습니까?"
+
+#: bookmarks/kbookmarkmenu.cc:353
+msgid ""
+"Are you sure you wish to remove the bookmark\n"
+"\"%1\"?"
+msgstr "책갈피 \"%1\"을(를) 삭제하시겠습니까?"
+
+#: bookmarks/kbookmarkmenu.cc:354
+msgid "Bookmark Folder Deletion"
+msgstr "책갈피 폴더 삭제"
+
+#: bookmarks/kbookmarkmenu.cc:355
+msgid "Bookmark Deletion"
+msgstr "책갈피 삭제"
+
+#: bookmarks/kbookmarkmenu.cc:458
+msgid "Open all bookmarks in this folder as a new tab."
+msgstr "이 폴더의 모든 책갈피를 새 탭으로 엽니다."
+
+#: bookmarks/kbookmarkmenu.cc:471
+msgid "Bookmark Tabs as Folder..."
+msgstr "탭을 책갈피에 추가하기..."
+
+#: bookmarks/kbookmarkmenu.cc:475
+msgid "Add a folder of bookmarks for all open tabs."
+msgstr "모든 열린 탭의 책갈피를 새 폴더로 추가합니다."
+
+#: bookmarks/kbookmarkmenu.cc:508
+msgid "Edit your bookmark collection in a separate window"
+msgstr "새 창에서 책갈피 모음집 편집하기"
+
+#: bookmarks/kbookmarkmenu.cc:517
+msgid "New Bookmark Folder..."
+msgstr "새 책갈피 폴더..."
+
+#: bookmarks/kbookmarkmenu.cc:519
+msgid "Create a new bookmark folder in this menu"
+msgstr "이 메뉴에 새 책갈피 폴더 만들기"
+
+#: kio/slavebase.cpp:1300 kio/global.cpp:1071
 msgid "Unknown Error"
 msgstr "알 수 없는 오류"
 
-#: kio/connection.cpp:213
-msgid "Unable to create io-slave: %1"
-msgstr "IO 슬레이브를 만들 수 없음: %1"
+#: kio/kscan.cpp:50
+msgid "Acquire Image"
+msgstr "그림 가져오기"
 
-#: kio/slave.cpp:434
-msgid "Unknown protocol '%1'."
-msgstr "알 수 없는 프로토콜 '%1'."
+#: kio/kscan.cpp:99
+msgid "OCR Image"
+msgstr "그림에 OCR 수행"
 
-#: kio/slave.cpp:443
-msgid "Can not find io-slave for protocol '%1'."
-msgstr "프로토콜 '%1'의 IO 슬레이브를 찾을 수 없습니다."
+#: kio/copyjob.cpp:1076 kio/global.cpp:656
+msgid "Folder Already Exists"
+msgstr "폴더가 이미 존재함"
 
-#: kio/slave.cpp:462
-msgid "Cannot talk to klauncher: %1"
-msgstr "klauncher와 통신할 수 없음: %1"
+#: kio/copyjob.cpp:1401 kio/copyjob.cpp:1984 kio/global.cpp:646
+#: kio/job.cpp:2192 kio/paste.cpp:101
+msgid "File Already Exists"
+msgstr "파일이 이미 존재함"
 
-#: kio/slave.cpp:470
-msgid ""
-"Unable to create io-slave:\n"
-"klauncher said: %1"
-msgstr ""
-"IO 슬레이브를 만들 수 없습니다.\n"
-"klauncher 응답: %1"
-
-#: kio/slavebase.h:265 kio/slavebase.h:285
-msgid "&Yes"
-msgstr "예(&Y)"
-
-#: kio/slavebase.h:266 kio/slavebase.h:286
-msgid "&No"
-msgstr "아니오(&N)"
+#: kio/copyjob.cpp:1401 kio/copyjob.cpp:1984
+msgid "Already Exists as Folder"
+msgstr "이미 폴더로 존재함"
 
 #: kio/kstatusbarofflineindicator.cpp:52
 msgid "The desktop is offline"
 msgstr "데스크톱이 오프라인 상태임"
+
+#: kio/kimageio.cpp:43
+msgid "All Pictures"
+msgstr "모든 그림"
+
+#: kio/jobuidelegate.cpp:155 ../kfile/kdiroperator.cpp:802
+msgid "Do you really want to delete this item?"
+msgid_plural "Do you really want to delete these %1 items?"
+msgstr[0] "이 %1개 항목을 지우시겠습니까?"
+
+#: kio/jobuidelegate.cpp:157 ../kfile/kdiroperator.cpp:804
+msgid "Delete Files"
+msgstr "파일 지우기"
+
+#: kio/jobuidelegate.cpp:165
+msgctxt "@info"
+msgid ""
+"Do you want to permanently delete all items from Trash? This action cannot "
+"be undone."
+msgstr "휴지통을 비우시겠습니까? 이 동작은 취소할 수 없습니다."
+
+#: kio/jobuidelegate.cpp:167 ../kfile/kfileplacesview.cpp:644
+msgctxt "@action:button"
+msgid "Empty Trash"
+msgstr "휴지통 비우기"
+
+#: kio/jobuidelegate.cpp:176
+msgid "Do you really want to move this item to the trash?"
+msgid_plural "Do you really want to move these %1 items to the trash?"
+msgstr[0] "이 %1개 항목을 휴지통에 버리시겠습니까?"
+
+#: kio/jobuidelegate.cpp:178 ../kfile/kdiroperator.cpp:1849
+msgid "Move to Trash"
+msgstr "휴지통으로 이동"
+
+#: kio/jobuidelegate.cpp:179
+msgctxt "Verb"
+msgid "&Trash"
+msgstr "버리기(&T)"
+
+#: kio/jobuidelegate.cpp:273
+msgid "The peer SSL certificate chain appears to be corrupt."
+msgstr "동료 SSL 인증서 체인이 잘못된 것 같습니다."
+
+#: kio/jobuidelegate.cpp:274 kio/tcpslavebase.cpp:766
+msgid "SSL"
+msgstr "SSL"
+
+#: kio/accessmanager.cpp:195
+msgid "Blocked request."
+msgstr "요청이 거부되었습니다."
+
+#: kio/accessmanager.cpp:266
+msgid "Unknown HTTP verb."
+msgstr "알 수 없는 HTTP 동작."
+
+#: kio/kdirmodel.cpp:968
+msgctxt "@title:column"
+msgid "Name"
+msgstr "이름"
+
+#: kio/kdirmodel.cpp:970
+msgctxt "@title:column"
+msgid "Size"
+msgstr "크기"
+
+#: kio/kdirmodel.cpp:972
+msgctxt "@title:column"
+msgid "Date"
+msgstr "날짜"
+
+#: kio/kdirmodel.cpp:974
+msgctxt "@title:column"
+msgid "Permissions"
+msgstr "권한"
+
+#: kio/kdirmodel.cpp:976
+msgctxt "@title:column"
+msgid "Owner"
+msgstr "소유자"
+
+#: kio/kdirmodel.cpp:978
+msgctxt "@title:column"
+msgid "Group"
+msgstr "그룹"
+
+#: kio/kdirmodel.cpp:980
+msgctxt "@title:column"
+msgid "Type"
+msgstr "종류"
+
+#: kio/kmimetypechooser.cpp:82
+msgid "Mime Type"
+msgstr "MIME 형식"
+
+#: kio/kmimetypechooser.cpp:85
+msgid "Comment"
+msgstr "설명"
+
+#: kio/kmimetypechooser.cpp:88
+msgid "Patterns"
+msgstr "패턴"
+
+#: kio/kmimetypechooser.cpp:102
+msgid "&Edit..."
+msgstr "편집(&E)..."
+
+#: kio/kmimetypechooser.cpp:112
+msgid "Click this button to display the familiar KDE mime type editor."
+msgstr "이 단추를 누르면 친숙한 KDE MIME 형식 편집기를 엽니다."
 
 #: kio/chmodjob.cpp:212
 msgid ""
@@ -736,13 +1543,272 @@ msgstr ""
 msgid "&Skip File"
 msgstr "파일 건너뛰기(&S)"
 
-#: kio/accessmanager.cpp:195
-msgid "Blocked request."
-msgstr "요청이 거부되었습니다."
+#: kio/connection.cpp:213
+msgid "Unable to create io-slave: %1"
+msgstr "IO 슬레이브를 만들 수 없음: %1"
 
-#: kio/accessmanager.cpp:266
-msgid "Unknown HTTP verb."
-msgstr "알 수 없는 HTTP 동작."
+#: kio/kdirlister.cpp:393 kio/renamedialog.cpp:411 kio/krun.cpp:1116
+#: kio/paste.cpp:320
+msgid ""
+"Malformed URL\n"
+"%1"
+msgstr ""
+"잘못된 URL\n"
+"%1"
+
+#: kio/kdirlister.cpp:403
+msgid ""
+"URL cannot be listed\n"
+"%1"
+msgstr ""
+"URL의 목록을 표시할 수 없습니다\n"
+"%1"
+
+#: kio/netaccess.cpp:104
+msgid "File '%1' is not readable"
+msgstr "파일 '%1'을(를) 읽을 수 없습니다|/|파일 $[을를 %1 \"] 읽을 수 없습니다"
+
+#: kio/netaccess.cpp:421
+msgid "ERROR: Unknown protocol '%1'"
+msgstr "오류: 알 수 없는 프로토콜 '%1' "
+
+#: kio/fileundomanager.cpp:117
+msgid "Creating directory"
+msgstr "디렉터리 생성 중"
+
+#: kio/fileundomanager.cpp:118 kio/job.cpp:141
+msgid "Directory"
+msgstr "디렉터리"
+
+#: kio/fileundomanager.cpp:120
+msgid "Moving"
+msgstr "이동 중"
+
+#: kio/fileundomanager.cpp:121 kio/job.cpp:127 kio/job.cpp:134 kio/job.cpp:159
+msgctxt "The source of a file operation"
+msgid "Source"
+msgstr "원본"
+
+#: kio/fileundomanager.cpp:122 kio/job.cpp:128 kio/job.cpp:135
+msgctxt "The destination of a file operation"
+msgid "Destination"
+msgstr "대상"
+
+#: kio/fileundomanager.cpp:124
+msgid "Deleting"
+msgstr "삭제 중"
+
+#: kio/fileundomanager.cpp:125 kio/job.cpp:147 kio/job.cpp:153
+msgid "File"
+msgstr "파일"
+
+#: kio/fileundomanager.cpp:286
+msgid "Und&o"
+msgstr "실행 취소(&O)"
+
+#: kio/fileundomanager.cpp:291
+msgid "Und&o: Copy"
+msgstr "실행 취소: 복사(&O)"
+
+#: kio/fileundomanager.cpp:293
+msgid "Und&o: Link"
+msgstr "실행 취소: 링크 걸기(&O)"
+
+#: kio/fileundomanager.cpp:295
+msgid "Und&o: Move"
+msgstr "실행 취소: 이동(&O)"
+
+#: kio/fileundomanager.cpp:297
+msgid "Und&o: Rename"
+msgstr "실행 취소: 이름 바꾸기(&O)"
+
+#: kio/fileundomanager.cpp:299
+msgid "Und&o: Trash"
+msgstr "실행 취소: 휴지통에 버리기(&O)"
+
+#: kio/fileundomanager.cpp:301
+msgid "Und&o: Create Folder"
+msgstr "실행 취소: 폴더 만들기(&O)"
+
+#: kio/fileundomanager.cpp:303
+msgid "Und&o: Create File"
+msgstr "실행 취소: 파일 만들기(&O)"
+
+#: kio/fileundomanager.cpp:777
+msgid ""
+"The file %1 was copied from %2, but since then it has apparently been "
+"modified at %3.\n"
+"Undoing the copy will delete the file, and all modifications will be lost.\n"
+"Are you sure you want to delete %4?"
+msgstr ""
+"파일 %1은(는) %2에서 복사되었으며, 그 이후 %3에 수정되었습니다.\n"
+"파일 복사를 실행 취소하면 파일을 지우며 모든 변경 사항이 삭제됩니다.\n"
+"%4을(를) 삭제하시겠습니까?"
+
+#: kio/fileundomanager.cpp:780
+msgid "Undo File Copy Confirmation"
+msgstr "파일 복사 실행 취소 확인"
+
+#: kio/kfileitem.cpp:1145
+msgid "(Symbolic Link to %1)"
+msgstr "(%1(으)로 향한 심볼릭 링크)|/|($[으 %1]로 향한 심볼릭 링크)"
+
+#: kio/kfileitem.cpp:1147
+msgid "(%1, Link to %2)"
+msgstr "(%1, %2(으)로 향한 링크)|/|(%1, $[으 %2]로 향한 링크)"
+
+#: kio/kfileitem.cpp:1151
+msgid " (Points to %1)"
+msgstr " (%1을(를) 가리킴)"
+
+#: kio/kfileitemactions.cpp:405
+msgctxt "@title:menu"
+msgid "&Actions"
+msgstr "동작(&A)"
+
+#: kio/kfileitemactions.cpp:535
+msgid "&Open with %1"
+msgstr "%1(으)로 열기"
+
+#: kio/kfileitemactions.cpp:546 ../kfile/kfilewidget.cpp:1972
+msgid "&Open"
+msgstr "열기(&O)"
+
+#: kio/kfileitemactions.cpp:561
+msgctxt "@title:menu"
+msgid "&Open With"
+msgstr "다음으로 열기(&O)"
+
+#: kio/kfileitemactions.cpp:578
+msgctxt "@action:inmenu Open With"
+msgid "&Other..."
+msgstr "기타(&O)..."
+
+#: kio/kfileitemactions.cpp:580 kio/kfileitemactions.cpp:593
+msgctxt "@title:menu"
+msgid "&Open With..."
+msgstr "다음으로 열기(&O)..."
+
+#: kio/kfileitemactions.cpp:696
+msgid "Open &with %1"
+msgstr "%1(으)로 열기(&W)|/|$[으 %1]로 열기(&W)"
+
+#: kio/kfileitemactions.cpp:698
+msgctxt "@item:inmenu Open With, %1 is application name"
+msgid "%1"
+msgstr "%1"
+
+#: kio/renamedialog.cpp:131
+msgid "Appl&y to All"
+msgstr "모두 적용하기(&Y)"
+
+#: kio/renamedialog.cpp:132
+msgid ""
+"When this is checked the button pressed will be applied to all subsequent "
+"folder conflicts for the remainder of the current job.\n"
+"Unless you press Skip you will still be prompted in case of a conflict with "
+"an existing file in the directory."
+msgstr ""
+"이 항목을 선택하면 현재 작업에서 남아 있는 모든 항목에 단추로 누른 동작을 적"
+"용합니다.\n"
+"건너뛰기 단추를 누르지 않은 한 현재 디렉터리에 있는 파일과 충돌할 때마다 물어"
+"봅니다."
+
+#: kio/renamedialog.cpp:133
+msgid ""
+"When this is checked the button pressed will be applied to all subsequent "
+"conflicts for the remainder of the current job."
+msgstr ""
+"이 항목을 선택하면 현재 작업에서 남아 있는 모든 항목에 단추로 누른 동작을 적"
+"용합니다."
+
+#: kio/renamedialog.cpp:138
+msgid "&Rename"
+msgstr "이름 바꾸기(&R)"
+
+#: kio/renamedialog.cpp:140
+msgid "Suggest New &Name"
+msgstr "새 이름 제안(&N)"
+
+#: kio/renamedialog.cpp:146
+msgid "&Skip"
+msgstr "건너뛰기(&S)"
+
+#: kio/renamedialog.cpp:147
+msgid "Do not copy or move this folder, skip to the next item instead"
+msgstr "이 폴더를 복사하거나 이동하지 않고 다음 항목으로 건너뛰기"
+
+#: kio/renamedialog.cpp:148
+msgid "Do not copy or move this file, skip to the next item instead"
+msgstr "이 파일을 복사하거나 이동하지 않고 다음 항목으로 건너뛰기"
+
+#: kio/renamedialog.cpp:153
+msgctxt "Write files into an existing folder"
+msgid "&Write Into"
+msgstr "다음에 쓰기(&W)"
+
+#: kio/renamedialog.cpp:153
+msgid "&Overwrite"
+msgstr "덮어쓰기(&O)"
+
+#: kio/renamedialog.cpp:155
+msgid ""
+"Files and folders will be copied into the existing directory, alongside its "
+"existing contents.\n"
+"You will be prompted again in case of a conflict with an existing file in "
+"the directory."
+msgstr ""
+"이미 존재하는 내용은 그대로 두고 파일이나 폴더를 존재하는 디렉터리에 복사합니"
+"다.\n"
+"디렉터리에 존재하는 파일과 충돌할 경우에는 물어봅니다."
+
+#: kio/renamedialog.cpp:160
+msgid "&Resume"
+msgstr "재시도(&R)"
+
+#: kio/renamedialog.cpp:169
+msgid ""
+"This action would overwrite '%1' with itself.\n"
+"Please enter a new file name:"
+msgstr ""
+"이 동작은 파일 '%1' 자기 자신을 겹쳐씁니다.\n"
+"새 파일 이름을 입력하십시오:"
+
+#: kio/renamedialog.cpp:173
+msgid "C&ontinue"
+msgstr "계속(&O)"
+
+#: kio/renamedialog.cpp:227
+msgid "This action will overwrite the destination."
+msgstr "이 동작은 대상을 덮어씁니다."
+
+#: kio/renamedialog.cpp:229
+msgid "Source"
+msgstr "원본"
+
+#: kio/renamedialog.cpp:230
+msgid "Destination"
+msgstr "대상"
+
+#: kio/renamedialog.cpp:236
+msgid "Warning, the destination is more recent."
+msgstr "경고, 대상이 더 새로운 파일입니다."
+
+#: kio/renamedialog.cpp:267
+msgid "An older item named '%1' already exists."
+msgstr "오래된 항목 '%1'이(가) 이미 존재합니다."
+
+#: kio/renamedialog.cpp:269
+msgid "A similar file named '%1' already exists."
+msgstr "이름과 비슷한 파일 '%1'이(가) 이미 존재합니다."
+
+#: kio/renamedialog.cpp:271
+msgid "A more recent item named '%1' already exists."
+msgstr "새로운 항목 '%1'이(가) 이미 존재합니다."
+
+#: kio/renamedialog.cpp:282
+msgid "Rename:"
+msgstr "이름 바꾸기:"
 
 #: kio/kdesktopfileactions.cpp:64
 msgid "The desktop entry file %1 has no Type=... entry."
@@ -790,92 +1856,50 @@ msgstr "꺼내기"
 msgid "Unmount"
 msgstr "마운트 해제"
 
-#: kio/paste.cpp:83 kio/paste.cpp:176
-msgid "Filename for clipboard content:"
-msgstr "클립보드 내용을 위한 파일 이름:"
+#: kio/kbuildsycocaprogressdialog.cpp:44
+msgid "Updating System Configuration"
+msgstr "시스템 설정 업데이트 중"
 
-#: kio/paste.cpp:169
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
+#: kio/kbuildsycocaprogressdialog.cpp:45
+msgid "Updating system configuration."
+msgstr "시스템 설정 업데이트 중."
 
-#: kio/paste.cpp:185
+#: kio/kemailsettings.cpp:251 kio/kemailsettings.cpp:254
+#: kio/kemailsettings.cpp:261
+msgid "Default"
+msgstr "기본값"
+
+#: kio/kdbusservicestarter.cpp:75
+msgid "No service implementing %1"
+msgstr "%1을(를) 구현하는 서비스가 없음"
+
+#: kio/slavebase.h:265 kio/slavebase.h:285
+msgid "&Yes"
+msgstr "예(&Y)"
+
+#: kio/slavebase.h:266 kio/slavebase.h:286
+msgid "&No"
+msgstr "아니오(&N)"
+
+#: kio/slave.cpp:434
+msgid "Unknown protocol '%1'."
+msgstr "알 수 없는 프로토콜 '%1'."
+
+#: kio/slave.cpp:443
+msgid "Can not find io-slave for protocol '%1'."
+msgstr "프로토콜 '%1'의 IO 슬레이브를 찾을 수 없습니다."
+
+#: kio/slave.cpp:462
+msgid "Cannot talk to klauncher: %1"
+msgstr "klauncher와 통신할 수 없음: %1"
+
+#: kio/slave.cpp:470
 msgid ""
-"The clipboard has changed since you used 'paste': the chosen data format is "
-"no longer applicable. Please copy again what you wanted to paste."
+"Unable to create io-slave:\n"
+"klauncher said: %1"
 msgstr ""
-"붙여 넣은 다음 클립보드가 변경되었기 때문에 선택한 데이터 형식을 사용할 수 없"
-"습니다. 붙여넣고 싶은 내용을 다시 복사하십시오."
-
-#: kio/paste.cpp:260
-msgid "The clipboard is empty"
-msgstr "클립보드가 비어 있음"
-
-#: kio/paste.cpp:320 kio/kdirlister.cpp:393 kio/krun.cpp:1116
-#: kio/renamedialog.cpp:411
-msgid ""
-"Malformed URL\n"
-"%1"
-msgstr ""
-"잘못된 URL\n"
-"%1"
-
-#: kio/paste.cpp:372
-msgid "&Paste File"
-msgid_plural "&Paste %1 Files"
-msgstr[0] "%1개 파일 붙여넣기(&P)"
-
-#: kio/paste.cpp:374
-msgid "&Paste URL"
-msgid_plural "&Paste %1 URLs"
-msgstr[0] "%1개 URL 붙여넣기"
-
-#: kio/paste.cpp:376
-msgid "&Paste Clipboard Contents"
-msgstr "클립보드 내용 붙여넣기(&P)"
-
-#: kio/kdirlister.cpp:403
-msgid ""
-"URL cannot be listed\n"
-"%1"
-msgstr ""
-"URL의 목록을 표시할 수 없습니다\n"
-"%1"
-
-#: kio/kmimetypechooser.cpp:82
-msgid "Mime Type"
-msgstr "MIME 형식"
-
-#: kio/kmimetypechooser.cpp:85
-msgid "Comment"
-msgstr "설명"
-
-#: kio/kmimetypechooser.cpp:88
-msgid "Patterns"
-msgstr "패턴"
-
-#: kio/kmimetypechooser.cpp:102
-msgid "&Edit..."
-msgstr "편집(&E)..."
-
-#: kio/kmimetypechooser.cpp:112
-msgid "Click this button to display the familiar KDE mime type editor."
-msgstr "이 단추를 누르면 친숙한 KDE MIME 형식 편집기를 엽니다."
-
-#: kio/kimageio.cpp:43
-msgid "All Pictures"
-msgstr "모든 그림"
-
-#: kio/skipdialog.cpp:37
-msgid "Information"
-msgstr "정보"
-
-#: kio/skipdialog.cpp:44
-msgid "Skip"
-msgstr "건너뛰기"
-
-#: kio/skipdialog.cpp:47
-msgid "AutoSkip"
-msgstr "자동으로 건너뛰기"
+"IO 슬레이브를 만들 수 없습니다.\n"
+"klauncher 응답: %1"
 
 #: kio/global.cpp:90
 msgid "1 day %2"
@@ -1715,10 +2739,6 @@ msgstr "현재 파일을 삭제한 다음 다시 시도해 보십시오."
 #: kio/global.cpp:652
 msgid "Choose an alternate filename for the new file."
 msgstr "다른 새 파일 이름을 선택하십시오."
-
-#: kio/global.cpp:656 kio/copyjob.cpp:1076
-msgid "Folder Already Exists"
-msgstr "폴더가 이미 존재함"
 
 #: kio/global.cpp:657
 msgid ""
@@ -2570,10 +3590,6 @@ msgstr "인증서를 열 수 없습니다. 새로운 암호를 입력하십시�
 msgid "The procedure to set the client certificate for the session failed."
 msgstr "세션의 클라이언트 인증서를 설정하는 과정 중 실패했습니다."
 
-#: kio/tcpslavebase.cpp:766 kio/jobuidelegate.cpp:274
-msgid "SSL"
-msgstr "SSL"
-
 #: kio/tcpslavebase.cpp:947
 msgid ""
 "You have indicated that you wish to accept this certificate, but it is not "
@@ -2590,55 +3606,64 @@ msgstr ""
 "요청한 대로 SSL 인증서가 거부되었습니다. KDE 시스템 설정에서 설정할 수 있습니"
 "다."
 
-#: kio/kemailsettings.cpp:251 kio/kemailsettings.cpp:254
-#: kio/kemailsettings.cpp:261
-msgid "Default"
-msgstr "기본값"
+#: kio/job.cpp:126
+msgctxt "@title job"
+msgid "Moving"
+msgstr "이동 중"
 
-#: kio/kscan.cpp:50
-msgid "Acquire Image"
-msgstr "그림 가져오기"
+#: kio/job.cpp:133
+msgctxt "@title job"
+msgid "Copying"
+msgstr "복사 중"
 
-#: kio/kscan.cpp:99
-msgid "OCR Image"
-msgstr "그림에 OCR 수행"
+#: kio/job.cpp:140
+msgctxt "@title job"
+msgid "Creating directory"
+msgstr "디렉터리 생성 중"
 
-#: kio/kfileitemactions.cpp:405
-msgctxt "@title:menu"
-msgid "&Actions"
-msgstr "동작(&A)"
+#: kio/job.cpp:146
+msgctxt "@title job"
+msgid "Deleting"
+msgstr "삭제 중"
 
-#: kio/kfileitemactions.cpp:535
-msgid "&Open with %1"
-msgstr "%1(으)로 열기"
+#: kio/job.cpp:152
+msgctxt "@title job"
+msgid "Examining"
+msgstr "검사 중"
 
-#: kio/kfileitemactions.cpp:546 ../kfile/kfilewidget.cpp:1972
-msgid "&Open"
-msgstr "열기(&O)"
+#: kio/job.cpp:158
+msgctxt "@title job"
+msgid "Transferring"
+msgstr "전송 중"
 
-#: kio/kfileitemactions.cpp:561
-msgctxt "@title:menu"
-msgid "&Open With"
-msgstr "다음으로 열기(&O)"
+#: kio/job.cpp:164
+msgctxt "@title job"
+msgid "Mounting"
+msgstr "마운트 중"
 
-#: kio/kfileitemactions.cpp:578
-msgctxt "@action:inmenu Open With"
-msgid "&Other..."
-msgstr "기타(&O)..."
+#: kio/job.cpp:165
+msgid "Device"
+msgstr "장치"
 
-#: kio/kfileitemactions.cpp:580 kio/kfileitemactions.cpp:593
-msgctxt "@title:menu"
-msgid "&Open With..."
-msgstr "다음으로 열기(&O)..."
+#: kio/job.cpp:166 kio/job.cpp:172
+msgid "Mountpoint"
+msgstr "마운트 지점"
 
-#: kio/kfileitemactions.cpp:696
-msgid "Open &with %1"
-msgstr "%1(으)로 열기(&W)|/|$[으 %1]로 열기(&W)"
+#: kio/job.cpp:171
+msgctxt "@title job"
+msgid "Unmounting"
+msgstr "마운트 해제 중"
 
-#: kio/kfileitemactions.cpp:698
-msgctxt "@item:inmenu Open With, %1 is application name"
-msgid "%1"
-msgstr "%1"
+#: kio/kfileitemdelegate.cpp:236
+msgctxt "Items in a folder"
+msgid "1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1개 항목"
+
+#: kio/kfileitemdelegate.cpp:292 kio/kfileitemdelegate.cpp:296
+msgctxt "@info mimetype"
+msgid "Unknown"
+msgstr "알 수 없음"
 
 #: kio/krun.cpp:123
 msgid ""
@@ -2714,821 +3739,111 @@ msgstr ""
 msgid "Could not find the program '%1'"
 msgstr "프로그램 '%1'을(를) 찾을 수 없음|/|프로그램 $[을를 %1 \"] 찾을 수 없음"
 
-#: kio/kdbusservicestarter.cpp:75
-msgid "No service implementing %1"
-msgstr "%1을(를) 구현하는 서비스가 없음"
+#: kio/paste.cpp:83 kio/paste.cpp:176
+msgid "Filename for clipboard content:"
+msgstr "클립보드 내용을 위한 파일 이름:"
 
-#: kio/jobuidelegate.cpp:155 ../kfile/kdiroperator.cpp:802
-msgid "Do you really want to delete this item?"
-msgid_plural "Do you really want to delete these %1 items?"
-msgstr[0] "이 %1개 항목을 지우시겠습니까?"
+#: kio/paste.cpp:169
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
 
-#: kio/jobuidelegate.cpp:157 ../kfile/kdiroperator.cpp:804
-msgid "Delete Files"
-msgstr "파일 지우기"
-
-#: kio/jobuidelegate.cpp:165
-msgctxt "@info"
+#: kio/paste.cpp:185
 msgid ""
-"Do you want to permanently delete all items from Trash? This action cannot "
-"be undone."
-msgstr "휴지통을 비우시겠습니까? 이 동작은 취소할 수 없습니다."
-
-#: kio/jobuidelegate.cpp:167 ../kfile/kfileplacesview.cpp:644
-msgctxt "@action:button"
-msgid "Empty Trash"
-msgstr "휴지통 비우기"
-
-#: kio/jobuidelegate.cpp:176
-msgid "Do you really want to move this item to the trash?"
-msgid_plural "Do you really want to move these %1 items to the trash?"
-msgstr[0] "이 %1개 항목을 휴지통에 버리시겠습니까?"
-
-#: kio/jobuidelegate.cpp:178 ../kfile/kdiroperator.cpp:1849
-msgid "Move to Trash"
-msgstr "휴지통으로 이동"
-
-#: kio/jobuidelegate.cpp:179
-msgctxt "Verb"
-msgid "&Trash"
-msgstr "버리기(&T)"
-
-#: kio/jobuidelegate.cpp:273
-msgid "The peer SSL certificate chain appears to be corrupt."
-msgstr "동료 SSL 인증서 체인이 잘못된 것 같습니다."
-
-#: kio/kbuildsycocaprogressdialog.cpp:44
-msgid "Updating System Configuration"
-msgstr "시스템 설정 업데이트 중"
-
-#: kio/kbuildsycocaprogressdialog.cpp:45
-msgid "Updating system configuration."
-msgstr "시스템 설정 업데이트 중."
-
-#: kio/renamedialog.cpp:131
-msgid "Appl&y to All"
-msgstr "모두 적용하기(&Y)"
-
-#: kio/renamedialog.cpp:132
-msgid ""
-"When this is checked the button pressed will be applied to all subsequent "
-"folder conflicts for the remainder of the current job.\n"
-"Unless you press Skip you will still be prompted in case of a conflict with "
-"an existing file in the directory."
+"The clipboard has changed since you used 'paste': the chosen data format is "
+"no longer applicable. Please copy again what you wanted to paste."
 msgstr ""
-"이 항목을 선택하면 현재 작업에서 남아 있는 모든 항목에 단추로 누른 동작을 적"
-"용합니다.\n"
-"건너뛰기 단추를 누르지 않은 한 현재 디렉터리에 있는 파일과 충돌할 때마다 물어"
-"봅니다."
+"붙여 넣은 다음 클립보드가 변경되었기 때문에 선택한 데이터 형식을 사용할 수 없"
+"습니다. 붙여넣고 싶은 내용을 다시 복사하십시오."
 
-#: kio/renamedialog.cpp:133
-msgid ""
-"When this is checked the button pressed will be applied to all subsequent "
-"conflicts for the remainder of the current job."
-msgstr ""
-"이 항목을 선택하면 현재 작업에서 남아 있는 모든 항목에 단추로 누른 동작을 적"
-"용합니다."
+#: kio/paste.cpp:260
+msgid "The clipboard is empty"
+msgstr "클립보드가 비어 있음"
 
-#: kio/renamedialog.cpp:138
-msgid "&Rename"
-msgstr "이름 바꾸기(&R)"
+#: kio/paste.cpp:372
+msgid "&Paste File"
+msgid_plural "&Paste %1 Files"
+msgstr[0] "%1개 파일 붙여넣기(&P)"
 
-#: kio/renamedialog.cpp:140
-msgid "Suggest New &Name"
-msgstr "새 이름 제안(&N)"
+#: kio/paste.cpp:374
+msgid "&Paste URL"
+msgid_plural "&Paste %1 URLs"
+msgstr[0] "%1개 URL 붙여넣기"
 
-#: kio/renamedialog.cpp:146
-msgid "&Skip"
-msgstr "건너뛰기(&S)"
-
-#: kio/renamedialog.cpp:147
-msgid "Do not copy or move this folder, skip to the next item instead"
-msgstr "이 폴더를 복사하거나 이동하지 않고 다음 항목으로 건너뛰기"
-
-#: kio/renamedialog.cpp:148
-msgid "Do not copy or move this file, skip to the next item instead"
-msgstr "이 파일을 복사하거나 이동하지 않고 다음 항목으로 건너뛰기"
-
-#: kio/renamedialog.cpp:153
-msgctxt "Write files into an existing folder"
-msgid "&Write Into"
-msgstr "다음에 쓰기(&W)"
-
-#: kio/renamedialog.cpp:153
-msgid "&Overwrite"
-msgstr "덮어쓰기(&O)"
-
-#: kio/renamedialog.cpp:155
-msgid ""
-"Files and folders will be copied into the existing directory, alongside its "
-"existing contents.\n"
-"You will be prompted again in case of a conflict with an existing file in "
-"the directory."
-msgstr ""
-"이미 존재하는 내용은 그대로 두고 파일이나 폴더를 존재하는 디렉터리에 복사합니"
-"다.\n"
-"디렉터리에 존재하는 파일과 충돌할 경우에는 물어봅니다."
-
-#: kio/renamedialog.cpp:160
-msgid "&Resume"
-msgstr "재시도(&R)"
-
-#: kio/renamedialog.cpp:169
-msgid ""
-"This action would overwrite '%1' with itself.\n"
-"Please enter a new file name:"
-msgstr ""
-"이 동작은 파일 '%1' 자기 자신을 겹쳐씁니다.\n"
-"새 파일 이름을 입력하십시오:"
-
-#: kio/renamedialog.cpp:173
-msgid "C&ontinue"
-msgstr "계속(&O)"
-
-#: kio/renamedialog.cpp:227
-msgid "This action will overwrite the destination."
-msgstr "이 동작은 대상을 덮어씁니다."
-
-#: kio/renamedialog.cpp:229
-msgid "Source"
-msgstr "원본"
-
-#: kio/renamedialog.cpp:230
-msgid "Destination"
-msgstr "대상"
-
-#: kio/renamedialog.cpp:236
-msgid "Warning, the destination is more recent."
-msgstr "경고, 대상이 더 새로운 파일입니다."
-
-#: kio/renamedialog.cpp:267
-msgid "An older item named '%1' already exists."
-msgstr "오래된 항목 '%1'이(가) 이미 존재합니다."
-
-#: kio/renamedialog.cpp:269
-msgid "A similar file named '%1' already exists."
-msgstr "이름과 비슷한 파일 '%1'이(가) 이미 존재합니다."
-
-#: kio/renamedialog.cpp:271
-msgid "A more recent item named '%1' already exists."
-msgstr "새로운 항목 '%1'이(가) 이미 존재합니다."
-
-#: kio/renamedialog.cpp:282
-msgid "Rename:"
-msgstr "이름 바꾸기:"
-
-#: kio/kdirmodel.cpp:968
-msgctxt "@title:column"
-msgid "Name"
-msgstr "이름"
-
-#: kio/kdirmodel.cpp:970
-msgctxt "@title:column"
-msgid "Size"
-msgstr "크기"
-
-#: kio/kdirmodel.cpp:972
-msgctxt "@title:column"
-msgid "Date"
-msgstr "날짜"
-
-#: kio/kdirmodel.cpp:974
-msgctxt "@title:column"
-msgid "Permissions"
-msgstr "권한"
-
-#: kio/kdirmodel.cpp:976
-msgctxt "@title:column"
-msgid "Owner"
-msgstr "소유자"
-
-#: kio/kdirmodel.cpp:978
-msgctxt "@title:column"
-msgid "Group"
-msgstr "그룹"
-
-#: kio/kdirmodel.cpp:980
-msgctxt "@title:column"
-msgid "Type"
-msgstr "종류"
-
-#: kio/fileundomanager.cpp:117
-msgid "Creating directory"
-msgstr "디렉터리 생성 중"
-
-#: kio/fileundomanager.cpp:120
-msgid "Moving"
-msgstr "이동 중"
-
-#: kio/fileundomanager.cpp:124
-msgid "Deleting"
-msgstr "삭제 중"
-
-#: kio/fileundomanager.cpp:286
-msgid "Und&o"
-msgstr "실행 취소(&O)"
-
-#: kio/fileundomanager.cpp:291
-msgid "Und&o: Copy"
-msgstr "실행 취소: 복사(&O)"
-
-#: kio/fileundomanager.cpp:293
-msgid "Und&o: Link"
-msgstr "실행 취소: 링크 걸기(&O)"
-
-#: kio/fileundomanager.cpp:295
-msgid "Und&o: Move"
-msgstr "실행 취소: 이동(&O)"
-
-#: kio/fileundomanager.cpp:297
-msgid "Und&o: Rename"
-msgstr "실행 취소: 이름 바꾸기(&O)"
-
-#: kio/fileundomanager.cpp:299
-msgid "Und&o: Trash"
-msgstr "실행 취소: 휴지통에 버리기(&O)"
-
-#: kio/fileundomanager.cpp:301
-msgid "Und&o: Create Folder"
-msgstr "실행 취소: 폴더 만들기(&O)"
-
-#: kio/fileundomanager.cpp:303
-msgid "Und&o: Create File"
-msgstr "실행 취소: 파일 만들기(&O)"
-
-#: kio/fileundomanager.cpp:777
-msgid ""
-"The file %1 was copied from %2, but since then it has apparently been "
-"modified at %3.\n"
-"Undoing the copy will delete the file, and all modifications will be lost.\n"
-"Are you sure you want to delete %4?"
-msgstr ""
-"파일 %1은(는) %2에서 복사되었으며, 그 이후 %3에 수정되었습니다.\n"
-"파일 복사를 실행 취소하면 파일을 지우며 모든 변경 사항이 삭제됩니다.\n"
-"%4을(를) 삭제하시겠습니까?"
-
-#: kio/fileundomanager.cpp:780
-msgid "Undo File Copy Confirmation"
-msgstr "파일 복사 실행 취소 확인"
-
-#: kio/kfileitem.cpp:1145
-msgid "(Symbolic Link to %1)"
-msgstr "(%1(으)로 향한 심볼릭 링크)|/|($[으 %1]로 향한 심볼릭 링크)"
-
-#: kio/kfileitem.cpp:1147
-msgid "(%1, Link to %2)"
-msgstr "(%1, %2(으)로 향한 링크)|/|(%1, $[으 %2]로 향한 링크)"
-
-#: kio/kfileitem.cpp:1151
-msgid " (Points to %1)"
-msgstr " (%1을(를) 가리킴)"
-
-#: kio/copyjob.cpp:1401 kio/copyjob.cpp:1984
-msgid "Already Exists as Folder"
-msgstr "이미 폴더로 존재함"
+#: kio/paste.cpp:376
+msgid "&Paste Clipboard Contents"
+msgstr "클립보드 내용 붙여넣기(&P)"
 
 #: kio/pastedialog.cpp:55
 msgid "Data format:"
 msgstr "데이터 형식:"
 
-#: kio/kfileitemdelegate.cpp:236
-msgctxt "Items in a folder"
-msgid "1 item"
-msgid_plural "%1 items"
-msgstr[0] "%1개 항목"
-
-#: kio/kfileitemdelegate.cpp:292 kio/kfileitemdelegate.cpp:296
-msgctxt "@info mimetype"
-msgid "Unknown"
-msgstr "알 수 없음"
-
-#: kio/netaccess.cpp:104
-msgid "File '%1' is not readable"
-msgstr "파일 '%1'을(를) 읽을 수 없습니다|/|파일 $[을를 %1 \"] 읽을 수 없습니다"
-
-#: kio/netaccess.cpp:421
-msgid "ERROR: Unknown protocol '%1'"
-msgstr "오류: 알 수 없는 프로토콜 '%1' "
-
-#: kio/passworddialog.cpp:57
-msgid "Authorization Dialog"
-msgstr "인증 대화 상자"
-
-#: bookmarks/kbookmarkmenu.cc:267
-msgid "Add Bookmark Here"
-msgstr "여기를 책갈피에 추가하기"
-
-#: bookmarks/kbookmarkmenu.cc:272
-msgid "Open Folder in Bookmark Editor"
-msgstr "책갈피 편집기에서 폴더 열기"
-
-#: bookmarks/kbookmarkmenu.cc:275
-msgid "Delete Folder"
-msgstr "폴더 지우기"
-
-#: bookmarks/kbookmarkmenu.cc:281 ../kfile/kdiroperator.cpp:1958
-msgid "Properties"
-msgstr "속성"
-
-#: bookmarks/kbookmarkmenu.cc:286
-msgid "Copy Link Address"
-msgstr "링크 주소 복사"
-
-#: bookmarks/kbookmarkmenu.cc:289
-msgid "Delete Bookmark"
-msgstr "책갈피 지우기"
-
-#: bookmarks/kbookmarkmenu.cc:295 bookmarks/kbookmarkmenu.cc:454
-msgid "Open Folder in Tabs"
-msgstr "폴더를 탭으로 열기"
-
-#: bookmarks/kbookmarkmenu.cc:320
-msgid "Cannot add bookmark with empty URL."
-msgstr "빈 URL의 책갈피를 추가할 수 없습니다."
-
-#: bookmarks/kbookmarkmenu.cc:352
-msgid ""
-"Are you sure you wish to remove the bookmark folder\n"
-"\"%1\"?"
-msgstr "책갈피 폴더 \"%1\"을(를) 삭제하시겠습니까?"
-
-#: bookmarks/kbookmarkmenu.cc:353
-msgid ""
-"Are you sure you wish to remove the bookmark\n"
-"\"%1\"?"
-msgstr "책갈피 \"%1\"을(를) 삭제하시겠습니까?"
-
-#: bookmarks/kbookmarkmenu.cc:354
-msgid "Bookmark Folder Deletion"
-msgstr "책갈피 폴더 삭제"
-
-#: bookmarks/kbookmarkmenu.cc:355
-msgid "Bookmark Deletion"
-msgstr "책갈피 삭제"
-
-#: bookmarks/kbookmarkmenu.cc:458
-msgid "Open all bookmarks in this folder as a new tab."
-msgstr "이 폴더의 모든 책갈피를 새 탭으로 엽니다."
-
-#: bookmarks/kbookmarkmenu.cc:471
-msgid "Bookmark Tabs as Folder..."
-msgstr "탭을 책갈피에 추가하기..."
-
-#: bookmarks/kbookmarkmenu.cc:475
-msgid "Add a folder of bookmarks for all open tabs."
-msgstr "모든 열린 탭의 책갈피를 새 폴더로 추가합니다."
-
-#: bookmarks/kbookmarkmenu.cc:508
-msgid "Edit your bookmark collection in a separate window"
-msgstr "새 창에서 책갈피 모음집 편집하기"
-
-#: bookmarks/kbookmarkmenu.cc:517
-msgid "New Bookmark Folder..."
-msgstr "새 책갈피 폴더..."
-
-#: bookmarks/kbookmarkmenu.cc:519
-msgid "Create a new bookmark folder in this menu"
-msgstr "이 메뉴에 새 책갈피 폴더 만들기"
-
-#: bookmarks/kbookmarkimporter_ns.cc:122 bookmarks/kbookmarkimporter_ns.cc:126
-msgid "*.html|HTML Files (*.html)"
-msgstr "*.html|HTML 파일 (*.html)"
-
-#: bookmarks/kbookmarkimporter_ns.cc:167
-msgid "<!-- This file was generated by Konqueror -->"
-msgstr "<!-- 이 파일은 Konqueror에서 만들었습니다 -->"
-
-#: bookmarks/kbookmarkimporter_ns.cc:170 bookmarks/kbookmarkimporter_ns.cc:171
-#: ../kfile/kfilewidget.cpp:2523
-msgid "Bookmarks"
-msgstr "책갈피"
-
-#: bookmarks/kbookmarkdialog.cc:41
-msgctxt "@action:button"
-msgid "Update"
-msgstr "업데이트"
-
-#: bookmarks/kbookmarkdialog.cc:42
-msgctxt "@title:window"
-msgid "Bookmark Properties"
-msgstr "책갈피 속성"
-
-#: bookmarks/kbookmarkdialog.cc:70 bookmarks/kbookmarkdialog.cc:102
-msgctxt "@action:button"
-msgid "Add"
-msgstr "추가"
-
-#: bookmarks/kbookmarkdialog.cc:71
-msgctxt "@title:window"
-msgid "Add Bookmark"
-msgstr "책갈피 추가하기"
-
-#: bookmarks/kbookmarkdialog.cc:72 bookmarks/kbookmarkdialog.cc:104
-#: bookmarks/kbookmarkdialog.cc:131
-msgctxt "@action:button"
-msgid "&New Folder..."
-msgstr "새 폴더(&N)..."
-
-#: bookmarks/kbookmarkdialog.cc:103
-msgctxt "@title:window"
-msgid "Add Bookmarks"
-msgstr "책갈피 추가하기"
-
-#: bookmarks/kbookmarkdialog.cc:132 ../kfile/kdirselectdialog.cpp:266
-msgctxt "@title:window"
-msgid "Select Folder"
-msgstr "폴더 선택"
-
-#: bookmarks/kbookmarkdialog.cc:159 ../kfile/knewfilemenu.cpp:1036
-#: ../kfile/kdirselectdialog.cpp:135
-msgctxt "@title:window"
-msgid "New Folder"
-msgstr "새 폴더"
-
-#: bookmarks/kbookmarkdialog.cc:292
-msgctxt "@label:textbox"
-msgid "Name:"
-msgstr "이름:"
-
-#: bookmarks/kbookmarkdialog.cc:297
-msgctxt "@label:textbox"
-msgid "Location:"
-msgstr "위치:"
-
-#: bookmarks/kbookmarkdialog.cc:302
-msgctxt "@label:textbox"
-msgid "Comment:"
-msgstr "설명:"
-
-#: bookmarks/kbookmarkdialog.cc:331
-msgctxt "@title:window"
-msgid "Create New Bookmark Folder"
-msgstr "새 책갈피 폴더 만들기"
-
-#: bookmarks/kbookmarkdialog.cc:332
-msgctxt "@title:window"
-msgid "Create New Bookmark Folder in %1"
-msgstr "%1에 새 책갈피 폴더 만들기"
-
-#: bookmarks/kbookmarkdialog.cc:335
-msgctxt "@label:textbox"
-msgid "New folder:"
-msgstr "새 폴더:"
-
-#: bookmarks/kbookmarkdialog.cc:374
-msgctxt "name of the container of all browser bookmarks"
-msgid "Bookmarks"
-msgstr "책갈피"
-
-#: bookmarks/kbookmarkmanager.cc:443
-msgid ""
-"Unable to save bookmarks in %1. Reported error was: %2. This error message "
-"will only be shown once. The cause of the error needs to be fixed as quickly "
-"as possible, which is most likely a full hard drive."
-msgstr ""
-"책갈피를 %1에 저장할 수 없습니다. 보고된 오류는 다음과 같습니다: %2. 이 오류 "
-"메시지는 한 번만 표시됩니다. 이 원인의 오류는 가능한 한 빨리 수정되어야 하"
-"며, 대개 하드 디스크 드라이브 전체의 오류입니다."
-
-#: bookmarks/kbookmarkimporter_opera.cc:121
-#: bookmarks/kbookmarkimporter_opera.cc:125
-msgid "*.adr|Opera Bookmark Files (*.adr)"
-msgstr "*.adr|Opera 책갈피 파일 (*.adr)"
-
-#: bookmarks/konqbookmarkmenu.cc:61 bookmarks/konqbookmarkmenu.cc:78
-msgid "Hide in toolbar"
-msgstr "도구 모음에서 숨기기"
-
-#: bookmarks/konqbookmarkmenu.cc:61 bookmarks/konqbookmarkmenu.cc:78
-msgid "Show in toolbar"
-msgstr "도구 모음에서 보기"
-
-#: bookmarks/konqbookmarkmenu.cc:71
-msgid "Open in New Window"
-msgstr "새 창으로 열기"
-
-#: bookmarks/konqbookmarkmenu.cc:72
-msgid "Open in New Tab"
-msgstr "새 탭으로 열기"
-
-#: bookmarks/kbookmark.cc:308
-msgid "--- separator ---"
-msgstr "--- 구분자 ---"
-
-#: kfile/kopenwithdialog.cpp:269
-msgid "Known Applications"
-msgstr "알려진 프로그램"
-
-#: kfile/kopenwithdialog.cpp:483
-msgid "Open With"
-msgstr "다음으로 열기"
-
-#: kfile/kopenwithdialog.cpp:488
-msgid ""
-"<qt>Select the program that should be used to open <b>%1</b>. If the program "
-"is not listed, enter the name or click the browse button.</qt>"
-msgstr ""
-"<qt><b>%1</b>을(를) 열기 위한 프로그램을 선택하십시오. 프로그램이 목록에 없으"
-"면 이름을 입력하거나 찾아보기 단추를 누르십시오.</qt>|/|<qt><b>$[을를 %1 "
-"\"]</b> 열기 위한 프로그램을 선택하십시오. 프로그램이 목록에 없으면 이름을 입"
-"력하거나 찾아보기 단추를 누르십시오.</qt>"
-
-#: kfile/kopenwithdialog.cpp:494
-msgid "Choose the name of the program with which to open the selected files."
-msgstr "선택한 파일을 열기 위한 프로그램의 이름을 선택하십시오."
-
-#: kfile/kopenwithdialog.cpp:521
-msgid "Choose Application for %1"
-msgstr "%1을 위한 프로그램 선택"
-
-#: kfile/kopenwithdialog.cpp:522
-msgid ""
-"<qt>Select the program for the file type: <b>%1</b>. If the program is not "
-"listed, enter the name or click the browse button.</qt>"
-msgstr ""
-"<qt>파일 형식 <b>%1</b>을(를) 위한 프로그램을 선택하십시오. 프로그램이 목록"
-"에 없다면 이름을 입력하거나 찾아보기 단추를 누르십시오.</qt>"
-
-#: kfile/kopenwithdialog.cpp:537
-msgid "Choose Application"
-msgstr "프로그램 선택"
-
-#: kfile/kopenwithdialog.cpp:538
-msgid ""
-"<qt>Select a program. If the program is not listed, enter the name or click "
-"the browse button.</qt>"
-msgstr ""
-"<qt>프로그램을 선택하십시오. 프로그램이 목록에 없다면 이름을 입력하거나 찾아"
-"보기 단추를 누르십시오.</qt>"
-
-#: kfile/kopenwithdialog.cpp:602
-msgid ""
-"Following the command, you can have several place holders which will be "
-"replaced with the actual values when the actual program is run:\n"
-"%f - a single file name\n"
-"%F - a list of files; use for applications that can open several local files "
-"at once\n"
-"%u - a single URL\n"
-"%U - a list of URLs\n"
-"%d - the directory of the file to open\n"
-"%D - a list of directories\n"
-"%i - the icon\n"
-"%m - the mini-icon\n"
-"%c - the comment"
-msgstr ""
-"명령 다음 자리 비움자를 지정하면 실제 프로그램이 실행될 때 알맞은 값으로 대"
-"체\n"
-"됩니다.\n"
-"%f - 단일 파일 이름\n"
-"%F - 파일 목록. 여러 파일을 동시에 열 수 있는 프로그램에 사용하십시오\n"
-"%u - 단일 URL\n"
-"%U - URL 목록\n"
-"%d - 파일이 있는 디렉터리\n"
-"%D - 디렉터리 목록\n"
-"%i - 아이콘\n"
-"%m - 작은 아이콘\n"
-"%c - 설명"
-
-#: kfile/kopenwithdialog.cpp:637
-msgid "Run in &terminal"
-msgstr "터미널에서 실행하기(&T)"
-
-#: kfile/kopenwithdialog.cpp:654
-msgid "&Do not close when command exits"
-msgstr "명령이 존재하면 닫지 않기(&D)"
-
-#: kfile/kopenwithdialog.cpp:671
-msgid "&Remember application association for this type of file"
-msgstr "이 파일 형식과 연결된 프로그램 기억하기(&R)"
-
-#: kfile/kopenwithdialog.cpp:816
-msgid ""
-"Could not extract executable name from '%1', please type a valid program "
-"name."
-msgstr ""
-"'%1'에서 실행 파일의 이름을 추출할 수 없습니다. 올바른 프로그램 이름을 입력하"
-"십시오."
-
-#: kfile/kopenwithdialog.cpp:866
-msgid "'%1' not found, please type a valid program name."
-msgstr "'%1을(를) 찾을 수 없습니다. 올바른 프로그램 이름을 입력하십시오."
-
-#: kfile/kurlrequester.cpp:260
-msgid "Open file dialog"
-msgstr "파일 열기 대화상자"
-
-#: kfile/kicondialog.cpp:329 kfile/kicondialog.cpp:341
-msgid "Select Icon"
-msgstr "아이콘 선택"
-
-#: kfile/kicondialog.cpp:362
-msgid "Icon Source"
-msgstr "아이콘 원본"
-
-#: kfile/kicondialog.cpp:371
-msgid "S&ystem icons:"
-msgstr "시스템 아이콘(&Y):"
-
-#: kfile/kicondialog.cpp:378
-msgid "O&ther icons:"
-msgstr "다른 아이콘(&T):"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:121
-#. i18n: ectx: property (text), widget (QPushButton, browseButton)
-#: kfile/kicondialog.cpp:381 rc.cpp:192
-msgid "&Browse..."
-msgstr "찾아보기(&B)..."
-
-#: kfile/kicondialog.cpp:392
-msgid "&Search:"
-msgstr "찾기(&S):"
-
-#: kfile/kicondialog.cpp:399
-msgid "Search interactively for icon names (e.g. folder)."
-msgstr "아이콘 이름에서 찾습니다. (예: 폴더)"
-
-#: kfile/kicondialog.cpp:430
-msgid "Actions"
-msgstr "동작"
-
-#: kfile/kicondialog.cpp:431
-msgid "Animations"
-msgstr "애니메이션"
-
-#: kfile/kicondialog.cpp:432
-msgid "Applications"
-msgstr "프로그램"
-
-#: kfile/kicondialog.cpp:433
-msgid "Categories"
-msgstr "분류"
-
-#: kfile/kicondialog.cpp:434
-msgid "Devices"
-msgstr "장치"
-
-#: kfile/kicondialog.cpp:435
-msgid "Emblems"
-msgstr "엠블렘"
-
-#: kfile/kicondialog.cpp:436
-msgid "Emotes"
-msgstr "이모티콘"
-
-#: kfile/kicondialog.cpp:437
-msgid "Filesystems"
-msgstr "파일 시스템"
-
-#: kfile/kicondialog.cpp:438
-msgid "International"
-msgstr "국제화"
-
-#: kfile/kicondialog.cpp:439
-msgid "Mimetypes"
-msgstr "MIME 형식"
-
-#: kfile/kicondialog.cpp:440
-msgid "Places"
-msgstr "위치"
-
-#: kfile/kicondialog.cpp:441
-msgid "Status"
-msgstr "상태"
-
-#: kfile/kicondialog.cpp:671
-msgid "*.png *.xpm *.svg *.svgz|Icon Files (*.png *.xpm *.svg *.svgz)"
-msgstr "*.png *.xpm *.svg *.svgz|아이콘 파일 (*.png *.xpm *.svg *.svgz)"
-
-#: kfile/kicondialog.cpp:673 kfile/kfiledialog.cpp:476
-#: kfile/kfiledialog.cpp:486 kfile/kfiledialog.cpp:507
-#: kfile/kfiledialog.cpp:531 kfile/kfiledialog.cpp:541
-#: kfile/kfiledialog.cpp:567 kfile/kfiledialog.cpp:599
-#: kfile/kfiledialog.cpp:654 kfile/kencodingfiledialog.cpp:106
-#: kfile/kencodingfiledialog.cpp:124 kfile/kencodingfiledialog.cpp:139
-#: kfile/kencodingfiledialog.cpp:157 kfile/kurlrequesterdialog.cpp:128
-msgid "Open"
-msgstr "열기"
-
-#: kfile/kfilesharedialog.cpp:53
-msgid "&Share"
-msgstr "공유(&S)"
-
-#: kfile/kfilesharedialog.cpp:127
-msgid "Only folders in your home folder can be shared."
-msgstr "홈 폴더 아래의 폴더만 공유할 수 있습니다."
-
-#: kfile/kfilesharedialog.cpp:134
-msgid "Not shared"
-msgstr "공유하지 않음"
-
-#: kfile/kfilesharedialog.cpp:139
-msgid "Shared"
-msgstr "공유함"
-
-#: kfile/kfilesharedialog.cpp:151
-msgid ""
-"Sharing this folder makes it available under Linux/UNIX (NFS) and Windows "
-"(Samba)."
-msgstr ""
-"이 폴더를 공유하면 리눅스/유닉스 (NFS) 또는 Windows (Samba)에서 사용할 수 있"
-"습니다."
-
-#: kfile/kfilesharedialog.cpp:158
-msgid "You can also reconfigure file sharing authorization."
-msgstr "파일 공유 권한을 다시 설정할 수 있습니다."
-
-#: kfile/kfilesharedialog.cpp:162 kfile/kfilesharedialog.cpp:186
-msgid "Configure File Sharing..."
-msgstr "파일 공유 설정..."
-
-#: kfile/kfilesharedialog.cpp:171
-msgid ""
-"Error running 'filesharelist'. Check if installed and in $PATH or /usr/sbin."
-msgstr ""
-"'filesharelist'를 실행하는 중 오류가 발생했습니다. $PATH나 /usr/sbin에 설치되"
-"어 있는지 확인하십시오."
-
-#: kfile/kfilesharedialog.cpp:178
-msgid "You need to be authorized to share folders."
-msgstr "폴더를 공유하려면 권한이 필요합니다."
-
-#: kfile/kfilesharedialog.cpp:181
-msgid "File sharing is disabled."
-msgstr "파일 공유가 꺼져 있습니다."
-
-#: kfile/kfilesharedialog.cpp:248
-msgid "Sharing folder '%1' failed."
-msgstr "폴더 '%1'을(를) 공유하는 데 실패했습니다."
-
-#: kfile/kfilesharedialog.cpp:249
-msgid ""
-"An error occurred while trying to share folder '%1'. Make sure that the Perl "
-"script 'fileshareset' is set suid root."
-msgstr ""
-"폴더 '%1'을(를) 공유하는 데 실패했습니다. 'fileshareset' 펄 스크립트가 "
-"SetUID root로 설정되어 있는지 확인하십시오."
-
-#: kfile/kfilesharedialog.cpp:254
-msgid "Unsharing folder '%1' failed."
-msgstr "폴더 '%1'의 공유를 해제하는 데 실패했습니다."
-
-#: kfile/kfilesharedialog.cpp:255
-msgid ""
-"An error occurred while trying to unshare folder '%1'. Make sure that the "
-"Perl script 'fileshareset' is set suid root."
-msgstr ""
-"폴더 '%1'의 공유를 해제하는 데 실패했습니다. 'fileshareset' 펄 스크립트가 "
-"SetUID root로 설정되어 있는지 확인하십시오."
-
-#: kfile/kpreviewprops.cpp:50
-msgid "P&review"
-msgstr "미리 보기(&R)"
-
-#: kfile/kmetaprops.cpp:57
-msgctxt "@title:window"
-msgid "Configure Shown Data"
-msgstr "보이는 데이터 설정하기"
-
-#: kfile/kmetaprops.cpp:62
-msgctxt "@label::textbox"
-msgid "Select which data should be shown:"
-msgstr "표시할 데이터를 선택하십시오:"
-
-#: kfile/kmetaprops.cpp:120
-msgctxt "@action:button"
-msgid "Configure..."
-msgstr "설정..."
-
-#: kfile/kmetaprops.cpp:130
-msgctxt "@title:tab"
+#: kio/skipdialog.cpp:37
 msgid "Information"
 msgstr "정보"
 
-#: kfile/kfiledialog.cpp:126
-msgid "*|All files"
-msgstr "*|모든 파일"
+#: kio/skipdialog.cpp:44
+msgid "Skip"
+msgstr "건너뛰기"
 
-#: kfile/kfiledialog.cpp:353 ../kfile/kfilefiltercombo.cpp:185
-msgid "All Supported Files"
-msgstr "모든 지원하는 파일"
-
-#: kfile/kfiledialog.cpp:734 kfile/kfiledialog.cpp:753
-#: kfile/kfiledialog.cpp:790 kfile/kfiledialog.cpp:832
-#: kfile/kencodingfiledialog.cpp:177 kfile/kencodingfiledialog.cpp:198
-msgid "Save As"
-msgstr "다른 이름으로 저장"
+#: kio/skipdialog.cpp:47
+msgid "AutoSkip"
+msgstr "자동으로 건너뛰기"
 
 #: kfile/kencodingfiledialog.cpp:49
 msgid "Encoding:"
 msgstr "인코딩:"
 
+#: kfile/kencodingfiledialog.cpp:106 kfile/kencodingfiledialog.cpp:124
+#: kfile/kencodingfiledialog.cpp:139 kfile/kencodingfiledialog.cpp:157
+#: kfile/kurlrequesterdialog.cpp:128 kfile/kicondialog.cpp:673
+#: kfile/kfiledialog.cpp:476 kfile/kfiledialog.cpp:486
+#: kfile/kfiledialog.cpp:507 kfile/kfiledialog.cpp:531
+#: kfile/kfiledialog.cpp:541 kfile/kfiledialog.cpp:567
+#: kfile/kfiledialog.cpp:599 kfile/kfiledialog.cpp:654
+msgid "Open"
+msgstr "열기"
+
+#: kfile/kencodingfiledialog.cpp:177 kfile/kencodingfiledialog.cpp:198
+#: kfile/kfiledialog.cpp:734 kfile/kfiledialog.cpp:753
+#: kfile/kfiledialog.cpp:790 kfile/kfiledialog.cpp:832
+msgid "Save As"
+msgstr "다른 이름으로 저장"
+
+#: kfile/kfilemetainfowidget.cpp:151
+msgid "<Error>"
+msgstr "<오류>"
+
+#: kfile/kfilemetadatareaderprocess.cpp:128
+msgid "KFileMetaDataReader"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:130
+msgid "KFileMetaDataReader can be used to read metadata from a file"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:132
+msgid "(C) 2011, Peter Penz"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:133
+msgid "Peter Penz"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:133
+msgid "Current maintainer"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:139
+msgid "Only the meta data that is part of the file is read"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:140
+msgid "List of URLs where the meta-data should be read from"
+msgstr ""
+
 #: kfile/kurlrequesterdialog.cpp:58 kfile/kpropertiesdialog.cpp:946
 msgid "Location:"
 msgstr "위치:"
-
-#: kfile/kfilemetainfowidget.cpp:163
-msgid "<Error>"
-msgstr "<오류>"
 
 #: kfile/kacleditwidget.cpp:61 kfile/kacleditwidget.cpp:454
 msgid "Owner"
@@ -3626,6 +3941,187 @@ msgstr "x"
 #: kfile/kacleditwidget.cpp:630
 msgid "Effective"
 msgstr "효과적"
+
+#: kfile/kicondialog.cpp:329 kfile/kicondialog.cpp:341
+msgid "Select Icon"
+msgstr "아이콘 선택"
+
+#: kfile/kicondialog.cpp:362
+msgid "Icon Source"
+msgstr "아이콘 원본"
+
+#: kfile/kicondialog.cpp:371
+msgid "S&ystem icons:"
+msgstr "시스템 아이콘(&Y):"
+
+#: kfile/kicondialog.cpp:378
+msgid "O&ther icons:"
+msgstr "다른 아이콘(&T):"
+
+#: kfile/kicondialog.cpp:392
+msgid "&Search:"
+msgstr "찾기(&S):"
+
+#: kfile/kicondialog.cpp:399
+msgid "Search interactively for icon names (e.g. folder)."
+msgstr "아이콘 이름에서 찾습니다. (예: 폴더)"
+
+#: kfile/kicondialog.cpp:430
+msgid "Actions"
+msgstr "동작"
+
+#: kfile/kicondialog.cpp:431
+msgid "Animations"
+msgstr "애니메이션"
+
+#: kfile/kicondialog.cpp:432
+msgid "Applications"
+msgstr "프로그램"
+
+#: kfile/kicondialog.cpp:433
+msgid "Categories"
+msgstr "분류"
+
+#: kfile/kicondialog.cpp:434
+msgid "Devices"
+msgstr "장치"
+
+#: kfile/kicondialog.cpp:435
+msgid "Emblems"
+msgstr "엠블렘"
+
+#: kfile/kicondialog.cpp:436
+msgid "Emotes"
+msgstr "이모티콘"
+
+#: kfile/kicondialog.cpp:437
+msgid "Filesystems"
+msgstr "파일 시스템"
+
+#: kfile/kicondialog.cpp:438
+msgid "International"
+msgstr "국제화"
+
+#: kfile/kicondialog.cpp:439
+msgid "Mimetypes"
+msgstr "MIME 형식"
+
+#: kfile/kicondialog.cpp:440
+msgid "Places"
+msgstr "위치"
+
+#: kfile/kicondialog.cpp:441
+msgid "Status"
+msgstr "상태"
+
+#: kfile/kicondialog.cpp:671
+msgid "*.png *.xpm *.svg *.svgz|Icon Files (*.png *.xpm *.svg *.svgz)"
+msgstr "*.png *.xpm *.svg *.svgz|아이콘 파일 (*.png *.xpm *.svg *.svgz)"
+
+#: kfile/kmetaprops.cpp:57
+msgctxt "@title:window"
+msgid "Configure Shown Data"
+msgstr "보이는 데이터 설정하기"
+
+#: kfile/kmetaprops.cpp:62
+msgctxt "@label::textbox"
+msgid "Select which data should be shown:"
+msgstr "표시할 데이터를 선택하십시오:"
+
+#: kfile/kmetaprops.cpp:120
+msgctxt "@action:button"
+msgid "Configure..."
+msgstr "설정..."
+
+#: kfile/kmetaprops.cpp:130
+msgctxt "@title:tab"
+msgid "Information"
+msgstr "정보"
+
+#: kfile/kfilesharedialog.cpp:53
+msgid "&Share"
+msgstr "공유(&S)"
+
+#: kfile/kfilesharedialog.cpp:127
+msgid "Only folders in your home folder can be shared."
+msgstr "홈 폴더 아래의 폴더만 공유할 수 있습니다."
+
+#: kfile/kfilesharedialog.cpp:134
+msgid "Not shared"
+msgstr "공유하지 않음"
+
+#: kfile/kfilesharedialog.cpp:139
+msgid "Shared"
+msgstr "공유함"
+
+#: kfile/kfilesharedialog.cpp:151
+msgid ""
+"Sharing this folder makes it available under Linux/UNIX (NFS) and Windows "
+"(Samba)."
+msgstr ""
+"이 폴더를 공유하면 리눅스/유닉스 (NFS) 또는 Windows (Samba)에서 사용할 수 있"
+"습니다."
+
+#: kfile/kfilesharedialog.cpp:158
+msgid "You can also reconfigure file sharing authorization."
+msgstr "파일 공유 권한을 다시 설정할 수 있습니다."
+
+#: kfile/kfilesharedialog.cpp:162 kfile/kfilesharedialog.cpp:186
+msgid "Configure File Sharing..."
+msgstr "파일 공유 설정..."
+
+#: kfile/kfilesharedialog.cpp:171
+msgid ""
+"Error running 'filesharelist'. Check if installed and in $PATH or /usr/sbin."
+msgstr ""
+"'filesharelist'를 실행하는 중 오류가 발생했습니다. $PATH나 /usr/sbin에 설치되"
+"어 있는지 확인하십시오."
+
+#: kfile/kfilesharedialog.cpp:178
+msgid "You need to be authorized to share folders."
+msgstr "폴더를 공유하려면 권한이 필요합니다."
+
+#: kfile/kfilesharedialog.cpp:181
+msgid "File sharing is disabled."
+msgstr "파일 공유가 꺼져 있습니다."
+
+#: kfile/kfilesharedialog.cpp:248
+msgid "Sharing folder '%1' failed."
+msgstr "폴더 '%1'을(를) 공유하는 데 실패했습니다."
+
+#: kfile/kfilesharedialog.cpp:249
+msgid ""
+"An error occurred while trying to share folder '%1'. Make sure that the Perl "
+"script 'fileshareset' is set suid root."
+msgstr ""
+"폴더 '%1'을(를) 공유하는 데 실패했습니다. 'fileshareset' 펄 스크립트가 "
+"SetUID root로 설정되어 있는지 확인하십시오."
+
+#: kfile/kfilesharedialog.cpp:254
+msgid "Unsharing folder '%1' failed."
+msgstr "폴더 '%1'의 공유를 해제하는 데 실패했습니다."
+
+#: kfile/kfilesharedialog.cpp:255
+msgid ""
+"An error occurred while trying to unshare folder '%1'. Make sure that the "
+"Perl script 'fileshareset' is set suid root."
+msgstr ""
+"폴더 '%1'의 공유를 해제하는 데 실패했습니다. 'fileshareset' 펄 스크립트가 "
+"SetUID root로 설정되어 있는지 확인하십시오."
+
+#: kfile/kfiledialog.cpp:126
+msgid "*|All files"
+msgstr "*|모든 파일"
+
+#: kfile/kfiledialog.cpp:353 ../kfile/kfilefiltercombo.cpp:185
+msgid "All Supported Files"
+msgstr "모든 지원하는 파일"
+
+#: kfile/kfilemetadataprovider.cpp:175
+msgctxt "@item:intable"
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] ""
 
 #: kfile/kpropertiesdialog.cpp:203 kfile/kpropertiesdialog.cpp:218
 #: kfile/kpropertiesdialog.cpp:230 kfile/kpropertiesdialog.cpp:245
@@ -4095,335 +4591,54 @@ msgstr "로컬 파일 시스템의 실행 파일만 지원합니다."
 msgid "Advanced Options for %1"
 msgstr "%1의 고급 옵션"
 
-#: kfile/kdevicelistmodel.cpp:116
-msgid "Device name"
-msgstr "장치 이름"
+#: kfile/kopenwithdialog.cpp:269
+msgid "Known Applications"
+msgstr "알려진 프로그램"
 
-#. i18n: file: kssl/certificateparty.ui:28
-#. i18n: ectx: property (text), widget (QLabel, commonNameTag)
-#: rc.cpp:3
-msgid "Common name:"
-msgstr "공용 이름:"
+#: kfile/kopenwithdialog.cpp:483
+msgid "Open With"
+msgstr "다음으로 열기"
 
-#. i18n: file: kssl/certificateparty.ui:38
-#. i18n: ectx: property (text), widget (QLabel, commonName)
-#: rc.cpp:6
-msgid "Acme Co."
-msgstr "(주) 거시기"
-
-#. i18n: file: kssl/certificateparty.ui:48
-#. i18n: ectx: property (text), widget (QLabel, organizationTag)
-#: rc.cpp:9
-msgid "Organization:"
-msgstr "조직:"
-
-#. i18n: file: kssl/certificateparty.ui:58
-#. i18n: ectx: property (text), widget (QLabel, organization)
-#: rc.cpp:12
-msgid "Acme Sundry Products Company"
-msgstr "주식회사 거시기"
-
-#. i18n: file: kssl/certificateparty.ui:68
-#. i18n: ectx: property (text), widget (QLabel, organizationalUnitTag)
-#: rc.cpp:15
-msgid "Organizational unit:"
-msgstr "조직 단위:"
-
-#. i18n: file: kssl/certificateparty.ui:78
-#. i18n: ectx: property (text), widget (QLabel, organizationalUnit)
-#: rc.cpp:18
-msgid "Fraud Department"
-msgstr "가짜 부서"
-
-#. i18n: file: kssl/certificateparty.ui:88
-#. i18n: ectx: property (text), widget (QLabel, countryTag)
-#: rc.cpp:21
-msgid "Country:"
-msgstr "나라:"
-
-#. i18n: file: kssl/certificateparty.ui:98
-#. i18n: ectx: property (text), widget (QLabel, country)
-#: rc.cpp:24
-msgid "Canada"
-msgstr "대한민국"
-
-#. i18n: file: kssl/certificateparty.ui:108
-#. i18n: ectx: property (text), widget (QLabel, stateTag)
-#: rc.cpp:27
-msgid "State:"
-msgstr "주(도):"
-
-#. i18n: file: kssl/certificateparty.ui:118
-#. i18n: ectx: property (text), widget (QLabel, state)
-#: rc.cpp:30
-msgid "Quebec"
-msgstr "경상남도"
-
-#. i18n: file: kssl/certificateparty.ui:128
-#. i18n: ectx: property (text), widget (QLabel, cityTag)
-#: rc.cpp:33
-msgid "City:"
-msgstr "도시:"
-
-#. i18n: file: kssl/certificateparty.ui:138
-#. i18n: ectx: property (text), widget (QLabel, city)
-#: rc.cpp:36
-msgid "Lakeridge Meadows"
-msgstr "마산시"
-
-#. i18n: file: kssl/sslinfo.ui:17
-#. i18n: ectx: property (text), widget (QLabel, encryptionIndicator)
-#: rc.cpp:39
-msgid "[padlock]"
-msgstr "[padlock]"
-
-#. i18n: file: kssl/sslinfo.ui:34
-#. i18n: ectx: property (text), widget (QLabel, addressTag)
-#: rc.cpp:42
-msgctxt "Web page address"
-msgid "Address:"
-msgstr "주소:"
-
-#. i18n: file: kssl/sslinfo.ui:54
-#. i18n: ectx: property (text), widget (QLabel, ipTag)
-#: rc.cpp:45
-msgid "IP address:"
-msgstr "IP 주소:"
-
-#. i18n: file: kssl/sslinfo.ui:74
-#. i18n: ectx: property (text), widget (QLabel, encryptionTag)
-#: rc.cpp:48
-msgid "Encryption:"
-msgstr "암호화:"
-
-#. i18n: file: kssl/sslinfo.ui:94
-#. i18n: ectx: property (text), widget (QLabel, detailsTag)
-#: rc.cpp:51
-msgid "Details:"
-msgstr "자세한 정보:"
-
-#. i18n: file: kssl/sslinfo.ui:114
-#. i18n: ectx: property (text), widget (QLabel, sslVersionTag)
-#: rc.cpp:54
-msgid "SSL version:"
-msgstr "SSL 버전:"
-
-#. i18n: file: kssl/sslinfo.ui:134
-#. i18n: ectx: property (text), widget (QLabel, certSelectorTag)
-#: rc.cpp:57
-msgid "Certificate chain:"
-msgstr "인증서 체인:"
-
-#. i18n: file: kssl/sslinfo.ui:163
-#. i18n: ectx: property (text), widget (QLabel, trustedTag)
-#: rc.cpp:60
-msgid "Trusted:"
-msgstr "신뢰함:"
-
-#. i18n: file: kssl/sslinfo.ui:183
-#. i18n: ectx: property (text), widget (QLabel, validityPeriodTag)
-#: rc.cpp:63
-msgid "Validity period:"
-msgstr "유효 기간:"
-
-#. i18n: file: kssl/sslinfo.ui:203
-#. i18n: ectx: property (text), widget (QLabel, serialTag)
-#: rc.cpp:66
-msgid "Serial number:"
-msgstr "시리얼 번호:"
-
-#. i18n: file: kssl/sslinfo.ui:223
-#. i18n: ectx: property (text), widget (QLabel, digestTag)
-#: rc.cpp:69
-msgid "MD5 digest:"
-msgstr "MD5 다이제스트:"
-
-#. i18n: file: kssl/sslinfo.ui:243
-#. i18n: ectx: property (text), widget (QLabel, sha1DigestTag)
-#: rc.cpp:72
-msgid "SHA1 digest:"
-msgstr "SHA1 다이제스트:"
-
-#. i18n: file: kssl/keygenwizard2.ui:35
-#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
-#: rc.cpp:75
+#: kfile/kopenwithdialog.cpp:488
 msgid ""
-"You must now provide a password for the certificate request. Please choose a "
-"very secure password as this will be used to encrypt your private key."
+"<qt>Select the program that should be used to open <b>%1</b>. If the program "
+"is not listed, enter the name or click the browse button.</qt>"
 msgstr ""
-"인증 요청의 암호를 입력해야 합니다. 이 암호로 개인 키를 암호화하기 때문에 충"
-"분히 강력한 암호를 입력하십시오."
+"<qt><b>%1</b>을(를) 열기 위한 프로그램을 선택하십시오. 프로그램이 목록에 없으"
+"면 이름을 입력하거나 찾아보기 단추를 누르십시오.</qt>|/|<qt><b>$[을를 %1 "
+"\"]</b> 열기 위한 프로그램을 선택하십시오. 프로그램이 목록에 없으면 이름을 입"
+"력하거나 찾아보기 단추를 누르십시오.</qt>"
 
-#. i18n: file: kssl/keygenwizard2.ui:48
-#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
-#: rc.cpp:78
-msgid "&Repeat password:"
-msgstr "암호 반복(&R):"
+#: kfile/kopenwithdialog.cpp:494
+msgid "Choose the name of the program with which to open the selected files."
+msgstr "선택한 파일을 열기 위한 프로그램의 이름을 선택하십시오."
 
-#. i18n: file: kssl/keygenwizard2.ui:58
-#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
-#: rc.cpp:81
-msgid "&Choose password:"
-msgstr "암호 선택(&C):"
+#: kfile/kopenwithdialog.cpp:521
+msgid "Choose Application for %1"
+msgstr "%1을 위한 프로그램 선택"
 
-#. i18n: file: kssl/kcm/displaycert.ui:23
-#. i18n: ectx: property (text), widget (QLabel, subjectHeading)
-#: rc.cpp:84
-msgid "<b>Subject Information</b>"
-msgstr "<b>대상 정보</b>"
-
-#. i18n: file: kssl/kcm/displaycert.ui:39
-#. i18n: ectx: property (text), widget (QLabel, issuerHeading)
-#: rc.cpp:87
-msgid "<b>Issuer Information</b>"
-msgstr "<b>발급자 정보</b>"
-
-#. i18n: file: kssl/kcm/displaycert.ui:55
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:90
-msgid "<b>Other</b>"
-msgstr "<b>기타</b>"
-
-#. i18n: file: kssl/kcm/displaycert.ui:64
-#. i18n: ectx: property (text), widget (QLabel, validityPeriodLabel)
-#: rc.cpp:93
-msgid "Validity period"
-msgstr "유효 기간"
-
-#. i18n: file: kssl/kcm/displaycert.ui:78
-#. i18n: ectx: property (text), widget (QLabel, serialNumberLabel)
-#: rc.cpp:96
-msgid "Serial number"
-msgstr "시리얼 번호"
-
-#. i18n: file: kssl/kcm/displaycert.ui:92
-#. i18n: ectx: property (text), widget (QLabel, md5DigestLabel)
-#: rc.cpp:99
-msgid "MD5 digest"
-msgstr "MD5 다이제스트"
-
-#. i18n: file: kssl/kcm/displaycert.ui:106
-#. i18n: ectx: property (text), widget (QLabel, sha1DigestLabel)
-#: rc.cpp:102
-msgid "SHA1 digest"
-msgstr "SHA1 다이제스트"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:24
-#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
-#: rc.cpp:105
-msgid "Organization / Common Name"
-msgstr "조직/공통 이름"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:29
-#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
-#: rc.cpp:108
-msgid "Organizational Unit"
-msgstr "조직 단위"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:42
-#. i18n: ectx: property (text), widget (QPushButton, displaySelection)
-#: rc.cpp:111
-msgid "Display..."
-msgstr "표시..."
-
-#. i18n: file: kssl/kcm/cacertificates.ui:68
-#. i18n: ectx: property (text), widget (KPushButton, disableSelection)
-#: rc.cpp:114
-msgid "Disable"
-msgstr "사용 안 함"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:78
-#. i18n: ectx: property (text), widget (QPushButton, enableSelection)
-#: rc.cpp:117
-msgid "Enable"
-msgstr "사용함"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:104
-#. i18n: ectx: property (text), widget (KPushButton, removeSelection)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:219
-#. i18n: ectx: property (text), widget (QPushButton, delFiletypeButton)
-#: rc.cpp:120 rc.cpp:232
-msgid "Remove"
-msgstr "삭제"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:111
-#. i18n: ectx: property (text), widget (KPushButton, add)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:209
-#. i18n: ectx: property (text), widget (QPushButton, addFiletypeButton)
-#: rc.cpp:123 rc.cpp:226
-msgid "Add..."
-msgstr "추가..."
-
-#. i18n: file: kssl/keygenwizard.ui:35
-#. i18n: ectx: property (text), widget (QLabel, TextLabel1)
-#: rc.cpp:126
+#: kfile/kopenwithdialog.cpp:522
 msgid ""
-"You have indicated that you wish to obtain or purchase a secure certificate. "
-"This wizard is intended to guide you through the procedure. You may cancel "
-"at any time, and this will abort the transaction."
+"<qt>Select the program for the file type: <b>%1</b>. If the program is not "
+"listed, enter the name or click the browse button.</qt>"
 msgstr ""
-"인증서를 구입하거나 가져오기로 했습니다. 이 마법사는 전체 과정을 안내합니다. "
-"언제든지 이 단계를 취소할 수 있으며, 전체 트랜잭션이 중단됩니다."
+"<qt>파일 형식 <b>%1</b>을(를) 위한 프로그램을 선택하십시오. 프로그램이 목록"
+"에 없다면 이름을 입력하거나 찾아보기 단추를 누르십시오.</qt>"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:14
-#. i18n: ectx: property (whatsThis), widget (QLabel, nameLabel)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:27
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, nameEdit)
-#: rc.cpp:129 rc.cpp:135
+#: kfile/kopenwithdialog.cpp:537
+msgid "Choose Application"
+msgstr "프로그램 선택"
+
+#: kfile/kopenwithdialog.cpp:538
 msgid ""
-"Type the name you want to give to this application here. This application "
-"will appear under this name in the applications menu and in the panel."
+"<qt>Select a program. If the program is not listed, enter the name or click "
+"the browse button.</qt>"
 msgstr ""
-"프로그램의 이름을 입력하십시오. 이 이름은 프로그램 메뉴와 패널에 동시에 사용"
-"됩니다."
+"<qt>프로그램을 선택하십시오. 프로그램이 목록에 없다면 이름을 입력하거나 찾아"
+"보기 단추를 누르십시오.</qt>"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:17
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: rc.cpp:132 ../kfile/kfilewidget.cpp:528
-msgid "&Name:"
-msgstr "이름(&N):"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:34
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:47
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, genNameEdit)
-#: rc.cpp:138 rc.cpp:144
+#: kfile/kopenwithdialog.cpp:602
 msgid ""
-"Type the description of this application, based on its use, here. Examples: "
-"a dial up application (KPPP) would be \"Dial up tool\"."
-msgstr ""
-"용도에 기반한 프로그램의 설명을 적으십시오. 예: 전화 접속 프로그램 (KPPP)의 "
-"경우 \"전화 접속 도구\"입니다."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:37
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:141
-msgid "&Description:"
-msgstr "설명(&D):"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:54
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel3)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:67
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, commentEdit)
-#: rc.cpp:147 rc.cpp:153
-msgid "Type any comment you think is useful here."
-msgstr "괜찮은 설명을 적으십시오."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:57
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:150
-msgid "Comm&ent:"
-msgstr "설명(&E):"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:85
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:111
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, commandEdit)
-#: rc.cpp:157 rc.cpp:175
-#, no-c-format
-msgid ""
-"Type the command to start this application here.\n"
-"\n"
 "Following the command, you can have several place holders which will be "
 "replaced with the actual values when the actual program is run:\n"
 "%f - a single file name\n"
@@ -4435,10 +4650,8 @@ msgid ""
 "%D - a list of directories\n"
 "%i - the icon\n"
 "%m - the mini-icon\n"
-"%c - the caption"
+"%c - the comment"
 msgstr ""
-"이 프로그램을 시작하는 명력을 입력하십시오.\n"
-"\n"
 "명령 다음 자리 비움자를 지정하면 실제 프로그램이 실행될 때 알맞은 값으로 대"
 "체\n"
 "됩니다.\n"
@@ -4450,318 +4663,116 @@ msgstr ""
 "%D - 디렉터리 목록\n"
 "%i - 아이콘\n"
 "%m - 작은 아이콘\n"
-"%c - 창 제목"
+"%c - 설명"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:88
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: rc.cpp:171
-msgid "Co&mmand:"
-msgstr "명령(&M):"
+#: kfile/kopenwithdialog.cpp:637
+msgid "Run in &terminal"
+msgstr "터미널에서 실행하기(&T)"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:118
-#. i18n: ectx: property (whatsThis), widget (QPushButton, browseButton)
-#: rc.cpp:189
+#: kfile/kopenwithdialog.cpp:654
+msgid "&Do not close when command exits"
+msgstr "명령이 존재하면 닫지 않기(&D)"
+
+#: kfile/kopenwithdialog.cpp:671
+msgid "&Remember application association for this type of file"
+msgstr "이 파일 형식과 연결된 프로그램 기억하기(&R)"
+
+#: kfile/kopenwithdialog.cpp:816
 msgid ""
-"Click here to browse your file system in order to find the desired "
-"executable."
-msgstr "실행 파일을 찾아보려면 누르십시오."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:130
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel5)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:143
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, pathEdit)
-#: rc.cpp:195 rc.cpp:201
-msgid "Sets the working directory for your application."
-msgstr "프로그램의 작업 디렉터리를 설정합니다."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:133
-#. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#: rc.cpp:198
-msgid "&Work path:"
-msgstr "작업 경로(&W):"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:157
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel7)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:178
-#. i18n: ectx: property (whatsThis), widget (QTreeWidget, filetypeList)
-#: rc.cpp:204 rc.cpp:212
-msgid ""
-"<qt><p>This list should show the types of file that your application can "
-"handle. This list is organized by <u>mimetypes</u>.</p>\n"
-"<p>MIME, Multipurpose Internet (e)Mail Extension, is a standard protocol for "
-"identifying the type of data based on filename extensions and correspondent "
-"<u>mimetypes</u>. Example: the \"bmp\" part that comes after the dot in "
-"flower.bmp indicates that it is a specific kind of image, <u>image/x-bmp</"
-"u>. To know which application should open each type of file, the system "
-"should be informed about the abilities of each application to handle these "
-"extensions and mimetypes.</p>\n"
-"<p>If you want to associate this application with one or more mimetypes that "
-"are not in this list, click on the button <b>Add</b> below. If there are one "
-"or more filetypes that this application cannot handle, you may want to "
-"remove them from the list clicking on the button <b>Remove</b> below.</p></"
-"qt>"
+"Could not extract executable name from '%1', please type a valid program "
+"name."
 msgstr ""
-"<qt><p>이 목록은 현재 프로그램에서 처리할 수 있는 파일 형식을 포함하고 있습니"
-"다. 이 목록은 <u>MIME 형식</u> 기준으로 정렬되어 있습니다.</p>\n"
-"<p>MIME, 다중 목적 이메일 확장은 파일 이름 확장자와 이에 해당하는 <u>MIME 형"
-"식</u>을 기준으로 데이터의 종류를 찾아내는 표준 프로토콜입니다. 예를 들어 "
-"flower.bmp의 점(.) 다음에 오는 \"bmp\" 문자열은 이 파일이 비트맵 이미지, "
-"<u>image-x/bmp</u> 형식임을 나타냅니다. 프로그램이 열 수 있는 파일 형식에 대"
-"해서 알기 위해서, 각각 프로그램은 시스템에 처리할 수 있는 확장자와 MIME 형식"
-"에 대해서 알려줍니다.</p>\n"
-"<p>이 프로그램을 목록에 없는 하나 이상의 MIME 형식과 연결하려면 아래에 있는 "
-"<b>추가</b>단추를 누르십시오. 이 프로그램이 처리할 수 없는 파일 형식이 있다"
-"면 <b>삭제</b> 단추를 누르십시오.</p></qt>"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:160
-#. i18n: ectx: property (text), widget (QLabel, textLabel7)
-#: rc.cpp:209
-msgid "&Supported file types:"
-msgstr "지원하는 파일 형식(&S):"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:191
-#. i18n: ectx: property (text), widget (QTreeWidget, filetypeList)
-#: rc.cpp:217
-msgid "Mimetype"
-msgstr "MIME 형식"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:196
-#. i18n: ectx: property (text), widget (QTreeWidget, filetypeList)
-#: rc.cpp:220
-msgid "Description"
-msgstr "설명"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:206
-#. i18n: ectx: property (whatsThis), widget (QPushButton, addFiletypeButton)
-#: rc.cpp:223
-msgid ""
-"Click on this button if you want to add a type of file (mimetype) that your "
-"application can handle."
-msgstr ""
-"프로그램에서 처리할 수 있는 파일 형식(MIME 형식)을 추가하려면 이 단추를 누르"
+"'%1'에서 실행 파일의 이름을 추출할 수 없습니다. 올바른 프로그램 이름을 입력하"
 "십시오."
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:216
-#. i18n: ectx: property (whatsThis), widget (QPushButton, delFiletypeButton)
-#: rc.cpp:229
+#: kfile/kopenwithdialog.cpp:866
+msgid "'%1' not found, please type a valid program name."
+msgstr "'%1을(를) 찾을 수 없습니다. 올바른 프로그램 이름을 입력하십시오."
+
+#: kfile/kpreviewprops.cpp:50
+msgid "P&review"
+msgstr "미리 보기(&R)"
+
+#: kfile/kurlrequester.cpp:260
+msgid "Open file dialog"
+msgstr "파일 열기 대화상자"
+
+#: kfile/kdevicelistmodel.cpp:116
+msgid "Device name"
+msgstr "장치 이름"
+
+#: misc/kmailservice.cpp:30
+msgid "KMailService"
+msgstr "KMailService"
+
+#: misc/kmailservice.cpp:30
+msgid "Mail service"
+msgstr "우편 서비스"
+
+#: misc/kpac/script.cpp:752
+msgid "Could not find 'FindProxyForURL' or 'FindProxyForURLEx'"
+msgstr "'FindProxyForURL'이나 'FindProxyForURLEx'를 찾을 수 없음"
+
+#: misc/kpac/script.cpp:763
+msgid "Got an invalid reply when calling %1"
+msgstr "%1을(를) 호출한 결과 잘못된 응답을 받음"
+
+#: misc/kpac/discovery.cpp:112
+msgid "Could not find a usable proxy configuration script"
+msgstr "사용 가능한 프록시 설정 스크립트를 찾을 수 없음"
+
+#: misc/kpac/proxyscout.cpp:239
 msgid ""
-"If you want to remove a type of file (mimetype) that your application cannot "
-"handle, select the mimetype in the list above and click on this button."
+"The proxy configuration script is invalid:\n"
+"%1"
 msgstr ""
-"프로그램에서 처리할 수 없는 파일 형식(MIME 형식)을 삭제하려면 목록에서 선택"
-"한 후 이 단추를 누르십시오."
+"프록시 설정 스크립트가 잘못됨:\n"
+"%1"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:242
-#. i18n: ectx: property (whatsThis), widget (QPushButton, advancedButton)
-#: rc.cpp:235
+#: misc/kpac/proxyscout.cpp:351
 msgid ""
-"Click here to modify the way this application will run, launch feedback, D-"
-"Bus options or to run it as a different user."
+"The proxy configuration script returned an error:\n"
+"%1"
 msgstr ""
-"여기를 누르면 이 프로그램이 실행되는 방법, 실행 피드백, D-Bus 옵션 또는 다른 "
-"사용자로 실행되는 방법을 수정할 수 있습니다."
+"프록시 설정 스크립트에서 오류를 반환했습니다:\n"
+"%1"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:245
-#. i18n: ectx: property (text), widget (QPushButton, advancedButton)
-#: rc.cpp:238
-msgid "Ad&vanced Options"
-msgstr "고급 옵션(&V)"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:11
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: rc.cpp:241
-msgctxt ""
-"@title:group Title of a group that lets the user choose options about the "
-"terminal when launching a program"
-msgid "Terminal"
-msgstr "터미널"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:33
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, terminalCheck)
-#: rc.cpp:244
+#: misc/kpac/downloader.cpp:93
 msgid ""
-"Check this option if the application you want to run is a text mode "
-"application or if you want the information that is provided by the terminal "
-"emulator window."
+"Could not download the proxy configuration script:\n"
+"%1"
 msgstr ""
-"이 프로그램이 텍스트 모드 프로그램이거나 터미널로 출력되는 정보를 보려면 선택"
-"하십시오."
+"프록시 설정 스크립트를 다운로드할 수 없음:\n"
+"%1"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:36
-#. i18n: ectx: property (text), widget (QCheckBox, terminalCheck)
-#: rc.cpp:247
-msgid "&Run in terminal"
-msgstr "터미널에서 실행(&R)"
+#: misc/kpac/downloader.cpp:95
+msgid "Could not download the proxy configuration script"
+msgstr "프록시 설정 스크립트를 다운로드할 수 없음"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:43
-#. i18n: ectx: property (text), widget (QLabel, terminalEditLabel)
-#: rc.cpp:250
-msgid "&Terminal options:"
-msgstr "터미널 옵션(&T):"
+#: misc/ktelnetservice.cpp:39
+msgid "telnet service"
+msgstr "텔넷 서비스"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:53
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, terminalCloseCheck)
-#: rc.cpp:253
-msgid ""
-"Check this option if the text mode application offers relevant information "
-"on exit. Keeping the terminal emulator open allows you to retrieve this "
-"information."
-msgstr ""
-"텍스트 모드 프로그램이 끝날 때 유용한 정보를 제공한다면 선택하십시오. 터미널 "
-"에뮬레이터를 열어 두면 이 정보를 볼 수 있습니다."
+#: misc/ktelnetservice.cpp:40
+msgid "telnet protocol handler"
+msgstr "텔넷 프로토콜 처리기"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:56
-#. i18n: ectx: property (text), widget (QCheckBox, terminalCloseCheck)
-#: rc.cpp:256
-msgid "Do not &close when command exits"
-msgstr "명령이 끝나도 닫지 않기(&C)"
+#: misc/ktelnetservice.cpp:74
+msgid "You do not have permission to access the %1 protocol."
+msgstr "%1 프로토콜에 접근할 수 있는 권한이 없습니다."
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:69
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2_2)
-#: rc.cpp:259
-msgctxt ""
-"@title:group Title of a group that lets the user choose which user to use "
-"when launching a program"
-msgid "User"
-msgstr "사용자"
+#: ../kioslave/http/http_cache_cleaner.cpp:731
+#: ../kioslave/http/http_cache_cleaner.cpp:732
+msgid "KDE HTTP cache maintenance tool"
+msgstr "KDE HTTP 캐시 관리 도구"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:75
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, suidCheck)
-#: rc.cpp:262
-msgid ""
-"Check this option if you want to run this application with a different user "
-"id. Every process has a different user id associated with it. This id code "
-"determines file access and other permissions. The password of the user is "
-"required to use this option."
-msgstr ""
-"이 프로그램을 다른 UID로 실행하려면 이 옵션을 선택하십시오. 모든 프로세스는 "
-"연결되어 있는 사용자 ID를 가지고 있습니다. 이 ID 코드는 파일 접근과 기타 권한"
-"을 결정합니다. 이 옵션을 사용하면 선택한 사용자의 암호가 필요합니다."
+#: ../kioslave/http/http_cache_cleaner.cpp:735
+msgid "Empty the cache"
+msgstr "캐시 비우기"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:78
-#. i18n: ectx: property (text), widget (QCheckBox, suidCheck)
-#: rc.cpp:265
-msgid "Ru&n as a different user"
-msgstr "다른 사용자로 실행(&N)"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:101
-#. i18n: ectx: property (whatsThis), widget (QLabel, suidEditLabel)
-#: rc.cpp:268
-msgid "Enter the user name you want to run the application as."
-msgstr "프로그램을 실행할 사용자 이름을 입력하십시오."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:104
-#. i18n: ectx: property (text), widget (QLabel, suidEditLabel)
-#: rc.cpp:271
-msgid "&Username:"
-msgstr "사용자 이름(&U):"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:114
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, suidEdit)
-#: rc.cpp:274
-msgid "Enter the user name you want to run the application as here."
-msgstr "여기에 프로그램을 실행할 사용자 이름을 입력하십시오."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:124
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup4)
-#: rc.cpp:277
-msgctxt ""
-"@title:group Title of a group that lets the user choose options regargin "
-"program startup"
-msgid "Startup"
-msgstr "시작"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:130
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, startupInfoCheck)
-#: rc.cpp:280
-msgid ""
-"Check this option if you want to make clear that your application has "
-"started. This visual feedback may appear as a busy cursor or in the taskbar."
-msgstr ""
-"프로그램이 시작된 것을 명확하게 하려면 선택하십시오. 이 시각 피드백은 작업 표"
-"시줄이나 바쁨 커서로 표시됩니다."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:133
-#. i18n: ectx: property (text), widget (QCheckBox, startupInfoCheck)
-#: rc.cpp:283
-msgid "Enable &launch feedback"
-msgstr "실행 피드백 사용하기(&L)"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:140
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, systrayCheck)
-#: rc.cpp:286
-msgid ""
-"Check this option if you want to have a system tray handle for your "
-"application."
-msgstr "프로그램을 시스템 트레이에서 사용하려면 이 옵션을 선택하십시오."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:143
-#. i18n: ectx: property (text), widget (QCheckBox, systrayCheck)
-#: rc.cpp:289
-msgid "&Place in system tray"
-msgstr "시스템 트레이에 두기(&P)"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:150
-#. i18n: ectx: property (text), widget (QLabel, textLabel12)
-#: rc.cpp:292
-msgid "&D-Bus registration:"
-msgstr "D-Bus 등록(&D):"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:161
-#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
-#: rc.cpp:295
-msgid "None"
-msgstr "없음"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:166
-#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
-#: rc.cpp:298
-msgid "Multiple Instances"
-msgstr "다중 인스턴스"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:171
-#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
-#: rc.cpp:301
-msgid "Single Instance"
-msgstr "단일 인스턴스"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:176
-#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
-#: rc.cpp:304
-msgid "Run Until Finished"
-msgstr "끝날 때까지 실행하기"
-
-#: ../kioslave/metainfo/metainfo.cpp:39
-msgid "kio_metainfo"
-msgstr "kio_metainfo"
-
-#: ../kioslave/metainfo/metainfo.cpp:98
-msgid "No metainfo for %1"
-msgstr "%1의 메타 정보가 없음"
-
-#: ../kioslave/http/kcookiejar/main.cpp:33
-msgid "HTTP Cookie Daemon"
-msgstr "HTTP 쿠키 데몬"
-
-#: ../kioslave/http/kcookiejar/main.cpp:37
-msgid "HTTP cookie daemon"
-msgstr "HTTP 쿠키 데몬"
-
-#: ../kioslave/http/kcookiejar/main.cpp:40
-msgid "Shut down cookie jar"
-msgstr "쿠키병 닫기"
-
-#: ../kioslave/http/kcookiejar/main.cpp:41
-msgid "Remove cookies for domain"
-msgstr "도메인에 대한 쿠키 지우기"
-
-#: ../kioslave/http/kcookiejar/main.cpp:42
-msgid "Remove all cookies"
-msgstr "모든 쿠키 지우기"
-
-#: ../kioslave/http/kcookiejar/main.cpp:43
-msgid "Reload configuration file"
-msgstr "설정 파일 다시 읽기"
+#: ../kioslave/http/http_cache_cleaner.cpp:736
+msgid "Display information about cache file"
+msgstr "캐시 파일 정보 보이기"
 
 #: ../kioslave/http/kcookiejar/kcookiewin.cpp:64
 msgid "Cookie Alert"
@@ -4912,6 +4923,30 @@ msgstr "서버"
 #: ../kioslave/http/kcookiejar/kcookiewin.cpp:324
 msgid "Servers, page scripts"
 msgstr "서버, 페이지 스크립트"
+
+#: ../kioslave/http/kcookiejar/main.cpp:33
+msgid "HTTP Cookie Daemon"
+msgstr "HTTP 쿠키 데몬"
+
+#: ../kioslave/http/kcookiejar/main.cpp:37
+msgid "HTTP cookie daemon"
+msgstr "HTTP 쿠키 데몬"
+
+#: ../kioslave/http/kcookiejar/main.cpp:40
+msgid "Shut down cookie jar"
+msgstr "쿠키병 닫기"
+
+#: ../kioslave/http/kcookiejar/main.cpp:41
+msgid "Remove cookies for domain"
+msgstr "도메인에 대한 쿠키 지우기"
+
+#: ../kioslave/http/kcookiejar/main.cpp:42
+msgid "Remove all cookies"
+msgstr "모든 쿠키 지우기"
+
+#: ../kioslave/http/kcookiejar/main.cpp:43
+msgid "Reload configuration file"
+msgstr "설정 파일 다시 읽기"
 
 #: ../kioslave/http/http.cpp:657
 msgid "No host specified."
@@ -5144,63 +5179,6 @@ msgstr "인증에 실패했습니다."
 msgid "Unknown Authorization method."
 msgstr "알 수 없는 인증 방식."
 
-#: ../kioslave/http/http_cache_cleaner.cpp:731
-#: ../kioslave/http/http_cache_cleaner.cpp:732
-msgid "KDE HTTP cache maintenance tool"
-msgstr "KDE HTTP 캐시 관리 도구"
-
-#: ../kioslave/http/http_cache_cleaner.cpp:735
-msgid "Empty the cache"
-msgstr "캐시 비우기"
-
-#: ../kioslave/http/http_cache_cleaner.cpp:736
-msgid "Display information about cache file"
-msgstr "캐시 파일 정보 보이기"
-
-#: ../kioslave/file/file_unix.cpp:220
-msgid "Cannot copy file from %1 to %2. (Errno: %3)"
-msgstr "%1에서 %2(으)로 파일을 복사할 수 없습니다. (오류 번호: %3)"
-
-#: ../kioslave/file/file_unix.cpp:289 ../kioslave/file/file.cpp:719
-msgid ""
-"Could not change permissions for\n"
-"%1"
-msgstr ""
-"%1\n"
-"의 권한을 바꿀 수 없습니다"
-
-#: ../kioslave/file/file_unix.cpp:333
-msgid "No media in device for %1"
-msgstr "장치 %1에 미디어가 없습니다"
-
-#: ../kioslave/file/file_unix.cpp:579
-msgid "Could not get user id for given user name %1"
-msgstr "주어진 사용자 이름 %1의 사용자 ID를 가져올 수 없습니다"
-
-#: ../kioslave/file/file_unix.cpp:592
-msgid "Could not get group id for given group name %1"
-msgstr "주어진 그룹 이름 %1의 그룹 ID를 가져올 수 없습니다"
-
-#: ../kioslave/file/file.cpp:200
-msgid "Setting ACL for %1"
-msgstr "%1의 ACL을 설정하는 중"
-
-#: ../kioslave/file/file.cpp:913
-msgid "No Media inserted or Media not recognized."
-msgstr "미디어가 삽입되지 않았거나 미디어를 인식할 수 없습니다."
-
-#: ../kioslave/file/file.cpp:923 ../kioslave/file/file.cpp:1126
-msgid "\"vold\" is not running."
-msgstr "\"vold\"가 실행 중이 아닙니다."
-
-#: ../kioslave/file/file.cpp:958
-msgid "Could not find program \"mount\""
-msgstr "\"mount\" 프로그램을 찾을 수 없음"
-
-#: ../kioslave/file/file.cpp:1139
-msgid "Could not find program \"umount\""
-msgstr "\"umount\" 프로그램을 찾을 수 없음"
-
 #: ../kioslave/ftp/ftp.cpp:356
 msgid "Opening connection to host %1"
 msgstr "호스트 %1로 향한 연결 여는 중"
@@ -5250,6 +5228,58 @@ msgstr "로그인 성공"
 #: ../kioslave/ftp/ftp.cpp:708
 msgid "Could not login to %1."
 msgstr "%1에 로그인할 수 없습니다."
+
+#: ../kioslave/file/file.cpp:200
+msgid "Setting ACL for %1"
+msgstr "%1의 ACL을 설정하는 중"
+
+#: ../kioslave/file/file.cpp:719 ../kioslave/file/file_unix.cpp:289
+msgid ""
+"Could not change permissions for\n"
+"%1"
+msgstr ""
+"%1\n"
+"의 권한을 바꿀 수 없습니다"
+
+#: ../kioslave/file/file.cpp:913
+msgid "No Media inserted or Media not recognized."
+msgstr "미디어가 삽입되지 않았거나 미디어를 인식할 수 없습니다."
+
+#: ../kioslave/file/file.cpp:923 ../kioslave/file/file.cpp:1126
+msgid "\"vold\" is not running."
+msgstr "\"vold\"가 실행 중이 아닙니다."
+
+#: ../kioslave/file/file.cpp:958
+msgid "Could not find program \"mount\""
+msgstr "\"mount\" 프로그램을 찾을 수 없음"
+
+#: ../kioslave/file/file.cpp:1139
+msgid "Could not find program \"umount\""
+msgstr "\"umount\" 프로그램을 찾을 수 없음"
+
+#: ../kioslave/file/file_unix.cpp:220
+msgid "Cannot copy file from %1 to %2. (Errno: %3)"
+msgstr "%1에서 %2(으)로 파일을 복사할 수 없습니다. (오류 번호: %3)"
+
+#: ../kioslave/file/file_unix.cpp:333
+msgid "No media in device for %1"
+msgstr "장치 %1에 미디어가 없습니다"
+
+#: ../kioslave/file/file_unix.cpp:579
+msgid "Could not get user id for given user name %1"
+msgstr "주어진 사용자 이름 %1의 사용자 ID를 가져올 수 없습니다"
+
+#: ../kioslave/file/file_unix.cpp:592
+msgid "Could not get group id for given group name %1"
+msgstr "주어진 그룹 이름 %1의 그룹 ID를 가져올 수 없습니다"
+
+#: ../kioslave/metainfo/metainfo.cpp:39
+msgid "kio_metainfo"
+msgstr "kio_metainfo"
+
+#: ../kioslave/metainfo/metainfo.cpp:98
+msgid "No metainfo for %1"
+msgstr "%1의 메타 정보가 없음"
 
 #: ../kfile/knewfilemenu.cpp:367 ../kfile/knewfilemenu.cpp:882
 msgid "Sorry"
@@ -5329,6 +5359,89 @@ msgid ""
 msgstr ""
 "다음에 새 폴더 만들기:\n"
 "%1"
+
+#: ../kfile/kfiletreeview.cpp:187
+msgid "Show Hidden Folders"
+msgstr "숨김 폴더 보이기"
+
+#: ../kfile/kurlnavigatorbutton.cpp:684
+msgctxt "@action:inmenu"
+msgid "More"
+msgstr "더 보기"
+
+#: ../kfile/kfileplacesview.cpp:579
+msgctxt "@action:inmenu"
+msgid "Empty Trash"
+msgstr "휴지통 비우기"
+
+#: ../kfile/kfileplacesview.cpp:586
+msgid "&Edit Entry '%1'..."
+msgstr "항목 '%1' 편집(&E)..."
+
+#: ../kfile/kfileplacesview.cpp:608
+msgid "&Hide Entry '%1'"
+msgstr "항목 '%1' 숨기기(&H)"
+
+#: ../kfile/kfileplacesview.cpp:617
+msgid "&Show All Entries"
+msgstr "모든 항목 보기(&S)"
+
+#: ../kfile/kfileplacesview.cpp:628
+msgid "&Remove Entry '%1'"
+msgstr "항목 '%1' 삭제(&R)"
+
+#: ../kfile/kfileplacesview.cpp:640
+msgctxt "@info"
+msgid "Do you really want to empty the Trash? All items will be deleted."
+msgstr "휴지통을 비우시겠습니까? 모든 항목이 삭제됩니다."
+
+#: ../kfile/kfileplacesmodel.cpp:114
+msgctxt "KFile System Bookmarks"
+msgid "Home"
+msgstr "홈"
+
+#: ../kfile/kfileplacesmodel.cpp:117
+msgctxt "KFile System Bookmarks"
+msgid "Network"
+msgstr "네트워크"
+
+#: ../kfile/kfileplacesmodel.cpp:120
+msgctxt "KFile System Bookmarks"
+msgid "Root"
+msgstr "루트"
+
+#: ../kfile/kfileplacesmodel.cpp:123
+msgctxt "KFile System Bookmarks"
+msgid "Trash"
+msgstr "휴지통"
+
+#: ../kfile/kfileplacesmodel.cpp:743
+msgid "&Release '%1'"
+msgstr "'%1' 놓기(&R)"
+
+#: ../kfile/kfileplacesmodel.cpp:745
+msgid "&Safely Remove '%1'"
+msgstr "'%1' 안전하게 제거(&S)"
+
+#: ../kfile/kfileplacesmodel.cpp:748
+msgid "&Unmount '%1'"
+msgstr "'%1' 마운트 해제(&U)"
+
+#: ../kfile/kfileplacesmodel.cpp:769
+msgid "&Eject '%1'"
+msgstr "'%1' 꺼내기(&E)"
+
+#: ../kfile/kfileplacesmodel.cpp:803
+msgid "The device '%1' is not a disk and cannot be ejected."
+msgstr "장치 '%1'은(는) 디스크가 아니므로 꺼낼 수 없습니다."
+
+#: ../kfile/kfileplacesmodel.cpp:839
+msgid "An error occurred while accessing '%1', the system responded: %2"
+msgstr "'%1'에 접근하는 중 오류가 발생했습니다. 시스템 응답: %2"
+
+#: ../kfile/kfileplacesmodel.cpp:843
+msgid "An error occurred while accessing '%1'"
+msgstr "'%1'에 접근하는 중 오류가 발생했습니다"
 
 #: ../kfile/kfilewidget.cpp:290
 msgid ""
@@ -5581,127 +5694,6 @@ msgstr ""
 "이 책갈피 단추는 각각 파일 대화상자마다 정의되지만, KDE의 다른 책갈피처럼 작"
 "동합니다.</qt>"
 
-#: ../kfile/kfileplaceeditdialog.cpp:90
-msgid "Add Places Entry"
-msgstr "위치 항목 추가하기"
-
-#: ../kfile/kfileplaceeditdialog.cpp:92
-msgid "Edit Places Entry"
-msgstr "위치 항목 편집하기"
-
-#: ../kfile/kfileplaceeditdialog.cpp:103
-msgid ""
-"<qt>This is the text that will appear in the Places panel.<br /><br />The "
-"label should consist of one or two words that will help you remember what "
-"this entry refers to. If you do not enter a label, it will be derived from "
-"the location's URL.</qt>"
-msgstr ""
-"<qt>이것은 위치 패널에 나타나는 텍스트입니다.<br /><br />위치의 이름은 그 곳"
-"이 가리키는 곳을 잘 설명할 수 있도록 명확한 한 두 단어로 하는 것이 좋습니다. "
-"이름을 지정하지 않으면 URL에서 따 옵니다.</qt>"
-
-#: ../kfile/kfileplaceeditdialog.cpp:109
-msgid "L&abel:"
-msgstr "이름(&A):"
-
-#: ../kfile/kfileplaceeditdialog.cpp:111
-msgid "Enter descriptive label here"
-msgstr "설명을 입력하십시오"
-
-#: ../kfile/kfileplaceeditdialog.cpp:115
-msgid ""
-"<qt>This is the location associated with the entry. Any valid URL may be "
-"used. For example:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp.kde."
-"org/pub/kde/stable<br /><br />By clicking on the button next to the text "
-"edit box you can browse to an appropriate URL.</qt>"
-msgstr ""
-"<qt>이것은 항목과 연결된 위치입니다. 임의의 올바른 URL을 사용할 수 있습니다. "
-"예제:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp.kde.org/pub/kde/"
-"stable<br /><br />텍스트 상자 오른쪽에 있는 단추를 누르면 적당한 URL을 찾아 "
-"볼 수 있습니다.</qt>"
-
-#: ../kfile/kfileplaceeditdialog.cpp:121
-msgid "&Location:"
-msgstr "위치(&L):"
-
-#: ../kfile/kfileplaceeditdialog.cpp:127
-msgid ""
-"<qt>This is the icon that will appear in the Places panel.<br /><br />Click "
-"on the button to select a different icon.</qt>"
-msgstr ""
-"<qt>이것은 위치 패널에 나타날 아이콘입니다.<br /><br />단추를 누르면 아이콘"
-"을 바꿀 수 있습니다.</qt>"
-
-#: ../kfile/kfileplaceeditdialog.cpp:130
-msgid "Choose an &icon:"
-msgstr "아이콘 선택(&I):"
-
-#: ../kfile/kfileplaceeditdialog.cpp:147
-msgid "&Only show when using this application (%1)"
-msgstr "이 프로그램 (%1)을 사용할 때만 보이기(&O)"
-
-#: ../kfile/kfileplaceeditdialog.cpp:149
-msgid ""
-"<qt>Select this setting if you want this entry to show only when using the "
-"current application (%1).<br /><br />If this setting is not selected, the "
-"entry will be available in all applications.</qt>"
-msgstr ""
-"<qt>이 프로그램 (%1)을 사용할 때만 이 항목을 보이게 하려면 선택하십시오.<br /"
-"><br />만약 이 설정을 선택하지 않으면 이 항목은 모든 프로그램에서 사용할 수 "
-"있습니다.</qt>"
-
-#: ../kfile/kfileplacesmodel.cpp:114
-msgctxt "KFile System Bookmarks"
-msgid "Home"
-msgstr "홈"
-
-#: ../kfile/kfileplacesmodel.cpp:117
-msgctxt "KFile System Bookmarks"
-msgid "Network"
-msgstr "네트워크"
-
-#: ../kfile/kfileplacesmodel.cpp:120
-msgctxt "KFile System Bookmarks"
-msgid "Root"
-msgstr "루트"
-
-#: ../kfile/kfileplacesmodel.cpp:123
-msgctxt "KFile System Bookmarks"
-msgid "Trash"
-msgstr "휴지통"
-
-#: ../kfile/kfileplacesmodel.cpp:743
-msgid "&Release '%1'"
-msgstr "'%1' 놓기(&R)"
-
-#: ../kfile/kfileplacesmodel.cpp:745
-msgid "&Safely Remove '%1'"
-msgstr "'%1' 안전하게 제거(&S)"
-
-#: ../kfile/kfileplacesmodel.cpp:748
-msgid "&Unmount '%1'"
-msgstr "'%1' 마운트 해제(&U)"
-
-#: ../kfile/kfileplacesmodel.cpp:769
-msgid "&Eject '%1'"
-msgstr "'%1' 꺼내기(&E)"
-
-#: ../kfile/kfileplacesmodel.cpp:803
-msgid "The device '%1' is not a disk and cannot be ejected."
-msgstr "장치 '%1'은(는) 디스크가 아니므로 꺼낼 수 없습니다."
-
-#: ../kfile/kfileplacesmodel.cpp:839
-msgid "An error occurred while accessing '%1', the system responded: %2"
-msgstr "'%1'에 접근하는 중 오류가 발생했습니다. 시스템 응답: %2"
-
-#: ../kfile/kfileplacesmodel.cpp:843
-msgid "An error occurred while accessing '%1'"
-msgstr "'%1'에 접근하는 중 오류가 발생했습니다"
-
-#: ../kfile/kfiletreeview.cpp:187
-msgid "Show Hidden Folders"
-msgstr "숨김 폴더 보이기"
-
 #: ../kfile/kdiroperator.cpp:756 ../kfile/kdirselectdialog.cpp:159
 msgid "A file or folder named %1 already exists."
 msgstr ""
@@ -5870,6 +5862,75 @@ msgstr "파일 관리자 열기"
 msgid "&View"
 msgstr "보기(&V)"
 
+#: ../kfile/kfileplaceeditdialog.cpp:90
+msgid "Add Places Entry"
+msgstr "위치 항목 추가하기"
+
+#: ../kfile/kfileplaceeditdialog.cpp:92
+msgid "Edit Places Entry"
+msgstr "위치 항목 편집하기"
+
+#: ../kfile/kfileplaceeditdialog.cpp:103
+msgid ""
+"<qt>This is the text that will appear in the Places panel.<br /><br />The "
+"label should consist of one or two words that will help you remember what "
+"this entry refers to. If you do not enter a label, it will be derived from "
+"the location's URL.</qt>"
+msgstr ""
+"<qt>이것은 위치 패널에 나타나는 텍스트입니다.<br /><br />위치의 이름은 그 곳"
+"이 가리키는 곳을 잘 설명할 수 있도록 명확한 한 두 단어로 하는 것이 좋습니다. "
+"이름을 지정하지 않으면 URL에서 따 옵니다.</qt>"
+
+#: ../kfile/kfileplaceeditdialog.cpp:109
+msgid "L&abel:"
+msgstr "이름(&A):"
+
+#: ../kfile/kfileplaceeditdialog.cpp:111
+msgid "Enter descriptive label here"
+msgstr "설명을 입력하십시오"
+
+#: ../kfile/kfileplaceeditdialog.cpp:115
+msgid ""
+"<qt>This is the location associated with the entry. Any valid URL may be "
+"used. For example:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp.kde."
+"org/pub/kde/stable<br /><br />By clicking on the button next to the text "
+"edit box you can browse to an appropriate URL.</qt>"
+msgstr ""
+"<qt>이것은 항목과 연결된 위치입니다. 임의의 올바른 URL을 사용할 수 있습니다. "
+"예제:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp.kde.org/pub/kde/"
+"stable<br /><br />텍스트 상자 오른쪽에 있는 단추를 누르면 적당한 URL을 찾아 "
+"볼 수 있습니다.</qt>"
+
+#: ../kfile/kfileplaceeditdialog.cpp:121
+msgid "&Location:"
+msgstr "위치(&L):"
+
+#: ../kfile/kfileplaceeditdialog.cpp:127
+msgid ""
+"<qt>This is the icon that will appear in the Places panel.<br /><br />Click "
+"on the button to select a different icon.</qt>"
+msgstr ""
+"<qt>이것은 위치 패널에 나타날 아이콘입니다.<br /><br />단추를 누르면 아이콘"
+"을 바꿀 수 있습니다.</qt>"
+
+#: ../kfile/kfileplaceeditdialog.cpp:130
+msgid "Choose an &icon:"
+msgstr "아이콘 선택(&I):"
+
+#: ../kfile/kfileplaceeditdialog.cpp:147
+msgid "&Only show when using this application (%1)"
+msgstr "이 프로그램 (%1)을 사용할 때만 보이기(&O)"
+
+#: ../kfile/kfileplaceeditdialog.cpp:149
+msgid ""
+"<qt>Select this setting if you want this entry to show only when using the "
+"current application (%1).<br /><br />If this setting is not selected, the "
+"entry will be available in all applications.</qt>"
+msgstr ""
+"<qt>이 프로그램 (%1)을 사용할 때만 이 항목을 보이게 하려면 선택하십시오.<br /"
+"><br />만약 이 설정을 선택하지 않으면 이 항목은 모든 프로그램에서 사용할 수 "
+"있습니다.</qt>"
+
 #: ../kfile/kurlnavigator.cpp:426
 msgid "Copy"
 msgstr "복사"
@@ -5894,23 +5955,6 @@ msgstr "전체 경로 보이기"
 msgid "Custom Path"
 msgstr "사용자 정의 경로"
 
-#: ../kfile/kfilefiltercombo.cpp:194
-msgid "All Files"
-msgstr "모든 파일"
-
-#: ../kfile/kurlnavigatorbutton.cpp:684
-msgctxt "@action:inmenu"
-msgid "More"
-msgstr "더 보기"
-
-#: ../kfile/kurlnavigatortogglebutton.cpp:94
-msgid "Click for Location Navigation"
-msgstr "위치를 탐색하려면 누르십시오"
-
-#: ../kfile/kurlnavigatortogglebutton.cpp:96
-msgid "Click to Edit Location"
-msgstr "주소를 편집하려면 누르십시오"
-
 #: ../kfile/kurlnavigatorprotocolcombo.cpp:173
 msgctxt "@item:inmenu"
 msgid "Devices"
@@ -5926,31 +5970,9 @@ msgctxt "@item:inmenu"
 msgid "Other"
 msgstr "기타"
 
-#: ../kfile/kfileplacesview.cpp:579
-msgctxt "@action:inmenu"
-msgid "Empty Trash"
-msgstr "휴지통 비우기"
-
-#: ../kfile/kfileplacesview.cpp:586
-msgid "&Edit Entry '%1'..."
-msgstr "항목 '%1' 편집(&E)..."
-
-#: ../kfile/kfileplacesview.cpp:608
-msgid "&Hide Entry '%1'"
-msgstr "항목 '%1' 숨기기(&H)"
-
-#: ../kfile/kfileplacesview.cpp:617
-msgid "&Show All Entries"
-msgstr "모든 항목 보기(&S)"
-
-#: ../kfile/kfileplacesview.cpp:628
-msgid "&Remove Entry '%1'"
-msgstr "항목 '%1' 삭제(&R)"
-
-#: ../kfile/kfileplacesview.cpp:640
-msgctxt "@info"
-msgid "Do you really want to empty the Trash? All items will be deleted."
-msgstr "휴지통을 비우시겠습니까? 모든 항목이 삭제됩니다."
+#: ../kfile/kfilefiltercombo.cpp:194
+msgid "All Files"
+msgstr "모든 파일"
 
 #: ../kfile/kdirselectdialog.cpp:131
 msgctxt "folder name"
@@ -5995,3 +6017,11 @@ msgstr "숨김 폴더 보이기"
 msgctxt "@action:inmenu"
 msgid "Properties"
 msgstr "속성"
+
+#: ../kfile/kurlnavigatortogglebutton.cpp:94
+msgid "Click for Location Navigation"
+msgstr "위치를 탐색하려면 누르십시오"
+
+#: ../kfile/kurlnavigatortogglebutton.cpp:96
+msgid "Click to Edit Location"
+msgstr "주소를 편집하려면 누르십시오"

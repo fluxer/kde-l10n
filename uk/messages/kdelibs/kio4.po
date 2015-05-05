@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio4\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:36+0000\n"
+"POT-Creation-Date: 2015-05-05 17:53+0000\n"
 "PO-Revision-Date: 2014-04-15 08:19+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,164 +20,656 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: kssl/sslui.cpp:52
-msgid ""
-"The remote host did not send any SSL certificates.\n"
-"Aborting because the identity of the host cannot be established."
-msgstr ""
-"Віддаленим вузлом не було надіслано жодних сертифікатів SSL.\n"
-"З’єднання перервано через неможливість встановити автентичність вузла."
+#. i18n: file: kssl/sslinfo.ui:17
+#. i18n: ectx: property (text), widget (QLabel, encryptionIndicator)
+#: rc.cpp:3
+msgid "[padlock]"
+msgstr "[колодка]"
 
-#: kssl/sslui.cpp:71 kio/tcpslavebase.cpp:810
+#. i18n: file: kssl/sslinfo.ui:34
+#. i18n: ectx: property (text), widget (QLabel, addressTag)
+#: rc.cpp:6
+msgctxt "Web page address"
+msgid "Address:"
+msgstr "Адреса:"
+
+#. i18n: file: kssl/sslinfo.ui:54
+#. i18n: ectx: property (text), widget (QLabel, ipTag)
+#: rc.cpp:9
+msgid "IP address:"
+msgstr "Адреса IP:"
+
+#. i18n: file: kssl/sslinfo.ui:74
+#. i18n: ectx: property (text), widget (QLabel, encryptionTag)
+#: rc.cpp:12
+msgid "Encryption:"
+msgstr "Шифрування:"
+
+#. i18n: file: kssl/sslinfo.ui:94
+#. i18n: ectx: property (text), widget (QLabel, detailsTag)
+#: rc.cpp:15
+msgid "Details:"
+msgstr "Подробиці:"
+
+#. i18n: file: kssl/sslinfo.ui:114
+#. i18n: ectx: property (text), widget (QLabel, sslVersionTag)
+#: rc.cpp:18
+msgid "SSL version:"
+msgstr "Версія SSL:"
+
+#. i18n: file: kssl/sslinfo.ui:134
+#. i18n: ectx: property (text), widget (QLabel, certSelectorTag)
+#: rc.cpp:21
+msgid "Certificate chain:"
+msgstr "Ланцюжок сертифікатів:"
+
+#. i18n: file: kssl/sslinfo.ui:163
+#. i18n: ectx: property (text), widget (QLabel, trustedTag)
+#: rc.cpp:24
+msgid "Trusted:"
+msgstr "Надійність:"
+
+#. i18n: file: kssl/sslinfo.ui:183
+#. i18n: ectx: property (text), widget (QLabel, validityPeriodTag)
+#: rc.cpp:27
+msgid "Validity period:"
+msgstr "Період чинності:"
+
+#. i18n: file: kssl/sslinfo.ui:203
+#. i18n: ectx: property (text), widget (QLabel, serialTag)
+#: rc.cpp:30
+msgid "Serial number:"
+msgstr "Серійний номер:"
+
+#. i18n: file: kssl/sslinfo.ui:223
+#. i18n: ectx: property (text), widget (QLabel, digestTag)
+#: rc.cpp:33
+msgid "MD5 digest:"
+msgstr "Сума MD5:"
+
+#. i18n: file: kssl/sslinfo.ui:243
+#. i18n: ectx: property (text), widget (QLabel, sha1DigestTag)
+#: rc.cpp:36
+msgid "SHA1 digest:"
+msgstr "Сума SHA1:"
+
+#. i18n: file: kssl/keygenwizard.ui:35
+#. i18n: ectx: property (text), widget (QLabel, TextLabel1)
+#: rc.cpp:39
 msgid ""
-"The server failed the authenticity check (%1).\n"
+"You have indicated that you wish to obtain or purchase a secure certificate. "
+"This wizard is intended to guide you through the procedure. You may cancel "
+"at any time, and this will abort the transaction."
+msgstr ""
+"Ви вказали, що хочете отримати або придбати безпечний сертифікат. Цей "
+"майстер допоможе виконати потрібні дії. Ви можете скасувати цей процес на "
+"довільному кроці — операцію буде скасовано."
+
+#. i18n: file: kssl/certificateparty.ui:28
+#. i18n: ectx: property (text), widget (QLabel, commonNameTag)
+#: rc.cpp:42
+msgid "Common name:"
+msgstr "Загальна назва:"
+
+#. i18n: file: kssl/certificateparty.ui:38
+#. i18n: ectx: property (text), widget (QLabel, commonName)
+#: rc.cpp:45
+msgid "Acme Co."
+msgstr "Acme Co."
+
+#. i18n: file: kssl/certificateparty.ui:48
+#. i18n: ectx: property (text), widget (QLabel, organizationTag)
+#: rc.cpp:48
+msgid "Organization:"
+msgstr "Організація:"
+
+#. i18n: file: kssl/certificateparty.ui:58
+#. i18n: ectx: property (text), widget (QLabel, organization)
+#: rc.cpp:51
+msgid "Acme Sundry Products Company"
+msgstr "Acme Sundry Products Company"
+
+#. i18n: file: kssl/certificateparty.ui:68
+#. i18n: ectx: property (text), widget (QLabel, organizationalUnitTag)
+#: rc.cpp:54
+msgid "Organizational unit:"
+msgstr "Підрозділ організації:"
+
+#. i18n: file: kssl/certificateparty.ui:78
+#. i18n: ectx: property (text), widget (QLabel, organizationalUnit)
+#: rc.cpp:57
+msgid "Fraud Department"
+msgstr "Відділ боротьби з шахрайством"
+
+#. i18n: file: kssl/certificateparty.ui:88
+#. i18n: ectx: property (text), widget (QLabel, countryTag)
+#: rc.cpp:60
+msgid "Country:"
+msgstr "Країна:"
+
+#. i18n: file: kssl/certificateparty.ui:98
+#. i18n: ectx: property (text), widget (QLabel, country)
+#: rc.cpp:63
+msgid "Canada"
+msgstr "Канада"
+
+#. i18n: file: kssl/certificateparty.ui:108
+#. i18n: ectx: property (text), widget (QLabel, stateTag)
+#: rc.cpp:66
+msgid "State:"
+msgstr "Штат:"
+
+#. i18n: file: kssl/certificateparty.ui:118
+#. i18n: ectx: property (text), widget (QLabel, state)
+#: rc.cpp:69
+msgid "Quebec"
+msgstr "Квебек"
+
+#. i18n: file: kssl/certificateparty.ui:128
+#. i18n: ectx: property (text), widget (QLabel, cityTag)
+#: rc.cpp:72
+msgid "City:"
+msgstr "Місто:"
+
+#. i18n: file: kssl/certificateparty.ui:138
+#. i18n: ectx: property (text), widget (QLabel, city)
+#: rc.cpp:75
+msgid "Lakeridge Meadows"
+msgstr "Лейкридж Медовс"
+
+#. i18n: file: kssl/kcm/displaycert.ui:23
+#. i18n: ectx: property (text), widget (QLabel, subjectHeading)
+#: rc.cpp:78
+msgid "<b>Subject Information</b>"
+msgstr "<b>Відомості щодо призначення</b>"
+
+#. i18n: file: kssl/kcm/displaycert.ui:39
+#. i18n: ectx: property (text), widget (QLabel, issuerHeading)
+#: rc.cpp:81
+msgid "<b>Issuer Information</b>"
+msgstr "<b>Відомості щодо видавця</b>"
+
+#. i18n: file: kssl/kcm/displaycert.ui:55
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:84
+msgid "<b>Other</b>"
+msgstr "<b>Інше</b>"
+
+#. i18n: file: kssl/kcm/displaycert.ui:64
+#. i18n: ectx: property (text), widget (QLabel, validityPeriodLabel)
+#: rc.cpp:87
+msgid "Validity period"
+msgstr "Період чинності"
+
+#. i18n: file: kssl/kcm/displaycert.ui:78
+#. i18n: ectx: property (text), widget (QLabel, serialNumberLabel)
+#: rc.cpp:90
+msgid "Serial number"
+msgstr "Серійний номер"
+
+#. i18n: file: kssl/kcm/displaycert.ui:92
+#. i18n: ectx: property (text), widget (QLabel, md5DigestLabel)
+#: rc.cpp:93
+msgid "MD5 digest"
+msgstr "Сума MD5"
+
+#. i18n: file: kssl/kcm/displaycert.ui:106
+#. i18n: ectx: property (text), widget (QLabel, sha1DigestLabel)
+#: rc.cpp:96
+msgid "SHA1 digest"
+msgstr "Сума SHA1"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:24
+#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
+#: rc.cpp:99
+msgid "Organization / Common Name"
+msgstr "Установа/Загальна назва"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:29
+#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
+#: rc.cpp:102
+msgid "Organizational Unit"
+msgstr "Підрозділ установи"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:42
+#. i18n: ectx: property (text), widget (QPushButton, displaySelection)
+#: rc.cpp:105
+msgid "Display..."
+msgstr "Показати…"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:68
+#. i18n: ectx: property (text), widget (KPushButton, disableSelection)
+#: rc.cpp:108
+msgid "Disable"
+msgstr "Вимкнути"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:78
+#. i18n: ectx: property (text), widget (QPushButton, enableSelection)
+#: rc.cpp:111
+msgid "Enable"
+msgstr "Увімкнути"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:104
+#. i18n: ectx: property (text), widget (KPushButton, removeSelection)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:219
+#. i18n: ectx: property (text), widget (QPushButton, delFiletypeButton)
+#: rc.cpp:114 rc.cpp:232
+msgid "Remove"
+msgstr "Вилучити"
+
+#. i18n: file: kssl/kcm/cacertificates.ui:111
+#. i18n: ectx: property (text), widget (KPushButton, add)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:209
+#. i18n: ectx: property (text), widget (QPushButton, addFiletypeButton)
+#: rc.cpp:117 rc.cpp:226
+msgid "Add..."
+msgstr "Додати..."
+
+#. i18n: file: kssl/keygenwizard2.ui:35
+#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
+#: rc.cpp:120
+msgid ""
+"You must now provide a password for the certificate request. Please choose a "
+"very secure password as this will be used to encrypt your private key."
+msgstr ""
+"Вам слід надати пароль для запиту сертифіката. Будь ласка, виберіть такий "
+"пароль, який дуже важко підібрати, оскільки цей пароль буде використано для "
+"шифрування вашого закритого ключа."
+
+#. i18n: file: kssl/keygenwizard2.ui:48
+#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
+#: rc.cpp:123
+msgid "&Repeat password:"
+msgstr "П&овторіть пароль:"
+
+#. i18n: file: kssl/keygenwizard2.ui:58
+#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
+#: rc.cpp:126
+msgid "&Choose password:"
+msgstr "&Виберіть пароль:"
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:14
+#. i18n: ectx: property (whatsThis), widget (QLabel, nameLabel)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:27
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, nameEdit)
+#: rc.cpp:129 rc.cpp:135
+msgid ""
+"Type the name you want to give to this application here. This application "
+"will appear under this name in the applications menu and in the panel."
+msgstr ""
+"Введіть тут назву для цієї програми. Програма буде з'являтись під цією "
+"назвою в меню програм та на панелі."
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:17
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: rc.cpp:132 ../kfile/kfilewidget.cpp:528
+msgid "&Name:"
+msgstr "&Назва:"
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:34
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:47
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, genNameEdit)
+#: rc.cpp:138 rc.cpp:144
+msgid ""
+"Type the description of this application, based on its use, here. Examples: "
+"a dial up application (KPPP) would be \"Dial up tool\"."
+msgstr ""
+"Введіть опис програми, виходячи з її призначення. Наприклад: програму для "
+"з'єднання через модем (KPPP) можна описати «Засіб для з'єднання через модем»."
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:37
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:141
+msgid "&Description:"
+msgstr "&Опис:"
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:54
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel3)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:67
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, commentEdit)
+#: rc.cpp:147 rc.cpp:153
+msgid "Type any comment you think is useful here."
+msgstr "Введіть тут будь-який коментар, який ви вважаєте корисним."
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:57
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:150
+msgid "Comm&ent:"
+msgstr "Ко&ментар:"
+
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:85
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:111
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, commandEdit)
+#: rc.cpp:157 rc.cpp:175
+#, no-c-format
+msgid ""
+"Type the command to start this application here.\n"
 "\n"
+"Following the command, you can have several place holders which will be "
+"replaced with the actual values when the actual program is run:\n"
+"%f - a single file name\n"
+"%F - a list of files; use for applications that can open several local files "
+"at once\n"
+"%u - a single URL\n"
+"%U - a list of URLs\n"
+"%d - the directory of the file to open\n"
+"%D - a list of directories\n"
+"%i - the icon\n"
+"%m - the mini-icon\n"
+"%c - the caption"
 msgstr ""
-"Сервер не пройшов перевірку на достовірність (%1)\n"
+"Введіть команду для запуску програми.\n"
 "\n"
+"У рядок команди ви можете вставити вказані нижче підставні параметри, їх "
+"буде замінено фактичними значеннями при запуску програми:\n"
+"%f — назва одного файла\n"
+"%F — список файлів; використовується для програм, які можуть відкривати "
+"декілька локальних файлів відразу\n"
+"%u — одна адреса URL\n"
+"%U — список адрес URLs\n"
+"%d — тека з файлом, який відкриваємо\n"
+"%D — список тек\n"
+"%i — піктограма\n"
+"%m — міні-піктограма\n"
+"%c — заголовок"
 
-#: kssl/sslui.cpp:80 kssl/sslui.cpp:119 kio/tcpslavebase.cpp:821
-#: kio/tcpslavebase.cpp:834 kio/tcpslavebase.cpp:948 kio/tcpslavebase.cpp:960
-msgid "Server Authentication"
-msgstr "Автентифікація сервера"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel4)
+#: rc.cpp:171
+msgid "Co&mmand:"
+msgstr "&Команда:"
 
-#: kssl/sslui.cpp:81 kio/tcpslavebase.cpp:822 kio/slaveinterface.cpp:422
-msgid "&Details"
-msgstr "&Подробиці"
-
-#: kssl/sslui.cpp:82 kio/tcpslavebase.cpp:822 kio/slaveinterface.cpp:428
-msgid "Co&ntinue"
-msgstr "Про&довжити"
-
-#: kssl/sslui.cpp:116 kio/tcpslavebase.cpp:831
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:118
+#. i18n: ectx: property (whatsThis), widget (QPushButton, browseButton)
+#: rc.cpp:189
 msgid ""
-"Would you like to accept this certificate forever without being prompted?"
-msgstr "Хочете прийняти сертифікат назавжди без попереджень?"
+"Click here to browse your file system in order to find the desired "
+"executable."
+msgstr "Натисніть, щоб переглянути файлову систему і знайти потрібну програму."
 
-#: kssl/sslui.cpp:120 kio/tcpslavebase.cpp:835 kio/slaveinterface.cpp:424
-msgid "&Forever"
-msgstr "&Завжди"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:121
+#. i18n: ectx: property (text), widget (QPushButton, browseButton)
+#: rc.cpp:192 kfile/kicondialog.cpp:381
+msgid "&Browse..."
+msgstr "&Навігація..."
 
-#: kssl/sslui.cpp:121 kio/tcpslavebase.cpp:836 kio/slaveinterface.cpp:430
-msgid "&Current Session only"
-msgstr "Тільки &поточний сеанс"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:130
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel5)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:143
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, pathEdit)
+#: rc.cpp:195 rc.cpp:201
+msgid "Sets the working directory for your application."
+msgstr "Встановлює робочий каталог для вашої програми."
 
-#: kssl/ksslkeygen.cpp:82
-msgid "KDE Certificate Request"
-msgstr "Запит сертифіката KDE"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:133
+#. i18n: ectx: property (text), widget (QLabel, textLabel5)
+#: rc.cpp:198
+msgid "&Work path:"
+msgstr "&Робочий каталог:"
 
-#: kssl/ksslkeygen.cpp:89
-msgid "KDE Certificate Request - Password"
-msgstr "Запит сертифіката KDE — пароль"
-
-#: kssl/ksslkeygen.cpp:124
-msgid "Unsupported key size."
-msgstr "Розмір ключа, який не підтримується."
-
-#: kssl/ksslkeygen.cpp:124 kssl/ksslinfodialog.cpp:65
-msgid "KDE SSL Information"
-msgstr "Інформація про KDE SSL"
-
-#: kssl/ksslkeygen.cpp:130
-msgid "KDE"
-msgstr "KDE"
-
-#: kssl/ksslkeygen.cpp:131
-msgid "Please wait while the encryption keys are generated..."
-msgstr "Зачекайте, будь ласка, поки буде створено ключі для шифрування..."
-
-#: kssl/ksslkeygen.cpp:144
-msgid "Do you wish to store the passphrase in your wallet file?"
-msgstr "Бажаєте зберегти пароль у вашій торбинці?"
-
-#: kssl/ksslkeygen.cpp:144
-msgid "Store"
-msgstr "Зберегти"
-
-#: kssl/ksslkeygen.cpp:144
-msgid "Do Not Store"
-msgstr "Не зберігати"
-
-#: kssl/ksslkeygen.cpp:260
-msgid "2048 (High Grade)"
-msgstr "2048 (висока якість)"
-
-#: kssl/ksslkeygen.cpp:261
-msgid "1024 (Medium Grade)"
-msgstr "1024 (середня якість)"
-
-#: kssl/ksslkeygen.cpp:262
-msgid "768  (Low Grade)"
-msgstr "768  (низька якість)"
-
-#: kssl/ksslkeygen.cpp:263
-msgid "512  (Low Grade)"
-msgstr "512  (низька якість)"
-
-#: kssl/ksslkeygen.cpp:265
-msgid "No SSL support."
-msgstr "Немає підтримки SSL."
-
-#: kssl/ksslcertdialog.cpp:58
-msgid "Certificate"
-msgstr "Сертифікат"
-
-#: kssl/ksslcertdialog.cpp:66
-msgid "Save selection for this host."
-msgstr "Зберегти вибір для цієї машини."
-
-#: kssl/ksslcertdialog.cpp:75
-msgid "Send certificate"
-msgstr "Надіслати сертифікат"
-
-#: kssl/ksslcertdialog.cpp:79
-msgid "Do not send a certificate"
-msgstr "Не відсилати сертифікат"
-
-#: kssl/ksslcertdialog.cpp:84
-msgid "KDE SSL Certificate Dialog"
-msgstr "Вікно сертифікатів SSL KDE"
-
-#: kssl/ksslcertdialog.cpp:136
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:157
+#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel7)
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:178
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, filetypeList)
+#: rc.cpp:204 rc.cpp:212
 msgid ""
-"The server <b>%1</b> requests a certificate.<br /><br />Select a certificate "
-"to use from the list below:"
+"<qt><p>This list should show the types of file that your application can "
+"handle. This list is organized by <u>mimetypes</u>.</p>\n"
+"<p>MIME, Multipurpose Internet (e)Mail Extension, is a standard protocol for "
+"identifying the type of data based on filename extensions and correspondent "
+"<u>mimetypes</u>. Example: the \"bmp\" part that comes after the dot in "
+"flower.bmp indicates that it is a specific kind of image, <u>image/x-bmp</"
+"u>. To know which application should open each type of file, the system "
+"should be informed about the abilities of each application to handle these "
+"extensions and mimetypes.</p>\n"
+"<p>If you want to associate this application with one or more mimetypes that "
+"are not in this list, click on the button <b>Add</b> below. If there are one "
+"or more filetypes that this application cannot handle, you may want to "
+"remove them from the list clicking on the button <b>Remove</b> below.</p></"
+"qt>"
 msgstr ""
-"Сервер <b>%1</b> просить сертифікат.<br /><br />Виберіть сертифікат зі "
-"списку нижче:"
+"<qt><p>У цьому списку мають міститися пункти типів файлів, які вміє "
+"обробляти ваша програма. Цей список містить <u>типи MIME</u>.</p> \n"
+"<p>MIME (Multipurpose Internet (e)Mail Extension) — це стандартний протокол "
+"для визначення типу даних на основі суфікса назви файла та відповідного "
+"<u>типу mime</u>. Наприклад: «bmp» — частина після крапки у назві файла "
+"flower.bmp — вказує, що це певний різновид зображення, <u>image/x-bmp</u>. "
+"Щоб знати яку програму запускати для роботи з кожним конкретним типом файла, "
+"системі потрібно вказати, які суфікси та типи mime обробляє кожна програма.</"
+"p>\n"
+"<p>Якщо ви бажаєте пов’язати цю програму з одним або декількома типами "
+"файлів, яких немає у цьому списку, натисніть кнопку <b>Додати</b> "
+"розташовану нижче. Якщо ж у цьому списку є один або декілька типів файлів, "
+"які програма не вміє обробляти, ви можете вилучити їх натисканням кнопки "
+"<b>Вилучити</b>, розташованої нижче.</p></qt>"
 
-#: kssl/kcm/kcmssl.cpp:40
-msgid "SSL Configuration Module"
-msgstr "Модуль налаштування SSL"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:160
+#. i18n: ectx: property (text), widget (QLabel, textLabel7)
+#: rc.cpp:209
+msgid "&Supported file types:"
+msgstr "Типи файлів, що підтримуються:"
 
-#: kssl/kcm/kcmssl.cpp:42
-msgid "Copyright 2010 Andreas Hartmetz"
-msgstr "© Andreas Hartmetz, 2010"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:191
+#. i18n: ectx: property (text), widget (QTreeWidget, filetypeList)
+#: rc.cpp:217
+msgid "Mimetype"
+msgstr "Тип MIME"
 
-#: kssl/kcm/kcmssl.cpp:43
-msgid "Andreas Hartmetz"
-msgstr "Andreas Hartmetz"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:196
+#. i18n: ectx: property (text), widget (QTreeWidget, filetypeList)
+#: rc.cpp:220
+msgid "Description"
+msgstr "Опис"
 
-#: kssl/kcm/kcmssl.cpp:55
-msgid "SSL Signers"
-msgstr "Підписанти SSL"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:206
+#. i18n: ectx: property (whatsThis), widget (QPushButton, addFiletypeButton)
+#: rc.cpp:223
+msgid ""
+"Click on this button if you want to add a type of file (mimetype) that your "
+"application can handle."
+msgstr ""
+"Натисніть цю кнопку, щоб додати тип файлів (mimetype), які ваша програма "
+"вміє обробляти."
 
-#: kssl/kcm/cacertificatespage.cpp:131
-msgid "System certificates"
-msgstr "Сертифікати, встановлені автоматично"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:216
+#. i18n: ectx: property (whatsThis), widget (QPushButton, delFiletypeButton)
+#: rc.cpp:229
+msgid ""
+"If you want to remove a type of file (mimetype) that your application cannot "
+"handle, select the mimetype in the list above and click on this button."
+msgstr ""
+"Щоб вилучити тип файлів зі списку типів файлів (mimetype), які вміє "
+"обробляти ваша програма, виберіть тип у списку, наведеному вище, і натисніть "
+"цю кнопку."
 
-#: kssl/kcm/cacertificatespage.cpp:138
-msgid "User-added certificates"
-msgstr "Сертифікати, додані користувачами"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:242
+#. i18n: ectx: property (whatsThis), widget (QPushButton, advancedButton)
+#: rc.cpp:235
+msgid ""
+"Click here to modify the way this application will run, launch feedback, D-"
+"Bus options or to run it as a different user."
+msgstr ""
+"Натисніть, щоб змінити спосіб, за допомогою якого буде запускатися програма; "
+"показу запуску, параметри D-Bus або запуск від імені іншого користувача."
 
-#: kssl/kcm/cacertificatespage.cpp:295
-msgid "Pick Certificates"
-msgstr "Вибрати сертифікати"
+#. i18n: file: kfile/kpropertiesdesktopbase.ui:245
+#. i18n: ectx: property (text), widget (QPushButton, advancedButton)
+#: rc.cpp:238
+msgid "Ad&vanced Options"
+msgstr "До&даткові параметри"
 
-#: kssl/kcm/displaycertdialog.cpp:54 kssl/ksslinfodialog.cpp:217
-msgctxt "%1 is the effective date of the certificate, %2 is the expiry date"
-msgid "%1 to %2"
-msgstr "%1 до %2"
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:11
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
+#: rc.cpp:241
+msgctxt ""
+"@title:group Title of a group that lets the user choose options about the "
+"terminal when launching a program"
+msgid "Terminal"
+msgstr "Термінал"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:33
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, terminalCheck)
+#: rc.cpp:244
+msgid ""
+"Check this option if the application you want to run is a text mode "
+"application or if you want the information that is provided by the terminal "
+"emulator window."
+msgstr ""
+"Позначте, якщо програма, яку ви хочете виконувати, працює у текстовому "
+"режимі або ви бажаєте мати доступ до інформації, яка виводиться у вікні "
+"емулятора термінала."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:36
+#. i18n: ectx: property (text), widget (QCheckBox, terminalCheck)
+#: rc.cpp:247
+msgid "&Run in terminal"
+msgstr "Зап&устити у терміналі"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:43
+#. i18n: ectx: property (text), widget (QLabel, terminalEditLabel)
+#: rc.cpp:250
+msgid "&Terminal options:"
+msgstr "Парам&етри термінала:"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:53
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, terminalCloseCheck)
+#: rc.cpp:253
+msgid ""
+"Check this option if the text mode application offers relevant information "
+"on exit. Keeping the terminal emulator open allows you to retrieve this "
+"information."
+msgstr ""
+"Позначте, якщо програма, що працює у текстовому режимі, виводить важливу "
+"інформацію при завершенні роботи. Якщо вікно емулятора термінала не буде "
+"закрито, ви зможете прочитати цю інформацію."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:56
+#. i18n: ectx: property (text), widget (QCheckBox, terminalCloseCheck)
+#: rc.cpp:256
+msgid "Do not &close when command exits"
+msgstr "&Не закривати після завершення виконання програми"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:69
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2_2)
+#: rc.cpp:259
+msgctxt ""
+"@title:group Title of a group that lets the user choose which user to use "
+"when launching a program"
+msgid "User"
+msgstr "Користувач"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:75
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, suidCheck)
+#: rc.cpp:262
+msgid ""
+"Check this option if you want to run this application with a different user "
+"id. Every process has a different user id associated with it. This id code "
+"determines file access and other permissions. The password of the user is "
+"required to use this option."
+msgstr ""
+"Позначте цей пункт, якщо ви хочете виконувати цю програму з іншим "
+"ідентифікатором користувача. Кожен процес має відповідний йому ідентифікатор "
+"користувача. Цей код визначає права доступу до файлів та інші дозволи. Для "
+"цього потрібно знати пароль іншого користувача."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:78
+#. i18n: ectx: property (text), widget (QCheckBox, suidCheck)
+#: rc.cpp:265
+msgid "Ru&n as a different user"
+msgstr "Вико&нати як інший користувач"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:101
+#. i18n: ectx: property (whatsThis), widget (QLabel, suidEditLabel)
+#: rc.cpp:268
+msgid "Enter the user name you want to run the application as."
+msgstr ""
+"Введіть ім'я користувача, від імені якого ви бажаєте виконати цю програму."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:104
+#. i18n: ectx: property (text), widget (QLabel, suidEditLabel)
+#: rc.cpp:271
+msgid "&Username:"
+msgstr "&Ім'я:"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:114
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, suidEdit)
+#: rc.cpp:274
+msgid "Enter the user name you want to run the application as here."
+msgstr ""
+"Введіть ім'я користувача, з правами якого ви бажаєте виконати цю програму."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:124
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup4)
+#: rc.cpp:277
+msgctxt ""
+"@title:group Title of a group that lets the user choose options regargin "
+"program startup"
+msgid "Startup"
+msgstr "Запуск"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:130
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, startupInfoCheck)
+#: rc.cpp:280
+msgid ""
+"Check this option if you want to make clear that your application has "
+"started. This visual feedback may appear as a busy cursor or in the taskbar."
+msgstr ""
+"Позначте цей пункт, якщо вам потрібно точно знати, чи запустилась програма. "
+"Візуальне сповіщення може мати вигляд курсору «зайнятий» у смужці задач."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:133
+#. i18n: ectx: property (text), widget (QCheckBox, startupInfoCheck)
+#: rc.cpp:283
+msgid "Enable &launch feedback"
+msgstr "Увімкнути с&повіщення запуску"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:140
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, systrayCheck)
+#: rc.cpp:286
+msgid ""
+"Check this option if you want to have a system tray handle for your "
+"application."
+msgstr ""
+"Позначте, якщо вам потрібен елемент керування з системного лотка для вашої "
+"програми."
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:143
+#. i18n: ectx: property (text), widget (QCheckBox, systrayCheck)
+#: rc.cpp:289
+msgid "&Place in system tray"
+msgstr "&Помістити у системний лоток"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:150
+#. i18n: ectx: property (text), widget (QLabel, textLabel12)
+#: rc.cpp:292
+msgid "&D-Bus registration:"
+msgstr "Реєстрація у &D-Bus:"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:161
+#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
+#: rc.cpp:295
+msgid "None"
+msgstr "Немає"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:166
+#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
+#: rc.cpp:298
+msgid "Multiple Instances"
+msgstr "Багато зразків"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:171
+#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
+#: rc.cpp:301
+msgid "Single Instance"
+msgstr "Один зразок"
+
+#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:176
+#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
+#: rc.cpp:304
+msgid "Run Until Finished"
+msgstr "Виконувати, поки не завершиться"
 
 #: kssl/ksslcertificate.cpp:204
 msgid "Signature Algorithm: "
@@ -504,13 +996,61 @@ msgstr "Цей сертифікат не доречний."
 msgid "The certificate is invalid."
 msgstr "Сертифікат не дійсний."
 
-#: kssl/ksslutils.cpp:78
-msgid "GMT"
-msgstr "За Гринвічем"
+#: kssl/ksslkeygen.cpp:82
+msgid "KDE Certificate Request"
+msgstr "Запит сертифіката KDE"
 
-#: kssl/ksslpemcallback.cpp:37
-msgid "Certificate password"
-msgstr "Пароль сертифіката"
+#: kssl/ksslkeygen.cpp:89
+msgid "KDE Certificate Request - Password"
+msgstr "Запит сертифіката KDE — пароль"
+
+#: kssl/ksslkeygen.cpp:124
+msgid "Unsupported key size."
+msgstr "Розмір ключа, який не підтримується."
+
+#: kssl/ksslkeygen.cpp:124 kssl/ksslinfodialog.cpp:65
+msgid "KDE SSL Information"
+msgstr "Інформація про KDE SSL"
+
+#: kssl/ksslkeygen.cpp:130
+msgid "KDE"
+msgstr "KDE"
+
+#: kssl/ksslkeygen.cpp:131
+msgid "Please wait while the encryption keys are generated..."
+msgstr "Зачекайте, будь ласка, поки буде створено ключі для шифрування..."
+
+#: kssl/ksslkeygen.cpp:144
+msgid "Do you wish to store the passphrase in your wallet file?"
+msgstr "Бажаєте зберегти пароль у вашій торбинці?"
+
+#: kssl/ksslkeygen.cpp:144
+msgid "Store"
+msgstr "Зберегти"
+
+#: kssl/ksslkeygen.cpp:144
+msgid "Do Not Store"
+msgstr "Не зберігати"
+
+#: kssl/ksslkeygen.cpp:260
+msgid "2048 (High Grade)"
+msgstr "2048 (висока якість)"
+
+#: kssl/ksslkeygen.cpp:261
+msgid "1024 (Medium Grade)"
+msgstr "1024 (середня якість)"
+
+#: kssl/ksslkeygen.cpp:262
+msgid "768  (Low Grade)"
+msgstr "768  (низька якість)"
+
+#: kssl/ksslkeygen.cpp:263
+msgid "512  (Low Grade)"
+msgstr "512  (низька якість)"
+
+#: kssl/ksslkeygen.cpp:265
+msgid "No SSL support."
+msgstr "Немає підтримки SSL."
 
 #: kssl/ksslinfodialog.cpp:73
 msgctxt "The receiver of the SSL certificate"
@@ -580,182 +1120,473 @@ msgctxt "The certificate is trusted"
 msgid "Yes"
 msgstr "Так"
 
-#: misc/ktelnetservice.cpp:39
-msgid "telnet service"
-msgstr "служба telnet"
+#: kssl/ksslinfodialog.cpp:217 kssl/kcm/displaycertdialog.cpp:54
+msgctxt "%1 is the effective date of the certificate, %2 is the expiry date"
+msgid "%1 to %2"
+msgstr "%1 до %2"
 
-#: misc/ktelnetservice.cpp:40
-msgid "telnet protocol handler"
-msgstr "обробник протоколу telnet"
-
-#: misc/ktelnetservice.cpp:74
-msgid "You do not have permission to access the %1 protocol."
-msgstr "У вас не вистачає прав для доступу до протоколу %1."
-
-#: misc/kpac/script.cpp:752
-msgid "Could not find 'FindProxyForURL' or 'FindProxyForURLEx'"
-msgstr "Не вдалося знайти «FindProxyForURL» або «FindProxyForURLEx»"
-
-#: misc/kpac/script.cpp:763
-msgid "Got an invalid reply when calling %1"
-msgstr "Отримано некоректну відповідь на виклик %1"
-
-#: misc/kpac/proxyscout.cpp:239
+#: kssl/sslui.cpp:52
 msgid ""
-"The proxy configuration script is invalid:\n"
-"%1"
+"The remote host did not send any SSL certificates.\n"
+"Aborting because the identity of the host cannot be established."
 msgstr ""
-"Скрипт налаштування проксі-сервера містить помилки:\n"
-"%1"
+"Віддаленим вузлом не було надіслано жодних сертифікатів SSL.\n"
+"З’єднання перервано через неможливість встановити автентичність вузла."
 
-#: misc/kpac/proxyscout.cpp:351
+#: kssl/sslui.cpp:71 kio/tcpslavebase.cpp:810
 msgid ""
-"The proxy configuration script returned an error:\n"
-"%1"
+"The server failed the authenticity check (%1).\n"
+"\n"
 msgstr ""
-"Скрипт налаштування проксі-сервера повернув помилку:\n"
-"%1"
+"Сервер не пройшов перевірку на достовірність (%1)\n"
+"\n"
 
-#: misc/kpac/discovery.cpp:112
-msgid "Could not find a usable proxy configuration script"
-msgstr ""
-"Не вдалося знайти скрипт налаштування проксі-сервера, який можна б було "
-"використати"
+#: kssl/sslui.cpp:80 kssl/sslui.cpp:119 kio/tcpslavebase.cpp:821
+#: kio/tcpslavebase.cpp:834 kio/tcpslavebase.cpp:948 kio/tcpslavebase.cpp:960
+msgid "Server Authentication"
+msgstr "Автентифікація сервера"
 
-#: misc/kpac/downloader.cpp:93
+#: kssl/sslui.cpp:81 kio/slaveinterface.cpp:420 kio/tcpslavebase.cpp:822
+msgid "&Details"
+msgstr "&Подробиці"
+
+#: kssl/sslui.cpp:82 kio/slaveinterface.cpp:426 kio/tcpslavebase.cpp:822
+msgid "Co&ntinue"
+msgstr "Про&довжити"
+
+#: kssl/sslui.cpp:116 kio/tcpslavebase.cpp:831
 msgid ""
-"Could not download the proxy configuration script:\n"
-"%1"
+"Would you like to accept this certificate forever without being prompted?"
+msgstr "Хочете прийняти сертифікат назавжди без попереджень?"
+
+#: kssl/sslui.cpp:120 kio/slaveinterface.cpp:422 kio/tcpslavebase.cpp:835
+msgid "&Forever"
+msgstr "&Завжди"
+
+#: kssl/sslui.cpp:121 kio/slaveinterface.cpp:428 kio/tcpslavebase.cpp:836
+msgid "&Current Session only"
+msgstr "Тільки &поточний сеанс"
+
+#: kssl/kcm/kcmssl.cpp:40
+msgid "SSL Configuration Module"
+msgstr "Модуль налаштування SSL"
+
+#: kssl/kcm/kcmssl.cpp:42
+msgid "Copyright 2010 Andreas Hartmetz"
+msgstr "© Andreas Hartmetz, 2010"
+
+#: kssl/kcm/kcmssl.cpp:43
+msgid "Andreas Hartmetz"
+msgstr "Andreas Hartmetz"
+
+#: kssl/kcm/kcmssl.cpp:55
+msgid "SSL Signers"
+msgstr "Підписанти SSL"
+
+#: kssl/kcm/cacertificatespage.cpp:131
+msgid "System certificates"
+msgstr "Сертифікати, встановлені автоматично"
+
+#: kssl/kcm/cacertificatespage.cpp:138
+msgid "User-added certificates"
+msgstr "Сертифікати, додані користувачами"
+
+#: kssl/kcm/cacertificatespage.cpp:295
+msgid "Pick Certificates"
+msgstr "Вибрати сертифікати"
+
+#: kssl/ksslutils.cpp:78
+msgid "GMT"
+msgstr "За Гринвічем"
+
+#: kssl/ksslpemcallback.cpp:37
+msgid "Certificate password"
+msgstr "Пароль сертифіката"
+
+#: kssl/ksslcertdialog.cpp:58
+msgid "Certificate"
+msgstr "Сертифікат"
+
+#: kssl/ksslcertdialog.cpp:66
+msgid "Save selection for this host."
+msgstr "Зберегти вибір для цієї машини."
+
+#: kssl/ksslcertdialog.cpp:75
+msgid "Send certificate"
+msgstr "Надіслати сертифікат"
+
+#: kssl/ksslcertdialog.cpp:79
+msgid "Do not send a certificate"
+msgstr "Не відсилати сертифікат"
+
+#: kssl/ksslcertdialog.cpp:84
+msgid "KDE SSL Certificate Dialog"
+msgstr "Вікно сертифікатів SSL KDE"
+
+#: kssl/ksslcertdialog.cpp:136
+msgid ""
+"The server <b>%1</b> requests a certificate.<br /><br />Select a certificate "
+"to use from the list below:"
 msgstr ""
-"Не вдалося звантажити скрипт налаштування проксі-сервера:\n"
-"%1"
-
-#: misc/kpac/downloader.cpp:95
-msgid "Could not download the proxy configuration script"
-msgstr "Не вдалося звантажити скрипт налаштування проксі-сервера"
-
-#: misc/kmailservice.cpp:30
-msgid "KMailService"
-msgstr "Служба пошти KMail"
-
-#: misc/kmailservice.cpp:30
-msgid "Mail service"
-msgstr "Служба пошти"
+"Сервер <b>%1</b> просить сертифікат.<br /><br />Виберіть сертифікат зі "
+"списку нижче:"
 
 #: httpfilter/httpfilter.cc:179
 msgid "Receiving corrupt data."
 msgstr "Отримання пошкоджених даних."
 
-#: kio/job.cpp:126
-msgctxt "@title job"
-msgid "Moving"
-msgstr "Пересування"
+#: bookmarks/kbookmark.cc:308
+msgid "--- separator ---"
+msgstr "--- роздільник ---"
 
-#: kio/job.cpp:127 kio/job.cpp:134 kio/job.cpp:159 kio/fileundomanager.cpp:121
-msgctxt "The source of a file operation"
-msgid "Source"
-msgstr "Джерело"
+#: bookmarks/kbookmarkmanager.cc:443
+msgid ""
+"Unable to save bookmarks in %1. Reported error was: %2. This error message "
+"will only be shown once. The cause of the error needs to be fixed as quickly "
+"as possible, which is most likely a full hard drive."
+msgstr ""
+"Не вдалося зберегти закладки у %1. Отримано повідомлення про помилку: %2. Це "
+"повідомлення про помилку буде показано тільки один раз. Причину цієї помилки "
+"потрібно виправити якомога швидше. Скоріше за все, причиною є нестача місця "
+"на жорсткому диску."
 
-#: kio/job.cpp:128 kio/job.cpp:135 kio/fileundomanager.cpp:122
-msgctxt "The destination of a file operation"
-msgid "Destination"
-msgstr "Призначення"
+#: bookmarks/kbookmarkimporter_opera.cc:121
+#: bookmarks/kbookmarkimporter_opera.cc:125
+msgid "*.adr|Opera Bookmark Files (*.adr)"
+msgstr "*.adr|Файли закладок Opera (*.adr)"
 
-#: kio/job.cpp:133
-msgctxt "@title job"
-msgid "Copying"
-msgstr "Копіювання"
+#: bookmarks/kbookmarkimporter_ns.cc:122 bookmarks/kbookmarkimporter_ns.cc:126
+msgid "*.html|HTML Files (*.html)"
+msgstr "*.html|Файли HTML (*.html)"
 
-#: kio/job.cpp:140
-msgctxt "@title job"
-msgid "Creating directory"
-msgstr "Створення теки"
+#: bookmarks/kbookmarkimporter_ns.cc:167
+msgid "<!-- This file was generated by Konqueror -->"
+msgstr "<!-- Цей файл було створено за допомогою Konqueror -->"
 
-#: kio/job.cpp:141 kio/fileundomanager.cpp:118
-msgid "Directory"
-msgstr "Тека"
+#: bookmarks/kbookmarkimporter_ns.cc:170 bookmarks/kbookmarkimporter_ns.cc:171
+#: ../kfile/kfilewidget.cpp:2523
+msgid "Bookmarks"
+msgstr "Закладки"
 
-#: kio/job.cpp:146
-msgctxt "@title job"
-msgid "Deleting"
-msgstr "Вилучення"
+#: bookmarks/kbookmarkdialog.cc:41
+msgctxt "@action:button"
+msgid "Update"
+msgstr "Оновити"
 
-#: kio/job.cpp:147 kio/job.cpp:153 kio/fileundomanager.cpp:125
-msgid "File"
-msgstr "Файл"
+#: bookmarks/kbookmarkdialog.cc:42
+msgctxt "@title:window"
+msgid "Bookmark Properties"
+msgstr "Властивості закладки"
 
-#: kio/job.cpp:152
-msgctxt "@title job"
-msgid "Examining"
-msgstr "Перевірка"
+#: bookmarks/kbookmarkdialog.cc:70 bookmarks/kbookmarkdialog.cc:102
+msgctxt "@action:button"
+msgid "Add"
+msgstr "Додати"
 
-#: kio/job.cpp:158
-msgctxt "@title job"
-msgid "Transferring"
-msgstr "Перенесення"
+#: bookmarks/kbookmarkdialog.cc:71
+msgctxt "@title:window"
+msgid "Add Bookmark"
+msgstr "Додати закладку"
 
-#: kio/job.cpp:164
-msgctxt "@title job"
-msgid "Mounting"
-msgstr "Монтування"
+#: bookmarks/kbookmarkdialog.cc:72 bookmarks/kbookmarkdialog.cc:104
+#: bookmarks/kbookmarkdialog.cc:131
+msgctxt "@action:button"
+msgid "&New Folder..."
+msgstr "&Створити теку..."
 
-#: kio/job.cpp:165
-msgid "Device"
-msgstr "Пристрій"
+#: bookmarks/kbookmarkdialog.cc:103
+msgctxt "@title:window"
+msgid "Add Bookmarks"
+msgstr "Додати закладку"
 
-#: kio/job.cpp:166 kio/job.cpp:172
-msgid "Mountpoint"
-msgstr "Точка монтування"
+#: bookmarks/kbookmarkdialog.cc:132 ../kfile/kdirselectdialog.cpp:266
+msgctxt "@title:window"
+msgid "Select Folder"
+msgstr "Вибір теки"
 
-#: kio/job.cpp:171
-msgctxt "@title job"
-msgid "Unmounting"
-msgstr "Демонтування"
+#: bookmarks/kbookmarkdialog.cc:159 ../kfile/knewfilemenu.cpp:1036
+#: ../kfile/kdirselectdialog.cpp:135
+msgctxt "@title:window"
+msgid "New Folder"
+msgstr "Нова тека"
 
-#: kio/job.cpp:2192 kio/paste.cpp:101 kio/global.cpp:646 kio/copyjob.cpp:1401
-#: kio/copyjob.cpp:1984
-msgid "File Already Exists"
-msgstr "Файл вже існує"
+#: bookmarks/kbookmarkdialog.cc:292
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Назва:"
 
-#: kio/slavebase.cpp:1304 kio/global.cpp:1071
+#: bookmarks/kbookmarkdialog.cc:297
+msgctxt "@label:textbox"
+msgid "Location:"
+msgstr "Адреса:"
+
+#: bookmarks/kbookmarkdialog.cc:302
+msgctxt "@label:textbox"
+msgid "Comment:"
+msgstr "Коментар:"
+
+#: bookmarks/kbookmarkdialog.cc:331
+msgctxt "@title:window"
+msgid "Create New Bookmark Folder"
+msgstr "Створення нової теки закладок"
+
+#: bookmarks/kbookmarkdialog.cc:332
+msgctxt "@title:window"
+msgid "Create New Bookmark Folder in %1"
+msgstr "Створення нової теки закладок в %1"
+
+#: bookmarks/kbookmarkdialog.cc:335
+msgctxt "@label:textbox"
+msgid "New folder:"
+msgstr "Нова тека:"
+
+#: bookmarks/kbookmarkdialog.cc:374
+msgctxt "name of the container of all browser bookmarks"
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: bookmarks/konqbookmarkmenu.cc:61 bookmarks/konqbookmarkmenu.cc:78
+msgid "Hide in toolbar"
+msgstr "Сховати в пеналі"
+
+#: bookmarks/konqbookmarkmenu.cc:61 bookmarks/konqbookmarkmenu.cc:78
+msgid "Show in toolbar"
+msgstr "Показувати в пеналі"
+
+#: bookmarks/konqbookmarkmenu.cc:71
+msgid "Open in New Window"
+msgstr "Відкрити в новому вікні"
+
+#: bookmarks/konqbookmarkmenu.cc:72
+msgid "Open in New Tab"
+msgstr "Відкрити у новій вкладці"
+
+#: bookmarks/kbookmarkmenu.cc:267
+msgid "Add Bookmark Here"
+msgstr "Додати закладку"
+
+#: bookmarks/kbookmarkmenu.cc:272
+msgid "Open Folder in Bookmark Editor"
+msgstr "Відкрити теку в редакторі закладок"
+
+#: bookmarks/kbookmarkmenu.cc:275
+msgid "Delete Folder"
+msgstr "Стерти теку"
+
+#: bookmarks/kbookmarkmenu.cc:281 ../kfile/kdiroperator.cpp:1958
+msgid "Properties"
+msgstr "Властивості"
+
+#: bookmarks/kbookmarkmenu.cc:286
+msgid "Copy Link Address"
+msgstr "Скопіювати адресу посилання"
+
+#: bookmarks/kbookmarkmenu.cc:289
+msgid "Delete Bookmark"
+msgstr "Стерти закладку"
+
+#: bookmarks/kbookmarkmenu.cc:295 bookmarks/kbookmarkmenu.cc:454
+msgid "Open Folder in Tabs"
+msgstr "Відкрити теку у вкладках"
+
+#: bookmarks/kbookmarkmenu.cc:320
+msgid "Cannot add bookmark with empty URL."
+msgstr "Не можна додавати закладку з порожньою адресою (URL)."
+
+#: bookmarks/kbookmarkmenu.cc:352
+msgid ""
+"Are you sure you wish to remove the bookmark folder\n"
+"\"%1\"?"
+msgstr ""
+"Ви впевнені, що бажаєте вилучити теку закладок\n"
+"«%1»?"
+
+#: bookmarks/kbookmarkmenu.cc:353
+msgid ""
+"Are you sure you wish to remove the bookmark\n"
+"\"%1\"?"
+msgstr ""
+"Ви впевнені, що бажаєте вилучити закладку\n"
+"«%1»?"
+
+#: bookmarks/kbookmarkmenu.cc:354
+msgid "Bookmark Folder Deletion"
+msgstr "Стирання теки закладок"
+
+#: bookmarks/kbookmarkmenu.cc:355
+msgid "Bookmark Deletion"
+msgstr "Стирання закладки"
+
+#: bookmarks/kbookmarkmenu.cc:458
+msgid "Open all bookmarks in this folder as a new tab."
+msgstr "Відкрити всі закладки в цій теці як нові вкладки."
+
+#: bookmarks/kbookmarkmenu.cc:471
+msgid "Bookmark Tabs as Folder..."
+msgstr "Зробити з вкладок теку закладок..."
+
+#: bookmarks/kbookmarkmenu.cc:475
+msgid "Add a folder of bookmarks for all open tabs."
+msgstr "Додати теку з закладками, створену з усіх відкритих вкладок."
+
+#: bookmarks/kbookmarkmenu.cc:508
+msgid "Edit your bookmark collection in a separate window"
+msgstr "Редагувати збірку закладок у окремому вікні"
+
+#: bookmarks/kbookmarkmenu.cc:517
+msgid "New Bookmark Folder..."
+msgstr "Створити теку закладок..."
+
+#: bookmarks/kbookmarkmenu.cc:519
+msgid "Create a new bookmark folder in this menu"
+msgstr "Створити нову теку закладок в цьому меню"
+
+#: kio/slavebase.cpp:1300 kio/global.cpp:1071
 msgid "Unknown Error"
 msgstr "Невідома помилка"
 
-#: kio/connection.cpp:213
-msgid "Unable to create io-slave: %1"
-msgstr "Неможливо створити io-slave: %1"
+#: kio/kscan.cpp:50
+msgid "Acquire Image"
+msgstr "Отримати зображення"
 
-#: kio/slave.cpp:434
-msgid "Unknown protocol '%1'."
-msgstr "Невідомий протокол «%1»."
+#: kio/kscan.cpp:99
+msgid "OCR Image"
+msgstr "Зображення ОРЗ (OCR)"
 
-#: kio/slave.cpp:443
-msgid "Can not find io-slave for protocol '%1'."
-msgstr "Неможливо знайти підлеглий В/В для протоколу «%1»."
+#: kio/copyjob.cpp:1076 kio/global.cpp:656
+msgid "Folder Already Exists"
+msgstr "Тека вже існує"
 
-#: kio/slave.cpp:462
-msgid "Cannot talk to klauncher: %1"
-msgstr "Не вдалося зв'язатися з klauncher: %1"
+#: kio/copyjob.cpp:1401 kio/copyjob.cpp:1984 kio/global.cpp:646
+#: kio/job.cpp:2192 kio/paste.cpp:101
+msgid "File Already Exists"
+msgstr "Файл вже існує"
 
-#: kio/slave.cpp:470
-msgid ""
-"Unable to create io-slave:\n"
-"klauncher said: %1"
-msgstr ""
-"Неможливо створити io-slave:\n"
-"повідомлення klauncher: %1"
-
-#: kio/slavebase.h:265 kio/slavebase.h:285
-msgid "&Yes"
-msgstr "&Так"
-
-#: kio/slavebase.h:266 kio/slavebase.h:286
-msgid "&No"
-msgstr "&Ні"
+#: kio/copyjob.cpp:1401 kio/copyjob.cpp:1984
+msgid "Already Exists as Folder"
+msgstr "Вже існує як тека"
 
 #: kio/kstatusbarofflineindicator.cpp:52
 msgid "The desktop is offline"
 msgstr "Стільниця в автономному режимі"
+
+#: kio/kimageio.cpp:43
+msgid "All Pictures"
+msgstr "Всі зображення"
+
+#: kio/jobuidelegate.cpp:155 ../kfile/kdiroperator.cpp:802
+msgid "Do you really want to delete this item?"
+msgid_plural "Do you really want to delete these %1 items?"
+msgstr[0] "Дійсно вилучити цей %1 об’єкт?"
+msgstr[1] "Дійсно вилучити ці %1 об’єкти?"
+msgstr[2] "Дійсно вилучити ці %1 об’єктів?"
+msgstr[3] "Дійсно вилучити цей об’єкт?"
+
+#: kio/jobuidelegate.cpp:157 ../kfile/kdiroperator.cpp:804
+msgid "Delete Files"
+msgstr "Стерти файли"
+
+#: kio/jobuidelegate.cpp:165
+msgctxt "@info"
+msgid ""
+"Do you want to permanently delete all items from Trash? This action cannot "
+"be undone."
+msgstr ""
+"Бажаєте остаточно вилучити всі об’єкти з теки смітника? Відновити вилучені "
+"таким чином об’єкти буде дуже важко."
+
+#: kio/jobuidelegate.cpp:167 ../kfile/kfileplacesview.cpp:644
+msgctxt "@action:button"
+msgid "Empty Trash"
+msgstr "Спорожнити Смітник"
+
+#: kio/jobuidelegate.cpp:176
+msgid "Do you really want to move this item to the trash?"
+msgid_plural "Do you really want to move these %1 items to the trash?"
+msgstr[0] "Дійсно пересунути цей %1 об’єкт у смітник?"
+msgstr[1] "Дійсно пересунути ці %1 об’єкти у смітник?"
+msgstr[2] "Дійсно пересунути ці %1 об’єктів у смітник?"
+msgstr[3] "Дійсно пересунути цей об’єкт у смітник?"
+
+#: kio/jobuidelegate.cpp:178 ../kfile/kdiroperator.cpp:1849
+msgid "Move to Trash"
+msgstr "Пересунути в смітник"
+
+#: kio/jobuidelegate.cpp:179
+msgctxt "Verb"
+msgid "&Trash"
+msgstr "&Викинути"
+
+#: kio/jobuidelegate.cpp:273
+msgid "The peer SSL certificate chain appears to be corrupt."
+msgstr "Схоже, що SSL сертифікат вузла пошкоджений."
+
+#: kio/jobuidelegate.cpp:274 kio/tcpslavebase.cpp:766
+msgid "SSL"
+msgstr "SSL"
+
+#: kio/accessmanager.cpp:195
+msgid "Blocked request."
+msgstr "Заблокований запит."
+
+#: kio/accessmanager.cpp:266
+msgid "Unknown HTTP verb."
+msgstr "Невідома дія HTTP."
+
+#: kio/kdirmodel.cpp:968
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Назва"
+
+#: kio/kdirmodel.cpp:970
+msgctxt "@title:column"
+msgid "Size"
+msgstr "Розмір"
+
+#: kio/kdirmodel.cpp:972
+msgctxt "@title:column"
+msgid "Date"
+msgstr "Дата"
+
+#: kio/kdirmodel.cpp:974
+msgctxt "@title:column"
+msgid "Permissions"
+msgstr "Права доступу"
+
+#: kio/kdirmodel.cpp:976
+msgctxt "@title:column"
+msgid "Owner"
+msgstr "Власник"
+
+#: kio/kdirmodel.cpp:978
+msgctxt "@title:column"
+msgid "Group"
+msgstr "Група"
+
+#: kio/kdirmodel.cpp:980
+msgctxt "@title:column"
+msgid "Type"
+msgstr "Тип"
+
+#: kio/kmimetypechooser.cpp:82
+msgid "Mime Type"
+msgstr "Тип Mime"
+
+#: kio/kmimetypechooser.cpp:85
+msgid "Comment"
+msgstr "Коментар"
+
+#: kio/kmimetypechooser.cpp:88
+msgid "Patterns"
+msgstr "Взірці"
+
+#: kio/kmimetypechooser.cpp:102
+msgid "&Edit..."
+msgstr "&Редагування..."
+
+#: kio/kmimetypechooser.cpp:112
+msgid "Click this button to display the familiar KDE mime type editor."
+msgstr "Натисніть цю кнопку, щоб запустити редактор типів MIME для KDE."
 
 #: kio/chmodjob.cpp:212
 msgid ""
@@ -769,13 +1600,278 @@ msgstr ""
 msgid "&Skip File"
 msgstr "Проп&устити файл"
 
-#: kio/accessmanager.cpp:195
-msgid "Blocked request."
-msgstr "Заблокований запит."
+#: kio/connection.cpp:213
+msgid "Unable to create io-slave: %1"
+msgstr "Неможливо створити io-slave: %1"
 
-#: kio/accessmanager.cpp:266
-msgid "Unknown HTTP verb."
-msgstr "Невідома дія HTTP."
+#: kio/kdirlister.cpp:393 kio/renamedialog.cpp:411 kio/krun.cpp:1116
+#: kio/paste.cpp:320
+msgid ""
+"Malformed URL\n"
+"%1"
+msgstr ""
+"Помилка в URL\n"
+"%1"
+
+#: kio/kdirlister.cpp:403
+msgid ""
+"URL cannot be listed\n"
+"%1"
+msgstr ""
+"Неможливо показати URL\n"
+"%1"
+
+#: kio/netaccess.cpp:104
+msgid "File '%1' is not readable"
+msgstr "Неможливо прочитати файл «%1»"
+
+#: kio/netaccess.cpp:421
+msgid "ERROR: Unknown protocol '%1'"
+msgstr "ПОМИЛКА: невідомий протокол «%1»"
+
+#: kio/fileundomanager.cpp:117
+msgid "Creating directory"
+msgstr "Створення теки"
+
+#: kio/fileundomanager.cpp:118 kio/job.cpp:141
+msgid "Directory"
+msgstr "Тека"
+
+#: kio/fileundomanager.cpp:120
+msgid "Moving"
+msgstr "Пересування"
+
+#: kio/fileundomanager.cpp:121 kio/job.cpp:127 kio/job.cpp:134 kio/job.cpp:159
+msgctxt "The source of a file operation"
+msgid "Source"
+msgstr "Джерело"
+
+#: kio/fileundomanager.cpp:122 kio/job.cpp:128 kio/job.cpp:135
+msgctxt "The destination of a file operation"
+msgid "Destination"
+msgstr "Призначення"
+
+#: kio/fileundomanager.cpp:124
+msgid "Deleting"
+msgstr "Вилучення"
+
+#: kio/fileundomanager.cpp:125 kio/job.cpp:147 kio/job.cpp:153
+msgid "File"
+msgstr "Файл"
+
+#: kio/fileundomanager.cpp:286
+msgid "Und&o"
+msgstr "&Скасувати"
+
+#: kio/fileundomanager.cpp:291
+msgid "Und&o: Copy"
+msgstr "&Скасувати: Копіювання"
+
+#: kio/fileundomanager.cpp:293
+msgid "Und&o: Link"
+msgstr "&Скасувати: Створення посилання"
+
+#: kio/fileundomanager.cpp:295
+msgid "Und&o: Move"
+msgstr "&Скасувати: Пересування"
+
+#: kio/fileundomanager.cpp:297
+msgid "Und&o: Rename"
+msgstr "&Скасувати: Перейменування"
+
+#: kio/fileundomanager.cpp:299
+msgid "Und&o: Trash"
+msgstr "&Скасувати: Викидання"
+
+#: kio/fileundomanager.cpp:301
+msgid "Und&o: Create Folder"
+msgstr "&Скасувати: Створення теки"
+
+#: kio/fileundomanager.cpp:303
+msgid "Und&o: Create File"
+msgstr "&Скасувати: Створення файла"
+
+#: kio/fileundomanager.cpp:777
+msgid ""
+"The file %1 was copied from %2, but since then it has apparently been "
+"modified at %3.\n"
+"Undoing the copy will delete the file, and all modifications will be lost.\n"
+"Are you sure you want to delete %4?"
+msgstr ""
+"Файл %1 було скопійовано з %2, але з того часу його було змінено о %3.\n"
+"Скасування дії копіювання вилучить цей файл, отже, всі зміни буде втрачено.\n"
+"Ви справді бажаєте вилучити %4?"
+
+#: kio/fileundomanager.cpp:780
+msgid "Undo File Copy Confirmation"
+msgstr "Підтвердження скасування копіювання файла"
+
+#: kio/kfileitem.cpp:1145
+msgid "(Symbolic Link to %1)"
+msgstr "(Символічне посилання на %1)"
+
+#: kio/kfileitem.cpp:1147
+msgid "(%1, Link to %2)"
+msgstr "(%1, посилання на %2)"
+
+#: kio/kfileitem.cpp:1151
+msgid " (Points to %1)"
+msgstr " (Вказує до %1)"
+
+#: kio/kfileitemactions.cpp:405
+msgctxt "@title:menu"
+msgid "&Actions"
+msgstr "&Дії"
+
+#: kio/kfileitemactions.cpp:535
+msgid "&Open with %1"
+msgstr "В&ідкрити за допомогою %1"
+
+#: kio/kfileitemactions.cpp:546 ../kfile/kfilewidget.cpp:1972
+msgid "&Open"
+msgstr "&Відкрити"
+
+#: kio/kfileitemactions.cpp:561
+msgctxt "@title:menu"
+msgid "&Open With"
+msgstr "В&ідкрити за допомогою"
+
+#: kio/kfileitemactions.cpp:578
+msgctxt "@action:inmenu Open With"
+msgid "&Other..."
+msgstr "Ін&ша..."
+
+#: kio/kfileitemactions.cpp:580 kio/kfileitemactions.cpp:593
+msgctxt "@title:menu"
+msgid "&Open With..."
+msgstr "Від&крити за допомогою..."
+
+#: kio/kfileitemactions.cpp:696
+msgid "Open &with %1"
+msgstr "Відкрити &за допомогою %1"
+
+#: kio/kfileitemactions.cpp:698
+msgctxt "@item:inmenu Open With, %1 is application name"
+msgid "%1"
+msgstr "%1"
+
+#: kio/renamedialog.cpp:131
+msgid "Appl&y to All"
+msgstr "Зас&тосувати до всіх"
+
+#: kio/renamedialog.cpp:132
+msgid ""
+"When this is checked the button pressed will be applied to all subsequent "
+"folder conflicts for the remainder of the current job.\n"
+"Unless you press Skip you will still be prompted in case of a conflict with "
+"an existing file in the directory."
+msgstr ""
+"Якщо ви позначите цей пункт, вибір варіанта розв’язання конфлікту, зроблений "
+"за допомогою натискання відповідної кнопки, буде застосовано до всіх "
+"конфліктів з теками до завершення поточного завдання.\n"
+"Якщо ви не натиснете кнопку «Пропустити», програма запитуватиме вас, якщо "
+"зустрінеться з конфліктами щодо файлів у каталозі."
+
+#: kio/renamedialog.cpp:133
+msgid ""
+"When this is checked the button pressed will be applied to all subsequent "
+"conflicts for the remainder of the current job."
+msgstr ""
+"Якщо ви позначите цей пункт, вибір варіанта розв’язання конфлікту, зроблений "
+"за допомогою натискання відповідної кнопки, буде застосовано до всіх "
+"конфліктів до завершення поточного завдання."
+
+#: kio/renamedialog.cpp:138
+msgid "&Rename"
+msgstr "П&ерейменувати"
+
+#: kio/renamedialog.cpp:140
+msgid "Suggest New &Name"
+msgstr "Запропонувати нову &назву"
+
+#: kio/renamedialog.cpp:146
+msgid "&Skip"
+msgstr "Проп&устити"
+
+#: kio/renamedialog.cpp:147
+msgid "Do not copy or move this folder, skip to the next item instead"
+msgstr ""
+"Не копіювати або не пересувати цієї теки, замість цього перейти до "
+"наступного елемента"
+
+#: kio/renamedialog.cpp:148
+msgid "Do not copy or move this file, skip to the next item instead"
+msgstr ""
+"Не копіювати або не пересувати цього файла, замість цього перейти до "
+"наступного елемента"
+
+#: kio/renamedialog.cpp:153
+msgctxt "Write files into an existing folder"
+msgid "&Write Into"
+msgstr "&Записати"
+
+#: kio/renamedialog.cpp:153
+msgid "&Overwrite"
+msgstr "П&ерезаписати"
+
+#: kio/renamedialog.cpp:155
+msgid ""
+"Files and folders will be copied into the existing directory, alongside its "
+"existing contents.\n"
+"You will be prompted again in case of a conflict with an existing file in "
+"the directory."
+msgstr ""
+"Файли і теки буде скопійовано до каталогу, поряд з вже наявним там вмістом.\n"
+"У разі конфлікту з файлом, що вже існує у каталозі, програма знову надішле "
+"вам запит на виконання дії."
+
+#: kio/renamedialog.cpp:160
+msgid "&Resume"
+msgstr "&Продовжити"
+
+#: kio/renamedialog.cpp:169
+msgid ""
+"This action would overwrite '%1' with itself.\n"
+"Please enter a new file name:"
+msgstr ""
+"Ця дія призведе до перезапису «%1» самим собою.\n"
+"Будь ласка, введіть нову назву файла:"
+
+#: kio/renamedialog.cpp:173
+msgid "C&ontinue"
+msgstr "Пр&одовжити"
+
+#: kio/renamedialog.cpp:227
+msgid "This action will overwrite the destination."
+msgstr "Ця дія призведе до перезапису файла у теці призначення."
+
+#: kio/renamedialog.cpp:229
+msgid "Source"
+msgstr "Джерело"
+
+#: kio/renamedialog.cpp:230
+msgid "Destination"
+msgstr "Призначення"
+
+#: kio/renamedialog.cpp:236
+msgid "Warning, the destination is more recent."
+msgstr "Попередження: файл у теці призначення новіший за копійований."
+
+#: kio/renamedialog.cpp:267
+msgid "An older item named '%1' already exists."
+msgstr "Вже існує старіший варіант за назвою «%1»."
+
+#: kio/renamedialog.cpp:269
+msgid "A similar file named '%1' already exists."
+msgstr "Схожий файл з назвою «%1» вже існує."
+
+#: kio/renamedialog.cpp:271
+msgid "A more recent item named '%1' already exists."
+msgstr "Вже існує новіший варіант за назвою «%1»."
+
+#: kio/renamedialog.cpp:282
+msgid "Rename:"
+msgstr "Перейменувати:"
 
 #: kio/kdesktopfileactions.cpp:64
 msgid "The desktop entry file %1 has no Type=... entry."
@@ -824,99 +1920,50 @@ msgstr "Виштовхнути"
 msgid "Unmount"
 msgstr "Демонтувати"
 
-#: kio/paste.cpp:83 kio/paste.cpp:176
-msgid "Filename for clipboard content:"
-msgstr "Назва файла для вмісту кишені:"
+#: kio/kbuildsycocaprogressdialog.cpp:44
+msgid "Updating System Configuration"
+msgstr "Оновлення налаштувань системи"
 
-#: kio/paste.cpp:169
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
+#: kio/kbuildsycocaprogressdialog.cpp:45
+msgid "Updating system configuration."
+msgstr "Оновлення налаштувань системи."
 
-#: kio/paste.cpp:185
+#: kio/kemailsettings.cpp:251 kio/kemailsettings.cpp:254
+#: kio/kemailsettings.cpp:261
+msgid "Default"
+msgstr "Типовий"
+
+#: kio/kdbusservicestarter.cpp:75
+msgid "No service implementing %1"
+msgstr "Немає служби, що реалізує роботу з %1"
+
+#: kio/slavebase.h:265 kio/slavebase.h:285
+msgid "&Yes"
+msgstr "&Так"
+
+#: kio/slavebase.h:266 kio/slavebase.h:286
+msgid "&No"
+msgstr "&Ні"
+
+#: kio/slave.cpp:434
+msgid "Unknown protocol '%1'."
+msgstr "Невідомий протокол «%1»."
+
+#: kio/slave.cpp:443
+msgid "Can not find io-slave for protocol '%1'."
+msgstr "Неможливо знайти підлеглий В/В для протоколу «%1»."
+
+#: kio/slave.cpp:462
+msgid "Cannot talk to klauncher: %1"
+msgstr "Не вдалося зв'язатися з klauncher: %1"
+
+#: kio/slave.cpp:470
 msgid ""
-"The clipboard has changed since you used 'paste': the chosen data format is "
-"no longer applicable. Please copy again what you wanted to paste."
+"Unable to create io-slave:\n"
+"klauncher said: %1"
 msgstr ""
-"Вміст кишені змінився від того часу, як ви востаннє користувалися дією "
-"«вставити»: вибраний формат даних вже не підходить. Будь ласка, скопіюйте "
-"знов те, що ви хотіли вставити."
-
-#: kio/paste.cpp:260
-msgid "The clipboard is empty"
-msgstr "Кишеня порожня"
-
-#: kio/paste.cpp:320 kio/kdirlister.cpp:393 kio/krun.cpp:1116
-#: kio/renamedialog.cpp:411
-msgid ""
-"Malformed URL\n"
-"%1"
-msgstr ""
-"Помилка в URL\n"
-"%1"
-
-#: kio/paste.cpp:372
-msgid "&Paste File"
-msgid_plural "&Paste %1 Files"
-msgstr[0] "&Вставити %1 файл"
-msgstr[1] "&Вставити %1 файли"
-msgstr[2] "&Вставити %1 файлів"
-msgstr[3] "&Вставити файл"
-
-#: kio/paste.cpp:374
-msgid "&Paste URL"
-msgid_plural "&Paste %1 URLs"
-msgstr[0] "&Вставити %1 адресу"
-msgstr[1] "&Вставити %1 адреси"
-msgstr[2] "&Вставити %1 адрес"
-msgstr[3] "&Вставити адресу"
-
-#: kio/paste.cpp:376
-msgid "&Paste Clipboard Contents"
-msgstr "&Вставити вміст кишені"
-
-#: kio/kdirlister.cpp:403
-msgid ""
-"URL cannot be listed\n"
-"%1"
-msgstr ""
-"Неможливо показати URL\n"
-"%1"
-
-#: kio/kmimetypechooser.cpp:82
-msgid "Mime Type"
-msgstr "Тип Mime"
-
-#: kio/kmimetypechooser.cpp:85
-msgid "Comment"
-msgstr "Коментар"
-
-#: kio/kmimetypechooser.cpp:88
-msgid "Patterns"
-msgstr "Взірці"
-
-#: kio/kmimetypechooser.cpp:102
-msgid "&Edit..."
-msgstr "&Редагування..."
-
-#: kio/kmimetypechooser.cpp:112
-msgid "Click this button to display the familiar KDE mime type editor."
-msgstr "Натисніть цю кнопку, щоб запустити редактор типів MIME для KDE."
-
-#: kio/kimageio.cpp:43
-msgid "All Pictures"
-msgstr "Всі зображення"
-
-#: kio/skipdialog.cpp:37
-msgid "Information"
-msgstr "Інформація"
-
-#: kio/skipdialog.cpp:44
-msgid "Skip"
-msgstr "Пропустити"
-
-#: kio/skipdialog.cpp:47
-msgid "AutoSkip"
-msgstr "Автоматично пропускати"
+"Неможливо створити io-slave:\n"
+"повідомлення klauncher: %1"
 
 #: kio/global.cpp:90
 msgid "1 day %2"
@@ -1785,10 +2832,6 @@ msgstr "Вилучіть поточний файл і повторіть спр�
 #: kio/global.cpp:652
 msgid "Choose an alternate filename for the new file."
 msgstr "Виберіть іншу назву для нового файла."
-
-#: kio/global.cpp:656 kio/copyjob.cpp:1076
-msgid "Folder Already Exists"
-msgstr "Тека вже існує"
 
 #: kio/global.cpp:657
 msgid ""
@@ -2673,10 +3716,6 @@ msgstr "Не вдалося відкрити сертифікат. Спробу�
 msgid "The procedure to set the client certificate for the session failed."
 msgstr "Процедура встановлення сертифіката клієнта для сеансу зазнала невдачі."
 
-#: kio/tcpslavebase.cpp:766 kio/jobuidelegate.cpp:274
-msgid "SSL"
-msgstr "SSL"
-
 #: kio/tcpslavebase.cpp:947
 msgid ""
 "You have indicated that you wish to accept this certificate, but it is not "
@@ -2693,55 +3732,67 @@ msgstr ""
 "SSL-сертифікат було відкинуто відповідно до налаштувань. Ви можете змінити "
 "цю поведінку в Системних параметрах KDE."
 
-#: kio/kemailsettings.cpp:251 kio/kemailsettings.cpp:254
-#: kio/kemailsettings.cpp:261
-msgid "Default"
-msgstr "Типовий"
+#: kio/job.cpp:126
+msgctxt "@title job"
+msgid "Moving"
+msgstr "Пересування"
 
-#: kio/kscan.cpp:50
-msgid "Acquire Image"
-msgstr "Отримати зображення"
+#: kio/job.cpp:133
+msgctxt "@title job"
+msgid "Copying"
+msgstr "Копіювання"
 
-#: kio/kscan.cpp:99
-msgid "OCR Image"
-msgstr "Зображення ОРЗ (OCR)"
+#: kio/job.cpp:140
+msgctxt "@title job"
+msgid "Creating directory"
+msgstr "Створення теки"
 
-#: kio/kfileitemactions.cpp:405
-msgctxt "@title:menu"
-msgid "&Actions"
-msgstr "&Дії"
+#: kio/job.cpp:146
+msgctxt "@title job"
+msgid "Deleting"
+msgstr "Вилучення"
 
-#: kio/kfileitemactions.cpp:535
-msgid "&Open with %1"
-msgstr "В&ідкрити за допомогою %1"
+#: kio/job.cpp:152
+msgctxt "@title job"
+msgid "Examining"
+msgstr "Перевірка"
 
-#: kio/kfileitemactions.cpp:546 ../kfile/kfilewidget.cpp:1972
-msgid "&Open"
-msgstr "&Відкрити"
+#: kio/job.cpp:158
+msgctxt "@title job"
+msgid "Transferring"
+msgstr "Перенесення"
 
-#: kio/kfileitemactions.cpp:561
-msgctxt "@title:menu"
-msgid "&Open With"
-msgstr "В&ідкрити за допомогою"
+#: kio/job.cpp:164
+msgctxt "@title job"
+msgid "Mounting"
+msgstr "Монтування"
 
-#: kio/kfileitemactions.cpp:578
-msgctxt "@action:inmenu Open With"
-msgid "&Other..."
-msgstr "Ін&ша..."
+#: kio/job.cpp:165
+msgid "Device"
+msgstr "Пристрій"
 
-#: kio/kfileitemactions.cpp:580 kio/kfileitemactions.cpp:593
-msgctxt "@title:menu"
-msgid "&Open With..."
-msgstr "Від&крити за допомогою..."
+#: kio/job.cpp:166 kio/job.cpp:172
+msgid "Mountpoint"
+msgstr "Точка монтування"
 
-#: kio/kfileitemactions.cpp:696
-msgid "Open &with %1"
-msgstr "Відкрити &за допомогою %1"
+#: kio/job.cpp:171
+msgctxt "@title job"
+msgid "Unmounting"
+msgstr "Демонтування"
 
-#: kio/kfileitemactions.cpp:698
-msgctxt "@item:inmenu Open With, %1 is application name"
-msgid "%1"
-msgstr "%1"
+#: kio/kfileitemdelegate.cpp:236
+msgctxt "Items in a folder"
+msgid "1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 об’єкт"
+msgstr[1] "%1 об’єкти"
+msgstr[2] "%1 об’єктів"
+msgstr[3] "%1 об’єкт"
+
+#: kio/kfileitemdelegate.cpp:292 kio/kfileitemdelegate.cpp:296
+msgctxt "@info mimetype"
+msgid "Unknown"
+msgstr "Невідомо"
 
 #: kio/krun.cpp:123
 msgid ""
@@ -2816,846 +3867,118 @@ msgstr ""
 msgid "Could not find the program '%1'"
 msgstr "Не вдалося знайти програму «%1»"
 
-#: kio/kdbusservicestarter.cpp:75
-msgid "No service implementing %1"
-msgstr "Немає служби, що реалізує роботу з %1"
+#: kio/paste.cpp:83 kio/paste.cpp:176
+msgid "Filename for clipboard content:"
+msgstr "Назва файла для вмісту кишені:"
 
-#: kio/jobuidelegate.cpp:155 ../kfile/kdiroperator.cpp:802
-msgid "Do you really want to delete this item?"
-msgid_plural "Do you really want to delete these %1 items?"
-msgstr[0] "Дійсно вилучити цей %1 об’єкт?"
-msgstr[1] "Дійсно вилучити ці %1 об’єкти?"
-msgstr[2] "Дійсно вилучити ці %1 об’єктів?"
-msgstr[3] "Дійсно вилучити цей об’єкт?"
+#: kio/paste.cpp:169
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
 
-#: kio/jobuidelegate.cpp:157 ../kfile/kdiroperator.cpp:804
-msgid "Delete Files"
-msgstr "Стерти файли"
-
-#: kio/jobuidelegate.cpp:165
-msgctxt "@info"
+#: kio/paste.cpp:185
 msgid ""
-"Do you want to permanently delete all items from Trash? This action cannot "
-"be undone."
+"The clipboard has changed since you used 'paste': the chosen data format is "
+"no longer applicable. Please copy again what you wanted to paste."
 msgstr ""
-"Бажаєте остаточно вилучити всі об’єкти з теки смітника? Відновити вилучені "
-"таким чином об’єкти буде дуже важко."
+"Вміст кишені змінився від того часу, як ви востаннє користувалися дією "
+"«вставити»: вибраний формат даних вже не підходить. Будь ласка, скопіюйте "
+"знов те, що ви хотіли вставити."
 
-#: kio/jobuidelegate.cpp:167 ../kfile/kfileplacesview.cpp:644
-msgctxt "@action:button"
-msgid "Empty Trash"
-msgstr "Спорожнити Смітник"
+#: kio/paste.cpp:260
+msgid "The clipboard is empty"
+msgstr "Кишеня порожня"
 
-#: kio/jobuidelegate.cpp:176
-msgid "Do you really want to move this item to the trash?"
-msgid_plural "Do you really want to move these %1 items to the trash?"
-msgstr[0] "Дійсно пересунути цей %1 об’єкт у смітник?"
-msgstr[1] "Дійсно пересунути ці %1 об’єкти у смітник?"
-msgstr[2] "Дійсно пересунути ці %1 об’єктів у смітник?"
-msgstr[3] "Дійсно пересунути цей об’єкт у смітник?"
+#: kio/paste.cpp:372
+msgid "&Paste File"
+msgid_plural "&Paste %1 Files"
+msgstr[0] "&Вставити %1 файл"
+msgstr[1] "&Вставити %1 файли"
+msgstr[2] "&Вставити %1 файлів"
+msgstr[3] "&Вставити файл"
 
-#: kio/jobuidelegate.cpp:178 ../kfile/kdiroperator.cpp:1849
-msgid "Move to Trash"
-msgstr "Пересунути в смітник"
+#: kio/paste.cpp:374
+msgid "&Paste URL"
+msgid_plural "&Paste %1 URLs"
+msgstr[0] "&Вставити %1 адресу"
+msgstr[1] "&Вставити %1 адреси"
+msgstr[2] "&Вставити %1 адрес"
+msgstr[3] "&Вставити адресу"
 
-#: kio/jobuidelegate.cpp:179
-msgctxt "Verb"
-msgid "&Trash"
-msgstr "&Викинути"
-
-#: kio/jobuidelegate.cpp:273
-msgid "The peer SSL certificate chain appears to be corrupt."
-msgstr "Схоже, що SSL сертифікат вузла пошкоджений."
-
-#: kio/kbuildsycocaprogressdialog.cpp:44
-msgid "Updating System Configuration"
-msgstr "Оновлення налаштувань системи"
-
-#: kio/kbuildsycocaprogressdialog.cpp:45
-msgid "Updating system configuration."
-msgstr "Оновлення налаштувань системи."
-
-#: kio/renamedialog.cpp:131
-msgid "Appl&y to All"
-msgstr "Зас&тосувати до всіх"
-
-#: kio/renamedialog.cpp:132
-msgid ""
-"When this is checked the button pressed will be applied to all subsequent "
-"folder conflicts for the remainder of the current job.\n"
-"Unless you press Skip you will still be prompted in case of a conflict with "
-"an existing file in the directory."
-msgstr ""
-"Якщо ви позначите цей пункт, вибір варіанта розв’язання конфлікту, зроблений "
-"за допомогою натискання відповідної кнопки, буде застосовано до всіх "
-"конфліктів з теками до завершення поточного завдання.\n"
-"Якщо ви не натиснете кнопку «Пропустити», програма запитуватиме вас, якщо "
-"зустрінеться з конфліктами щодо файлів у каталозі."
-
-#: kio/renamedialog.cpp:133
-msgid ""
-"When this is checked the button pressed will be applied to all subsequent "
-"conflicts for the remainder of the current job."
-msgstr ""
-"Якщо ви позначите цей пункт, вибір варіанта розв’язання конфлікту, зроблений "
-"за допомогою натискання відповідної кнопки, буде застосовано до всіх "
-"конфліктів до завершення поточного завдання."
-
-#: kio/renamedialog.cpp:138
-msgid "&Rename"
-msgstr "П&ерейменувати"
-
-#: kio/renamedialog.cpp:140
-msgid "Suggest New &Name"
-msgstr "Запропонувати нову &назву"
-
-#: kio/renamedialog.cpp:146
-msgid "&Skip"
-msgstr "Проп&устити"
-
-#: kio/renamedialog.cpp:147
-msgid "Do not copy or move this folder, skip to the next item instead"
-msgstr ""
-"Не копіювати або не пересувати цієї теки, замість цього перейти до "
-"наступного елемента"
-
-#: kio/renamedialog.cpp:148
-msgid "Do not copy or move this file, skip to the next item instead"
-msgstr ""
-"Не копіювати або не пересувати цього файла, замість цього перейти до "
-"наступного елемента"
-
-#: kio/renamedialog.cpp:153
-msgctxt "Write files into an existing folder"
-msgid "&Write Into"
-msgstr "&Записати"
-
-#: kio/renamedialog.cpp:153
-msgid "&Overwrite"
-msgstr "П&ерезаписати"
-
-#: kio/renamedialog.cpp:155
-msgid ""
-"Files and folders will be copied into the existing directory, alongside its "
-"existing contents.\n"
-"You will be prompted again in case of a conflict with an existing file in "
-"the directory."
-msgstr ""
-"Файли і теки буде скопійовано до каталогу, поряд з вже наявним там вмістом.\n"
-"У разі конфлікту з файлом, що вже існує у каталозі, програма знову надішле "
-"вам запит на виконання дії."
-
-#: kio/renamedialog.cpp:160
-msgid "&Resume"
-msgstr "&Продовжити"
-
-#: kio/renamedialog.cpp:169
-msgid ""
-"This action would overwrite '%1' with itself.\n"
-"Please enter a new file name:"
-msgstr ""
-"Ця дія призведе до перезапису «%1» самим собою.\n"
-"Будь ласка, введіть нову назву файла:"
-
-#: kio/renamedialog.cpp:173
-msgid "C&ontinue"
-msgstr "Пр&одовжити"
-
-#: kio/renamedialog.cpp:227
-msgid "This action will overwrite the destination."
-msgstr "Ця дія призведе до перезапису файла у теці призначення."
-
-#: kio/renamedialog.cpp:229
-msgid "Source"
-msgstr "Джерело"
-
-#: kio/renamedialog.cpp:230
-msgid "Destination"
-msgstr "Призначення"
-
-#: kio/renamedialog.cpp:236
-msgid "Warning, the destination is more recent."
-msgstr "Попередження: файл у теці призначення новіший за копійований."
-
-#: kio/renamedialog.cpp:267
-msgid "An older item named '%1' already exists."
-msgstr "Вже існує старіший варіант за назвою «%1»."
-
-#: kio/renamedialog.cpp:269
-msgid "A similar file named '%1' already exists."
-msgstr "Схожий файл з назвою «%1» вже існує."
-
-#: kio/renamedialog.cpp:271
-msgid "A more recent item named '%1' already exists."
-msgstr "Вже існує новіший варіант за назвою «%1»."
-
-#: kio/renamedialog.cpp:282
-msgid "Rename:"
-msgstr "Перейменувати:"
-
-#: kio/kdirmodel.cpp:968
-msgctxt "@title:column"
-msgid "Name"
-msgstr "Назва"
-
-#: kio/kdirmodel.cpp:970
-msgctxt "@title:column"
-msgid "Size"
-msgstr "Розмір"
-
-#: kio/kdirmodel.cpp:972
-msgctxt "@title:column"
-msgid "Date"
-msgstr "Дата"
-
-#: kio/kdirmodel.cpp:974
-msgctxt "@title:column"
-msgid "Permissions"
-msgstr "Права доступу"
-
-#: kio/kdirmodel.cpp:976
-msgctxt "@title:column"
-msgid "Owner"
-msgstr "Власник"
-
-#: kio/kdirmodel.cpp:978
-msgctxt "@title:column"
-msgid "Group"
-msgstr "Група"
-
-#: kio/kdirmodel.cpp:980
-msgctxt "@title:column"
-msgid "Type"
-msgstr "Тип"
-
-#: kio/fileundomanager.cpp:117
-msgid "Creating directory"
-msgstr "Створення теки"
-
-#: kio/fileundomanager.cpp:120
-msgid "Moving"
-msgstr "Пересування"
-
-#: kio/fileundomanager.cpp:124
-msgid "Deleting"
-msgstr "Вилучення"
-
-#: kio/fileundomanager.cpp:286
-msgid "Und&o"
-msgstr "&Скасувати"
-
-#: kio/fileundomanager.cpp:291
-msgid "Und&o: Copy"
-msgstr "&Скасувати: Копіювання"
-
-#: kio/fileundomanager.cpp:293
-msgid "Und&o: Link"
-msgstr "&Скасувати: Створення посилання"
-
-#: kio/fileundomanager.cpp:295
-msgid "Und&o: Move"
-msgstr "&Скасувати: Пересування"
-
-#: kio/fileundomanager.cpp:297
-msgid "Und&o: Rename"
-msgstr "&Скасувати: Перейменування"
-
-#: kio/fileundomanager.cpp:299
-msgid "Und&o: Trash"
-msgstr "&Скасувати: Викидання"
-
-#: kio/fileundomanager.cpp:301
-msgid "Und&o: Create Folder"
-msgstr "&Скасувати: Створення теки"
-
-#: kio/fileundomanager.cpp:303
-msgid "Und&o: Create File"
-msgstr "&Скасувати: Створення файла"
-
-#: kio/fileundomanager.cpp:777
-msgid ""
-"The file %1 was copied from %2, but since then it has apparently been "
-"modified at %3.\n"
-"Undoing the copy will delete the file, and all modifications will be lost.\n"
-"Are you sure you want to delete %4?"
-msgstr ""
-"Файл %1 було скопійовано з %2, але з того часу його було змінено о %3.\n"
-"Скасування дії копіювання вилучить цей файл, отже, всі зміни буде втрачено.\n"
-"Ви справді бажаєте вилучити %4?"
-
-#: kio/fileundomanager.cpp:780
-msgid "Undo File Copy Confirmation"
-msgstr "Підтвердження скасування копіювання файла"
-
-#: kio/kfileitem.cpp:1145
-msgid "(Symbolic Link to %1)"
-msgstr "(Символічне посилання на %1)"
-
-#: kio/kfileitem.cpp:1147
-msgid "(%1, Link to %2)"
-msgstr "(%1, посилання на %2)"
-
-#: kio/kfileitem.cpp:1151
-msgid " (Points to %1)"
-msgstr " (Вказує до %1)"
-
-#: kio/copyjob.cpp:1401 kio/copyjob.cpp:1984
-msgid "Already Exists as Folder"
-msgstr "Вже існує як тека"
+#: kio/paste.cpp:376
+msgid "&Paste Clipboard Contents"
+msgstr "&Вставити вміст кишені"
 
 #: kio/pastedialog.cpp:55
 msgid "Data format:"
 msgstr "Формат даних:"
 
-#: kio/kfileitemdelegate.cpp:236
-msgctxt "Items in a folder"
-msgid "1 item"
-msgid_plural "%1 items"
-msgstr[0] "%1 об’єкт"
-msgstr[1] "%1 об’єкти"
-msgstr[2] "%1 об’єктів"
-msgstr[3] "%1 об’єкт"
-
-#: kio/kfileitemdelegate.cpp:292 kio/kfileitemdelegate.cpp:296
-msgctxt "@info mimetype"
-msgid "Unknown"
-msgstr "Невідомо"
-
-#: kio/netaccess.cpp:104
-msgid "File '%1' is not readable"
-msgstr "Неможливо прочитати файл «%1»"
-
-#: kio/netaccess.cpp:421
-msgid "ERROR: Unknown protocol '%1'"
-msgstr "ПОМИЛКА: невідомий протокол «%1»"
-
-#: kio/passworddialog.cpp:57
-msgid "Authorization Dialog"
-msgstr "Діалогове вікно уповноваження"
-
-#: bookmarks/kbookmarkmenu.cc:267
-msgid "Add Bookmark Here"
-msgstr "Додати закладку"
-
-#: bookmarks/kbookmarkmenu.cc:272
-msgid "Open Folder in Bookmark Editor"
-msgstr "Відкрити теку в редакторі закладок"
-
-#: bookmarks/kbookmarkmenu.cc:275
-msgid "Delete Folder"
-msgstr "Стерти теку"
-
-#: bookmarks/kbookmarkmenu.cc:281 ../kfile/kdiroperator.cpp:1958
-msgid "Properties"
-msgstr "Властивості"
-
-#: bookmarks/kbookmarkmenu.cc:286
-msgid "Copy Link Address"
-msgstr "Скопіювати адресу посилання"
-
-#: bookmarks/kbookmarkmenu.cc:289
-msgid "Delete Bookmark"
-msgstr "Стерти закладку"
-
-#: bookmarks/kbookmarkmenu.cc:295 bookmarks/kbookmarkmenu.cc:454
-msgid "Open Folder in Tabs"
-msgstr "Відкрити теку у вкладках"
-
-#: bookmarks/kbookmarkmenu.cc:320
-msgid "Cannot add bookmark with empty URL."
-msgstr "Не можна додавати закладку з порожньою адресою (URL)."
-
-#: bookmarks/kbookmarkmenu.cc:352
-msgid ""
-"Are you sure you wish to remove the bookmark folder\n"
-"\"%1\"?"
-msgstr ""
-"Ви впевнені, що бажаєте вилучити теку закладок\n"
-"«%1»?"
-
-#: bookmarks/kbookmarkmenu.cc:353
-msgid ""
-"Are you sure you wish to remove the bookmark\n"
-"\"%1\"?"
-msgstr ""
-"Ви впевнені, що бажаєте вилучити закладку\n"
-"«%1»?"
-
-#: bookmarks/kbookmarkmenu.cc:354
-msgid "Bookmark Folder Deletion"
-msgstr "Стирання теки закладок"
-
-#: bookmarks/kbookmarkmenu.cc:355
-msgid "Bookmark Deletion"
-msgstr "Стирання закладки"
-
-#: bookmarks/kbookmarkmenu.cc:458
-msgid "Open all bookmarks in this folder as a new tab."
-msgstr "Відкрити всі закладки в цій теці як нові вкладки."
-
-#: bookmarks/kbookmarkmenu.cc:471
-msgid "Bookmark Tabs as Folder..."
-msgstr "Зробити з вкладок теку закладок..."
-
-#: bookmarks/kbookmarkmenu.cc:475
-msgid "Add a folder of bookmarks for all open tabs."
-msgstr "Додати теку з закладками, створену з усіх відкритих вкладок."
-
-#: bookmarks/kbookmarkmenu.cc:508
-msgid "Edit your bookmark collection in a separate window"
-msgstr "Редагувати збірку закладок у окремому вікні"
-
-#: bookmarks/kbookmarkmenu.cc:517
-msgid "New Bookmark Folder..."
-msgstr "Створити теку закладок..."
-
-#: bookmarks/kbookmarkmenu.cc:519
-msgid "Create a new bookmark folder in this menu"
-msgstr "Створити нову теку закладок в цьому меню"
-
-#: bookmarks/kbookmarkimporter_ns.cc:122 bookmarks/kbookmarkimporter_ns.cc:126
-msgid "*.html|HTML Files (*.html)"
-msgstr "*.html|Файли HTML (*.html)"
-
-#: bookmarks/kbookmarkimporter_ns.cc:167
-msgid "<!-- This file was generated by Konqueror -->"
-msgstr "<!-- Цей файл було створено за допомогою Konqueror -->"
-
-#: bookmarks/kbookmarkimporter_ns.cc:170 bookmarks/kbookmarkimporter_ns.cc:171
-#: ../kfile/kfilewidget.cpp:2523
-msgid "Bookmarks"
-msgstr "Закладки"
-
-#: bookmarks/kbookmarkdialog.cc:41
-msgctxt "@action:button"
-msgid "Update"
-msgstr "Оновити"
-
-#: bookmarks/kbookmarkdialog.cc:42
-msgctxt "@title:window"
-msgid "Bookmark Properties"
-msgstr "Властивості закладки"
-
-#: bookmarks/kbookmarkdialog.cc:70 bookmarks/kbookmarkdialog.cc:102
-msgctxt "@action:button"
-msgid "Add"
-msgstr "Додати"
-
-#: bookmarks/kbookmarkdialog.cc:71
-msgctxt "@title:window"
-msgid "Add Bookmark"
-msgstr "Додати закладку"
-
-#: bookmarks/kbookmarkdialog.cc:72 bookmarks/kbookmarkdialog.cc:104
-#: bookmarks/kbookmarkdialog.cc:131
-msgctxt "@action:button"
-msgid "&New Folder..."
-msgstr "&Створити теку..."
-
-#: bookmarks/kbookmarkdialog.cc:103
-msgctxt "@title:window"
-msgid "Add Bookmarks"
-msgstr "Додати закладку"
-
-#: bookmarks/kbookmarkdialog.cc:132 ../kfile/kdirselectdialog.cpp:266
-msgctxt "@title:window"
-msgid "Select Folder"
-msgstr "Вибір теки"
-
-#: bookmarks/kbookmarkdialog.cc:159 ../kfile/knewfilemenu.cpp:1036
-#: ../kfile/kdirselectdialog.cpp:135
-msgctxt "@title:window"
-msgid "New Folder"
-msgstr "Нова тека"
-
-#: bookmarks/kbookmarkdialog.cc:292
-msgctxt "@label:textbox"
-msgid "Name:"
-msgstr "Назва:"
-
-#: bookmarks/kbookmarkdialog.cc:297
-msgctxt "@label:textbox"
-msgid "Location:"
-msgstr "Адреса:"
-
-#: bookmarks/kbookmarkdialog.cc:302
-msgctxt "@label:textbox"
-msgid "Comment:"
-msgstr "Коментар:"
-
-#: bookmarks/kbookmarkdialog.cc:331
-msgctxt "@title:window"
-msgid "Create New Bookmark Folder"
-msgstr "Створення нової теки закладок"
-
-#: bookmarks/kbookmarkdialog.cc:332
-msgctxt "@title:window"
-msgid "Create New Bookmark Folder in %1"
-msgstr "Створення нової теки закладок в %1"
-
-#: bookmarks/kbookmarkdialog.cc:335
-msgctxt "@label:textbox"
-msgid "New folder:"
-msgstr "Нова тека:"
-
-#: bookmarks/kbookmarkdialog.cc:374
-msgctxt "name of the container of all browser bookmarks"
-msgid "Bookmarks"
-msgstr "Закладки"
-
-#: bookmarks/kbookmarkmanager.cc:443
-msgid ""
-"Unable to save bookmarks in %1. Reported error was: %2. This error message "
-"will only be shown once. The cause of the error needs to be fixed as quickly "
-"as possible, which is most likely a full hard drive."
-msgstr ""
-"Не вдалося зберегти закладки у %1. Отримано повідомлення про помилку: %2. Це "
-"повідомлення про помилку буде показано тільки один раз. Причину цієї помилки "
-"потрібно виправити якомога швидше. Скоріше за все, причиною є нестача місця "
-"на жорсткому диску."
-
-#: bookmarks/kbookmarkimporter_opera.cc:121
-#: bookmarks/kbookmarkimporter_opera.cc:125
-msgid "*.adr|Opera Bookmark Files (*.adr)"
-msgstr "*.adr|Файли закладок Opera (*.adr)"
-
-#: bookmarks/konqbookmarkmenu.cc:61 bookmarks/konqbookmarkmenu.cc:78
-msgid "Hide in toolbar"
-msgstr "Сховати в пеналі"
-
-#: bookmarks/konqbookmarkmenu.cc:61 bookmarks/konqbookmarkmenu.cc:78
-msgid "Show in toolbar"
-msgstr "Показувати в пеналі"
-
-#: bookmarks/konqbookmarkmenu.cc:71
-msgid "Open in New Window"
-msgstr "Відкрити в новому вікні"
-
-#: bookmarks/konqbookmarkmenu.cc:72
-msgid "Open in New Tab"
-msgstr "Відкрити у новій вкладці"
-
-#: bookmarks/kbookmark.cc:308
-msgid "--- separator ---"
-msgstr "--- роздільник ---"
-
-#: kfile/kopenwithdialog.cpp:269
-msgid "Known Applications"
-msgstr "Відомі програми"
-
-#: kfile/kopenwithdialog.cpp:483
-msgid "Open With"
-msgstr "Відкрити за допомогою"
-
-#: kfile/kopenwithdialog.cpp:488
-msgid ""
-"<qt>Select the program that should be used to open <b>%1</b>. If the program "
-"is not listed, enter the name or click the browse button.</qt>"
-msgstr ""
-"<qt>Виберіть програму, яку буде використано для відкривання <b>%1</b>. Якщо "
-"програми немає у переліку, введіть назву або скористайтеся кнопкою навігації."
-"</qt>"
-
-#: kfile/kopenwithdialog.cpp:494
-msgid "Choose the name of the program with which to open the selected files."
-msgstr "Виберіть назву програми, якою ви хочете відкрити вибрані файли."
-
-#: kfile/kopenwithdialog.cpp:521
-msgid "Choose Application for %1"
-msgstr "Виберіть програму для %1"
-
-#: kfile/kopenwithdialog.cpp:522
-msgid ""
-"<qt>Select the program for the file type: <b>%1</b>. If the program is not "
-"listed, enter the name or click the browse button.</qt>"
-msgstr ""
-"<qt>Виберіть програму для файлів типу: <b>%1</b>. Якщо програму не наведено "
-"в списку, введіть її назву або скористайтеся кнопкою навігації.</qt>"
-
-#: kfile/kopenwithdialog.cpp:537
-msgid "Choose Application"
-msgstr "Виберіть програму"
-
-#: kfile/kopenwithdialog.cpp:538
-msgid ""
-"<qt>Select a program. If the program is not listed, enter the name or click "
-"the browse button.</qt>"
-msgstr ""
-"<qt>Виберіть програму. Якщо програму не наведено в списку, введіть її назву "
-"або скористайтеся кнопкою навігації.</qt>"
-
-#: kfile/kopenwithdialog.cpp:602
-msgid ""
-"Following the command, you can have several place holders which will be "
-"replaced with the actual values when the actual program is run:\n"
-"%f - a single file name\n"
-"%F - a list of files; use for applications that can open several local files "
-"at once\n"
-"%u - a single URL\n"
-"%U - a list of URLs\n"
-"%d - the directory of the file to open\n"
-"%D - a list of directories\n"
-"%i - the icon\n"
-"%m - the mini-icon\n"
-"%c - the comment"
-msgstr ""
-"У рядок команди ви можете вставити підставні параметри, вказані нижче, їх "
-"буде замінено фактичними значеннями при запуску програми:\n"
-"%f — назва одного файла\n"
-"%F — список файлів; використовується для програм, які можуть відкривати "
-"декілька локальних файлів відразу\n"
-"%u — одна адреса URL\n"
-"%U — список адрес URL\n"
-"%d — каталог з файлом, який відкриваємо\n"
-"%D — список каталогів\n"
-"%i — піктограма\n"
-"%m — міні-піктограма\n"
-"%c — коментар"
-
-#: kfile/kopenwithdialog.cpp:637
-msgid "Run in &terminal"
-msgstr "Запустити у &терміналі"
-
-#: kfile/kopenwithdialog.cpp:654
-msgid "&Do not close when command exits"
-msgstr "&Не закривати після завершення виконання програми"
-
-#: kfile/kopenwithdialog.cpp:671
-msgid "&Remember application association for this type of file"
-msgstr "&Зберегти прив’язку програми до файлів цього типу"
-
-#: kfile/kopenwithdialog.cpp:816
-msgid ""
-"Could not extract executable name from '%1', please type a valid program "
-"name."
-msgstr ""
-"Неможливо отримати назву програми з «%1», будь ласка, введіть чинну назву "
-"програми."
-
-#: kfile/kopenwithdialog.cpp:866
-msgid "'%1' not found, please type a valid program name."
-msgstr "«%1» не знайдено, будь ласка, вкажіть коректну назву програми."
-
-#: kfile/kurlrequester.cpp:260
-msgid "Open file dialog"
-msgstr "Діалогове вікно відкриття файлів"
-
-#: kfile/kicondialog.cpp:329 kfile/kicondialog.cpp:341
-msgid "Select Icon"
-msgstr "Вибрати піктограму"
-
-#: kfile/kicondialog.cpp:362
-msgid "Icon Source"
-msgstr "Джерело піктограми"
-
-#: kfile/kicondialog.cpp:371
-msgid "S&ystem icons:"
-msgstr "С&истемні піктограми:"
-
-#: kfile/kicondialog.cpp:378
-msgid "O&ther icons:"
-msgstr "&Інші піктограми:"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:121
-#. i18n: ectx: property (text), widget (QPushButton, browseButton)
-#: kfile/kicondialog.cpp:381 rc.cpp:192
-msgid "&Browse..."
-msgstr "&Навігація..."
-
-#: kfile/kicondialog.cpp:392
-msgid "&Search:"
-msgstr "&Пошук:"
-
-#: kfile/kicondialog.cpp:399
-msgid "Search interactively for icon names (e.g. folder)."
-msgstr "Інтерактивний пошук назв піктограм (напр. тека)."
-
-#: kfile/kicondialog.cpp:430
-msgid "Actions"
-msgstr "Дії"
-
-#: kfile/kicondialog.cpp:431
-msgid "Animations"
-msgstr "Анімації"
-
-#: kfile/kicondialog.cpp:432
-msgid "Applications"
-msgstr "Програми"
-
-#: kfile/kicondialog.cpp:433
-msgid "Categories"
-msgstr "Категорії"
-
-#: kfile/kicondialog.cpp:434
-msgid "Devices"
-msgstr "Пристрої"
-
-#: kfile/kicondialog.cpp:435
-msgid "Emblems"
-msgstr "Емблеми"
-
-#: kfile/kicondialog.cpp:436
-msgid "Emotes"
-msgstr "Емоції"
-
-#: kfile/kicondialog.cpp:437
-msgid "Filesystems"
-msgstr "Файлові системи"
-
-#: kfile/kicondialog.cpp:438
-msgid "International"
-msgstr "Міжнародне"
-
-#: kfile/kicondialog.cpp:439
-msgid "Mimetypes"
-msgstr "Типи MIME"
-
-#: kfile/kicondialog.cpp:440
-msgid "Places"
-msgstr "Місця"
-
-#: kfile/kicondialog.cpp:441
-msgid "Status"
-msgstr "Стан"
-
-#: kfile/kicondialog.cpp:671
-msgid "*.png *.xpm *.svg *.svgz|Icon Files (*.png *.xpm *.svg *.svgz)"
-msgstr "*.png *.xpm *.svg *.svgz|Файли піктограм (*.png *.xpm *.svg *.svgz)"
-
-#: kfile/kicondialog.cpp:673 kfile/kfiledialog.cpp:476
-#: kfile/kfiledialog.cpp:486 kfile/kfiledialog.cpp:507
-#: kfile/kfiledialog.cpp:531 kfile/kfiledialog.cpp:541
-#: kfile/kfiledialog.cpp:567 kfile/kfiledialog.cpp:599
-#: kfile/kfiledialog.cpp:654 kfile/kencodingfiledialog.cpp:106
-#: kfile/kencodingfiledialog.cpp:124 kfile/kencodingfiledialog.cpp:139
-#: kfile/kencodingfiledialog.cpp:157 kfile/kurlrequesterdialog.cpp:128
-msgid "Open"
-msgstr "Відкрити"
-
-#: kfile/kfilesharedialog.cpp:53
-msgid "&Share"
-msgstr "С&пільний доступ"
-
-#: kfile/kfilesharedialog.cpp:127
-msgid "Only folders in your home folder can be shared."
-msgstr "Можна відкрити доступ тільки до тек з вашої домівки."
-
-#: kfile/kfilesharedialog.cpp:134
-msgid "Not shared"
-msgstr "Не є спільним"
-
-#: kfile/kfilesharedialog.cpp:139
-msgid "Shared"
-msgstr "Спільний"
-
-#: kfile/kfilesharedialog.cpp:151
-msgid ""
-"Sharing this folder makes it available under Linux/UNIX (NFS) and Windows "
-"(Samba)."
-msgstr ""
-"Відкриття цієї теки дозволяє іншим отримати доступ до неї через Linux/UNIX "
-"(NFS) та Windows (Samba)."
-
-#: kfile/kfilesharedialog.cpp:158
-msgid "You can also reconfigure file sharing authorization."
-msgstr "Ви також можете змінити уповноваження на спільний доступ до файлів."
-
-#: kfile/kfilesharedialog.cpp:162 kfile/kfilesharedialog.cpp:186
-msgid "Configure File Sharing..."
-msgstr "Налаштувати спільний доступ до файлів..."
-
-#: kfile/kfilesharedialog.cpp:171
-msgid ""
-"Error running 'filesharelist'. Check if installed and in $PATH or /usr/sbin."
-msgstr ""
-"Помилка виконання «filesharelist». Перевірте, чи встановлено цю програму, та "
-"чи вона знаходиться у $PATH або /usr/sbin."
-
-#: kfile/kfilesharedialog.cpp:178
-msgid "You need to be authorized to share folders."
-msgstr ""
-"Вам потрібно пройти процедуру уповноваження, щоб мати можливість надавати "
-"спільний доступ до тек."
-
-#: kfile/kfilesharedialog.cpp:181
-msgid "File sharing is disabled."
-msgstr "Спільний доступ до файлів вимкнено."
-
-#: kfile/kfilesharedialog.cpp:248
-msgid "Sharing folder '%1' failed."
-msgstr "Помилка при відкритті спільного доступу до теки «%1»."
-
-#: kfile/kfilesharedialog.cpp:249
-msgid ""
-"An error occurred while trying to share folder '%1'. Make sure that the Perl "
-"script 'fileshareset' is set suid root."
-msgstr ""
-"Під час спроби відкриття спільного доступу до теки «%1» сталася помилка. "
-"Перевірте, чи має програма мовою perl «fileshareset» встановлений біт suid і "
-"чиє її власником користувач root."
-
-#: kfile/kfilesharedialog.cpp:254
-msgid "Unsharing folder '%1' failed."
-msgstr "Помилка при закритті спільного доступу до теки «%1»."
-
-#: kfile/kfilesharedialog.cpp:255
-msgid ""
-"An error occurred while trying to unshare folder '%1'. Make sure that the "
-"Perl script 'fileshareset' is set suid root."
-msgstr ""
-"Під час спроби закриття спільного доступу до теки «%1» сталася помилка. "
-"Перевірте, чи має програма мовою perl «fileshareset» встановлений біт suid і "
-"чиє її власником користувач root."
-
-#: kfile/kpreviewprops.cpp:50
-msgid "P&review"
-msgstr "Пе&регляд"
-
-#: kfile/kmetaprops.cpp:57
-msgctxt "@title:window"
-msgid "Configure Shown Data"
-msgstr "Налаштування показу даних"
-
-#: kfile/kmetaprops.cpp:62
-msgctxt "@label::textbox"
-msgid "Select which data should be shown:"
-msgstr "Вкажіть дані, які слід показувати:"
-
-#: kfile/kmetaprops.cpp:120
-msgctxt "@action:button"
-msgid "Configure..."
-msgstr "Налаштувати..."
-
-#: kfile/kmetaprops.cpp:130
-msgctxt "@title:tab"
+#: kio/skipdialog.cpp:37
 msgid "Information"
-msgstr "Відомості"
+msgstr "Інформація"
 
-#: kfile/kfiledialog.cpp:126
-msgid "*|All files"
-msgstr "*|Всі файли"
+#: kio/skipdialog.cpp:44
+msgid "Skip"
+msgstr "Пропустити"
 
-#: kfile/kfiledialog.cpp:353 ../kfile/kfilefiltercombo.cpp:185
-msgid "All Supported Files"
-msgstr "Всі файли, що підтримуються"
-
-#: kfile/kfiledialog.cpp:734 kfile/kfiledialog.cpp:753
-#: kfile/kfiledialog.cpp:790 kfile/kfiledialog.cpp:832
-#: kfile/kencodingfiledialog.cpp:177 kfile/kencodingfiledialog.cpp:198
-msgid "Save As"
-msgstr "Зберегти як"
+#: kio/skipdialog.cpp:47
+msgid "AutoSkip"
+msgstr "Автоматично пропускати"
 
 #: kfile/kencodingfiledialog.cpp:49
 msgid "Encoding:"
 msgstr "Кодування:"
 
+#: kfile/kencodingfiledialog.cpp:106 kfile/kencodingfiledialog.cpp:124
+#: kfile/kencodingfiledialog.cpp:139 kfile/kencodingfiledialog.cpp:157
+#: kfile/kurlrequesterdialog.cpp:128 kfile/kicondialog.cpp:673
+#: kfile/kfiledialog.cpp:476 kfile/kfiledialog.cpp:486
+#: kfile/kfiledialog.cpp:507 kfile/kfiledialog.cpp:531
+#: kfile/kfiledialog.cpp:541 kfile/kfiledialog.cpp:567
+#: kfile/kfiledialog.cpp:599 kfile/kfiledialog.cpp:654
+msgid "Open"
+msgstr "Відкрити"
+
+#: kfile/kencodingfiledialog.cpp:177 kfile/kencodingfiledialog.cpp:198
+#: kfile/kfiledialog.cpp:734 kfile/kfiledialog.cpp:753
+#: kfile/kfiledialog.cpp:790 kfile/kfiledialog.cpp:832
+msgid "Save As"
+msgstr "Зберегти як"
+
+#: kfile/kfilemetainfowidget.cpp:151
+msgid "<Error>"
+msgstr "<Помилка>"
+
+#: kfile/kfilemetadatareaderprocess.cpp:128
+msgid "KFileMetaDataReader"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:130
+msgid "KFileMetaDataReader can be used to read metadata from a file"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:132
+msgid "(C) 2011, Peter Penz"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:133
+msgid "Peter Penz"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:133
+msgid "Current maintainer"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:139
+msgid "Only the meta data that is part of the file is read"
+msgstr ""
+
+#: kfile/kfilemetadatareaderprocess.cpp:140
+msgid "List of URLs where the meta-data should be read from"
+msgstr ""
+
 #: kfile/kurlrequesterdialog.cpp:58 kfile/kpropertiesdialog.cpp:946
 msgid "Location:"
 msgstr "Розташування:"
-
-#: kfile/kfilemetainfowidget.cpp:163
-msgid "<Error>"
-msgstr "<Помилка>"
 
 #: kfile/kacleditwidget.cpp:61 kfile/kacleditwidget.cpp:454
 msgid "Owner"
@@ -3753,6 +4076,194 @@ msgstr "x"
 #: kfile/kacleditwidget.cpp:630
 msgid "Effective"
 msgstr "Ефективний"
+
+#: kfile/kicondialog.cpp:329 kfile/kicondialog.cpp:341
+msgid "Select Icon"
+msgstr "Вибрати піктограму"
+
+#: kfile/kicondialog.cpp:362
+msgid "Icon Source"
+msgstr "Джерело піктограми"
+
+#: kfile/kicondialog.cpp:371
+msgid "S&ystem icons:"
+msgstr "С&истемні піктограми:"
+
+#: kfile/kicondialog.cpp:378
+msgid "O&ther icons:"
+msgstr "&Інші піктограми:"
+
+#: kfile/kicondialog.cpp:392
+msgid "&Search:"
+msgstr "&Пошук:"
+
+#: kfile/kicondialog.cpp:399
+msgid "Search interactively for icon names (e.g. folder)."
+msgstr "Інтерактивний пошук назв піктограм (напр. тека)."
+
+#: kfile/kicondialog.cpp:430
+msgid "Actions"
+msgstr "Дії"
+
+#: kfile/kicondialog.cpp:431
+msgid "Animations"
+msgstr "Анімації"
+
+#: kfile/kicondialog.cpp:432
+msgid "Applications"
+msgstr "Програми"
+
+#: kfile/kicondialog.cpp:433
+msgid "Categories"
+msgstr "Категорії"
+
+#: kfile/kicondialog.cpp:434
+msgid "Devices"
+msgstr "Пристрої"
+
+#: kfile/kicondialog.cpp:435
+msgid "Emblems"
+msgstr "Емблеми"
+
+#: kfile/kicondialog.cpp:436
+msgid "Emotes"
+msgstr "Емоції"
+
+#: kfile/kicondialog.cpp:437
+msgid "Filesystems"
+msgstr "Файлові системи"
+
+#: kfile/kicondialog.cpp:438
+msgid "International"
+msgstr "Міжнародне"
+
+#: kfile/kicondialog.cpp:439
+msgid "Mimetypes"
+msgstr "Типи MIME"
+
+#: kfile/kicondialog.cpp:440
+msgid "Places"
+msgstr "Місця"
+
+#: kfile/kicondialog.cpp:441
+msgid "Status"
+msgstr "Стан"
+
+#: kfile/kicondialog.cpp:671
+msgid "*.png *.xpm *.svg *.svgz|Icon Files (*.png *.xpm *.svg *.svgz)"
+msgstr "*.png *.xpm *.svg *.svgz|Файли піктограм (*.png *.xpm *.svg *.svgz)"
+
+#: kfile/kmetaprops.cpp:57
+msgctxt "@title:window"
+msgid "Configure Shown Data"
+msgstr "Налаштування показу даних"
+
+#: kfile/kmetaprops.cpp:62
+msgctxt "@label::textbox"
+msgid "Select which data should be shown:"
+msgstr "Вкажіть дані, які слід показувати:"
+
+#: kfile/kmetaprops.cpp:120
+msgctxt "@action:button"
+msgid "Configure..."
+msgstr "Налаштувати..."
+
+#: kfile/kmetaprops.cpp:130
+msgctxt "@title:tab"
+msgid "Information"
+msgstr "Відомості"
+
+#: kfile/kfilesharedialog.cpp:53
+msgid "&Share"
+msgstr "С&пільний доступ"
+
+#: kfile/kfilesharedialog.cpp:127
+msgid "Only folders in your home folder can be shared."
+msgstr "Можна відкрити доступ тільки до тек з вашої домівки."
+
+#: kfile/kfilesharedialog.cpp:134
+msgid "Not shared"
+msgstr "Не є спільним"
+
+#: kfile/kfilesharedialog.cpp:139
+msgid "Shared"
+msgstr "Спільний"
+
+#: kfile/kfilesharedialog.cpp:151
+msgid ""
+"Sharing this folder makes it available under Linux/UNIX (NFS) and Windows "
+"(Samba)."
+msgstr ""
+"Відкриття цієї теки дозволяє іншим отримати доступ до неї через Linux/UNIX "
+"(NFS) та Windows (Samba)."
+
+#: kfile/kfilesharedialog.cpp:158
+msgid "You can also reconfigure file sharing authorization."
+msgstr "Ви також можете змінити уповноваження на спільний доступ до файлів."
+
+#: kfile/kfilesharedialog.cpp:162 kfile/kfilesharedialog.cpp:186
+msgid "Configure File Sharing..."
+msgstr "Налаштувати спільний доступ до файлів..."
+
+#: kfile/kfilesharedialog.cpp:171
+msgid ""
+"Error running 'filesharelist'. Check if installed and in $PATH or /usr/sbin."
+msgstr ""
+"Помилка виконання «filesharelist». Перевірте, чи встановлено цю програму, та "
+"чи вона знаходиться у $PATH або /usr/sbin."
+
+#: kfile/kfilesharedialog.cpp:178
+msgid "You need to be authorized to share folders."
+msgstr ""
+"Вам потрібно пройти процедуру уповноваження, щоб мати можливість надавати "
+"спільний доступ до тек."
+
+#: kfile/kfilesharedialog.cpp:181
+msgid "File sharing is disabled."
+msgstr "Спільний доступ до файлів вимкнено."
+
+#: kfile/kfilesharedialog.cpp:248
+msgid "Sharing folder '%1' failed."
+msgstr "Помилка при відкритті спільного доступу до теки «%1»."
+
+#: kfile/kfilesharedialog.cpp:249
+msgid ""
+"An error occurred while trying to share folder '%1'. Make sure that the Perl "
+"script 'fileshareset' is set suid root."
+msgstr ""
+"Під час спроби відкриття спільного доступу до теки «%1» сталася помилка. "
+"Перевірте, чи має програма мовою perl «fileshareset» встановлений біт suid і "
+"чиє її власником користувач root."
+
+#: kfile/kfilesharedialog.cpp:254
+msgid "Unsharing folder '%1' failed."
+msgstr "Помилка при закритті спільного доступу до теки «%1»."
+
+#: kfile/kfilesharedialog.cpp:255
+msgid ""
+"An error occurred while trying to unshare folder '%1'. Make sure that the "
+"Perl script 'fileshareset' is set suid root."
+msgstr ""
+"Під час спроби закриття спільного доступу до теки «%1» сталася помилка. "
+"Перевірте, чи має програма мовою perl «fileshareset» встановлений біт suid і "
+"чиє її власником користувач root."
+
+#: kfile/kfiledialog.cpp:126
+msgid "*|All files"
+msgstr "*|Всі файли"
+
+#: kfile/kfiledialog.cpp:353 ../kfile/kfilefiltercombo.cpp:185
+msgid "All Supported Files"
+msgstr "Всі файли, що підтримуються"
+
+#: kfile/kfilemetadataprovider.cpp:175
+msgctxt "@item:intable"
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: kfile/kpropertiesdialog.cpp:203 kfile/kpropertiesdialog.cpp:218
 #: kfile/kpropertiesdialog.cpp:230 kfile/kpropertiesdialog.cpp:245
@@ -4244,337 +4755,53 @@ msgstr "Підтримуються тільки програми на локал
 msgid "Advanced Options for %1"
 msgstr "Додаткові параметри для %1"
 
-#: kfile/kdevicelistmodel.cpp:116
-msgid "Device name"
-msgstr "Назва пристрою"
+#: kfile/kopenwithdialog.cpp:269
+msgid "Known Applications"
+msgstr "Відомі програми"
 
-#. i18n: file: kssl/certificateparty.ui:28
-#. i18n: ectx: property (text), widget (QLabel, commonNameTag)
-#: rc.cpp:3
-msgid "Common name:"
-msgstr "Загальна назва:"
+#: kfile/kopenwithdialog.cpp:483
+msgid "Open With"
+msgstr "Відкрити за допомогою"
 
-#. i18n: file: kssl/certificateparty.ui:38
-#. i18n: ectx: property (text), widget (QLabel, commonName)
-#: rc.cpp:6
-msgid "Acme Co."
-msgstr "Acme Co."
-
-#. i18n: file: kssl/certificateparty.ui:48
-#. i18n: ectx: property (text), widget (QLabel, organizationTag)
-#: rc.cpp:9
-msgid "Organization:"
-msgstr "Організація:"
-
-#. i18n: file: kssl/certificateparty.ui:58
-#. i18n: ectx: property (text), widget (QLabel, organization)
-#: rc.cpp:12
-msgid "Acme Sundry Products Company"
-msgstr "Acme Sundry Products Company"
-
-#. i18n: file: kssl/certificateparty.ui:68
-#. i18n: ectx: property (text), widget (QLabel, organizationalUnitTag)
-#: rc.cpp:15
-msgid "Organizational unit:"
-msgstr "Підрозділ організації:"
-
-#. i18n: file: kssl/certificateparty.ui:78
-#. i18n: ectx: property (text), widget (QLabel, organizationalUnit)
-#: rc.cpp:18
-msgid "Fraud Department"
-msgstr "Відділ боротьби з шахрайством"
-
-#. i18n: file: kssl/certificateparty.ui:88
-#. i18n: ectx: property (text), widget (QLabel, countryTag)
-#: rc.cpp:21
-msgid "Country:"
-msgstr "Країна:"
-
-#. i18n: file: kssl/certificateparty.ui:98
-#. i18n: ectx: property (text), widget (QLabel, country)
-#: rc.cpp:24
-msgid "Canada"
-msgstr "Канада"
-
-#. i18n: file: kssl/certificateparty.ui:108
-#. i18n: ectx: property (text), widget (QLabel, stateTag)
-#: rc.cpp:27
-msgid "State:"
-msgstr "Штат:"
-
-#. i18n: file: kssl/certificateparty.ui:118
-#. i18n: ectx: property (text), widget (QLabel, state)
-#: rc.cpp:30
-msgid "Quebec"
-msgstr "Квебек"
-
-#. i18n: file: kssl/certificateparty.ui:128
-#. i18n: ectx: property (text), widget (QLabel, cityTag)
-#: rc.cpp:33
-msgid "City:"
-msgstr "Місто:"
-
-#. i18n: file: kssl/certificateparty.ui:138
-#. i18n: ectx: property (text), widget (QLabel, city)
-#: rc.cpp:36
-msgid "Lakeridge Meadows"
-msgstr "Лейкридж Медовс"
-
-#. i18n: file: kssl/sslinfo.ui:17
-#. i18n: ectx: property (text), widget (QLabel, encryptionIndicator)
-#: rc.cpp:39
-msgid "[padlock]"
-msgstr "[колодка]"
-
-#. i18n: file: kssl/sslinfo.ui:34
-#. i18n: ectx: property (text), widget (QLabel, addressTag)
-#: rc.cpp:42
-msgctxt "Web page address"
-msgid "Address:"
-msgstr "Адреса:"
-
-#. i18n: file: kssl/sslinfo.ui:54
-#. i18n: ectx: property (text), widget (QLabel, ipTag)
-#: rc.cpp:45
-msgid "IP address:"
-msgstr "Адреса IP:"
-
-#. i18n: file: kssl/sslinfo.ui:74
-#. i18n: ectx: property (text), widget (QLabel, encryptionTag)
-#: rc.cpp:48
-msgid "Encryption:"
-msgstr "Шифрування:"
-
-#. i18n: file: kssl/sslinfo.ui:94
-#. i18n: ectx: property (text), widget (QLabel, detailsTag)
-#: rc.cpp:51
-msgid "Details:"
-msgstr "Подробиці:"
-
-#. i18n: file: kssl/sslinfo.ui:114
-#. i18n: ectx: property (text), widget (QLabel, sslVersionTag)
-#: rc.cpp:54
-msgid "SSL version:"
-msgstr "Версія SSL:"
-
-#. i18n: file: kssl/sslinfo.ui:134
-#. i18n: ectx: property (text), widget (QLabel, certSelectorTag)
-#: rc.cpp:57
-msgid "Certificate chain:"
-msgstr "Ланцюжок сертифікатів:"
-
-#. i18n: file: kssl/sslinfo.ui:163
-#. i18n: ectx: property (text), widget (QLabel, trustedTag)
-#: rc.cpp:60
-msgid "Trusted:"
-msgstr "Надійність:"
-
-#. i18n: file: kssl/sslinfo.ui:183
-#. i18n: ectx: property (text), widget (QLabel, validityPeriodTag)
-#: rc.cpp:63
-msgid "Validity period:"
-msgstr "Період чинності:"
-
-#. i18n: file: kssl/sslinfo.ui:203
-#. i18n: ectx: property (text), widget (QLabel, serialTag)
-#: rc.cpp:66
-msgid "Serial number:"
-msgstr "Серійний номер:"
-
-#. i18n: file: kssl/sslinfo.ui:223
-#. i18n: ectx: property (text), widget (QLabel, digestTag)
-#: rc.cpp:69
-msgid "MD5 digest:"
-msgstr "Сума MD5:"
-
-#. i18n: file: kssl/sslinfo.ui:243
-#. i18n: ectx: property (text), widget (QLabel, sha1DigestTag)
-#: rc.cpp:72
-msgid "SHA1 digest:"
-msgstr "Сума SHA1:"
-
-#. i18n: file: kssl/keygenwizard2.ui:35
-#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
-#: rc.cpp:75
+#: kfile/kopenwithdialog.cpp:488
 msgid ""
-"You must now provide a password for the certificate request. Please choose a "
-"very secure password as this will be used to encrypt your private key."
+"<qt>Select the program that should be used to open <b>%1</b>. If the program "
+"is not listed, enter the name or click the browse button.</qt>"
 msgstr ""
-"Вам слід надати пароль для запиту сертифіката. Будь ласка, виберіть такий "
-"пароль, який дуже важко підібрати, оскільки цей пароль буде використано для "
-"шифрування вашого закритого ключа."
+"<qt>Виберіть програму, яку буде використано для відкривання <b>%1</b>. Якщо "
+"програми немає у переліку, введіть назву або скористайтеся кнопкою навігації."
+"</qt>"
 
-#. i18n: file: kssl/keygenwizard2.ui:48
-#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
-#: rc.cpp:78
-msgid "&Repeat password:"
-msgstr "П&овторіть пароль:"
+#: kfile/kopenwithdialog.cpp:494
+msgid "Choose the name of the program with which to open the selected files."
+msgstr "Виберіть назву програми, якою ви хочете відкрити вибрані файли."
 
-#. i18n: file: kssl/keygenwizard2.ui:58
-#. i18n: ectx: property (text), widget (QLabel, TextLabel5)
-#: rc.cpp:81
-msgid "&Choose password:"
-msgstr "&Виберіть пароль:"
+#: kfile/kopenwithdialog.cpp:521
+msgid "Choose Application for %1"
+msgstr "Виберіть програму для %1"
 
-#. i18n: file: kssl/kcm/displaycert.ui:23
-#. i18n: ectx: property (text), widget (QLabel, subjectHeading)
-#: rc.cpp:84
-msgid "<b>Subject Information</b>"
-msgstr "<b>Відомості щодо призначення</b>"
-
-#. i18n: file: kssl/kcm/displaycert.ui:39
-#. i18n: ectx: property (text), widget (QLabel, issuerHeading)
-#: rc.cpp:87
-msgid "<b>Issuer Information</b>"
-msgstr "<b>Відомості щодо видавця</b>"
-
-#. i18n: file: kssl/kcm/displaycert.ui:55
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:90
-msgid "<b>Other</b>"
-msgstr "<b>Інше</b>"
-
-#. i18n: file: kssl/kcm/displaycert.ui:64
-#. i18n: ectx: property (text), widget (QLabel, validityPeriodLabel)
-#: rc.cpp:93
-msgid "Validity period"
-msgstr "Період чинності"
-
-#. i18n: file: kssl/kcm/displaycert.ui:78
-#. i18n: ectx: property (text), widget (QLabel, serialNumberLabel)
-#: rc.cpp:96
-msgid "Serial number"
-msgstr "Серійний номер"
-
-#. i18n: file: kssl/kcm/displaycert.ui:92
-#. i18n: ectx: property (text), widget (QLabel, md5DigestLabel)
-#: rc.cpp:99
-msgid "MD5 digest"
-msgstr "Сума MD5"
-
-#. i18n: file: kssl/kcm/displaycert.ui:106
-#. i18n: ectx: property (text), widget (QLabel, sha1DigestLabel)
-#: rc.cpp:102
-msgid "SHA1 digest"
-msgstr "Сума SHA1"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:24
-#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
-#: rc.cpp:105
-msgid "Organization / Common Name"
-msgstr "Установа/Загальна назва"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:29
-#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
-#: rc.cpp:108
-msgid "Organizational Unit"
-msgstr "Підрозділ установи"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:42
-#. i18n: ectx: property (text), widget (QPushButton, displaySelection)
-#: rc.cpp:111
-msgid "Display..."
-msgstr "Показати…"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:68
-#. i18n: ectx: property (text), widget (KPushButton, disableSelection)
-#: rc.cpp:114
-msgid "Disable"
-msgstr "Вимкнути"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:78
-#. i18n: ectx: property (text), widget (QPushButton, enableSelection)
-#: rc.cpp:117
-msgid "Enable"
-msgstr "Увімкнути"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:104
-#. i18n: ectx: property (text), widget (KPushButton, removeSelection)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:219
-#. i18n: ectx: property (text), widget (QPushButton, delFiletypeButton)
-#: rc.cpp:120 rc.cpp:232
-msgid "Remove"
-msgstr "Вилучити"
-
-#. i18n: file: kssl/kcm/cacertificates.ui:111
-#. i18n: ectx: property (text), widget (KPushButton, add)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:209
-#. i18n: ectx: property (text), widget (QPushButton, addFiletypeButton)
-#: rc.cpp:123 rc.cpp:226
-msgid "Add..."
-msgstr "Додати..."
-
-#. i18n: file: kssl/keygenwizard.ui:35
-#. i18n: ectx: property (text), widget (QLabel, TextLabel1)
-#: rc.cpp:126
+#: kfile/kopenwithdialog.cpp:522
 msgid ""
-"You have indicated that you wish to obtain or purchase a secure certificate. "
-"This wizard is intended to guide you through the procedure. You may cancel "
-"at any time, and this will abort the transaction."
+"<qt>Select the program for the file type: <b>%1</b>. If the program is not "
+"listed, enter the name or click the browse button.</qt>"
 msgstr ""
-"Ви вказали, що хочете отримати або придбати безпечний сертифікат. Цей "
-"майстер допоможе виконати потрібні дії. Ви можете скасувати цей процес на "
-"довільному кроці — операцію буде скасовано."
+"<qt>Виберіть програму для файлів типу: <b>%1</b>. Якщо програму не наведено "
+"в списку, введіть її назву або скористайтеся кнопкою навігації.</qt>"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:14
-#. i18n: ectx: property (whatsThis), widget (QLabel, nameLabel)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:27
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, nameEdit)
-#: rc.cpp:129 rc.cpp:135
+#: kfile/kopenwithdialog.cpp:537
+msgid "Choose Application"
+msgstr "Виберіть програму"
+
+#: kfile/kopenwithdialog.cpp:538
 msgid ""
-"Type the name you want to give to this application here. This application "
-"will appear under this name in the applications menu and in the panel."
+"<qt>Select a program. If the program is not listed, enter the name or click "
+"the browse button.</qt>"
 msgstr ""
-"Введіть тут назву для цієї програми. Програма буде з'являтись під цією "
-"назвою в меню програм та на панелі."
+"<qt>Виберіть програму. Якщо програму не наведено в списку, введіть її назву "
+"або скористайтеся кнопкою навігації.</qt>"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:17
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: rc.cpp:132 ../kfile/kfilewidget.cpp:528
-msgid "&Name:"
-msgstr "&Назва:"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:34
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel2)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:47
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, genNameEdit)
-#: rc.cpp:138 rc.cpp:144
+#: kfile/kopenwithdialog.cpp:602
 msgid ""
-"Type the description of this application, based on its use, here. Examples: "
-"a dial up application (KPPP) would be \"Dial up tool\"."
-msgstr ""
-"Введіть опис програми, виходячи з її призначення. Наприклад: програму для "
-"з'єднання через модем (KPPP) можна описати «Засіб для з'єднання через модем»."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:37
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:141
-msgid "&Description:"
-msgstr "&Опис:"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:54
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel3)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:67
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, commentEdit)
-#: rc.cpp:147 rc.cpp:153
-msgid "Type any comment you think is useful here."
-msgstr "Введіть тут будь-який коментар, який ви вважаєте корисним."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:57
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:150
-msgid "Comm&ent:"
-msgstr "Ко&ментар:"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:85
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel4)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:111
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, commandEdit)
-#: rc.cpp:157 rc.cpp:175
-#, no-c-format
-msgid ""
-"Type the command to start this application here.\n"
-"\n"
 "Following the command, you can have several place holders which will be "
 "replaced with the actual values when the actual program is run:\n"
 "%f - a single file name\n"
@@ -4586,344 +4813,131 @@ msgid ""
 "%D - a list of directories\n"
 "%i - the icon\n"
 "%m - the mini-icon\n"
-"%c - the caption"
+"%c - the comment"
 msgstr ""
-"Введіть команду для запуску програми.\n"
-"\n"
-"У рядок команди ви можете вставити вказані нижче підставні параметри, їх "
+"У рядок команди ви можете вставити підставні параметри, вказані нижче, їх "
 "буде замінено фактичними значеннями при запуску програми:\n"
 "%f — назва одного файла\n"
 "%F — список файлів; використовується для програм, які можуть відкривати "
 "декілька локальних файлів відразу\n"
 "%u — одна адреса URL\n"
-"%U — список адрес URLs\n"
-"%d — тека з файлом, який відкриваємо\n"
-"%D — список тек\n"
+"%U — список адрес URL\n"
+"%d — каталог з файлом, який відкриваємо\n"
+"%D — список каталогів\n"
 "%i — піктограма\n"
 "%m — міні-піктограма\n"
-"%c — заголовок"
+"%c — коментар"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:88
-#. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: rc.cpp:171
-msgid "Co&mmand:"
-msgstr "&Команда:"
+#: kfile/kopenwithdialog.cpp:637
+msgid "Run in &terminal"
+msgstr "Запустити у &терміналі"
 
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:118
-#. i18n: ectx: property (whatsThis), widget (QPushButton, browseButton)
-#: rc.cpp:189
-msgid ""
-"Click here to browse your file system in order to find the desired "
-"executable."
-msgstr "Натисніть, щоб переглянути файлову систему і знайти потрібну програму."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:130
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel5)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:143
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, pathEdit)
-#: rc.cpp:195 rc.cpp:201
-msgid "Sets the working directory for your application."
-msgstr "Встановлює робочий каталог для вашої програми."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:133
-#. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#: rc.cpp:198
-msgid "&Work path:"
-msgstr "&Робочий каталог:"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:157
-#. i18n: ectx: property (whatsThis), widget (QLabel, textLabel7)
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:178
-#. i18n: ectx: property (whatsThis), widget (QTreeWidget, filetypeList)
-#: rc.cpp:204 rc.cpp:212
-msgid ""
-"<qt><p>This list should show the types of file that your application can "
-"handle. This list is organized by <u>mimetypes</u>.</p>\n"
-"<p>MIME, Multipurpose Internet (e)Mail Extension, is a standard protocol for "
-"identifying the type of data based on filename extensions and correspondent "
-"<u>mimetypes</u>. Example: the \"bmp\" part that comes after the dot in "
-"flower.bmp indicates that it is a specific kind of image, <u>image/x-bmp</"
-"u>. To know which application should open each type of file, the system "
-"should be informed about the abilities of each application to handle these "
-"extensions and mimetypes.</p>\n"
-"<p>If you want to associate this application with one or more mimetypes that "
-"are not in this list, click on the button <b>Add</b> below. If there are one "
-"or more filetypes that this application cannot handle, you may want to "
-"remove them from the list clicking on the button <b>Remove</b> below.</p></"
-"qt>"
-msgstr ""
-"<qt><p>У цьому списку мають міститися пункти типів файлів, які вміє "
-"обробляти ваша програма. Цей список містить <u>типи MIME</u>.</p> \n"
-"<p>MIME (Multipurpose Internet (e)Mail Extension) — це стандартний протокол "
-"для визначення типу даних на основі суфікса назви файла та відповідного "
-"<u>типу mime</u>. Наприклад: «bmp» — частина після крапки у назві файла "
-"flower.bmp — вказує, що це певний різновид зображення, <u>image/x-bmp</u>. "
-"Щоб знати яку програму запускати для роботи з кожним конкретним типом файла, "
-"системі потрібно вказати, які суфікси та типи mime обробляє кожна програма.</"
-"p>\n"
-"<p>Якщо ви бажаєте пов’язати цю програму з одним або декількома типами "
-"файлів, яких немає у цьому списку, натисніть кнопку <b>Додати</b> "
-"розташовану нижче. Якщо ж у цьому списку є один або декілька типів файлів, "
-"які програма не вміє обробляти, ви можете вилучити їх натисканням кнопки "
-"<b>Вилучити</b>, розташованої нижче.</p></qt>"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:160
-#. i18n: ectx: property (text), widget (QLabel, textLabel7)
-#: rc.cpp:209
-msgid "&Supported file types:"
-msgstr "Типи файлів, що підтримуються:"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:191
-#. i18n: ectx: property (text), widget (QTreeWidget, filetypeList)
-#: rc.cpp:217
-msgid "Mimetype"
-msgstr "Тип MIME"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:196
-#. i18n: ectx: property (text), widget (QTreeWidget, filetypeList)
-#: rc.cpp:220
-msgid "Description"
-msgstr "Опис"
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:206
-#. i18n: ectx: property (whatsThis), widget (QPushButton, addFiletypeButton)
-#: rc.cpp:223
-msgid ""
-"Click on this button if you want to add a type of file (mimetype) that your "
-"application can handle."
-msgstr ""
-"Натисніть цю кнопку, щоб додати тип файлів (mimetype), які ваша програма "
-"вміє обробляти."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:216
-#. i18n: ectx: property (whatsThis), widget (QPushButton, delFiletypeButton)
-#: rc.cpp:229
-msgid ""
-"If you want to remove a type of file (mimetype) that your application cannot "
-"handle, select the mimetype in the list above and click on this button."
-msgstr ""
-"Щоб вилучити тип файлів зі списку типів файлів (mimetype), які вміє "
-"обробляти ваша програма, виберіть тип у списку, наведеному вище, і натисніть "
-"цю кнопку."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:242
-#. i18n: ectx: property (whatsThis), widget (QPushButton, advancedButton)
-#: rc.cpp:235
-msgid ""
-"Click here to modify the way this application will run, launch feedback, D-"
-"Bus options or to run it as a different user."
-msgstr ""
-"Натисніть, щоб змінити спосіб, за допомогою якого буде запускатися програма; "
-"показу запуску, параметри D-Bus або запуск від імені іншого користувача."
-
-#. i18n: file: kfile/kpropertiesdesktopbase.ui:245
-#. i18n: ectx: property (text), widget (QPushButton, advancedButton)
-#: rc.cpp:238
-msgid "Ad&vanced Options"
-msgstr "До&даткові параметри"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:11
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: rc.cpp:241
-msgctxt ""
-"@title:group Title of a group that lets the user choose options about the "
-"terminal when launching a program"
-msgid "Terminal"
-msgstr "Термінал"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:33
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, terminalCheck)
-#: rc.cpp:244
-msgid ""
-"Check this option if the application you want to run is a text mode "
-"application or if you want the information that is provided by the terminal "
-"emulator window."
-msgstr ""
-"Позначте, якщо програма, яку ви хочете виконувати, працює у текстовому "
-"режимі або ви бажаєте мати доступ до інформації, яка виводиться у вікні "
-"емулятора термінала."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:36
-#. i18n: ectx: property (text), widget (QCheckBox, terminalCheck)
-#: rc.cpp:247
-msgid "&Run in terminal"
-msgstr "Зап&устити у терміналі"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:43
-#. i18n: ectx: property (text), widget (QLabel, terminalEditLabel)
-#: rc.cpp:250
-msgid "&Terminal options:"
-msgstr "Парам&етри термінала:"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:53
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, terminalCloseCheck)
-#: rc.cpp:253
-msgid ""
-"Check this option if the text mode application offers relevant information "
-"on exit. Keeping the terminal emulator open allows you to retrieve this "
-"information."
-msgstr ""
-"Позначте, якщо програма, що працює у текстовому режимі, виводить важливу "
-"інформацію при завершенні роботи. Якщо вікно емулятора термінала не буде "
-"закрито, ви зможете прочитати цю інформацію."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:56
-#. i18n: ectx: property (text), widget (QCheckBox, terminalCloseCheck)
-#: rc.cpp:256
-msgid "Do not &close when command exits"
+#: kfile/kopenwithdialog.cpp:654
+msgid "&Do not close when command exits"
 msgstr "&Не закривати після завершення виконання програми"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:69
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2_2)
-#: rc.cpp:259
-msgctxt ""
-"@title:group Title of a group that lets the user choose which user to use "
-"when launching a program"
-msgid "User"
-msgstr "Користувач"
+#: kfile/kopenwithdialog.cpp:671
+msgid "&Remember application association for this type of file"
+msgstr "&Зберегти прив’язку програми до файлів цього типу"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:75
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, suidCheck)
-#: rc.cpp:262
+#: kfile/kopenwithdialog.cpp:816
 msgid ""
-"Check this option if you want to run this application with a different user "
-"id. Every process has a different user id associated with it. This id code "
-"determines file access and other permissions. The password of the user is "
-"required to use this option."
+"Could not extract executable name from '%1', please type a valid program "
+"name."
 msgstr ""
-"Позначте цей пункт, якщо ви хочете виконувати цю програму з іншим "
-"ідентифікатором користувача. Кожен процес має відповідний йому ідентифікатор "
-"користувача. Цей код визначає права доступу до файлів та інші дозволи. Для "
-"цього потрібно знати пароль іншого користувача."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:78
-#. i18n: ectx: property (text), widget (QCheckBox, suidCheck)
-#: rc.cpp:265
-msgid "Ru&n as a different user"
-msgstr "Вико&нати як інший користувач"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:101
-#. i18n: ectx: property (whatsThis), widget (QLabel, suidEditLabel)
-#: rc.cpp:268
-msgid "Enter the user name you want to run the application as."
-msgstr ""
-"Введіть ім'я користувача, від імені якого ви бажаєте виконати цю програму."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:104
-#. i18n: ectx: property (text), widget (QLabel, suidEditLabel)
-#: rc.cpp:271
-msgid "&Username:"
-msgstr "&Ім'я:"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:114
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, suidEdit)
-#: rc.cpp:274
-msgid "Enter the user name you want to run the application as here."
-msgstr ""
-"Введіть ім'я користувача, з правами якого ви бажаєте виконати цю програму."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:124
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup4)
-#: rc.cpp:277
-msgctxt ""
-"@title:group Title of a group that lets the user choose options regargin "
-"program startup"
-msgid "Startup"
-msgstr "Запуск"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:130
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, startupInfoCheck)
-#: rc.cpp:280
-msgid ""
-"Check this option if you want to make clear that your application has "
-"started. This visual feedback may appear as a busy cursor or in the taskbar."
-msgstr ""
-"Позначте цей пункт, якщо вам потрібно точно знати, чи запустилась програма. "
-"Візуальне сповіщення може мати вигляд курсору «зайнятий» у смужці задач."
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:133
-#. i18n: ectx: property (text), widget (QCheckBox, startupInfoCheck)
-#: rc.cpp:283
-msgid "Enable &launch feedback"
-msgstr "Увімкнути с&повіщення запуску"
-
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:140
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, systrayCheck)
-#: rc.cpp:286
-msgid ""
-"Check this option if you want to have a system tray handle for your "
-"application."
-msgstr ""
-"Позначте, якщо вам потрібен елемент керування з системного лотка для вашої "
+"Неможливо отримати назву програми з «%1», будь ласка, введіть чинну назву "
 "програми."
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:143
-#. i18n: ectx: property (text), widget (QCheckBox, systrayCheck)
-#: rc.cpp:289
-msgid "&Place in system tray"
-msgstr "&Помістити у системний лоток"
+#: kfile/kopenwithdialog.cpp:866
+msgid "'%1' not found, please type a valid program name."
+msgstr "«%1» не знайдено, будь ласка, вкажіть коректну назву програми."
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:150
-#. i18n: ectx: property (text), widget (QLabel, textLabel12)
-#: rc.cpp:292
-msgid "&D-Bus registration:"
-msgstr "Реєстрація у &D-Bus:"
+#: kfile/kpreviewprops.cpp:50
+msgid "P&review"
+msgstr "Пе&регляд"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:161
-#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
-#: rc.cpp:295
-msgid "None"
-msgstr "Немає"
+#: kfile/kurlrequester.cpp:260
+msgid "Open file dialog"
+msgstr "Діалогове вікно відкриття файлів"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:166
-#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
-#: rc.cpp:298
-msgid "Multiple Instances"
-msgstr "Багато зразків"
+#: kfile/kdevicelistmodel.cpp:116
+msgid "Device name"
+msgstr "Назва пристрою"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:171
-#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
-#: rc.cpp:301
-msgid "Single Instance"
-msgstr "Один зразок"
+#: misc/kmailservice.cpp:30
+msgid "KMailService"
+msgstr "Служба пошти KMail"
 
-#. i18n: file: kfile/kpropertiesdesktopadvbase.ui:176
-#. i18n: ectx: property (text), item, widget (KComboBox, dbusCombo)
-#: rc.cpp:304
-msgid "Run Until Finished"
-msgstr "Виконувати, поки не завершиться"
+#: misc/kmailservice.cpp:30
+msgid "Mail service"
+msgstr "Служба пошти"
 
-#: ../kioslave/metainfo/metainfo.cpp:39
-msgid "kio_metainfo"
-msgstr "kio_metainfo"
+#: misc/kpac/script.cpp:752
+msgid "Could not find 'FindProxyForURL' or 'FindProxyForURLEx'"
+msgstr "Не вдалося знайти «FindProxyForURL» або «FindProxyForURLEx»"
 
-#: ../kioslave/metainfo/metainfo.cpp:98
-msgid "No metainfo for %1"
-msgstr "Метаінформація для %1 відсутня"
+#: misc/kpac/script.cpp:763
+msgid "Got an invalid reply when calling %1"
+msgstr "Отримано некоректну відповідь на виклик %1"
 
-#: ../kioslave/http/kcookiejar/main.cpp:33
-msgid "HTTP Cookie Daemon"
-msgstr "Фонова служба кук HTTP"
+#: misc/kpac/discovery.cpp:112
+msgid "Could not find a usable proxy configuration script"
+msgstr ""
+"Не вдалося знайти скрипт налаштування проксі-сервера, який можна б було "
+"використати"
 
-#: ../kioslave/http/kcookiejar/main.cpp:37
-msgid "HTTP cookie daemon"
-msgstr "Фонова служба кук HTTP"
+#: misc/kpac/proxyscout.cpp:239
+msgid ""
+"The proxy configuration script is invalid:\n"
+"%1"
+msgstr ""
+"Скрипт налаштування проксі-сервера містить помилки:\n"
+"%1"
 
-#: ../kioslave/http/kcookiejar/main.cpp:40
-msgid "Shut down cookie jar"
-msgstr "Закрити глечик з куками"
+#: misc/kpac/proxyscout.cpp:351
+msgid ""
+"The proxy configuration script returned an error:\n"
+"%1"
+msgstr ""
+"Скрипт налаштування проксі-сервера повернув помилку:\n"
+"%1"
 
-#: ../kioslave/http/kcookiejar/main.cpp:41
-msgid "Remove cookies for domain"
-msgstr "Вилучити куки з домену"
+#: misc/kpac/downloader.cpp:93
+msgid ""
+"Could not download the proxy configuration script:\n"
+"%1"
+msgstr ""
+"Не вдалося звантажити скрипт налаштування проксі-сервера:\n"
+"%1"
 
-#: ../kioslave/http/kcookiejar/main.cpp:42
-msgid "Remove all cookies"
-msgstr "Вилучити всі куки"
+#: misc/kpac/downloader.cpp:95
+msgid "Could not download the proxy configuration script"
+msgstr "Не вдалося звантажити скрипт налаштування проксі-сервера"
 
-#: ../kioslave/http/kcookiejar/main.cpp:43
-msgid "Reload configuration file"
-msgstr "Перезавантажити файл налаштування"
+#: misc/ktelnetservice.cpp:39
+msgid "telnet service"
+msgstr "служба telnet"
+
+#: misc/ktelnetservice.cpp:40
+msgid "telnet protocol handler"
+msgstr "обробник протоколу telnet"
+
+#: misc/ktelnetservice.cpp:74
+msgid "You do not have permission to access the %1 protocol."
+msgstr "У вас не вистачає прав для доступу до протоколу %1."
+
+#: ../kioslave/http/http_cache_cleaner.cpp:731
+#: ../kioslave/http/http_cache_cleaner.cpp:732
+msgid "KDE HTTP cache maintenance tool"
+msgstr "Утиліта керування кешем KDE HTTP"
+
+#: ../kioslave/http/http_cache_cleaner.cpp:735
+msgid "Empty the cache"
+msgstr "Очистити кеш"
+
+#: ../kioslave/http/http_cache_cleaner.cpp:736
+msgid "Display information about cache file"
+msgstr "Показати інформацію щодо файла кешу"
 
 #: ../kioslave/http/kcookiejar/kcookiewin.cpp:64
 msgid "Cookie Alert"
@@ -5083,6 +5097,30 @@ msgstr "Сервери"
 #: ../kioslave/http/kcookiejar/kcookiewin.cpp:324
 msgid "Servers, page scripts"
 msgstr "Сервери, сторінки скриптів"
+
+#: ../kioslave/http/kcookiejar/main.cpp:33
+msgid "HTTP Cookie Daemon"
+msgstr "Фонова служба кук HTTP"
+
+#: ../kioslave/http/kcookiejar/main.cpp:37
+msgid "HTTP cookie daemon"
+msgstr "Фонова служба кук HTTP"
+
+#: ../kioslave/http/kcookiejar/main.cpp:40
+msgid "Shut down cookie jar"
+msgstr "Закрити глечик з куками"
+
+#: ../kioslave/http/kcookiejar/main.cpp:41
+msgid "Remove cookies for domain"
+msgstr "Вилучити куки з домену"
+
+#: ../kioslave/http/kcookiejar/main.cpp:42
+msgid "Remove all cookies"
+msgstr "Вилучити всі куки"
+
+#: ../kioslave/http/kcookiejar/main.cpp:43
+msgid "Reload configuration file"
+msgstr "Перезавантажити файл налаштування"
 
 #: ../kioslave/http/http.cpp:657
 msgid "No host specified."
@@ -5314,63 +5352,6 @@ msgstr "Спроба уповноваження зазнала невдачі."
 msgid "Unknown Authorization method."
 msgstr "Невідомий спосіб уповноваження."
 
-#: ../kioslave/http/http_cache_cleaner.cpp:731
-#: ../kioslave/http/http_cache_cleaner.cpp:732
-msgid "KDE HTTP cache maintenance tool"
-msgstr "Утиліта керування кешем KDE HTTP"
-
-#: ../kioslave/http/http_cache_cleaner.cpp:735
-msgid "Empty the cache"
-msgstr "Очистити кеш"
-
-#: ../kioslave/http/http_cache_cleaner.cpp:736
-msgid "Display information about cache file"
-msgstr "Показати інформацію щодо файла кешу"
-
-#: ../kioslave/file/file_unix.cpp:220
-msgid "Cannot copy file from %1 to %2. (Errno: %3)"
-msgstr "Не вдалося скопіювати з %1 у %2. (Помилка: %3)"
-
-#: ../kioslave/file/file_unix.cpp:289 ../kioslave/file/file.cpp:719
-msgid ""
-"Could not change permissions for\n"
-"%1"
-msgstr ""
-"Не вдалося змінити права доступу до\n"
-"%1"
-
-#: ../kioslave/file/file_unix.cpp:333
-msgid "No media in device for %1"
-msgstr "Немає носія інформації у пристрої, зв'язаному з %1"
-
-#: ../kioslave/file/file_unix.cpp:579
-msgid "Could not get user id for given user name %1"
-msgstr "Не вдалося дістати ІД користувача для %1"
-
-#: ../kioslave/file/file_unix.cpp:592
-msgid "Could not get group id for given group name %1"
-msgstr "Не вдалося дістати ІД групи для %1"
-
-#: ../kioslave/file/file.cpp:200
-msgid "Setting ACL for %1"
-msgstr "Встановлення ACL для %1"
-
-#: ../kioslave/file/file.cpp:913
-msgid "No Media inserted or Media not recognized."
-msgstr "Не вставлено або не розпізнано носій."
-
-#: ../kioslave/file/file.cpp:923 ../kioslave/file/file.cpp:1126
-msgid "\"vold\" is not running."
-msgstr "Не запущено «vold»."
-
-#: ../kioslave/file/file.cpp:958
-msgid "Could not find program \"mount\""
-msgstr "Не вдалось знайти програму «mount»"
-
-#: ../kioslave/file/file.cpp:1139
-msgid "Could not find program \"umount\""
-msgstr "Не вдалось знайти програму «umount»"
-
 #: ../kioslave/ftp/ftp.cpp:356
 msgid "Opening connection to host %1"
 msgstr "Відкривається з'єднання з машиною %1"
@@ -5420,6 +5401,58 @@ msgstr "Реєстрацію виконано"
 #: ../kioslave/ftp/ftp.cpp:708
 msgid "Could not login to %1."
 msgstr "Помилка реєстрації в %1."
+
+#: ../kioslave/file/file.cpp:200
+msgid "Setting ACL for %1"
+msgstr "Встановлення ACL для %1"
+
+#: ../kioslave/file/file.cpp:719 ../kioslave/file/file_unix.cpp:289
+msgid ""
+"Could not change permissions for\n"
+"%1"
+msgstr ""
+"Не вдалося змінити права доступу до\n"
+"%1"
+
+#: ../kioslave/file/file.cpp:913
+msgid "No Media inserted or Media not recognized."
+msgstr "Не вставлено або не розпізнано носій."
+
+#: ../kioslave/file/file.cpp:923 ../kioslave/file/file.cpp:1126
+msgid "\"vold\" is not running."
+msgstr "Не запущено «vold»."
+
+#: ../kioslave/file/file.cpp:958
+msgid "Could not find program \"mount\""
+msgstr "Не вдалось знайти програму «mount»"
+
+#: ../kioslave/file/file.cpp:1139
+msgid "Could not find program \"umount\""
+msgstr "Не вдалось знайти програму «umount»"
+
+#: ../kioslave/file/file_unix.cpp:220
+msgid "Cannot copy file from %1 to %2. (Errno: %3)"
+msgstr "Не вдалося скопіювати з %1 у %2. (Помилка: %3)"
+
+#: ../kioslave/file/file_unix.cpp:333
+msgid "No media in device for %1"
+msgstr "Немає носія інформації у пристрої, зв'язаному з %1"
+
+#: ../kioslave/file/file_unix.cpp:579
+msgid "Could not get user id for given user name %1"
+msgstr "Не вдалося дістати ІД користувача для %1"
+
+#: ../kioslave/file/file_unix.cpp:592
+msgid "Could not get group id for given group name %1"
+msgstr "Не вдалося дістати ІД групи для %1"
+
+#: ../kioslave/metainfo/metainfo.cpp:39
+msgid "kio_metainfo"
+msgstr "kio_metainfo"
+
+#: ../kioslave/metainfo/metainfo.cpp:98
+msgid "No metainfo for %1"
+msgstr "Метаінформація для %1 відсутня"
 
 #: ../kfile/knewfilemenu.cpp:367 ../kfile/knewfilemenu.cpp:882
 msgid "Sorry"
@@ -5498,6 +5531,91 @@ msgid ""
 msgstr ""
 "Створити нову теку у:\n"
 "%1"
+
+#: ../kfile/kfiletreeview.cpp:187
+msgid "Show Hidden Folders"
+msgstr "Показати приховані теки"
+
+#: ../kfile/kurlnavigatorbutton.cpp:684
+msgctxt "@action:inmenu"
+msgid "More"
+msgstr "Більше"
+
+#: ../kfile/kfileplacesview.cpp:579
+msgctxt "@action:inmenu"
+msgid "Empty Trash"
+msgstr "Спорожнити Смітник"
+
+#: ../kfile/kfileplacesview.cpp:586
+msgid "&Edit Entry '%1'..."
+msgstr "&Редагувати запис «%1»..."
+
+#: ../kfile/kfileplacesview.cpp:608
+msgid "&Hide Entry '%1'"
+msgstr "&Сховати запис «%1»"
+
+#: ../kfile/kfileplacesview.cpp:617
+msgid "&Show All Entries"
+msgstr "По&казати всі записи"
+
+#: ../kfile/kfileplacesview.cpp:628
+msgid "&Remove Entry '%1'"
+msgstr "&Вилучити запис «%1»"
+
+#: ../kfile/kfileplacesview.cpp:640
+msgctxt "@info"
+msgid "Do you really want to empty the Trash? All items will be deleted."
+msgstr ""
+"Ви справді бажаєте спорожнити Смітник? Весь його вміст буде остаточно "
+"втрачено."
+
+#: ../kfile/kfileplacesmodel.cpp:114
+msgctxt "KFile System Bookmarks"
+msgid "Home"
+msgstr "Домівка"
+
+#: ../kfile/kfileplacesmodel.cpp:117
+msgctxt "KFile System Bookmarks"
+msgid "Network"
+msgstr "Мережа"
+
+#: ../kfile/kfileplacesmodel.cpp:120
+msgctxt "KFile System Bookmarks"
+msgid "Root"
+msgstr "Корінь"
+
+#: ../kfile/kfileplacesmodel.cpp:123
+msgctxt "KFile System Bookmarks"
+msgid "Trash"
+msgstr "Смітник"
+
+#: ../kfile/kfileplacesmodel.cpp:743
+msgid "&Release '%1'"
+msgstr "&Роз’єднати «%1»"
+
+#: ../kfile/kfileplacesmodel.cpp:745
+msgid "&Safely Remove '%1'"
+msgstr "&Безпечно вилучити «%1»"
+
+#: ../kfile/kfileplacesmodel.cpp:748
+msgid "&Unmount '%1'"
+msgstr "Демон&тувати «%1»"
+
+#: ../kfile/kfileplacesmodel.cpp:769
+msgid "&Eject '%1'"
+msgstr "Ви&штовхнути «%1»"
+
+#: ../kfile/kfileplacesmodel.cpp:803
+msgid "The device '%1' is not a disk and cannot be ejected."
+msgstr "Пристрій «%1» не пов’язано з дисками, з нього нічого виштовхувати."
+
+#: ../kfile/kfileplacesmodel.cpp:839
+msgid "An error occurred while accessing '%1', the system responded: %2"
+msgstr "Трапилась помилка при доступі до «%1», повідомлення системи: %2"
+
+#: ../kfile/kfileplacesmodel.cpp:843
+msgid "An error occurred while accessing '%1'"
+msgstr "Трапилась помилка під час доступу до «%1»"
 
 #: ../kfile/kfilewidget.cpp:290
 msgid ""
@@ -5758,128 +5876,6 @@ msgstr ""
 "вікні вибору файлів, але працюють так само і на будь-якій іншій панелі "
 "закладок KDE.</qt>"
 
-#: ../kfile/kfileplaceeditdialog.cpp:90
-msgid "Add Places Entry"
-msgstr "Додати запис на панель «Місця»"
-
-#: ../kfile/kfileplaceeditdialog.cpp:92
-msgid "Edit Places Entry"
-msgstr "Змінити запис в панелі швидкого доступу"
-
-#: ../kfile/kfileplaceeditdialog.cpp:103
-msgid ""
-"<qt>This is the text that will appear in the Places panel.<br /><br />The "
-"label should consist of one or two words that will help you remember what "
-"this entry refers to. If you do not enter a label, it will be derived from "
-"the location's URL.</qt>"
-msgstr ""
-"<qt>Це текст, що буде показано на панелі швидкого доступу.<br /><br />Мітка "
-"повинна містити одне або два слова, які допоможуть вам запам'ятати, що "
-"знаходиться за цим записом. Якщо ви не вводитимете мітку, її буде визначено "
-"за адресою URL.</qt>"
-
-#: ../kfile/kfileplaceeditdialog.cpp:109
-msgid "L&abel:"
-msgstr "&Мітка:"
-
-#: ../kfile/kfileplaceeditdialog.cpp:111
-msgid "Enter descriptive label here"
-msgstr "Тут введіть описову мітку"
-
-#: ../kfile/kfileplaceeditdialog.cpp:115
-msgid ""
-"<qt>This is the location associated with the entry. Any valid URL may be "
-"used. For example:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp.kde."
-"org/pub/kde/stable<br /><br />By clicking on the button next to the text "
-"edit box you can browse to an appropriate URL.</qt>"
-msgstr ""
-"<qt>Це адреса з якою буде пов'язано запис. Сюди можна ввести будь-яку чинну "
-"адресу URL. Наприклад:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp."
-"kde.org/pub/kde/stable<br /><br />Натиснувши кнопку праворуч, ви зможете "
-"переглянути та вибрати URL.</qt>"
-
-#: ../kfile/kfileplaceeditdialog.cpp:121
-msgid "&Location:"
-msgstr "&Адреса:"
-
-#: ../kfile/kfileplaceeditdialog.cpp:127
-msgid ""
-"<qt>This is the icon that will appear in the Places panel.<br /><br />Click "
-"on the button to select a different icon.</qt>"
-msgstr ""
-"<qt>Це піктограма, яку буде показано на панелі швидкого доступу.<br /><br /"
-">Натисніть цю кнопку, щоб вибрати іншу піктограму.</qt>"
-
-#: ../kfile/kfileplaceeditdialog.cpp:130
-msgid "Choose an &icon:"
-msgstr "Виберіть &піктограму:"
-
-#: ../kfile/kfileplaceeditdialog.cpp:147
-msgid "&Only show when using this application (%1)"
-msgstr "&Тільки для цієї програми (%1)"
-
-#: ../kfile/kfileplaceeditdialog.cpp:149
-msgid ""
-"<qt>Select this setting if you want this entry to show only when using the "
-"current application (%1).<br /><br />If this setting is not selected, the "
-"entry will be available in all applications.</qt>"
-msgstr ""
-"<qt>Позначте цей пункт, якщо ви хочете зв'язати запис тільки з поточною "
-"програмою (%1).<br /><br />Якщо пункт позначено не буде, доступ до запису "
-"можна буде отримати і за допомогою інших програм.</qt>"
-
-#: ../kfile/kfileplacesmodel.cpp:114
-msgctxt "KFile System Bookmarks"
-msgid "Home"
-msgstr "Домівка"
-
-#: ../kfile/kfileplacesmodel.cpp:117
-msgctxt "KFile System Bookmarks"
-msgid "Network"
-msgstr "Мережа"
-
-#: ../kfile/kfileplacesmodel.cpp:120
-msgctxt "KFile System Bookmarks"
-msgid "Root"
-msgstr "Корінь"
-
-#: ../kfile/kfileplacesmodel.cpp:123
-msgctxt "KFile System Bookmarks"
-msgid "Trash"
-msgstr "Смітник"
-
-#: ../kfile/kfileplacesmodel.cpp:743
-msgid "&Release '%1'"
-msgstr "&Роз’єднати «%1»"
-
-#: ../kfile/kfileplacesmodel.cpp:745
-msgid "&Safely Remove '%1'"
-msgstr "&Безпечно вилучити «%1»"
-
-#: ../kfile/kfileplacesmodel.cpp:748
-msgid "&Unmount '%1'"
-msgstr "Демон&тувати «%1»"
-
-#: ../kfile/kfileplacesmodel.cpp:769
-msgid "&Eject '%1'"
-msgstr "Ви&штовхнути «%1»"
-
-#: ../kfile/kfileplacesmodel.cpp:803
-msgid "The device '%1' is not a disk and cannot be ejected."
-msgstr "Пристрій «%1» не пов’язано з дисками, з нього нічого виштовхувати."
-
-#: ../kfile/kfileplacesmodel.cpp:839
-msgid "An error occurred while accessing '%1', the system responded: %2"
-msgstr "Трапилась помилка при доступі до «%1», повідомлення системи: %2"
-
-#: ../kfile/kfileplacesmodel.cpp:843
-msgid "An error occurred while accessing '%1'"
-msgstr "Трапилась помилка під час доступу до «%1»"
-
-#: ../kfile/kfiletreeview.cpp:187
-msgid "Show Hidden Folders"
-msgstr "Показати приховані теки"
-
 #: ../kfile/kdiroperator.cpp:756 ../kfile/kdirselectdialog.cpp:159
 msgid "A file or folder named %1 already exists."
 msgstr "Файл або тека з назвою %1 вже існує."
@@ -6049,6 +6045,76 @@ msgstr "Відкрити менеджер файлів"
 msgid "&View"
 msgstr "П&ерегляд"
 
+#: ../kfile/kfileplaceeditdialog.cpp:90
+msgid "Add Places Entry"
+msgstr "Додати запис на панель «Місця»"
+
+#: ../kfile/kfileplaceeditdialog.cpp:92
+msgid "Edit Places Entry"
+msgstr "Змінити запис в панелі швидкого доступу"
+
+#: ../kfile/kfileplaceeditdialog.cpp:103
+msgid ""
+"<qt>This is the text that will appear in the Places panel.<br /><br />The "
+"label should consist of one or two words that will help you remember what "
+"this entry refers to. If you do not enter a label, it will be derived from "
+"the location's URL.</qt>"
+msgstr ""
+"<qt>Це текст, що буде показано на панелі швидкого доступу.<br /><br />Мітка "
+"повинна містити одне або два слова, які допоможуть вам запам'ятати, що "
+"знаходиться за цим записом. Якщо ви не вводитимете мітку, її буде визначено "
+"за адресою URL.</qt>"
+
+#: ../kfile/kfileplaceeditdialog.cpp:109
+msgid "L&abel:"
+msgstr "&Мітка:"
+
+#: ../kfile/kfileplaceeditdialog.cpp:111
+msgid "Enter descriptive label here"
+msgstr "Тут введіть описову мітку"
+
+#: ../kfile/kfileplaceeditdialog.cpp:115
+msgid ""
+"<qt>This is the location associated with the entry. Any valid URL may be "
+"used. For example:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp.kde."
+"org/pub/kde/stable<br /><br />By clicking on the button next to the text "
+"edit box you can browse to an appropriate URL.</qt>"
+msgstr ""
+"<qt>Це адреса з якою буде пов'язано запис. Сюди можна ввести будь-яку чинну "
+"адресу URL. Наприклад:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp."
+"kde.org/pub/kde/stable<br /><br />Натиснувши кнопку праворуч, ви зможете "
+"переглянути та вибрати URL.</qt>"
+
+#: ../kfile/kfileplaceeditdialog.cpp:121
+msgid "&Location:"
+msgstr "&Адреса:"
+
+#: ../kfile/kfileplaceeditdialog.cpp:127
+msgid ""
+"<qt>This is the icon that will appear in the Places panel.<br /><br />Click "
+"on the button to select a different icon.</qt>"
+msgstr ""
+"<qt>Це піктограма, яку буде показано на панелі швидкого доступу.<br /><br /"
+">Натисніть цю кнопку, щоб вибрати іншу піктограму.</qt>"
+
+#: ../kfile/kfileplaceeditdialog.cpp:130
+msgid "Choose an &icon:"
+msgstr "Виберіть &піктограму:"
+
+#: ../kfile/kfileplaceeditdialog.cpp:147
+msgid "&Only show when using this application (%1)"
+msgstr "&Тільки для цієї програми (%1)"
+
+#: ../kfile/kfileplaceeditdialog.cpp:149
+msgid ""
+"<qt>Select this setting if you want this entry to show only when using the "
+"current application (%1).<br /><br />If this setting is not selected, the "
+"entry will be available in all applications.</qt>"
+msgstr ""
+"<qt>Позначте цей пункт, якщо ви хочете зв'язати запис тільки з поточною "
+"програмою (%1).<br /><br />Якщо пункт позначено не буде, доступ до запису "
+"можна буде отримати і за допомогою інших програм.</qt>"
+
 #: ../kfile/kurlnavigator.cpp:426
 msgid "Copy"
 msgstr "Копіювати"
@@ -6073,23 +6139,6 @@ msgstr "Показати повний шлях"
 msgid "Custom Path"
 msgstr "Нетиповий шлях"
 
-#: ../kfile/kfilefiltercombo.cpp:194
-msgid "All Files"
-msgstr "Всі файли"
-
-#: ../kfile/kurlnavigatorbutton.cpp:684
-msgctxt "@action:inmenu"
-msgid "More"
-msgstr "Більше"
-
-#: ../kfile/kurlnavigatortogglebutton.cpp:94
-msgid "Click for Location Navigation"
-msgstr "Клацніть для переходу у режим послідовної навігації"
-
-#: ../kfile/kurlnavigatortogglebutton.cpp:96
-msgid "Click to Edit Location"
-msgstr "Клацніть для переходу у режим зміни адреси"
-
 #: ../kfile/kurlnavigatorprotocolcombo.cpp:173
 msgctxt "@item:inmenu"
 msgid "Devices"
@@ -6105,33 +6154,9 @@ msgctxt "@item:inmenu"
 msgid "Other"
 msgstr "Інше"
 
-#: ../kfile/kfileplacesview.cpp:579
-msgctxt "@action:inmenu"
-msgid "Empty Trash"
-msgstr "Спорожнити Смітник"
-
-#: ../kfile/kfileplacesview.cpp:586
-msgid "&Edit Entry '%1'..."
-msgstr "&Редагувати запис «%1»..."
-
-#: ../kfile/kfileplacesview.cpp:608
-msgid "&Hide Entry '%1'"
-msgstr "&Сховати запис «%1»"
-
-#: ../kfile/kfileplacesview.cpp:617
-msgid "&Show All Entries"
-msgstr "По&казати всі записи"
-
-#: ../kfile/kfileplacesview.cpp:628
-msgid "&Remove Entry '%1'"
-msgstr "&Вилучити запис «%1»"
-
-#: ../kfile/kfileplacesview.cpp:640
-msgctxt "@info"
-msgid "Do you really want to empty the Trash? All items will be deleted."
-msgstr ""
-"Ви справді бажаєте спорожнити Смітник? Весь його вміст буде остаточно "
-"втрачено."
+#: ../kfile/kfilefiltercombo.cpp:194
+msgid "All Files"
+msgstr "Всі файли"
 
 #: ../kfile/kdirselectdialog.cpp:131
 msgctxt "folder name"
@@ -6176,3 +6201,11 @@ msgstr "Показати приховані теки"
 msgctxt "@action:inmenu"
 msgid "Properties"
 msgstr "Властивості"
+
+#: ../kfile/kurlnavigatortogglebutton.cpp:94
+msgid "Click for Location Navigation"
+msgstr "Клацніть для переходу у режим послідовної навігації"
+
+#: ../kfile/kurlnavigatortogglebutton.cpp:96
+msgid "Click to Edit Location"
+msgstr "Клацніть для переходу у режим зміни адреси"

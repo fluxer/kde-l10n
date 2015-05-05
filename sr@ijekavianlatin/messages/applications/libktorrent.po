@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2011-10-31 20:18+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -21,6 +21,45 @@ msgstr ""
 "X-Associated-UI-Catalogs: kdelibs4\n"
 "X-Environment: kde\n"
 "X-Generator: Lokalize 1.0\n"
+
+#: examples/ktcli/main.cpp:60
+msgid "Torrent to open"
+msgstr "Željeni torent"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+msgid "Port to use"
+msgstr "Željeni port"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr "Da li aktivirati šifrovanje"
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr "Da li aktivirati razmjenu vršnjaka"
+
+#: examples/ktcli/main.cpp:65
+msgid "Whether or not to use utp"
+msgstr "Da li koristiti µTP"
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr "ktcli"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "Fascikla %1 ne postoji"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Oštećen torent."
+
+#: src/torrent/torrent.cpp:165
+msgid "Unable to open torrent file %1: %2"
+msgstr "Ne mogu da otvorim torent fajl %1: %2"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -53,6 +92,17 @@ msgstr ""
 #: src/torrent/torrentcontrol.cpp:607
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "Već preuzimate torent <b>%1</b>."
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+msgid "Cannot open file %1: %2"
+msgstr "Ne mogu da otvorim fajl %1: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Ne mogu da napravim indeksni fajl: %1"
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -115,27 +165,44 @@ msgstr "Pauzirano"
 msgid "Superseeding"
 msgstr "Supersijanje"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Oštećen torent."
+# rewrite-msgid: /Timeout/Timed out while/
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr "Isteklo vrijeme pri kontaktiranju pratioca %1"
 
-#: src/torrent/torrent.cpp:165
-msgid "Unable to open torrent file %1: %2"
-msgstr "Ne mogu da otvorim torent fajl %1: %2"
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "Ne mogu da razriješim ime domaćina %1"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
-msgid "Cannot open file %1: %2"
-msgstr "Ne mogu da otvorim fajl %1: %2"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Preusmjerenje bez lokacije preusmerenja"
 
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "Ne mogu da napravim indeksni fajl: %1"
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "Neispravan odgovor sa pratioca"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "Neispravni podaci sa pratioca"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "Neispravan URL pratioca"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr "Čekam da se završe druge provjere podataka"
+
+#: src/datachecker/datacheckerjob.cpp:141
+msgid "Checking Data"
+msgstr "Provjeravam podatke"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Nepoznat klijent"
 
 #: src/download/chunkdownload.cpp:383
 msgid "1 peer"
@@ -210,18 +277,124 @@ msgstr "Preusmjeren bez nove lokacije."
 msgid "Disabled because webseed does not match torrent"
 msgstr "Isključen jer se veb sijanje ne poklapa sa torentom"
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-msgid "Cannot open index file %1: %2"
-msgstr "Ne mogu da otvorim fajl indeksa %1: %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "Greška pri pisanju na disk"
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
-msgid "Failed to open %1: %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "Greška pri čitanju sa diska"
+
+#: src/util/file.cpp:84
+msgid "Cannot write to %1: %2"
+msgstr "Ne mogu da pišem u %1: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Ne mogu da čitam iz %1"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "%1 dan "
+msgstr[1] "%1 dana "
+msgstr[2] "%1 dana "
+msgstr[3] "1 dan "
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "Ne mogu da napravim fasciklu %1"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "Ne mogu da simbolički povežem %1 na %2: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "Ne mogu da premjestim %1 u %2: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Ne mogu da kopiram %1 u %2: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "Ne mogu da obrišem %1: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "Ne mogu da napravim %1: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Ne mogu da proračunam veličinu za %1: %2"
+
+#: src/util/fileops.cpp:334
+msgid "Cannot calculate the filesize: %1"
+msgstr "Ne mogu da proračunam veličinu: %1"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+msgid "Cannot open %1: %2"
 msgstr "Ne mogu da otvorim %1: %2"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "Ne mogu da raširim fajl: %1"
+
+#: src/util/fileops.cpp:427
+msgid "Cannot seek in file: %1"
+msgstr "Ne mogu da premotavam u fajlu: %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "Opšte"
+
+#: src/util/logsystemmanager.cpp:34
+msgid "Connections"
+msgstr "Veze"
+
+#: src/util/logsystemmanager.cpp:35
+msgid "Tracker"
+msgstr "Pratilac"
+
+#: src/util/logsystemmanager.cpp:36
+msgid "DHT"
+msgstr "DHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "Ulaz/izlaz diska"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr "µTP"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "U redu"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr "Upozorenje: %1"
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Objavljujem"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 msgid "Failed to create %1: %2"
 msgstr "Ne mogu da napravim %1: %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+msgid "Failed to open %1: %2"
+msgstr "Ne mogu da otvorim %1: %2"
 
 #: src/diskio/dndfile.cpp:89
 msgid "Cannot create file %1: %2"
@@ -234,16 +407,6 @@ msgstr "Ne mogu da upišem prvo parče u DND fajl: %1"
 #: src/diskio/dndfile.cpp:155
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Ne mogu da upišem posljednje parče u DND fajl: %1"
-
-# >? Wth?
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr "Ne mogu da pišem u podeono mapirani samo za čitanje"
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-msgid "Cannot open %1: %2"
-msgstr "Ne mogu da otvorim %1: %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -284,6 +447,15 @@ msgstr "Ne mogu da pišem u %1: %2"
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Ne mogu da rezervišem prostor na disku: %1"
 
+# >? Wth?
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr "Ne mogu da pišem u podeono mapirani samo za čitanje"
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+msgid "Cannot open index file %1: %2"
+msgstr "Ne mogu da otvorim fajl indeksa %1: %2"
+
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
 msgstr "Čekam da se završe drugi poslovi premiještanja"
@@ -323,115 +495,6 @@ msgstr "Ne mogu da pretvorim %1 u cio broj"
 msgid "Torrent is incomplete."
 msgstr "Torent nije završen."
 
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "U redu"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "Warning: %1"
-msgstr "Upozorenje: %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Objavljujem"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "Fascikla %1 ne postoji"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "Opšte"
-
-#: src/util/logsystemmanager.cpp:34
-msgid "Connections"
-msgstr "Veze"
-
-#: src/util/logsystemmanager.cpp:35
-msgid "Tracker"
-msgstr "Pratilac"
-
-#: src/util/logsystemmanager.cpp:36
-msgid "DHT"
-msgstr "DHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "Ulaz/izlaz diska"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr "µTP"
-
-#: src/util/fileops.cpp:101
-msgid "Cannot create directory %1"
-msgstr "Ne mogu da napravim fasciklu %1"
-
-#: src/util/fileops.cpp:168
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Ne mogu da simbolički povežem %1 na %2: %3"
-
-#: src/util/fileops.cpp:185
-msgid "Cannot move %1 to %2: %3"
-msgstr "Ne mogu da premjestim %1 u %2: %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Ne mogu da kopiram %1 u %2: %3"
-
-#: src/util/fileops.cpp:282
-msgid "Cannot delete %1: %2"
-msgstr "Ne mogu da obrišem %1: %2"
-
-#: src/util/fileops.cpp:300
-msgid "Cannot create %1: %2"
-msgstr "Ne mogu da napravim %1: %2"
-
-#: src/util/fileops.cpp:318
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Ne mogu da proračunam veličinu za %1: %2"
-
-#: src/util/fileops.cpp:334
-msgid "Cannot calculate the filesize: %1"
-msgstr "Ne mogu da proračunam veličinu: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-msgid "Cannot expand file: %1"
-msgstr "Ne mogu da raširim fajl: %1"
-
-#: src/util/fileops.cpp:427
-msgid "Cannot seek in file: %1"
-msgstr "Ne mogu da premotavam u fajlu: %1"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "Greška pri pisanju na disk"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "Greška pri čitanju sa diska"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "%1 dan "
-msgstr[1] "%1 dana "
-msgstr[2] "%1 dana "
-msgstr[3] "1 dan "
-
-#: src/util/file.cpp:84
-msgid "Cannot write to %1: %2"
-msgstr "Ne mogu da pišem u %1: %2"
-
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "Ne mogu da čitam iz %1"
-
 #: src/upnp/upnprouter.cpp:167
 msgid "Failed to download %1: %2"
 msgstr "Ne mogu da preuzmem %1: %2"
@@ -459,66 +522,3 @@ msgstr "Veza neočekivano zatvorena"
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
 msgstr "Isteklo vrijeme postupku"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Nepoznat klijent"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr "Čekam da se završe druge provjere podataka"
-
-#: src/datachecker/datacheckerjob.cpp:141
-msgid "Checking Data"
-msgstr "Provjeravam podatke"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "Neispravan odgovor sa pratioca"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "Neispravni podaci sa pratioca"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "Neispravan URL pratioca"
-
-# rewrite-msgid: /Timeout/Timed out while/
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "Isteklo vrijeme pri kontaktiranju pratioca %1"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Preusmjerenje bez lokacije preusmerenja"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "Ne mogu da razriješim ime domaćina %1"
-
-#: examples/ktcli/main.cpp:60
-msgid "Torrent to open"
-msgstr "Željeni torent"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-msgid "Port to use"
-msgstr "Željeni port"
-
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr "Da li aktivirati šifrovanje"
-
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr "Da li aktivirati razmjenu vršnjaka"
-
-#: examples/ktcli/main.cpp:65
-msgid "Whether or not to use utp"
-msgstr "Da li koristiti µTP"
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
-msgstr "ktcli"

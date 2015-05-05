@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gwenview\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2014-09-28 22:46-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -19,24 +19,666 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
+#. i18n: file: lib/redeyereduction/redeyereductionwidget.ui:24
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:3
+msgid "Size"
+msgstr "サイズ"
+
+#. i18n: file: lib/redeyereduction/redeyereductionwidget.ui:63
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:6
+msgid "Click on the red eye you want to fix"
+msgstr "修正する赤目をクリックしてください。"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:31
+#. i18n: ectx: whatsthis, entry (PercentageOfMemoryUsageWarning), group (General)
+#: rc.cpp:9
+msgid ""
+"The percentage of memory used by Gwenview before it\n"
+"            warns the user and suggest saving changes."
+msgstr ""
+"Gwenview がユーザに保存するよう警告を発する\n"
+"\t\t\tメモリの使用パーセント量。"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:38
+#. i18n: ectx: whatsthis, entry (BlackListedExtensions), group (General)
+#: rc.cpp:13
+msgid ""
+"A list of filename extensions Gwenview should not try to\n"
+"            load. We exclude *.new as well because this is the extension\n"
+"            used for temporary files by KSaveFile."
+msgstr ""
+"Gwenview が読み込むべきでないファイルの拡張子。\n"
+"\t\t\tこれは TIFF や JPEG と認識されてしまう RAW ファイルを除外するのに便利で"
+"す。\n"
+"\t\t\t*.new を除外するのは、この拡張子が KSaveFile の一時ファイルとして\n"
+"\t\t\t使われているからです。"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:139
+#. i18n: ectx: whatsthis, entry (LockZoom), group (ImageView)
+#: rc.cpp:18
+msgid ""
+"Defines what happens when going to image B after having zoomed an area of "
+"image A.\n"
+"                When true: zoom and position is kept. When false: image B is "
+"zoomed out to fit the screen."
+msgstr ""
+
+#. i18n: file: lib/gwenviewconfig.kcfg:220
+#. i18n: ectx: label, entry (random), group (slide show)
+#: rc.cpp:22
+msgid "Display slide show images in random order"
+msgstr "スライドショーの画像をランダムな順序で表示"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:224
+#. i18n: ectx: label, entry (fullscreen), group (slide show)
+#: rc.cpp:25
+msgid "Show slideshow in fullscreen mode"
+msgstr "フルスクリーンモードでスライドショーを表示"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:228
+#. i18n: ectx: label, entry (loop), group (slide show)
+#: rc.cpp:28
+msgid "Loop on images"
+msgstr "画像を繰り返す"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:232
+#. i18n: ectx: label, entry (stopAtEnd), group (slide show)
+#: rc.cpp:31
+msgid "Stop at last image of folder"
+msgstr "フォルダの最後の画像で停止"
+
+#. i18n: file: lib/gwenviewconfig.kcfg:236
+#. i18n: ectx: label, entry (interval), group (slide show)
+#: rc.cpp:34
+msgid "Interval between images (in seconds)"
+msgstr "画像間の間隔 (秒)"
+
+#. i18n: file: lib/print/printoptionspage.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, PrintOptionsPage)
+#: rc.cpp:40
+msgid "Image Settings"
+msgstr "画像の設定"
+
+#. i18n: file: lib/print/printoptionspage.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:43
+msgid "Image Position"
+msgstr "画像の位置"
+
+#. i18n: file: lib/print/printoptionspage.ui:45
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:46
+msgid "Scaling"
+msgstr "拡大縮小"
+
+#. i18n: file: lib/print/printoptionspage.ui:51
+#. i18n: ectx: property (text), widget (QRadioButton, mNoScale)
+#: rc.cpp:49
+msgid "&No scaling"
+msgstr "拡大縮小なし(&N)"
+
+#. i18n: file: lib/print/printoptionspage.ui:61
+#. i18n: ectx: property (text), widget (QRadioButton, mScaleToPage)
+#: rc.cpp:52
+msgid "&Fit image to page"
+msgstr "画像をページに合わせる(&F)"
+
+# ACCELERATOR added by translator
+#. i18n: file: lib/print/printoptionspage.ui:98
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintEnlargeSmallerImages)
+#. i18n: file: app/imageviewconfigpage.ui:201
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnlargeSmallerImages)
+#: rc.cpp:55 rc.cpp:160
+msgid "Enlarge smaller images"
+msgstr "ページより小さい画像は拡大する(&E)"
+
+#. i18n: file: lib/print/printoptionspage.ui:123
+#. i18n: ectx: property (text), widget (QRadioButton, mScaleTo)
+#: rc.cpp:58
+msgid "&Scale to:"
+msgstr "このサイズに拡大縮小する(&S):"
+
+#. i18n: file: lib/print/printoptionspage.ui:158
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:61
+msgctxt "Dimension separator, as in: '15 x 10 centimeters'"
+msgid "x"
+msgstr "x"
+
+#. i18n: file: lib/print/printoptionspage.ui:185
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
+#: rc.cpp:64
+msgid "Millimeters"
+msgstr "ミリメートル"
+
+#. i18n: file: lib/print/printoptionspage.ui:190
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
+#: rc.cpp:67
+msgid "Centimeters"
+msgstr "センチメートル"
+
+#. i18n: file: lib/print/printoptionspage.ui:195
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
+#: rc.cpp:70
+msgid "Inches"
+msgstr "インチ"
+
+# ACCELERATOR added by translator
+#. i18n: file: lib/print/printoptionspage.ui:224
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintKeepRatio)
+#: rc.cpp:73
+msgid "Keep ratio"
+msgstr "アスペクト比を保つ(&K)"
+
+#. i18n: file: lib/crop/cropwidget.ui:20
+#. i18n: ectx: property (windowTitle), widget (QWidget, CropWidget)
+#: rc.cpp:76 lib/crop/cropwidget.cpp:191 lib/crop/cropimageoperation.cpp:71
+#: app/imageopscontextmanageritem.cpp:111
+msgid "Crop"
+msgstr "切り取り"
+
+#. i18n: file: lib/crop/cropwidget.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, advancedCheckBox)
+#: rc.cpp:79
+msgid "Advanced settings"
+msgstr "詳細設定"
+
+#. i18n: file: lib/crop/cropwidget.ui:55
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:82
+msgid "Ratio:"
+msgstr "比率:"
+
+#. i18n: file: lib/crop/cropwidget.ui:84
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:85
+msgid "Position:"
+msgstr "位置:"
+
+#. i18n: file: lib/crop/cropwidget.ui:117
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:88
+msgid "Size:"
+msgstr "サイズ:"
+
+#. i18n: file: lib/resize/resizeimagewidget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, ResizeImageWidget)
+#: rc.cpp:91
+msgid "Image Resizing"
+msgstr "画像のサイズ変更"
+
+#. i18n: file: lib/resize/resizeimagewidget.ui:20
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:94
+msgid "Enter the new size for this image."
+msgstr "画像の新しいサイズを入力。"
+
+#. i18n: file: lib/resize/resizeimagewidget.ui:32
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:97
+msgid "Current size:"
+msgstr "現在のサイズ:"
+
+#. i18n: file: lib/resize/resizeimagewidget.ui:88
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:100
+msgid "New Size:"
+msgstr "新しいサイズ:"
+
+# ACCELERATOR added by translator
+#. i18n: file: lib/resize/resizeimagewidget.ui:135
+#. i18n: ectx: property (text), widget (QCheckBox, mKeepAspectCheckBox)
+#: rc.cpp:103
+msgid "Keep aspect ratio"
+msgstr "アスペクト比を保つ(&K)"
+
+#. i18n: file: importer/progresspage.ui:30
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:106
+msgid "Importing documents..."
+msgstr "文書をインポート中..."
+
+#. i18n: file: importer/importerconfigdialog.ui:17
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoRename)
+#: rc.cpp:109
+msgid "Rename documents automatically"
+msgstr "自動的に文書の名前を変更する"
+
+#. i18n: file: importer/importerconfigdialog.ui:39
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:112
+msgid "Rename Format:"
+msgstr "名前変更の形式:"
+
+#. i18n: file: importer/importerconfigdialog.ui:59
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:115
+msgid "Preview:"
+msgstr "プレビュー:"
+
+#. i18n: file: importer/importerconfigdialog.ui:83
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:118
+msgid "<i>Type text or click the items below to customize the format</i>"
+msgstr "テキストを入力するか下のアイテムをクリックして形式をカスタマイズします"
+
+#. i18n: file: importer/thumbnailpage.ui:173
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:121
+msgid "Select the documents to import"
+msgstr "インポートする文書を選択"
+
+#. i18n: file: importer/thumbnailpage.ui:185
+#. i18n: ectx: property (text), widget (QPushButton, mConfigureButton)
+#: rc.cpp:124
+msgid "Settings..."
+msgstr "設定..."
+
+#. i18n: file: importer/thumbnailpage.ui:201
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:127
+msgid "Enter the import destination"
+msgstr "インポート先を入力"
+
+#. i18n: file: importer/thumbnailpage.ui:220
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:130
+msgid "Listing content of:"
+msgstr ""
+
+#. i18n: file: part/gvpart.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:133
+msgid "&File"
+msgstr "ファイル(&F)"
+
+#. i18n: file: part/gvpart.rc:8
+#. i18n: ectx: Menu (view)
+#: rc.cpp:136
+msgid "&View"
+msgstr "表示(&V)"
+
+#. i18n: file: part/gvpart.rc:15
+#. i18n: ectx: ToolBar (mainToolBar)
+#. i18n: file: app/gwenviewui.rc:81
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:139 rc.cpp:208
+msgid "Main Toolbar"
+msgstr "メインツールバー"
+
+#. i18n: file: app/imageviewconfigpage.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:142
+msgid "Transparent background:"
+msgstr "透明部分:"
+
+# ACCELERATOR changed by translator
+#. i18n: file: app/imageviewconfigpage.ui:38
+#. i18n: ectx: property (text), widget (QRadioButton, checkBoardRadioButton)
+#: rc.cpp:145
+msgid "&Check board"
+msgstr "市松模様(&K)"
+
+#. i18n: file: app/imageviewconfigpage.ui:71
+#. i18n: ectx: property (text), widget (QRadioButton, solidColorRadioButton)
+#: rc.cpp:148
+msgid "&Solid color:"
+msgstr "単色(&S):"
+
+#. i18n: file: app/imageviewconfigpage.ui:119
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:151
+msgid "Mouse wheel behavior:"
+msgstr "マウスホイールの挙動:"
+
+# ACCELERATOR added by translator
+#. i18n: file: app/imageviewconfigpage.ui:134
+#. i18n: ectx: property (text), widget (QRadioButton, mouseWheelScrollRadioButton)
+#: rc.cpp:154
+msgctxt "@option:radio action on mouse wheel"
+msgid "Scroll"
+msgstr "スクロール(&L)"
+
+# ACCELERATOR added by translator
+#. i18n: file: app/imageviewconfigpage.ui:161
+#. i18n: ectx: property (text), widget (QRadioButton, mouseWheelBrowseRadioButton)
+#: rc.cpp:157
+msgctxt "@option:radio action on mouse wheel"
+msgid "Browse"
+msgstr "ブラウズ(&B)"
+
+#. i18n: file: app/imageviewconfigpage.ui:239
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:163
+msgid "Animations:"
+msgstr "アニメーション:"
+
+#. i18n: file: app/imageviewconfigpage.ui:254
+#. i18n: ectx: property (text), widget (QRadioButton, glAnimationRadioButton)
+#: rc.cpp:166
+msgid "OpenGL"
+msgstr ""
+
+#. i18n: file: app/imageviewconfigpage.ui:281
+#. i18n: ectx: property (text), widget (QRadioButton, softwareAnimationRadioButton)
+#: rc.cpp:169
+msgid "Software"
+msgstr ""
+
+#. i18n: file: app/imageviewconfigpage.ui:305
+#. i18n: ectx: property (text), widget (QRadioButton, noAnimationRadioButton)
+#: rc.cpp:172
+msgid "None"
+msgstr ""
+
+#. i18n: file: app/imageviewconfigpage.ui:327
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:175
+msgid "<b>Thumbnail Bar</b>"
+msgstr "サムネイルバー"
+
+#. i18n: file: app/imageviewconfigpage.ui:334
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: rc.cpp:178
+msgid "Orientation:"
+msgstr "向き:"
+
+#. i18n: file: app/imageviewconfigpage.ui:349
+#. i18n: ectx: property (text), widget (QRadioButton, horizontalRadioButton)
+#: rc.cpp:181
+msgid "Horizontal"
+msgstr "横"
+
+#. i18n: file: app/imageviewconfigpage.ui:373
+#. i18n: ectx: property (text), widget (QRadioButton, verticalRadioButton)
+#: rc.cpp:184
+msgid "Vertical"
+msgstr "縦"
+
+#. i18n: file: app/imageviewconfigpage.ui:395
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:187
+msgid "Row count:"
+msgstr "段数/列数:"
+
+#. i18n: file: app/startmainpage.ui:34
+#. i18n: ectx: property (text), widget (QLabel, mHistoryDisabledLabel)
+#: rc.cpp:190
+msgid "History has been disabled."
+msgstr "履歴を無効にしました。"
+
+#. i18n: file: app/startmainpage.ui:51
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: rc.cpp:193
+msgid "Recent Folders"
+msgstr "最近開いたフォルダ"
+
+#. i18n: file: app/startmainpage.ui:65
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: rc.cpp:196
+msgid "Recent URLs"
+msgstr "最近アクセスした URL"
+
+#. i18n: file: app/startmainpage.ui:109
+#. i18n: ectx: attribute (title), widget (QWidget, placesTab)
+#: rc.cpp:199
+msgid "Places"
+msgstr "場所"
+
+#. i18n: file: app/gwenviewui.rc:65
+#. i18n: ectx: Menu (plugins)
+#: rc.cpp:202
+msgid "&Plugins"
+msgstr "プラグイン(&P)"
+
+#. i18n: file: app/gwenviewui.rc:68
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:205
+msgid "&Settings"
+msgstr "設定(&S)"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:211
+msgid "Slideshow"
+msgstr "スライドショー"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:29
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:214
+msgid "Interval:"
+msgstr "間隔:"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:75
+#. i18n: ectx: property (text), widget (QCheckBox, mSlideShowLoopCheckBox)
+#: rc.cpp:217
+msgid "Loop"
+msgstr "繰り返し"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:82
+#. i18n: ectx: property (text), widget (QCheckBox, mSlideShowRandomCheckBox)
+#: rc.cpp:220
+msgid "Random"
+msgstr "ランダム"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:92
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:223
+msgid "Image Information"
+msgstr "画像情報"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:101
+#. i18n: ectx: property (text), widget (QPushButton, mConfigureDisplayedInformationButton)
+#: rc.cpp:226
+#, fuzzy
+msgid "Select Image Information to Display..."
+msgstr "メタ情報"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:111
+#. i18n: ectx: property (title), widget (QGroupBox, mThumbnailGroupBox)
+#: rc.cpp:229
+msgid "Thumbnails"
+msgstr "サムネイル"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:120
+#. i18n: ectx: property (text), widget (QCheckBox, mShowThumbnailsCheckBox)
+#: rc.cpp:232
+msgid "Show thumbnails"
+msgstr "サムネイルを表示する"
+
+#. i18n: file: app/fullscreenconfigwidget.ui:130
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:235
+msgid "Height:"
+msgstr "高さ:"
+
+#. i18n: file: app/browsemainpage.ui:88
+#. i18n: ectx: property (text), widget (Gwenview::StatusBarToolButton, mAddFilterButton)
+#: rc.cpp:238
+msgid "Add Filter"
+msgstr "フィルタを追加"
+
+#. i18n: file: app/advancedconfigpage.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:241
+msgid "Cache:"
+msgstr "キャッシュ:"
+
+#. i18n: file: app/advancedconfigpage.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_DeleteThumbnailCacheOnExit)
+#: rc.cpp:244
+msgid "Delete thumbnail cache folder on exit"
+msgstr "終了時にサムネイルのキャッシュフォルダを削除する"
+
+#. i18n: file: app/advancedconfigpage.ui:51
+#. i18n: ectx: property (text), widget (QLabel, cacheHelpLabel)
+#: rc.cpp:247
+msgid ""
+"Enable this option if you do not have a lot of disk space.<br/><br/><em>Be "
+"careful:</em> this will delete the folder named <filename>.thumbnails</"
+"filename> in your home folder, deleting all thumbnails previously generated "
+"by Gwenview and other applications."
+msgstr ""
+"このオプションはディスク領域があまりない場合に有効にしてください。<br/><br/>"
+"これは、あなたのホームフォルダの <filename>.thumbnails</filename> という名前"
+"のフォルダを削除するので、Gwenview だけでなく他のアプリケーションによって生成"
+"されたサムネイルも削除されることに注意してください。"
+
+#. i18n: file: app/advancedconfigpage.ui:77
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:250
+msgid "History:"
+msgstr "履歴:"
+
+#. i18n: file: app/advancedconfigpage.ui:89
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HistoryEnabled)
+#: rc.cpp:253
+msgid "Remember folders and URLs"
+msgstr "フォルダと URL を記憶させる"
+
+#. i18n: file: app/generalconfigpage.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:256
+msgid "Background color:"
+msgstr "背景色:"
+
+#. i18n: file: app/generalconfigpage.ui:82
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:259
+msgid "Videos:"
+msgstr "動画:"
+
+#. i18n: file: app/generalconfigpage.ui:89
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ListVideos)
+#: rc.cpp:262
+msgid "Show videos"
+msgstr "動画を表示"
+
+#: lib/document/loadingjob.cpp:57
+msgid "Could not load document %1"
+msgstr "文書 %1 を読み込めませんでした"
+
+#: lib/document/document.cpp:307
+msgctxt "@info"
+msgid "Gwenview cannot save this kind of documents."
+msgstr "Gwenview はこの種類の文書を保存できません。"
+
+#: lib/document/savejob.cpp:105
+msgctxt "@info"
+msgid ""
+"Could not open file for writing, check that you have the necessary rights in "
+"<filename>%1</filename>."
+msgstr ""
+"ファイルを書き込みのために開けませんでした。<filename>%1</filename> にアクセ"
+"ス許可があるか確認してください。"
+
+#: lib/document/savejob.cpp:129
+msgctxt "@info"
+msgid ""
+"Could not overwrite file, check that you have the necessary rights to write "
+"in <filename>%1</filename>."
+msgstr ""
+"ファイルを上書きできませんでした。<filename>%1</filename> に書き込み権限があ"
+"るか確認してください。"
+
+#: lib/document/documentjob.cpp:79 app/imageopscontextmanageritem.cpp:142
+msgctxt "@info"
+msgid "Gwenview cannot edit this kind of image."
+msgstr "Gwenview はこの種類の画像を編集できません。"
+
+#: lib/document/loadingdocumentimpl.cpp:136
+msgctxt "@info"
+msgid "Gwenview cannot display documents of type %1."
+msgstr "Gwenview は %1 の文書を表示できません。"
+
+#: lib/document/loadingdocumentimpl.cpp:387
+msgctxt "@info"
+msgid "Could not open file %1"
+msgstr "ファイル %1 を開けません"
+
+#: lib/document/loadingdocumentimpl.cpp:475
+msgctxt "@info"
+msgid "Loading meta information failed."
+msgstr "メタ情報の読み込みに失敗しました。"
+
+#: lib/document/loadingdocumentimpl.cpp:503
+msgctxt "@info"
+msgid "Loading image failed."
+msgstr "画像の読み込みに失敗しました。"
+
+#: lib/redeyereduction/redeyereductionimageoperation.cpp:77
+msgid "RedEyeReduction"
+msgstr "RedEyeReduction"
+
+#: lib/transformimageoperation.cpp:62
+msgctxt "(qtundo-format)"
+msgid "Rotate Right"
+msgstr "右に回転"
+
+#: lib/transformimageoperation.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Rotate Left"
+msgstr "左に回転"
+
+#: lib/transformimageoperation.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Mirror"
+msgstr "鏡像"
+
+#: lib/transformimageoperation.cpp:71
+msgctxt "(qtundo-format)"
+msgid "Flip"
+msgstr "反転"
+
+#: lib/transformimageoperation.cpp:76
+msgctxt "(qtundo-format)"
+msgid "Transform"
+msgstr "変形"
+
+#: lib/print/printhelper.cpp:131
+msgid "Print Image"
+msgstr "画像の印刷"
+
 #: lib/statusbartoolbutton.cpp:107 lib/fullscreenbar.cpp:263
 msgctxt "@info:tooltip of custom toolbar button"
 msgid "%1"
 msgstr "%1|/|$[~stripAccel $[~getForm %1 ~full]]"
 
-#: lib/jpegcontent.cpp:581
-msgctxt "@info"
-msgid "Could not open file for writing."
-msgstr "ファイルを書き込みのために開けませんでした。"
+#: lib/crop/cropwidget.cpp:140
+msgid "Square"
+msgstr "正方形"
 
-#: lib/jpegcontent.cpp:597
-msgctxt "@info"
-msgid "No data to store."
-msgstr "保存するデータがありません。"
+#: lib/crop/cropwidget.cpp:141
+msgid "This Screen"
+msgstr "このスクリーン"
 
-#: lib/historymodel.cpp:145
-msgid "Last visited: %1"
-msgstr "最終アクセス: %1"
+#: lib/crop/cropwidget.cpp:142
+msgid "Landscape"
+msgstr ""
+
+#: lib/crop/cropwidget.cpp:147 lib/crop/cropwidget.cpp:154
+msgid "ISO Size (A4, A3...)"
+msgstr ""
+
+#: lib/crop/cropwidget.cpp:148 lib/crop/cropwidget.cpp:155
+msgid "US Letter"
+msgstr ""
+
+#: lib/crop/cropwidget.cpp:149
+msgid "Portrait"
+msgstr ""
+
+#. i18n("%1:%2") because ':' should not be translated, it is
+#. used to parse the ratio string.
+#: lib/crop/cropwidget.cpp:164
+msgid "Width"
+msgstr "幅"
+
+#: lib/crop/cropwidget.cpp:164
+msgid "Height"
+msgstr "高さ"
 
 #: lib/imagemetainfomodel.cpp:244
 msgctxt "@item:intable Image file name"
@@ -88,201 +730,9 @@ msgctxt "@title:column"
 msgid "Value"
 msgstr "値"
 
-#: lib/hud/hudwidget.cpp:108
-msgctxt "@info:tooltip"
-msgid "Close"
-msgstr "閉じる"
-
-#: lib/document/document.cpp:307
-msgctxt "@info"
-msgid "Gwenview cannot save this kind of documents."
-msgstr "Gwenview はこの種類の文書を保存できません。"
-
-#: lib/document/savejob.cpp:105
-msgctxt "@info"
-msgid ""
-"Could not open file for writing, check that you have the necessary rights in "
-"<filename>%1</filename>."
-msgstr ""
-"ファイルを書き込みのために開けませんでした。<filename>%1</filename> にアクセ"
-"ス許可があるか確認してください。"
-
-#: lib/document/savejob.cpp:129
-msgctxt "@info"
-msgid ""
-"Could not overwrite file, check that you have the necessary rights to write "
-"in <filename>%1</filename>."
-msgstr ""
-"ファイルを上書きできませんでした。<filename>%1</filename> に書き込み権限があ"
-"るか確認してください。"
-
-#: lib/document/documentjob.cpp:79 app/imageopscontextmanageritem.cpp:142
-msgctxt "@info"
-msgid "Gwenview cannot edit this kind of image."
-msgstr "Gwenview はこの種類の画像を編集できません。"
-
-#: lib/document/loadingdocumentimpl.cpp:136
-msgctxt "@info"
-msgid "Gwenview cannot display documents of type %1."
-msgstr "Gwenview は %1 の文書を表示できません。"
-
-#: lib/document/loadingdocumentimpl.cpp:387
-msgctxt "@info"
-msgid "Could not open file %1"
-msgstr "ファイル %1 を開けません"
-
-#: lib/document/loadingdocumentimpl.cpp:475
-msgctxt "@info"
-msgid "Loading meta information failed."
-msgstr "メタ情報の読み込みに失敗しました。"
-
-#: lib/document/loadingdocumentimpl.cpp:503
-msgctxt "@info"
-msgid "Loading image failed."
-msgstr "画像の読み込みに失敗しました。"
-
-#: lib/document/loadingjob.cpp:57
-msgid "Could not load document %1"
-msgstr "文書 %1 を読み込めませんでした"
-
-#: lib/crop/cropwidget.cpp:140
-msgid "Square"
-msgstr "正方形"
-
-#: lib/crop/cropwidget.cpp:141
-msgid "This Screen"
-msgstr "このスクリーン"
-
-#: lib/crop/cropwidget.cpp:142
-msgid "Landscape"
-msgstr ""
-
-#: lib/crop/cropwidget.cpp:147 lib/crop/cropwidget.cpp:154
-msgid "ISO Size (A4, A3...)"
-msgstr ""
-
-#: lib/crop/cropwidget.cpp:148 lib/crop/cropwidget.cpp:155
-msgid "US Letter"
-msgstr ""
-
-#: lib/crop/cropwidget.cpp:149
-msgid "Portrait"
-msgstr ""
-
-#. i18n("%1:%2") because ':' should not be translated, it is
-#. used to parse the ratio string.
-#: lib/crop/cropwidget.cpp:164
-msgid "Width"
-msgstr "幅"
-
-#: lib/crop/cropwidget.cpp:164
-msgid "Height"
-msgstr "高さ"
-
-#. i18n: file: lib/crop/cropwidget.ui:20
-#. i18n: ectx: property (windowTitle), widget (QWidget, CropWidget)
-#: lib/crop/cropwidget.cpp:191 lib/crop/cropimageoperation.cpp:71
-#: app/imageopscontextmanageritem.cpp:111 rc.cpp:34
-msgid "Crop"
-msgstr "切り取り"
-
-#: lib/redeyereduction/redeyereductionimageoperation.cpp:77
-msgid "RedEyeReduction"
-msgstr "RedEyeReduction"
-
-#: lib/slideshow.cpp:189
-msgctxt "@item:inmenu toggle loop in slideshow"
-msgid "Loop"
-msgstr "繰り返し"
-
-#: lib/slideshow.cpp:194
-msgctxt "@item:inmenu toggle random order in slideshow"
-msgid "Random"
-msgstr "ランダム"
-
-#: lib/documentview/documentviewcontroller.cpp:92 app/mainwindow.cpp:359
-#: app/browsemainpage.cpp:115 app/viewmainpage.cpp:420
-msgctxt "@title actions category - means actions changing smth in interface"
-msgid "View"
-msgstr "表示"
-
-# ACCELERATOR added by translator
-#: lib/documentview/documentviewcontroller.cpp:98
-msgid "Zoom to Fit"
-msgstr "ビューに合わせる(&F)"
-
-#: lib/documentview/documentviewcontroller.cpp:100
-msgctxt "@action:button Zoom to fit, shown in status bar, keep it short please"
-msgid "Fit"
-msgstr "自動"
-
-#: lib/documentview/documentviewcontroller.cpp:104
-msgctxt ""
-"@action:button Zoom to original size, shown in status bar, keep it short "
-"please"
-msgid "100%"
-msgstr "100%"
-
-#: lib/documentview/documentview.cpp:178
-msgctxt "@info:tooltip"
-msgid "Trash"
-msgstr "ごみ箱"
-
-#: lib/documentview/documentview.cpp:179
-#, fuzzy
-msgctxt "@action:button"
-msgid "Deselect"
-msgstr "削除"
-
-#: lib/documentview/documentview.cpp:369
-msgid "Gwenview does not know how to display this kind of document"
-msgstr "Gwenview はこの種類の文書を表示できません"
-
-#: lib/documentview/documentview.cpp:467
-msgid "Loading <filename>%1</filename> failed"
-msgstr "<filename>%1</filename> の読み込みに失敗しました"
-
-#: lib/documentview/messageviewadapter.cpp:52
-msgid "No document selected"
-msgstr "文書が選択されていません"
-
-#: lib/print/printhelper.cpp:131
-msgid "Print Image"
-msgstr "画像の印刷"
-
-#: lib/resize/resizeimagedialog.cpp:51 app/imageopscontextmanageritem.cpp:106
-msgid "Resize"
-msgstr "サイズ変更"
-
-#: lib/resize/resizeimageoperation.cpp:71
-msgctxt "(qtundo-format)"
-msgid "Resize"
-msgstr "サイズ変更"
-
-#: lib/transformimageoperation.cpp:62
-msgctxt "(qtundo-format)"
-msgid "Rotate Right"
-msgstr "右に回転"
-
-#: lib/transformimageoperation.cpp:65
-msgctxt "(qtundo-format)"
-msgid "Rotate Left"
-msgstr "左に回転"
-
-#: lib/transformimageoperation.cpp:68
-msgctxt "(qtundo-format)"
-msgid "Mirror"
-msgstr "鏡像"
-
-#: lib/transformimageoperation.cpp:71
-msgctxt "(qtundo-format)"
-msgid "Flip"
-msgstr "反転"
-
-#: lib/transformimageoperation.cpp:76
-msgctxt "(qtundo-format)"
-msgid "Transform"
-msgstr "変形"
+#: lib/historymodel.cpp:145
+msgid "Last visited: %1"
+msgstr "最終アクセス: %1"
 
 #: lib/about.cpp:36
 msgid "Copyright 2000-2013 Gwenview authors"
@@ -304,10 +754,311 @@ msgstr ""
 msgid "Developer"
 msgstr "開発者"
 
-#: app/imagemetainfodialog.cpp:128
+#: lib/resize/resizeimageoperation.cpp:71
+msgctxt "(qtundo-format)"
+msgid "Resize"
+msgstr "サイズ変更"
+
+#: lib/resize/resizeimagedialog.cpp:51 app/imageopscontextmanageritem.cpp:106
+msgid "Resize"
+msgstr "サイズ変更"
+
+#: lib/hud/hudwidget.cpp:108
+msgctxt "@info:tooltip"
+msgid "Close"
+msgstr "閉じる"
+
+#: lib/documentview/documentviewcontroller.cpp:92 app/viewmainpage.cpp:420
+#: app/mainwindow.cpp:359 app/browsemainpage.cpp:115
+msgctxt "@title actions category - means actions changing smth in interface"
+msgid "View"
+msgstr "表示"
+
+# ACCELERATOR added by translator
+#: lib/documentview/documentviewcontroller.cpp:98
+msgid "Zoom to Fit"
+msgstr "ビューに合わせる(&F)"
+
+#: lib/documentview/documentviewcontroller.cpp:100
+msgctxt "@action:button Zoom to fit, shown in status bar, keep it short please"
+msgid "Fit"
+msgstr "自動"
+
+#: lib/documentview/documentviewcontroller.cpp:104
+msgctxt ""
+"@action:button Zoom to original size, shown in status bar, keep it short "
+"please"
+msgid "100%"
+msgstr "100%"
+
+#: lib/documentview/messageviewadapter.cpp:52
+msgid "No document selected"
+msgstr "文書が選択されていません"
+
+#: lib/documentview/documentview.cpp:178
+msgctxt "@info:tooltip"
+msgid "Trash"
+msgstr "ごみ箱"
+
+#: lib/documentview/documentview.cpp:179
+#, fuzzy
+msgctxt "@action:button"
+msgid "Deselect"
+msgstr "削除"
+
+#: lib/documentview/documentview.cpp:369
+msgid "Gwenview does not know how to display this kind of document"
+msgstr "Gwenview はこの種類の文書を表示できません"
+
+#: lib/documentview/documentview.cpp:467
+msgid "Loading <filename>%1</filename> failed"
+msgstr "<filename>%1</filename> の読み込みに失敗しました"
+
+#: lib/jpegcontent.cpp:581
+msgctxt "@info"
+msgid "Could not open file for writing."
+msgstr "ファイルを書き込みのために開けませんでした。"
+
+#: lib/jpegcontent.cpp:597
+msgctxt "@info"
+msgid "No data to store."
+msgstr "保存するデータがありません。"
+
+#: lib/slideshow.cpp:189
+msgctxt "@item:inmenu toggle loop in slideshow"
+msgid "Loop"
+msgstr "繰り返し"
+
+#: lib/slideshow.cpp:194
+msgctxt "@item:inmenu toggle random order in slideshow"
+msgid "Random"
+msgstr "ランダム"
+
+#: importer/importdialog.cpp:75
+msgid "One document has been imported."
+msgid_plural "%1 documents have been imported."
+msgstr[0] "1 個の文書をインポートしました。"
+msgstr[1] "%1 個の文書をインポートしました。"
+
+#: importer/importdialog.cpp:80
+msgid "One document has been skipped because it had already been imported."
+msgid_plural ""
+"%1 documents have been skipped because they had already been imported."
+msgstr[0] "既にインポートされているため 1 個の文書をスキップしました。"
+msgstr[1] "既にインポートされているため %1 個の文書をスキップしました。"
+
+#: importer/importdialog.cpp:88
+msgid ""
+"One of them has been renamed because another document with the same name had "
+"already been imported."
+msgid_plural ""
+"%1 of them have been renamed because other documents with the same name had "
+"already been imported."
+msgstr[0] ""
+"既に同名の他の文書がインポートされているため 1 個の文書の名前を変更しました。"
+msgstr[1] ""
+"既に同名の他の文書がインポートされているため %1 個の文書の名前を変更しまし"
+"た。"
+
+#: importer/importdialog.cpp:97
+msgid "Delete the imported document from the device?"
+msgid_plural "Delete the %1 imported documents from the device?"
+msgstr[0] "インポート済みの文書をデバイスから削除しますか？"
+msgstr[1] "インポート済みの %1 個の文書をデバイスから削除しますか？"
+
+#: importer/importdialog.cpp:102
+msgid "Delete the skipped document from the device?"
+msgid_plural "Delete the %1 skipped documents from the device?"
+msgstr[0] "スキップした文書をデバイスから削除しますか？"
+msgstr[1] "スキップした %1 個の文書をデバイスから削除しますか？"
+
+#: importer/importdialog.cpp:108
+msgctxt "Singular sentence is actually never used."
+msgid "Delete the imported or skipped document from the device?"
+msgid_plural "Delete the %1 imported and skipped documents from the device?"
+msgstr[0] "インポート済みまたはスキップした文書をデバイスから削除しますか？"
+msgstr[1] ""
+"インポート済みとスキップした %1 個の文書をデバイスから削除しますか？"
+
+#: importer/importdialog.cpp:115
 msgctxt "@title:window"
-msgid "Image Information"
-msgstr "画像情報"
+msgid "Import Finished"
+msgstr "インポート完了"
+
+#: importer/importdialog.cpp:117
+msgid "Keep"
+msgstr "保持"
+
+#: importer/importdialog.cpp:130
+msgid ""
+"Failed to delete the document:\n"
+"%2"
+msgid_plural ""
+"Failed to delete documents:\n"
+"%2"
+msgstr[0] ""
+"文書の削除に失敗しました:\n"
+"%2"
+msgstr[1] ""
+"文書の削除に失敗しました:\n"
+"%2"
+
+#: importer/importdialog.cpp:134
+msgid "Retry"
+msgstr "再試行"
+
+#: importer/importdialog.cpp:135
+msgid "Ignore"
+msgstr "無視"
+
+#: importer/importdialog.cpp:157
+msgid "What do you want to do now?"
+msgstr "次に何をしますか？"
+
+#: importer/importdialog.cpp:159
+msgid "View Imported Documents with Gwenview"
+msgstr "インポートした文書を Gwenview で見る"
+
+#: importer/importdialog.cpp:160
+msgid "Import more Documents"
+msgstr "インポートを続ける"
+
+#: importer/importdialog.cpp:161
+msgid "Quit"
+msgstr "終了"
+
+#: importer/filenameformater.cpp:104
+msgid "Shooting date"
+msgstr "撮影日"
+
+#: importer/filenameformater.cpp:105
+msgid "Shooting time"
+msgstr "撮影時間"
+
+#: importer/filenameformater.cpp:106
+msgid "Original extension"
+msgstr "元の拡張子"
+
+#: importer/filenameformater.cpp:107
+msgid "Original extension, in lower case"
+msgstr "元の拡張子 (小文字)"
+
+#: importer/filenameformater.cpp:108
+msgid "Original filename"
+msgstr "元のファイル名"
+
+#: importer/filenameformater.cpp:109
+msgid "Original filename, in lower case"
+msgstr "元のファイル名 (小文字)"
+
+#: importer/importer.cpp:80
+msgid "Could not create destination folder."
+msgstr "行き先フォルダを作成できませんでした。"
+
+#: importer/importer.cpp:86
+msgid ""
+"Could not create temporary upload folder:\n"
+"%1"
+msgstr ""
+"アップロード用の一時フォルダを作成できませんでした:\n"
+"%1"
+
+#: importer/thumbnailpage.cpp:197
+msgid "Import Selected"
+msgstr "選択したものをインポート"
+
+#: importer/thumbnailpage.cpp:201
+msgid "Import All"
+msgstr "すべてインポート"
+
+#: importer/main.cpp:42
+msgid "Gwenview Importer"
+msgstr "Gwenview インポートツール"
+
+#: importer/main.cpp:44
+msgid "Photo Importer"
+msgstr "写真インポートツール"
+
+#: importer/main.cpp:49
+msgid "Source folder"
+msgstr "インポート元フォルダ"
+
+#: importer/main.cpp:50
+msgid "Device UDI"
+msgstr ""
+
+#: importer/importerconfigdialog.cpp:56
+msgctxt "%1 is the importer keyword, %2 is keyword explanation"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: part/gvpart.cpp:80
+msgctxt "@action"
+msgid "Properties"
+msgstr "プロパティ"
+
+#: part/gvpart.cpp:128
+msgid "Gwenview KPart"
+msgstr "Gwenview KPart"
+
+#: part/gvpart.cpp:130 app/main.cpp:119
+msgid "An Image Viewer"
+msgstr "画像ビューア"
+
+#: app/fileoperations.cpp:60
+msgctxt "@title:window"
+msgid "Copy To"
+msgstr "コピー"
+
+#: app/fileoperations.cpp:61
+msgctxt "@action:button"
+msgid "Copy"
+msgstr "コピー"
+
+#: app/fileoperations.cpp:64
+msgctxt "@title:window"
+msgid "Move To"
+msgstr "移動"
+
+#: app/fileoperations.cpp:65
+msgctxt "@action:button"
+msgid "Move"
+msgstr "移動"
+
+#: app/fileoperations.cpp:68
+msgctxt "@title:window"
+msgid "Link To"
+msgstr "リンクを作成"
+
+#: app/fileoperations.cpp:69
+msgctxt "@action:button"
+msgid "Link"
+msgstr "リンク"
+
+#: app/fileoperations.cpp:162
+msgid "Move Here"
+msgstr "ここに移動"
+
+#: app/fileoperations.cpp:165
+msgid "Copy Here"
+msgstr "ここにコピー"
+
+#: app/fileoperations.cpp:168
+msgid "Link Here"
+msgstr "ここにリンク"
+
+#: app/fileoperations.cpp:172
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: app/fileoperations.cpp:193
+msgctxt "@title:window"
+msgid "Rename"
+msgstr "名前変更"
+
+#: app/fileoperations.cpp:194
+msgid "Rename <filename>%1</filename> to:"
+msgstr "<filename>%1</filename> の新しい名前:"
 
 #: app/kipiimagecollectionselector.cpp:55
 msgctxt "%1 is collection name, %2 is image count in collection"
@@ -316,11 +1067,288 @@ msgid_plural "%1 (%2 images)"
 msgstr[0] "%1 (%2 画像)"
 msgstr[1] "%1 (%2 画像)"
 
-#: app/mainwindow.cpp:358 app/browsemainpage.cpp:151
-#: app/fileopscontextmanageritem.cpp:165
+#: app/kipiuploadwidget.cpp:43
+msgid ""
+"Images will be uploaded here:\n"
+"%1"
+msgstr ""
+"画像を以下にアップロードします:\n"
+"%1"
+
+#: app/fullscreencontent.cpp:153
+msgctxt "@info:tooltip"
+msgid "Configure full screen mode"
+msgstr "フルスクリーンモードを設定"
+
+#: app/fullscreencontent.cpp:355
+msgctxt "@item:intext fullscreen meta info separator"
+msgid ", "
+msgstr ", "
+
+#: app/fullscreencontent.cpp:411
+msgctxt "Slideshow interval in seconds"
+msgid "%1 sec"
+msgid_plural "%1 secs"
+msgstr[0] "%1 秒"
+msgstr[1] "%1 秒"
+
+#: app/filtercontroller.cpp:120
+msgid "Name contains"
+msgstr "名前が含む"
+
+#: app/filtercontroller.cpp:121
+msgid "Name does not contain"
+msgstr "名前が含まない"
+
+#: app/filtercontroller.cpp:226
+msgid "Date >="
+msgstr "日付 >="
+
+#: app/filtercontroller.cpp:227
+msgid "Date ="
+msgstr "日付 ="
+
+#: app/filtercontroller.cpp:228
+msgid "Date <="
+msgstr "日付 <="
+
+#: app/filtercontroller.cpp:345
+msgctxt "@action:inmenu"
+msgid "Filter by Name"
+msgstr "名前によるフィルタ"
+
+#: app/filtercontroller.cpp:346
+msgctxt "@action:inmenu"
+msgid "Filter by Date"
+msgstr "日付によるフィルタ"
+
+#: app/savebar.cpp:87
+msgid ""
+"You have modified many images. To avoid memory problems, you should save "
+"your changes."
+msgstr ""
+"たくさんの画像が変更されています。メモリ不足による問題を避けるために変更を保"
+"存してください。"
+
+#: app/savebar.cpp:176
+msgid "Current image modified"
+msgstr "現在の画像は変更されています"
+
+#: app/savebar.cpp:182
+msgid "Previous modified image"
+msgstr "前の変更された画像"
+
+#: app/savebar.cpp:183
+msgid "Next modified image"
+msgstr "次の変更された画像"
+
+#: app/savebar.cpp:199
+msgid "One image modified"
+msgid_plural "%1 images modified"
+msgstr[0] "1 個の画像が変更されています"
+msgstr[1] "%1 個の画像が変更されています"
+
+#: app/savebar.cpp:201
+msgid "Go to first modified image"
+msgstr "最初の変更された画像に移動"
+
+#: app/savebar.cpp:203
+msgid "Go to it"
+msgstr "変更された画像に移動"
+
+#: app/savebar.cpp:302 app/savebar.cpp:307
+msgid "Save All"
+msgstr "すべて保存"
+
+#: app/gvcore.cpp:87
+msgctxt "@info"
+msgid "No image format selected."
+msgstr "画像フォーマットが選択されていません。"
+
+#: app/gvcore.cpp:100
+msgctxt "@info"
+msgid "Gwenview cannot save images as %1."
+msgstr "Gwenview は画像を %1 として保存できません。"
+
+#: app/gvcore.cpp:235
+msgid "Save using another format"
+msgstr "他のフォーマットで保存"
+
+#: app/gvcore.cpp:238
+msgid "Gwenview cannot save images in '%1' format."
+msgstr "Gwenview は画像を %1 フォーマットで保存できません。"
+
+#: app/gvcore.cpp:261
+msgctxt "@info"
+msgid ""
+"A file named <filename>%1</filename> already exists.\n"
+"Are you sure you want to overwrite it?"
+msgstr ""
+"<filename>%1</filename> という名前のファイルは既に存在します。<nl/>本当に上書"
+"きしますか？"
+
+# dummy markup
+#: app/gvcore.cpp:276 app/gvcore.cpp:299
+msgctxt "@info"
+msgid "<b>Saving <filename>%1</filename> failed:</b><br>%2"
+msgstr "<b></b><filename>%1</filename> の保存に失敗しました:<br/>%2"
+
+#: app/gvcore.cpp:319
+msgid "You are now viewing the new document."
+msgstr "新しい文書を見ています。"
+
+#: app/gvcore.cpp:321
+msgid "Go back to the original"
+msgstr "元に戻る"
+
+#: app/imageopscontextmanageritem.cpp:82
+msgctxt "@title actions category - means actions changing image"
+msgid "Edit"
+msgstr "編集"
+
+#: app/imageopscontextmanageritem.cpp:85
+msgid "Rotate Left"
+msgstr "左に回転"
+
+#: app/imageopscontextmanageritem.cpp:86
+msgctxt "@info:tooltip"
+msgid "Rotate image to the left"
+msgstr "画像を左に回転"
+
+#: app/imageopscontextmanageritem.cpp:92
+msgid "Rotate Right"
+msgstr "右に回転"
+
+#: app/imageopscontextmanageritem.cpp:93
+msgctxt "@info:tooltip"
+msgid "Rotate image to the right"
+msgstr ""
+
+#: app/imageopscontextmanageritem.cpp:98
+msgid "Mirror"
+msgstr "鏡像"
+
+#: app/imageopscontextmanageritem.cpp:102
+msgid "Flip"
+msgstr "反転"
+
+#: app/imageopscontextmanageritem.cpp:116
+msgid "Red Eye Reduction"
+msgstr "赤目修正"
+
+#: app/imageopscontextmanageritem.cpp:154
+msgid "Image Operations"
+msgstr "画像操作"
+
+#: app/imagemetainfodialog.cpp:128
+msgctxt "@title:window"
+msgid "Image Information"
+msgstr "画像情報"
+
+#: app/viewmainpage.cpp:301 app/viewmainpage.cpp:432
+msgid "Synchronize"
+msgstr "同期"
+
+#: app/viewmainpage.cpp:423
+msgid "Thumbnail Bar"
+msgstr "サムネイルバー|/|$[~setProps ~full 'サムネイルバーを表示']"
+
+#: app/viewmainpage.cpp:713
+msgctxt "@action:button"
+msgid "Discard Changes and Reload"
+msgstr "変更を破棄して再読み込み"
+
+#: app/viewmainpage.cpp:715
+msgctxt "@info"
+msgid ""
+"This image has been modified. Reloading it will discard all your changes."
+msgstr "この画像は変更されています。再読み込みすると変更はすべて破棄されます。"
+
+#: app/kipiexportaction.cpp:52
+msgid "Last Used Plugin"
+msgstr "最後に使用したプラグイン"
+
+#: app/kipiexportaction.cpp:54
+msgid "Other Plugins"
+msgstr "他のプラグイン"
+
+#: app/kipiexportaction.cpp:64 app/kipiinterface.cpp:250
+msgid "No Plugin Found"
+msgstr "プラグインがありません"
+
+#: app/kipiexportaction.cpp:72
+msgctxt "@action"
+msgid "Share"
+msgstr "共有"
+
+#: app/kipiexportaction.cpp:78
+msgctxt "@info:tooltip"
+msgid "Share images using various services"
+msgstr ""
+
+#: app/fileopscontextmanageritem.cpp:154
+msgid "File Operations"
+msgstr "ファイル操作"
+
+#: app/fileopscontextmanageritem.cpp:165 app/mainwindow.cpp:358
+#: app/browsemainpage.cpp:151
 msgctxt "@title actions category"
 msgid "File"
 msgstr "ファイル"
+
+#: app/fileopscontextmanageritem.cpp:166
+msgctxt "@title actions category"
+msgid "Edit"
+msgstr "編集"
+
+#: app/fileopscontextmanageritem.cpp:181
+msgctxt "Verb"
+msgid "Copy To..."
+msgstr "コピー..."
+
+#: app/fileopscontextmanageritem.cpp:185
+msgctxt "Verb"
+msgid "Move To..."
+msgstr "移動..."
+
+#: app/fileopscontextmanageritem.cpp:189
+msgctxt "Verb: create link to the file where user wants"
+msgid "Link To..."
+msgstr "リンクを作成..."
+
+#: app/fileopscontextmanageritem.cpp:193
+msgctxt "Verb"
+msgid "Rename..."
+msgstr "名前変更..."
+
+#: app/fileopscontextmanageritem.cpp:197
+msgctxt "Verb"
+msgid "Trash"
+msgstr "ごみ箱に移動"
+
+#: app/fileopscontextmanageritem.cpp:202
+msgid "Delete"
+msgstr "削除"
+
+#: app/fileopscontextmanageritem.cpp:207
+msgid "Restore"
+msgstr ""
+
+#: app/fileopscontextmanageritem.cpp:210
+msgid "Properties"
+msgstr "プロパティ"
+
+#: app/fileopscontextmanageritem.cpp:214
+msgid "Create Folder..."
+msgstr "フォルダを作成..."
+
+#: app/fileopscontextmanageritem.cpp:218
+msgid "Open With"
+msgstr "アプリケーションで開く"
+
+#: app/fileopscontextmanageritem.cpp:410
+msgid "Other Application..."
+msgstr "その他のアプリケーション..."
 
 # ACCELERATOR added by translator
 #: app/mainwindow.cpp:370
@@ -501,6 +1529,57 @@ msgstr ""
 msgid "Go to the First Document"
 msgstr "最初の文書に移動"
 
+#: app/saveallhelper.cpp:58
+msgctxt "@info:progress saving all image changes"
+msgid "Saving..."
+msgstr "保存しています..."
+
+#: app/saveallhelper.cpp:59
+msgid "&Stop"
+msgstr "停止(&S)"
+
+#: app/saveallhelper.cpp:84
+msgctxt "@info"
+msgid "One document could not be saved:"
+msgid_plural "%1 documents could not be saved:"
+msgstr[0] "文書を保存できませんでした:"
+msgstr[1] "%1 個の文書を保存できませんでした:"
+
+#: app/saveallhelper.cpp:108
+msgctxt ""
+"@info %1 is the name of the document which failed to save, %2 is the reason "
+"for the failure"
+msgid "<filename>%1</filename>: %2"
+msgstr "<filename>%1</filename>: %2"
+
+#: app/main.cpp:117
+msgid "Gwenview"
+msgstr "Gwenview"
+
+#: app/main.cpp:124
+msgid "Start in fullscreen mode"
+msgstr "フルスクリーンモードで開始"
+
+#: app/main.cpp:125
+msgid "Start in slideshow mode"
+msgstr "スライドショーモードで開始"
+
+#: app/main.cpp:126
+msgid "A starting file or folder"
+msgstr "開始ファイルまたはフォルダ"
+
+#: app/configdialog.cpp:72
+msgid "General"
+msgstr "全般"
+
+#: app/configdialog.cpp:100
+msgid "Image View"
+msgstr "画像ビューア"
+
+#: app/configdialog.cpp:105
+msgid "Advanced"
+msgstr "詳細"
+
 #: app/startmainpage.cpp:268
 msgid "Add to Places"
 msgstr "場所に追加"
@@ -517,143 +1596,86 @@ msgstr "このフォルダを履歴から削除"
 msgid "Forget All"
 msgstr "すべての履歴を削除"
 
-#: app/main.cpp:117
-msgid "Gwenview"
-msgstr "Gwenview"
+#: app/kipiinterface.cpp:249
+msgid "Loading..."
+msgstr "読み込んでいます..."
 
-#: app/main.cpp:119 part/gvpart.cpp:130
-msgid "An Image Viewer"
-msgstr "画像ビューア"
+#: app/kipiinterface.cpp:283
+msgctxt "@title:menu"
+msgid "Images"
+msgstr "画像"
 
-#: app/main.cpp:124
-msgid "Start in fullscreen mode"
-msgstr "フルスクリーンモードで開始"
+#: app/kipiinterface.cpp:284
+msgctxt "@title:menu"
+msgid "Tools"
+msgstr "ツール"
 
-#: app/main.cpp:125
-msgid "Start in slideshow mode"
-msgstr "スライドショーモードで開始"
+#: app/kipiinterface.cpp:285
+msgctxt "@title:menu"
+msgid "Import"
+msgstr "インポート"
 
-#: app/main.cpp:126
-msgid "A starting file or folder"
-msgstr "開始ファイルまたはフォルダ"
+#: app/kipiinterface.cpp:286
+msgctxt "@title:menu"
+msgid "Export"
+msgstr "エクスポート"
 
-#: app/savebar.cpp:87
-msgid ""
-"You have modified many images. To avoid memory problems, you should save "
-"your changes."
-msgstr ""
-"たくさんの画像が変更されています。メモリ不足による問題を避けるために変更を保"
-"存してください。"
+#: app/kipiinterface.cpp:287
+msgctxt "@title:menu"
+msgid "Batch Processing"
+msgstr "一括処理"
 
-#: app/savebar.cpp:176
-msgid "Current image modified"
-msgstr "現在の画像は変更されています"
+#: app/kipiinterface.cpp:288
+msgctxt "@title:menu"
+msgid "Collections"
+msgstr "コレクション"
 
-#: app/savebar.cpp:182
-msgid "Previous modified image"
-msgstr "前の変更された画像"
+#: app/infocontextmanageritem.cpp:156
+msgctxt ""
+"@item:intext %1 is a key, we append a colon to it. A value is displayed after"
+msgid "%1:"
+msgstr "%1:"
 
-#: app/savebar.cpp:183
-msgid "Next modified image"
-msgstr "次の変更された画像"
+#: app/infocontextmanageritem.cpp:234
+msgctxt "@action show more image meta info"
+msgid "More..."
+msgstr "その他の情報..."
 
-#: app/savebar.cpp:199
-msgid "One image modified"
-msgid_plural "%1 images modified"
-msgstr[0] "1 個の画像が変更されています"
-msgstr[1] "%1 個の画像が変更されています"
+#: app/infocontextmanageritem.cpp:248
+msgctxt "@title:group"
+msgid "Meta Information"
+msgstr "メタ情報"
 
-#: app/savebar.cpp:201
-msgid "Go to first modified image"
-msgstr "最初の変更された画像に移動"
+#: app/infocontextmanageritem.cpp:341
+msgctxt "@label"
+msgid "%1 file selected"
+msgid_plural "%1 files selected"
+msgstr[0] "%1 ファイル選択済み"
+msgstr[1] "%1 ファイル選択済み"
 
-#: app/savebar.cpp:203
-msgid "Go to it"
-msgstr "変更された画像に移動"
+#: app/infocontextmanageritem.cpp:343
+msgctxt "@label"
+msgid "%1 folder selected"
+msgid_plural "%1 folders selected"
+msgstr[0] "1 フォルダ選択済み"
+msgstr[1] "%1 フォルダ選択済み"
 
-#: app/savebar.cpp:302 app/savebar.cpp:307
-msgid "Save All"
-msgstr "すべて保存"
+#: app/infocontextmanageritem.cpp:346
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] "%1 フォルダ"
+msgstr[1] "%1 フォルダ"
 
-#: app/imageopscontextmanageritem.cpp:82
-msgctxt "@title actions category - means actions changing image"
-msgid "Edit"
-msgstr "編集"
+#: app/infocontextmanageritem.cpp:346
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 ファイル"
+msgstr[1] "%1 ファイル"
 
-#: app/imageopscontextmanageritem.cpp:85
-msgid "Rotate Left"
-msgstr "左に回転"
-
-#: app/imageopscontextmanageritem.cpp:86
-msgctxt "@info:tooltip"
-msgid "Rotate image to the left"
-msgstr "画像を左に回転"
-
-#: app/imageopscontextmanageritem.cpp:92
-msgid "Rotate Right"
-msgstr "右に回転"
-
-#: app/imageopscontextmanageritem.cpp:93
-msgctxt "@info:tooltip"
-msgid "Rotate image to the right"
-msgstr ""
-
-#: app/imageopscontextmanageritem.cpp:98
-msgid "Mirror"
-msgstr "鏡像"
-
-#: app/imageopscontextmanageritem.cpp:102
-msgid "Flip"
-msgstr "反転"
-
-#: app/imageopscontextmanageritem.cpp:116
-msgid "Red Eye Reduction"
-msgstr "赤目修正"
-
-#: app/imageopscontextmanageritem.cpp:154
-msgid "Image Operations"
-msgstr "画像操作"
-
-#: app/gvcore.cpp:87
-msgctxt "@info"
-msgid "No image format selected."
-msgstr "画像フォーマットが選択されていません。"
-
-#: app/gvcore.cpp:100
-msgctxt "@info"
-msgid "Gwenview cannot save images as %1."
-msgstr "Gwenview は画像を %1 として保存できません。"
-
-#: app/gvcore.cpp:235
-msgid "Save using another format"
-msgstr "他のフォーマットで保存"
-
-#: app/gvcore.cpp:238
-msgid "Gwenview cannot save images in '%1' format."
-msgstr "Gwenview は画像を %1 フォーマットで保存できません。"
-
-#: app/gvcore.cpp:261
-msgctxt "@info"
-msgid ""
-"A file named <filename>%1</filename> already exists.\n"
-"Are you sure you want to overwrite it?"
-msgstr ""
-"<filename>%1</filename> という名前のファイルは既に存在します。<nl/>本当に上書"
-"きしますか？"
-
-# dummy markup
-#: app/gvcore.cpp:276 app/gvcore.cpp:299
-msgctxt "@info"
-msgid "<b>Saving <filename>%1</filename> failed:</b><br>%2"
-msgstr "<b></b><filename>%1</filename> の保存に失敗しました:<br/>%2"
-
-#: app/gvcore.cpp:319
-msgid "You are now viewing the new document."
-msgstr "新しい文書を見ています。"
-
-#: app/gvcore.cpp:321
-msgid "Go back to the original"
-msgstr "元に戻る"
+#: app/infocontextmanageritem.cpp:346
+msgctxt "@label. The two parameters are strings like '2 folders' and '1 file'."
+msgid "%1 and %2 selected"
+msgstr "%1と %2選択済み"
 
 #: app/browsemainpage.cpp:117
 msgctxt "@action:inmenu Navigation Bar"
@@ -716,1025 +1738,3 @@ msgid "%1 document"
 msgid_plural "%1 documents"
 msgstr[0] "%1 個の文書"
 msgstr[1] "%1 個の文書"
-
-#: app/viewmainpage.cpp:301 app/viewmainpage.cpp:432
-msgid "Synchronize"
-msgstr "同期"
-
-#: app/viewmainpage.cpp:423
-msgid "Thumbnail Bar"
-msgstr "サムネイルバー|/|$[~setProps ~full 'サムネイルバーを表示']"
-
-#: app/viewmainpage.cpp:713
-msgctxt "@action:button"
-msgid "Discard Changes and Reload"
-msgstr "変更を破棄して再読み込み"
-
-#: app/viewmainpage.cpp:715
-msgctxt "@info"
-msgid ""
-"This image has been modified. Reloading it will discard all your changes."
-msgstr "この画像は変更されています。再読み込みすると変更はすべて破棄されます。"
-
-#: app/kipiexportaction.cpp:52
-msgid "Last Used Plugin"
-msgstr "最後に使用したプラグイン"
-
-#: app/kipiexportaction.cpp:54
-msgid "Other Plugins"
-msgstr "他のプラグイン"
-
-#: app/kipiexportaction.cpp:64 app/kipiinterface.cpp:250
-msgid "No Plugin Found"
-msgstr "プラグインがありません"
-
-#: app/kipiexportaction.cpp:72
-msgctxt "@action"
-msgid "Share"
-msgstr "共有"
-
-#: app/kipiexportaction.cpp:78
-msgctxt "@info:tooltip"
-msgid "Share images using various services"
-msgstr ""
-
-#: app/filtercontroller.cpp:120
-msgid "Name contains"
-msgstr "名前が含む"
-
-#: app/filtercontroller.cpp:121
-msgid "Name does not contain"
-msgstr "名前が含まない"
-
-#: app/filtercontroller.cpp:226
-msgid "Date >="
-msgstr "日付 >="
-
-#: app/filtercontroller.cpp:227
-msgid "Date ="
-msgstr "日付 ="
-
-#: app/filtercontroller.cpp:228
-msgid "Date <="
-msgstr "日付 <="
-
-#: app/filtercontroller.cpp:345
-msgctxt "@action:inmenu"
-msgid "Filter by Name"
-msgstr "名前によるフィルタ"
-
-#: app/filtercontroller.cpp:346
-msgctxt "@action:inmenu"
-msgid "Filter by Date"
-msgstr "日付によるフィルタ"
-
-#: app/kipiuploadwidget.cpp:43
-msgid ""
-"Images will be uploaded here:\n"
-"%1"
-msgstr ""
-"画像を以下にアップロードします:\n"
-"%1"
-
-#: app/saveallhelper.cpp:58
-msgctxt "@info:progress saving all image changes"
-msgid "Saving..."
-msgstr "保存しています..."
-
-#: app/saveallhelper.cpp:59
-msgid "&Stop"
-msgstr "停止(&S)"
-
-#: app/saveallhelper.cpp:84
-msgctxt "@info"
-msgid "One document could not be saved:"
-msgid_plural "%1 documents could not be saved:"
-msgstr[0] "文書を保存できませんでした:"
-msgstr[1] "%1 個の文書を保存できませんでした:"
-
-#: app/saveallhelper.cpp:108
-msgctxt ""
-"@info %1 is the name of the document which failed to save, %2 is the reason "
-"for the failure"
-msgid "<filename>%1</filename>: %2"
-msgstr "<filename>%1</filename>: %2"
-
-#: app/infocontextmanageritem.cpp:156
-msgctxt ""
-"@item:intext %1 is a key, we append a colon to it. A value is displayed after"
-msgid "%1:"
-msgstr "%1:"
-
-#: app/infocontextmanageritem.cpp:234
-msgctxt "@action show more image meta info"
-msgid "More..."
-msgstr "その他の情報..."
-
-#: app/infocontextmanageritem.cpp:248
-msgctxt "@title:group"
-msgid "Meta Information"
-msgstr "メタ情報"
-
-#: app/infocontextmanageritem.cpp:341
-msgctxt "@label"
-msgid "%1 file selected"
-msgid_plural "%1 files selected"
-msgstr[0] "%1 ファイル選択済み"
-msgstr[1] "%1 ファイル選択済み"
-
-#: app/infocontextmanageritem.cpp:343
-msgctxt "@label"
-msgid "%1 folder selected"
-msgid_plural "%1 folders selected"
-msgstr[0] "1 フォルダ選択済み"
-msgstr[1] "%1 フォルダ選択済み"
-
-#: app/infocontextmanageritem.cpp:346
-msgid "%1 folder"
-msgid_plural "%1 folders"
-msgstr[0] "%1 フォルダ"
-msgstr[1] "%1 フォルダ"
-
-#: app/infocontextmanageritem.cpp:346
-msgid "%1 file"
-msgid_plural "%1 files"
-msgstr[0] "%1 ファイル"
-msgstr[1] "%1 ファイル"
-
-#: app/infocontextmanageritem.cpp:346
-msgctxt "@label. The two parameters are strings like '2 folders' and '1 file'."
-msgid "%1 and %2 selected"
-msgstr "%1と %2選択済み"
-
-#: app/configdialog.cpp:72
-msgid "General"
-msgstr "全般"
-
-#: app/configdialog.cpp:100
-msgid "Image View"
-msgstr "画像ビューア"
-
-#: app/configdialog.cpp:105
-msgid "Advanced"
-msgstr "詳細"
-
-#: app/fileopscontextmanageritem.cpp:154
-msgid "File Operations"
-msgstr "ファイル操作"
-
-#: app/fileopscontextmanageritem.cpp:166
-msgctxt "@title actions category"
-msgid "Edit"
-msgstr "編集"
-
-#: app/fileopscontextmanageritem.cpp:181
-msgctxt "Verb"
-msgid "Copy To..."
-msgstr "コピー..."
-
-#: app/fileopscontextmanageritem.cpp:185
-msgctxt "Verb"
-msgid "Move To..."
-msgstr "移動..."
-
-#: app/fileopscontextmanageritem.cpp:189
-msgctxt "Verb: create link to the file where user wants"
-msgid "Link To..."
-msgstr "リンクを作成..."
-
-#: app/fileopscontextmanageritem.cpp:193
-msgctxt "Verb"
-msgid "Rename..."
-msgstr "名前変更..."
-
-#: app/fileopscontextmanageritem.cpp:197
-msgctxt "Verb"
-msgid "Trash"
-msgstr "ごみ箱に移動"
-
-#: app/fileopscontextmanageritem.cpp:202
-msgid "Delete"
-msgstr "削除"
-
-#: app/fileopscontextmanageritem.cpp:207
-msgid "Restore"
-msgstr ""
-
-#: app/fileopscontextmanageritem.cpp:210
-msgid "Properties"
-msgstr "プロパティ"
-
-#: app/fileopscontextmanageritem.cpp:214
-msgid "Create Folder..."
-msgstr "フォルダを作成..."
-
-#: app/fileopscontextmanageritem.cpp:218
-msgid "Open With"
-msgstr "アプリケーションで開く"
-
-#: app/fileopscontextmanageritem.cpp:410
-msgid "Other Application..."
-msgstr "その他のアプリケーション..."
-
-#: app/fullscreencontent.cpp:153
-msgctxt "@info:tooltip"
-msgid "Configure full screen mode"
-msgstr "フルスクリーンモードを設定"
-
-#: app/fullscreencontent.cpp:355
-msgctxt "@item:intext fullscreen meta info separator"
-msgid ", "
-msgstr ", "
-
-#: app/fullscreencontent.cpp:411
-msgctxt "Slideshow interval in seconds"
-msgid "%1 sec"
-msgid_plural "%1 secs"
-msgstr[0] "%1 秒"
-msgstr[1] "%1 秒"
-
-#: app/fileoperations.cpp:60
-msgctxt "@title:window"
-msgid "Copy To"
-msgstr "コピー"
-
-#: app/fileoperations.cpp:61
-msgctxt "@action:button"
-msgid "Copy"
-msgstr "コピー"
-
-#: app/fileoperations.cpp:64
-msgctxt "@title:window"
-msgid "Move To"
-msgstr "移動"
-
-#: app/fileoperations.cpp:65
-msgctxt "@action:button"
-msgid "Move"
-msgstr "移動"
-
-#: app/fileoperations.cpp:68
-msgctxt "@title:window"
-msgid "Link To"
-msgstr "リンクを作成"
-
-#: app/fileoperations.cpp:69
-msgctxt "@action:button"
-msgid "Link"
-msgstr "リンク"
-
-#: app/fileoperations.cpp:162
-msgid "Move Here"
-msgstr "ここに移動"
-
-#: app/fileoperations.cpp:165
-msgid "Copy Here"
-msgstr "ここにコピー"
-
-#: app/fileoperations.cpp:168
-msgid "Link Here"
-msgstr "ここにリンク"
-
-#: app/fileoperations.cpp:172
-msgid "Cancel"
-msgstr "キャンセル"
-
-#: app/fileoperations.cpp:193
-msgctxt "@title:window"
-msgid "Rename"
-msgstr "名前変更"
-
-#: app/fileoperations.cpp:194
-msgid "Rename <filename>%1</filename> to:"
-msgstr "<filename>%1</filename> の新しい名前:"
-
-#: app/kipiinterface.cpp:249
-msgid "Loading..."
-msgstr "読み込んでいます..."
-
-#: app/kipiinterface.cpp:283
-msgctxt "@title:menu"
-msgid "Images"
-msgstr "画像"
-
-#: app/kipiinterface.cpp:284
-msgctxt "@title:menu"
-msgid "Tools"
-msgstr "ツール"
-
-#: app/kipiinterface.cpp:285
-msgctxt "@title:menu"
-msgid "Import"
-msgstr "インポート"
-
-#: app/kipiinterface.cpp:286
-msgctxt "@title:menu"
-msgid "Export"
-msgstr "エクスポート"
-
-#: app/kipiinterface.cpp:287
-msgctxt "@title:menu"
-msgid "Batch Processing"
-msgstr "一括処理"
-
-#: app/kipiinterface.cpp:288
-msgctxt "@title:menu"
-msgid "Collections"
-msgstr "コレクション"
-
-#: importer/main.cpp:42
-msgid "Gwenview Importer"
-msgstr "Gwenview インポートツール"
-
-#: importer/main.cpp:44
-msgid "Photo Importer"
-msgstr "写真インポートツール"
-
-#: importer/main.cpp:49
-msgid "Source folder"
-msgstr "インポート元フォルダ"
-
-#: importer/main.cpp:50
-msgid "Device UDI"
-msgstr ""
-
-#: importer/importer.cpp:80
-msgid "Could not create destination folder."
-msgstr "行き先フォルダを作成できませんでした。"
-
-#: importer/importer.cpp:86
-msgid ""
-"Could not create temporary upload folder:\n"
-"%1"
-msgstr ""
-"アップロード用の一時フォルダを作成できませんでした:\n"
-"%1"
-
-#: importer/importerconfigdialog.cpp:56
-msgctxt "%1 is the importer keyword, %2 is keyword explanation"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: importer/filenameformater.cpp:104
-msgid "Shooting date"
-msgstr "撮影日"
-
-#: importer/filenameformater.cpp:105
-msgid "Shooting time"
-msgstr "撮影時間"
-
-#: importer/filenameformater.cpp:106
-msgid "Original extension"
-msgstr "元の拡張子"
-
-#: importer/filenameformater.cpp:107
-msgid "Original extension, in lower case"
-msgstr "元の拡張子 (小文字)"
-
-#: importer/filenameformater.cpp:108
-msgid "Original filename"
-msgstr "元のファイル名"
-
-#: importer/filenameformater.cpp:109
-msgid "Original filename, in lower case"
-msgstr "元のファイル名 (小文字)"
-
-#: importer/importdialog.cpp:75
-msgid "One document has been imported."
-msgid_plural "%1 documents have been imported."
-msgstr[0] "1 個の文書をインポートしました。"
-msgstr[1] "%1 個の文書をインポートしました。"
-
-#: importer/importdialog.cpp:80
-msgid "One document has been skipped because it had already been imported."
-msgid_plural ""
-"%1 documents have been skipped because they had already been imported."
-msgstr[0] "既にインポートされているため 1 個の文書をスキップしました。"
-msgstr[1] "既にインポートされているため %1 個の文書をスキップしました。"
-
-#: importer/importdialog.cpp:88
-msgid ""
-"One of them has been renamed because another document with the same name had "
-"already been imported."
-msgid_plural ""
-"%1 of them have been renamed because other documents with the same name had "
-"already been imported."
-msgstr[0] ""
-"既に同名の他の文書がインポートされているため 1 個の文書の名前を変更しました。"
-msgstr[1] ""
-"既に同名の他の文書がインポートされているため %1 個の文書の名前を変更しまし"
-"た。"
-
-#: importer/importdialog.cpp:97
-msgid "Delete the imported document from the device?"
-msgid_plural "Delete the %1 imported documents from the device?"
-msgstr[0] "インポート済みの文書をデバイスから削除しますか？"
-msgstr[1] "インポート済みの %1 個の文書をデバイスから削除しますか？"
-
-#: importer/importdialog.cpp:102
-msgid "Delete the skipped document from the device?"
-msgid_plural "Delete the %1 skipped documents from the device?"
-msgstr[0] "スキップした文書をデバイスから削除しますか？"
-msgstr[1] "スキップした %1 個の文書をデバイスから削除しますか？"
-
-#: importer/importdialog.cpp:108
-msgctxt "Singular sentence is actually never used."
-msgid "Delete the imported or skipped document from the device?"
-msgid_plural "Delete the %1 imported and skipped documents from the device?"
-msgstr[0] "インポート済みまたはスキップした文書をデバイスから削除しますか？"
-msgstr[1] ""
-"インポート済みとスキップした %1 個の文書をデバイスから削除しますか？"
-
-#: importer/importdialog.cpp:115
-msgctxt "@title:window"
-msgid "Import Finished"
-msgstr "インポート完了"
-
-#: importer/importdialog.cpp:117
-msgid "Keep"
-msgstr "保持"
-
-#: importer/importdialog.cpp:130
-msgid ""
-"Failed to delete the document:\n"
-"%2"
-msgid_plural ""
-"Failed to delete documents:\n"
-"%2"
-msgstr[0] ""
-"文書の削除に失敗しました:\n"
-"%2"
-msgstr[1] ""
-"文書の削除に失敗しました:\n"
-"%2"
-
-#: importer/importdialog.cpp:134
-msgid "Retry"
-msgstr "再試行"
-
-#: importer/importdialog.cpp:135
-msgid "Ignore"
-msgstr "無視"
-
-#: importer/importdialog.cpp:157
-msgid "What do you want to do now?"
-msgstr "次に何をしますか？"
-
-#: importer/importdialog.cpp:159
-msgid "View Imported Documents with Gwenview"
-msgstr "インポートした文書を Gwenview で見る"
-
-#: importer/importdialog.cpp:160
-msgid "Import more Documents"
-msgstr "インポートを続ける"
-
-#: importer/importdialog.cpp:161
-msgid "Quit"
-msgstr "終了"
-
-#: importer/thumbnailpage.cpp:197
-msgid "Import Selected"
-msgstr "選択したものをインポート"
-
-#: importer/thumbnailpage.cpp:201
-msgid "Import All"
-msgstr "すべてインポート"
-
-#: part/gvpart.cpp:80
-msgctxt "@action"
-msgid "Properties"
-msgstr "プロパティ"
-
-#: part/gvpart.cpp:128
-msgid "Gwenview KPart"
-msgstr "Gwenview KPart"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:31
-#. i18n: ectx: whatsthis, entry (PercentageOfMemoryUsageWarning), group (General)
-#: rc.cpp:3
-msgid ""
-"The percentage of memory used by Gwenview before it\n"
-"            warns the user and suggest saving changes."
-msgstr ""
-"Gwenview がユーザに保存するよう警告を発する\n"
-"\t\t\tメモリの使用パーセント量。"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:38
-#. i18n: ectx: whatsthis, entry (BlackListedExtensions), group (General)
-#: rc.cpp:7
-msgid ""
-"A list of filename extensions Gwenview should not try to\n"
-"            load. We exclude *.new as well because this is the extension\n"
-"            used for temporary files by KSaveFile."
-msgstr ""
-"Gwenview が読み込むべきでないファイルの拡張子。\n"
-"\t\t\tこれは TIFF や JPEG と認識されてしまう RAW ファイルを除外するのに便利で"
-"す。\n"
-"\t\t\t*.new を除外するのは、この拡張子が KSaveFile の一時ファイルとして\n"
-"\t\t\t使われているからです。"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:139
-#. i18n: ectx: whatsthis, entry (LockZoom), group (ImageView)
-#: rc.cpp:12
-msgid ""
-"Defines what happens when going to image B after having zoomed an area of "
-"image A.\n"
-"                When true: zoom and position is kept. When false: image B is "
-"zoomed out to fit the screen."
-msgstr ""
-
-#. i18n: file: lib/gwenviewconfig.kcfg:220
-#. i18n: ectx: label, entry (random), group (slide show)
-#: rc.cpp:16
-msgid "Display slide show images in random order"
-msgstr "スライドショーの画像をランダムな順序で表示"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:224
-#. i18n: ectx: label, entry (fullscreen), group (slide show)
-#: rc.cpp:19
-msgid "Show slideshow in fullscreen mode"
-msgstr "フルスクリーンモードでスライドショーを表示"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:228
-#. i18n: ectx: label, entry (loop), group (slide show)
-#: rc.cpp:22
-msgid "Loop on images"
-msgstr "画像を繰り返す"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:232
-#. i18n: ectx: label, entry (stopAtEnd), group (slide show)
-#: rc.cpp:25
-msgid "Stop at last image of folder"
-msgstr "フォルダの最後の画像で停止"
-
-#. i18n: file: lib/gwenviewconfig.kcfg:236
-#. i18n: ectx: label, entry (interval), group (slide show)
-#: rc.cpp:28
-msgid "Interval between images (in seconds)"
-msgstr "画像間の間隔 (秒)"
-
-#. i18n: file: lib/crop/cropwidget.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, advancedCheckBox)
-#: rc.cpp:37
-msgid "Advanced settings"
-msgstr "詳細設定"
-
-#. i18n: file: lib/crop/cropwidget.ui:55
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:40
-msgid "Ratio:"
-msgstr "比率:"
-
-#. i18n: file: lib/crop/cropwidget.ui:84
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:43
-msgid "Position:"
-msgstr "位置:"
-
-#. i18n: file: lib/crop/cropwidget.ui:117
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:46
-msgid "Size:"
-msgstr "サイズ:"
-
-#. i18n: file: lib/redeyereduction/redeyereductionwidget.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:49
-msgid "Size"
-msgstr "サイズ"
-
-#. i18n: file: lib/redeyereduction/redeyereductionwidget.ui:63
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:52
-msgid "Click on the red eye you want to fix"
-msgstr "修正する赤目をクリックしてください。"
-
-#. i18n: file: lib/print/printoptionspage.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, PrintOptionsPage)
-#: rc.cpp:55
-msgid "Image Settings"
-msgstr "画像の設定"
-
-#. i18n: file: lib/print/printoptionspage.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:58
-msgid "Image Position"
-msgstr "画像の位置"
-
-#. i18n: file: lib/print/printoptionspage.ui:45
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:61
-msgid "Scaling"
-msgstr "拡大縮小"
-
-#. i18n: file: lib/print/printoptionspage.ui:51
-#. i18n: ectx: property (text), widget (QRadioButton, mNoScale)
-#: rc.cpp:64
-msgid "&No scaling"
-msgstr "拡大縮小なし(&N)"
-
-#. i18n: file: lib/print/printoptionspage.ui:61
-#. i18n: ectx: property (text), widget (QRadioButton, mScaleToPage)
-#: rc.cpp:67
-msgid "&Fit image to page"
-msgstr "画像をページに合わせる(&F)"
-
-# ACCELERATOR added by translator
-#. i18n: file: lib/print/printoptionspage.ui:98
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintEnlargeSmallerImages)
-#. i18n: file: app/imageviewconfigpage.ui:201
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnlargeSmallerImages)
-#: rc.cpp:70 rc.cpp:190
-msgid "Enlarge smaller images"
-msgstr "ページより小さい画像は拡大する(&E)"
-
-#. i18n: file: lib/print/printoptionspage.ui:123
-#. i18n: ectx: property (text), widget (QRadioButton, mScaleTo)
-#: rc.cpp:73
-msgid "&Scale to:"
-msgstr "このサイズに拡大縮小する(&S):"
-
-#. i18n: file: lib/print/printoptionspage.ui:158
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:76
-msgctxt "Dimension separator, as in: '15 x 10 centimeters'"
-msgid "x"
-msgstr "x"
-
-#. i18n: file: lib/print/printoptionspage.ui:185
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
-#: rc.cpp:79
-msgid "Millimeters"
-msgstr "ミリメートル"
-
-#. i18n: file: lib/print/printoptionspage.ui:190
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
-#: rc.cpp:82
-msgid "Centimeters"
-msgstr "センチメートル"
-
-#. i18n: file: lib/print/printoptionspage.ui:195
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_PrintUnit)
-#: rc.cpp:85
-msgid "Inches"
-msgstr "インチ"
-
-# ACCELERATOR added by translator
-#. i18n: file: lib/print/printoptionspage.ui:224
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PrintKeepRatio)
-#: rc.cpp:88
-msgid "Keep ratio"
-msgstr "アスペクト比を保つ(&K)"
-
-#. i18n: file: lib/resize/resizeimagewidget.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, ResizeImageWidget)
-#: rc.cpp:91
-msgid "Image Resizing"
-msgstr "画像のサイズ変更"
-
-#. i18n: file: lib/resize/resizeimagewidget.ui:20
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:94
-msgid "Enter the new size for this image."
-msgstr "画像の新しいサイズを入力。"
-
-#. i18n: file: lib/resize/resizeimagewidget.ui:32
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:97
-msgid "Current size:"
-msgstr "現在のサイズ:"
-
-#. i18n: file: lib/resize/resizeimagewidget.ui:88
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:100
-msgid "New Size:"
-msgstr "新しいサイズ:"
-
-# ACCELERATOR added by translator
-#. i18n: file: lib/resize/resizeimagewidget.ui:135
-#. i18n: ectx: property (text), widget (QCheckBox, mKeepAspectCheckBox)
-#: rc.cpp:103
-msgid "Keep aspect ratio"
-msgstr "アスペクト比を保つ(&K)"
-
-#. i18n: file: app/generalconfigpage.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:106
-msgid "Background color:"
-msgstr "背景色:"
-
-#. i18n: file: app/generalconfigpage.ui:82
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:109
-msgid "Videos:"
-msgstr "動画:"
-
-#. i18n: file: app/generalconfigpage.ui:89
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ListVideos)
-#: rc.cpp:112
-msgid "Show videos"
-msgstr "動画を表示"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:115
-msgid "Slideshow"
-msgstr "スライドショー"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:29
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:118
-msgid "Interval:"
-msgstr "間隔:"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:75
-#. i18n: ectx: property (text), widget (QCheckBox, mSlideShowLoopCheckBox)
-#: rc.cpp:121
-msgid "Loop"
-msgstr "繰り返し"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:82
-#. i18n: ectx: property (text), widget (QCheckBox, mSlideShowRandomCheckBox)
-#: rc.cpp:124
-msgid "Random"
-msgstr "ランダム"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:92
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:127
-msgid "Image Information"
-msgstr "画像情報"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:101
-#. i18n: ectx: property (text), widget (QPushButton, mConfigureDisplayedInformationButton)
-#: rc.cpp:130
-#, fuzzy
-msgid "Select Image Information to Display..."
-msgstr "メタ情報"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:111
-#. i18n: ectx: property (title), widget (QGroupBox, mThumbnailGroupBox)
-#: rc.cpp:133
-msgid "Thumbnails"
-msgstr "サムネイル"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:120
-#. i18n: ectx: property (text), widget (QCheckBox, mShowThumbnailsCheckBox)
-#: rc.cpp:136
-msgid "Show thumbnails"
-msgstr "サムネイルを表示する"
-
-#. i18n: file: app/fullscreenconfigwidget.ui:130
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:139
-msgid "Height:"
-msgstr "高さ:"
-
-#. i18n: file: app/startmainpage.ui:34
-#. i18n: ectx: property (text), widget (QLabel, mHistoryDisabledLabel)
-#: rc.cpp:142
-msgid "History has been disabled."
-msgstr "履歴を無効にしました。"
-
-#. i18n: file: app/startmainpage.ui:51
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: rc.cpp:145
-msgid "Recent Folders"
-msgstr "最近開いたフォルダ"
-
-#. i18n: file: app/startmainpage.ui:65
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:148
-msgid "Recent URLs"
-msgstr "最近アクセスした URL"
-
-#. i18n: file: app/startmainpage.ui:109
-#. i18n: ectx: attribute (title), widget (QWidget, placesTab)
-#: rc.cpp:151
-msgid "Places"
-msgstr "場所"
-
-#. i18n: file: app/advancedconfigpage.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:154
-msgid "Cache:"
-msgstr "キャッシュ:"
-
-#. i18n: file: app/advancedconfigpage.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_DeleteThumbnailCacheOnExit)
-#: rc.cpp:157
-msgid "Delete thumbnail cache folder on exit"
-msgstr "終了時にサムネイルのキャッシュフォルダを削除する"
-
-#. i18n: file: app/advancedconfigpage.ui:51
-#. i18n: ectx: property (text), widget (QLabel, cacheHelpLabel)
-#: rc.cpp:160
-msgid ""
-"Enable this option if you do not have a lot of disk space.<br/><br/><em>Be "
-"careful:</em> this will delete the folder named <filename>.thumbnails</"
-"filename> in your home folder, deleting all thumbnails previously generated "
-"by Gwenview and other applications."
-msgstr ""
-"このオプションはディスク領域があまりない場合に有効にしてください。<br/><br/>"
-"これは、あなたのホームフォルダの <filename>.thumbnails</filename> という名前"
-"のフォルダを削除するので、Gwenview だけでなく他のアプリケーションによって生成"
-"されたサムネイルも削除されることに注意してください。"
-
-#. i18n: file: app/advancedconfigpage.ui:77
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:163
-msgid "History:"
-msgstr "履歴:"
-
-#. i18n: file: app/advancedconfigpage.ui:89
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HistoryEnabled)
-#: rc.cpp:166
-msgid "Remember folders and URLs"
-msgstr "フォルダと URL を記憶させる"
-
-#. i18n: file: app/browsemainpage.ui:88
-#. i18n: ectx: property (text), widget (Gwenview::StatusBarToolButton, mAddFilterButton)
-#: rc.cpp:169
-msgid "Add Filter"
-msgstr "フィルタを追加"
-
-#. i18n: file: app/imageviewconfigpage.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:172
-msgid "Transparent background:"
-msgstr "透明部分:"
-
-# ACCELERATOR changed by translator
-#. i18n: file: app/imageviewconfigpage.ui:38
-#. i18n: ectx: property (text), widget (QRadioButton, checkBoardRadioButton)
-#: rc.cpp:175
-msgid "&Check board"
-msgstr "市松模様(&K)"
-
-#. i18n: file: app/imageviewconfigpage.ui:71
-#. i18n: ectx: property (text), widget (QRadioButton, solidColorRadioButton)
-#: rc.cpp:178
-msgid "&Solid color:"
-msgstr "単色(&S):"
-
-#. i18n: file: app/imageviewconfigpage.ui:119
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:181
-msgid "Mouse wheel behavior:"
-msgstr "マウスホイールの挙動:"
-
-# ACCELERATOR added by translator
-#. i18n: file: app/imageviewconfigpage.ui:134
-#. i18n: ectx: property (text), widget (QRadioButton, mouseWheelScrollRadioButton)
-#: rc.cpp:184
-msgctxt "@option:radio action on mouse wheel"
-msgid "Scroll"
-msgstr "スクロール(&L)"
-
-# ACCELERATOR added by translator
-#. i18n: file: app/imageviewconfigpage.ui:161
-#. i18n: ectx: property (text), widget (QRadioButton, mouseWheelBrowseRadioButton)
-#: rc.cpp:187
-msgctxt "@option:radio action on mouse wheel"
-msgid "Browse"
-msgstr "ブラウズ(&B)"
-
-#. i18n: file: app/imageviewconfigpage.ui:239
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:193
-msgid "Animations:"
-msgstr "アニメーション:"
-
-#. i18n: file: app/imageviewconfigpage.ui:254
-#. i18n: ectx: property (text), widget (QRadioButton, glAnimationRadioButton)
-#: rc.cpp:196
-msgid "OpenGL"
-msgstr ""
-
-#. i18n: file: app/imageviewconfigpage.ui:281
-#. i18n: ectx: property (text), widget (QRadioButton, softwareAnimationRadioButton)
-#: rc.cpp:199
-msgid "Software"
-msgstr ""
-
-#. i18n: file: app/imageviewconfigpage.ui:305
-#. i18n: ectx: property (text), widget (QRadioButton, noAnimationRadioButton)
-#: rc.cpp:202
-msgid "None"
-msgstr ""
-
-#. i18n: file: app/imageviewconfigpage.ui:327
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:205
-msgid "<b>Thumbnail Bar</b>"
-msgstr "サムネイルバー"
-
-#. i18n: file: app/imageviewconfigpage.ui:334
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:208
-msgid "Orientation:"
-msgstr "向き:"
-
-#. i18n: file: app/imageviewconfigpage.ui:349
-#. i18n: ectx: property (text), widget (QRadioButton, horizontalRadioButton)
-#: rc.cpp:211
-msgid "Horizontal"
-msgstr "横"
-
-#. i18n: file: app/imageviewconfigpage.ui:373
-#. i18n: ectx: property (text), widget (QRadioButton, verticalRadioButton)
-#: rc.cpp:214
-msgid "Vertical"
-msgstr "縦"
-
-#. i18n: file: app/imageviewconfigpage.ui:395
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:217
-msgid "Row count:"
-msgstr "段数/列数:"
-
-#. i18n: file: app/gwenviewui.rc:65
-#. i18n: ectx: Menu (plugins)
-#: rc.cpp:220
-msgid "&Plugins"
-msgstr "プラグイン(&P)"
-
-#. i18n: file: app/gwenviewui.rc:68
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:223
-msgid "&Settings"
-msgstr "設定(&S)"
-
-#. i18n: file: app/gwenviewui.rc:81
-#. i18n: ectx: ToolBar (mainToolBar)
-#. i18n: file: part/gvpart.rc:15
-#. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:226 rc.cpp:262
-msgid "Main Toolbar"
-msgstr "メインツールバー"
-
-#. i18n: file: importer/thumbnailpage.ui:173
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:229
-msgid "Select the documents to import"
-msgstr "インポートする文書を選択"
-
-#. i18n: file: importer/thumbnailpage.ui:185
-#. i18n: ectx: property (text), widget (QPushButton, mConfigureButton)
-#: rc.cpp:232
-msgid "Settings..."
-msgstr "設定..."
-
-#. i18n: file: importer/thumbnailpage.ui:201
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:235
-msgid "Enter the import destination"
-msgstr "インポート先を入力"
-
-#. i18n: file: importer/thumbnailpage.ui:220
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:238
-msgid "Listing content of:"
-msgstr ""
-
-#. i18n: file: importer/importerconfigdialog.ui:17
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutoRename)
-#: rc.cpp:241
-msgid "Rename documents automatically"
-msgstr "自動的に文書の名前を変更する"
-
-#. i18n: file: importer/importerconfigdialog.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:244
-msgid "Rename Format:"
-msgstr "名前変更の形式:"
-
-#. i18n: file: importer/importerconfigdialog.ui:59
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:247
-msgid "Preview:"
-msgstr "プレビュー:"
-
-#. i18n: file: importer/importerconfigdialog.ui:83
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:250
-msgid "<i>Type text or click the items below to customize the format</i>"
-msgstr "テキストを入力するか下のアイテムをクリックして形式をカスタマイズします"
-
-#. i18n: file: importer/progresspage.ui:30
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:253
-msgid "Importing documents..."
-msgstr "文書をインポート中..."
-
-#. i18n: file: part/gvpart.rc:4
-#. i18n: ectx: Menu (file)
-#: rc.cpp:256
-msgid "&File"
-msgstr "ファイル(&F)"
-
-#. i18n: file: part/gvpart.rc:8
-#. i18n: ectx: Menu (view)
-#: rc.cpp:259
-msgid "&View"
-msgstr "表示(&V)"

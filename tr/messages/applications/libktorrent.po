@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2012-04-17 21:32+0300\n"
 "Last-Translator: Serdar Soytetir <tulliana@gmail.com>\n"
 "Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
@@ -23,6 +23,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: examples/ktcli/main.cpp:60
+msgid "Torrent to open"
+msgstr "Açılacak torrent"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+msgid "Port to use"
+msgstr "Kullanılacak port"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr "Şifrelemenin etkinleştirilip etkinleştirilmeyeceği"
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr ""
+
+#: examples/ktcli/main.cpp:65
+#, fuzzy
+msgid "Whether or not to use utp"
+msgstr "Sistem çekmecesi iletilerinin gösterilip gösterilmeyeceği"
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr "ktcli"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "%1 dizini yok"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Bozuk torrent."
+
+#: src/torrent/torrent.cpp:165
+msgid "Unable to open torrent file %1: %2"
+msgstr " %1 torrent dosyası açılamıyor: %2"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -56,6 +96,17 @@ msgstr ""
 #: src/torrent/torrentcontrol.cpp:607
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "<b>%1</b> torrentini zaten indiriyorsunuz."
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+msgid "Cannot open file %1: %2"
+msgstr "%1 dosyası açılamıyor: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "İçerik dosyası oluşturulamıyor: %1"
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -118,27 +169,43 @@ msgstr "Duraklatıldı"
 msgid "Superseeding"
 msgstr "Superseeding"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Bozuk torrent."
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr "%1 izleyicisiyle iletişime geçilirken zaman aşımı"
 
-#: src/torrent/torrent.cpp:165
-msgid "Unable to open torrent file %1: %2"
-msgstr " %1 torrent dosyası açılamıyor: %2"
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "%1 makine adı çözümlenemedi"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
-msgid "Cannot open file %1: %2"
-msgstr "%1 dosyası açılamıyor: %2"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Bir konum olmadan yeniden yönlendir."
 
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "İçerik dosyası oluşturulamıyor: %1"
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "İzleyiciden geçersiz yanıt"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "İzleyiciden geçersiz veri"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "Geçersiz izleyici adresi"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr "Tamamlamak için diğer veri denetimleri bekleniyor"
+
+#: src/datachecker/datacheckerjob.cpp:141
+msgid "Checking Data"
+msgstr "Veri denetleniyor"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Bilinmeyen istemci"
 
 #: src/download/chunkdownload.cpp:383
 msgid "1 peer"
@@ -210,18 +277,121 @@ msgstr "Bir konum olmadan yeniden yönlendirildi."
 msgid "Disabled because webseed does not match torrent"
 msgstr ""
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-msgid "Cannot open index file %1: %2"
-msgstr "%1 indeks dosyası açılamıyor : %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "Diske yazılırken hata oluştu"
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
-msgid "Failed to open %1: %2"
-msgstr "%1 açılamıyor : %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "Diskten okunurken hata oluştu"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/file.cpp:84
+msgid "Cannot write to %1: %2"
+msgstr "%1 dosyasına yazılamıyor : %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "%1 adresinden okunamıyor"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/sn"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "%1 gün"
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "%1 dizini oluşturulamıyor"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "%1 konumundan %2 konumuna sembolik bağ oluşturulamıyor: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "%1, %2 konumuna taşınamıyor: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "%1, %2 konumuna kopyalanamıyor: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "%1 silinemiyor: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "%1 oluşturulamıyor: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "%1 dosyasının boyutu hesaplanamıyor: %2"
+
+#: src/util/fileops.cpp:334
+msgid "Cannot calculate the filesize: %1"
+msgstr "Dosya boyutu hesaplanamıyor: %1"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+msgid "Cannot open %1: %2"
+msgstr "%1 açılamıyor: %2"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "Dosya genişletilemiyor: %1"
+
+#: src/util/fileops.cpp:427
+msgid "Cannot seek in file: %1"
+msgstr "Dosyada aranamıyor: %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "Genel"
+
+#: src/util/logsystemmanager.cpp:34
+msgid "Connections"
+msgstr "Bağlantılar"
+
+#: src/util/logsystemmanager.cpp:35
+msgid "Tracker"
+msgstr "İzleyici"
+
+#: src/util/logsystemmanager.cpp:36
+msgid "DHT"
+msgstr "DHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "Disk Girişi/Çıkışı"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr "µTP"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "Tamam"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr "Uyarı: %1"
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Bildiriliyor"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 msgid "Failed to create %1: %2"
 msgstr "%1 oluşturulamıyor : %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+msgid "Failed to open %1: %2"
+msgstr "%1 açılamıyor : %2"
 
 #: src/diskio/dndfile.cpp:89
 msgid "Cannot create file %1: %2"
@@ -234,15 +404,6 @@ msgstr "İlk parça DND dosyasına yazılamadı : %1"
 #: src/diskio/dndfile.cpp:155
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Son parça DND dosyasına yazılamadı : %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr ""
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-msgid "Cannot open %1: %2"
-msgstr "%1 açılamıyor: %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -284,6 +445,14 @@ msgstr "%1 dosyasına yazılamıyor : %2"
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Disk alanı önceden ayrılamıyor: %1"
 
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr ""
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+msgid "Cannot open index file %1: %2"
+msgstr "%1 indeks dosyası açılamıyor : %2"
+
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
 msgstr "Tamamlamak için diğer taşıma işlemleri bekleniyor"
@@ -323,112 +492,6 @@ msgstr "%1 bir int'e dönüştürülemiyor"
 msgid "Torrent is incomplete."
 msgstr "Torrent tamamlanmamış."
 
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "Tamam"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "Warning: %1"
-msgstr "Uyarı: %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Bildiriliyor"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "%1 dizini yok"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "Genel"
-
-#: src/util/logsystemmanager.cpp:34
-msgid "Connections"
-msgstr "Bağlantılar"
-
-#: src/util/logsystemmanager.cpp:35
-msgid "Tracker"
-msgstr "İzleyici"
-
-#: src/util/logsystemmanager.cpp:36
-msgid "DHT"
-msgstr "DHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "Disk Girişi/Çıkışı"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr "µTP"
-
-#: src/util/fileops.cpp:101
-msgid "Cannot create directory %1"
-msgstr "%1 dizini oluşturulamıyor"
-
-#: src/util/fileops.cpp:168
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "%1 konumundan %2 konumuna sembolik bağ oluşturulamıyor: %3"
-
-#: src/util/fileops.cpp:185
-msgid "Cannot move %1 to %2: %3"
-msgstr "%1, %2 konumuna taşınamıyor: %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-msgid "Cannot copy %1 to %2: %3"
-msgstr "%1, %2 konumuna kopyalanamıyor: %3"
-
-#: src/util/fileops.cpp:282
-msgid "Cannot delete %1: %2"
-msgstr "%1 silinemiyor: %2"
-
-#: src/util/fileops.cpp:300
-msgid "Cannot create %1: %2"
-msgstr "%1 oluşturulamıyor: %2"
-
-#: src/util/fileops.cpp:318
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "%1 dosyasının boyutu hesaplanamıyor: %2"
-
-#: src/util/fileops.cpp:334
-msgid "Cannot calculate the filesize: %1"
-msgstr "Dosya boyutu hesaplanamıyor: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-msgid "Cannot expand file: %1"
-msgstr "Dosya genişletilemiyor: %1"
-
-#: src/util/fileops.cpp:427
-msgid "Cannot seek in file: %1"
-msgstr "Dosyada aranamıyor: %1"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "Diske yazılırken hata oluştu"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "Diskten okunurken hata oluştu"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/sn"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "%1 gün"
-
-#: src/util/file.cpp:84
-msgid "Cannot write to %1: %2"
-msgstr "%1 dosyasına yazılamıyor : %2"
-
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "%1 adresinden okunamıyor"
-
 #: src/upnp/upnprouter.cpp:167
 msgid "Failed to download %1: %2"
 msgstr "%1 indirilemiyor: %2"
@@ -456,66 +519,3 @@ msgstr "Bağlantı beklenmedik bir biçimde kapatıldı"
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
 msgstr "İşlem zaman aşımına uğradı"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Bilinmeyen istemci"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr "Tamamlamak için diğer veri denetimleri bekleniyor"
-
-#: src/datachecker/datacheckerjob.cpp:141
-msgid "Checking Data"
-msgstr "Veri denetleniyor"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "İzleyiciden geçersiz yanıt"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "İzleyiciden geçersiz veri"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "Geçersiz izleyici adresi"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "%1 izleyicisiyle iletişime geçilirken zaman aşımı"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Bir konum olmadan yeniden yönlendir."
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "%1 makine adı çözümlenemedi"
-
-#: examples/ktcli/main.cpp:60
-msgid "Torrent to open"
-msgstr "Açılacak torrent"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-msgid "Port to use"
-msgstr "Kullanılacak port"
-
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr "Şifrelemenin etkinleştirilip etkinleştirilmeyeceği"
-
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr ""
-
-#: examples/ktcli/main.cpp:65
-#, fuzzy
-msgid "Whether or not to use utp"
-msgstr "Sistem çekmecesi iletilerinin gösterilip gösterilmeyeceği"
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
-msgstr "ktcli"

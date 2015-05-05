@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2011-10-13 16:02+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -18,6 +18,45 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+
+#: examples/ktcli/main.cpp:60
+msgid "Torrent to open"
+msgstr "Torrent som skal åpnes"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+msgid "Port to use"
+msgstr "Port som skal brukes"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr "Om kryptering skal slås på eller ikke"
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr "Om deltakerutveksling skal slås på eller ikke"
+
+#: examples/ktcli/main.cpp:65
+msgid "Whether or not to use utp"
+msgstr "Om utp skal brukes eller ikke"
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr "ktcli"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "Mappa %1 finnes ikke"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Ødelagt torrent."
+
+#: src/torrent/torrent.cpp:165
+msgid "Unable to open torrent file %1: %2"
+msgstr "Klarte ikke åpne torrentfila %1: %2"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -50,6 +89,17 @@ msgstr ""
 #: src/torrent/torrentcontrol.cpp:607
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "Du laster allerede ned  torrenten <b>%1</b>."
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+msgid "Cannot open file %1: %2"
+msgstr "Kan ikke åpne fila «%1»: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Klarte ikke lage indeksfil: %1"
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -112,27 +162,43 @@ msgstr "Pauset"
 msgid "Superseeding"
 msgstr "Superdeling"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Ødelagt torrent."
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr "Tidsavbrutt ved kontakt med sporer %1"
 
-#: src/torrent/torrent.cpp:165
-msgid "Unable to open torrent file %1: %2"
-msgstr "Klarte ikke åpne torrentfila %1: %2"
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "Klarte ikke slå opp vertsnavnet %1"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
-msgid "Cannot open file %1: %2"
-msgstr "Kan ikke åpne fila «%1»: %2"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Omdirigert uten ny plassering"
 
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "Klarte ikke lage indeksfil: %1"
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "Ugyldig svar fra sporeren"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "Ugyldig data fra sporeren"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "Ugyldig sporer-URL"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr "Venter på at andre datakontroller skal bli ferdig"
+
+#: src/datachecker/datacheckerjob.cpp:141
+msgid "Checking Data"
+msgstr "Kontrollerer data"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Ukjent klient"
 
 #: src/download/chunkdownload.cpp:383
 msgid "1 peer"
@@ -205,18 +271,122 @@ msgstr "Omdirigert uten nytt sted."
 msgid "Disabled because webseed does not match torrent"
 msgstr "Slått av fordi nettkilden ikke stemmer med torrenten"
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-msgid "Cannot open index file %1: %2"
-msgstr "Klarte ikke åpne indeksfila %1:  %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "Feil ved skriving til disk"
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
-msgid "Failed to open %1: %2"
-msgstr "Klarte ikke åpne %1:  %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "Feil ved lesing fra disk"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/file.cpp:84
+msgid "Cannot write to %1: %2"
+msgstr "Klarte ikke skrive til %1: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Klarte ikke lese fra %1"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 dag "
+msgstr[1] "%1 dager "
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "Kan ikke opprette mappa %1"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "Klarte ikke opprette en symbolsk lenke fra %1 til %2: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "Klarte ikke flytte %1 til %2: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Klarte ikke kopiere %1 til %2: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "Klarte ikke slette %1: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "Kan ikke opprette %1: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Klarte ikke beregne filstørrelsen på %1: %2"
+
+#: src/util/fileops.cpp:334
+msgid "Cannot calculate the filesize: %1"
+msgstr "Klarte ikke beregne filstørrelse: %1"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+msgid "Cannot open %1: %2"
+msgstr "Kan ikke åpne %1: %2"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "Klarte ikke utvide fil: %1"
+
+#: src/util/fileops.cpp:427
+msgid "Cannot seek in file: %1"
+msgstr "Klarte ikke søke i fil: %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "Generelt"
+
+#: src/util/logsystemmanager.cpp:34
+msgid "Connections"
+msgstr "Forbindelser"
+
+#: src/util/logsystemmanager.cpp:35
+msgid "Tracker"
+msgstr "Sporer"
+
+#: src/util/logsystemmanager.cpp:36
+msgid "DHT"
+msgstr "DHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "Diskaktivitet"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr "µTP"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "OK"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr "Advarsel: %1"
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Annonserer"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 msgid "Failed to create %1: %2"
 msgstr "Klarte ikke opprette %1: %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+msgid "Failed to open %1: %2"
+msgstr "Klarte ikke åpne %1:  %2"
 
 #: src/diskio/dndfile.cpp:89
 msgid "Cannot create file %1: %2"
@@ -229,15 +399,6 @@ msgstr "Klarte ikke skrive første blokk til DND-fil: %1"
 #: src/diskio/dndfile.cpp:155
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Klarte ikke skrive siste blokk til DND-fil: %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr "Klarer ikke å skrive til et stykke som er avbildet som skrivebeskyttet"
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-msgid "Cannot open %1: %2"
-msgstr "Kan ikke åpne %1: %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -276,6 +437,14 @@ msgstr "Klarte ikke skrive til fila %1:  %2"
 #: src/diskio/cachefile.cpp:503
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Klarte ikke tildele diskplass på forhånd: %1"
+
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr "Klarer ikke å skrive til et stykke som er avbildet som skrivebeskyttet"
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+msgid "Cannot open index file %1: %2"
+msgstr "Klarte ikke åpne indeksfila %1:  %2"
 
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
@@ -316,113 +485,6 @@ msgstr "Klarte ikke konvertere %1 til et heltall"
 msgid "Torrent is incomplete."
 msgstr "Torrenten er ufullstendig."
 
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "OK"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "Warning: %1"
-msgstr "Advarsel: %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Annonserer"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "Mappa %1 finnes ikke"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "Generelt"
-
-#: src/util/logsystemmanager.cpp:34
-msgid "Connections"
-msgstr "Forbindelser"
-
-#: src/util/logsystemmanager.cpp:35
-msgid "Tracker"
-msgstr "Sporer"
-
-#: src/util/logsystemmanager.cpp:36
-msgid "DHT"
-msgstr "DHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "Diskaktivitet"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr "µTP"
-
-#: src/util/fileops.cpp:101
-msgid "Cannot create directory %1"
-msgstr "Kan ikke opprette mappa %1"
-
-#: src/util/fileops.cpp:168
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "Klarte ikke opprette en symbolsk lenke fra %1 til %2: %3"
-
-#: src/util/fileops.cpp:185
-msgid "Cannot move %1 to %2: %3"
-msgstr "Klarte ikke flytte %1 til %2: %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Klarte ikke kopiere %1 til %2: %3"
-
-#: src/util/fileops.cpp:282
-msgid "Cannot delete %1: %2"
-msgstr "Klarte ikke slette %1: %2"
-
-#: src/util/fileops.cpp:300
-msgid "Cannot create %1: %2"
-msgstr "Kan ikke opprette %1: %2"
-
-#: src/util/fileops.cpp:318
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Klarte ikke beregne filstørrelsen på %1: %2"
-
-#: src/util/fileops.cpp:334
-msgid "Cannot calculate the filesize: %1"
-msgstr "Klarte ikke beregne filstørrelse: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-msgid "Cannot expand file: %1"
-msgstr "Klarte ikke utvide fil: %1"
-
-#: src/util/fileops.cpp:427
-msgid "Cannot seek in file: %1"
-msgstr "Klarte ikke søke i fil: %1"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "Feil ved skriving til disk"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "Feil ved lesing fra disk"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 dag "
-msgstr[1] "%1 dager "
-
-#: src/util/file.cpp:84
-msgid "Cannot write to %1: %2"
-msgstr "Klarte ikke skrive til %1: %2"
-
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "Klarte ikke lese fra %1"
-
 #: src/upnp/upnprouter.cpp:167
 msgid "Failed to download %1: %2"
 msgstr "Klarte ikke laste ned %1: %2"
@@ -452,65 +514,3 @@ msgstr "Tilkoblingen ble uventet avbrutt"
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
 msgstr "Handlingen fikk tidsavbrudd"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Ukjent klient"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr "Venter på at andre datakontroller skal bli ferdig"
-
-#: src/datachecker/datacheckerjob.cpp:141
-msgid "Checking Data"
-msgstr "Kontrollerer data"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "Ugyldig svar fra sporeren"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "Ugyldig data fra sporeren"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "Ugyldig sporer-URL"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "Tidsavbrutt ved kontakt med sporer %1"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Omdirigert uten ny plassering"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "Klarte ikke slå opp vertsnavnet %1"
-
-#: examples/ktcli/main.cpp:60
-msgid "Torrent to open"
-msgstr "Torrent som skal åpnes"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-msgid "Port to use"
-msgstr "Port som skal brukes"
-
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr "Om kryptering skal slås på eller ikke"
-
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr "Om deltakerutveksling skal slås på eller ikke"
-
-#: examples/ktcli/main.cpp:65
-msgid "Whether or not to use utp"
-msgstr "Om utp skal brukes eller ikke"
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
-msgstr "ktcli"

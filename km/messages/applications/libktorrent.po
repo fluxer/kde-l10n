@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2012-01-12 14:27+0700\n"
 "Last-Translator: Sok Sophea <sophea@khmeros.info>\n"
 "Language-Team: Khmer <>\n"
@@ -20,6 +20,45 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: WordForge 0.8 RC1\n"
 "X-Language: km-CM\n"
+
+#: examples/ktcli/main.cpp:60
+msgid "Torrent to open"
+msgstr "Torrent ត្រូវ​បើក​"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+msgid "Port to use"
+msgstr "ច្រក​ត្រូវ​ប្រើ​"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr "ថា​តើ​បើក​​ ឬ​មិន​បើក​ការ​អ៊ិនគ្រីប​"
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr "ថា​តើ​បើក ឬ​មិន​បើក​ការ​ផ្លាស់ប្ដូរ​ម៉ាស៊ីន​ដូចគ្នា​​"
+
+#: examples/ktcli/main.cpp:65
+msgid "Whether or not to use utp"
+msgstr "ថា​តើ​​ប្រើ​ ​ឬ​​មិន​ប្រើ​ utp"
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr "ktcli"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "ថត ​%1 មិន​ទាន់​មាន​នូវ​ឡើយ​ទេ​"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "torrent ខូច​ហើយ !"
+
+#: src/torrent/torrent.cpp:165
+msgid "Unable to open torrent file %1: %2"
+msgstr " មិន​អាច​បើក​ឯកសារ​ torrent %1 ៖ %2 បានទេ"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -52,6 +91,17 @@ msgstr ""
 #: src/torrent/torrentcontrol.cpp:607
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "អ្នក​កំពុង​ទាញយក torrent <b>%1</b> រួចហើយ ។"
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+msgid "Cannot open file %1: %2"
+msgstr "មិន​អាច​បើក​ឯកសារ %1 ៖​ %2 បានទេ"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "មិនអាច​បង្កើត​ឯកសារ​លិបិក្រម ៖ %1"
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -114,27 +164,43 @@ msgstr "បាន​ផ្អាក"
 msgid "Superseeding"
 msgstr "ការ​បណ្ដុះ​​ដ៏​អស្ចារ្យ​​​"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "torrent ខូច​ហើយ !"
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr "អស់​ពេល​ក្នុងការ​ទាក់ទង​​កម្មវិធី​តាមដាន %1"
 
-#: src/torrent/torrent.cpp:165
-msgid "Unable to open torrent file %1: %2"
-msgstr " មិន​អាច​បើក​ឯកសារ​ torrent %1 ៖ %2 បានទេ"
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "មិនអាច​ដោះស្រាយ​ឈ្មោះ​ម៉ាស៊ីន %1 បានទេ"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
-msgid "Cannot open file %1: %2"
-msgstr "មិន​អាច​បើក​ឯកសារ %1 ៖​ %2 បានទេ"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "​បញ្ជូន​បន្ត​ដោយ​គ្មានទីតាំង​បញ្ជូន​បន្ត"
 
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "មិនអាច​បង្កើត​ឯកសារ​លិបិក្រម ៖ %1"
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "ការ​ឆ្លើយ​តប​មិន​ត្រឹមត្រូវ​ពី​កម្មវិធី​តាមដាន"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "ទិន្នន័យ​មិនត្រឹមត្រូវ​ពី​កម្មវិធី​តាមដាន"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "URL កម្មវិធី​តាមដាន​បទ​មិន​ត្រឹមត្រូវ"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr "រង់ចាំ​ទិន្នន័យ​ផ្សេង​ទៀត​ត្រូវ​បាន​​ពិនិត្យ​មើល​ដើម្បី​បញ្ចប់​​​"
+
+#: src/datachecker/datacheckerjob.cpp:141
+msgid "Checking Data"
+msgstr "ពិនិត្យ​ទិន្នន័យ​​"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "មិន​ស្គាល់​ម៉ាស៊ីន​ភ្ញៀវ"
 
 #: src/download/chunkdownload.cpp:383
 msgid "1 peer"
@@ -206,18 +272,121 @@ msgstr "បាន​បញ្ជូន​បន្ត​ដោយ​គ្មា
 msgid "Disabled because webseed does not match torrent"
 msgstr "បាន​បិទ​ពីព្រោះ​បណ្ដុះ​បណ្ដាញ​មិន​ផ្គូផ្គង​ torrent ឡើយ​"
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-msgid "Cannot open index file %1: %2"
-msgstr "មិន​អាច​បើក​ឯកសារ​លិបិក្រម %1 ៖ %2​"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "កំហុស​នៅ​ពេល​សរសេរ​ទៅ​កាន់​ថាស​"
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
-msgid "Failed to open %1: %2"
-msgstr "បរាជ័យ​ក្នុង​ការ​បើក​ %1 ៖ %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "កំហុស​នៅ​ពេល​កំពុង​អាន​ពី​ថាស​"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/file.cpp:84
+msgid "Cannot write to %1: %2"
+msgstr "មិន​អាច​សរសេរ​ទៅកាន់​ %1 ៖ %2 បាន​ទេ​"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "មិន​អាច​អាន​ពី %1 បានទេ"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/វិ."
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "%1 ថ្ងៃ "
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "មិនអាច​បង្កើត​ថត %1 បាន​ទេ"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr "មិនអាច​តភ្ជាប់​ %1 ទៅ %2 ៖ %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "មិន​អាច​ផ្លាស់ទី​ %1 ទៅ​កាន់​ %2 ៖​ %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "មិន​អាច​ចម្លង​ %1 ទៅ​កាន់​ %2 ៖ %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "មិន​អាច​លុប​ %1 ៖ %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "មិនអាច​បង្កើត​ %1 ៖ %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "មិន​អាច​គណនា​ទំហំ​ឯកសារ​%1 ៖ %2"
+
+#: src/util/fileops.cpp:334
+msgid "Cannot calculate the filesize: %1"
+msgstr "មិន​អាច​គណនា​ទំហំ​ឯកសារ ៖ %1​"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+msgid "Cannot open %1: %2"
+msgstr "មិន​អាច​បើក​ %1 ៖ %2"
+
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "មិន​អាច​ពង្រីក​​ឯកសារ​ ៖​ %1"
+
+#: src/util/fileops.cpp:427
+msgid "Cannot seek in file: %1"
+msgstr "មិន​អាច​ស្វែងរក​ក្នុង​ឯកសារ​ ៖​ %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "ទូទៅ"
+
+#: src/util/logsystemmanager.cpp:34
+msgid "Connections"
+msgstr "ការ​ត​ភ្ជាប់"
+
+#: src/util/logsystemmanager.cpp:35
+msgid "Tracker"
+msgstr "កម្មវិធី​តាម​ដាន​"
+
+#: src/util/logsystemmanager.cpp:36
+msgid "DHT"
+msgstr "DHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "ការ​ចេញ/ចូល​របស់​ថាស"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr "µTP"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "យល់​​ព្រម​"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr "ការ​ព្រមាន​ ៖ %1"
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "ការ​ប្រកាស"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 msgid "Failed to create %1: %2"
 msgstr "បរាជ័យ​ក្នុង​ការ​បង្កើត​ %1 ៖ %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+msgid "Failed to open %1: %2"
+msgstr "បរាជ័យ​ក្នុង​ការ​បើក​ %1 ៖ %2"
 
 #: src/diskio/dndfile.cpp:89
 msgid "Cannot create file %1: %2"
@@ -230,15 +399,6 @@ msgstr "បរាជ័យ​ក្នុង​ការ​សរសេរ​ក
 #: src/diskio/dndfile.cpp:155
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "បរាជ័យ​ក្នុង​ការ​សរសេរ​កំណាត់​ចុងក្រោយ​ទៅ​ឯកសារ DND ៖ %1​"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr "មិន​អាច​សរសេរ​ទៅ​កាន់​​បំណែក​​បាន​តែ​អាន​ដែល​ផ្គូផ្គង​ឡើយ"
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-msgid "Cannot open %1: %2"
-msgstr "មិន​អាច​បើក​ %1 ៖ %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -277,6 +437,14 @@ msgstr "បរាជ័យ​ក្នុង​ការ​សរសេរ​ទ
 #: src/diskio/cachefile.cpp:503
 msgid "Cannot preallocate diskspace: %1"
 msgstr "មិន​អាច​បម្រុងទុក​ទំហំ​ថាស​ជាមុន​បាន ៖ %1"
+
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr "មិន​អាច​សរសេរ​ទៅ​កាន់​​បំណែក​​បាន​តែ​អាន​ដែល​ផ្គូផ្គង​ឡើយ"
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+msgid "Cannot open index file %1: %2"
+msgstr "មិន​អាច​បើក​ឯកសារ​លិបិក្រម %1 ៖ %2​"
 
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
@@ -317,112 +485,6 @@ msgstr "មិនអាច​បម្លែង %1 ទៅ​ចំនួន​�
 msgid "Torrent is incomplete."
 msgstr "Torrent មិន​ទាន់​បាន​បញ្ចប់​នូវឡើយ​ទេ !"
 
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "យល់​​ព្រម​"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "Warning: %1"
-msgstr "ការ​ព្រមាន​ ៖ %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "ការ​ប្រកាស"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "ថត ​%1 មិន​ទាន់​មាន​នូវ​ឡើយ​ទេ​"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "ទូទៅ"
-
-#: src/util/logsystemmanager.cpp:34
-msgid "Connections"
-msgstr "ការ​ត​ភ្ជាប់"
-
-#: src/util/logsystemmanager.cpp:35
-msgid "Tracker"
-msgstr "កម្មវិធី​តាម​ដាន​"
-
-#: src/util/logsystemmanager.cpp:36
-msgid "DHT"
-msgstr "DHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "ការ​ចេញ/ចូល​របស់​ថាស"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr "µTP"
-
-#: src/util/fileops.cpp:101
-msgid "Cannot create directory %1"
-msgstr "មិនអាច​បង្កើត​ថត %1 បាន​ទេ"
-
-#: src/util/fileops.cpp:168
-msgid "Cannot symlink %1 to %2: %3"
-msgstr "មិនអាច​តភ្ជាប់​ %1 ទៅ %2 ៖ %3"
-
-#: src/util/fileops.cpp:185
-msgid "Cannot move %1 to %2: %3"
-msgstr "មិន​អាច​ផ្លាស់ទី​ %1 ទៅ​កាន់​ %2 ៖​ %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-msgid "Cannot copy %1 to %2: %3"
-msgstr "មិន​អាច​ចម្លង​ %1 ទៅ​កាន់​ %2 ៖ %3"
-
-#: src/util/fileops.cpp:282
-msgid "Cannot delete %1: %2"
-msgstr "មិន​អាច​លុប​ %1 ៖ %2"
-
-#: src/util/fileops.cpp:300
-msgid "Cannot create %1: %2"
-msgstr "មិនអាច​បង្កើត​ %1 ៖ %2"
-
-#: src/util/fileops.cpp:318
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "មិន​អាច​គណនា​ទំហំ​ឯកសារ​%1 ៖ %2"
-
-#: src/util/fileops.cpp:334
-msgid "Cannot calculate the filesize: %1"
-msgstr "មិន​អាច​គណនា​ទំហំ​ឯកសារ ៖ %1​"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-msgid "Cannot expand file: %1"
-msgstr "មិន​អាច​ពង្រីក​​ឯកសារ​ ៖​ %1"
-
-#: src/util/fileops.cpp:427
-msgid "Cannot seek in file: %1"
-msgstr "មិន​អាច​ស្វែងរក​ក្នុង​ឯកសារ​ ៖​ %1"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "កំហុស​នៅ​ពេល​សរសេរ​ទៅ​កាន់​ថាស​"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "កំហុស​នៅ​ពេល​កំពុង​អាន​ពី​ថាស​"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/វិ."
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "%1 ថ្ងៃ "
-
-#: src/util/file.cpp:84
-msgid "Cannot write to %1: %2"
-msgstr "មិន​អាច​សរសេរ​ទៅកាន់​ %1 ៖ %2 បាន​ទេ​"
-
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "មិន​អាច​អាន​ពី %1 បានទេ"
-
 #: src/upnp/upnprouter.cpp:167
 msgid "Failed to download %1: %2"
 msgstr "ទាញ​យក​បាន​បរាជ័យ​ %1 ៖ %2"
@@ -450,65 +512,3 @@ msgstr "បាន​បិទ​ការ​តភ្ជាប់​ដោយ​
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
 msgstr "អស់​ពេលវេលា​ប្រតិបត្តិការ​"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "មិន​ស្គាល់​ម៉ាស៊ីន​ភ្ញៀវ"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr "រង់ចាំ​ទិន្នន័យ​ផ្សេង​ទៀត​ត្រូវ​បាន​​ពិនិត្យ​មើល​ដើម្បី​បញ្ចប់​​​"
-
-#: src/datachecker/datacheckerjob.cpp:141
-msgid "Checking Data"
-msgstr "ពិនិត្យ​ទិន្នន័យ​​"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "ការ​ឆ្លើយ​តប​មិន​ត្រឹមត្រូវ​ពី​កម្មវិធី​តាមដាន"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "ទិន្នន័យ​មិនត្រឹមត្រូវ​ពី​កម្មវិធី​តាមដាន"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "URL កម្មវិធី​តាមដាន​បទ​មិន​ត្រឹមត្រូវ"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "អស់​ពេល​ក្នុងការ​ទាក់ទង​​កម្មវិធី​តាមដាន %1"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "​បញ្ជូន​បន្ត​ដោយ​គ្មានទីតាំង​បញ្ជូន​បន្ត"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "មិនអាច​ដោះស្រាយ​ឈ្មោះ​ម៉ាស៊ីន %1 បានទេ"
-
-#: examples/ktcli/main.cpp:60
-msgid "Torrent to open"
-msgstr "Torrent ត្រូវ​បើក​"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-msgid "Port to use"
-msgstr "ច្រក​ត្រូវ​ប្រើ​"
-
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr "ថា​តើ​បើក​​ ឬ​មិន​បើក​ការ​អ៊ិនគ្រីប​"
-
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr "ថា​តើ​បើក ឬ​មិន​បើក​ការ​ផ្លាស់ប្ដូរ​ម៉ាស៊ីន​ដូចគ្នា​​"
-
-#: examples/ktcli/main.cpp:65
-msgid "Whether or not to use utp"
-msgstr "ថា​តើ​​ប្រើ​ ​ឬ​​មិន​ប្រើ​ utp"
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
-msgstr "ktcli"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmperformance\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2014-12-09 18:22+0000\n"
+"POT-Creation-Date: 2015-05-05 17:53+0000\n"
 "PO-Revision-Date: 2008-01-03 16:50+0000\n"
 "Last-Translator: Zlatko Popov <zlatkopopov@fsa-bg.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -39,12 +39,8 @@ msgstr "Система"
 #: kcmperformance.cpp:83
 msgid ""
 "<h1>Konqueror Performance</h1> You can configure several settings that "
-"improve Konqueror performance here. These include options for reusing "
-"already running instances and for keeping instances preloaded."
+"improve Konqueror performance here."
 msgstr ""
-"<h1>Производителност на браузъра Konqueror</h1> От тук може да контролирате "
-"ресурсите, с които браузъра Konqueror разполага и съответно да оптимизирате "
-"определени дейности."
 
 #: konqueror.cpp:35
 msgid ""
@@ -79,113 +75,45 @@ msgstr ""
 "с файлове или разглеждате Интернет.</p><p>Имайте предвид, че при грешка "
 "всички прозорци на браузъра ще бъдат затворени.</p>"
 
-#: konqueror.cpp:58
-msgid ""
-"<p>If non-zero, this option allows keeping Konqueror instances in memory "
-"after all their windows have been closed, up to the number specified in this "
-"option.</p><p>When a new Konqueror instance is needed, one of these "
-"preloaded instances will be reused instead, improving responsiveness at the "
-"expense of the memory required by the preloaded instances.</p>"
-msgstr ""
-"<p>Ако стойността е по-голяма от нула, ще се запазват стартирани зададения "
-"брой инстанции на браузъра в паметта, дори всички прозорци да са затворени.</"
-"p><p>Всеки път, когато поискате да стартирате браузъра, едно от тези копия "
-"ще бъде използвано. По този начин се увеличава бързодействието, понеже няма "
-"да чакате да се зарежда друго копие. Разбира се, използваната памет в този "
-"случай е доста повече.</p>"
-
-#: konqueror.cpp:67
-msgid ""
-"<p>If enabled, an instance of Konqueror will be preloaded after the ordinary "
-"KDE startup sequence.</p><p>This will make the first Konqueror window open "
-"faster, but at the expense of longer KDE startup times (but you will be able "
-"to work while it is loading, so you may not even notice that it is taking "
-"longer).</p>"
-msgstr ""
-"<p>Ако отметката е включена, при стартиране на системата винаги ще се "
-"зарежда една инстанция на браузъра.</p><p>Като резултат, системата ще се "
-"стартира малко по-бавно, но пък браузъра ще е зареден в паметта и при "
-"натискане на бутона за стартиране няма да чакате да се зареди.</p>"
-
-#: konqueror.cpp:73
-msgid ""
-"<p>If enabled, KDE will always try to have one preloaded Konqueror instance "
-"ready; preloading a new instance in the background whenever there is not one "
-"available, so that windows will always open quickly.</p><p><b>Warning:</b> "
-"In some cases, it is actually possible that this will reduce perceived "
-"performance.</p>"
-msgstr ""
-"<p>Ако отметката е включена, системата ще се старае винаги да има една "
-"предварително заредена инстанция на браузъра в паметта. Всеки път, когато "
-"поискате да отворите нов прозорец, ще се използва тази инстанция. Нова "
-"инстанция ще се създава по време, когато системата не е натоварена.</"
-"p><p>Имайте предвид, че в зависимост от системата, с която разполагате, и "
-"това какво правите, включването на тази отметка може да доведе до обратен "
-"ефект (забавяне на системата вместо забързване).</p>"
-
-#. i18n: file: konqueror_ui.ui:16
+#. i18n: file: konqueror_ui.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, reuse_group)
 #: rc.cpp:3
 msgid "Minimize Memory Usage"
 msgstr "Минимизиране на използваната памет"
 
-#. i18n: file: konqueror_ui.ui:22
+#. i18n: file: konqueror_ui.ui:23
 #. i18n: ectx: property (text), widget (QRadioButton, rb_never_reuse)
 #: rc.cpp:6
 msgid "&Never"
 msgstr "&Никога"
 
-#. i18n: file: konqueror_ui.ui:29
+#. i18n: file: konqueror_ui.ui:30
 #. i18n: ectx: property (text), widget (QRadioButton, rb_file_browsing_reuse)
 #: rc.cpp:9
 msgid "For &file browsing only (recommended)"
 msgstr "&Само за работа с файлове (препоръчва се)"
 
-#. i18n: file: konqueror_ui.ui:36
+#. i18n: file: konqueror_ui.ui:37
 #. i18n: ectx: property (text), widget (QRadioButton, rb_always_reuse)
 #: rc.cpp:12
 msgid "Alwa&ys (use with care)"
 msgstr "В&инаги (не се препоръчва)"
 
-#. i18n: file: konqueror_ui.ui:46
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox1)
-#: rc.cpp:15
-msgid "Preloading"
-msgstr "Предварително зареждане"
-
-#. i18n: file: konqueror_ui.ui:57
-#. i18n: ectx: property (text), widget (QLabel, lb_preload_count)
-#: rc.cpp:18
-msgid "Maximum number of instances kept &preloaded:"
-msgstr "&Максимален брой екземпляри на браузъра:"
-
-#. i18n: file: konqueror_ui.ui:91
-#. i18n: ectx: property (text), widget (QCheckBox, cb_preload_on_startup)
-#: rc.cpp:21
-msgid "Preload an instance after KDE startup"
-msgstr "Зареждане на браузъра при стартиране на KDE"
-
-#. i18n: file: konqueror_ui.ui:98
-#. i18n: ectx: property (text), widget (QCheckBox, cb_always_have_preloaded)
-#: rc.cpp:24
-msgid "Always try to have at least one preloaded instance"
-msgstr "Зареждане поне на един екземпляр на браузъра"
-
 #. i18n: file: system_ui.ui:8
 #. i18n: ectx: property (title), widget (QGroupBox, gb_)
-#: rc.cpp:27
+#: rc.cpp:15
 msgid "System Configuration"
 msgstr "Системна настройка"
 
 #. i18n: file: system_ui.ui:14
 #. i18n: ectx: property (text), widget (QCheckBox, cb_disable_kbuildsycoca)
-#: rc.cpp:30
+#: rc.cpp:18
 msgid "Disable &system configuration startup check"
 msgstr "&Без проверка на системната настройка при стартиране"
 
 #. i18n: file: system_ui.ui:21
 #. i18n: ectx: property (text), widget (QLabel, label_kbuildsycoca)
-#: rc.cpp:33
+#: rc.cpp:21
 msgid ""
 "This option may in rare cases lead to various problems. Consult the What's "
 "This (Shift+F1) help for details."

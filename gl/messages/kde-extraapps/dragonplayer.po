@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dragonplayer\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2013-08-09 23:35+0200\n"
 "Last-Translator: Marce Villarino <mvillarino@kde-espana.org>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -26,6 +26,78 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
+#. i18n: file: src/app/videoSettingsWidget.ui:19
+#. i18n: ectx: property (text), widget (QLabel, brightnessLabel)
+#: rc.cpp:3
+msgid "Brightness:"
+msgstr "Brillo:"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:42
+#. i18n: ectx: property (text), widget (QLabel, contrastLabel)
+#: rc.cpp:6
+msgid "Contrast:"
+msgstr "Contraste:"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:65
+#. i18n: ectx: property (text), widget (QLabel, hueLabel)
+#: rc.cpp:9
+msgid "Hue:"
+msgstr "Ton:"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:88
+#. i18n: ectx: property (text), widget (QLabel, saturationLabel)
+#: rc.cpp:12
+msgid "Saturation:"
+msgstr "Saturación:"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:128
+#. i18n: ectx: property (text), widget (QPushButton, defaultsButton)
+#: rc.cpp:15
+msgid "Restore Defaults"
+msgstr "Restaurar os valores predeterminados"
+
+#. i18n: file: src/app/videoSettingsWidget.ui:135
+#. i18n: ectx: property (text), widget (QPushButton, closeButton)
+#: rc.cpp:18
+msgid "Close"
+msgstr "Pechar"
+
+#. i18n: file: src/app/loadView.ui:19
+#. i18n: ectx: property (text), widget (KPushButton, m_playFileButton)
+#: rc.cpp:21
+msgid "Play File"
+msgstr "Reproducir un ficheiro"
+
+#. i18n: file: src/app/loadView.ui:26
+#. i18n: ectx: property (text), widget (KPushButton, m_playDiskButton)
+#: rc.cpp:24 src/app/playDialog.cpp:68
+msgid "Play Disc"
+msgstr "Reproducir un disco"
+
+#. i18n: file: src/app/loadView.ui:33
+#. i18n: ectx: property (text), widget (QPushButton, m_playStreamButton)
+#: rc.cpp:27
+msgid "Play Stream"
+msgstr "Reproducir unha transmisión"
+
+#. i18n: file: misc/dragonplayerui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:30
+msgid "&Play"
+msgstr "&Reproducir"
+
+#. i18n: file: misc/dragonplayerui.rc:15
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:33
+msgid "&Settings"
+msgstr "&Configuración"
+
+#. i18n: file: misc/dragonplayerui.rc:31
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:36
+msgid "Main Toolbar"
+msgstr "Barra de ferramentas principal"
+
 #: src/app/videoWindow.cpp:126
 msgid "&DVD Subtitle Selection"
 msgstr "Selección de subtítulos do &DVD"
@@ -33,6 +105,19 @@ msgstr "Selección de subtítulos do &DVD"
 #: src/app/videoWindow.cpp:136
 msgid "&Auto"
 msgstr "&Automática"
+
+#: src/app/actions.cpp:35
+msgid "Play"
+msgstr "Reproducir"
+
+#: src/app/actions.cpp:36
+msgid "Pause"
+msgstr "Pausa"
+
+#: src/app/actions.cpp:53
+msgctxt "Volume of sound output"
+msgid "Volume"
+msgstr "Volume"
 
 #: src/app/playlistFile.cpp:50
 msgid "The file is not a playlist"
@@ -54,15 +139,63 @@ msgstr ""
 msgid "Dragon Player could not open the file: %1"
 msgstr "Dragon Player non foi capaz de abrir o ficheiro: %1"
 
-#: src/app/main.cpp:30 src/app/part.cpp:108
+#: src/app/discSelectionDialog.cpp:54
+msgctxt ""
+"%1 is the disc type, %2 is the name of the disc that the user can choose. "
+"Ex. 'DVD: OfficeSpace'"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: src/app/discSelectionDialog.cpp:75
+msgctxt "Digital Versatile Disc, but keep it short"
+msgid "DVD"
+msgstr "DVD"
+
+#: src/app/discSelectionDialog.cpp:77
+msgid "Video CD"
+msgstr "CD de vídeo"
+
+#: src/app/discSelectionDialog.cpp:79
+msgid "Audio CD"
+msgstr "CD de son"
+
+#: src/app/discSelectionDialog.cpp:81
+msgid "Data CD"
+msgstr "CD de datos"
+
+#: src/app/discSelectionDialog.cpp:93
+msgid "Select a Disc"
+msgstr "Selección de disco"
+
+#: src/app/discSelectionDialog.cpp:95
+msgid "Select a disc to play."
+msgstr "Escolle un disco para reproducilo."
+
+#: src/app/adjustSizeButton.cpp:56
+msgid "Preferred Scale"
+msgstr "Escala preferida"
+
+#: src/app/adjustSizeButton.cpp:60
+msgid "Scale 100%"
+msgstr "Escala 100%"
+
+#: src/app/adjustSizeButton.cpp:69
+msgid "<b>Adjust video scale?</b>"
+msgstr "<b>Desexas axustar a escala da imaxe?</b>"
+
+#: src/app/part.cpp:66 src/app/mainWindow.cpp:334
+msgid "Position Slider"
+msgstr "Barra de posición"
+
+#: src/app/part.cpp:108 src/app/main.cpp:30
 msgid "Dragon Player"
 msgstr "Dragon Player"
 
-#: src/app/main.cpp:31 src/app/part.cpp:109
+#: src/app/part.cpp:109 src/app/main.cpp:31
 msgid "A video player that has a usability focus"
 msgstr "Un reprodutor de vídeo focalizado na facilidade de uso"
 
-#: src/app/main.cpp:32 src/app/part.cpp:110
+#: src/app/part.cpp:110 src/app/main.cpp:32
 msgid ""
 "Copyright 2006, Max Howell\n"
 "Copyright 2007, Ian Monroe"
@@ -149,90 +282,6 @@ msgstr "Reproducir un URL"
 #: src/app/main.cpp:50
 msgid "Play DVD Video"
 msgstr "Reproducir un DVD"
-
-#: src/app/playDialog.cpp:46
-msgid "Play Media"
-msgstr "Reproducir un recurso"
-
-#: src/app/playDialog.cpp:56
-msgid "What media would you like to play?"
-msgstr "Que recurso desexa reproducir?"
-
-#: src/app/playDialog.cpp:64
-msgid "Play File..."
-msgstr "Reproducir un ficheiro..."
-
-#. i18n: file: src/app/loadView.ui:26
-#. i18n: ectx: property (text), widget (KPushButton, m_playDiskButton)
-#: src/app/playDialog.cpp:68 rc.cpp:6
-msgid "Play Disc"
-msgstr "Reproducir un disco"
-
-#: src/app/recentlyPlayedList.cpp:81
-msgid "Remove Entry"
-msgstr "Eliminar entrada"
-
-#: src/app/recentlyPlayedList.cpp:82
-msgid "Clear List"
-msgstr "Limpar a lista"
-
-#: src/app/recentlyPlayedList.cpp:116
-msgid ""
-"This file could not be found. Would you like to remove it from the playlist?"
-msgstr "Non se atopa este ficheiro. Quere eliminalo da lista de reprodución?"
-
-#: src/app/recentlyPlayedList.cpp:117
-msgid "File not found"
-msgstr "Non se atopou o ficheiro"
-
-#: src/app/actions.cpp:35
-msgid "Play"
-msgstr "Reproducir"
-
-#: src/app/actions.cpp:36
-msgid "Pause"
-msgstr "Pausa"
-
-#: src/app/actions.cpp:53
-msgctxt "Volume of sound output"
-msgid "Volume"
-msgstr "Volume"
-
-#: src/app/part.cpp:66 src/app/mainWindow.cpp:334
-msgid "Position Slider"
-msgstr "Barra de posición"
-
-#: src/app/discSelectionDialog.cpp:54
-msgctxt ""
-"%1 is the disc type, %2 is the name of the disc that the user can choose. "
-"Ex. 'DVD: OfficeSpace'"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: src/app/discSelectionDialog.cpp:75
-msgctxt "Digital Versatile Disc, but keep it short"
-msgid "DVD"
-msgstr "DVD"
-
-#: src/app/discSelectionDialog.cpp:77
-msgid "Video CD"
-msgstr "CD de vídeo"
-
-#: src/app/discSelectionDialog.cpp:79
-msgid "Audio CD"
-msgstr "CD de son"
-
-#: src/app/discSelectionDialog.cpp:81
-msgid "Data CD"
-msgstr "CD de datos"
-
-#: src/app/discSelectionDialog.cpp:93
-msgid "Select a Disc"
-msgstr "Selección de disco"
-
-#: src/app/discSelectionDialog.cpp:95
-msgid "Select a disc to play."
-msgstr "Escolle un disco para reproducilo."
 
 #: src/app/mainWindow.cpp:154
 msgid "Aspect &Ratio"
@@ -370,80 +419,31 @@ msgstr "Non se cargou ningún recurso"
 msgid "Paused"
 msgstr "En pausa"
 
-#: src/app/adjustSizeButton.cpp:56
-msgid "Preferred Scale"
-msgstr "Escala preferida"
+#: src/app/playDialog.cpp:46
+msgid "Play Media"
+msgstr "Reproducir un recurso"
 
-#: src/app/adjustSizeButton.cpp:60
-msgid "Scale 100%"
-msgstr "Escala 100%"
+#: src/app/playDialog.cpp:56
+msgid "What media would you like to play?"
+msgstr "Que recurso desexa reproducir?"
 
-#: src/app/adjustSizeButton.cpp:69
-msgid "<b>Adjust video scale?</b>"
-msgstr "<b>Desexas axustar a escala da imaxe?</b>"
+#: src/app/playDialog.cpp:64
+msgid "Play File..."
+msgstr "Reproducir un ficheiro..."
 
-#. i18n: file: src/app/loadView.ui:19
-#. i18n: ectx: property (text), widget (KPushButton, m_playFileButton)
-#: rc.cpp:3
-msgid "Play File"
-msgstr "Reproducir un ficheiro"
+#: src/app/recentlyPlayedList.cpp:81
+msgid "Remove Entry"
+msgstr "Eliminar entrada"
 
-#. i18n: file: src/app/loadView.ui:33
-#. i18n: ectx: property (text), widget (QPushButton, m_playStreamButton)
-#: rc.cpp:9
-msgid "Play Stream"
-msgstr "Reproducir unha transmisión"
+#: src/app/recentlyPlayedList.cpp:82
+msgid "Clear List"
+msgstr "Limpar a lista"
 
-#. i18n: file: src/app/videoSettingsWidget.ui:19
-#. i18n: ectx: property (text), widget (QLabel, brightnessLabel)
-#: rc.cpp:12
-msgid "Brightness:"
-msgstr "Brillo:"
+#: src/app/recentlyPlayedList.cpp:116
+msgid ""
+"This file could not be found. Would you like to remove it from the playlist?"
+msgstr "Non se atopa este ficheiro. Quere eliminalo da lista de reprodución?"
 
-#. i18n: file: src/app/videoSettingsWidget.ui:42
-#. i18n: ectx: property (text), widget (QLabel, contrastLabel)
-#: rc.cpp:15
-msgid "Contrast:"
-msgstr "Contraste:"
-
-#. i18n: file: src/app/videoSettingsWidget.ui:65
-#. i18n: ectx: property (text), widget (QLabel, hueLabel)
-#: rc.cpp:18
-msgid "Hue:"
-msgstr "Ton:"
-
-#. i18n: file: src/app/videoSettingsWidget.ui:88
-#. i18n: ectx: property (text), widget (QLabel, saturationLabel)
-#: rc.cpp:21
-msgid "Saturation:"
-msgstr "Saturación:"
-
-#. i18n: file: src/app/videoSettingsWidget.ui:128
-#. i18n: ectx: property (text), widget (QPushButton, defaultsButton)
-#: rc.cpp:24
-msgid "Restore Defaults"
-msgstr "Restaurar os valores predeterminados"
-
-#. i18n: file: src/app/videoSettingsWidget.ui:135
-#. i18n: ectx: property (text), widget (QPushButton, closeButton)
-#: rc.cpp:27
-msgid "Close"
-msgstr "Pechar"
-
-#. i18n: file: misc/dragonplayerui.rc:4
-#. i18n: ectx: Menu (file)
-#: rc.cpp:30
-msgid "&Play"
-msgstr "&Reproducir"
-
-#. i18n: file: misc/dragonplayerui.rc:15
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:33
-msgid "&Settings"
-msgstr "&Configuración"
-
-#. i18n: file: misc/dragonplayerui.rc:31
-#. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:36
-msgid "Main Toolbar"
-msgstr "Barra de ferramentas principal"
+#: src/app/recentlyPlayedList.cpp:117
+msgid "File not found"
+msgstr "Non se atopou o ficheiro"

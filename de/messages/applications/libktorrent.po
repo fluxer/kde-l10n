@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-02-28 21:38+0000\n"
+"POT-Creation-Date: 2015-05-05 17:54+0000\n"
 "PO-Revision-Date: 2012-06-10 00:19+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -21,6 +21,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: examples/ktcli/main.cpp:60
+msgid "Torrent to open"
+msgstr "Zu öffnender Torrent"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+msgid "Port to use"
+msgstr "Zu verwendender Port"
+
+#: examples/ktcli/main.cpp:63
+msgid "Whether or not to enable encryption"
+msgstr "Gibt an, ob eine Verschlüsselung verwendet wird"
+
+#: examples/ktcli/main.cpp:64
+msgid "Whether or not to enable peer exchange"
+msgstr "Gibt an, ob ein Gegenstellenaustausch verwendet wird"
+
+#: examples/ktcli/main.cpp:65
+msgid "Whether or not to use utp"
+msgstr "Gibt an, ob UTP verwendet wird"
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr "ktcli"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "Der Ordner %1 existiert nicht"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Die Torrent-Datei ist beschädigt."
+
+#: src/torrent/torrent.cpp:165
+msgid "Unable to open torrent file %1: %2"
+msgstr "Torrent-Datei %1 kann nicht geöffnet werden: %2"
 
 #: src/torrent/torrentcontrol.cpp:300
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -56,6 +95,17 @@ msgstr ""
 #: src/torrent/torrentcontrol.cpp:607
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "Sie laden den Torrent <b>%1</b> bereits herunter."
+
+#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
+#: src/torrent/torrentcreator.cpp:292 src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745
+msgid "Cannot open file %1: %2"
+msgstr "Die Datei %1 lässt sich nicht öffnen: %2"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Die Indexdatei %1 lässt sich nicht erstellen."
 
 #: src/torrent/torrentstats.cpp:73
 msgid "Not started"
@@ -118,27 +168,43 @@ msgstr "Pausiert"
 msgid "Superseeding"
 msgstr "Superseed-Modus"
 
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Die Torrent-Datei ist beschädigt."
+#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
+#: src/tracker/httptracker.cpp:555
+msgid "Timeout contacting tracker %1"
+msgstr "Zeitüberschreitung beim Verbinden mit dem Tracker %1"
 
-#: src/torrent/torrent.cpp:165
-msgid "Unable to open torrent file %1: %2"
-msgstr "Torrent-Datei %1 kann nicht geöffnet werden: %2"
+#: src/tracker/udptracker.cpp:401
+msgid "Unable to resolve hostname %1"
+msgstr "Der Rechnername %1 wurde nicht gefunden"
 
-#: src/torrent/torrentcreator.cpp:124 src/torrent/torrentcreator.cpp:255
-#: src/torrent/torrentcreator.cpp:292 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/datachecker/singledatachecker.cpp:49
-#: src/datachecker/multidatachecker.cpp:209
-msgid "Cannot open file %1: %2"
-msgstr "Die Datei %1 lässt sich nicht öffnen: %2"
+#: src/tracker/httpannouncejob.cpp:144
+msgid "Redirect without a redirect location"
+msgstr "Umleitung ohne Zieladresse"
 
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "Die Indexdatei %1 lässt sich nicht erstellen."
+#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
+#: src/tracker/httptracker.cpp:460
+msgid "Invalid response from tracker"
+msgstr "Ungültige Antwort vom Tracker"
+
+#: src/tracker/httptracker.cpp:297
+msgid "Invalid data from tracker"
+msgstr "Ungültige Daten vom Tracker"
+
+#: src/tracker/httptracker.cpp:477
+msgid "Invalid tracker URL"
+msgstr "Ungültige Tracker-Adresse"
+
+#: src/datachecker/datacheckerjob.cpp:82
+msgid "Waiting for other data checks to finish"
+msgstr "Es wird darauf gewartet, dass andere Datenprüfungen abgeschlossen sind"
+
+#: src/datachecker/datacheckerjob.cpp:141
+msgid "Checking Data"
+msgstr "Daten werden geprüft"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Unbekannter Client"
 
 #: src/download/chunkdownload.cpp:383
 msgid "1 peer"
@@ -211,18 +277,123 @@ msgstr "Ohne neue Adresse umgeleitet."
 msgid "Disabled because webseed does not match torrent"
 msgstr "Deaktiviert, weil der Webseed nicht zum Torrents passt"
 
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-msgid "Cannot open index file %1: %2"
-msgstr "Indexdatei %1 kann nicht geöffnet werden: %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "Fehler beim Schreiben auf den Datenträger"
 
-#: src/diskio/singlefilecache.cpp:74 src/diskio/multifilecache.cpp:91
-msgid "Failed to open %1: %2"
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "Fehler beim Lesen vom Datenträger"
+
+#: src/util/file.cpp:84
+msgid "Cannot write to %1: %2"
+msgstr "In die Datei %1 kann nicht geschrieben werden: %2"
+
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Aus Datei %1 kann nicht gelesen werden"
+
+#: src/util/functions.cpp:234
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "1 Tag "
+msgstr[1] "%1 Tage "
+
+#: src/util/fileops.cpp:101
+msgid "Cannot create directory %1"
+msgstr "Der Ordner %1 lässt sich nicht erstellen"
+
+#: src/util/fileops.cpp:168
+msgid "Cannot symlink %1 to %2: %3"
+msgstr ""
+"Die Symbolische Verknüpfung von %1 zu %2 lässt sich nicht erstellen: %3"
+
+#: src/util/fileops.cpp:185
+msgid "Cannot move %1 to %2: %3"
+msgstr "Verschieben von %1 nach %2 ist nicht möglich: %3"
+
+#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
+msgid "Cannot copy %1 to %2: %3"
+msgstr "Kopieren von %1 nach %2 ist nicht möglich: %3"
+
+#: src/util/fileops.cpp:282
+msgid "Cannot delete %1: %2"
+msgstr "Löschen von %1 ist nicht möglich: %2"
+
+#: src/util/fileops.cpp:300
+msgid "Cannot create %1: %2"
+msgstr "Erstellen von %1 ist nicht möglich: %2"
+
+#: src/util/fileops.cpp:318
+msgid "Cannot calculate the filesize of %1: %2"
+msgstr "Die Größe der Datei %1 kann nicht berechnet werden: %2"
+
+#: src/util/fileops.cpp:334
+msgid "Cannot calculate the filesize: %1"
+msgstr "Die Dateigröße kann nicht berechnet werden: %1"
+
+#: src/util/fileops.cpp:361 src/util/fileops.cpp:406
+#: src/diskio/cachefile.cpp:94
+msgid "Cannot open %1: %2"
 msgstr "%1 lässt sich nicht öffnen: %2"
 
-#: src/diskio/singlefilecache.cpp:85 src/diskio/multifilecache.cpp:118
-#: src/diskio/cache.cpp:170
+#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
+#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
+msgid "Cannot expand file: %1"
+msgstr "Die Datei kann nicht expandiert werden: %1"
+
+#: src/util/fileops.cpp:427
+msgid "Cannot seek in file: %1"
+msgstr "In der Datei kann nicht gesucht werden: %1"
+
+#: src/util/logsystemmanager.cpp:33
+msgid "General"
+msgstr "Allgemein"
+
+#: src/util/logsystemmanager.cpp:34
+msgid "Connections"
+msgstr "Verbindungen"
+
+#: src/util/logsystemmanager.cpp:35
+msgid "Tracker"
+msgstr "Tracker"
+
+#: src/util/logsystemmanager.cpp:36
+msgid "DHT"
+msgstr "VHT"
+
+#: src/util/logsystemmanager.cpp:37
+msgid "Disk Input/Output"
+msgstr "Disk-Eingabe/Ausgabe"
+
+#: src/util/logsystemmanager.cpp:38
+msgid "µTP"
+msgstr "µTP"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "OK"
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "Warning: %1"
+msgstr "Achtung: %1"
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Anmelden"
+
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
 msgid "Failed to create %1: %2"
 msgstr "%1 kann nicht erstellt werden: %2"
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+msgid "Failed to open %1: %2"
+msgstr "%1 lässt sich nicht öffnen: %2"
 
 #: src/diskio/dndfile.cpp:89
 msgid "Cannot create file %1: %2"
@@ -235,15 +406,6 @@ msgstr "Schreiben des ersten Blocks in DND-Datei fehlgeschlagen: %1"
 #: src/diskio/dndfile.cpp:155
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Schreiben des letzten Blocks in DND-Datei fehlgeschlagen: %1"
-
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr "Es kann nicht in schreibgeschützte Bereiche geschrieben werden"
-
-#: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
-#: src/util/fileops.cpp:406
-msgid "Cannot open %1: %2"
-msgstr "%1 lässt sich nicht öffnen: %2"
 
 #: src/diskio/cachefile.cpp:122 src/diskio/cachefile.cpp:250
 #: src/diskio/cachefile.cpp:414 src/diskio/cachefile.cpp:482
@@ -286,6 +448,14 @@ msgid "Cannot preallocate diskspace: %1"
 msgstr ""
 "Der benötigte Speicherplatz auf dem Medium kann nicht reserviert werden: %1"
 
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr "Es kann nicht in schreibgeschützte Bereiche geschrieben werden"
+
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+msgid "Cannot open index file %1: %2"
+msgstr "Indexdatei %1 kann nicht geöffnet werden: %2"
+
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
 msgstr ""
@@ -326,114 +496,6 @@ msgstr "%1 kann nicht nach int umgewandelt werden"
 msgid "Torrent is incomplete."
 msgstr "Der Torrent ist unvollständig."
 
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "OK"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "Warning: %1"
-msgstr "Achtung: %1"
-
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Anmelden"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "Der Ordner %1 existiert nicht"
-
-#: src/util/logsystemmanager.cpp:33
-msgid "General"
-msgstr "Allgemein"
-
-#: src/util/logsystemmanager.cpp:34
-msgid "Connections"
-msgstr "Verbindungen"
-
-#: src/util/logsystemmanager.cpp:35
-msgid "Tracker"
-msgstr "Tracker"
-
-#: src/util/logsystemmanager.cpp:36
-msgid "DHT"
-msgstr "VHT"
-
-#: src/util/logsystemmanager.cpp:37
-msgid "Disk Input/Output"
-msgstr "Disk-Eingabe/Ausgabe"
-
-#: src/util/logsystemmanager.cpp:38
-msgid "µTP"
-msgstr "µTP"
-
-#: src/util/fileops.cpp:101
-msgid "Cannot create directory %1"
-msgstr "Der Ordner %1 lässt sich nicht erstellen"
-
-#: src/util/fileops.cpp:168
-msgid "Cannot symlink %1 to %2: %3"
-msgstr ""
-"Die Symbolische Verknüpfung von %1 zu %2 lässt sich nicht erstellen: %3"
-
-#: src/util/fileops.cpp:185
-msgid "Cannot move %1 to %2: %3"
-msgstr "Verschieben von %1 nach %2 ist nicht möglich: %3"
-
-#: src/util/fileops.cpp:201 src/util/fileops.cpp:217
-msgid "Cannot copy %1 to %2: %3"
-msgstr "Kopieren von %1 nach %2 ist nicht möglich: %3"
-
-#: src/util/fileops.cpp:282
-msgid "Cannot delete %1: %2"
-msgstr "Löschen von %1 ist nicht möglich: %2"
-
-#: src/util/fileops.cpp:300
-msgid "Cannot create %1: %2"
-msgstr "Erstellen von %1 ist nicht möglich: %2"
-
-#: src/util/fileops.cpp:318
-msgid "Cannot calculate the filesize of %1: %2"
-msgstr "Die Größe der Datei %1 kann nicht berechnet werden: %2"
-
-#: src/util/fileops.cpp:334
-msgid "Cannot calculate the filesize: %1"
-msgstr "Die Dateigröße kann nicht berechnet werden: %1"
-
-#: src/util/fileops.cpp:382 src/util/fileops.cpp:388 src/util/fileops.cpp:391
-#: src/util/fileops.cpp:394 src/util/fileops.cpp:397
-msgid "Cannot expand file: %1"
-msgstr "Die Datei kann nicht expandiert werden: %1"
-
-#: src/util/fileops.cpp:427
-msgid "Cannot seek in file: %1"
-msgstr "In der Datei kann nicht gesucht werden: %1"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "Fehler beim Schreiben auf den Datenträger"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "Fehler beim Lesen vom Datenträger"
-
-#: src/util/functions.cpp:234
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "1 Tag "
-msgstr[1] "%1 Tage "
-
-#: src/util/file.cpp:84
-msgid "Cannot write to %1: %2"
-msgstr "In die Datei %1 kann nicht geschrieben werden: %2"
-
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "Aus Datei %1 kann nicht gelesen werden"
-
 #: src/upnp/upnprouter.cpp:167
 msgid "Failed to download %1: %2"
 msgstr "%1 lässt sich nicht herunterladen: %2"
@@ -463,65 +525,3 @@ msgstr "Die Verbindung wurde unerwartet beendet"
 #: src/upnp/httprequest.cpp:155
 msgid "Operation timed out"
 msgstr "Zeitüberschreitung bei dieser Operation"
-
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Unbekannter Client"
-
-#: src/datachecker/datacheckerjob.cpp:82
-msgid "Waiting for other data checks to finish"
-msgstr "Es wird darauf gewartet, dass andere Datenprüfungen abgeschlossen sind"
-
-#: src/datachecker/datacheckerjob.cpp:141
-msgid "Checking Data"
-msgstr "Daten werden geprüft"
-
-#: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
-#: src/tracker/httptracker.cpp:460
-msgid "Invalid response from tracker"
-msgstr "Ungültige Antwort vom Tracker"
-
-#: src/tracker/httptracker.cpp:297
-msgid "Invalid data from tracker"
-msgstr "Ungültige Daten vom Tracker"
-
-#: src/tracker/httptracker.cpp:477
-msgid "Invalid tracker URL"
-msgstr "Ungültige Tracker-Adresse"
-
-#: src/tracker/httptracker.cpp:555 src/tracker/udptracker.cpp:364
-#: src/tracker/udptracker.cpp:374
-msgid "Timeout contacting tracker %1"
-msgstr "Zeitüberschreitung beim Verbinden mit dem Tracker %1"
-
-#: src/tracker/httpannouncejob.cpp:144
-msgid "Redirect without a redirect location"
-msgstr "Umleitung ohne Zieladresse"
-
-#: src/tracker/udptracker.cpp:401
-msgid "Unable to resolve hostname %1"
-msgstr "Der Rechnername %1 wurde nicht gefunden"
-
-#: examples/ktcli/main.cpp:60
-msgid "Torrent to open"
-msgstr "Zu öffnender Torrent"
-
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-msgid "Port to use"
-msgstr "Zu verwendender Port"
-
-#: examples/ktcli/main.cpp:63
-msgid "Whether or not to enable encryption"
-msgstr "Gibt an, ob eine Verschlüsselung verwendet wird"
-
-#: examples/ktcli/main.cpp:64
-msgid "Whether or not to enable peer exchange"
-msgstr "Gibt an, ob ein Gegenstellenaustausch verwendet wird"
-
-#: examples/ktcli/main.cpp:65
-msgid "Whether or not to use utp"
-msgstr "Gibt an, ob UTP verwendet wird"
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
-msgstr "ktcli"
