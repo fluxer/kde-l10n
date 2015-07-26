@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdevcppdebugger\n"
-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-10-17 05:40+0000\n"
+"Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
+"POT-Creation-Date: 2015-07-27 00:40+0300\n"
 "PO-Revision-Date: 2014-12-14 18:15+0000\n"
 "Last-Translator: Necdet Yücel <necdetyucel@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -19,46 +19,213 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 1.4\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Serdar Soytetir"
+#: gdb.cpp:104
+msgid "Could not locate the debugging shell '%1'."
+msgstr "Hata ayıklama kabuğu '%1' bulunamadı."
 
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "tulliana@gmail.com"
+#: gdb.cpp:105
+msgid "Debugging Shell Not Found"
+msgstr "Hata Ayıklama Kabuğu Bulunamadı"
 
-#: breakpointcontroller.cpp:555
-#, kde-format
-msgid "<br>Old value: %1"
-msgstr "<br>Eski değer: %1"
+#: gdb.cpp:351
+msgctxt "<b>Internal debugger error</b>"
+msgid ""
+"<p>The debugger component encountered internal error while processing reply "
+"from gdb. Please submit a bug report."
+msgstr ""
+"<p>Hata ayıklama bileşeni gdb'den yanıt beklerken bir iç hata ile "
+"karşılaştı. Lütfen bir hata kaydı açın."
 
-#: breakpointcontroller.cpp:558
-#, kde-format
-msgid "<br>New value: %1"
-msgstr "<br>Yeni değer: %1"
+#: gdb.cpp:353
+msgid ""
+"The exception is: %1\n"
+"The MI response is: %2"
+msgstr ""
+"Oluşan istisna: %1\n"
+"MI yanıtı: %2"
 
+#: gdb.cpp:356
+msgid "Internal debugger error"
+msgstr "Geçersiz hata ayıklayıcı hatası"
+
+#: gdb.cpp:408
+msgid ""
+"<b>Could not start debugger.</b><p>Could not run '%1'. Make sure that the "
+"path name is specified correctly."
+msgstr ""
+"<b>Hata ayıklayıcı başlatılamadı.</b><p>'%1' çalıştırılamadı. Uygulama "
+"yolunun doğru bir şekilde verildiğinden emin olun."
+
+#: gdb.cpp:412
+msgid "Could not start debugger"
+msgstr "Hata ayıklayıcı başlatılamadı"
+
+#: gdb.cpp:429
+msgid ""
+"<b>Gdb crashed.</b><p>Because of that the debug session has to be ended."
+"<br>Try to reproduce the crash with plain gdb and report a bug.<br>"
+msgstr ""
+"<b>Gdb çöktü.</b><p>Bu nedenle hata ayıklama oturumu sonlandırıldı."
+"<br>Çokmeyi temiz bir gdb ile yeniden üretmeyi deneyin ve bir hata kaydı "
+"açın.<br>"
+
+#: gdb.cpp:432
+msgid "Gdb crashed"
+msgstr "Gdb çöktü"
+
+#: stty.cpp:247
+msgid ""
+"Cannot use the tty* or pty* devices.\n"
+"Check the settings on /dev/tty* and /dev/pty*\n"
+"As root you may need to \"chmod ug+rw\" tty* and pty* devices and/or add the "
+"user to the tty group using \"usermod -aG tty username\"."
+msgstr ""
+"tty* ve pty* aygıtları kullanılamaz.\n"
+"/dev/tty* ve /dev/pty* üzerindeki ayarları kontrol edin\n"
+"Root haklarıyla tty* ve pty* aygıtları için \"chmod ug+rw\" komutunu "
+"çalıştırmanız ve/veya kullanıcıyı tty grubuna \"usermod -aG tty username\" "
+"komutuyla eklemeniz gerekebilir."
+
+#: stty.cpp:296
+msgid "%1 is incorrect terminal name"
+msgstr "%1 hatalı terminal adı"
+
+#: stty.cpp:302
+msgid "Can't create a temporary file"
+msgstr "Geçici dosya oluşturulamadı"
+
+#: stty.cpp:341
+msgid ""
+"Can't receive %1 tty/pty. Check that %1 is actually a terminal and that it "
+"accepts these arguments: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do "
+"sleep 3600;done\""
+msgstr ""
+"%1 tty/pty alınamadı. %1'in bir terminal olduğundan ve şu değişkenleri kabul "
+"ettiğinden emin olun: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do sleep "
+"3600;done\""
+
+#: registers/registercontroller_x86.cpp:107
+#: registers/registercontroller_arm.cpp:107
+msgid "General"
+msgstr "Genel"
+
+#: registers/registercontroller_x86.cpp:107
+#: registers/registercontroller_arm.cpp:107
+msgid "Flags"
+msgstr "Bayraklar"
+
+#: registers/registercontroller_x86.cpp:107
+msgid "FPU"
+msgstr "FPU"
+
+#: registers/registercontroller_x86.cpp:107
+msgid "XMM"
+msgstr "XMM"
+
+#: registers/registercontroller_x86.cpp:107
+msgid "Segment"
+msgstr "Segment"
+
+#: registers/registercontroller_arm.cpp:107
+msgid "VFP single-word"
+msgstr "VFP tek kelime"
+
+#: registers/registercontroller_arm.cpp:107
+msgid "VFP double-word"
+msgstr "VFP çift kelime"
+
+#: registers/registercontroller_arm.cpp:107
+msgid "VFP quad-word"
+msgstr "VFP dörtlü kelime"
+
+#: registers/registersview.cpp:68
+msgid "Format"
+msgstr "Biçim"
+
+#: registers/registersview.cpp:77
+msgid "Mode"
+msgstr "Kip"
+
+#: registers/registersview.cpp:213
+msgid "Update"
+msgstr "Güncelle"
+
+#: registers/converters.cpp:31
+msgid "Binary"
+msgstr "İkilik"
+
+#: registers/converters.cpp:31
+msgid "Octal"
+msgstr "Sekizlik"
+
+#: registers/converters.cpp:31
+msgid "Decimal"
+msgstr "Ondalık"
+
+#: registers/converters.cpp:31
+msgid "Hexadecimal"
+msgstr "Onaltılık"
+
+#: registers/converters.cpp:31
+msgid "Raw"
+msgstr "Ham"
+
+#: registers/converters.cpp:31
+msgid "Unsigned"
+msgstr "İmzasız"
+
+#. i18n: file: kdevgdbui.rc:5
+#. i18n: ectx: Menu (run)
+#: rc.cpp:3
+msgctxt "@title:menu"
+msgid "Run"
+msgstr "Çalıştır"
+
+#. i18n: file: kdevgdbui.rc:16
+#. i18n: ectx: ToolBar (debugToolBar)
+#: rc.cpp:6
+msgid "Debugger Toolbar"
+msgstr "Hata Ayıklayıcı Araç Çubuğu"
+
+#. i18n: file: selectcore.ui:17
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:9
+msgid "Executable:"
+msgstr "Çalıştırılabilir dosya:"
+
+#. i18n: file: selectcore.ui:27
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:12
+msgid "Core File:"
+msgstr "Çekirdek Dosya:"
+
+#. i18n: file: debuggerconfigwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, DebuggerConfigWidget)
-#: debuggerconfigwidget.ui:14
+#: rc.cpp:15
 msgid "Debugger Configuration"
 msgstr "Hata Ayıklayıcı Yapılandırması"
 
+#. i18n: file: debuggerconfigwidget.ui:26
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: debuggerconfigwidget.ui:26 debuggerplugin.cpp:416
+#: rc.cpp:18 debuggerplugin.cpp:416
 msgid "Debugger"
 msgstr "Hata Ayıklayıcı"
 
+#. i18n: file: debuggerconfigwidget.ui:38
 #. i18n: ectx: property (text), widget (QLabel, gdbPath_label)
-#: debuggerconfigwidget.ui:38
+#: rc.cpp:21
 msgid "Debugger executable:"
 msgstr "Hata ayıklayıcı çalıştırılabilir dosyası:"
 
+#. i18n: file: debuggerconfigwidget.ui:51
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_gdbPath)
-#: debuggerconfigwidget.ui:51
+#: rc.cpp:24
 msgid "Gdb executable"
 msgstr "Gdb çalıştırılabilir dosyası"
 
+#. i18n: file: debuggerconfigwidget.ui:54
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_gdbPath)
-#: debuggerconfigwidget.ui:54
+#: rc.cpp:27
 msgid ""
 "To run \"gdb\" binary from $PATH, leave this field empty. To run custom gdb, "
 "for example, for a different architecture, enter the executable name here. "
@@ -71,9 +238,11 @@ msgstr ""
 "istiyorsanız ve komutun adı farklıysa (\"arm-gdb\" gibi) onu buraya yazın "
 "veya çalıştırılabilir dosyanın tam yolunu yazın."
 
+#. i18n: file: debuggerconfigwidget.ui:67
 #. i18n: ectx: property (toolTip), widget (QLabel, debuggingShell_label)
+#. i18n: file: debuggerconfigwidget.ui:86
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_debuggingShell)
-#: debuggerconfigwidget.ui:67 debuggerconfigwidget.ui:86
+#: rc.cpp:30 rc.cpp:36
 msgid ""
 "<html><head/><body><p>If you want gdb to be executed by a special shell "
 "script, which for example properly sets the library path, insert it here e."
@@ -90,28 +259,33 @@ msgstr ""
 "çağırmak <span style=\" font-weight:600;\">zorundadır</span>.</p></body></"
 "html>"
 
+#. i18n: file: debuggerconfigwidget.ui:73
 #. i18n: ectx: property (text), widget (QLabel, debuggingShell_label)
-#: debuggerconfigwidget.ui:73
+#: rc.cpp:33
 msgid "&Shell script:"
 msgstr "&Kabuk betiği:"
 
+#. i18n: file: debuggerconfigwidget.ui:89
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_debuggingShell)
-#: debuggerconfigwidget.ui:89
+#: rc.cpp:39
 msgid "<html><head/><body><p><br/></p></body></html>"
 msgstr "<html><head/><body><p><br/></p></body></html>"
 
+#. i18n: file: debuggerconfigwidget.ui:99
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: debuggerconfigwidget.ui:99
+#: rc.cpp:42
 msgid "Options"
 msgstr "Seçenekler"
 
+#. i18n: file: debuggerconfigwidget.ui:108
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: debuggerconfigwidget.ui:108
+#: rc.cpp:45
 msgid "Display static &members:"
 msgstr "Statik elemanları &göster:"
 
+#. i18n: file: debuggerconfigwidget.ui:123
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_displayStaticMembers)
-#: debuggerconfigwidget.ui:123
+#: rc.cpp:48
 msgid ""
 "Displaying static members makes GDB slower in\n"
 "producing data within KDE and Qt.\n"
@@ -127,13 +301,15 @@ msgstr ""
 "bu değerlerin hata ayıklamasına ihtiyacınız varsa\n"
 "bu seçeneği işaretleyin."
 
+#. i18n: file: debuggerconfigwidget.ui:133
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: debuggerconfigwidget.ui:133
+#: rc.cpp:56
 msgid "Display &demangled names:"
 msgstr "Dönüştürülmüş a&dları göster:"
 
+#. i18n: file: debuggerconfigwidget.ui:145
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_asmDemangle)
-#: debuggerconfigwidget.ui:145
+#: rc.cpp:59
 msgid ""
 "When displaying the disassembled code you\n"
 "can select to see the methods' mangled names.\n"
@@ -143,28 +319,33 @@ msgstr ""
 "yöntemlerin karıştırılmış isimlerini seçebilirsiniz.\n"
 "Elbette, karıştırılmamış isimler daha kolay okunurlar."
 
+#. i18n: file: debuggerconfigwidget.ui:155
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: debuggerconfigwidget.ui:155
+#: rc.cpp:64
 msgid "Start Debugger with:"
 msgstr "Hata Ayıklayıcıyı bununla başlat:"
 
+#. i18n: file: debuggerconfigwidget.ui:166
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
-#: debuggerconfigwidget.ui:166
+#: rc.cpp:67
 msgid "Application Output"
 msgstr "Uygulama Çıktısı"
 
+#. i18n: file: debuggerconfigwidget.ui:171
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
-#: debuggerconfigwidget.ui:171
+#: rc.cpp:70
 msgid "GDB Console"
 msgstr "GDB Konsolu"
 
+#. i18n: file: debuggerconfigwidget.ui:176
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
-#: debuggerconfigwidget.ui:176
+#: rc.cpp:73
 msgid "Frame Stack"
 msgstr "Çerçeve Yığını"
 
+#. i18n: file: debuggerconfigwidget.ui:190
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
-#: debuggerconfigwidget.ui:190
+#: rc.cpp:76
 msgid ""
 "This script is intended for the actual commands needed to connect to a "
 "remotely running executable.\n"
@@ -178,14 +359,17 @@ msgstr ""
 "\ttarget remote ...\tuzaktaki hata ayıklayıcıya bağlan\n"
 "\tcontinue\t[isteğe bağlı] ilk kesme noktasına kadar hata ayıklamayı çalıştır"
 
+#. i18n: file: debuggerconfigwidget.ui:193
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: debuggerconfigwidget.ui:193
+#: rc.cpp:82
 msgid "Remote Debugging"
 msgstr "Uzak Hata Ayıklama"
 
+#. i18n: file: debuggerconfigwidget.ui:199
 #. i18n: ectx: property (toolTip), widget (QLabel, runShellScript_label)
+#. i18n: file: debuggerconfigwidget.ui:215
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runShellScript)
-#: debuggerconfigwidget.ui:199 debuggerconfigwidget.ui:215
+#: rc.cpp:85 rc.cpp:91
 msgid ""
 "<html><head/><body><p>Script to start remote application</p><p></p><p>This "
 "shell script is run after the Gdb Config script has been sourced by gdb.</"
@@ -203,15 +387,18 @@ msgstr ""
 "gdb mevcutsa:</p><p>2b) Hedefte \"uygulama\" komutunu çalıştırın.</p></"
 "body></html>"
 
+#. i18n: file: debuggerconfigwidget.ui:202
 #. i18n: ectx: property (text), widget (QLabel, runShellScript_label)
-#: debuggerconfigwidget.ui:202
+#: rc.cpp:88
 msgctxt "Shell script to be executed at run time"
 msgid "R&un shell script:"
 msgstr "Kabuk &betiği çalıştır:"
 
+#. i18n: file: debuggerconfigwidget.ui:225
 #. i18n: ectx: property (toolTip), widget (QLabel, configGdbScript_label)
+#. i18n: file: debuggerconfigwidget.ui:267
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_configGdbScript)
-#: debuggerconfigwidget.ui:225 debuggerconfigwidget.ui:267
+#: rc.cpp:94 rc.cpp:109
 msgid ""
 "<html><head/><body><p>This script is sourced by gdb when the debugging "
 "starts.</p></body></html>"
@@ -219,157 +406,44 @@ msgstr ""
 "<html><head/><body><p>Bu betik hata ayıklama başlatıldığında gdb tarafından "
 "sağlanmaktadır.</p></body></html>"
 
+#. i18n: file: debuggerconfigwidget.ui:228
 #. i18n: ectx: property (text), widget (QLabel, configGdbScript_label)
-#: debuggerconfigwidget.ui:228
+#: rc.cpp:97
 msgid "Gdb &config script:"
 msgstr "Gdb &yapılandırma betiği:"
 
+#. i18n: file: debuggerconfigwidget.ui:241
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runGdbScript)
+#. i18n: file: debuggerconfigwidget.ui:251
 #. i18n: ectx: property (toolTip), widget (QLabel, runGdbScript_label)
-#: debuggerconfigwidget.ui:241 debuggerconfigwidget.ui:251
+#: rc.cpp:100 rc.cpp:103
 msgid ""
 "<html><head/><body><p>Script to connect with remote application</p><p>For "
 "example:</p><p>\tshell sleep 5\t #wait for remote program to start</p><p>"
-"\ttarget remote ...\t#connect to the remote debugger</p><p>\tcontinue\t#"
-"[optional] run debugging to the first breakpoint.</p></body></html>"
+"\ttarget remote ...\t#connect to the remote debugger</p><p>\tcontinue"
+"\t#[optional] run debugging to the first breakpoint.</p></body></html>"
 msgstr ""
 "<html><head/><body><p>Uzak uygulamaya bağlanmak için betik</p><p>Örneğin:</"
 "p><p>\tshell sleep 5\t #uzak programın başlamasını bekle</p><p>\ttarget "
 "remote ...\t#uzaktaki hata ayıklayıcıya bağlan</p><p>\tcontinue\t#[isteğe "
 "bağlı] ilk kesme noktasına kadar hata ayıklamayı çalıştır.</p></body></html>"
 
+#. i18n: file: debuggerconfigwidget.ui:254
 #. i18n: ectx: property (text), widget (QLabel, runGdbScript_label)
-#: debuggerconfigwidget.ui:254
+#: rc.cpp:106
 msgctxt "Gdb script to be executed at run time."
 msgid "Run &gdb script:"
 msgstr "Gdb &betiğini çalıştır:"
 
-#: debuggerplugin.cpp:93
-msgid "GDB Support"
-msgstr "GDB Desteği"
-
-#: debuggerplugin.cpp:93
-msgid ""
-"This plugin provides a frontend for GDB, a source-level debugger for C, C++ "
-"and more."
-msgstr ""
-"Bu eklenti, C, C++ ve daha fazlası için kaynak seviyesinde hata ayıklayıcı "
-"olan GDB için bir ön uç sağlar."
-
-#: debuggerplugin.cpp:155
-msgid "Disassemble/Registers"
-msgstr "Parçalama/Yazmaçlar"
-
-#: debuggerplugin.cpp:159 gdblaunchconfig.cpp:137
-msgid "GDB"
-msgstr "GDB"
-
-#: debuggerplugin.cpp:165
-msgid "Memory"
-msgstr "Bellek"
-
-#: debuggerplugin.cpp:200
-msgid "Examine Core File..."
-msgstr "Çekirdek Dosyayı Denetle..."
-
-#: debuggerplugin.cpp:201
-msgid "Examine core file"
-msgstr "Çekirdek dosyayı denetle"
-
-#: debuggerplugin.cpp:202
-msgid ""
-"<b>Examine core file</b><p>This loads a core file, which is typically "
-"created after the application has crashed, e.g. with a segmentation fault. "
-"The core file contains an image of the program memory at the time it "
-"crashed, allowing you to do a post-mortem analysis.</p>"
-msgstr ""
-"<b>Çekirdek dosyasını incele</b><p>Bu genel olarak uygulamanın çöküşünden, "
-"örneğin ayrıştırma hatasından, sonra oluşan çekirdek dosyayı yükler. "
-"Çekirdek dosyası uygulamanın çökme sırasındaki hafızasının bir görüntüsünü "
-"sunar ve bu görüntü çökme sonrası analiz yapabilmenizi sağlar.</p>"
-
-#: debuggerplugin.cpp:212
-msgid "Attach to Process"
-msgstr "Sürece Ekle"
-
-#: debuggerplugin.cpp:213
-msgid "Attach to process..."
-msgstr "Sürece ekle..."
-
-#: debuggerplugin.cpp:214
-msgid ""
-"<b>Attach to process</b><p>Attaches the debugger to a running process.</p>"
-msgstr ""
-"<b>Bir sürece iliştir</b><p>Hata ayıklayıcıyı bir sürece iliştirir.</p>"
-
-#: debuggerplugin.cpp:246
-msgid "KDevelop"
-msgstr "KDevelop"
-
-#: debuggerplugin.cpp:319
-#, kde-format
-msgid "Evaluate: %1"
-msgstr "Değerlendir: %1"
-
-#: debuggerplugin.cpp:321
-msgid ""
-"<b>Evaluate expression</b><p>Shows the value of the expression under the "
-"cursor.</p>"
-msgstr ""
-"<b>İfadeyi değerlendir</b><p>İmleç altındaki ifadenin değerini gösterir.</p>"
-
-#: debuggerplugin.cpp:324
-#, kde-format
-msgid "Watch: %1"
-msgstr "İzle: %1"
-
-#: debuggerplugin.cpp:326
-msgid ""
-"<b>Watch expression</b><p>Adds an expression under the cursor to the "
-"Variables/Watch list.</p>"
-msgstr ""
-"<b>İzle ifadesi</b><p>İmlecin altındaki ifadeyi Değişkenler/İzleme listesine "
-"ekler.</p>"
-
-#: debuggerplugin.cpp:356
-msgid "Choose a core file to examine..."
-msgstr "Denetlemek için bir çekidek dosya seçin..."
-
-#: debuggerplugin.cpp:363
-#, kde-format
-msgid "Examining core file %1"
-msgstr "%1 çekirdek dosyası denetleniyor"
-
-#: debuggerplugin.cpp:369
-msgid "Debug core file"
-msgstr "Çekirdek dosyanın hatalarını ayıkla"
-
-#: debuggerplugin.cpp:377
-msgid "Choose a process to attach to..."
-msgstr "İliştirilecek bir süreç seçin..."
-
-#: debuggerplugin.cpp:386
-#, kde-format
-msgid "Not attaching to process %1: cannot attach the debugger to itself."
-msgstr "%1 sürecine eklenemedi: hata ayıklayıcı kendine eklenemez."
-
-#: debuggerplugin.cpp:394
-#, kde-format
-msgid "Attaching to process %1"
-msgstr "%1 sürecine ekleniyor"
-
-#: debuggerplugin.cpp:400
-#, kde-format
-msgid "Debug process %1"
-msgstr "%1 sürecinin hatalarını ayıkla"
-
+#. i18n: file: debuggertracingdialog.ui:13
 #. i18n: ectx: property (windowTitle), widget (QDialog, DebuggerTracingDialog)
-#: debuggertracingdialog.ui:13
+#: rc.cpp:112
 msgid "Tracing Configuration"
 msgstr "İzleme Yapılandırması"
 
+#. i18n: file: debuggertracingdialog.ui:20
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, enable)
-#: debuggertracingdialog.ui:20
+#: rc.cpp:115
 msgid ""
 "<b>Enable tracing</b>\n"
 "<p>Tracing is a mechanism to automatically print values of the chosen "
@@ -382,28 +456,33 @@ msgstr ""
 "anlamına gelir. Bunu kodu değiştirmenize gerek olmadan kullanabildiğiniz "
 "printf gibi düşünebilirsiniz.</p>"
 
+#. i18n: file: debuggertracingdialog.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, enable)
-#: debuggertracingdialog.ui:23
+#: rc.cpp:119
 msgid "Enable tracing"
 msgstr "İzlemeyi etkinleştir"
 
+#. i18n: file: debuggertracingdialog.ui:30
 #. i18n: ectx: property (text), widget (QPushButton, cancelButton)
-#: debuggertracingdialog.ui:30 memviewdlg.cpp:101
+#: rc.cpp:122 memviewdlg.cpp:100
 msgid "Cancel"
 msgstr "İptal"
 
+#. i18n: file: debuggertracingdialog.ui:40
 #. i18n: ectx: property (text), widget (QCheckBox, enableCustomFormat)
-#: debuggertracingdialog.ui:40
+#: rc.cpp:125
 msgid "Custom format string"
 msgstr "Özel biçim ifadesi"
 
+#. i18n: file: debuggertracingdialog.ui:47
 #. i18n: ectx: property (text), widget (QPushButton, okButton)
-#: debuggertracingdialog.ui:47 memviewdlg.cpp:98
+#: rc.cpp:128 memviewdlg.cpp:97
 msgid "OK"
 msgstr "Tamam"
 
+#. i18n: file: debuggertracingdialog.ui:79
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, customFormat)
-#: debuggertracingdialog.ui:79
+#: rc.cpp:132
 #, no-c-format
 msgid ""
 "<b>Custom format string</b>\n"
@@ -421,10 +500,182 @@ msgstr ""
 "ve değerleri tüm ifadeler için biçim belirleyici olarak \"%d\" kullanılarak "
 "yazdırılacaktır."
 
+#. i18n: file: debuggertracingdialog.ui:99
 #. i18n: ectx: property (text), widget (QLabel, expressionsLabel)
-#: debuggertracingdialog.ui:99
+#: rc.cpp:138
 msgid "Expressions to print:"
 msgstr "Yazdırılacak ifade:"
+
+#. i18n: file: selectaddress.ui:20
+#. i18n: ectx: property (windowTitle), widget (QWidget, SelectAddress)
+#: rc.cpp:141
+msgid "Address selector"
+msgstr "Adres seçici"
+
+#. i18n: file: selectaddress.ui:23
+#. i18n: ectx: property (toolTip), widget (QWidget, SelectAddress)
+#: rc.cpp:144
+msgid "Select the address to disassemble around"
+msgstr "Nereden parçalara ayrılacağını gösteren adresi seçin"
+
+#. i18n: file: selectaddress.ui:29
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:147
+msgid "Select address to disassemble around"
+msgstr "Nereden parçalara ayrılacağını gösteren adresi seçin"
+
+#: selectcoredialog.cpp:32
+msgid "Select Core File"
+msgstr "Çekirdek Dosyayı Seç"
+
+#: gdboutputwidget.cpp:68
+msgid "GDB Output"
+msgstr "GDB Çıktısı"
+
+#: gdboutputwidget.cpp:69
+msgid ""
+"<b>GDB output</b><p>Shows all gdb commands being executed. You can also "
+"issue any other gdb command while debugging.</p>"
+msgstr ""
+"<b>GDB çıktısı</b><p>Çalıştırılacak bütün gdb komutlarını gösterir. Hata "
+"ayıklama sırasında başka bir gdb komutu da girebilirsiniz.</p>"
+
+#: gdboutputwidget.cpp:78
+msgid "&GDB cmd:"
+msgstr "&GDB komutu:"
+
+#: gdboutputwidget.cpp:83
+msgid "Pause execution of the app to enter gdb commands"
+msgstr "Uygulamayı çalıştırmayı duraklat ve gdb komutları gir"
+
+#: gdboutputwidget.cpp:395 gdboutputwidget.cpp:445
+msgid "Show Internal Commands"
+msgstr "İç Komutları Göster"
+
+#: gdboutputwidget.cpp:402 gdboutputwidget.cpp:452
+msgid ""
+"Controls if commands issued internally by KDevelop will be shown or not."
+"<br>This option will affect only future commands, it will not add or remove "
+"already issued commands from the view."
+msgstr ""
+"KDevelop tarafından işletilen iç komutların gösterimini kontrol eder.<br>Bu "
+"seçenek sadece ilerideki komutları etkileyecektir, zaten çalıştırılmış olan "
+"komutların çıktı görüntüsünü değiştirmeyecektir."
+
+#: gdboutputwidget.cpp:407
+msgid "Copy All"
+msgstr "Tümünü Kopyala"
+
+#: gdblaunchconfig.cpp:114
+msgid "GDB Configuration"
+msgstr "GDB Yapılandırması"
+
+#: gdblaunchconfig.cpp:137 debuggerplugin.cpp:159
+msgid "GDB"
+msgstr "GDB"
+
+#: gdblaunchconfig.cpp:171
+msgid "Executes a Native application in GDB"
+msgstr "Orijinal uygulamayı GDB içerisinde çalıştırır"
+
+#: processselection.cpp:38
+msgid "Attach to a process"
+msgstr "Bir sürece iliştir"
+
+#: memviewdlg.cpp:79
+msgid "Start"
+msgstr "Başlat"
+
+#: memviewdlg.cpp:85
+msgid "Amount"
+msgstr "Toplam"
+
+#: memviewdlg.cpp:124
+msgid "Memory view"
+msgstr "Bellek görünümü"
+
+#: memviewdlg.cpp:267
+msgid "%2 (1 byte)"
+msgid_plural "%2 (%1 bytes)"
+msgstr[0] "%2 (%1 bayt)"
+msgstr[1] "%2 (%1 bayt)"
+
+#: memviewdlg.cpp:314
+msgid "&Reload"
+msgstr "&Yeniden Yükle"
+
+#: memviewdlg.cpp:323
+msgid "&Format"
+msgstr "&Biçimlendir"
+
+#: memviewdlg.cpp:326
+msgid "&Binary"
+msgstr "&İkilik"
+
+#: memviewdlg.cpp:331
+msgid "&Octal"
+msgstr "&Sekizlik"
+
+#: memviewdlg.cpp:336
+msgid "&Decimal"
+msgstr "&Ondalık"
+
+#: memviewdlg.cpp:341
+msgid "&Hexadecimal"
+msgstr "&Onaltılık"
+
+#: memviewdlg.cpp:357
+msgid "&Grouping"
+msgstr "&Gruplandırma"
+
+#: memviewdlg.cpp:360
+msgid "&0"
+msgstr "&0"
+
+#: memviewdlg.cpp:365
+msgid "&1"
+msgstr "&1"
+
+#: memviewdlg.cpp:370
+msgid "&2"
+msgstr "&2"
+
+#: memviewdlg.cpp:375
+msgid "&4"
+msgstr "&4"
+
+#: memviewdlg.cpp:380
+msgid "&8"
+msgstr "&8"
+
+#: memviewdlg.cpp:385
+msgid "1&6"
+msgstr "1&6"
+
+#: memviewdlg.cpp:400
+msgid "Write changes"
+msgstr "Değişiklikleri yaz"
+
+#: memviewdlg.cpp:404
+msgid "Change memory range"
+msgstr "Bellek ayarlamasını değiştir"
+
+#: memviewdlg.cpp:408
+msgid "Close this view"
+msgstr "Bu görünümü kapat"
+
+#: memviewdlg.cpp:477
+msgid "Memory viewer"
+msgstr "Bellek görüntüleyici"
+
+#: memviewdlg.cpp:481
+msgid "New memory viewer"
+msgstr "Yeni bellek görüntüleyici"
+
+#: memviewdlg.cpp:482
+msgctxt "@info:tooltip"
+msgid "Open a new memory viewer."
+msgstr "Yeni bir bellek görüntüleyici açar."
 
 #: debugsession.cpp:157
 msgid "Debugger stopped"
@@ -459,7 +710,6 @@ msgid "GDB exited abnormally"
 msgstr "GDB uygulamasından normal olmayan bir şekilde çıkıldı"
 
 #: debugsession.cpp:548
-#, kde-format
 msgid ""
 "<b>Gdb command sent when debugger is not running</b><br>The command was:<br> "
 "%1"
@@ -472,7 +722,6 @@ msgid "Internal error"
 msgstr "İç hata"
 
 #: debugsession.cpp:647
-#, kde-format
 msgid "<b>Invalid debugger command</b><br>%1"
 msgstr "<b>Geçersiz hata ayıklayıcı komutu</b><br>%1"
 
@@ -481,7 +730,6 @@ msgid "Invalid debugger command"
 msgstr "Geçersiz hata ayıklayıcı komutu"
 
 #: debugsession.cpp:676
-#, kde-format
 msgid "Exited with return code: %1"
 msgstr "Hata kodu ile çıkıldı: %1"
 
@@ -490,12 +738,10 @@ msgid "Exited normally"
 msgstr "Normal olarak çıkıldı"
 
 #: debugsession.cpp:686
-#, kde-format
 msgid "Exited on signal %1"
 msgstr "%1 sinyali ile çıkıldı"
 
 #: debugsession.cpp:745
-#, kde-format
 msgid "Program received signal %1 (%2)"
 msgstr "Uygulama %1 (%2) sinyali aldı"
 
@@ -504,7 +750,6 @@ msgid "Running program"
 msgstr "Çalışan uygulama"
 
 #: debugsession.cpp:971
-#, kde-format
 msgid ""
 "No environment group specified, looks like a broken configuration, please "
 "check run configuration '%1'. Using default environment group."
@@ -518,7 +763,6 @@ msgid "Warning"
 msgstr "Uyarı"
 
 #: debugsession.cpp:1223
-#, kde-format
 msgid "<b>Debugger error</b><p>Debugger reported the following error:<p><tt>%1"
 msgstr ""
 "<b>Hata ayıklayıcı hatası</b><p>Hata ayıklayıcı şu hatayı bildirdi:<p><tt>%1"
@@ -528,14 +772,12 @@ msgid "Debugger error"
 msgstr "Hata ayıklayıcı hatası"
 
 #: debugsession.cpp:1325
-#, kde-format
 msgid "1 command in queue\n"
 msgid_plural "%1 commands in queue\n"
 msgstr[0] "Kuyrukta %1 komut var\n"
 msgstr[1] "Kuyrukta %1 komut var\n"
 
 #: debugsession.cpp:1326
-#, kde-format
 msgctxt "Only the 0 and 1 cases need to be translated"
 msgid "1 command being processed by gdb\n"
 msgid_plural "%1 commands being processed by gdb\n"
@@ -543,12 +785,10 @@ msgstr[0] "%1 komut gdb tarafından çalıştırılıyor\n"
 msgstr[1] "%1 komut gdb tarafından çalıştırılıyor\n"
 
 #: debugsession.cpp:1327
-#, kde-format
 msgid "Debugger state: %1\n"
 msgstr "Hata ayıklayıcı durumu: %1\n"
 
 #: debugsession.cpp:1331
-#, kde-format
 msgid ""
 "Current command class: '%1'\n"
 "Current command text: '%2'\n"
@@ -563,7 +803,6 @@ msgid "Debugger status"
 msgstr "Hata ayıklayıcı durumu"
 
 #: debugsession.cpp:1445
-#, kde-format
 msgid "<b>You need gdb 7.0.0 or higher.</b><br />You are using: %1"
 msgstr ""
 "<b>gdb 7.0.0 veya daha yeni bir sürüm gerekiyor.</b><br />Kullandığınız "
@@ -584,6 +823,14 @@ msgstr "Başlangıç hatası"
 #: debugsession.cpp:1470
 msgid "<b>Could not attach debugger:</b><br />"
 msgstr "<b>Hata ayıklayıcı iliştirilemedi:</b><br />"
+
+#: breakpointcontroller.cpp:555
+msgid "<br>Old value: %1"
+msgstr "<br>Eski değer: %1"
+
+#: breakpointcontroller.cpp:558
+msgid "<br>New value: %1"
+msgstr "<br>Yeni değer: %1"
 
 #: disassemblewidget.cpp:66
 msgid "Address Selector"
@@ -637,604 +884,111 @@ msgstr "Yönerge"
 msgid "Disassemble/Registers View"
 msgstr "Parçalama/Yazmaçlar Görünümü"
 
-#: gdb.cpp:104
-#, kde-format
-msgid "Could not locate the debugging shell '%1'."
-msgstr "Hata ayıklama kabuğu '%1' bulunamadı."
+#: debuggerplugin.cpp:93
+msgid "GDB Support"
+msgstr "GDB Desteği"
 
-#: gdb.cpp:105
-msgid "Debugging Shell Not Found"
-msgstr "Hata Ayıklama Kabuğu Bulunamadı"
-
-#: gdb.cpp:351
-msgctxt "<b>Internal debugger error</b>"
+#: debuggerplugin.cpp:93
 msgid ""
-"<p>The debugger component encountered internal error while processing reply "
-"from gdb. Please submit a bug report."
+"This plugin provides a frontend for GDB, a source-level debugger for C, C++ "
+"and more."
 msgstr ""
-"<p>Hata ayıklama bileşeni gdb'den yanıt beklerken bir iç hata ile "
-"karşılaştı. Lütfen bir hata kaydı açın."
+"Bu eklenti, C, C++ ve daha fazlası için kaynak seviyesinde hata ayıklayıcı "
+"olan GDB için bir ön uç sağlar."
 
-#: gdb.cpp:353
-#, kde-format
+#: debuggerplugin.cpp:155
+msgid "Disassemble/Registers"
+msgstr "Parçalama/Yazmaçlar"
+
+#: debuggerplugin.cpp:165
+msgid "Memory"
+msgstr "Bellek"
+
+#: debuggerplugin.cpp:200
+msgid "Examine Core File..."
+msgstr "Çekirdek Dosyayı Denetle..."
+
+#: debuggerplugin.cpp:201
+msgid "Examine core file"
+msgstr "Çekirdek dosyayı denetle"
+
+#: debuggerplugin.cpp:202
 msgid ""
-"The exception is: %1\n"
-"The MI response is: %2"
+"<b>Examine core file</b><p>This loads a core file, which is typically "
+"created after the application has crashed, e.g. with a segmentation fault. "
+"The core file contains an image of the program memory at the time it "
+"crashed, allowing you to do a post-mortem analysis.</p>"
 msgstr ""
-"Oluşan istisna: %1\n"
-"MI yanıtı: %2"
+"<b>Çekirdek dosyasını incele</b><p>Bu genel olarak uygulamanın çöküşünden, "
+"örneğin ayrıştırma hatasından, sonra oluşan çekirdek dosyayı yükler. "
+"Çekirdek dosyası uygulamanın çökme sırasındaki hafızasının bir görüntüsünü "
+"sunar ve bu görüntü çökme sonrası analiz yapabilmenizi sağlar.</p>"
 
-#: gdb.cpp:356
-msgid "Internal debugger error"
-msgstr "Geçersiz hata ayıklayıcı hatası"
+#: debuggerplugin.cpp:212
+msgid "Attach to Process"
+msgstr "Sürece Ekle"
 
-#: gdb.cpp:408
-#, kde-format
+#: debuggerplugin.cpp:213
+msgid "Attach to process..."
+msgstr "Sürece ekle..."
+
+#: debuggerplugin.cpp:214
 msgid ""
-"<b>Could not start debugger.</b><p>Could not run '%1'. Make sure that the "
-"path name is specified correctly."
+"<b>Attach to process</b><p>Attaches the debugger to a running process.</p>"
 msgstr ""
-"<b>Hata ayıklayıcı başlatılamadı.</b><p>'%1' çalıştırılamadı. Uygulama "
-"yolunun doğru bir şekilde verildiğinden emin olun."
+"<b>Bir sürece iliştir</b><p>Hata ayıklayıcıyı bir sürece iliştirir.</p>"
 
-#: gdb.cpp:412
-msgid "Could not start debugger"
-msgstr "Hata ayıklayıcı başlatılamadı"
+#: debuggerplugin.cpp:246
+msgid "KDevelop"
+msgstr "KDevelop"
 
-#: gdb.cpp:429
+#: debuggerplugin.cpp:319
+msgid "Evaluate: %1"
+msgstr "Değerlendir: %1"
+
+#: debuggerplugin.cpp:321
 msgid ""
-"<b>Gdb crashed.</b><p>Because of that the debug session has to be ended."
-"<br>Try to reproduce the crash with plain gdb and report a bug.<br>"
+"<b>Evaluate expression</b><p>Shows the value of the expression under the "
+"cursor.</p>"
 msgstr ""
-"<b>Gdb çöktü.</b><p>Bu nedenle hata ayıklama oturumu sonlandırıldı."
-"<br>Çokmeyi temiz bir gdb ile yeniden üretmeyi deneyin ve bir hata kaydı "
-"açın.<br>"
+"<b>İfadeyi değerlendir</b><p>İmleç altındaki ifadenin değerini gösterir.</p>"
 
-#: gdb.cpp:432
-msgid "Gdb crashed"
-msgstr "Gdb çöktü"
+#: debuggerplugin.cpp:324
+msgid "Watch: %1"
+msgstr "İzle: %1"
 
-#: gdblaunchconfig.cpp:114
-msgid "GDB Configuration"
-msgstr "GDB Yapılandırması"
-
-#: gdblaunchconfig.cpp:171
-msgid "Executes a Native application in GDB"
-msgstr "Orijinal uygulamayı GDB içerisinde çalıştırır"
-
-#: gdboutputwidget.cpp:68
-msgid "GDB Output"
-msgstr "GDB Çıktısı"
-
-#: gdboutputwidget.cpp:69
+#: debuggerplugin.cpp:326
 msgid ""
-"<b>GDB output</b><p>Shows all gdb commands being executed. You can also "
-"issue any other gdb command while debugging.</p>"
+"<b>Watch expression</b><p>Adds an expression under the cursor to the "
+"Variables/Watch list.</p>"
 msgstr ""
-"<b>GDB çıktısı</b><p>Çalıştırılacak bütün gdb komutlarını gösterir. Hata "
-"ayıklama sırasında başka bir gdb komutu da girebilirsiniz.</p>"
-
-#: gdboutputwidget.cpp:78
-msgid "&GDB cmd:"
-msgstr "&GDB komutu:"
-
-#: gdboutputwidget.cpp:83
-msgid "Pause execution of the app to enter gdb commands"
-msgstr "Uygulamayı çalıştırmayı duraklat ve gdb komutları gir"
-
-#: gdboutputwidget.cpp:395 gdboutputwidget.cpp:445
-msgid "Show Internal Commands"
-msgstr "İç Komutları Göster"
-
-#: gdboutputwidget.cpp:402 gdboutputwidget.cpp:452
-msgid ""
-"Controls if commands issued internally by KDevelop will be shown or not."
-"<br>This option will affect only future commands, it will not add or remove "
-"already issued commands from the view."
-msgstr ""
-"KDevelop tarafından işletilen iç komutların gösterimini kontrol eder.<br>Bu "
-"seçenek sadece ilerideki komutları etkileyecektir, zaten çalıştırılmış olan "
-"komutların çıktı görüntüsünü değiştirmeyecektir."
-
-#: gdboutputwidget.cpp:407
-msgid "Copy All"
-msgstr "Tümünü Kopyala"
-
-#. i18n: ectx: Menu (run)
-#: kdevgdbui.rc:5
-msgctxt "@title:menu"
-msgid "Run"
-msgstr "Çalıştır"
-
-#. i18n: ectx: ToolBar (debugToolBar)
-#: kdevgdbui.rc:16
-msgid "Debugger Toolbar"
-msgstr "Hata Ayıklayıcı Araç Çubuğu"
-
-#: memviewdlg.cpp:80
-msgid "Start"
-msgstr "Başlat"
-
-#: memviewdlg.cpp:86
-msgid "Amount"
-msgstr "Toplam"
-
-#: memviewdlg.cpp:125
-msgid "Memory view"
-msgstr "Bellek görünümü"
-
-#: memviewdlg.cpp:268
-#, kde-format
-msgid "%2 (1 byte)"
-msgid_plural "%2 (%1 bytes)"
-msgstr[0] "%2 (%1 bayt)"
-msgstr[1] "%2 (%1 bayt)"
-
-#: memviewdlg.cpp:315
-msgid "&Reload"
-msgstr "&Yeniden Yükle"
-
-#: memviewdlg.cpp:324
-msgid "&Format"
-msgstr "&Biçimlendir"
-
-#: memviewdlg.cpp:327
-msgid "&Binary"
-msgstr "&İkilik"
-
-#: memviewdlg.cpp:332
-msgid "&Octal"
-msgstr "&Sekizlik"
-
-#: memviewdlg.cpp:337
-msgid "&Decimal"
-msgstr "&Ondalık"
-
-#: memviewdlg.cpp:342
-msgid "&Hexadecimal"
-msgstr "&Onaltılık"
-
-#: memviewdlg.cpp:358
-msgid "&Grouping"
-msgstr "&Gruplandırma"
-
-#: memviewdlg.cpp:361
-msgid "&0"
-msgstr "&0"
-
-#: memviewdlg.cpp:366
-msgid "&1"
-msgstr "&1"
-
-#: memviewdlg.cpp:371
-msgid "&2"
-msgstr "&2"
-
-#: memviewdlg.cpp:376
-msgid "&4"
-msgstr "&4"
-
-#: memviewdlg.cpp:381
-msgid "&8"
-msgstr "&8"
-
-#: memviewdlg.cpp:386
-msgid "1&6"
-msgstr "1&6"
-
-#: memviewdlg.cpp:401
-msgid "Write changes"
-msgstr "Değişiklikleri yaz"
-
-#: memviewdlg.cpp:405
-msgid "Change memory range"
-msgstr "Bellek ayarlamasını değiştir"
-
-#: memviewdlg.cpp:409
-msgid "Close this view"
-msgstr "Bu görünümü kapat"
-
-#: memviewdlg.cpp:478
-msgid "Memory viewer"
-msgstr "Bellek görüntüleyici"
-
-#: memviewdlg.cpp:482
-msgid "New memory viewer"
-msgstr "Yeni bellek görüntüleyici"
-
-#: memviewdlg.cpp:483
-msgctxt "@info:tooltip"
-msgid "Open a new memory viewer."
-msgstr "Yeni bir bellek görüntüleyici açar."
-
-#: processselection.cpp:38
-msgid "Attach to a process"
-msgstr "Bir sürece iliştir"
-
-#: registers/converters.cpp:31
-msgid "Binary"
-msgstr "İkilik"
-
-#: registers/converters.cpp:31
-msgid "Octal"
-msgstr "Sekizlik"
-
-#: registers/converters.cpp:31
-msgid "Decimal"
-msgstr "Ondalık"
-
-#: registers/converters.cpp:31
-msgid "Hexadecimal"
-msgstr "Onaltılık"
-
-#: registers/converters.cpp:31
-msgid "Raw"
-msgstr "Ham"
-
-#: registers/converters.cpp:31
-msgid "Unsigned"
-msgstr "İmzasız"
-
-#: registers/registercontroller_arm.cpp:107
-#: registers/registercontroller_x86.cpp:107
-msgid "General"
-msgstr "Genel"
-
-#: registers/registercontroller_arm.cpp:107
-#: registers/registercontroller_x86.cpp:107
-msgid "Flags"
-msgstr "Bayraklar"
-
-#: registers/registercontroller_arm.cpp:107
-msgid "VFP single-word"
-msgstr "VFP tek kelime"
-
-#: registers/registercontroller_arm.cpp:107
-msgid "VFP double-word"
-msgstr "VFP çift kelime"
-
-#: registers/registercontroller_arm.cpp:107
-msgid "VFP quad-word"
-msgstr "VFP dörtlü kelime"
-
-#: registers/registercontroller_x86.cpp:107
-msgid "FPU"
-msgstr "FPU"
-
-#: registers/registercontroller_x86.cpp:107
-msgid "XMM"
-msgstr "XMM"
-
-#: registers/registercontroller_x86.cpp:107
-msgid "Segment"
-msgstr "Segment"
-
-#: registers/registersview.cpp:68
-msgid "Format"
-msgstr "Biçim"
-
-#: registers/registersview.cpp:77
-msgid "Mode"
-msgstr "Kip"
-
-#: registers/registersview.cpp:213
-msgid "Update"
-msgstr "Güncelle"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, SelectAddress)
-#: selectaddress.ui:20
-msgid "Address selector"
-msgstr "Adres seçici"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, SelectAddress)
-#: selectaddress.ui:23
-msgid "Select the address to disassemble around"
-msgstr "Nereden parçalara ayrılacağını gösteren adresi seçin"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: selectaddress.ui:29
-msgid "Select address to disassemble around"
-msgstr "Nereden parçalara ayrılacağını gösteren adresi seçin"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: selectcore.ui:17
-msgid "Executable:"
-msgstr "Çalıştırılabilir dosya:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: selectcore.ui:27
-msgid "Core File:"
-msgstr "Çekirdek Dosya:"
-
-#: selectcoredialog.cpp:32
-msgid "Select Core File"
-msgstr "Çekirdek Dosyayı Seç"
-
-#: stty.cpp:247
-msgid ""
-"Cannot use the tty* or pty* devices.\n"
-"Check the settings on /dev/tty* and /dev/pty*\n"
-"As root you may need to \"chmod ug+rw\" tty* and pty* devices and/or add the "
-"user to the tty group using \"usermod -aG tty username\"."
-msgstr ""
-"tty* ve pty* aygıtları kullanılamaz.\n"
-"/dev/tty* ve /dev/pty* üzerindeki ayarları kontrol edin\n"
-"Root haklarıyla tty* ve pty* aygıtları için \"chmod ug+rw\" komutunu "
-"çalıştırmanız ve/veya kullanıcıyı tty grubuna \"usermod -aG tty username\" "
-"komutuyla eklemeniz gerekebilir."
-
-#: stty.cpp:296
-#, kde-format
-msgid "%1 is incorrect terminal name"
-msgstr "%1 hatalı terminal adı"
-
-#: stty.cpp:302
-msgid "Can't create a temporary file"
-msgstr "Geçici dosya oluşturulamadı"
-
-#: stty.cpp:341
-#, kde-format
-msgid ""
-"Can't receive %1 tty/pty. Check that %1 is actually a terminal and that it "
-"accepts these arguments: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do "
-"sleep 3600;done\""
-msgstr ""
-"%1 tty/pty alınamadı. %1'in bir terminal olduğundan ve şu değişkenleri kabul "
-"ettiğinden emin olun: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do sleep "
-"3600;done\""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#, fuzzy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#, fuzzy
-
-
-
-
-
-#, fuzzy
-
-
-
-
-
-#, fuzzy
-
-
-
-
-
-#, fuzzy
-
-
-
-
-
-#, fuzzy
-
-
-
-
-
-#, fuzzy
-
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
-
-
-
-
-
-#, fuzzy
-
-
-
-
-
-#, fuzzy
-
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
-
-
-
-
-#, fuzzy
+"<b>İzle ifadesi</b><p>İmlecin altındaki ifadeyi Değişkenler/İzleme listesine "
+"ekler.</p>"
+
+#: debuggerplugin.cpp:356
+msgid "Choose a core file to examine..."
+msgstr "Denetlemek için bir çekidek dosya seçin..."
+
+#: debuggerplugin.cpp:363
+msgid "Examining core file %1"
+msgstr "%1 çekirdek dosyası denetleniyor"
+
+#: debuggerplugin.cpp:369
+msgid "Debug core file"
+msgstr "Çekirdek dosyanın hatalarını ayıkla"
+
+#: debuggerplugin.cpp:377
+msgid "Choose a process to attach to..."
+msgstr "İliştirilecek bir süreç seçin..."
+
+#: debuggerplugin.cpp:386
+msgid "Not attaching to process %1: cannot attach the debugger to itself."
+msgstr "%1 sürecine eklenemedi: hata ayıklayıcı kendine eklenemez."
+
+#: debuggerplugin.cpp:394
+msgid "Attaching to process %1"
+msgstr "%1 sürecine ekleniyor"
+
+#: debuggerplugin.cpp:400
+msgid "Debug process %1"
+msgstr "%1 sürecinin hatalarını ayıkla"
