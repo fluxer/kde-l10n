@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: katepart\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-05-05 17:54+0000\n"
+"POT-Creation-Date: 2015-09-04 23:26+0000\n"
 "PO-Revision-Date: 2007-09-13 11:39+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
@@ -581,13 +581,13 @@ msgstr ""
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, gbWordWrap)
-#: view/kateview.cpp:556 rc.cpp:375
+#: view/kateview.cpp:556 rc.cpp:612
 msgid "&Dynamic Word Wrap"
 msgstr "गतिशील वर्ड रैप (&D)"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:17
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, gbWordWrap)
-#: view/kateview.cpp:559 rc.cpp:372
+#: view/kateview.cpp:559 rc.cpp:609
 msgid ""
 "If this option is checked, the text lines will be wrapped at the view border "
 "on the screen."
@@ -1033,11 +1033,13 @@ msgstr "फ़िल्टर किया जा रहा है"
 #. i18n: ectx: property (text), widget (QLabel, repoNameLabel)
 #. i18n: file: snippet/editsnippet.ui:41
 #. i18n: ectx: property (text), widget (QLabel, snippetName)
+#. i18n: file: syntax/filetypeconfigwidget.ui:72
+#. i18n: ectx: property (text), widget (QLabel, lblName)
+#. i18n: file: mode/filetypeconfigwidget.ui:72
+#. i18n: ectx: property (text), widget (QLabel, lblName)
 #. i18n: file: dialogs/commandmenueditwidget.ui:69
 #. i18n: ectx: property (text), widget (QLabel, lblName)
-#. i18n: file: dialogs/filetypeconfigwidget.ui:72
-#. i18n: ectx: property (text), widget (QLabel, lblName)
-#: rc.cpp:9 rc.cpp:31 rc.cpp:455 rc.cpp:827
+#: rc.cpp:9 rc.cpp:31 rc.cpp:86 rc.cpp:155 rc.cpp:692
 msgid "&Name:"
 msgstr "नाम: (&N)"
 
@@ -1151,39 +1153,426 @@ msgstr ""
 msgid "S&cripts"
 msgstr "स्क्रिप्ट्स"
 
+#. i18n: file: syntax/filetypeconfigwidget.ui:14
+#. i18n: ectx: property (text), widget (QLabel, lblFiletype)
+#. i18n: file: mode/filetypeconfigwidget.ui:14
+#. i18n: ectx: property (text), widget (QLabel, lblFiletype)
+#: rc.cpp:65 rc.cpp:134
+msgid "&Filetype:"
+msgstr "फ़ाइल-क़िस्म: (&F)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:24
+#. i18n: ectx: property (whatsThis), widget (KComboBox, cmbFiletypes)
+#. i18n: file: mode/filetypeconfigwidget.ui:24
+#. i18n: ectx: property (whatsThis), widget (KComboBox, cmbFiletypes)
+#: rc.cpp:68 rc.cpp:137
+msgid "Select the filetype you want to change."
+msgstr "फ़ाइल क़िस्म जिसे आप बदलना चाहते हैं उसे चुनें."
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:31
+#. i18n: ectx: property (whatsThis), widget (QPushButton, btnNew)
+#. i18n: file: mode/filetypeconfigwidget.ui:31
+#. i18n: ectx: property (whatsThis), widget (QPushButton, btnNew)
+#: rc.cpp:71 rc.cpp:140
+msgid "Create a new file type."
+msgstr "नया फ़ाइल क़िस्म तैयार करें"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:34
+#. i18n: ectx: property (text), widget (QPushButton, btnNew)
+#. i18n: file: mode/filetypeconfigwidget.ui:34
+#. i18n: ectx: property (text), widget (QPushButton, btnNew)
+#: rc.cpp:74 rc.cpp:143
+msgid "&New"
+msgstr "नया (&N)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:41
+#. i18n: ectx: property (whatsThis), widget (QPushButton, btnDelete)
+#. i18n: file: mode/filetypeconfigwidget.ui:41
+#. i18n: ectx: property (whatsThis), widget (QPushButton, btnDelete)
+#: rc.cpp:77 rc.cpp:146
+msgid "Delete the current file type."
+msgstr "वर्तमान फ़ाइल क़िस्म मिटाएँ."
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:44
+#. i18n: ectx: property (text), widget (QPushButton, btnDelete)
+#. i18n: file: mode/filetypeconfigwidget.ui:44
+#. i18n: ectx: property (text), widget (QPushButton, btnDelete)
+#: rc.cpp:80 rc.cpp:149 schema/kateschemaconfig.cpp:884
+msgid "&Delete"
+msgstr "मिटाएँ (&D)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:66
+#. i18n: ectx: property (title), widget (QGroupBox, gbProperties)
+#. i18n: file: mode/filetypeconfigwidget.ui:66
+#. i18n: ectx: property (title), widget (QGroupBox, gbProperties)
+#: rc.cpp:83 rc.cpp:152 mode/katemodeconfigpage.cpp:283
+msgid "Properties"
+msgstr "गुण"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:82
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtName)
+#. i18n: file: mode/filetypeconfigwidget.ui:82
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtName)
+#: rc.cpp:89 rc.cpp:158
+#, fuzzy
+msgid ""
+"The name of the filetype will be the text of the corresponding menu item."
+msgstr "चंद्रमा"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:89
+#. i18n: ectx: property (text), widget (QLabel, lblSection)
+#. i18n: file: mode/filetypeconfigwidget.ui:89
+#. i18n: ectx: property (text), widget (QLabel, lblSection)
+#: rc.cpp:92 rc.cpp:161
+msgid "&Section:"
+msgstr "खण्ड: (&S)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:99
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtSection)
+#. i18n: file: mode/filetypeconfigwidget.ui:99
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtSection)
+#: rc.cpp:95 rc.cpp:164
+#, fuzzy
+msgid "The section name is used to organize the file types in menus."
+msgstr ""
+"फ़ाइल को चुनें. \\<emph\\>फ़ाइल क़िस्म\\</emph\\> बक्से में आप कुछ विशिष्ट क़िस्म की फ़ाइलों "
+"का चयन सीमित कर सकते हैं."
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:106
+#. i18n: ectx: property (text), widget (QLabel, lblVariables)
+#. i18n: file: mode/filetypeconfigwidget.ui:106
+#. i18n: ectx: property (text), widget (QLabel, lblVariables)
+#: rc.cpp:98 rc.cpp:167
+msgid "&Variables:"
+msgstr "चर: (&V)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:116
+#. i18n: ectx: property (whatsThis), widget (VariableLineEdit, edtVariables)
+#. i18n: file: mode/filetypeconfigwidget.ui:116
+#. i18n: ectx: property (whatsThis), widget (VariableLineEdit, edtVariables)
+#: rc.cpp:101 rc.cpp:170
+msgid ""
+"<p>This string allows to configure Kate's settings for the files selected by "
+"this mimetype using Kate variables. Almost any configuration option can be "
+"set, such as highlight, indent-mode, encoding, etc.</p><p>For a full list of "
+"known variables, see the manual.</p>"
+msgstr ""
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:123
+#. i18n: ectx: property (text), widget (QLabel, lblHl)
+#. i18n: file: mode/filetypeconfigwidget.ui:123
+#. i18n: ectx: property (text), widget (QLabel, lblHl)
+#: rc.cpp:104 rc.cpp:173
+msgid "&Highlighting:"
+msgstr "उभारना: (&H)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:136
+#. i18n: ectx: property (text), widget (QLabel, lblIndenter)
+#. i18n: file: mode/filetypeconfigwidget.ui:136
+#. i18n: ectx: property (text), widget (QLabel, lblIndenter)
+#: rc.cpp:107 rc.cpp:176
+#, fuzzy
+msgid "&Indentation Mode:"
+msgstr "जगह छोड़ने का मोड: (&I)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:149
+#. i18n: ectx: property (text), widget (QLabel, lblExtensions)
+#. i18n: file: mode/filetypeconfigwidget.ui:149
+#. i18n: ectx: property (text), widget (QLabel, lblExtensions)
+#: rc.cpp:110 rc.cpp:179
+msgid "File e&xtensions:"
+msgstr "फ़ाइल एक्सटेंशन्स: (&x)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:159
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtFileExtensions)
+#. i18n: file: mode/filetypeconfigwidget.ui:159
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtFileExtensions)
+#: rc.cpp:113 rc.cpp:182
+msgid ""
+"The wildcards mask allows to select files by filename. A typical mask uses "
+"an asterisk and the file extension, for example <code>*.txt; *.text</code>. "
+"The string is a semicolon-separated list of masks."
+msgstr ""
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:166
+#. i18n: ectx: property (text), widget (QLabel, lblMimeTypes)
+#. i18n: file: mode/filetypeconfigwidget.ui:166
+#. i18n: ectx: property (text), widget (QLabel, lblMimeTypes)
+#: rc.cpp:116 rc.cpp:185
+msgid "MIME &types:"
+msgstr "माइम क़िस्म: (&t)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:181
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtMimeTypes)
+#. i18n: file: mode/filetypeconfigwidget.ui:181
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtMimeTypes)
+#: rc.cpp:119 rc.cpp:188
+msgid ""
+"The mime type mask allows to select files by mimetype. The string is a "
+"semicolon-separated list of mimetypes, for example <code>text/plain; text/"
+"english</code>."
+msgstr ""
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:188
+#. i18n: ectx: property (whatsThis), widget (QToolButton, btnMimeTypes)
+#. i18n: file: mode/filetypeconfigwidget.ui:188
+#. i18n: ectx: property (whatsThis), widget (QToolButton, btnMimeTypes)
+#: rc.cpp:122 rc.cpp:191
+#, fuzzy
+msgid "Displays a wizard that helps you easily select mimetypes."
+msgstr ""
+"\\<switchinline select=\\\"sys\\\"\\>\\<caseinline select=\\\"WIN\\\"\\>जिस "
+"प्रिंटर को आपने चुना है उसकी क़िस्म प्रदर्शित करता है. \\</caseinline\\>\\</"
+"switchinline\\>"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:197
+#. i18n: ectx: property (text), widget (QLabel, lblPriority)
+#. i18n: file: mode/filetypeconfigwidget.ui:197
+#. i18n: ectx: property (text), widget (QLabel, lblPriority)
+#: rc.cpp:125 rc.cpp:194
+msgid "P&riority:"
+msgstr "प्राथमिकता: (&r)"
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:207
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, sbPriority)
+#. i18n: file: mode/filetypeconfigwidget.ui:207
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, sbPriority)
+#: rc.cpp:128 rc.cpp:197
+msgid ""
+"Sets priority for this file type. If more than one file type selects the "
+"same file, the one with the highest priority will be used."
+msgstr ""
+
+#. i18n: file: syntax/filetypeconfigwidget.ui:232
+#. i18n: ectx: property (text), widget (QPushButton, btnDownload)
+#. i18n: file: mode/filetypeconfigwidget.ui:232
+#. i18n: ectx: property (text), widget (QPushButton, btnDownload)
+#: rc.cpp:131 rc.cpp:200
+msgid "Download Highlighting Files..."
+msgstr "उभारे गए फ़ाइलों को डाउनलोड किया जा रहा है..."
+
 #. i18n: file: schema/howtoimportschema.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:65
+#: rc.cpp:203
 #, fuzzy
 msgid "How do you want to import the schema?"
 msgstr "आप क्या करना चाहते हैं?"
 
 #. i18n: file: schema/howtoimportschema.ui:24
 #. i18n: ectx: property (text), widget (QRadioButton, radioReplaceCurrent)
-#: rc.cpp:68
+#: rc.cpp:206
 #, fuzzy
 msgid "Replace current schema?"
 msgstr "अगला मिलान बदलें"
 
 #. i18n: file: schema/howtoimportschema.ui:34
 #. i18n: ectx: property (text), widget (QRadioButton, radioReplaceExisting)
-#: rc.cpp:72 schema/kateschemaconfig.cpp:999
+#: rc.cpp:210 schema/kateschemaconfig.cpp:999
 #, fuzzy, no-c-format
 msgid "Replace existing schema %1"
 msgstr "अगला मिलान बदलें"
 
 #. i18n: file: schema/howtoimportschema.ui:43
 #. i18n: ectx: property (text), widget (QRadioButton, radioAsNew)
-#: rc.cpp:75
+#: rc.cpp:213
 #, fuzzy
 msgid "Import as new schema:"
 msgstr "नई योजना का नाम"
+
+#. i18n: file: completion/completionconfigwidget.ui:9
+#. i18n: ectx: property (title), widget (QGroupBox, sorting)
+#: rc.cpp:216
+msgid "Sorting"
+msgstr "क्रमबद्ध करने में"
+
+#. i18n: file: completion/completionconfigwidget.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, sortingAlphabetical)
+#: rc.cpp:219
+msgid "Alphabetical"
+msgstr "अकारादि"
+
+#. i18n: file: completion/completionconfigwidget.ui:36
+#. i18n: ectx: property (text), widget (QCheckBox, sortingReverse)
+#: rc.cpp:222
+msgid "Reverse"
+msgstr "विपरीत"
+
+#. i18n: file: completion/completionconfigwidget.ui:43
+#. i18n: ectx: property (text), widget (QCheckBox, sortingCaseSensitive)
+#: rc.cpp:225
+#, fuzzy
+msgid "Case sensitive"
+msgstr "केस सेंसिटिव (&s)"
+
+#. i18n: file: completion/completionconfigwidget.ui:50
+#. i18n: ectx: property (text), widget (QCheckBox, sortingInheritanceDepth)
+#: rc.cpp:228
+#, fuzzy
+msgid "Inheritance depth"
+msgstr "इनहेरिटेंस गहराई"
+
+#. i18n: file: completion/completionconfigwidget.ui:77
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:231
+#, fuzzy
+msgid "Order of Groupings (select a grouping method to configure):"
+msgstr "मल्टीडिस्क उपकरणों को कॉन्फ़िगर करने हेतु प्रस्तावित क्रियाओं में से एक चुनें."
+
+#. i18n: file: completion/completionconfigwidget.ui:97
+#. i18n: ectx: property (text), widget (QToolButton, groupingOrderUp)
+#. i18n: file: completion/completionconfigwidget.ui:226
+#. i18n: ectx: property (text), widget (QToolButton, groupingUp)
+#. i18n: file: completion/completionconfigwidget.ui:398
+#. i18n: ectx: property (text), widget (QToolButton, columnUp)
+#: rc.cpp:234 rc.cpp:273 rc.cpp:309
+msgid "^"
+msgstr "^"
+
+#. i18n: file: completion/completionconfigwidget.ui:104
+#. i18n: ectx: property (text), widget (QToolButton, groupingOrderDown)
+#. i18n: file: completion/completionconfigwidget.ui:233
+#. i18n: ectx: property (text), widget (QToolButton, groupingDown)
+#. i18n: file: completion/completionconfigwidget.ui:405
+#. i18n: ectx: property (text), widget (QToolButton, columnDown)
+#: rc.cpp:237 rc.cpp:276 rc.cpp:312
+msgid "\\/"
+msgstr "\\/"
+
+#. i18n: file: completion/completionconfigwidget.ui:120
+#. i18n: ectx: property (title), widget (QGroupBox, filtering)
+#: rc.cpp:240
+msgid "Filtering"
+msgstr "फ़िल्टर किया जा रहा है"
+
+#. i18n: file: completion/completionconfigwidget.ui:135
+#. i18n: ectx: property (text), widget (QCheckBox, filteringContextMatchOnly)
+#: rc.cpp:243
+msgid "Suitable context matches only"
+msgstr "सिर्फ उपयुक्त संदर्भित मिलान"
+
+#. i18n: file: completion/completionconfigwidget.ui:142
+#. i18n: ectx: property (text), widget (QCheckBox, filteringHideAttributes)
+#: rc.cpp:246
+msgid "Hide completions with the following attributes:"
+msgstr "पूर्णता को निम्न गुणों के साथ छुपाएँ:"
+
+#. i18n: file: completion/completionconfigwidget.ui:152
+#. i18n: ectx: property (label), widget (KIntNumInput, filteringMaximumInheritanceDepth)
+#: rc.cpp:249
+#, fuzzy
+msgid "Maximum inheritance depth:"
+msgstr "अधिकतम इनहैरिटेंस गहराई"
+
+#. i18n: file: completion/completionconfigwidget.ui:164
+#. i18n: ectx: property (specialValueText), widget (KIntNumInput, filteringMaximumInheritanceDepth)
+#: rc.cpp:252
+msgid "Infinity"
+msgstr "अनंत"
+
+#. i18n: file: completion/completionconfigwidget.ui:174
+#. i18n: ectx: property (title), widget (QGroupBox, grouping)
+#: rc.cpp:255
+msgid "Grouping"
+msgstr "समूहबद्धता"
+
+#. i18n: file: completion/completionconfigwidget.ui:193
+#. i18n: ectx: property (text), widget (QTreeWidget, groupingMethods)
+#: rc.cpp:258
+#, fuzzy
+msgid "Grouping Method"
+msgstr "समूहीकरण विधि"
+
+#. i18n: file: completion/completionconfigwidget.ui:198
+#. i18n: ectx: property (text), item, widget (QTreeWidget, groupingMethods)
+#: rc.cpp:261
+msgid "Scope type (local, namespace, global)"
+msgstr "स्कोप किस्म (स्थानीय, नेमस्पेस, वैश्विक)"
+
+#. i18n: file: completion/completionconfigwidget.ui:203
+#. i18n: ectx: property (text), item, widget (QTreeWidget, groupingMethods)
+#: rc.cpp:264
+msgid "Scope (eg. per class)"
+msgstr "स्कोप (उदा. प्रति क्लास)"
+
+#. i18n: file: completion/completionconfigwidget.ui:208
+#. i18n: ectx: property (text), item, widget (QTreeWidget, groupingMethods)
+#: rc.cpp:267
+msgid "Access type (public etc.)"
+msgstr "पहुंच किस्म (सार्वजनिक इत्यादि)"
+
+#. i18n: file: completion/completionconfigwidget.ui:213
+#. i18n: ectx: property (text), item, widget (QTreeWidget, groupingMethods)
+#: rc.cpp:270
+msgid "Item type (function etc.)"
+msgstr "वस्तु किस्म (फ़ंक्शन इत्यादि)"
+
+#. i18n: file: completion/completionconfigwidget.ui:263
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:279
+#, fuzzy
+msgid "Access Grouping Properties"
+msgstr "पाद-सूचना गुण"
+
+#. i18n: file: completion/completionconfigwidget.ui:270
+#. i18n: ectx: property (text), widget (QCheckBox, accessConst)
+#: rc.cpp:282
+msgid "Include const in grouping"
+msgstr "कॉस्टैंट को में शामिल करें"
+
+#. i18n: file: completion/completionconfigwidget.ui:277
+#. i18n: ectx: property (text), widget (QCheckBox, accessStatic)
+#: rc.cpp:285
+msgid "Include static in grouping"
+msgstr "स्टैटिक को समूह में शामिल करें"
+
+#. i18n: file: completion/completionconfigwidget.ui:284
+#. i18n: ectx: property (text), widget (QCheckBox, accessSignalSlot)
+#: rc.cpp:288
+msgid "Include signals and slots in grouping"
+msgstr "सिगनल तथा स्लॉट को समूह में शामिल करें"
+
+#. i18n: file: completion/completionconfigwidget.ui:314
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:291
+#, fuzzy
+msgid "Item Grouping properties"
+msgstr "पाद-सूचना गुण"
+
+#. i18n: file: completion/completionconfigwidget.ui:321
+#. i18n: ectx: property (text), widget (QCheckBox, itemTemplate)
+#: rc.cpp:294
+msgid "Include templates in grouping"
+msgstr "टैम्प्लेट को समूह में शामिल करें"
+
+#. i18n: file: completion/completionconfigwidget.ui:350
+#. i18n: ectx: property (title), widget (QGroupBox, columnMerging)
+#: rc.cpp:297
+msgid "Column Merging"
+msgstr "स्तम्भ मिलाना"
+
+#. i18n: file: completion/completionconfigwidget.ui:375
+#. i18n: ectx: property (text), widget (QTreeWidget, columnMergeTree)
+#: rc.cpp:300
+msgid "Columns"
+msgstr "स्तम्भ"
+
+#. i18n: file: completion/completionconfigwidget.ui:380
+#. i18n: ectx: property (text), widget (QTreeWidget, columnMergeTree)
+#: rc.cpp:303
+msgid "Merged"
+msgstr "मिलाया"
+
+#. i18n: file: completion/completionconfigwidget.ui:385
+#. i18n: ectx: property (text), widget (QTreeWidget, columnMergeTree)
+#: rc.cpp:306
+msgid "Shown"
+msgstr "दिखाया"
 
 #. i18n: file: search/searchbarpower.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: search/searchbarincremental.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:78 rc.cpp:147
+#: rc.cpp:315 rc.cpp:384
 #, fuzzy
 msgid "F&ind:"
 msgstr "ढूंढें:"
@@ -1192,7 +1581,7 @@ msgstr "ढूंढें:"
 #. i18n: ectx: property (toolTip), widget (KComboBox, pattern)
 #. i18n: file: search/searchbarincremental.ui:60
 #. i18n: ectx: property (toolTip), widget (KComboBox, pattern)
-#: rc.cpp:81 rc.cpp:150
+#: rc.cpp:318 rc.cpp:387
 msgid "Text to search for"
 msgstr "ढूंढा जाने वाला पाठ"
 
@@ -1200,7 +1589,7 @@ msgstr "ढूंढा जाने वाला पाठ"
 #. i18n: ectx: property (toolTip), widget (QPushButton, findNext)
 #. i18n: file: search/searchbarincremental.ui:73
 #. i18n: ectx: property (toolTip), widget (QPushButton, next)
-#: rc.cpp:84 rc.cpp:153
+#: rc.cpp:321 rc.cpp:390
 msgid "Jump to next match"
 msgstr "अगले मेल-खाते पाठ में जाएँ"
 
@@ -1208,7 +1597,7 @@ msgstr "अगले मेल-खाते पाठ में जाएँ"
 #. i18n: ectx: property (text), widget (QPushButton, findNext)
 #. i18n: file: search/searchbarincremental.ui:76
 #. i18n: ectx: property (text), widget (QPushButton, next)
-#: rc.cpp:87 rc.cpp:156
+#: rc.cpp:324 rc.cpp:393
 #, fuzzy
 msgid "&Next"
 msgstr "अगला"
@@ -1217,7 +1606,7 @@ msgstr "अगला"
 #. i18n: ectx: property (toolTip), widget (QPushButton, findPrev)
 #. i18n: file: search/searchbarincremental.ui:88
 #. i18n: ectx: property (toolTip), widget (QPushButton, prev)
-#: rc.cpp:90 rc.cpp:159
+#: rc.cpp:327 rc.cpp:396
 msgid "Jump to previous match"
 msgstr "पिछले मेल-खाते पाठ में जाएँ"
 
@@ -1225,85 +1614,85 @@ msgstr "पिछले मेल-खाते पाठ में जाएँ"
 #. i18n: ectx: property (text), widget (QPushButton, findPrev)
 #. i18n: file: search/searchbarincremental.ui:91
 #. i18n: ectx: property (text), widget (QPushButton, prev)
-#: rc.cpp:93 rc.cpp:162
+#: rc.cpp:330 rc.cpp:399
 #, fuzzy
 msgid "&Previous"
 msgstr "पिछला"
 
 #. i18n: file: search/searchbarpower.ui:92
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:96
+#: rc.cpp:333
 #, fuzzy
 msgid "Rep&lace:"
 msgstr "बदलें:"
 
 #. i18n: file: search/searchbarpower.ui:111
 #. i18n: ectx: property (toolTip), widget (KComboBox, replacement)
-#: rc.cpp:99
+#: rc.cpp:336
 msgid "Text to replace with"
 msgstr "पाठ जिसे बदलना है"
 
 #. i18n: file: search/searchbarpower.ui:124
 #. i18n: ectx: property (toolTip), widget (QPushButton, replaceNext)
-#: rc.cpp:102
+#: rc.cpp:339
 msgid "Replace next match"
 msgstr "अगला मिलान बदलें"
 
 #. i18n: file: search/searchbarpower.ui:127
 #. i18n: ectx: property (text), widget (QPushButton, replaceNext)
-#: rc.cpp:105
+#: rc.cpp:342
 msgid "&Replace"
 msgstr "बदलें (&R)"
 
 #. i18n: file: search/searchbarpower.ui:134
 #. i18n: ectx: property (toolTip), widget (QPushButton, replaceAll)
-#: rc.cpp:108
+#: rc.cpp:345
 msgid "Replace all matches"
 msgstr "सभी मिलानों को बदलें"
 
 #. i18n: file: search/searchbarpower.ui:137
 #. i18n: ectx: property (text), widget (QPushButton, replaceAll)
-#: rc.cpp:111
+#: rc.cpp:348
 #, fuzzy
 msgid "Replace &All"
 msgstr "सभी बदलें (&a)"
 
 #. i18n: file: search/searchbarpower.ui:165
 #. i18n: ectx: property (toolTip), widget (QComboBox, searchMode)
-#: rc.cpp:114
+#: rc.cpp:351
 msgid "Search mode"
 msgstr "सर्च मोड"
 
 #. i18n: file: search/searchbarpower.ui:175
 #. i18n: ectx: property (text), item, widget (QComboBox, searchMode)
-#: rc.cpp:117
+#: rc.cpp:354
 #, fuzzy
 msgid "Plain text"
 msgstr "सादा पाठ"
 
 #. i18n: file: search/searchbarpower.ui:180
 #. i18n: ectx: property (text), item, widget (QComboBox, searchMode)
-#: rc.cpp:120
+#: rc.cpp:357
 #, fuzzy
 msgid "Whole words"
 msgstr "संपूर्ण शब्द"
 
 #. i18n: file: search/searchbarpower.ui:185
 #. i18n: ectx: property (text), item, widget (QComboBox, searchMode)
-#: rc.cpp:123
+#: rc.cpp:360
 #, fuzzy
 msgid "Escape sequences"
 msgstr "एस्केप अनुक्रम"
 
 #. i18n: file: search/searchbarpower.ui:190
 #. i18n: ectx: property (text), item, widget (QComboBox, searchMode)
-#: rc.cpp:126
+#: rc.cpp:363
 msgid "Regular expression"
 msgstr "रेगुलर एक्सप्रेशन"
 
 #. i18n: file: search/searchbarpower.ui:211
 #. i18n: ectx: property (toolTip), widget (QCheckBox, matchCase)
-#: rc.cpp:129
+#: rc.cpp:366
 msgid "Case-sensitive searching"
 msgstr "केस संवेदनशील खोज"
 
@@ -1311,41 +1700,41 @@ msgstr "केस संवेदनशील खोज"
 #. i18n: ectx: property (text), widget (QCheckBox, matchCase)
 #. i18n: file: search/searchbarincremental.ui:119
 #. i18n: ectx: property (text), widget (QCheckBox, matchCase)
-#: rc.cpp:132 rc.cpp:165
+#: rc.cpp:369 rc.cpp:402
 msgid "&Match case"
 msgstr "अक्ष मिलाएँ (&M)"
 
 #. i18n: file: search/searchbarpower.ui:221
 #. i18n: ectx: property (text), widget (QCheckBox, selectionOnly)
-#: rc.cpp:135
+#: rc.cpp:372
 #, fuzzy
 msgid "Selection &only"
 msgstr "सिर्फ चयन"
 
 #. i18n: file: search/searchbarpower.ui:230
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:138
+#: rc.cpp:375
 #, fuzzy
 msgid "Mo&de:"
 msgstr "मोड (&M)"
 
 #. i18n: file: search/searchbarpower.ui:243
 #. i18n: ectx: property (text), widget (KPushButton, findAll)
-#: rc.cpp:141
+#: rc.cpp:378
 #, fuzzy
 msgid "&Find All"
 msgstr "अगला ढूंढें (&F)"
 
 #. i18n: file: search/searchbarpower.ui:254
 #. i18n: ectx: property (toolTip), widget (QToolButton, mutate)
-#: rc.cpp:144
+#: rc.cpp:381
 #, fuzzy
 msgid "Switch to incremental search bar"
 msgstr "मेन्यू पट्टी में आने व जाने को स्विच करने के लिए F10 दबाएँ"
 
 #. i18n: file: search/searchbarincremental.ui:126
 #. i18n: ectx: property (toolTip), widget (QToolButton, mutate)
-#: rc.cpp:168
+#: rc.cpp:405
 #, fuzzy
 msgid "Switch to power search and replace bar"
 msgstr ""
@@ -1356,7 +1745,7 @@ msgstr ""
 #. i18n: ectx: Menu (file)
 #. i18n: file: data/katepartsimpleui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:171 rc.cpp:201
+#: rc.cpp:408 rc.cpp:438
 msgid "&File"
 msgstr "फ़ाइल (&F)"
 
@@ -1364,13 +1753,13 @@ msgstr "फ़ाइल (&F)"
 #. i18n: ectx: Menu (edit)
 #. i18n: file: data/katepartsimpleui.rc:12
 #. i18n: ectx: Menu (edit)
-#: rc.cpp:174 rc.cpp:204
+#: rc.cpp:411 rc.cpp:441
 msgid "&Edit"
 msgstr "संपादन (&E)"
 
 #. i18n: file: data/katepartui.rc:29
 #. i18n: ectx: Menu (edit_find_menu)
-#: rc.cpp:177
+#: rc.cpp:414
 msgid "Find Variants"
 msgstr ""
 
@@ -1378,13 +1767,13 @@ msgstr ""
 #. i18n: ectx: Menu (view)
 #. i18n: file: data/katepartsimpleui.rc:35
 #. i18n: ectx: Menu (view)
-#: rc.cpp:180 rc.cpp:207
+#: rc.cpp:417 rc.cpp:444
 msgid "&View"
 msgstr "दृश्य (&V)"
 
 #. i18n: file: data/katepartui.rc:59
 #. i18n: ectx: Menu (codefolding)
-#: rc.cpp:183
+#: rc.cpp:420
 msgid "&Code Folding"
 msgstr "कोड फोल्डिंग (&C)"
 
@@ -1392,19 +1781,19 @@ msgstr "कोड फोल्डिंग (&C)"
 #. i18n: ectx: Menu (tools)
 #. i18n: file: data/katepartsimpleui.rc:43
 #. i18n: ectx: Menu (tools)
-#: rc.cpp:186 rc.cpp:210
+#: rc.cpp:423 rc.cpp:447
 msgid "&Tools"
 msgstr "औज़ार (&T)"
 
 #. i18n: file: data/katepartui.rc:95
 #. i18n: ectx: Menu (wordcompletion)
-#: rc.cpp:189
+#: rc.cpp:426
 msgid "Word Completion"
 msgstr "शब्द पूर्णता"
 
 #. i18n: file: data/katepartui.rc:101
 #. i18n: ectx: Menu (spelling)
-#: rc.cpp:192 spellcheck/spellingmenu.cpp:97
+#: rc.cpp:429 spellcheck/spellingmenu.cpp:97
 msgid "Spelling"
 msgstr "वर्तनी"
 
@@ -1412,7 +1801,7 @@ msgstr "वर्तनी"
 #. i18n: ectx: Menu (settings)
 #. i18n: file: data/katepartsimpleui.rc:66
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:195 rc.cpp:213
+#: rc.cpp:432 rc.cpp:450
 msgid "&Settings"
 msgstr "विन्यास (&S)"
 
@@ -1420,19 +1809,19 @@ msgstr "विन्यास (&S)"
 #. i18n: ectx: ToolBar (mainToolBar)
 #. i18n: file: data/katepartsimpleui.rc:83
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:198 rc.cpp:216
+#: rc.cpp:435 rc.cpp:453
 msgid "Main Toolbar"
 msgstr "मुख्य औज़ार पट्टी"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:9
 #. i18n: ectx: property (title), widget (QGroupBox, gbBorders)
-#: rc.cpp:219 dialogs/katedialogs.cpp:604
+#: rc.cpp:456 dialogs/katedialogs.cpp:604
 msgid "Borders"
 msgstr "किनारा"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:15
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkShowFoldingMarkers)
-#: rc.cpp:222
+#: rc.cpp:459
 #, fuzzy
 msgid ""
 "If this option is checked, every new view will display marks for folding."
@@ -1442,14 +1831,14 @@ msgstr ""
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:18
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowFoldingMarkers)
-#: rc.cpp:225
+#: rc.cpp:462
 #, fuzzy
 msgid "Show &folding markers"
 msgstr "फोल्डिंग निशान दिखाएँ (यदि लागू हो) (&M)"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:25
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkIconBorder)
-#: rc.cpp:228
+#: rc.cpp:465
 #, fuzzy
 msgid ""
 "<p>If this option is checked, every new view will display an icon border on "
@@ -1461,13 +1850,13 @@ msgstr ""
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:28
 #. i18n: ectx: property (text), widget (QCheckBox, chkIconBorder)
-#: rc.cpp:231
+#: rc.cpp:468
 msgid "Show &icon border"
 msgstr "प्रतीक किनारा दिखाएँ (&i)"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:35
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkLineNumbers)
-#: rc.cpp:234
+#: rc.cpp:471
 msgid ""
 "If this option is checked, every new view will display line numbers on the "
 "left hand side."
@@ -1475,13 +1864,13 @@ msgstr "यदि यह विकल्प चुना जाता है, �
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:38
 #. i18n: ectx: property (text), widget (QCheckBox, chkLineNumbers)
-#: rc.cpp:237
+#: rc.cpp:474
 msgid "Show &line numbers"
 msgstr "पंक्ति क्रमांक दिखाएँ (&l)"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:45
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkShowLineModification)
-#: rc.cpp:240
+#: rc.cpp:477
 #, fuzzy
 msgid ""
 "If this option is checked, a small indicator for modified and saved lines is "
@@ -1490,14 +1879,14 @@ msgstr "यदि यह विकल्प चुना जाता है, �
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:48
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowLineModification)
-#: rc.cpp:243
+#: rc.cpp:480
 #, fuzzy
 msgid "Show line modification markers"
 msgstr "फोल्डिंग निशान दिखाएँ (यदि लागू हो) (&M)"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:55
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkScrollbarMarks)
-#: rc.cpp:246
+#: rc.cpp:483
 #, fuzzy
 msgid ""
 "<p>If this option is checked, every new view will show marks on the vertical "
@@ -1508,13 +1897,13 @@ msgstr ""
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:58
 #. i18n: ectx: property (text), widget (QCheckBox, chkScrollbarMarks)
-#: rc.cpp:249
+#: rc.cpp:486
 msgid "Show &scrollbar marks"
 msgstr "स्क्रॉल पट्टी चिह्न दिखाएँ (&s)"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:65
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkScrollbarMiniMap)
-#: rc.cpp:252
+#: rc.cpp:489
 #, fuzzy
 msgid ""
 "If this option is checked, every new view will show a mini map on the "
@@ -1523,14 +1912,14 @@ msgstr "यदि यह विकल्प चुना जाता है, �
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:68
 #. i18n: ectx: property (text), widget (QCheckBox, chkScrollbarMiniMap)
-#: rc.cpp:255
+#: rc.cpp:492
 #, fuzzy
 msgid "Show scrollbar mini-map"
 msgstr "स्क्रॉल पट्टी चिह्न दिखाएँ (&s)"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:84
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkScrollbarMiniMapAll)
-#: rc.cpp:258
+#: rc.cpp:495
 #, fuzzy
 msgid ""
 "If this option is checked, every new view will show a mini map of the whole "
@@ -1539,59 +1928,59 @@ msgstr "यदि यह विकल्प चुना जाता है, �
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:87
 #. i18n: ectx: property (text), widget (QCheckBox, chkScrollbarMiniMapAll)
-#: rc.cpp:261
+#: rc.cpp:498
 #, fuzzy
 msgid "Map the whole document"
 msgstr "मौज़ूदा दस्तावेज़ सहेजें"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:113
 #. i18n: ectx: property (text), widget (QLabel, labelMiniMapWidth)
-#: rc.cpp:264
+#: rc.cpp:501
 #, fuzzy
 msgid "Minimap Width"
 msgstr "न्यूनतम जोड़ मिलाएँ (&M)"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:157
 #. i18n: ectx: property (text), widget (QLabel, lblShowScrollbars)
-#: rc.cpp:267
+#: rc.cpp:504
 msgid "Scrollbars visibility:"
 msgstr ""
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:168
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbShowScrollbars)
-#: rc.cpp:270 dialogs/katedialogs.cpp:611
+#: rc.cpp:507 dialogs/katedialogs.cpp:611
 msgid "Always On"
 msgstr "हमेशा चालू"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:173
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbShowScrollbars)
-#: rc.cpp:273
+#: rc.cpp:510
 msgid "Show When Needed"
 msgstr ""
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:178
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbShowScrollbars)
-#: rc.cpp:276
+#: rc.cpp:513
 #, fuzzy
 msgid "Always Off"
 msgstr "हमेशा"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:191
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, gbSortBookmarks)
-#: rc.cpp:279
+#: rc.cpp:516
 msgid ""
 "Choose how the bookmarks should be ordered in the <b>Bookmarks</b> menu."
 msgstr "चुनें कि  पसंदीदा  किस क्रम में <b> पसंदीदा </b> मेन्यू में हों."
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:194
 #. i18n: ectx: property (title), widget (QGroupBox, gbSortBookmarks)
-#: rc.cpp:282
+#: rc.cpp:519
 msgid "Sort Bookmarks Menu"
 msgstr " पसंदीदा  मेन्यू क्रमबद्ध करें"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:200
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, rbSortBookmarksByCreation)
-#: rc.cpp:285
+#: rc.cpp:522
 msgid ""
 "Each new bookmark will be added to the bottom, independently from where it "
 "is placed in the document."
@@ -1601,31 +1990,31 @@ msgstr ""
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:203
 #. i18n: ectx: property (text), widget (QRadioButton, rbSortBookmarksByCreation)
-#: rc.cpp:288
+#: rc.cpp:525
 msgid "By c&reation"
 msgstr "रचना द्वारा (&r)"
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:210
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, rbSortBookmarksByPosition)
-#: rc.cpp:291
+#: rc.cpp:528
 msgid "The bookmarks will be ordered by the line numbers they are placed at."
 msgstr "पंक्ति क्रमांक के अनुसार जैसे रखे गए हैं,  पसंदीदा  उस क्रम में होंगे."
 
 #. i18n: file: dialogs/bordersappearanceconfigwidget.ui:213
 #. i18n: ectx: property (text), widget (QRadioButton, rbSortBookmarksByPosition)
-#: rc.cpp:294
+#: rc.cpp:531
 msgid "By &position"
 msgstr "स्थिति द्वारा (&p)"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:17
 #. i18n: ectx: property (text), widget (QLabel, lblMode)
-#: rc.cpp:297
+#: rc.cpp:534
 msgid "Default indentation mode:"
 msgstr "डिफ़ॉल्ट इंडेटेशन मोड:"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:27
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cmbMode)
-#: rc.cpp:300
+#: rc.cpp:537
 msgid ""
 "This is a list of available indentation modes. The specified indentation "
 "mode will be used for all new documents. Be aware that it is also possible "
@@ -1635,35 +2024,35 @@ msgstr ""
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:49
 #. i18n: ectx: property (title), widget (QGroupBox, gbIndentationMode)
-#: rc.cpp:303
+#: rc.cpp:540
 #, fuzzy
 msgid "Indent using"
 msgstr "जगह छोड़ना"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:55
 #. i18n: ectx: property (text), widget (QRadioButton, rbIndentWithTabs)
-#: rc.cpp:306
+#: rc.cpp:543
 #, fuzzy
 msgid "&Tabulators"
 msgstr "टेबुलेटर्स"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:62
 #. i18n: ectx: property (text), widget (QRadioButton, rbIndentWithSpaces)
-#: rc.cpp:309
+#: rc.cpp:546
 #, fuzzy
 msgid "&Spaces"
 msgstr "बदलें (&R)"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:69
 #. i18n: ectx: property (text), widget (QLabel, lblIndentWidth)
-#: rc.cpp:312
+#: rc.cpp:549
 #, fuzzy
 msgid "&Indentation width:"
 msgstr "अनुकूलतम चौड़ाई (~O)"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:79
 #. i18n: ectx: property (whatsThis), widget (KIntSpinBox, sbIndentWidth)
-#: rc.cpp:315
+#: rc.cpp:552
 msgid ""
 "The indentation width is the number of spaces which is used to indent a "
 "line. If the option <b>Insert spaces instead of tabulators</b> in the "
@@ -1673,27 +2062,27 @@ msgstr ""
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:95
 #. i18n: ectx: property (text), widget (QRadioButton, rbIndentMixed)
-#: rc.cpp:318
+#: rc.cpp:555
 #, fuzzy
 msgid "Tabulators &and Spaces"
 msgstr "टेबुलेटर्स"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:115
 #. i18n: ectx: property (text), widget (QLabel, lblTabWidth)
-#: rc.cpp:321
+#: rc.cpp:558
 msgid "Tab wi&dth:"
 msgstr "टैब चौड़ाई: (&d)"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:144
 #. i18n: ectx: property (title), widget (QGroupBox, gbProperties)
-#: rc.cpp:324
+#: rc.cpp:561
 #, fuzzy
 msgid "Indentation Properties"
 msgstr "दस्तावेज गुण"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:150
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkKeepExtraSpaces)
-#: rc.cpp:327
+#: rc.cpp:564
 msgid ""
 "If this option is disabled, changing the indentation level aligns a line to "
 "a multiple of the width specified in <b>Indentation width</b>."
@@ -1701,14 +2090,14 @@ msgstr ""
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:153
 #. i18n: ectx: property (text), widget (QCheckBox, chkKeepExtraSpaces)
-#: rc.cpp:330
+#: rc.cpp:567
 #, fuzzy
 msgid "&Keep extra spaces"
 msgstr "अतिरिक्त जगह रखें"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:160
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkIndentPaste)
-#: rc.cpp:333
+#: rc.cpp:570
 msgid ""
 "If this option is selected, pasted code from the clipboard is indented. "
 "Triggering the <b>undo</b>-action removes the indentation."
@@ -1716,21 +2105,21 @@ msgstr ""
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:163
 #. i18n: ectx: property (text), widget (QCheckBox, chkIndentPaste)
-#: rc.cpp:336
+#: rc.cpp:573
 #, fuzzy
 msgid "Adjust indentation of code &pasted from the clipboard"
 msgstr "क्लिपबोर्ड की विषय को नहीं चिपका सकते है ."
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:173
 #. i18n: ectx: property (title), widget (QGroupBox, gbKeys)
-#: rc.cpp:339
+#: rc.cpp:576
 #, fuzzy
 msgid "Indentation Actions"
 msgstr "क्रिया चलाएँ (_E)"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:179
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkBackspaceUnindents)
-#: rc.cpp:342
+#: rc.cpp:579
 msgid ""
 "If this option is selected, the <b>Backspace</b> key decreases the "
 "indentation level if the cursor is located in the leading blank space of a "
@@ -1739,14 +2128,14 @@ msgstr ""
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:182
 #. i18n: ectx: property (text), widget (QCheckBox, chkBackspaceUnindents)
-#: rc.cpp:345
+#: rc.cpp:582
 #, fuzzy
 msgid "&Backspace key in leading blank space unindents"
 msgstr "पैराग्राफ में व्रैप पंक्तियों के बीच रिक्त स्थानों के पिक्सल"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:192
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:348
+#: rc.cpp:585
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -1760,7 +2149,7 @@ msgstr ""
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:225
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, rbTabAdvances)
-#: rc.cpp:354
+#: rc.cpp:591
 msgid ""
 "If this option is selected, the <b>Tab</b> key always inserts white space so "
 "that the next tab position is reached. If the option <b>Insert spaces "
@@ -1770,14 +2159,14 @@ msgstr ""
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:228
 #. i18n: ectx: property (text), widget (QRadioButton, rbTabAdvances)
-#: rc.cpp:357
+#: rc.cpp:594
 #, fuzzy
 msgid "Always advance to the &next tab position"
 msgstr "अगले टैब पर स्विच करने हेतु कुंजीपटल शॉर्टकट"
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:235
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, rbTabIndents)
-#: rc.cpp:360
+#: rc.cpp:597
 msgid ""
 "If this option is selected, the <b>Tab</b> key always indents the current "
 "line by the number of character positions specified in <b>Indentation width</"
@@ -1786,14 +2175,14 @@ msgstr ""
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:238
 #. i18n: ectx: property (text), widget (QRadioButton, rbTabIndents)
-#: rc.cpp:363
+#: rc.cpp:600
 #, fuzzy
 msgid "Always increase indentation &level"
 msgstr "यह <b>टैब</b>कुंजी के द्वारा हाशिए का स्तर बढ़ाने देता है."
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:245
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, rbTabSmart)
-#: rc.cpp:366
+#: rc.cpp:603
 msgid ""
 "If this option is selected, the <b>Tab</b> key either indents the current "
 "line or advances to the next tab position.<p> If the insertion point is at "
@@ -1809,33 +2198,33 @@ msgstr ""
 
 #. i18n: file: dialogs/indentationconfigwidget.ui:248
 #. i18n: ectx: property (text), widget (QRadioButton, rbTabSmart)
-#: rc.cpp:369
+#: rc.cpp:606
 #, fuzzy
 msgid "Increase indentation level if in l&eading blank space"
 msgstr "पैराग्राफ में व्रैप पंक्तियों के बीच रिक्त स्थानों के पिक्सल"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:29
 #. i18n: ectx: property (text), widget (QLabel, lblDynamicWordWrapIndicators)
-#: rc.cpp:378
+#: rc.cpp:615
 msgid "Dynamic &word wrap indicators (if applicable):"
 msgstr "गतिशील पाठ लपेट सूचक (यदि लागू हो): (&w)"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:39
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cmbDynamicWordWrapIndicator)
-#: rc.cpp:381
+#: rc.cpp:618
 msgid "Choose when the Dynamic Word Wrap Indicators should be displayed."
 msgstr "चुनें कि कब गतिशील पाठ लपेट सूचक दिखें"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:46
 #. i18n: ectx: property (text), widget (QLabel, lblDynamicWordWrapIndicators_2)
-#: rc.cpp:384
+#: rc.cpp:621
 #, fuzzy
 msgid "Align dynamically wrapped lines to indentation depth:"
 msgstr "विज़ेट के सिरों पर क्या पंक्तियों को व्रैप करना है"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:62
 #. i18n: ectx: property (whatsThis), widget (KIntSpinBox, sbDynamicWordWrapDepth)
-#: rc.cpp:388
+#: rc.cpp:625
 #, no-c-format
 msgid ""
 "<p>Enables the start of dynamically wrapped lines to be aligned vertically "
@@ -1851,27 +2240,27 @@ msgstr ""
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, sbDynamicWordWrapDepth)
 #. i18n: file: dialogs/navigationconfigwidget.ui:56
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, sbAutoCenterCursor)
-#: rc.cpp:391 rc.cpp:500
+#: rc.cpp:628 rc.cpp:737
 msgid "Disabled"
 msgstr "अक्षम"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:68
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, sbDynamicWordWrapDepth)
-#: rc.cpp:395
+#: rc.cpp:632
 #, fuzzy, no-c-format
 msgid "% of View Width"
 msgstr "दृश्य चौड़ाई का % o"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:84
 #. i18n: ectx: property (title), widget (QGroupBox, gbWhitespaceHighlighting)
-#: rc.cpp:398
+#: rc.cpp:635
 #, fuzzy
 msgid "Whitespace Highlighting"
 msgstr "उभार रहे"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:90
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkShowTabs)
-#: rc.cpp:401
+#: rc.cpp:638
 msgid ""
 "The editor will display a symbol to indicate the presence of a tab in the "
 "text."
@@ -1879,25 +2268,25 @@ msgstr "संपादक एक चिह्न दिखाएगा कि �
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:93
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowTabs)
-#: rc.cpp:404
+#: rc.cpp:641
 msgid "&Highlight tabulators"
 msgstr "टेबुलेटर उभारें (&H)"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:100
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowSpaces)
-#: rc.cpp:407
+#: rc.cpp:644
 msgid "Highlight trailing &spaces"
 msgstr "ट्रेलिंग स्थान उभारें (&s)"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:110
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:410 dialogs/katedialogs.cpp:787
+#: rc.cpp:647 dialogs/katedialogs.cpp:787
 msgid "Advanced"
 msgstr ""
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:116
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkDeveloperMode)
-#: rc.cpp:413
+#: rc.cpp:650
 msgid ""
 "Changing this mode affects only newly opened / created documents. In KWrite "
 "a restart is recommended."
@@ -1905,13 +2294,13 @@ msgstr ""
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:119
 #. i18n: ectx: property (text), widget (QCheckBox, chkDeveloperMode)
-#: rc.cpp:416
+#: rc.cpp:653
 msgid "Enable power user mode (KDE 3 mode)"
 msgstr ""
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:126
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkShowIndentationLines)
-#: rc.cpp:419
+#: rc.cpp:656
 #, fuzzy
 msgid ""
 "If this is enabled, the editor will display vertical lines to help identify "
@@ -1920,14 +2309,14 @@ msgstr "यदि यह विकल्प चुना जाता है, �
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:129
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowIndentationLines)
-#: rc.cpp:422
+#: rc.cpp:659
 #, fuzzy
 msgid "Show i&ndentation lines"
 msgstr "स्नेप लकीरें दिखाएँ"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:136
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkShowWholeBracketExpression)
-#: rc.cpp:425
+#: rc.cpp:662
 msgid ""
 "If this is enabled, the range between the selected matching brackets will be "
 "highlighted."
@@ -1935,33 +2324,33 @@ msgstr ""
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:139
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowWholeBracketExpression)
-#: rc.cpp:428
+#: rc.cpp:665
 msgid "Highlight range between selected brackets"
 msgstr ""
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:146
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkAnimateBracketMatching)
-#: rc.cpp:431
+#: rc.cpp:668
 #, fuzzy
 msgid "Flash matching brackets"
 msgstr "मैचिंग ब्रेकेट चुनें"
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:149
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkAnimateBracketMatching)
-#: rc.cpp:434
+#: rc.cpp:671
 msgid ""
 "If this is enabled, matching brackets are animated for better visibility."
 msgstr ""
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:152
 #. i18n: ectx: property (text), widget (QCheckBox, chkAnimateBracketMatching)
-#: rc.cpp:437
+#: rc.cpp:674
 msgid "Animate bracket matching"
 msgstr ""
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:162
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkFoldFirstLine)
-#: rc.cpp:440
+#: rc.cpp:677
 msgid ""
 "When this setting is enabled, the editor view automatically folds\n"
 "comment blocks that start on the first line of the document. This is\n"
@@ -1971,32 +2360,32 @@ msgstr ""
 
 #. i18n: file: dialogs/textareaappearanceconfigwidget.ui:165
 #. i18n: ectx: property (text), widget (QCheckBox, chkFoldFirstLine)
-#: rc.cpp:446
+#: rc.cpp:683
 #, fuzzy
 msgid "Fold First Line"
 msgstr "पंक्ति पर जाएँ"
 
 #. i18n: file: dialogs/commandmenueditwidget.ui:12
 #. i18n: ectx: property (title), widget (QGroupBox, gbEdit)
-#: rc.cpp:449
+#: rc.cpp:686
 msgid "Edit Command"
 msgstr "कमांड का संपादन करें"
 
 #. i18n: file: dialogs/commandmenueditwidget.ui:26
 #. i18n: ectx: property (text), widget (QLabel, lblCommand)
-#: rc.cpp:452
+#: rc.cpp:689
 msgid "&Associated command:"
 msgstr "सम्बद्ध कमांडः (&A)"
 
 #. i18n: file: dialogs/commandmenueditwidget.ui:87
 #. i18n: ectx: property (toolTip), widget (KIconButton, btnIcon)
-#: rc.cpp:458
+#: rc.cpp:695
 msgid "Choose an icon."
 msgstr "एक प्रतीक चुनें."
 
 #. i18n: file: dialogs/commandmenueditwidget.ui:90
 #. i18n: ectx: property (whatsThis), widget (KIconButton, btnIcon)
-#: rc.cpp:461
+#: rc.cpp:698
 #, fuzzy
 msgid "<p>This icon will be displayed in the menu and toolbar.</p>"
 msgstr ""
@@ -2004,25 +2393,25 @@ msgstr ""
 
 #. i18n: file: dialogs/commandmenueditwidget.ui:102
 #. i18n: ectx: property (text), widget (QLabel, lblDescription)
-#: rc.cpp:464
+#: rc.cpp:701
 msgid "&Description:"
 msgstr "वर्णनः (&D)"
 
 #. i18n: file: dialogs/commandmenueditwidget.ui:115
 #. i18n: ectx: property (text), widget (QLabel, lblCategory)
-#: rc.cpp:467
+#: rc.cpp:704
 msgid "&Category:"
 msgstr "वर्ग: (&C)"
 
 #. i18n: file: dialogs/modonhdwidget.ui:23
 #. i18n: ectx: property (text), widget (QCheckBox, chkIgnoreWhiteSpaces)
-#: rc.cpp:470
+#: rc.cpp:707
 msgid "Ignore white space changes"
 msgstr "श्वेतस्थान में परिवर्तनों को नज़र अंदाज़ करें"
 
 #. i18n: file: dialogs/modonhdwidget.ui:30
 #. i18n: ectx: property (whatsThis), widget (QPushButton, btnDiff)
-#: rc.cpp:473
+#: rc.cpp:710
 #, fuzzy
 msgid ""
 "Calculates the difference between the editor contents and the disk file "
@@ -2033,19 +2422,19 @@ msgstr ""
 
 #. i18n: file: dialogs/modonhdwidget.ui:33
 #. i18n: ectx: property (text), widget (QPushButton, btnDiff)
-#: rc.cpp:476
+#: rc.cpp:713
 msgid "&View Difference"
 msgstr "भिन्नता देखें (&V)"
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:12
 #. i18n: ectx: property (title), widget (QGroupBox, gbCursorMovement)
-#: rc.cpp:479
+#: rc.cpp:716
 msgid "Text Cursor Movement"
 msgstr "पाठ संकेतक गतिविधि"
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:18
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkSmartHome)
-#: rc.cpp:482
+#: rc.cpp:719
 #, fuzzy
 msgid ""
 "When selected, pressing the home key will cause the cursor to skip "
@@ -2057,14 +2446,14 @@ msgstr ""
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:21
 #. i18n: ectx: property (text), widget (QCheckBox, chkSmartHome)
-#: rc.cpp:485
+#: rc.cpp:722
 #, fuzzy
 msgid "Smart ho&me and smart end"
 msgstr "~~ और ` की पंक्ति के अंत में उपेक्षा करें (~n)"
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:28
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkPagingMovesCursor)
-#: rc.cpp:488
+#: rc.cpp:725
 msgid ""
 "Selects whether the PageUp and PageDown keys should alter the vertical "
 "position of the cursor relative to the top of the view."
@@ -2073,20 +2462,20 @@ msgstr ""
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:31
 #. i18n: ectx: property (text), widget (QCheckBox, chkPagingMovesCursor)
-#: rc.cpp:491
+#: rc.cpp:728
 msgid "&PageUp/PageDown moves cursor"
 msgstr "पेज-अप/पेज-डाउन माउस संकेतक को खिसकाए (&P)"
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:43
 #. i18n: ectx: property (text), widget (QLabel, lblAutoCenterCursor)
-#: rc.cpp:494
+#: rc.cpp:731
 #, fuzzy
 msgid "&Autocenter cursor:"
 msgstr "आटोसेंटर संकेतक (पंक्तियाँ): (&A)"
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:53
 #. i18n: ectx: property (whatsThis), widget (KIntSpinBox, sbAutoCenterCursor)
-#: rc.cpp:497
+#: rc.cpp:734
 msgid ""
 "Sets the number of lines to maintain visible above and below the cursor when "
 "possible."
@@ -2094,7 +2483,7 @@ msgstr "जहां संभव हो, नियत करता है क�
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:59
 #. i18n: ectx: property (suffix), widget (KIntSpinBox, sbAutoCenterCursor)
-#: rc.cpp:503
+#: rc.cpp:740
 #, fuzzy
 msgid " lines"
 msgstr "इनलाइन"
@@ -2103,87 +2492,87 @@ msgstr "इनलाइन"
 #. i18n: ectx: property (title), widget (QGroupBox, cbNavigationMisc)
 #. i18n: file: dialogs/editconfigwidget.ui:87
 #. i18n: ectx: property (title), widget (QGroupBox, gbMisc)
-#: rc.cpp:506 rc.cpp:752
+#: rc.cpp:743 rc.cpp:890
 msgid "Misc"
 msgstr "विविध"
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:92
 #. i18n: ectx: property (text), widget (QLabel, lblTextSelectionMode)
-#: rc.cpp:509
+#: rc.cpp:746
 #, fuzzy
 msgid "Text selection mode:"
 msgstr "पाठ चयन मोड"
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:103
 #. i18n: ectx: property (text), item, widget (QComboBox, cbTextSelectionMode)
-#: rc.cpp:512
+#: rc.cpp:749
 #, fuzzy
 msgid "Normal"
 msgstr "सामान्य"
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:108
 #. i18n: ectx: property (text), item, widget (QComboBox, cbTextSelectionMode)
-#: rc.cpp:515
+#: rc.cpp:752
 #, fuzzy
 msgid "Persistent"
 msgstr "परसिस्टेंट (&P)"
 
 #. i18n: file: dialogs/navigationconfigwidget.ui:131
 #. i18n: ectx: property (text), widget (QCheckBox, chkScrollPastEnd)
-#: rc.cpp:518
+#: rc.cpp:755
 msgid "Allow scrolling past the end of the document"
 msgstr ""
 
 #. i18n: file: dialogs/completionconfigtab.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, gbGeneral)
-#: rc.cpp:521 dialogs/katedialogs.cpp:529 dialogs/katedialogs.cpp:600
+#: rc.cpp:758 dialogs/katedialogs.cpp:529 dialogs/katedialogs.cpp:600
 #: dialogs/katedialogs.cpp:786
 msgid "General"
 msgstr "सामान्य"
 
 #. i18n: file: dialogs/completionconfigtab.ui:26
 #. i18n: ectx: property (text), widget (QCheckBox, chkAutoCompletionEnabled)
-#: rc.cpp:524
+#: rc.cpp:761
 #, fuzzy
 msgid "Enable &auto completion"
 msgstr "शब्द पूर्णता"
 
 #. i18n: file: dialogs/completionconfigtab.ui:36
 #. i18n: ectx: property (title), widget (QGroupBox, gbWordCompletion)
-#: rc.cpp:527 completion/katewordcompletion.cpp:97
+#: rc.cpp:764 completion/katewordcompletion.cpp:97
 #, fuzzy
 msgid "Auto Word Completion"
 msgstr "शब्द पूर्णता"
 
 #. i18n: file: dialogs/completionconfigtab.ui:50
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:530
+#: rc.cpp:767
 msgid "Minimal word length to complete:"
 msgstr ""
 
 #. i18n: file: dialogs/completionconfigtab.ui:75
 #. i18n: ectx: property (toolTip), widget (QCheckBox, removeTail)
-#: rc.cpp:533
+#: rc.cpp:770
 msgid "Remove tail of a previous word when completion item chosen from a list"
 msgstr ""
 
 #. i18n: file: dialogs/completionconfigtab.ui:78
 #. i18n: ectx: property (text), widget (QCheckBox, removeTail)
-#: rc.cpp:536
+#: rc.cpp:773
 #, fuzzy
 msgid "Remove tail on complete"
 msgstr "ट्रेलिंग स्पेसेस हटाएँ (&m)"
 
 #. i18n: file: dialogs/completionconfigtab.ui:88
 #. i18n: ectx: property (title), widget (QGroupBox, gbKeywordCompletion)
-#: rc.cpp:539
+#: rc.cpp:776
 #, fuzzy
 msgid "Keyword completion"
 msgstr "शब्द पूर्णता"
 
 #. i18n: file: dialogs/completionconfigtab.ui:97
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:542
+#: rc.cpp:779
 msgid ""
 "Keyword completion provides suggestions based on the keywords which exist in "
 "the document's language."
@@ -2191,31 +2580,31 @@ msgstr ""
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:9
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:545
+#: rc.cpp:782
 msgid "Text Area Background"
 msgstr "पाठ क्षेत्र पृष्ठभूमि"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:18
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:548
+#: rc.cpp:785
 msgid "Normal text:"
 msgstr "सामान्य पाठ:"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:25
 #. i18n: ectx: property (whatsThis), widget (KColorButton, back)
-#: rc.cpp:551 schema/kateschemaconfig.cpp:87
+#: rc.cpp:788 schema/kateschemaconfig.cpp:87
 msgid "<p>Sets the background color of the editing area.</p>"
 msgstr "<p>संपादन क्षेत्र के पृष्ठभूमि रंग नियत करे.</p>"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:554
+#: rc.cpp:791
 msgid "Selected text:"
 msgstr "चुना गया पाठ:"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:39
 #. i18n: ectx: property (whatsThis), widget (KColorButton, selected)
-#: rc.cpp:557
+#: rc.cpp:794
 msgid ""
 "<p>Sets the background color of the selection.</p><p>To set the text color "
 "for selected text, use the \"<b>Configure Highlighting</b>\" dialog.</p>"
@@ -2225,13 +2614,13 @@ msgstr ""
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:560
+#: rc.cpp:797
 msgid "Current line:"
 msgstr "मौज़ूदा पंक्ति:"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:53
 #. i18n: ectx: property (whatsThis), widget (KColorButton, current)
-#: rc.cpp:563 schema/kateschemaconfig.cpp:99
+#: rc.cpp:800 schema/kateschemaconfig.cpp:99
 msgid ""
 "<p>Sets the background color of the currently active line, which means the "
 "line where your cursor is positioned.</p>"
@@ -2241,13 +2630,13 @@ msgstr ""
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:60
 #. i18n: ectx: property (whatsThis), widget (KComboBox, combobox)
-#: rc.cpp:566
+#: rc.cpp:803
 msgid "<p>Select the marker type you want to change.</p>"
 msgstr "<p>मार्कर क़िस्म जिसे आप बदलना चाहते हैं उसे चुनें.</p>"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:67
 #. i18n: ectx: property (whatsThis), widget (KColorButton, markers)
-#: rc.cpp:569
+#: rc.cpp:806
 msgid ""
 "<p>Sets the background color of the selected marker type.</p><p><b>Note</b>: "
 "The marker color is displayed lightly because of transparency.</p>"
@@ -2257,25 +2646,25 @@ msgstr ""
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:77
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:572
+#: rc.cpp:809
 msgid "Additional Elements"
 msgstr "अतिरिक्त तत्व"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:86
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:575
+#: rc.cpp:812
 msgid "Left border background:"
 msgstr "बायाँ किनारा पृष्ठभूमि:"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:96
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:578
+#: rc.cpp:815
 msgid "Line numbers:"
 msgstr "पंक्ति क्रमांक:"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:103
 #. i18n: ectx: property (whatsThis), widget (KColorButton, linenumber)
-#: rc.cpp:581
+#: rc.cpp:818
 msgid ""
 "<p>This color will be used to draw the line numbers (if enabled) and the "
 "lines in the code-folding pane.</p>"
@@ -2283,13 +2672,13 @@ msgstr ""
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:110
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:584
+#: rc.cpp:821
 msgid "Bracket highlight:"
 msgstr "ब्रेकेट उभारें:"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:117
 #. i18n: ectx: property (whatsThis), widget (KColorButton, bracket)
-#: rc.cpp:587 schema/kateschemaconfig.cpp:190
+#: rc.cpp:824 schema/kateschemaconfig.cpp:190
 msgid ""
 "<p>Sets the bracket matching color. This means, if you place the cursor e.g. "
 "at a <b>(</b>, the matching <b>)</b> will be highlighted with this color.</p>"
@@ -2299,13 +2688,13 @@ msgstr ""
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:124
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:590
+#: rc.cpp:827
 msgid "Word wrap markers:"
 msgstr "वर्ड रैप निशान:"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:131
 #. i18n: ectx: property (whatsThis), widget (KColorButton, wwmarker)
-#: rc.cpp:593 schema/kateschemaconfig.cpp:141
+#: rc.cpp:830 schema/kateschemaconfig.cpp:141
 msgid ""
 "<p>Sets the color of Word Wrap-related markers:</p><dl><dt>Static Word Wrap</"
 "dt><dd>A vertical line which shows the column where text is going to be "
@@ -2318,26 +2707,26 @@ msgstr ""
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:138
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:596
+#: rc.cpp:833
 msgid "Tab and space markers:"
 msgstr "टैब तथा स्पेस चिह्नक:"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:145
 #. i18n: ectx: property (whatsThis), widget (KColorButton, tmarker)
-#: rc.cpp:599 schema/kateschemaconfig.cpp:178
+#: rc.cpp:836 schema/kateschemaconfig.cpp:178
 #, fuzzy
 msgid "<p>Sets the color of the tabulator marks.</p>"
 msgstr "<p>टेबुलेटर मार्क्स के रंग को नियत करता है:</p>"
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:152
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:602
+#: rc.cpp:839
 msgid "Spelling mistake line:"
 msgstr ""
 
 #. i18n: file: dialogs/schemaconfigcolortab.ui:159
 #. i18n: ectx: property (whatsThis), widget (KColorButton, spellingmistakeline)
-#: rc.cpp:605 schema/kateschemaconfig.cpp:172
+#: rc.cpp:842 schema/kateschemaconfig.cpp:172
 #, fuzzy
 msgid ""
 "<p>Sets the color of the line that is used to indicate spelling mistakes.</p>"
@@ -2345,257 +2734,68 @@ msgstr "<p>टेबुलेटर मार्क्स के रंग क�
 
 #. i18n: file: dialogs/commandmenuconfigwidget.ui:22
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
-#: rc.cpp:608 completion/katecompletionmodel.cpp:1236
+#: rc.cpp:845 completion/katecompletionmodel.cpp:1236
 #: dialogs/katedialogs.cpp:1032
 msgid "Name"
 msgstr "नाम "
 
 #. i18n: file: dialogs/commandmenuconfigwidget.ui:27
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
-#: rc.cpp:611
+#: rc.cpp:848
 msgid "Command"
 msgstr "कमांड"
 
 #. i18n: file: dialogs/commandmenuconfigwidget.ui:32
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
-#: rc.cpp:614
+#: rc.cpp:851
 msgid "Description"
 msgstr "वर्णन"
 
 #. i18n: file: dialogs/commandmenuconfigwidget.ui:48
 #. i18n: ectx: property (text), widget (QPushButton, btnEditEntry)
-#: rc.cpp:617
+#: rc.cpp:854
 #, fuzzy
 msgid "Edit Entry..."
 msgstr "प्रविष्टि का संपादन करें..."
 
 #. i18n: file: dialogs/commandmenuconfigwidget.ui:58
 #. i18n: ectx: property (text), widget (QPushButton, btnRemoveEntry)
-#: rc.cpp:620
+#: rc.cpp:857
 #, fuzzy
 msgid "Remove Entry"
 msgstr "प्रविष्टि मिटाएँ"
 
 #. i18n: file: dialogs/commandmenuconfigwidget.ui:78
 #. i18n: ectx: property (text), widget (QPushButton, btnAddEntry)
-#: rc.cpp:623
+#: rc.cpp:860
 #, fuzzy
 msgid "Add Entry..."
 msgstr "प्रविष्टि जोड़ें..."
 
 #. i18n: file: dialogs/commandmenuconfigwidget.ui:93
 #. i18n: ectx: property (title), widget (QGroupBox, gbNotes)
-#: rc.cpp:626
+#: rc.cpp:863
 msgid "Further Notes"
 msgstr "आगे की टिप्पणियाँ"
 
 #. i18n: file: dialogs/commandmenuconfigwidget.ui:108
 #. i18n: ectx: property (text), widget (QLabel, lblNotes)
-#: rc.cpp:629
+#: rc.cpp:866
 msgid ""
 "<p>The entries are accessible through the submenu <b>Commands</b> in the "
 "<b>Tools</b> menu. For faster access it is possible to assign <b>shortcuts</"
 "b> in the shortcut configuration page after applying the changes.</p>"
 msgstr ""
 
-#. i18n: file: dialogs/completionconfigwidget.ui:9
-#. i18n: ectx: property (title), widget (QGroupBox, sorting)
-#: rc.cpp:632
-msgid "Sorting"
-msgstr "क्रमबद्ध करने में"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, sortingAlphabetical)
-#: rc.cpp:635
-msgid "Alphabetical"
-msgstr "अकारादि"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:36
-#. i18n: ectx: property (text), widget (QCheckBox, sortingReverse)
-#: rc.cpp:638
-msgid "Reverse"
-msgstr "विपरीत"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:43
-#. i18n: ectx: property (text), widget (QCheckBox, sortingCaseSensitive)
-#: rc.cpp:641
-#, fuzzy
-msgid "Case sensitive"
-msgstr "केस सेंसिटिव (&s)"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:50
-#. i18n: ectx: property (text), widget (QCheckBox, sortingInheritanceDepth)
-#: rc.cpp:644
-#, fuzzy
-msgid "Inheritance depth"
-msgstr "इनहेरिटेंस गहराई"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:77
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:647
-#, fuzzy
-msgid "Order of Groupings (select a grouping method to configure):"
-msgstr "मल्टीडिस्क उपकरणों को कॉन्फ़िगर करने हेतु प्रस्तावित क्रियाओं में से एक चुनें."
-
-#. i18n: file: dialogs/completionconfigwidget.ui:97
-#. i18n: ectx: property (text), widget (QToolButton, groupingOrderUp)
-#. i18n: file: dialogs/completionconfigwidget.ui:226
-#. i18n: ectx: property (text), widget (QToolButton, groupingUp)
-#. i18n: file: dialogs/completionconfigwidget.ui:398
-#. i18n: ectx: property (text), widget (QToolButton, columnUp)
-#: rc.cpp:650 rc.cpp:689 rc.cpp:725
-msgid "^"
-msgstr "^"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:104
-#. i18n: ectx: property (text), widget (QToolButton, groupingOrderDown)
-#. i18n: file: dialogs/completionconfigwidget.ui:233
-#. i18n: ectx: property (text), widget (QToolButton, groupingDown)
-#. i18n: file: dialogs/completionconfigwidget.ui:405
-#. i18n: ectx: property (text), widget (QToolButton, columnDown)
-#: rc.cpp:653 rc.cpp:692 rc.cpp:728
-msgid "\\/"
-msgstr "\\/"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:120
-#. i18n: ectx: property (title), widget (QGroupBox, filtering)
-#: rc.cpp:656
-msgid "Filtering"
-msgstr "फ़िल्टर किया जा रहा है"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:135
-#. i18n: ectx: property (text), widget (QCheckBox, filteringContextMatchOnly)
-#: rc.cpp:659
-msgid "Suitable context matches only"
-msgstr "सिर्फ उपयुक्त संदर्भित मिलान"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:142
-#. i18n: ectx: property (text), widget (QCheckBox, filteringHideAttributes)
-#: rc.cpp:662
-msgid "Hide completions with the following attributes:"
-msgstr "पूर्णता को निम्न गुणों के साथ छुपाएँ:"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:152
-#. i18n: ectx: property (label), widget (KIntNumInput, filteringMaximumInheritanceDepth)
-#: rc.cpp:665
-#, fuzzy
-msgid "Maximum inheritance depth:"
-msgstr "अधिकतम इनहैरिटेंस गहराई"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:164
-#. i18n: ectx: property (specialValueText), widget (KIntNumInput, filteringMaximumInheritanceDepth)
-#: rc.cpp:668
-msgid "Infinity"
-msgstr "अनंत"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:174
-#. i18n: ectx: property (title), widget (QGroupBox, grouping)
-#: rc.cpp:671
-msgid "Grouping"
-msgstr "समूहबद्धता"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:193
-#. i18n: ectx: property (text), widget (QTreeWidget, groupingMethods)
-#: rc.cpp:674
-#, fuzzy
-msgid "Grouping Method"
-msgstr "समूहीकरण विधि"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:198
-#. i18n: ectx: property (text), item, widget (QTreeWidget, groupingMethods)
-#: rc.cpp:677
-msgid "Scope type (local, namespace, global)"
-msgstr "स्कोप किस्म (स्थानीय, नेमस्पेस, वैश्विक)"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:203
-#. i18n: ectx: property (text), item, widget (QTreeWidget, groupingMethods)
-#: rc.cpp:680
-msgid "Scope (eg. per class)"
-msgstr "स्कोप (उदा. प्रति क्लास)"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:208
-#. i18n: ectx: property (text), item, widget (QTreeWidget, groupingMethods)
-#: rc.cpp:683
-msgid "Access type (public etc.)"
-msgstr "पहुंच किस्म (सार्वजनिक इत्यादि)"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:213
-#. i18n: ectx: property (text), item, widget (QTreeWidget, groupingMethods)
-#: rc.cpp:686
-msgid "Item type (function etc.)"
-msgstr "वस्तु किस्म (फ़ंक्शन इत्यादि)"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:263
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:695
-#, fuzzy
-msgid "Access Grouping Properties"
-msgstr "पाद-सूचना गुण"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:270
-#. i18n: ectx: property (text), widget (QCheckBox, accessConst)
-#: rc.cpp:698
-msgid "Include const in grouping"
-msgstr "कॉस्टैंट को में शामिल करें"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:277
-#. i18n: ectx: property (text), widget (QCheckBox, accessStatic)
-#: rc.cpp:701
-msgid "Include static in grouping"
-msgstr "स्टैटिक को समूह में शामिल करें"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:284
-#. i18n: ectx: property (text), widget (QCheckBox, accessSignalSlot)
-#: rc.cpp:704
-msgid "Include signals and slots in grouping"
-msgstr "सिगनल तथा स्लॉट को समूह में शामिल करें"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:314
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:707
-#, fuzzy
-msgid "Item Grouping properties"
-msgstr "पाद-सूचना गुण"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:321
-#. i18n: ectx: property (text), widget (QCheckBox, itemTemplate)
-#: rc.cpp:710
-msgid "Include templates in grouping"
-msgstr "टैम्प्लेट को समूह में शामिल करें"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:350
-#. i18n: ectx: property (title), widget (QGroupBox, columnMerging)
-#: rc.cpp:713
-msgid "Column Merging"
-msgstr "स्तम्भ मिलाना"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:375
-#. i18n: ectx: property (text), widget (QTreeWidget, columnMergeTree)
-#: rc.cpp:716
-msgid "Columns"
-msgstr "स्तम्भ"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:380
-#. i18n: ectx: property (text), widget (QTreeWidget, columnMergeTree)
-#: rc.cpp:719
-msgid "Merged"
-msgstr "मिलाया"
-
-#. i18n: file: dialogs/completionconfigwidget.ui:385
-#. i18n: ectx: property (text), widget (QTreeWidget, columnMergeTree)
-#: rc.cpp:722
-msgid "Shown"
-msgstr "दिखाया"
-
 #. i18n: file: dialogs/editconfigwidget.ui:12
 #. i18n: ectx: property (title), widget (QGroupBox, gbStaticWordWrap)
-#: rc.cpp:731
+#: rc.cpp:869
 msgid "Static Word Wrap"
 msgstr "स्थिर शब्द रैप"
 
 #. i18n: file: dialogs/editconfigwidget.ui:18
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkStaticWordWrap)
-#: rc.cpp:734
+#: rc.cpp:872
 msgid ""
 "<p>Automatically start a new line of text when the current line exceeds the "
 "length specified by the <b>Wrap words at:</b> option.</p><p>This option does "
@@ -2607,13 +2807,13 @@ msgstr ""
 
 #. i18n: file: dialogs/editconfigwidget.ui:21
 #. i18n: ectx: property (text), widget (QCheckBox, chkStaticWordWrap)
-#: rc.cpp:737
+#: rc.cpp:875
 msgid "Enable static &word wrap"
 msgstr "स्थिर शब्द रैप सक्षम करें (&w)"
 
 #. i18n: file: dialogs/editconfigwidget.ui:28
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkShowStaticWordWrapMarker)
-#: rc.cpp:740
+#: rc.cpp:878
 msgid ""
 "<p>If this option is checked, a vertical line will be drawn at the word wrap "
 "column as defined in the <strong>Editing</strong> properties.</p><p>Note "
@@ -2622,20 +2822,20 @@ msgstr ""
 
 #. i18n: file: dialogs/editconfigwidget.ui:31
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowStaticWordWrapMarker)
-#: rc.cpp:743
+#: rc.cpp:881
 #, fuzzy
 msgid "Show static word wra&p marker (if applicable)"
 msgstr "स्थिर वर्ड रैप मार्कर दिखाएँ (यदि लागू हो)"
 
 #. i18n: file: dialogs/editconfigwidget.ui:43
 #. i18n: ectx: property (text), widget (QLabel, lblWordWrap)
-#: rc.cpp:746
+#: rc.cpp:884
 msgid "W&rap words at:"
 msgstr "पर शब्द लपेटें: (&r)"
 
 #. i18n: file: dialogs/editconfigwidget.ui:53
 #. i18n: ectx: property (whatsThis), widget (KIntSpinBox, sbWordWrap)
-#: rc.cpp:749
+#: rc.cpp:887
 msgid ""
 "If the Word Wrap option is selected this entry determines the length (in "
 "characters) at which the editor will automatically start a new line."
@@ -2645,26 +2845,26 @@ msgstr ""
 
 #. i18n: file: dialogs/editconfigwidget.ui:93
 #. i18n: ectx: property (text), widget (QCheckBox, chkSmartCopyCut)
-#: rc.cpp:755
+#: rc.cpp:893
 msgid "Copy/Cut the current line if no selection"
 msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:12
 #. i18n: ectx: property (title), widget (QGroupBox, gbConfigFile)
-#: rc.cpp:758
+#: rc.cpp:896
 msgid "Folder Config File"
 msgstr "फ़ोल्डर कॉन्फ़िग फ़ाइल"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:761
+#: rc.cpp:899
 #, fuzzy
 msgid "Search &depth for config file:"
 msgstr "ICO फ़ाइल हेतु असमर्थित डेफ़्थ: %d"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:33
 #. i18n: ectx: property (whatsThis), widget (KIntSpinBox, sbConfigFileSearchDepth)
-#: rc.cpp:764
+#: rc.cpp:902
 msgid ""
 "The editor will search the given number of folder levels upwards for a ."
 "kateconfig file and load the settings line from it."
@@ -2672,13 +2872,13 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:36
 #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, sbConfigFileSearchDepth)
-#: rc.cpp:767
+#: rc.cpp:905
 msgid "Do not use config file"
 msgstr "कॉन्फ़िग फ़ाइल इस्तेमाल नहीं करें"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:67
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, gbBackup)
-#: rc.cpp:770
+#: rc.cpp:908
 #, fuzzy
 msgid ""
 "<p>Backing up on save will cause Kate to copy the disk file to '&lt;"
@@ -2691,13 +2891,13 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:70
 #. i18n: ectx: property (title), widget (QGroupBox, gbBackup)
-#: rc.cpp:773
+#: rc.cpp:911
 msgid "Backup on Save"
 msgstr "सहेजने पर बैकअप लें"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:79
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkBackupLocalFiles)
-#: rc.cpp:776
+#: rc.cpp:914
 #, fuzzy
 msgid ""
 "If this option is enabled, backups for local files will be created when "
@@ -2707,13 +2907,13 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:82
 #. i18n: ectx: property (text), widget (QCheckBox, chkBackupLocalFiles)
-#: rc.cpp:779
+#: rc.cpp:917
 msgid "&Local files"
 msgstr "स्थानीय फ़ाइलें (&L)"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:89
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkBackupRemoteFiles)
-#: rc.cpp:782
+#: rc.cpp:920
 #, fuzzy
 msgid ""
 "If this option is enabled, backups for remote files will be created when "
@@ -2723,218 +2923,64 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:92
 #. i18n: ectx: property (text), widget (QCheckBox, chkBackupRemoteFiles)
-#: rc.cpp:785
+#: rc.cpp:923
 msgid "&Remote files"
 msgstr "रिमोट फ़ाइलें (&R)"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:99
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:788
+#: rc.cpp:926
 msgid "&Prefix:"
 msgstr "उपसर्गः (&P)"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:109
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, edtBackupPrefix)
-#: rc.cpp:791
+#: rc.cpp:929
 msgid "Enter the prefix to prepend to the backup file names."
 msgstr "बैकअप फ़ाइल नाम में पहले जोड़ने के लिए प्रत्यय भरें"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:116
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:794
+#: rc.cpp:932
 msgid "&Suffix:"
 msgstr "सफिक्स (&S)"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:126
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, edtBackupSuffix)
-#: rc.cpp:797
+#: rc.cpp:935
 msgid "Enter the suffix to append to the backup file names."
 msgstr "बैकअप फ़ाइल नाम में बाद में जोड़ने के लिए प्रत्यय भरें"
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:159
 #. i18n: ectx: property (text), widget (QCheckBox, chkNoSync)
-#: rc.cpp:800
+#: rc.cpp:938
 msgid "Disable swap files syncing"
 msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigadvwidget.ui:162
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkNoSync)
-#: rc.cpp:803
+#: rc.cpp:941
 msgid ""
 "If checked, the swap file is not forcibly written to disk each 15 seconds. "
 "Be aware, that disabling the swap file synchronization may lead to data loss "
 "in case of a system crash."
 msgstr ""
 
-#. i18n: file: dialogs/filetypeconfigwidget.ui:14
-#. i18n: ectx: property (text), widget (QLabel, lblFiletype)
-#: rc.cpp:806
-msgid "&Filetype:"
-msgstr "फ़ाइल-क़िस्म: (&F)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:24
-#. i18n: ectx: property (whatsThis), widget (KComboBox, cmbFiletypes)
-#: rc.cpp:809
-msgid "Select the filetype you want to change."
-msgstr "फ़ाइल क़िस्म जिसे आप बदलना चाहते हैं उसे चुनें."
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:31
-#. i18n: ectx: property (whatsThis), widget (QPushButton, btnNew)
-#: rc.cpp:812
-msgid "Create a new file type."
-msgstr "नया फ़ाइल क़िस्म तैयार करें"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:34
-#. i18n: ectx: property (text), widget (QPushButton, btnNew)
-#: rc.cpp:815
-msgid "&New"
-msgstr "नया (&N)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:41
-#. i18n: ectx: property (whatsThis), widget (QPushButton, btnDelete)
-#: rc.cpp:818
-msgid "Delete the current file type."
-msgstr "वर्तमान फ़ाइल क़िस्म मिटाएँ."
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:44
-#. i18n: ectx: property (text), widget (QPushButton, btnDelete)
-#: rc.cpp:821 schema/kateschemaconfig.cpp:884
-msgid "&Delete"
-msgstr "मिटाएँ (&D)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:66
-#. i18n: ectx: property (title), widget (QGroupBox, gbProperties)
-#: rc.cpp:824 mode/katemodeconfigpage.cpp:283
-msgid "Properties"
-msgstr "गुण"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:82
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtName)
-#: rc.cpp:830
-#, fuzzy
-msgid ""
-"The name of the filetype will be the text of the corresponding menu item."
-msgstr "चंद्रमा"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:89
-#. i18n: ectx: property (text), widget (QLabel, lblSection)
-#: rc.cpp:833
-msgid "&Section:"
-msgstr "खण्ड: (&S)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:99
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtSection)
-#: rc.cpp:836
-#, fuzzy
-msgid "The section name is used to organize the file types in menus."
-msgstr ""
-"फ़ाइल को चुनें. \\<emph\\>फ़ाइल क़िस्म\\</emph\\> बक्से में आप कुछ विशिष्ट क़िस्म की फ़ाइलों "
-"का चयन सीमित कर सकते हैं."
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:106
-#. i18n: ectx: property (text), widget (QLabel, lblVariables)
-#: rc.cpp:839
-msgid "&Variables:"
-msgstr "चर: (&V)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:116
-#. i18n: ectx: property (whatsThis), widget (VariableLineEdit, edtVariables)
-#: rc.cpp:842
-msgid ""
-"<p>This string allows to configure Kate's settings for the files selected by "
-"this mimetype using Kate variables. Almost any configuration option can be "
-"set, such as highlight, indent-mode, encoding, etc.</p><p>For a full list of "
-"known variables, see the manual.</p>"
-msgstr ""
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:123
-#. i18n: ectx: property (text), widget (QLabel, lblHl)
-#: rc.cpp:845
-msgid "&Highlighting:"
-msgstr "उभारना: (&H)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:136
-#. i18n: ectx: property (text), widget (QLabel, lblIndenter)
-#: rc.cpp:848
-#, fuzzy
-msgid "&Indentation Mode:"
-msgstr "जगह छोड़ने का मोड: (&I)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:149
-#. i18n: ectx: property (text), widget (QLabel, lblExtensions)
-#: rc.cpp:851
-msgid "File e&xtensions:"
-msgstr "फ़ाइल एक्सटेंशन्स: (&x)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:159
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtFileExtensions)
-#: rc.cpp:854
-msgid ""
-"The wildcards mask allows to select files by filename. A typical mask uses "
-"an asterisk and the file extension, for example <code>*.txt; *.text</code>. "
-"The string is a semicolon-separated list of masks."
-msgstr ""
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:166
-#. i18n: ectx: property (text), widget (QLabel, lblMimeTypes)
-#: rc.cpp:857
-msgid "MIME &types:"
-msgstr "माइम क़िस्म: (&t)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:181
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, edtMimeTypes)
-#: rc.cpp:860
-msgid ""
-"The mime type mask allows to select files by mimetype. The string is a "
-"semicolon-separated list of mimetypes, for example <code>text/plain; text/"
-"english</code>."
-msgstr ""
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:188
-#. i18n: ectx: property (whatsThis), widget (QToolButton, btnMimeTypes)
-#: rc.cpp:863
-#, fuzzy
-msgid "Displays a wizard that helps you easily select mimetypes."
-msgstr ""
-"\\<switchinline select=\\\"sys\\\"\\>\\<caseinline select=\\\"WIN\\\"\\>जिस "
-"प्रिंटर को आपने चुना है उसकी क़िस्म प्रदर्शित करता है. \\</caseinline\\>\\</"
-"switchinline\\>"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:197
-#. i18n: ectx: property (text), widget (QLabel, lblPriority)
-#: rc.cpp:866
-msgid "P&riority:"
-msgstr "प्राथमिकता: (&r)"
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:207
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, sbPriority)
-#: rc.cpp:869
-msgid ""
-"Sets priority for this file type. If more than one file type selects the "
-"same file, the one with the highest priority will be used."
-msgstr ""
-
-#. i18n: file: dialogs/filetypeconfigwidget.ui:232
-#. i18n: ectx: property (text), widget (QPushButton, btnDownload)
-#: rc.cpp:872
-msgid "Download Highlighting Files..."
-msgstr "उभारे गए फ़ाइलों को डाउनलोड किया जा रहा है..."
-
 #. i18n: file: dialogs/opensaveconfigwidget.ui:12
 #. i18n: ectx: property (title), widget (QGroupBox, gbFileFormat)
-#: rc.cpp:875
+#: rc.cpp:944
 msgid "File Format"
 msgstr "फ़ाइल फार्मेट"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:23
 #. i18n: ectx: property (text), widget (QLabel, lblEncoding)
-#: rc.cpp:878
+#: rc.cpp:947
 msgid "&Encoding:"
 msgstr "एनकोडिंग: (&E)"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:33
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cmbEncoding)
-#: rc.cpp:881
+#: rc.cpp:950
 msgid ""
 "This defines the standard encoding to use to open/save files, if not changed "
 "in the open/save dialog or by using a command line option."
@@ -2942,14 +2988,14 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:40
 #. i18n: ectx: property (text), widget (QLabel, lblEncodingDetection)
-#: rc.cpp:884
+#: rc.cpp:953
 #, fuzzy
 msgid "&Encoding Detection:"
 msgstr "एनकोडिंग स्वचालित पता लगाएँ: (&d)"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:50
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cmbEncodingDetection)
-#: rc.cpp:887
+#: rc.cpp:956
 msgid ""
 "if neither the encoding chosen as standard above, nor the encoding specified "
 "in the open/save dialog, nor the encoding specified on command line match "
@@ -2958,14 +3004,14 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:57
 #. i18n: ectx: property (text), widget (QLabel, lblEncodingDetection2)
-#: rc.cpp:890
+#: rc.cpp:959
 #, fuzzy
 msgid "&Fallback Encoding:"
 msgstr "एनकोडिंग: (&E)"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:67
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cmbEncodingFallback)
-#: rc.cpp:893
+#: rc.cpp:962
 msgid ""
 "This defines the fallback encoding to try for opening files if neither the "
 "encoding chosen as standard above, nor the encoding specified in the open/"
@@ -2978,31 +3024,31 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:74
 #. i18n: ectx: property (text), widget (QLabel, lblEOL)
-#: rc.cpp:896
+#: rc.cpp:965
 msgid "E&nd of line:"
 msgstr "पंक्ति का अंत: (&n)"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:85
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbEOL)
-#: rc.cpp:899
+#: rc.cpp:968
 msgid "UNIX"
 msgstr "युनिक्स"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:90
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbEOL)
-#: rc.cpp:902
+#: rc.cpp:971
 msgid "DOS/Windows"
 msgstr "डॉस/विंडोज़"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:95
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbEOL)
-#: rc.cpp:905
+#: rc.cpp:974
 msgid "Macintosh"
 msgstr "मैकिंटोश"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:105
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkDetectEOL)
-#: rc.cpp:908
+#: rc.cpp:977
 msgid ""
 "If this option is enabled the editor will autodetect the end of line type. "
 "The first found end of line type will be used for the whole file."
@@ -3010,14 +3056,14 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:108
 #. i18n: ectx: property (text), widget (QCheckBox, chkDetectEOL)
-#: rc.cpp:911
+#: rc.cpp:980
 #, fuzzy
 msgid "A&utomatic end of line detection"
 msgstr "रेखा के अंत में अक्षरें"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:115
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkEnableBOM)
-#: rc.cpp:914
+#: rc.cpp:983
 msgid ""
 "The byte order mark is a special sequence at the beginning of unicode "
 "encoded documents. It helps editors to open text documents with the correct "
@@ -3027,25 +3073,25 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:118
 #. i18n: ectx: property (text), widget (QCheckBox, chkEnableBOM)
-#: rc.cpp:917
+#: rc.cpp:986
 msgid "Enable byte order marker"
 msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:125
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:920
+#: rc.cpp:989
 msgid "Line Length Limit:"
 msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:135
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, lineLengthLimit)
-#: rc.cpp:923
+#: rc.cpp:992
 msgid "Unlimited"
 msgstr "असीमित"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:151
 #. i18n: ectx: property (title), widget (QGroupBox, gbCleanups)
-#: rc.cpp:926
+#: rc.cpp:995
 #, fuzzy
 msgid "Automatic Cleanups on Save"
 msgstr "फ़ाइल लोड करने/सहेजने में अक्षम!"
@@ -3054,7 +3100,7 @@ msgstr "फ़ाइल लोड करने/सहेजने में अ�
 #. i18n: ectx: property (whatsThis), widget (QLabel, lblRemoveTrailingSpaces)
 #. i18n: file: dialogs/opensaveconfigwidget.ui:172
 #. i18n: ectx: property (whatsThis), widget (QComboBox, cbRemoveTrailingSpaces)
-#: rc.cpp:929 rc.cpp:935
+#: rc.cpp:998 rc.cpp:1004
 msgid ""
 "Depending on the choice, trailing spaces are removed when saving a document, "
 "either in the entire document or only of modified lines."
@@ -3062,35 +3108,35 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:162
 #. i18n: ectx: property (text), widget (QLabel, lblRemoveTrailingSpaces)
-#: rc.cpp:932
+#: rc.cpp:1001
 #, fuzzy
 msgid "Re&move trailing spaces:"
 msgstr "ट्रेलिंग स्पेसेस हटाएँ (&m)"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:176
 #. i18n: ectx: property (text), item, widget (QComboBox, cbRemoveTrailingSpaces)
-#: rc.cpp:938
+#: rc.cpp:1007
 #, fuzzy
 msgid "Never"
 msgstr "विपरीत"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:181
 #. i18n: ectx: property (text), item, widget (QComboBox, cbRemoveTrailingSpaces)
-#: rc.cpp:941
+#: rc.cpp:1010
 #, fuzzy
 msgid "On Modified Lines"
 msgstr "पंक्ति ऊपर स्क्रॉल करें"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:186
 #. i18n: ectx: property (text), item, widget (QComboBox, cbRemoveTrailingSpaces)
-#: rc.cpp:944
+#: rc.cpp:1013
 #, fuzzy
 msgid "In Entire Document"
 msgstr "वर्ड रैप दस्तावेज़ (&W)"
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:209
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkNewLineAtEof)
-#: rc.cpp:947
+#: rc.cpp:1016
 msgid ""
 "On save, a line break is appended to the document if not already present. "
 "The line break is visible after reloading the file."
@@ -3098,13 +3144,13 @@ msgstr ""
 
 #. i18n: file: dialogs/opensaveconfigwidget.ui:212
 #. i18n: ectx: property (text), widget (QCheckBox, chkNewLineAtEof)
-#: rc.cpp:950
+#: rc.cpp:1019
 msgid "Append newline at end of file on save"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/abap.xml:3
-#: rc.cpp:953
+#: rc.cpp:1022
 msgctxt "Language"
 msgid "ABAP"
 msgstr ""
@@ -3233,17 +3279,17 @@ msgstr ""
 #. i18n: file: syntax/data/yacc.xml:28
 #. i18n: tag language attribute section
 #. i18n: file: syntax/data/zonnon.xml:3
-#: rc.cpp:956 rc.cpp:968 rc.cpp:977 rc.cpp:1013 rc.cpp:1019 rc.cpp:1103
-#: rc.cpp:1115 rc.cpp:1121 rc.cpp:1139 rc.cpp:1145 rc.cpp:1160 rc.cpp:1166
-#: rc.cpp:1178 rc.cpp:1190 rc.cpp:1211 rc.cpp:1271 rc.cpp:1277 rc.cpp:1301
-#: rc.cpp:1331 rc.cpp:1337 rc.cpp:1343 rc.cpp:1391 rc.cpp:1409 rc.cpp:1415
-#: rc.cpp:1427 rc.cpp:1433 rc.cpp:1451 rc.cpp:1457 rc.cpp:1463 rc.cpp:1493
-#: rc.cpp:1517 rc.cpp:1523 rc.cpp:1565 rc.cpp:1580 rc.cpp:1586 rc.cpp:1592
-#: rc.cpp:1616 rc.cpp:1706 rc.cpp:1715 rc.cpp:1721 rc.cpp:1745 rc.cpp:1751
-#: rc.cpp:1757 rc.cpp:1763 rc.cpp:1769 rc.cpp:1775 rc.cpp:1787 rc.cpp:1793
-#: rc.cpp:1799 rc.cpp:1868 rc.cpp:1880 rc.cpp:1910 rc.cpp:1964 rc.cpp:1982
-#: rc.cpp:1988 rc.cpp:2036 rc.cpp:2066 rc.cpp:2084 rc.cpp:2132 rc.cpp:2204
-#: rc.cpp:2246 rc.cpp:2258
+#: rc.cpp:1025 rc.cpp:1037 rc.cpp:1046 rc.cpp:1082 rc.cpp:1088 rc.cpp:1172
+#: rc.cpp:1184 rc.cpp:1190 rc.cpp:1208 rc.cpp:1214 rc.cpp:1229 rc.cpp:1235
+#: rc.cpp:1247 rc.cpp:1259 rc.cpp:1280 rc.cpp:1340 rc.cpp:1346 rc.cpp:1370
+#: rc.cpp:1400 rc.cpp:1406 rc.cpp:1412 rc.cpp:1460 rc.cpp:1478 rc.cpp:1484
+#: rc.cpp:1496 rc.cpp:1502 rc.cpp:1520 rc.cpp:1526 rc.cpp:1532 rc.cpp:1562
+#: rc.cpp:1586 rc.cpp:1592 rc.cpp:1634 rc.cpp:1649 rc.cpp:1655 rc.cpp:1661
+#: rc.cpp:1685 rc.cpp:1775 rc.cpp:1784 rc.cpp:1790 rc.cpp:1814 rc.cpp:1820
+#: rc.cpp:1826 rc.cpp:1832 rc.cpp:1838 rc.cpp:1844 rc.cpp:1856 rc.cpp:1862
+#: rc.cpp:1868 rc.cpp:1937 rc.cpp:1949 rc.cpp:1979 rc.cpp:2033 rc.cpp:2051
+#: rc.cpp:2057 rc.cpp:2105 rc.cpp:2135 rc.cpp:2153 rc.cpp:2201 rc.cpp:2273
+#: rc.cpp:2315 rc.cpp:2327
 #, fuzzy
 msgctxt "Language Section"
 msgid "Sources"
@@ -3251,7 +3297,7 @@ msgstr "सोर्सेज़"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/abc.xml:5
-#: rc.cpp:959
+#: rc.cpp:1028
 #, fuzzy
 msgctxt "Language"
 msgid "ABC"
@@ -3299,10 +3345,10 @@ msgstr "एबीसी"
 #. i18n: file: syntax/data/rpmspec.xml:11
 #. i18n: tag language attribute section
 #. i18n: file: syntax/data/valgrind-suppression.xml:3
-#: rc.cpp:962 rc.cpp:995 rc.cpp:1001 rc.cpp:1127 rc.cpp:1202 rc.cpp:1217
-#: rc.cpp:1223 rc.cpp:1232 rc.cpp:1283 rc.cpp:1361 rc.cpp:1379 rc.cpp:1475
-#: rc.cpp:1571 rc.cpp:1610 rc.cpp:1628 rc.cpp:1727 rc.cpp:1850 rc.cpp:1892
-#: rc.cpp:1946 rc.cpp:1958 rc.cpp:2138
+#: rc.cpp:1031 rc.cpp:1064 rc.cpp:1070 rc.cpp:1196 rc.cpp:1271 rc.cpp:1286
+#: rc.cpp:1292 rc.cpp:1301 rc.cpp:1352 rc.cpp:1430 rc.cpp:1448 rc.cpp:1544
+#: rc.cpp:1640 rc.cpp:1679 rc.cpp:1697 rc.cpp:1796 rc.cpp:1919 rc.cpp:1961
+#: rc.cpp:2015 rc.cpp:2027 rc.cpp:2207
 #, fuzzy
 msgctxt "Language Section"
 msgid "Other"
@@ -3310,7 +3356,7 @@ msgstr "अन्य"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/actionscript.xml:3
-#: rc.cpp:965
+#: rc.cpp:1034
 #, fuzzy
 msgctxt "Language"
 msgid "ActionScript 2.0"
@@ -3318,7 +3364,7 @@ msgstr "एकशन स्क्रिप्ट 2.0"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ada.xml:3
-#: rc.cpp:971
+#: rc.cpp:1040
 #, fuzzy
 msgctxt "Language"
 msgid "Ada"
@@ -3326,14 +3372,14 @@ msgstr "एडीए"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/agda.xml:6
-#: rc.cpp:974
+#: rc.cpp:1043
 msgctxt "Language"
 msgid "Agda"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ahdl.xml:3
-#: rc.cpp:980
+#: rc.cpp:1049
 #, fuzzy
 msgctxt "Language"
 msgid "AHDL"
@@ -3353,8 +3399,8 @@ msgstr "एडीएचएल"
 #. i18n: file: syntax/data/verilog.xml:3
 #. i18n: tag language attribute section
 #. i18n: file: syntax/data/vhdl.xml:11
-#: rc.cpp:983 rc.cpp:2042 rc.cpp:2072 rc.cpp:2078 rc.cpp:2168 rc.cpp:2174
-#: rc.cpp:2180
+#: rc.cpp:1052 rc.cpp:2111 rc.cpp:2141 rc.cpp:2147 rc.cpp:2237 rc.cpp:2243
+#: rc.cpp:2249
 #, fuzzy
 msgctxt "Language Section"
 msgid "Hardware"
@@ -3362,7 +3408,7 @@ msgstr "हार्डवेयर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ahk.xml:3
-#: rc.cpp:986
+#: rc.cpp:1055
 msgctxt "Language"
 msgid "AutoHotKey"
 msgstr ""
@@ -3441,13 +3487,13 @@ msgstr ""
 #. i18n: file: syntax/data/velocity.xml:3
 #. i18n: tag language attribute section
 #. i18n: file: syntax/data/zsh.xml:11
-#: rc.cpp:989 rc.cpp:1007 rc.cpp:1079 rc.cpp:1085 rc.cpp:1196 rc.cpp:1244
-#: rc.cpp:1289 rc.cpp:1295 rc.cpp:1313 rc.cpp:1403 rc.cpp:1445 rc.cpp:1487
-#: rc.cpp:1535 rc.cpp:1553 rc.cpp:1598 rc.cpp:1604 rc.cpp:1652 rc.cpp:1682
-#: rc.cpp:1814 rc.cpp:1820 rc.cpp:1832 rc.cpp:1838 rc.cpp:1874 rc.cpp:1886
-#: rc.cpp:1898 rc.cpp:1904 rc.cpp:1934 rc.cpp:1970 rc.cpp:1976 rc.cpp:1994
-#: rc.cpp:2012 rc.cpp:2024 rc.cpp:2090 rc.cpp:2096 rc.cpp:2126 rc.cpp:2162
-#: rc.cpp:2264
+#: rc.cpp:1058 rc.cpp:1076 rc.cpp:1148 rc.cpp:1154 rc.cpp:1265 rc.cpp:1313
+#: rc.cpp:1358 rc.cpp:1364 rc.cpp:1382 rc.cpp:1472 rc.cpp:1514 rc.cpp:1556
+#: rc.cpp:1604 rc.cpp:1622 rc.cpp:1667 rc.cpp:1673 rc.cpp:1721 rc.cpp:1751
+#: rc.cpp:1883 rc.cpp:1889 rc.cpp:1901 rc.cpp:1907 rc.cpp:1943 rc.cpp:1955
+#: rc.cpp:1967 rc.cpp:1973 rc.cpp:2003 rc.cpp:2039 rc.cpp:2045 rc.cpp:2063
+#: rc.cpp:2081 rc.cpp:2093 rc.cpp:2159 rc.cpp:2165 rc.cpp:2195 rc.cpp:2231
+#: rc.cpp:2333
 #, fuzzy
 msgctxt "Language Section"
 msgid "Scripts"
@@ -3455,7 +3501,7 @@ msgstr "स्क्रिप्ट्स"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/alert_indent.xml:29
-#: rc.cpp:992
+#: rc.cpp:1061
 #, fuzzy
 msgctxt "Language"
 msgid "Alerts_indent"
@@ -3463,7 +3509,7 @@ msgstr "चेतावनी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/alert.xml:33
-#: rc.cpp:998
+#: rc.cpp:1067
 #, fuzzy
 msgctxt "Language"
 msgid "Alerts"
@@ -3471,21 +3517,21 @@ msgstr "चेतावनी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ample.xml:3
-#: rc.cpp:1004
+#: rc.cpp:1073
 msgctxt "Language"
 msgid "AMPLE"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ansforth94.xml:37
-#: rc.cpp:1010
+#: rc.cpp:1079
 msgctxt "Language"
 msgid "ANS-Forth94"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ansic89.xml:27
-#: rc.cpp:1016
+#: rc.cpp:1085
 #, fuzzy
 msgctxt "Language"
 msgid "ANSI C89"
@@ -3493,7 +3539,7 @@ msgstr "एन्सी सी89"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ansys.xml:3
-#: rc.cpp:1022
+#: rc.cpp:1091
 #, fuzzy
 msgctxt "Language"
 msgid "Ansys"
@@ -3525,9 +3571,9 @@ msgstr "एनसिस"
 #. i18n: file: syntax/data/tibasic.xml:3
 #. i18n: tag language attribute section
 #. i18n: file: syntax/data/yacas.xml:3
-#: rc.cpp:1025 rc.cpp:1097 rc.cpp:1250 rc.cpp:1355 rc.cpp:1367 rc.cpp:1658
-#: rc.cpp:1664 rc.cpp:1670 rc.cpp:1781 rc.cpp:1922 rc.cpp:2000 rc.cpp:2114
-#: rc.cpp:2240
+#: rc.cpp:1094 rc.cpp:1166 rc.cpp:1319 rc.cpp:1424 rc.cpp:1436 rc.cpp:1727
+#: rc.cpp:1733 rc.cpp:1739 rc.cpp:1850 rc.cpp:1991 rc.cpp:2069 rc.cpp:2183
+#: rc.cpp:2309
 #, fuzzy
 msgctxt "Language Section"
 msgid "Scientific"
@@ -3535,7 +3581,7 @@ msgstr "वैज्ञानिक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/apache.xml:15
-#: rc.cpp:1028
+#: rc.cpp:1097
 #, fuzzy
 msgctxt "Language"
 msgid "Apache Configuration"
@@ -3565,8 +3611,8 @@ msgstr "अपाची कॉन्फ़िगरेशन"
 #. i18n: file: syntax/data/winehq.xml:3
 #. i18n: tag language attribute section
 #. i18n: file: syntax/data/xorg.xml:3
-#: rc.cpp:1031 rc.cpp:1073 rc.cpp:1133 rc.cpp:1349 rc.cpp:1469 rc.cpp:1529
-#: rc.cpp:1688 rc.cpp:1733 rc.cpp:2144 rc.cpp:2150 rc.cpp:2192 rc.cpp:2222
+#: rc.cpp:1100 rc.cpp:1142 rc.cpp:1202 rc.cpp:1418 rc.cpp:1538 rc.cpp:1598
+#: rc.cpp:1757 rc.cpp:1802 rc.cpp:2213 rc.cpp:2219 rc.cpp:2261 rc.cpp:2291
 #, fuzzy
 msgctxt "Language Section"
 msgid "Configuration"
@@ -3574,7 +3620,7 @@ msgstr "कॉन्फ़िगरेशन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/asm6502.xml:3
-#: rc.cpp:1034
+#: rc.cpp:1103
 #, fuzzy
 msgctxt "Language"
 msgid "Asm6502"
@@ -3598,8 +3644,8 @@ msgstr "एएसएम6502"
 #. i18n: file: syntax/data/nasm.xml:43
 #. i18n: tag language attribute section
 #. i18n: file: syntax/data/picsrc.xml:11
-#: rc.cpp:1037 rc.cpp:1043 rc.cpp:1049 rc.cpp:1055 rc.cpp:1307 rc.cpp:1397
-#: rc.cpp:1700 rc.cpp:1739 rc.cpp:1826
+#: rc.cpp:1106 rc.cpp:1112 rc.cpp:1118 rc.cpp:1124 rc.cpp:1376 rc.cpp:1466
+#: rc.cpp:1769 rc.cpp:1808 rc.cpp:1895
 #, fuzzy
 msgctxt "Language Section"
 msgid "Assembler"
@@ -3607,7 +3653,7 @@ msgstr "असेंबलर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/asm-avr.xml:36
-#: rc.cpp:1040
+#: rc.cpp:1109
 #, fuzzy
 msgctxt "Language"
 msgid "AVR Assembler"
@@ -3615,21 +3661,21 @@ msgstr "एवीआर असेंबलर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/asm-dsp56k.xml:4
-#: rc.cpp:1046
+#: rc.cpp:1115
 msgctxt "Language"
 msgid "Motorola DSP56k"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/asm-m68k.xml:4
-#: rc.cpp:1052
+#: rc.cpp:1121
 msgctxt "Language"
 msgid "Motorola 68k (VASM/Devpac)"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/asn1.xml:16
-#: rc.cpp:1058
+#: rc.cpp:1127
 #, fuzzy
 msgctxt "Language"
 msgid "ASN.1"
@@ -3729,14 +3775,14 @@ msgstr "एएसएन.1"
 #. i18n: file: syntax/data/xul.xml:7
 #. i18n: tag language attribute section
 #. i18n: file: syntax/data/yaml.xml:4
-#: rc.cpp:1061 rc.cpp:1067 rc.cpp:1091 rc.cpp:1109 rc.cpp:1154 rc.cpp:1172
-#: rc.cpp:1184 rc.cpp:1238 rc.cpp:1256 rc.cpp:1265 rc.cpp:1373 rc.cpp:1385
-#: rc.cpp:1421 rc.cpp:1439 rc.cpp:1481 rc.cpp:1499 rc.cpp:1505 rc.cpp:1511
-#: rc.cpp:1541 rc.cpp:1559 rc.cpp:1622 rc.cpp:1634 rc.cpp:1640 rc.cpp:1646
-#: rc.cpp:1676 rc.cpp:1694 rc.cpp:1805 rc.cpp:1844 rc.cpp:1856 rc.cpp:1916
-#: rc.cpp:1928 rc.cpp:1940 rc.cpp:1952 rc.cpp:2006 rc.cpp:2018 rc.cpp:2030
-#: rc.cpp:2102 rc.cpp:2108 rc.cpp:2120 rc.cpp:2156 rc.cpp:2186 rc.cpp:2198
-#: rc.cpp:2210 rc.cpp:2216 rc.cpp:2228 rc.cpp:2234 rc.cpp:2252
+#: rc.cpp:1130 rc.cpp:1136 rc.cpp:1160 rc.cpp:1178 rc.cpp:1223 rc.cpp:1241
+#: rc.cpp:1253 rc.cpp:1307 rc.cpp:1325 rc.cpp:1334 rc.cpp:1442 rc.cpp:1454
+#: rc.cpp:1490 rc.cpp:1508 rc.cpp:1550 rc.cpp:1568 rc.cpp:1574 rc.cpp:1580
+#: rc.cpp:1610 rc.cpp:1628 rc.cpp:1691 rc.cpp:1703 rc.cpp:1709 rc.cpp:1715
+#: rc.cpp:1745 rc.cpp:1763 rc.cpp:1874 rc.cpp:1913 rc.cpp:1925 rc.cpp:1985
+#: rc.cpp:1997 rc.cpp:2009 rc.cpp:2021 rc.cpp:2075 rc.cpp:2087 rc.cpp:2099
+#: rc.cpp:2171 rc.cpp:2177 rc.cpp:2189 rc.cpp:2225 rc.cpp:2255 rc.cpp:2267
+#: rc.cpp:2279 rc.cpp:2285 rc.cpp:2297 rc.cpp:2303 rc.cpp:2321
 #, fuzzy
 msgctxt "Language Section"
 msgid "Markup"
@@ -3744,7 +3790,7 @@ msgstr "मार्कअप"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/asp.xml:3
-#: rc.cpp:1064
+#: rc.cpp:1133
 #, fuzzy
 msgctxt "Language"
 msgid "ASP"
@@ -3752,14 +3798,14 @@ msgstr "एएसपी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/asterisk.xml:19
-#: rc.cpp:1070
+#: rc.cpp:1139
 msgctxt "Language"
 msgid "Asterisk"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/awk.xml:3
-#: rc.cpp:1076
+#: rc.cpp:1145
 #, fuzzy
 msgctxt "Language"
 msgid "AWK"
@@ -3767,7 +3813,7 @@ msgstr "एडबल्यूके"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/bash.xml:11
-#: rc.cpp:1082
+#: rc.cpp:1151
 #, fuzzy
 msgctxt "Language"
 msgid "Bash"
@@ -3775,7 +3821,7 @@ msgstr "बैश"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/bibtex.xml:9
-#: rc.cpp:1088
+#: rc.cpp:1157
 #, fuzzy
 msgctxt "Language"
 msgid "BibTeX"
@@ -3783,28 +3829,28 @@ msgstr "बिब-टेक्स"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/bmethod.xml:3
-#: rc.cpp:1094
+#: rc.cpp:1163
 msgctxt "Language"
 msgid "B-Method"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/boo.xml:5
-#: rc.cpp:1100
+#: rc.cpp:1169
 msgctxt "Language"
 msgid "Boo"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ccss.xml:9
-#: rc.cpp:1106
+#: rc.cpp:1175
 msgctxt "Language"
 msgid "CleanCSS"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/cgis.xml:3
-#: rc.cpp:1112
+#: rc.cpp:1181
 #, fuzzy
 msgctxt "Language"
 msgid "CGiS"
@@ -3812,7 +3858,7 @@ msgstr "सीजीआईएस"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/cg.xml:23
-#: rc.cpp:1118
+#: rc.cpp:1187
 #, fuzzy
 msgctxt "Language"
 msgid "Cg"
@@ -3820,7 +3866,7 @@ msgstr "सीजी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/changelog.xml:3
-#: rc.cpp:1124
+#: rc.cpp:1193
 #, fuzzy
 msgctxt "Language"
 msgid "ChangeLog"
@@ -3828,7 +3874,7 @@ msgstr "चेंजलॉग"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/cisco.xml:3
-#: rc.cpp:1130
+#: rc.cpp:1199
 #, fuzzy
 msgctxt "Language"
 msgid "Cisco"
@@ -3836,7 +3882,7 @@ msgstr "सिस्को"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/clipper.xml:3
-#: rc.cpp:1136
+#: rc.cpp:1205
 #, fuzzy
 msgctxt "Language"
 msgid "Clipper"
@@ -3844,14 +3890,14 @@ msgstr "क्लिपर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/clojure.xml:25
-#: rc.cpp:1142
+#: rc.cpp:1211
 msgctxt "Language"
 msgid "Clojure"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/coffee.xml:4
-#: rc.cpp:1148
+#: rc.cpp:1217
 #, fuzzy
 msgctxt "Language"
 msgid "CoffeeScript"
@@ -3859,7 +3905,7 @@ msgstr "स्क्रिप्ट्स"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/coldfusion.xml:3
-#: rc.cpp:1151
+#: rc.cpp:1220
 #, fuzzy
 msgctxt "Language"
 msgid "ColdFusion"
@@ -3867,7 +3913,7 @@ msgstr "कोल्ड-फ्यूज़न"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/commonlisp.xml:26
-#: rc.cpp:1157
+#: rc.cpp:1226
 #, fuzzy
 msgctxt "Language"
 msgid "Common Lisp"
@@ -3875,7 +3921,7 @@ msgstr "कॉमन लिस्प"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/component-pascal.xml:13
-#: rc.cpp:1163
+#: rc.cpp:1232
 #, fuzzy
 msgctxt "Language"
 msgid "Component-Pascal"
@@ -3883,14 +3929,14 @@ msgstr "कम्पोनेंट-पास्कल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/context.xml:3
-#: rc.cpp:1169
+#: rc.cpp:1238
 msgctxt "Language"
 msgid "ConTeXt"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/crk.xml:2
-#: rc.cpp:1175
+#: rc.cpp:1244
 #, fuzzy
 msgctxt "Language"
 msgid "Crack"
@@ -3898,7 +3944,7 @@ msgstr "सी-मेक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/css.xml:26
-#: rc.cpp:1181
+#: rc.cpp:1250
 #, fuzzy
 msgctxt "Language"
 msgid "CSS"
@@ -3906,7 +3952,7 @@ msgstr "सीएसएस"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/cs.xml:2
-#: rc.cpp:1187
+#: rc.cpp:1256
 #, fuzzy
 msgctxt "Language"
 msgid "C#"
@@ -3914,7 +3960,7 @@ msgstr "सी#"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/cubescript.xml:10
-#: rc.cpp:1193
+#: rc.cpp:1262
 #, fuzzy
 msgctxt "Language"
 msgid "CubeScript"
@@ -3922,7 +3968,7 @@ msgstr "स्क्रिप्ट्स"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/cue.xml:3
-#: rc.cpp:1199
+#: rc.cpp:1268
 #, fuzzy
 msgctxt "Language"
 msgid "CUE Sheet"
@@ -3930,14 +3976,14 @@ msgstr "क्यू-शीट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/curry.xml:33
-#: rc.cpp:1205
+#: rc.cpp:1274
 msgctxt "Language"
 msgid "Curry"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/c.xml:3
-#: rc.cpp:1208
+#: rc.cpp:1277
 #, fuzzy
 msgctxt "Language"
 msgid "C"
@@ -3945,7 +3991,7 @@ msgstr "सी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/debianchangelog.xml:3
-#: rc.cpp:1214
+#: rc.cpp:1283
 #, fuzzy
 msgctxt "Language"
 msgid "Debian Changelog"
@@ -3953,7 +3999,7 @@ msgstr "डेबियन चेंजलॉग"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/debiancontrol.xml:3
-#: rc.cpp:1220
+#: rc.cpp:1289
 #, fuzzy
 msgctxt "Language"
 msgid "Debian Control"
@@ -3961,7 +4007,7 @@ msgstr "डेबियन नियंत्रण"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/desktop.xml:3
-#: rc.cpp:1226
+#: rc.cpp:1295
 #, fuzzy
 msgctxt "Language"
 msgid ".desktop"
@@ -3969,7 +4015,7 @@ msgstr ".डेस्कटॉप"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/diff.xml:18
-#: rc.cpp:1229
+#: rc.cpp:1298
 #, fuzzy
 msgctxt "Language"
 msgid "Diff"
@@ -3977,7 +4023,7 @@ msgstr "डिफ"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/djangotemplate.xml:7
-#: rc.cpp:1235
+#: rc.cpp:1304
 #, fuzzy
 msgctxt "Language"
 msgid "Django HTML Template"
@@ -3985,21 +4031,21 @@ msgstr "डीजांगो एचटीएमएल टेंपलेट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/dosbat.xml:11
-#: rc.cpp:1241
+#: rc.cpp:1310
 msgctxt "Language"
 msgid "MS-DOS Batch"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/dot.xml:4
-#: rc.cpp:1247
+#: rc.cpp:1316
 msgctxt "Language"
 msgid "dot"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/doxygenlua.xml:30
-#: rc.cpp:1253
+#: rc.cpp:1322
 #, fuzzy
 msgctxt "Language"
 msgid "DoxygenLua"
@@ -4007,7 +4053,7 @@ msgstr "डॉक्सीज़ेन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/doxygen.xml:31
-#: rc.cpp:1259
+#: rc.cpp:1328
 #, fuzzy
 msgctxt "Language"
 msgid "Doxygen"
@@ -4015,14 +4061,14 @@ msgstr "डॉक्सीज़ेन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/dtd.xml:6
-#: rc.cpp:1262
+#: rc.cpp:1331
 msgctxt "Language"
 msgid "DTD"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/d.xml:104
-#: rc.cpp:1268
+#: rc.cpp:1337
 #, fuzzy
 msgctxt "Language"
 msgid "D"
@@ -4030,7 +4076,7 @@ msgstr "डी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/eiffel.xml:13
-#: rc.cpp:1274
+#: rc.cpp:1343
 #, fuzzy
 msgctxt "Language"
 msgid "Eiffel"
@@ -4038,7 +4084,7 @@ msgstr "आईफ़ेल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/email.xml:6
-#: rc.cpp:1280
+#: rc.cpp:1349
 #, fuzzy
 msgctxt "Language"
 msgid "Email"
@@ -4046,14 +4092,14 @@ msgstr "ईमेल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/erlang.xml:39
-#: rc.cpp:1286
+#: rc.cpp:1355
 msgctxt "Language"
 msgid "Erlang"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/euphoria.xml:32
-#: rc.cpp:1292
+#: rc.cpp:1361
 #, fuzzy
 msgctxt "Language"
 msgid "Euphoria"
@@ -4061,7 +4107,7 @@ msgstr "यूफ़ोरिया"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/e.xml:3
-#: rc.cpp:1298
+#: rc.cpp:1367
 #, fuzzy
 msgctxt "Language"
 msgid "E Language"
@@ -4069,7 +4115,7 @@ msgstr "ई लैंग्वेज"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/fasm.xml:16
-#: rc.cpp:1304
+#: rc.cpp:1373
 #, fuzzy
 msgctxt "Language"
 msgid "Intel x86 (FASM)"
@@ -4077,7 +4123,7 @@ msgstr "इंटेल एक्स86 (एनएएसएम)"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ferite.xml:3
-#: rc.cpp:1310
+#: rc.cpp:1379
 #, fuzzy
 msgctxt "Language"
 msgid "ferite"
@@ -4085,7 +4131,7 @@ msgstr "फेराइट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/fgl-4gl.xml:3
-#: rc.cpp:1316
+#: rc.cpp:1385
 #, fuzzy
 msgctxt "Language"
 msgid "4GL"
@@ -4105,8 +4151,8 @@ msgstr "4जीएल"
 #. i18n: file: syntax/data/sql-postgresql.xml:4
 #. i18n: tag language attribute section
 #. i18n: file: syntax/data/sql.xml:6
-#: rc.cpp:1319 rc.cpp:1325 rc.cpp:1547 rc.cpp:1862 rc.cpp:2048 rc.cpp:2054
-#: rc.cpp:2060
+#: rc.cpp:1388 rc.cpp:1394 rc.cpp:1616 rc.cpp:1931 rc.cpp:2117 rc.cpp:2123
+#: rc.cpp:2129
 #, fuzzy
 msgctxt "Language Section"
 msgid "Database"
@@ -4114,7 +4160,7 @@ msgstr "डाटाबेस"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/fgl-per.xml:3
-#: rc.cpp:1322
+#: rc.cpp:1391
 #, fuzzy
 msgctxt "Language"
 msgid "4GL-PER"
@@ -4122,7 +4168,7 @@ msgstr "4जीएल-पीईआर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/fortran.xml:3
-#: rc.cpp:1328
+#: rc.cpp:1397
 #, fuzzy
 msgctxt "Language"
 msgid "Fortran"
@@ -4130,7 +4176,7 @@ msgstr "फोरट्रॉन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/freebasic.xml:3
-#: rc.cpp:1334
+#: rc.cpp:1403
 #, fuzzy
 msgctxt "Language"
 msgid "FreeBASIC"
@@ -4138,21 +4184,21 @@ msgstr "फ्री-बेसिक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/fsharp.xml:12
-#: rc.cpp:1340
+#: rc.cpp:1409
 msgctxt "Language"
 msgid "FSharp"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/fstab.xml:4
-#: rc.cpp:1346
+#: rc.cpp:1415
 msgctxt "Language"
 msgid "fstab"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/gap.xml:17
-#: rc.cpp:1352
+#: rc.cpp:1421
 #, fuzzy
 msgctxt "Language"
 msgid "GAP"
@@ -4160,7 +4206,7 @@ msgstr "जीएपी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/gdb.xml:10
-#: rc.cpp:1358
+#: rc.cpp:1427
 #, fuzzy
 msgctxt "Language"
 msgid "GDB Backtrace"
@@ -4168,7 +4214,7 @@ msgstr "बेकस्पेस"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/gdl.xml:3
-#: rc.cpp:1364
+#: rc.cpp:1433
 #, fuzzy
 msgctxt "Language"
 msgid "GDL"
@@ -4176,7 +4222,7 @@ msgstr "जीडीएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/gettext.xml:26
-#: rc.cpp:1370
+#: rc.cpp:1439
 #, fuzzy
 msgctxt "Language"
 msgid "GNU Gettext"
@@ -4184,21 +4230,21 @@ msgstr "जीएनयू गेटटेक्स्ट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/git-rebase.xml:3
-#: rc.cpp:1376
+#: rc.cpp:1445
 msgctxt "Language"
 msgid "Git Rebase"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/glosstex.xml:3
-#: rc.cpp:1382
+#: rc.cpp:1451
 msgctxt "Language"
 msgid "GlossTex"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/glsl.xml:3
-#: rc.cpp:1388
+#: rc.cpp:1457
 #, fuzzy
 msgctxt "Language"
 msgid "GLSL"
@@ -4206,7 +4252,7 @@ msgstr "जीएलएसएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/gnuassembler.xml:46
-#: rc.cpp:1394
+#: rc.cpp:1463
 #, fuzzy
 msgctxt "Language"
 msgid "GNU Assembler"
@@ -4214,14 +4260,14 @@ msgstr "जीएनयू असेंबलर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/gnuplot.xml:3
-#: rc.cpp:1400
+#: rc.cpp:1469
 msgctxt "Language"
 msgid "Gnuplot"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/go.xml:29
-#: rc.cpp:1406
+#: rc.cpp:1475
 #, fuzzy
 msgctxt "Language"
 msgid "Go"
@@ -4229,21 +4275,21 @@ msgstr "जाएँ"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/grammar.xml:6
-#: rc.cpp:1412
+#: rc.cpp:1481
 msgctxt "Language"
 msgid "KDev-PG[-Qt] Grammar"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/haml.xml:3
-#: rc.cpp:1418
+#: rc.cpp:1487
 msgctxt "Language"
 msgid "Haml"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/haskell.xml:3
-#: rc.cpp:1424
+#: rc.cpp:1493
 #, fuzzy
 msgctxt "Language"
 msgid "Haskell"
@@ -4251,14 +4297,14 @@ msgstr "हैसकेल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/haxe.xml:15
-#: rc.cpp:1430
+#: rc.cpp:1499
 msgctxt "Language"
 msgid "Haxe"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/html.xml:7
-#: rc.cpp:1436
+#: rc.cpp:1505
 #, fuzzy
 msgctxt "Language"
 msgid "HTML"
@@ -4266,7 +4312,7 @@ msgstr "एचटीएमएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/idconsole.xml:3
-#: rc.cpp:1442
+#: rc.cpp:1511
 #, fuzzy
 msgctxt "Language"
 msgid "Quake Script"
@@ -4274,7 +4320,7 @@ msgstr "क्वेक स्क्रिप्ट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/idl.xml:3
-#: rc.cpp:1448
+#: rc.cpp:1517
 #, fuzzy
 msgctxt "Language"
 msgid "IDL"
@@ -4282,7 +4328,7 @@ msgstr "आईडीएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ilerpg.xml:48
-#: rc.cpp:1454
+#: rc.cpp:1523
 #, fuzzy
 msgctxt "Language"
 msgid "ILERPG"
@@ -4290,7 +4336,7 @@ msgstr "आईएलईआरपीजी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/inform.xml:5
-#: rc.cpp:1460
+#: rc.cpp:1529
 #, fuzzy
 msgctxt "Language"
 msgid "Inform"
@@ -4298,7 +4344,7 @@ msgstr "सूचित करें"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ini.xml:3
-#: rc.cpp:1466
+#: rc.cpp:1535
 #, fuzzy
 msgctxt "Language"
 msgid "INI Files"
@@ -4306,14 +4352,14 @@ msgstr "आईएनआई फ़ाइलें"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/jam.xml:24
-#: rc.cpp:1472
+#: rc.cpp:1541
 msgctxt "Language"
 msgid "Jam"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/javadoc.xml:3
-#: rc.cpp:1478
+#: rc.cpp:1547
 #, fuzzy
 msgctxt "Language"
 msgid "Javadoc"
@@ -4321,7 +4367,7 @@ msgstr "जावा-डॉक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/javascript.xml:6
-#: rc.cpp:1484
+#: rc.cpp:1553
 #, fuzzy
 msgctxt "Language"
 msgid "JavaScript"
@@ -4329,7 +4375,7 @@ msgstr "जावास्क्रिप्ट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/java.xml:3
-#: rc.cpp:1490
+#: rc.cpp:1559
 #, fuzzy
 msgctxt "Language"
 msgid "Java"
@@ -4337,21 +4383,21 @@ msgstr "जावा"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/jira.xml:13
-#: rc.cpp:1496
+#: rc.cpp:1565
 msgctxt "Language"
 msgid "Jira"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/json.xml:15
-#: rc.cpp:1502
+#: rc.cpp:1571
 msgctxt "Language"
 msgid "JSON"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/jsp.xml:3
-#: rc.cpp:1508
+#: rc.cpp:1577
 #, fuzzy
 msgctxt "Language"
 msgid "JSP"
@@ -4359,14 +4405,14 @@ msgstr "जेएसपी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/julia.xml:32
-#: rc.cpp:1514
+#: rc.cpp:1583
 msgctxt "Language"
 msgid "Julia"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/kbasic.xml:3
-#: rc.cpp:1520
+#: rc.cpp:1589
 #, fuzzy
 msgctxt "Language"
 msgid "KBasic"
@@ -4374,7 +4420,7 @@ msgstr "के-बेसिक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/kconfig.xml:69
-#: rc.cpp:1526
+#: rc.cpp:1595
 #, fuzzy
 msgctxt "Language"
 msgid "Kconfig"
@@ -4382,14 +4428,14 @@ msgstr "कॉन्फ़िगर करें"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/k.xml:3
-#: rc.cpp:1532
+#: rc.cpp:1601
 msgctxt "Language"
 msgid "k"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/latex.xml:3
-#: rc.cpp:1538
+#: rc.cpp:1607
 #, fuzzy
 msgctxt "Language"
 msgid "LaTeX"
@@ -4397,7 +4443,7 @@ msgstr "लेटेक्स"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ldif.xml:3
-#: rc.cpp:1544
+#: rc.cpp:1613
 #, fuzzy
 msgctxt "Language"
 msgid "LDIF"
@@ -4405,7 +4451,7 @@ msgstr "एलडीआईएफ"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ld.xml:4
-#: rc.cpp:1550
+#: rc.cpp:1619
 #, fuzzy
 msgctxt "Language"
 msgid "GNU Linker Script"
@@ -4413,14 +4459,14 @@ msgstr "क्वेक स्क्रिप्ट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/less.xml:3
-#: rc.cpp:1556
+#: rc.cpp:1625
 msgctxt "Language"
 msgid "LESSCSS"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/lex.xml:23
-#: rc.cpp:1562
+#: rc.cpp:1631
 #, fuzzy
 msgctxt "Language"
 msgid "Lex/Flex"
@@ -4428,7 +4474,7 @@ msgstr "लैक्स/फ्लैक्स"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/lilypond.xml:57
-#: rc.cpp:1568
+#: rc.cpp:1637
 #, fuzzy
 msgctxt "Language"
 msgid "LilyPond"
@@ -4436,7 +4482,7 @@ msgstr "लिलिपाण्ड"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/literate-curry.xml:3
-#: rc.cpp:1574
+#: rc.cpp:1643
 #, fuzzy
 msgctxt "Language"
 msgid "Literate Curry"
@@ -4444,7 +4490,7 @@ msgstr "लिटरेट हास्कल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/literate-haskell.xml:3
-#: rc.cpp:1577
+#: rc.cpp:1646
 #, fuzzy
 msgctxt "Language"
 msgid "Literate Haskell"
@@ -4452,7 +4498,7 @@ msgstr "लिटरेट हास्कल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/logtalk.xml:4
-#: rc.cpp:1583
+#: rc.cpp:1652
 #, fuzzy
 msgctxt "Language"
 msgid "Logtalk"
@@ -4460,7 +4506,7 @@ msgstr "लॉगटाक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/lpc.xml:19
-#: rc.cpp:1589
+#: rc.cpp:1658
 #, fuzzy
 msgctxt "Language"
 msgid "LPC"
@@ -4468,7 +4514,7 @@ msgstr "एलपीसी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/lsl.xml:14
-#: rc.cpp:1595
+#: rc.cpp:1664
 #, fuzzy
 msgctxt "Language"
 msgid "LSL"
@@ -4476,7 +4522,7 @@ msgstr "जीएलएसएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/lua.xml:38
-#: rc.cpp:1601
+#: rc.cpp:1670
 #, fuzzy
 msgctxt "Language"
 msgid "Lua"
@@ -4484,7 +4530,7 @@ msgstr "लुआ"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/m3u.xml:17
-#: rc.cpp:1607
+#: rc.cpp:1676
 #, fuzzy
 msgctxt "Language"
 msgid "M3U"
@@ -4492,14 +4538,14 @@ msgstr "एम3यू"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/m4.xml:41
-#: rc.cpp:1613
+#: rc.cpp:1682
 msgctxt "Language"
 msgid "GNU M4"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mab.xml:3
-#: rc.cpp:1619
+#: rc.cpp:1688
 #, fuzzy
 msgctxt "Language"
 msgid "MAB-DB"
@@ -4507,7 +4553,7 @@ msgstr "एमएबी-डीबी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/makefile.xml:10
-#: rc.cpp:1625
+#: rc.cpp:1694
 #, fuzzy
 msgctxt "Language"
 msgid "Makefile"
@@ -4515,14 +4561,14 @@ msgstr "मेकफ़ाइल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mako.xml:7
-#: rc.cpp:1631
+#: rc.cpp:1700
 msgctxt "Language"
 msgid "Mako"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mandoc.xml:3
-#: rc.cpp:1637
+#: rc.cpp:1706
 #, fuzzy
 msgctxt "Language"
 msgid "Troff Mandoc"
@@ -4530,14 +4576,14 @@ msgstr "ट्रॉफ मैनडॉक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/markdown.xml:38
-#: rc.cpp:1643
+#: rc.cpp:1712
 msgctxt "Language"
 msgid "Markdown"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mason.xml:3
-#: rc.cpp:1649
+#: rc.cpp:1718
 #, fuzzy
 msgctxt "Language"
 msgid "Mason"
@@ -4545,14 +4591,14 @@ msgstr "मैसोन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mathematica.xml:3
-#: rc.cpp:1655
+#: rc.cpp:1724
 msgctxt "Language"
 msgid "Mathematica"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/matlab.xml:60
-#: rc.cpp:1661
+#: rc.cpp:1730
 #, fuzzy
 msgctxt "Language"
 msgid "Matlab"
@@ -4560,14 +4606,14 @@ msgstr "मैटलैब"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/maxima.xml:24
-#: rc.cpp:1667
+#: rc.cpp:1736
 msgctxt "Language"
 msgid "Maxima"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mediawiki.xml:9
-#: rc.cpp:1673
+#: rc.cpp:1742
 #, fuzzy
 msgctxt "Language"
 msgid "MediaWiki"
@@ -4575,7 +4621,7 @@ msgstr "मीडिया-विकि"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mel.xml:23
-#: rc.cpp:1679
+#: rc.cpp:1748
 #, fuzzy
 msgctxt "Language"
 msgid "MEL"
@@ -4583,21 +4629,21 @@ msgstr "एसएमएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mergetagtext.xml:28
-#: rc.cpp:1685
+#: rc.cpp:1754
 msgctxt "Language"
 msgid "mergetag text"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/metafont.xml:9
-#: rc.cpp:1691
+#: rc.cpp:1760
 msgctxt "Language"
 msgid "Metapost/Metafont"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mips.xml:3
-#: rc.cpp:1697
+#: rc.cpp:1766
 #, fuzzy
 msgctxt "Language"
 msgid "MIPS Assembler"
@@ -4605,7 +4651,7 @@ msgstr "एमआईपीएस असेंबलर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/modelica.xml:19
-#: rc.cpp:1703
+#: rc.cpp:1772
 #, fuzzy
 msgctxt "Language"
 msgid "Modelica"
@@ -4613,7 +4659,7 @@ msgstr "मॉड्यूला-2"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/modelines.xml:10
-#: rc.cpp:1709
+#: rc.cpp:1778
 #, fuzzy
 msgctxt "Language"
 msgid "Modelines"
@@ -4621,7 +4667,7 @@ msgstr "मॉड्यूला-2"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/modula-2.xml:3
-#: rc.cpp:1712
+#: rc.cpp:1781
 #, fuzzy
 msgctxt "Language"
 msgid "Modula-2"
@@ -4629,7 +4675,7 @@ msgstr "मॉड्यूला-2"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/monobasic.xml:13
-#: rc.cpp:1718
+#: rc.cpp:1787
 #, fuzzy
 msgctxt "Language"
 msgid "MonoBasic"
@@ -4637,7 +4683,7 @@ msgstr "मोनो-बेसिक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/mup.xml:3
-#: rc.cpp:1724
+#: rc.cpp:1793
 #, fuzzy
 msgctxt "Language"
 msgid "Music Publisher"
@@ -4645,14 +4691,14 @@ msgstr "म्यूज़िक पब्लिशर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/nagios.xml:3
-#: rc.cpp:1730
+#: rc.cpp:1799
 msgctxt "Language"
 msgid "Nagios"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/nasm.xml:43
-#: rc.cpp:1736
+#: rc.cpp:1805
 #, fuzzy
 msgctxt "Language"
 msgid "Intel x86 (NASM)"
@@ -4660,7 +4706,7 @@ msgstr "इंटेल एक्स86 (एनएएसएम)"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/nemerle.xml:4
-#: rc.cpp:1742
+#: rc.cpp:1811
 #, fuzzy
 msgctxt "Language"
 msgid "Nemerle"
@@ -4668,21 +4714,21 @@ msgstr "नेमेरल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/nesc.xml:3
-#: rc.cpp:1748
+#: rc.cpp:1817
 msgctxt "Language"
 msgid "nesC"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/noweb.xml:3
-#: rc.cpp:1754
+#: rc.cpp:1823
 msgctxt "Language"
 msgid "noweb"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/objectivecpp.xml:3
-#: rc.cpp:1760
+#: rc.cpp:1829
 #, fuzzy
 msgctxt "Language"
 msgid "Objective-C++"
@@ -4690,7 +4736,7 @@ msgstr "ऑब्जेक्टिव-सी++"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/objectivec.xml:3
-#: rc.cpp:1766
+#: rc.cpp:1835
 #, fuzzy
 msgctxt "Language"
 msgid "Objective-C"
@@ -4698,7 +4744,7 @@ msgstr "ऑब्जेक्टिव-सी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ocaml.xml:12
-#: rc.cpp:1772
+#: rc.cpp:1841
 #, fuzzy
 msgctxt "Language"
 msgid "Objective Caml"
@@ -4706,7 +4752,7 @@ msgstr "ऑब्जेक्टिव सीएएमएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/octave.xml:18
-#: rc.cpp:1778
+#: rc.cpp:1847
 #, fuzzy
 msgctxt "Language"
 msgid "Octave"
@@ -4714,14 +4760,14 @@ msgstr "अष्टक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/oors.xml:3
-#: rc.cpp:1784
+#: rc.cpp:1853
 msgctxt "Language"
 msgid "OORS"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/opal.xml:3
-#: rc.cpp:1790
+#: rc.cpp:1859
 #, fuzzy
 msgctxt "Language"
 msgid "OPAL"
@@ -4729,21 +4775,21 @@ msgstr "ओपीएएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/opencl.xml:3
-#: rc.cpp:1796
+#: rc.cpp:1865
 msgctxt "Language"
 msgid "OpenCL"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/pango.xml:3
-#: rc.cpp:1802
+#: rc.cpp:1871
 msgctxt "Language"
 msgid "Pango"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/pascal.xml:3
-#: rc.cpp:1808
+#: rc.cpp:1877
 #, fuzzy
 msgctxt "Language"
 msgid "Pascal"
@@ -4751,7 +4797,7 @@ msgstr "पास्कल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/perl.xml:42
-#: rc.cpp:1811
+#: rc.cpp:1880
 #, fuzzy
 msgctxt "Language"
 msgid "Perl"
@@ -4759,7 +4805,7 @@ msgstr "पर्ल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/php.xml:67
-#: rc.cpp:1817
+#: rc.cpp:1886
 #, fuzzy
 msgctxt "Language"
 msgid "PHP/PHP"
@@ -4767,7 +4813,7 @@ msgstr "पीएचपी/पीएचपी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/picsrc.xml:11
-#: rc.cpp:1823
+#: rc.cpp:1892
 #, fuzzy
 msgctxt "Language"
 msgid "PicAsm"
@@ -4775,14 +4821,14 @@ msgstr "पीआईसी-एएसएम"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/pig.xml:4
-#: rc.cpp:1829
+#: rc.cpp:1898
 msgctxt "Language"
 msgid "Pig"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/pike.xml:4
-#: rc.cpp:1835
+#: rc.cpp:1904
 #, fuzzy
 msgctxt "Language"
 msgid "Pike"
@@ -4790,7 +4836,7 @@ msgstr "पाइक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/postscript.xml:3
-#: rc.cpp:1841
+#: rc.cpp:1910
 #, fuzzy
 msgctxt "Language"
 msgid "PostScript"
@@ -4798,7 +4844,7 @@ msgstr "पोस्टस्क्रिप्ट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/povray.xml:8
-#: rc.cpp:1847
+#: rc.cpp:1916
 #, fuzzy
 msgctxt "Language"
 msgid "POV-Ray"
@@ -4806,14 +4852,14 @@ msgstr "पोव-रे"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ppd.xml:12
-#: rc.cpp:1853
+#: rc.cpp:1922
 msgctxt "Language"
 msgid "PostScript Printer Description"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/progress.xml:3
-#: rc.cpp:1859
+#: rc.cpp:1928
 #, fuzzy
 msgctxt "Language"
 msgid "progress"
@@ -4821,21 +4867,21 @@ msgstr "प्रगति"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/protobuf.xml:3
-#: rc.cpp:1865
+#: rc.cpp:1934
 msgctxt "Language"
 msgid "Protobuf"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/puppet.xml:30
-#: rc.cpp:1871
+#: rc.cpp:1940
 msgctxt "Language"
 msgid "Puppet"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/purebasic.xml:3
-#: rc.cpp:1877
+#: rc.cpp:1946
 #, fuzzy
 msgctxt "Language"
 msgid "PureBasic"
@@ -4843,7 +4889,7 @@ msgstr "प्योर-बेसिक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/python.xml:16
-#: rc.cpp:1883
+#: rc.cpp:1952
 #, fuzzy
 msgctxt "Language"
 msgid "Python"
@@ -4851,7 +4897,7 @@ msgstr "पायथन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/qmake.xml:3
-#: rc.cpp:1889
+#: rc.cpp:1958
 #, fuzzy
 msgctxt "Language"
 msgid "QMake"
@@ -4859,7 +4905,7 @@ msgstr "सी-मेक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/qml.xml:4
-#: rc.cpp:1895
+#: rc.cpp:1964
 #, fuzzy
 msgctxt "Language"
 msgid "QML"
@@ -4867,14 +4913,14 @@ msgstr "एसएमएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/q.xml:3
-#: rc.cpp:1901
+#: rc.cpp:1970
 msgctxt "Language"
 msgid "q"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/rapidq.xml:3
-#: rc.cpp:1907
+#: rc.cpp:1976
 #, fuzzy
 msgctxt "Language"
 msgid "RapidQ"
@@ -4882,14 +4928,14 @@ msgstr "रेपिड-क्यू"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/relaxngcompact.xml:3
-#: rc.cpp:1913
+#: rc.cpp:1982
 msgctxt "Language"
 msgid "RelaxNG-Compact"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/replicode.xml:14
-#: rc.cpp:1919
+#: rc.cpp:1988
 #, fuzzy
 msgctxt "Language"
 msgid "Replicode"
@@ -4897,14 +4943,14 @@ msgstr "बदलें (&R)"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/rest.xml:14
-#: rc.cpp:1925
+#: rc.cpp:1994
 msgctxt "Language"
 msgid "reStructuredText"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/rexx.xml:3
-#: rc.cpp:1931
+#: rc.cpp:2000
 #, fuzzy
 msgctxt "Language"
 msgid "REXX"
@@ -4912,7 +4958,7 @@ msgstr "रेक्स"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/rhtml.xml:47
-#: rc.cpp:1937
+#: rc.cpp:2006
 #, fuzzy
 msgctxt "Language"
 msgid "Ruby/Rails/RHTML"
@@ -4920,7 +4966,7 @@ msgstr "एचटीएमएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/rib.xml:8
-#: rc.cpp:1943
+#: rc.cpp:2012
 #, fuzzy
 msgctxt "Language"
 msgid "RenderMan RIB"
@@ -4928,7 +4974,7 @@ msgstr "रेंडरमैन आरआईबी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/roff.xml:10
-#: rc.cpp:1949
+#: rc.cpp:2018
 #, fuzzy
 msgctxt "Language"
 msgid "Roff"
@@ -4936,7 +4982,7 @@ msgstr "रॉफ"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/rpmspec.xml:11
-#: rc.cpp:1955
+#: rc.cpp:2024
 #, fuzzy
 msgctxt "Language"
 msgid "RPM Spec"
@@ -4944,7 +4990,7 @@ msgstr "आरपीएम स्पैक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/rsiidl.xml:3
-#: rc.cpp:1961
+#: rc.cpp:2030
 #, fuzzy
 msgctxt "Language"
 msgid "RSI IDL"
@@ -4952,7 +4998,7 @@ msgstr "आरएसआई आईडीएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/ruby.xml:33
-#: rc.cpp:1967
+#: rc.cpp:2036
 #, fuzzy
 msgctxt "Language"
 msgid "Ruby"
@@ -4960,7 +5006,7 @@ msgstr "रूबी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/r.xml:11
-#: rc.cpp:1973
+#: rc.cpp:2042
 #, fuzzy
 msgctxt "Language"
 msgid "R Script"
@@ -4968,7 +5014,7 @@ msgstr "आर स्क्रिप्ट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sather.xml:3
-#: rc.cpp:1979
+#: rc.cpp:2048
 #, fuzzy
 msgctxt "Language"
 msgid "Sather"
@@ -4976,7 +5022,7 @@ msgstr "सैदर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/scala.xml:3
-#: rc.cpp:1985
+#: rc.cpp:2054
 #, fuzzy
 msgctxt "Language"
 msgid "Scala"
@@ -4984,7 +5030,7 @@ msgstr "स्टाटा"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/scheme.xml:43
-#: rc.cpp:1991
+#: rc.cpp:2060
 #, fuzzy
 msgctxt "Language"
 msgid "Scheme"
@@ -4992,7 +5038,7 @@ msgstr "योजना"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sci.xml:3
-#: rc.cpp:1997
+#: rc.cpp:2066
 #, fuzzy
 msgctxt "Language"
 msgid "scilab"
@@ -5000,21 +5046,21 @@ msgstr "साइलैब"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/scss.xml:28
-#: rc.cpp:2003
+#: rc.cpp:2072
 msgctxt "Language"
 msgid "SCSS"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sed.xml:3
-#: rc.cpp:2009
+#: rc.cpp:2078
 msgctxt "Language"
 msgid "sed"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sgml.xml:3
-#: rc.cpp:2015
+#: rc.cpp:2084
 #, fuzzy
 msgctxt "Language"
 msgid "SGML"
@@ -5022,7 +5068,7 @@ msgstr "एसजीएमएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sieve.xml:4
-#: rc.cpp:2021
+#: rc.cpp:2090
 #, fuzzy
 msgctxt "Language"
 msgid "Sieve"
@@ -5030,7 +5076,7 @@ msgstr "सीव"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sisu.xml:3
-#: rc.cpp:2027
+#: rc.cpp:2096
 #, fuzzy
 msgctxt "Language"
 msgid "SiSU"
@@ -5038,7 +5084,7 @@ msgstr "सिसू"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sml.xml:3
-#: rc.cpp:2033
+#: rc.cpp:2102
 #, fuzzy
 msgctxt "Language"
 msgid "SML"
@@ -5046,7 +5092,7 @@ msgstr "एसएमएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/spice.xml:4
-#: rc.cpp:2039
+#: rc.cpp:2108
 #, fuzzy
 msgctxt "Language"
 msgid "Spice"
@@ -5054,7 +5100,7 @@ msgstr "स्पाइस"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sql-mysql.xml:8
-#: rc.cpp:2045
+#: rc.cpp:2114
 #, fuzzy
 msgctxt "Language"
 msgid "SQL (MySQL)"
@@ -5062,7 +5108,7 @@ msgstr "एसक्यूएल (माइ-एसक्यूएल)"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sql-postgresql.xml:4
-#: rc.cpp:2051
+#: rc.cpp:2120
 #, fuzzy
 msgctxt "Language"
 msgid "SQL (PostgreSQL)"
@@ -5070,7 +5116,7 @@ msgstr "एसक्यूएल (पोस्टग्रे-एसक्यू
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/sql.xml:6
-#: rc.cpp:2057
+#: rc.cpp:2126
 #, fuzzy
 msgctxt "Language"
 msgid "SQL"
@@ -5078,7 +5124,7 @@ msgstr "एसक्यूएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/stata.xml:3
-#: rc.cpp:2063
+#: rc.cpp:2132
 #, fuzzy
 msgctxt "Language"
 msgid "Stata"
@@ -5086,14 +5132,14 @@ msgstr "स्टाटा"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/systemc.xml:10
-#: rc.cpp:2069
+#: rc.cpp:2138
 msgctxt "Language"
 msgid "SystemC"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/systemverilog.xml:42
-#: rc.cpp:2075
+#: rc.cpp:2144
 #, fuzzy
 msgctxt "Language"
 msgid "SystemVerilog"
@@ -5101,14 +5147,14 @@ msgstr "वेरिलॉग"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/tads3.xml:5
-#: rc.cpp:2081
+#: rc.cpp:2150
 msgctxt "Language"
 msgid "TADS 3"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/tcl.xml:31
-#: rc.cpp:2087
+#: rc.cpp:2156
 #, fuzzy
 msgctxt "Language"
 msgid "Tcl/Tk"
@@ -5116,21 +5162,21 @@ msgstr "टीसीएल/टीके"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/tcsh.xml:11
-#: rc.cpp:2093
+#: rc.cpp:2162
 msgctxt "Language"
 msgid "Tcsh"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/texinfo.xml:3
-#: rc.cpp:2099
+#: rc.cpp:2168
 msgctxt "Language"
 msgid "Texinfo"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/textile.xml:18
-#: rc.cpp:2105
+#: rc.cpp:2174
 #, fuzzy
 msgctxt "Language"
 msgid "Textile"
@@ -5138,7 +5184,7 @@ msgstr "पाठ क्षेत्र पृष्ठभूमि"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/tibasic.xml:3
-#: rc.cpp:2111
+#: rc.cpp:2180
 #, fuzzy
 msgctxt "Language"
 msgid "TI Basic"
@@ -5146,7 +5192,7 @@ msgstr "टीआई बेसिक"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/txt2tags.xml:6
-#: rc.cpp:2117
+#: rc.cpp:2186
 #, fuzzy
 msgctxt "Language"
 msgid "txt2tags"
@@ -5154,7 +5200,7 @@ msgstr "टीएक्सटी2टैग्स"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/uscript.xml:3
-#: rc.cpp:2123
+#: rc.cpp:2192
 #, fuzzy
 msgctxt "Language"
 msgid "UnrealScript"
@@ -5162,21 +5208,21 @@ msgstr "अनरीयल-स्क्रिप्ट"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/vala.xml:25
-#: rc.cpp:2129
+#: rc.cpp:2198
 msgctxt "Language"
 msgid "Vala"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/valgrind-suppression.xml:3
-#: rc.cpp:2135
+#: rc.cpp:2204
 msgctxt "Language"
 msgid "Valgrind Suppression"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/varnishtest.xml:3
-#: rc.cpp:2141
+#: rc.cpp:2210
 #, fuzzy
 msgctxt "Language"
 msgid "Varnish Test Case language"
@@ -5184,7 +5230,7 @@ msgstr "अपाची कॉन्फ़िगरेशन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/varnish.xml:3
-#: rc.cpp:2147
+#: rc.cpp:2216
 #, fuzzy
 msgctxt "Language"
 msgid "Varnish Configuration Language"
@@ -5192,14 +5238,14 @@ msgstr "अपाची कॉन्फ़िगरेशन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/vcard.xml:5
-#: rc.cpp:2153
+#: rc.cpp:2222
 msgctxt "Language"
 msgid "vCard, vCalendar, iCalendar"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/velocity.xml:3
-#: rc.cpp:2159
+#: rc.cpp:2228
 #, fuzzy
 msgctxt "Language"
 msgid "Velocity"
@@ -5207,14 +5253,14 @@ msgstr "वेलोसिटी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/vera.xml:42
-#: rc.cpp:2165
+#: rc.cpp:2234
 msgctxt "Language"
 msgid "Vera"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/verilog.xml:3
-#: rc.cpp:2171
+#: rc.cpp:2240
 #, fuzzy
 msgctxt "Language"
 msgid "Verilog"
@@ -5222,7 +5268,7 @@ msgstr "वेरिलॉग"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/vhdl.xml:11
-#: rc.cpp:2177
+#: rc.cpp:2246
 #, fuzzy
 msgctxt "Language"
 msgid "VHDL"
@@ -5230,7 +5276,7 @@ msgstr "वीएचडीएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/vrml.xml:3
-#: rc.cpp:2183
+#: rc.cpp:2252
 #, fuzzy
 msgctxt "Language"
 msgid "VRML"
@@ -5238,7 +5284,7 @@ msgstr "वीआरएमएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/winehq.xml:3
-#: rc.cpp:2189
+#: rc.cpp:2258
 #, fuzzy
 msgctxt "Language"
 msgid "WINE Config"
@@ -5246,14 +5292,14 @@ msgstr "वाइन कॉन्फ़िग"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/wml.xml:57
-#: rc.cpp:2195
+#: rc.cpp:2264
 msgctxt "Language"
 msgid "Wesnoth Markup Language"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/xharbour.xml:3
-#: rc.cpp:2201
+#: rc.cpp:2270
 #, fuzzy
 msgctxt "Language"
 msgid "xHarbour"
@@ -5261,7 +5307,7 @@ msgstr "एक्स-हॉर्बर"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/xmldebug.xml:3
-#: rc.cpp:2207
+#: rc.cpp:2276
 #, fuzzy
 msgctxt "Language"
 msgid "XML (Debug)"
@@ -5269,7 +5315,7 @@ msgstr "एक्सएमएल (डिबग)"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/xml.xml:9
-#: rc.cpp:2213
+#: rc.cpp:2282
 #, fuzzy
 msgctxt "Language"
 msgid "XML"
@@ -5277,7 +5323,7 @@ msgstr "एक्सएमएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/xorg.xml:3
-#: rc.cpp:2219
+#: rc.cpp:2288
 #, fuzzy
 msgctxt "Language"
 msgid "x.org Configuration"
@@ -5285,7 +5331,7 @@ msgstr "एक्स.ऑर्ग कॉन्फ़िगरेशन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/xslt.xml:55
-#: rc.cpp:2225
+#: rc.cpp:2294
 #, fuzzy
 msgctxt "Language"
 msgid "xslt"
@@ -5293,7 +5339,7 @@ msgstr "एक्सएसएलटी"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/xul.xml:7
-#: rc.cpp:2231
+#: rc.cpp:2300
 #, fuzzy
 msgctxt "Language"
 msgid "XUL"
@@ -5301,7 +5347,7 @@ msgstr "एक्सयूएल"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/yacas.xml:3
-#: rc.cpp:2237
+#: rc.cpp:2306
 #, fuzzy
 msgctxt "Language"
 msgid "yacas"
@@ -5309,7 +5355,7 @@ msgstr "याकास"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/yacc.xml:28
-#: rc.cpp:2243
+#: rc.cpp:2312
 #, fuzzy
 msgctxt "Language"
 msgid "Yacc/Bison"
@@ -5317,14 +5363,14 @@ msgstr "याक/बाइसन"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/yaml.xml:4
-#: rc.cpp:2249
+#: rc.cpp:2318
 msgctxt "Language"
 msgid "YAML"
 msgstr ""
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/zonnon.xml:3
-#: rc.cpp:2255
+#: rc.cpp:2324
 #, fuzzy
 msgctxt "Language"
 msgid "Zonnon"
@@ -5332,96 +5378,96 @@ msgstr "अज्ञात"
 
 #. i18n: tag language attribute name
 #. i18n: file: syntax/data/zsh.xml:11
-#: rc.cpp:2261
+#: rc.cpp:2330
 msgctxt "Language"
 msgid "Zsh"
 msgstr ""
 
 #. i18n: file: script/data/indentation/ada.js:2
-#: rc.cpp:2266
+#: rc.cpp:2335
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "ada"
 msgstr "एडीए"
 
 #. i18n: file: script/data/indentation/cmake.js:2
-#: rc.cpp:2268
+#: rc.cpp:2337
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "CMake"
 msgstr "सी-मेक"
 
 #. i18n: file: script/data/indentation/cppstyle.js:2
-#: rc.cpp:2270
+#: rc.cpp:2339
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "C++/boost Style"
 msgstr "सी शैली"
 
 #. i18n: file: script/data/indentation/cstyle.js:2
-#: rc.cpp:2272
+#: rc.cpp:2341
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "C Style"
 msgstr "सी शैली"
 
 #. i18n: file: script/data/indentation/haskell.js:2
-#: rc.cpp:2274
+#: rc.cpp:2343
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "Haskell"
 msgstr "हैसकेल"
 
 #. i18n: file: script/data/indentation/latex.js:2
-#: rc.cpp:2276
+#: rc.cpp:2345
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "Latex"
 msgstr "नवीनतम"
 
 #. i18n: file: script/data/indentation/lilypond.js:2
-#: rc.cpp:2278
+#: rc.cpp:2347
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "LilyPond"
 msgstr "लिलिपाण्ड"
 
 #. i18n: file: script/data/indentation/lisp.js:2
-#: rc.cpp:2280
+#: rc.cpp:2349
 msgctxt "Autoindent mode"
 msgid "LISP"
 msgstr ""
 
 #. i18n: file: script/data/indentation/lua.js:2
-#: rc.cpp:2282
+#: rc.cpp:2351
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "Lua"
 msgstr "लुआ"
 
 #. i18n: file: script/data/indentation/pascal.js:2
-#: rc.cpp:2284
+#: rc.cpp:2353
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "Pascal"
 msgstr "पास्कल"
 
 #. i18n: file: script/data/indentation/python.js:2
-#: rc.cpp:2286
+#: rc.cpp:2355
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "Python"
 msgstr "पायथन"
 
 #. i18n: file: script/data/indentation/ruby.js:2
-#: rc.cpp:2288
+#: rc.cpp:2357
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "Ruby"
 msgstr "रूबी"
 
 #. i18n: file: script/data/indentation/xml.js:2
-#: rc.cpp:2290
+#: rc.cpp:2359
 #, fuzzy
 msgctxt "Autoindent mode"
 msgid "XML Style"
@@ -6745,12 +6791,12 @@ msgstr "रीयूज़ वर्ड बिहाइन्ड"
 msgid "Language keywords"
 msgstr "अलर्ट्स"
 
-#: completion/katecompletionconfig.cpp:40
+#: completion/katecompletionconfig.cpp:41
 msgid "Code Completion Configuration"
 msgstr "कोड पूर्णता कॉन्फ़िगुरेशन"
 
-#: completion/katecompletionconfig.cpp:114
-#: completion/katecompletionconfig.cpp:142
+#: completion/katecompletionconfig.cpp:115
+#: completion/katecompletionconfig.cpp:143
 msgid "Always"
 msgstr "हमेशा"
 
@@ -8048,40 +8094,40 @@ msgctxt "Autoindent mode"
 msgid "Normal"
 msgstr "सामान्य"
 
-#: search/katesearchbar.cpp:77
+#: search/katesearchbar.cpp:78
 msgid "Add..."
 msgstr "जोड़ें..."
 
-#: search/katesearchbar.cpp:355
+#: search/katesearchbar.cpp:356
 #, fuzzy
 msgid "Continuing search from top"
 msgstr "अंत से जारी रखें?"
 
-#: search/katesearchbar.cpp:358
+#: search/katesearchbar.cpp:359
 #, fuzzy
 msgid "Continuing search from bottom"
 msgstr "अंत से जारी रखें?"
 
-#: search/katesearchbar.cpp:361
+#: search/katesearchbar.cpp:362
 msgid "Not found"
 msgstr "नहीं मिला"
 
-#: search/katesearchbar.cpp:619
+#: search/katesearchbar.cpp:620
 #, fuzzy
 msgid "Bottom of file reached. Continue from top?"
 msgstr "ऊपर से;नीचे से;खोज;रद्द करो"
 
-#: search/katesearchbar.cpp:620
+#: search/katesearchbar.cpp:621
 #, fuzzy
 msgid "Top of file reached. Continue from bottom?"
 msgstr "ऊपर से;नीचे से;खोज;रद्द करो"
 
-#: search/katesearchbar.cpp:621
+#: search/katesearchbar.cpp:622
 #, fuzzy
 msgid "Continue search?"
 msgstr "अंत से जारी रखें?"
 
-#: search/katesearchbar.cpp:665
+#: search/katesearchbar.cpp:666
 #, fuzzy
 msgctxt "short translation"
 msgid "1 match found"
@@ -8089,7 +8135,7 @@ msgid_plural "%1 matches found"
 msgstr[0] "नहीं मिला"
 msgstr[1] "नहीं मिला"
 
-#: search/katesearchbar.cpp:915
+#: search/katesearchbar.cpp:916
 #, fuzzy
 msgctxt "short translation"
 msgid "1 replacement made"
@@ -8101,160 +8147,160 @@ msgstr[1] ""
 "1 बदल दिया.\n"
 "%n बदल दिए."
 
-#: search/katesearchbar.cpp:1120
+#: search/katesearchbar.cpp:1121
 msgid "Beginning of line"
 msgstr "पंक्ति का आरंभ"
 
-#: search/katesearchbar.cpp:1121
+#: search/katesearchbar.cpp:1122
 msgid "End of line"
 msgstr "पंक्ति का अंत"
 
-#: search/katesearchbar.cpp:1123
+#: search/katesearchbar.cpp:1124
 #, fuzzy
 msgid "Any single character (excluding line breaks)"
 msgstr "<qt>यह एक अक्षर को मैच करेगा</qt>"
 
-#: search/katesearchbar.cpp:1125
+#: search/katesearchbar.cpp:1126
 #, fuzzy
 msgid "One or more occurrences"
 msgstr "एक या अधिक बार"
 
-#: search/katesearchbar.cpp:1126
+#: search/katesearchbar.cpp:1127
 #, fuzzy
 msgid "Zero or more occurrences"
 msgstr "दोहराएँ, शून्य या अधिक बार"
 
-#: search/katesearchbar.cpp:1127
+#: search/katesearchbar.cpp:1128
 #, fuzzy
 msgid "Zero or one occurrences"
 msgstr "Join one or more Projects"
 
-#: search/katesearchbar.cpp:1128
+#: search/katesearchbar.cpp:1129
 #, fuzzy
 msgid "<a> through <b> occurrences"
 msgstr "इससे होकर लपेटें (~W)"
 
-#: search/katesearchbar.cpp:1130
+#: search/katesearchbar.cpp:1131
 #, fuzzy
 msgid "Group, capturing"
 msgstr "समूह पाठ"
 
-#: search/katesearchbar.cpp:1131
+#: search/katesearchbar.cpp:1132
 msgid "Or"
 msgstr "या"
 
-#: search/katesearchbar.cpp:1132
+#: search/katesearchbar.cpp:1133
 msgid "Set of characters"
 msgstr "अक्षरों के समूह"
 
-#: search/katesearchbar.cpp:1133
+#: search/katesearchbar.cpp:1134
 msgid "Negative set of characters"
 msgstr "अक्षरों के ऋण समूह"
 
-#: search/katesearchbar.cpp:1137
+#: search/katesearchbar.cpp:1138
 #, fuzzy
 msgid "Whole match reference"
 msgstr "सिर्फ अंग्रेज़ी के पूरे अक्षरों के जोड़ मिलाएँ"
 
-#: search/katesearchbar.cpp:1150
+#: search/katesearchbar.cpp:1151
 msgid "Reference"
 msgstr "संदर्भ"
 
-#: search/katesearchbar.cpp:1157
+#: search/katesearchbar.cpp:1158
 msgid "Line break"
 msgstr "पंक्ति ब्रेक"
 
-#: search/katesearchbar.cpp:1158
+#: search/katesearchbar.cpp:1159
 msgid "Tab"
 msgstr "टैब"
 
-#: search/katesearchbar.cpp:1161
+#: search/katesearchbar.cpp:1162
 msgid "Word boundary"
 msgstr "शब्द सीमा"
 
-#: search/katesearchbar.cpp:1162
+#: search/katesearchbar.cpp:1163
 msgid "Not word boundary"
 msgstr "नॉट शब्द सीमा"
 
-#: search/katesearchbar.cpp:1163
+#: search/katesearchbar.cpp:1164
 msgid "Digit"
 msgstr "डिजिट"
 
-#: search/katesearchbar.cpp:1164
+#: search/katesearchbar.cpp:1165
 msgid "Non-digit"
 msgstr "नॉन-डिजिट"
 
-#: search/katesearchbar.cpp:1165
+#: search/katesearchbar.cpp:1166
 #, fuzzy
 msgid "Whitespace (excluding line breaks)"
 msgstr "कक्षों में लाइन ब्रेक प्रविष्ट करना"
 
-#: search/katesearchbar.cpp:1166
+#: search/katesearchbar.cpp:1167
 #, fuzzy
 msgid "Non-whitespace (excluding line breaks)"
 msgstr "कक्षों में लाइन ब्रेक प्रविष्ट करना"
 
-#: search/katesearchbar.cpp:1167
+#: search/katesearchbar.cpp:1168
 #, fuzzy
 msgid "Word character (alphanumerics plus '_')"
 msgstr "जब डबल क्लिक किया जाए, अक्षर जो अल्फान्यूमेरिक से भिन्न हों, शब्द के भाग समझे जाएँ:"
 
-#: search/katesearchbar.cpp:1168
+#: search/katesearchbar.cpp:1169
 msgid "Non-word character"
 msgstr "नॉन-वर्ड अक्षर"
 
-#: search/katesearchbar.cpp:1171
+#: search/katesearchbar.cpp:1172
 #, fuzzy
 msgid "Octal character 000 to 377 (2^8-1)"
 msgstr "संप्रतीक की लंबरूप केंद्र के लिये पंक्तिकरण"
 
-#: search/katesearchbar.cpp:1172
+#: search/katesearchbar.cpp:1173
 #, fuzzy
 msgid "Hex character 0000 to FFFF (2^16-1)"
 msgstr "16 : संवाद में रुकें प्रतीक जोड़ें."
 
-#: search/katesearchbar.cpp:1173
+#: search/katesearchbar.cpp:1174
 msgid "Backslash"
 msgstr "बैकस्लैश"
 
-#: search/katesearchbar.cpp:1177
+#: search/katesearchbar.cpp:1178
 #, fuzzy
 msgid "Group, non-capturing"
 msgstr "बिना-खण्डन का अंतर (~p)"
 
-#: search/katesearchbar.cpp:1178
+#: search/katesearchbar.cpp:1179
 #, fuzzy
 msgid "Lookahead"
 msgstr "Neg. आगे देखें"
 
-#: search/katesearchbar.cpp:1179
+#: search/katesearchbar.cpp:1180
 #, fuzzy
 msgid "Negative lookahead"
 msgstr "नकारात्मक विचलन"
 
-#: search/katesearchbar.cpp:1184
+#: search/katesearchbar.cpp:1185
 msgid "Begin lowercase conversion"
 msgstr "लोअरकेस रूपांतरण चालू करें"
 
-#: search/katesearchbar.cpp:1185
+#: search/katesearchbar.cpp:1186
 msgid "Begin uppercase conversion"
 msgstr "अपरकेस रूपांतरण चालू करें"
 
-#: search/katesearchbar.cpp:1186
+#: search/katesearchbar.cpp:1187
 msgid "End case conversion"
 msgstr "केस रूपांतरण बन्द करें"
 
-#: search/katesearchbar.cpp:1187
+#: search/katesearchbar.cpp:1188
 #, fuzzy
 msgid "Lowercase first character conversion"
 msgstr "लोअरकेस रूपांतरण चालू करें"
 
-#: search/katesearchbar.cpp:1188
+#: search/katesearchbar.cpp:1189
 #, fuzzy
 msgid "Uppercase first character conversion"
 msgstr "अपरकेस रूपांतरण चालू करें"
 
-#: search/katesearchbar.cpp:1189
+#: search/katesearchbar.cpp:1190
 #, fuzzy
 msgid "Replacement counter (for Replace All)"
 msgstr "सारे अद्वितीय प्रविष्टि को प्रतिस्थापित करें"
