@@ -1,4 +1,4 @@
-project(kde-i18n-ar)
+project(kde-i18n-ms)
 
 # Search KDE installation
 find_package(KDE4 REQUIRED)
@@ -14,7 +14,7 @@ IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
    MESSAGE(FATAL_ERROR "Please install the msgfmt binary")
 endif (NOT GETTEXT_MSGFMT_EXECUTABLE)
 
-set(CURRENT_LANG ar)
+set(CURRENT_LANG ms)
 
 macro_optional_add_subdirectory( messages )
 macro_optional_add_subdirectory( scripts )
