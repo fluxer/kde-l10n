@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevcpp\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-07-27 00:40+0300\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2013-08-23 19:08+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -23,421 +23,60 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: preprocessjob.cpp:464
-msgid "File was included recursively from within itself: %1"
-msgstr "Файл рекурсивно включает сам себя: %1"
+#: cppparsejob.cpp:158
+msgid "Parsing included files"
+msgstr "Анализ включённых файлов"
 
-#: preprocessjob.cpp:606
-msgid "Included file was not found: %1"
-msgstr "Включаемый файл не найден: %1"
+#: cppparsejob.cpp:469
+msgid "Parsing actual file"
+msgstr "Анализ собственно файла"
 
-#: preprocessjob.cpp:607
-msgid ""
-"Searched include path:\n"
-"%1"
-msgstr ""
-"Файлы для включения искались в:\n"
-"%1"
+#: cppparsejob.cpp:581
+msgid "Not updating duchain for %1"
+msgstr "Цепочка DU для %1 не обновляется"
 
-#. i18n: file: kdevcppsupport.rc:5
-#. i18n: ectx: Menu (navigation)
-#: rc.cpp:3
-msgctxt "@title:menu"
-msgid "Navigation"
-msgstr "Навигация"
+#: cppparsejob.cpp:710
+msgid "Building uses"
+msgstr "Составление таблицы использования"
 
-#. i18n: file: kdevcppsupport.rc:9
-#. i18n: ectx: Menu (code)
-#: rc.cpp:6
-msgctxt "@title:menu"
-msgid "Code"
-msgstr "Код"
+#: cppparsejob.cpp:858
+msgid "Ready"
+msgstr "Готово"
 
-#. i18n: file: codegen/ui/custom_include_paths.ui:23
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:9
-msgid "Storage Directory"
-msgstr "Каталог хранения"
+#: quickopen.cpp:161
+msgid "This file imports the current open document<br/>"
+msgstr "Этот файл импортирует текущий документ<br/>"
 
-#. i18n: file: codegen/ui/custom_include_paths.ui:35
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:12
-msgid ""
-"The custom include-path will be stored in a special file called \"."
-"kdev_include_paths\" stored within a source directory. The custom path will "
-"be used for all files below that directory."
-msgstr ""
-"Список дополнительных каталогов заголовочных файлов будет храниться в "
-"специальном файле «kdev_include_paths» в каталоге с кодом. Он будет "
-"использоваться для всех файлов этом каталоге."
+#: quickopen.cpp:166
+msgid "In include path %1"
+msgstr "В каталоге заголовочных файлов %1"
 
-#. i18n: file: codegen/ui/custom_include_paths.ui:47
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:15
-msgid "Storage Directory:"
-msgstr "Каталог хранения:"
+#: quickopen.cpp:170
+msgid "Included through %1 <br/>"
+msgstr "Включено через %1 <br/>"
 
-#. i18n: file: codegen/ui/custom_include_paths.ui:68
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:18
-msgid "Automatic Resolution"
-msgstr "Автоматическое определение"
+#: quickopen.cpp:180
+msgid "Directory %1"
+msgstr "Каталог %1"
 
-#. i18n: file: codegen/ui/custom_include_paths.ui:74
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:21
-msgid ""
-"If your project uses simple Makefiles, it may be possible to automatically "
-"resolve the include-paths using the make utility. For this, set up a mapping "
-"from a source- to a build-directory here."
-msgstr ""
-"Если в вашем проекте используется простые Makefile, каталоги заголовочных "
-"файлов могут определяться автоматически программой make. Для этого вам нужно "
-"задать здесь соответствие каталогов сборки и исходных текстов."
+#: quickopen.cpp:183
+msgid "In %1th include path"
+msgstr "В каталоге заголовочных файлов %1"
 
-#. i18n: file: codegen/ui/custom_include_paths.ui:86
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:24
-msgid "Source Directory:"
-msgstr "Каталог исходного кода:"
+# QuickOpen -> Scopes
+#: quickopen.cpp:408 quickopen.cpp:415
+msgid "Includes"
+msgstr "Включённые"
 
-#. i18n: file: codegen/ui/custom_include_paths.ui:96
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:27
-msgid "Build Directory:"
-msgstr "Каталог сборки:"
+# QuickOpen -> Scopes
+#: quickopen.cpp:409 quickopen.cpp:416
+msgid "Include Path"
+msgstr "Каталоги включаемых"
 
-#. i18n: file: codegen/ui/custom_include_paths.ui:111
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:30
-msgid "Custom Include Paths"
-msgstr "Дополнительные каталоги заголовочных файлов"
-
-#. i18n: file: codegen/ui/custom_include_paths.ui:117
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:33
-msgid ""
-"You can add a list of custom include paths here. Relative paths will be "
-"resolved from the storage directory."
-msgstr ""
-"Здесь вы можете указать дополнительные каталоги заголовочных файлов. Базовым "
-"каталогом для относительных путей будет каталог хранения."
-
-#. i18n: file: codegen/ui/custom_include_paths.ui:148
-#. i18n: ectx: property (toolTip), widget (QPushButton, directorySelector)
-#: rc.cpp:36
-msgid "Select a directory to include."
-msgstr ""
-
-#. i18n: file: codegen/ui/custom_include_paths.ui:151
-#. i18n: ectx: property (text), widget (QPushButton, directorySelector)
-#: rc.cpp:39
-msgid "..."
-msgstr ""
-
-#. i18n: file: codegen/ui/custom_include_paths.ui:168
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:42
-msgid ""
-"Note: These settings do not affect the compiler or the project in any way, "
-"they are only used to find included headers within KDevelop."
-msgstr ""
-"Примечание: Эти настройки не влияют на компилятор и проект, они используются "
-"только при поиске заголовков в KDevelop."
-
-#. i18n: file: codegen/ui/cppoverridebuttons.ui:16
-#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_3)
-#: rc.cpp:45
-msgid "Public"
-msgstr "Открытый"
-
-#. i18n: file: codegen/ui/cppoverridebuttons.ui:23
-#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_4)
-#: rc.cpp:48
-msgid "Protected"
-msgstr "Защищённый"
-
-#. i18n: file: codegen/ui/cppoverridebuttons.ui:30
-#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_5)
-#: rc.cpp:51
-msgid "Private"
-msgstr "Закрытый"
-
-#. i18n: file: codegen/ui/cppoverridebuttons.ui:53
-#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_6)
-#: rc.cpp:54
-msgid "Slot"
-msgstr "Слот"
-
-#. i18n: file: codegen/ui/cppoverridebuttons.ui:60
-#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_7)
-#: rc.cpp:57
-msgid "Signal"
-msgstr "Сигнал"
-
-#. i18n: file: codegen/ui/cppnewclass.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:60
-msgid "C++ Options"
-msgstr "Параметры C++"
-
-#. i18n: file: codegen/ui/cppnewclass.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:63
-msgid "&Export:"
-msgstr "Экспорт:"
-
-#. i18n: file: codegen/ui/cppnewclass.ui:53
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:66
-msgid "&Macro:"
-msgstr "&Макрос:"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:14
-#. i18n: ectx: property (whatsThis), widget (QWidget, PrivateImplementationDialog)
-#: rc.cpp:69
-msgid ""
-"Options & settings to move the private data fields of a class into a private "
-"structure"
-msgstr "Параметры перемещения закрытых полей класса в закрытую структуру"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:42
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:72
-msgid "Private structure name:"
-msgstr "Имя закрытой структуры:"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:55
-#. i18n: ectx: property (title), widget (QGroupBox, optionGroup)
-#: rc.cpp:75
-msgid "Options"
-msgstr "Параметры"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:75
-#. i18n: ectx: property (toolTip), widget (QCheckBox, classOption)
-#: rc.cpp:78
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">By default private "
-"implementation structures are declared as <span style=\" font-style:italic;"
-"\">struct</span> to have default public access.</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Check this box if you wish "
-"the private implementation structure be declared as <span style=\" font-"
-"style:italic;\">class</span> with public access.</p></body></html>"
-msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">По умолчанию закрытые "
-"структуры, используемые в реализации, объявляются как <span style= \" font-"
-"style:italic;\">struct</span>, с доступом по умолчанию.</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Включите этот параметр, "
-"если хотите, чтобы такие структуры объявлялись как <span style=\" font-style:"
-"italic;\">class</span> с открытым доступом.</p></body> </html>"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:78
-#. i18n: ectx: property (text), widget (QCheckBox, classOption)
-#: rc.cpp:86
-msgid "Use class instead of struct"
-msgstr "Использовать class вместо struct"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:97
-#. i18n: ectx: property (toolTip), widget (QCheckBox, variableOption)
-#: rc.cpp:89
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Move any current variables "
-"that are initialized in the constructor initializer list to the private "
-"implementation structure's constructor initializer list.</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
-"p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:12pt; font-weight:600;\">Note:</span> All references, and variables "
-"with types that do not offer default constructors are moved regardless of "
-"the state of this option.</p></body></html>"
-msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Переместить все текущие "
-"переменные, инициализируемые в инициализационном списке конструктора, в "
-"инициализационный список конструктора закрытой структуры.</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
-"p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"size:12pt; font-weight:600;\">Примечание:</span> данный параметр не влияет "
-"на ссылки и переменные типов, не имеющих конструктора по умолчанию. Они "
-"переносятся всегда.</p></body></html>"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:100
-#. i18n: ectx: property (text), widget (QCheckBox, variableOption)
-#: rc.cpp:98
-msgid "Move Variable initialization to private structure"
-msgstr "Перенести инициализацию переменных в закрытую структуру"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:113
-#. i18n: ectx: property (toolTip), widget (QCheckBox, methodOption)
-#: rc.cpp:101
-msgid ""
-"Move all currently declared private methods to the private implementation "
-"structure."
-msgstr ""
-"Перенести все объявленные закрытыми методы в закрытую структуру реализации."
-
-#. i18n: file: codegen/ui/privateimplementation.ui:116
-#. i18n: ectx: property (text), widget (QCheckBox, methodOption)
-#: rc.cpp:104
-msgid "Move Private methods"
-msgstr "Переместить закрытые методы"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:130
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:107
-msgid "Pointer name:"
-msgstr "Имя указателя:"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:146
-#. i18n: ectx: property (toolTip), widget (KLineEdit, pointerName)
-#: rc.cpp:110
-msgid ""
-"The name of the member variable that will be the pointer held to the private "
-"implementation"
-msgstr ""
-"Имя переменной класса, которая будет хранить указатель на закрытую реализацию"
-
-#. i18n: file: codegen/ui/privateimplementation.ui:149
-#. i18n: ectx: property (text), widget (KLineEdit, pointerName)
-#: rc.cpp:113
-msgid "d"
-msgstr "d"
-
-#: parser/headergen/main.cpp:240
-msgid "KDE forwarding header generator"
-msgstr "Генератор направляющих заголовков KDE"
-
-#: parser/headergen/main.cpp:241
-msgid ""
-"An application which creates forwarding headers (like Qt headers) from "
-"source code."
-msgstr ""
-"Программа для генерации направляющих заголовков (таких как заголовки Qt) из "
-"исходного кода."
-
-#: parser/headergen/main.cpp:242
-msgid "(c) 2006, Hamish Rodda"
-msgstr "© Hamish Rodda, 2006"
-
-#: parser/headergen/main.cpp:247
-msgid ""
-"KDE include directory - headers go into <placeholder>includes</placeholder>/"
-"KDE"
-msgstr ""
-"Каталог заголовочных файлов KDE — заголовочные файлы окажутся в "
-"<placeholder>includes</placeholder>/KDE"
-
-#: parser/headergen/main.cpp:248
-msgid "Build information from the cmake XML generator"
-msgstr "Информация о сборке от генератора cmake XML"
-
-#: parser/lexer.cpp:1106
-msgid "invalid input: %1"
-msgstr "недопустимый ввод: %1"
-
-#: parser/rpp/pp-macro-expander.cpp:102
-msgid "Macro error"
-msgstr "Ошибка макроса"
-
-#: parser/rpp/pp-macro-expander.cpp:115
-msgid "Call to macro %1 missing argument number %2"
-msgstr "При вызове макроса %1 пропущен аргумент %2"
-
-#: parser/rpp/pp-macro-expander.cpp:116
-msgid "Formals: %1"
-msgstr "Формальные параметры: %1"
-
-#: parser/rpp/pp-engine.cpp:165
-msgid "invalid include directive"
-msgstr "неверная директива включения"
-
-#: parser/rpp/pp-engine.cpp:301
-msgid "Unterminated #if statement"
-msgstr "Незавершённый оператор #if"
-
-#: parser/rpp/pp-engine.cpp:501 parser/rpp/pp-engine.cpp:519
-#: parser/rpp/pp-engine.cpp:555
-msgid "character %1"
-msgstr "символ %1"
-
-#: parser/rpp/pp-engine.cpp:501
-msgid "Expected \"identifier\", found: %1"
-msgstr "Ожидался «идентификатор», обнаружено: %1"
-
-#: parser/rpp/pp-engine.cpp:502 parser/rpp/pp-engine.cpp:520
-#: parser/rpp/pp-engine.cpp:556
-msgid "<h5>Token text</h5><pre>%1</pre><h5>Input</h5><pre>%2</pre>"
-msgstr "<h5>Текст элемента</h5><pre>%1</pre><h5>Ввод</h5><pre>%2</pre>"
-
-#: parser/rpp/pp-engine.cpp:519 parser/rpp/pp-engine.cpp:555
-msgid "Expected \")\", found %1"
-msgstr "Ожидалось «)», обнаружено: %1"
-
-#: parser/rpp/pp-engine.cpp:591 parser/rpp/pp-engine.cpp:604
-msgid "Division by zero"
-msgstr "Деление на ноль"
-
-#: parser/rpp/pp-engine.cpp:592 parser/rpp/pp-engine.cpp:605
-msgid "Input text: %1"
-msgstr "Текст ввода: %1"
-
-#: parser/rpp/pp-engine.cpp:842
-msgid "expected ``:'' = %1"
-msgstr "ожидалось «:» = %1"
-
-#: parser/rpp/pp-engine.cpp:906 parser/rpp/pp-engine.cpp:931
-msgid "#else without #if"
-msgstr "#else без #if"
-
-#: parser/rpp/pp-engine.cpp:969
-msgid "#endif without #if at output line %1"
-msgstr "#endif без #if в строке вывода %1"
-
-#: parser/rpp/pp-engine.cpp:1204
-msgid "Invalid suffix combination"
-msgstr "Неверная комбинация суффиксов"
-
-#: parser/rpp/pp-engine.cpp:1220
-msgid "Invalid numeric value"
-msgstr "Неверное числовое значение"
+# QuickOpen -> Scopes
+#: quickopen.cpp:410 quickopen.cpp:417
+msgid "Includers"
+msgstr "Включающие"
 
 #: includepathresolver.cpp:518
 msgid ""
@@ -493,20 +132,367 @@ msgstr "Не удалось выделить пути к заголовочны�
 msgid "Folder: \"%1\"  Command: \"%2\"  Output: \"%3\""
 msgstr "Каталог: «%1»  Команда: «%2»  Вывод: «%3»"
 
-#: codegen/unresolvedincludeassistant.cpp:84
+#. i18n: file: kdevcppsupport.rc:5
+#. i18n: ectx: Menu (navigation)
+#: rc.cpp:3
+msgctxt "@title:menu"
+msgid "Navigation"
+msgstr "Навигация"
+
+#. i18n: file: kdevcppsupport.rc:9
+#. i18n: ectx: Menu (code)
+#: rc.cpp:6
+msgctxt "@title:menu"
+msgid "Code"
+msgstr "Код"
+
+#. i18n: file: codegen/cppoverridebuttons.ui:16
+#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_3)
+#: rc.cpp:9
+msgid "Public"
+msgstr "Открытый"
+
+#. i18n: file: codegen/cppoverridebuttons.ui:23
+#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_4)
+#: rc.cpp:12
+msgid "Protected"
+msgstr "Защищённый"
+
+#. i18n: file: codegen/cppoverridebuttons.ui:30
+#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_5)
+#: rc.cpp:15
+msgid "Private"
+msgstr "Закрытый"
+
+#. i18n: file: codegen/cppoverridebuttons.ui:53
+#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_6)
+#: rc.cpp:18
+msgid "Slot"
+msgstr "Слот"
+
+#. i18n: file: codegen/cppoverridebuttons.ui:60
+#. i18n: ectx: property (text), widget (KPushButton, kpushbutton_7)
+#: rc.cpp:21
+msgid "Signal"
+msgstr "Сигнал"
+
+#. i18n: file: codegen/privateimplementation.ui:14
+#. i18n: ectx: property (whatsThis), widget (QWidget, PrivateImplementationDialog)
+#: rc.cpp:24
+msgid ""
+"Options & settings to move the private data fields of a class into a private "
+"structure"
+msgstr "Параметры перемещения закрытых полей класса в закрытую структуру"
+
+#. i18n: file: codegen/privateimplementation.ui:42
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:27
+msgid "Private structure name:"
+msgstr "Имя закрытой структуры:"
+
+#. i18n: file: codegen/privateimplementation.ui:55
+#. i18n: ectx: property (title), widget (QGroupBox, optionGroup)
+#: rc.cpp:30
+msgid "Options"
+msgstr "Параметры"
+
+#. i18n: file: codegen/privateimplementation.ui:75
+#. i18n: ectx: property (toolTip), widget (QCheckBox, classOption)
+#: rc.cpp:33
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">By default private "
+"implementation structures are declared as <span style=\" font-style:italic;"
+"\">struct</span> to have default public access.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Check this box if you wish "
+"the private implementation structure be declared as <span style=\" font-"
+"style:italic;\">class</span> with public access.</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">По умолчанию закрытые "
+"структуры, используемые в реализации, объявляются как <span style= \" font-"
+"style:italic;\">struct</span>, с доступом по умолчанию.</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Включите этот параметр, "
+"если хотите, чтобы такие структуры объявлялись как <span style=\" font-style:"
+"italic;\">class</span> с открытым доступом.</p></body> </html>"
+
+#. i18n: file: codegen/privateimplementation.ui:78
+#. i18n: ectx: property (text), widget (QCheckBox, classOption)
+#: rc.cpp:41
+msgid "Use class instead of struct"
+msgstr "Использовать class вместо struct"
+
+#. i18n: file: codegen/privateimplementation.ui:97
+#. i18n: ectx: property (toolTip), widget (QCheckBox, variableOption)
+#: rc.cpp:44
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Move any current variables "
+"that are initialized in the constructor initializer list to the private "
+"implementation structure's constructor initializer list.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:12pt; font-weight:600;\">Note:</span> All references, and variables "
+"with types that do not offer default constructors are moved regardless of "
+"the state of this option.</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Переместить все текущие "
+"переменные, инициализируемые в инициализационном списке конструктора, в "
+"инициализационный список конструктора закрытой структуры.</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+"margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></"
+"p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"size:12pt; font-weight:600;\">Примечание:</span> данный параметр не влияет "
+"на ссылки и переменные типов, не имеющих конструктора по умолчанию. Они "
+"переносятся всегда.</p></body></html>"
+
+#. i18n: file: codegen/privateimplementation.ui:100
+#. i18n: ectx: property (text), widget (QCheckBox, variableOption)
+#: rc.cpp:53
+msgid "Move Variable initialization to private structure"
+msgstr "Перенести инициализацию переменных в закрытую структуру"
+
+#. i18n: file: codegen/privateimplementation.ui:113
+#. i18n: ectx: property (toolTip), widget (QCheckBox, methodOption)
+#: rc.cpp:56
+msgid ""
+"Move all currently declared private methods to the private implementation "
+"structure."
+msgstr ""
+"Перенести все объявленные закрытыми методы в закрытую структуру реализации."
+
+#. i18n: file: codegen/privateimplementation.ui:116
+#. i18n: ectx: property (text), widget (QCheckBox, methodOption)
+#: rc.cpp:59
+msgid "Move Private methods"
+msgstr "Переместить закрытые методы"
+
+#. i18n: file: codegen/privateimplementation.ui:130
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:62
+msgid "Pointer name:"
+msgstr "Имя указателя:"
+
+#. i18n: file: codegen/privateimplementation.ui:146
+#. i18n: ectx: property (toolTip), widget (KLineEdit, pointerName)
+#: rc.cpp:65
+msgid ""
+"The name of the member variable that will be the pointer held to the private "
+"implementation"
+msgstr ""
+"Имя переменной класса, которая будет хранить указатель на закрытую реализацию"
+
+#. i18n: file: codegen/privateimplementation.ui:149
+#. i18n: ectx: property (text), widget (KLineEdit, pointerName)
+#: rc.cpp:68
+msgid "d"
+msgstr "d"
+
+#. i18n: file: codegen/cppnewclass.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:71
+msgid "C++ Options"
+msgstr "Параметры C++"
+
+#. i18n: file: codegen/cppnewclass.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:74
+msgid "&Export:"
+msgstr "Экспорт:"
+
+#. i18n: file: codegen/cppnewclass.ui:53
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:77
+msgid "&Macro:"
+msgstr "&Макрос:"
+
+#. i18n: file: codegen/custom_include_paths.ui:23
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:80
+msgid "Storage Directory"
+msgstr "Каталог хранения"
+
+#. i18n: file: codegen/custom_include_paths.ui:35
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:83
+msgid ""
+"The custom include-path will be stored in a special file called \"."
+"kdev_include_paths\" stored within a source directory. The custom path will "
+"be used for all files below that directory."
+msgstr ""
+"Список дополнительных каталогов заголовочных файлов будет храниться в "
+"специальном файле «kdev_include_paths» в каталоге с кодом. Он будет "
+"использоваться для всех файлов этом каталоге."
+
+#. i18n: file: codegen/custom_include_paths.ui:47
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:86
+msgid "Storage Directory:"
+msgstr "Каталог хранения:"
+
+#. i18n: file: codegen/custom_include_paths.ui:68
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: rc.cpp:89
+msgid "Automatic Resolution"
+msgstr "Автоматическое определение"
+
+#. i18n: file: codegen/custom_include_paths.ui:74
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:92
+msgid ""
+"If your project uses simple Makefiles, it may be possible to automatically "
+"resolve the include-paths using the make utility. For this, set up a mapping "
+"from a source- to a build-directory here."
+msgstr ""
+"Если в вашем проекте используется простые Makefile, каталоги заголовочных "
+"файлов могут определяться автоматически программой make. Для этого вам нужно "
+"задать здесь соответствие каталогов сборки и исходных текстов."
+
+#. i18n: file: codegen/custom_include_paths.ui:86
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:95
+msgid "Source Directory:"
+msgstr "Каталог исходного кода:"
+
+#. i18n: file: codegen/custom_include_paths.ui:96
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:98
+msgid "Build Directory:"
+msgstr "Каталог сборки:"
+
+#. i18n: file: codegen/custom_include_paths.ui:111
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:101
+msgid "Custom Include Paths"
+msgstr "Дополнительные каталоги заголовочных файлов"
+
+#. i18n: file: codegen/custom_include_paths.ui:117
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:104
+msgid ""
+"You can add a list of custom include paths here. Relative paths will be "
+"resolved from the storage directory."
+msgstr ""
+"Здесь вы можете указать дополнительные каталоги заголовочных файлов. Базовым "
+"каталогом для относительных путей будет каталог хранения."
+
+#. i18n: file: codegen/custom_include_paths.ui:148
+#. i18n: ectx: property (toolTip), widget (QPushButton, directorySelector)
+#: rc.cpp:107
+msgid "Select a directory to include."
+msgstr ""
+
+#. i18n: file: codegen/custom_include_paths.ui:151
+#. i18n: ectx: property (text), widget (QPushButton, directorySelector)
+#: rc.cpp:110
+msgid "..."
+msgstr ""
+
+#. i18n: file: codegen/custom_include_paths.ui:168
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:113
+msgid ""
+"Note: These settings do not affect the compiler or the project in any way, "
+"they are only used to find included headers within KDevelop."
+msgstr ""
+"Примечание: Эти настройки не влияют на компилятор и проект, они используются "
+"только при поиске заголовков в KDevelop."
+
+#: cpplanguagesupport.cpp:141
+#, fuzzy
+msgid "Edit include directories"
+msgstr "Добавить директиву включения"
+
+#: cpplanguagesupport.cpp:175
+msgid "C++ Support"
+msgstr "Поддержка C++"
+
+#: cpplanguagesupport.cpp:175
+msgid "Support for C++ Language"
+msgstr "Поддержка языка C++"
+
+#: cpplanguagesupport.cpp:220
+msgid "Files"
+msgstr "Файлы"
+
+#: cpplanguagesupport.cpp:240
+msgid "&Switch Definition/Declaration"
+msgstr "&Перейти к определению/объявлению"
+
+#: cpplanguagesupport.cpp:250
+msgid "Rename Declaration"
+msgstr "Переименовать объявление"
+
+#: cpplanguagesupport.cpp:256
+msgid "Move into Source"
+msgstr "Перейти к коду"
+
+#: cpplanguagesupport.cpp:810
+msgid "Emptied by preprocessor<br />"
+msgstr "Очищено препроцессором<br />"
+
+#: codegen/makeimplementationprivate.cpp:174
+msgid "Private Class Implementation Options"
+msgstr "Настройка реализации закрытого класса"
+
+#: codegen/makeimplementationprivate.cpp:309
+msgid ""
+"Warning. It is not recommended to move initialization lists to private "
+"constructor when multiple constructors are defined."
+msgstr ""
+"Предупреждение. Если определено несколько конструкторов, не рекомендуется "
+"перемещать инициализационные списки в закрытый конструктор."
+
+#: codegen/unresolvedincludeassistant.cpp:85
 msgid "Failed to save custom include paths in directory: %1"
 msgstr "Ошибка сохранения списка каталогов заголовочных файлов в каталоге: %1"
 
-#: codegen/unresolvedincludeassistant.cpp:101
-#: codegen/unresolvedincludeassistant.cpp:144
+#: codegen/unresolvedincludeassistant.cpp:102
+#: codegen/unresolvedincludeassistant.cpp:145
 msgid "Add Custom Include Path"
 msgstr "Добавить каталог заголовочных файлов"
 
-#: codegen/unresolvedincludeassistant.cpp:114
+#: codegen/unresolvedincludeassistant.cpp:115
 msgid "Open Project"
 msgstr "Открыть проект"
 
-#: codegen/unresolvedincludeassistant.cpp:118
+#: codegen/unresolvedincludeassistant.cpp:119
 msgid "Include file \"%1\" not found"
 msgstr "Не найден включаемый файл «%1»"
 
@@ -559,18 +545,6 @@ msgstr "Объявление находится в файле %1, защищён
 msgid "Setup Custom Include Paths"
 msgstr "Список каталогов, в которых могут находиться заголовочные файлы"
 
-#: codegen/makeimplementationprivate.cpp:174
-msgid "Private Class Implementation Options"
-msgstr "Настройка реализации закрытого класса"
-
-#: codegen/makeimplementationprivate.cpp:309
-msgid ""
-"Warning. It is not recommended to move initialization lists to private "
-"constructor when multiple constructors are defined."
-msgstr ""
-"Предупреждение. Если определено несколько конструкторов, не рекомендуется "
-"перемещать инициализационные списки в закрытый конструктор."
-
 # вместо %1 подставляется «declaration» или «definition» (см. 2 предыдущих строки). --aspotashev
 #: codegen/adaptsignatureaction.cpp:94
 msgid "Update declaration signature"
@@ -602,56 +576,6 @@ msgstr ""
 #: codegen/adaptsignatureaction.cpp:184
 msgid "Failed to apply changes: %1"
 msgstr "Не удалось применить изменения: %1"
-
-#: cppduchain/missingdeclarationproblem.cpp:27
-msgid "Declaration not found: %1"
-msgstr "Объявление не найдено: %1"
-
-#: cppduchain/navigation/includenavigationcontext.cpp:52
-msgctxt "Headers included into this header"
-msgid "Includes"
-msgstr "Включает"
-
-#: cppduchain/navigation/includenavigationcontext.cpp:53
-msgctxt "Count of files this header was included into"
-msgid "Included by"
-msgstr "Включается из"
-
-#: cppduchain/navigation/includenavigationcontext.cpp:54
-msgctxt "Count of macros defined in this header"
-msgid "Defined macros"
-msgstr "Определяет макросов"
-
-#: cppduchain/navigation/macronavigationcontext.cpp:81
-msgid "Preprocessed Body:"
-msgstr "Подготовленное тело:"
-
-#: cppduchain/navigation/macronavigationcontext.cpp:84
-msgid "Preprocessed Body: (empty)"
-msgstr "Подготовленное тело: (нет)"
-
-#: cppduchain/navigation/macronavigationcontext.cpp:87
-msgid "Body:"
-msgstr "Тело:"
-
-#: cppduchain/navigation/macronavigationcontext.cpp:90
-msgid "Body: (empty)"
-msgstr "Тело: (нет)"
-
-#: cppduchain/navigation/macronavigationcontext.cpp:143
-msgid "Function macro"
-msgstr "Макроопределение функции"
-
-#: cppduchain/navigation/macronavigationcontext.cpp:143
-msgid "Macro"
-msgstr "Макрос"
-
-#: cppduchain/navigation/macronavigationcontext.cpp:142
-msgctxt ""
-"%1: macro type, i.e.: 'Function macro' or just 'Macro'%2: the macro name and "
-"arguments%3 the link to the definition"
-msgid "%1: %2, defined in %3"
-msgstr "%1: %2, определяется в %3"
 
 #: cppduchain/missingdeclarationassistant.cpp:113
 msgid "<b>local</b> variable"
@@ -685,6 +609,52 @@ msgstr "Объявить <code>«%1»</code> как"
 msgid "Use of deleted function: %1"
 msgstr "использование удалённой функции"
 
+#: cppduchain/navigation/macronavigationcontext.cpp:81
+msgid "Preprocessed Body:"
+msgstr "Подготовленное тело:"
+
+#: cppduchain/navigation/macronavigationcontext.cpp:84
+msgid "Preprocessed Body: (empty)"
+msgstr "Подготовленное тело: (нет)"
+
+#: cppduchain/navigation/macronavigationcontext.cpp:87
+msgid "Body:"
+msgstr "Тело:"
+
+#: cppduchain/navigation/macronavigationcontext.cpp:90
+msgid "Body: (empty)"
+msgstr "Тело: (нет)"
+
+#: cppduchain/navigation/macronavigationcontext.cpp:143
+msgid "Function macro"
+msgstr "Макроопределение функции"
+
+#: cppduchain/navigation/macronavigationcontext.cpp:143
+msgid "Macro"
+msgstr "Макрос"
+
+#: cppduchain/navigation/macronavigationcontext.cpp:142
+msgctxt ""
+"%1: macro type, i.e.: 'Function macro' or just 'Macro'%2: the macro name and "
+"arguments%3 the link to the definition"
+msgid "%1: %2, defined in %3"
+msgstr "%1: %2, определяется в %3"
+
+#: cppduchain/navigation/includenavigationcontext.cpp:52
+msgctxt "Headers included into this header"
+msgid "Includes"
+msgstr "Включает"
+
+#: cppduchain/navigation/includenavigationcontext.cpp:53
+msgctxt "Count of files this header was included into"
+msgid "Included by"
+msgstr "Включается из"
+
+#: cppduchain/navigation/includenavigationcontext.cpp:54
+msgctxt "Count of macros defined in this header"
+msgid "Defined macros"
+msgstr "Определяет макросов"
+
 #: cppduchain/contextbuilder.cpp:149
 msgid "Could not resolve base class, adding it indirectly: %1"
 msgstr ""
@@ -694,41 +664,123 @@ msgstr ""
 msgid "Invalid base class: %1"
 msgstr "Неправильный базовый класс: %1"
 
-#: codecompletion/implementationhelperitem.cpp:86
-msgctxt "@action C++ code completion"
-msgid "Override"
-msgstr "Переопределить"
+#: cppduchain/missingdeclarationproblem.cpp:27
+msgid "Declaration not found: %1"
+msgstr "Объявление не найдено: %1"
 
-#: codecompletion/implementationhelperitem.cpp:88
-msgctxt "@action C++ code completion"
-msgid "Implement"
-msgstr "Реализовать"
+#: parser/lexer.cpp:1106
+msgid "invalid input: %1"
+msgstr "недопустимый ввод: %1"
 
-#: codecompletion/implementationhelperitem.cpp:90
-msgctxt "@action C++ code completion"
-msgid "Create Slot"
-msgstr "Создать слот"
+#: parser/rpp/pp-engine.cpp:165
+msgid "invalid include directive"
+msgstr "неверная директива включения"
 
-#: codecompletion/implementationhelperitem.cpp:127
-msgid "From %1"
-msgstr "Из %1"
+#: parser/rpp/pp-engine.cpp:301
+msgid "Unterminated #if statement"
+msgstr "Незавершённый оператор #if"
 
-#: codecompletion/missingincludeitem.cpp:484
-msgid "Add include directive"
-msgstr "Добавить директиву включения"
+#: parser/rpp/pp-engine.cpp:501 parser/rpp/pp-engine.cpp:519
+#: parser/rpp/pp-engine.cpp:555
+msgid "character %1"
+msgstr "символ %1"
 
-#: codecompletion/missingincludeitem.cpp:489
-msgctxt "file content unknown"
-msgid "%1<unknown contents>, %2"
+#: parser/rpp/pp-engine.cpp:501
+msgid "Expected \"identifier\", found: %1"
+msgstr "Ожидался «идентификатор», обнаружено: %1"
+
+#: parser/rpp/pp-engine.cpp:502 parser/rpp/pp-engine.cpp:520
+#: parser/rpp/pp-engine.cpp:556
+msgid "<h5>Token text</h5><pre>%1</pre><h5>Input</h5><pre>%2</pre>"
+msgstr "<h5>Текст элемента</h5><pre>%1</pre><h5>Ввод</h5><pre>%2</pre>"
+
+#: parser/rpp/pp-engine.cpp:519 parser/rpp/pp-engine.cpp:555
+msgid "Expected \")\", found %1"
+msgstr "Ожидалось «)», обнаружено: %1"
+
+#: parser/rpp/pp-engine.cpp:591 parser/rpp/pp-engine.cpp:604
+msgid "Division by zero"
+msgstr "Деление на ноль"
+
+#: parser/rpp/pp-engine.cpp:592 parser/rpp/pp-engine.cpp:605
+msgid "Input text: %1"
+msgstr "Текст ввода: %1"
+
+#: parser/rpp/pp-engine.cpp:842
+msgid "expected ``:'' = %1"
+msgstr "ожидалось «:» = %1"
+
+#: parser/rpp/pp-engine.cpp:906 parser/rpp/pp-engine.cpp:931
+msgid "#else without #if"
+msgstr "#else без #if"
+
+#: parser/rpp/pp-engine.cpp:969
+msgid "#endif without #if at output line %1"
+msgstr "#endif без #if в строке вывода %1"
+
+#: parser/rpp/pp-engine.cpp:1204
+msgid "Invalid suffix combination"
+msgstr "Неверная комбинация суффиксов"
+
+#: parser/rpp/pp-engine.cpp:1220
+msgid "Invalid numeric value"
+msgstr "Неверное числовое значение"
+
+#: parser/rpp/pp-macro-expander.cpp:102
+msgid "Macro error"
+msgstr "Ошибка макроса"
+
+#: parser/rpp/pp-macro-expander.cpp:115
+msgid "Call to macro %1 missing argument number %2"
+msgstr "При вызове макроса %1 пропущен аргумент %2"
+
+#: parser/rpp/pp-macro-expander.cpp:116
+msgid "Formals: %1"
+msgstr "Формальные параметры: %1"
+
+#: parser/headergen/main.cpp:240
+msgid "KDE forwarding header generator"
+msgstr "Генератор направляющих заголовков KDE"
+
+#: parser/headergen/main.cpp:241
+msgid ""
+"An application which creates forwarding headers (like Qt headers) from "
+"source code."
 msgstr ""
+"Программа для генерации направляющих заголовков (таких как заголовки Qt) из "
+"исходного кода."
 
-#: codecompletion/missingincludeitem.cpp:564
-msgid "Add Forward-Declaration"
-msgstr "Добавить предварительное объявление"
+#: parser/headergen/main.cpp:242
+msgid "(c) 2006, Hamish Rodda"
+msgstr "© Hamish Rodda, 2006"
 
-#: codecompletion/missingincludeitem.cpp:576
-msgid "forward-declare"
-msgstr "предварительное объявление"
+#: parser/headergen/main.cpp:247
+msgid ""
+"KDE include directory - headers go into <placeholder>includes</placeholder>/"
+"KDE"
+msgstr ""
+"Каталог заголовочных файлов KDE — заголовочные файлы окажутся в "
+"<placeholder>includes</placeholder>/KDE"
+
+#: parser/headergen/main.cpp:248
+msgid "Build information from the cmake XML generator"
+msgstr "Информация о сборке от генератора cmake XML"
+
+#: preprocessjob.cpp:464
+msgid "File was included recursively from within itself: %1"
+msgstr "Файл рекурсивно включает сам себя: %1"
+
+#: preprocessjob.cpp:606
+msgid "Included file was not found: %1"
+msgstr "Включаемый файл не найден: %1"
+
+#: preprocessjob.cpp:607
+msgid ""
+"Searched include path:\n"
+"%1"
+msgstr ""
+"Файлы для включения искались в:\n"
+"%1"
 
 #: codecompletion/context.cpp:883
 msgid "Initialize"
@@ -775,90 +827,38 @@ msgstr "Встроенный тип C++"
 msgid "Lookahead Matches"
 msgstr "Предположительные варианты"
 
-#: quickopen.cpp:161
-msgid "This file imports the current open document<br/>"
-msgstr "Этот файл импортирует текущий документ<br/>"
-
-#: quickopen.cpp:166
-msgid "In include path %1"
-msgstr "В каталоге заголовочных файлов %1"
-
-#: quickopen.cpp:170
-msgid "Included through %1 <br/>"
-msgstr "Включено через %1 <br/>"
-
-#: quickopen.cpp:180
-msgid "Directory %1"
-msgstr "Каталог %1"
-
-#: quickopen.cpp:183
-msgid "In %1th include path"
-msgstr "В каталоге заголовочных файлов %1"
-
-# QuickOpen -> Scopes
-#: quickopen.cpp:408 quickopen.cpp:415
-msgid "Includes"
-msgstr "Включённые"
-
-# QuickOpen -> Scopes
-#: quickopen.cpp:409 quickopen.cpp:416
-msgid "Include Path"
-msgstr "Каталоги включаемых"
-
-# QuickOpen -> Scopes
-#: quickopen.cpp:410 quickopen.cpp:417
-msgid "Includers"
-msgstr "Включающие"
-
-#: cppparsejob.cpp:158
-msgid "Parsing included files"
-msgstr "Анализ включённых файлов"
-
-#: cppparsejob.cpp:469
-msgid "Parsing actual file"
-msgstr "Анализ собственно файла"
-
-#: cppparsejob.cpp:581
-msgid "Not updating duchain for %1"
-msgstr "Цепочка DU для %1 не обновляется"
-
-#: cppparsejob.cpp:710
-msgid "Building uses"
-msgstr "Составление таблицы использования"
-
-#: cppparsejob.cpp:858
-msgid "Ready"
-msgstr "Готово"
-
-#: cpplanguagesupport.cpp:141
-#, fuzzy
-msgid "Edit include directories"
+#: codecompletion/missingincludeitem.cpp:484
+msgid "Add include directive"
 msgstr "Добавить директиву включения"
 
-#: cpplanguagesupport.cpp:175
-msgid "C++ Support"
-msgstr "Поддержка C++"
+#: codecompletion/missingincludeitem.cpp:489
+msgctxt "file content unknown"
+msgid "%1<unknown contents>, %2"
+msgstr ""
 
-#: cpplanguagesupport.cpp:175
-msgid "Support for C++ Language"
-msgstr "Поддержка языка C++"
+#: codecompletion/missingincludeitem.cpp:564
+msgid "Add Forward-Declaration"
+msgstr "Добавить предварительное объявление"
 
-#: cpplanguagesupport.cpp:220
-msgid "Files"
-msgstr "Файлы"
+#: codecompletion/missingincludeitem.cpp:576
+msgid "forward-declare"
+msgstr "предварительное объявление"
 
-#: cpplanguagesupport.cpp:240
-msgid "&Switch Definition/Declaration"
-msgstr "&Перейти к определению/объявлению"
+#: codecompletion/implementationhelperitem.cpp:86
+msgctxt "@action C++ code completion"
+msgid "Override"
+msgstr "Переопределить"
 
-#: cpplanguagesupport.cpp:250
-msgid "Rename Declaration"
-msgstr "Переименовать объявление"
+#: codecompletion/implementationhelperitem.cpp:88
+msgctxt "@action C++ code completion"
+msgid "Implement"
+msgstr "Реализовать"
 
-#: cpplanguagesupport.cpp:256
-msgid "Move into Source"
-msgstr "Перейти к коду"
+#: codecompletion/implementationhelperitem.cpp:90
+msgctxt "@action C++ code completion"
+msgid "Create Slot"
+msgstr "Создать слот"
 
-#: cpplanguagesupport.cpp:810
-msgid "Emptied by preprocessor<br />"
-msgstr "Очищено препроцессором<br />"
+#: codecompletion/implementationhelperitem.cpp:127
+msgid "From %1"
+msgstr "Из %1"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevgrepview\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-07-27 00:41+0300\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2014-06-26 18:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -19,6 +19,83 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
+#: grepviewplugin.cpp:50 grepviewplugin.cpp:104 grepdialog.cpp:121
+#: grepdialog.cpp:465
+msgid "Find/Replace in Files"
+msgstr "Пошук або заміна у файлах"
+
+#: grepviewplugin.cpp:50
+msgid ""
+"Allows fast searching of multiple files using patterns or regular "
+"expressions. And allow to replace it too."
+msgstr ""
+"Надає можливості швидкого пошуку та заміни у декількох файлів на основі "
+"шаблонів або формальних виразів."
+
+#: grepviewplugin.cpp:90
+msgid "Find/Replace in Fi&les..."
+msgstr "Знайти або замінити у &файлах…"
+
+#: grepviewplugin.cpp:93
+msgid "Search for expressions over several files"
+msgstr "Пошук виразів у декількох файлах"
+
+#: grepviewplugin.cpp:94
+msgid ""
+"Opens the 'Find/Replace in files' dialog. There you can enter a regular "
+"expression which is then searched for within all files in the directories "
+"you specify. Matches will be displayed, you can switch to a match directly. "
+"You can also do replacement."
+msgstr ""
+"Відкриває діалогове вікно «Пошук або заміна у файлах», в якому ви можете "
+"ввести формальний вираз, який буде використано для пошуку у всіх файлах і "
+"теках, які ви вкажете. Знайдені збіги буде показано, ви зможете перейти "
+"напряму до відповідної точки тексту, ви також зможете виконати заміну тексту."
+
+#: grepviewplugin.cpp:134 grepviewplugin.cpp:155
+msgid "Find/Replace in This Folder"
+msgstr "Знайти і замінити у цій теці"
+
+#: grepviewplugin.cpp:145
+msgid "&Find/Replace in Files"
+msgstr "По&шук або заміна у файлах"
+
+#: grepoutputmodel.cpp:379
+msgid "<b>1</b> match"
+msgid_plural "<b>%1</b> matches"
+msgstr[0] "<b>%1</b> відповідність"
+msgstr[1] "<b>%1</b> відповідності"
+msgstr[2] "<b>%1</b> відповідностей"
+msgstr[3] "<b>1</b> відповідність"
+
+#: grepoutputmodel.cpp:380
+msgid "<b>1</b> file"
+msgid_plural "<b>%1</b> files"
+msgstr[0] "<b>%1</b> файлі"
+msgstr[1] "<b>%1</b> файлах"
+msgstr[2] "<b>%1</b> файлах"
+msgstr[3] "<b>одному</b> файлі"
+
+#: grepoutputmodel.cpp:382
+msgctxt "%1 is e.g. '4 matches', %2 is e.g. '1 file'"
+msgid "<h3>%1 in %2</h3>"
+msgstr "<h3>%1 у %2</h3>"
+
+#: grepoutputmodel.cpp:384
+msgid "<big>%2 <i>(one match)</i></big>"
+msgid_plural "<big>%2 <i>(%1 matches)</i></big>"
+msgstr[0] "<big>%2 <i>(%1 відповідність)</i></big>"
+msgstr[1] "<big>%2 <i>(%1 відповідності)</i></big>"
+msgstr[2] "<big>%2 <i>(%1 відповідностей)</i></big>"
+msgstr[3] "<big>%2 <i>(%1 відповідність)</i></big>"
+
+#: grepoutputmodel.cpp:454
+msgctxt ""
+"%1 is the old text, %2 is the new text, %3 is the file path, %4 and %5 are "
+"its row and column"
+msgid "Failed to replace <b>%1</b> by <b>%2</b> in %3:%4:%5"
+msgstr "Не вдалося замінити <b>%1</b> на <b>%2</b> у %3:%4:%5"
+
 #. i18n: file: kdevgrepview.rc:5
 #. i18n: ectx: Menu (edit)
 #: rc.cpp:3
@@ -26,45 +103,21 @@ msgctxt "@title:menu"
 msgid "Edit"
 msgstr "Зміни"
 
-#. i18n: file: grepoutputview.ui:41
-#. i18n: ectx: property (text), widget (QLabel, replacementLabel)
-#: rc.cpp:6
-msgid "Replacement &Text:"
-msgstr "Текст для за&міни:"
-
-#. i18n: file: grepoutputview.ui:57
-#. i18n: ectx: property (toolTip), widget (KComboBox, replacementCombo)
-#: rc.cpp:9
-msgid "Enter the replacement pattern."
-msgstr "Вкажіть зразок заміни."
-
-#. i18n: file: grepoutputview.ui:76
-#. i18n: ectx: property (toolTip), widget (QPushButton, applyButton)
-#: rc.cpp:12
-msgid "Apply replacement on selected items."
-msgstr "Застосувати заміну до позначених пунктів."
-
-#. i18n: file: grepoutputview.ui:79
-#. i18n: ectx: property (text), widget (QPushButton, applyButton)
-#: rc.cpp:15
-msgid "&Replace"
-msgstr "&Замінити"
-
 #. i18n: file: grepwidget.ui:32
 #. i18n: ectx: property (windowTitle), widget (QWidget, GrepWidget)
-#: rc.cpp:18
+#: rc.cpp:6
 msgid "Find-Replace In Files"
 msgstr "Пошук або заміна у файлах"
 
 #. i18n: file: grepwidget.ui:44
 #. i18n: ectx: property (toolTip), widget (KComboBox, patternCombo)
-#: rc.cpp:21
+#: rc.cpp:9
 msgid "Enter the regular expression you want to search for here."
 msgstr "Вкажіть формальний вираз, за яким слід виконати пошук."
 
 #. i18n: file: grepwidget.ui:68
 #. i18n: ectx: property (whatsThis), widget (KComboBox, patternCombo)
-#: rc.cpp:24
+#: rc.cpp:12
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -239,19 +292,19 @@ msgstr ""
 
 #. i18n: file: grepwidget.ui:81
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:48
+#: rc.cpp:36
 msgid "Template:"
 msgstr "Шаблон:"
 
 #. i18n: file: grepwidget.ui:94
 #. i18n: ectx: property (toolTip), widget (KComboBox, templateEdit)
-#: rc.cpp:51
+#: rc.cpp:39
 msgid "This is the regular expression template."
 msgstr "Це шаблон формального виразу."
 
 #. i18n: file: grepwidget.ui:97
 #. i18n: ectx: property (whatsThis), widget (KComboBox, templateEdit)
-#: rc.cpp:55
+#: rc.cpp:43
 #, no-c-format
 msgid ""
 "This is the regular expression template. <i>%s</i> will be replaced by the "
@@ -262,86 +315,86 @@ msgstr ""
 
 #. i18n: file: grepwidget.ui:104
 #. i18n: ectx: property (toolTip), widget (KPushButton, syncButton)
-#: rc.cpp:58
+#: rc.cpp:46
 msgid "Quickly select location from a set of directories"
 msgstr "Швидко вибрати адресу з набору каталогів"
 
 #. i18n: file: grepwidget.ui:107
 #. i18n: ectx: property (text), widget (KPushButton, syncButton)
-#: rc.cpp:61
+#: rc.cpp:49
 msgid "Quick Select"
 msgstr "Швидкий вибір"
 
 #. i18n: file: grepwidget.ui:114
 #. i18n: ectx: property (text), widget (QLabel, depthLabel)
-#: rc.cpp:64
+#: rc.cpp:52
 msgid "Depth:"
 msgstr "Глибина:"
 
 #. i18n: Full recursion will be used. For folder-based searches, that means searching in the target folder and all the subfolders, their subfolders, and so on.
 #. i18n: file: grepwidget.ui:130
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, depthSpin)
-#: rc.cpp:68
+#: rc.cpp:56
 msgid "Full"
 msgstr "Без обмеження"
 
 #. i18n: file: grepwidget.ui:143
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:71
+#: rc.cpp:59
 msgid "Pattern:"
 msgstr "Зразок:"
 
 #. i18n: file: grepwidget.ui:156
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:74
+#: rc.cpp:62
 msgid "Files:"
 msgstr "Файли:"
 
 #. i18n: file: grepwidget.ui:169
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:77
+#: rc.cpp:65
 msgid "Case Sensitive:"
 msgstr "З врахуванням регістру"
 
 #. i18n: file: grepwidget.ui:188
 #. i18n: ectx: property (toolTip), widget (QCheckBox, caseSensitiveCheck)
-#: rc.cpp:80
+#: rc.cpp:68
 msgid "Case-sensitive searching."
 msgstr "Пошук з урахуванням регістру."
 
 #. i18n: file: grepwidget.ui:201
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:83
+#: rc.cpp:71
 msgid "Location(s):"
 msgstr "Розташування:"
 
 #. i18n: file: grepwidget.ui:233
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:86
+#: rc.cpp:74
 msgid "Regular Expression:"
 msgstr "Формальний вираз:"
 
 #. i18n: file: grepwidget.ui:246
 #. i18n: ectx: property (toolTip), widget (QCheckBox, regexCheck)
-#: rc.cpp:89
+#: rc.cpp:77
 msgid "Enable or disable regular expression."
 msgstr "Увімкнути або вимкнути використання формальних виразів."
 
 #. i18n: file: grepwidget.ui:259
 #. i18n: ectx: property (text), widget (QLabel, limitToProjectLabel)
-#: rc.cpp:92
+#: rc.cpp:80
 msgid "Limit to project files:"
 msgstr "Обмежитися файлами проекту:"
 
 #. i18n: file: grepwidget.ui:288
 #. i18n: ectx: property (toolTip), widget (KComboBox, filesCombo)
-#: rc.cpp:95
+#: rc.cpp:83
 msgid "Files filter."
 msgstr "Фільтр файлів"
 
 #. i18n: file: grepwidget.ui:291
 #. i18n: ectx: property (whatsThis), widget (KComboBox, filesCombo)
-#: rc.cpp:98
+#: rc.cpp:86
 msgid ""
 "Enter the file name pattern of the files to search here. You may give "
 "several patterns separated by commas or spaces."
@@ -351,19 +404,19 @@ msgstr ""
 
 #. i18n: file: grepwidget.ui:304
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:101
+#: rc.cpp:89
 msgid "Exclude:"
 msgstr "Виключити:"
 
 #. i18n: file: grepwidget.ui:317
 #. i18n: ectx: property (toolTip), widget (KComboBox, excludeCombo)
-#: rc.cpp:104
+#: rc.cpp:92
 msgid "Files pattern to exclude"
 msgstr "Шаблон виключення файлів"
 
 #. i18n: file: grepwidget.ui:320
 #. i18n: ectx: property (whatsThis), widget (KComboBox, excludeCombo)
-#: rc.cpp:107
+#: rc.cpp:95
 msgid ""
 "Enter the file name pattern of the files to exclude from the search here. "
 "You may give several patterns separated by commas or spaces.<p>Every pattern "
@@ -377,19 +430,19 @@ msgstr ""
 
 #. i18n: file: grepwidget.ui:381
 #. i18n: ectx: property (toolTip), widget (KComboBox, replacementTemplateEdit)
-#: rc.cpp:110
+#: rc.cpp:98
 msgid "Enter the replacement template."
 msgstr "Вкажіть шаблон заміни."
 
 #. i18n: file: grepwidget.ui:388
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:113
+#: rc.cpp:101
 msgid "Replacement Template:"
 msgstr "Шаблон заміни:"
 
 #. i18n: file: grepwidget.ui:401
 #. i18n: ectx: property (toolTip), widget (KComboBox, searchPaths)
-#: rc.cpp:116
+#: rc.cpp:104
 msgid ""
 "Select the location where you want to search. It can be a directory, a file, "
 "or a semicolon separated (without spaces) list of directories/files."
@@ -400,90 +453,76 @@ msgstr ""
 
 #. i18n: file: grepwidget.ui:432
 #. i18n: ectx: property (toolTip), widget (QPushButton, directorySelector)
-#: rc.cpp:119
+#: rc.cpp:107
 msgid "Select a directory to search in."
 msgstr "Вкажіть каталог для пошуку."
 
-#: grepoutputmodel.cpp:379
-msgid "<b>1</b> match"
-msgid_plural "<b>%1</b> matches"
-msgstr[0] "<b>%1</b> відповідність"
-msgstr[1] "<b>%1</b> відповідності"
-msgstr[2] "<b>%1</b> відповідностей"
-msgstr[3] "<b>1</b> відповідність"
+#. i18n: file: grepoutputview.ui:41
+#. i18n: ectx: property (text), widget (QLabel, replacementLabel)
+#: rc.cpp:110
+msgid "Replacement &Text:"
+msgstr "Текст для за&міни:"
 
-#: grepoutputmodel.cpp:380
-msgid "<b>1</b> file"
-msgid_plural "<b>%1</b> files"
-msgstr[0] "<b>%1</b> файлі"
-msgstr[1] "<b>%1</b> файлах"
-msgstr[2] "<b>%1</b> файлах"
-msgstr[3] "<b>одному</b> файлі"
+#. i18n: file: grepoutputview.ui:57
+#. i18n: ectx: property (toolTip), widget (KComboBox, replacementCombo)
+#: rc.cpp:113
+msgid "Enter the replacement pattern."
+msgstr "Вкажіть зразок заміни."
 
-#: grepoutputmodel.cpp:382
-msgctxt "%1 is e.g. '4 matches', %2 is e.g. '1 file'"
-msgid "<h3>%1 in %2</h3>"
-msgstr "<h3>%1 у %2</h3>"
+#. i18n: file: grepoutputview.ui:76
+#. i18n: ectx: property (toolTip), widget (QPushButton, applyButton)
+#: rc.cpp:116
+msgid "Apply replacement on selected items."
+msgstr "Застосувати заміну до позначених пунктів."
 
-#: grepoutputmodel.cpp:384
-msgid "<big>%2 <i>(one match)</i></big>"
-msgid_plural "<big>%2 <i>(%1 matches)</i></big>"
-msgstr[0] "<big>%2 <i>(%1 відповідність)</i></big>"
-msgstr[1] "<big>%2 <i>(%1 відповідності)</i></big>"
-msgstr[2] "<big>%2 <i>(%1 відповідностей)</i></big>"
-msgstr[3] "<big>%2 <i>(%1 відповідність)</i></big>"
+#. i18n: file: grepoutputview.ui:79
+#. i18n: ectx: property (text), widget (QPushButton, applyButton)
+#: rc.cpp:119
+msgid "&Replace"
+msgstr "&Замінити"
 
-#: grepoutputmodel.cpp:454
+#: grepjob.cpp:99
+msgid "Find in Files"
+msgstr "Знайти у файлах"
+
+#: grepjob.cpp:114 grepjob.cpp:216
+msgid "Search aborted"
+msgstr "Пошук припинено"
+
+#: grepjob.cpp:123
+msgid "No files found matching the wildcard patterns"
+msgstr "Не знайдено жодного файла, що відповідає зразку"
+
+#: grepjob.cpp:141
 msgctxt ""
-"%1 is the old text, %2 is the new text, %3 is the file path, %4 and %5 are "
-"its row and column"
-msgid "Failed to replace <b>%1</b> by <b>%2</b> in %3:%4:%5"
-msgstr "Не вдалося замінити <b>%1</b> на <b>%2</b> у %3:%4:%5"
+"Capture is the text which is \"captured\" with () in regular expressions see "
+"http://doc.trolltech.com/qregexp.html#capturedTexts"
+msgid "Captures are not allowed in pattern string"
+msgstr "Захоплення даних у рядках шаблонів не передбачено"
 
-#: grepviewplugin.cpp:50 grepviewplugin.cpp:104 grepdialog.cpp:121
-#: grepdialog.cpp:465
-msgid "Find/Replace in Files"
-msgstr "Пошук або заміна у файлах"
+#: grepjob.cpp:161
+msgid "Searching for <b>%2</b> in one file"
+msgid_plural "Searching for <b>%2</b> in %1 files"
+msgstr[0] "Пошук <b>%2</b> у %1 файлі"
+msgstr[1] "Пошук <b>%2</b> у %1 файлах"
+msgstr[2] "Пошук <b>%2</b> у %1 файлах"
+msgstr[3] "Пошук <b>%2</b> у одному файлі"
 
-#: grepviewplugin.cpp:50
-msgid ""
-"Allows fast searching of multiple files using patterns or regular "
-"expressions. And allow to replace it too."
-msgstr ""
-"Надає можливості швидкого пошуку та заміни у декількох файлів на основі "
-"шаблонів або формальних виразів."
+#: grepjob.cpp:182
+msgid "Collecting files..."
+msgstr "Збирання файлів…"
 
-#: grepviewplugin.cpp:90
-msgid "Find/Replace in Fi&les..."
-msgstr "Знайти або замінити у &файлах…"
+#: grepjob.cpp:261
+msgid "Failed: %1"
+msgstr "Помилка: %1"
 
-#: grepviewplugin.cpp:93
-msgid "Search for expressions over several files"
-msgstr "Пошук виразів у декількох файлах"
+#: grepjob.cpp:264
+msgid "No results found"
+msgstr "Нічого не знайдено"
 
-#: grepviewplugin.cpp:94
-msgid ""
-"Opens the 'Find/Replace in files' dialog. There you can enter a regular "
-"expression which is then searched for within all files in the directories "
-"you specify. Matches will be displayed, you can switch to a match directly. "
-"You can also do replacement."
-msgstr ""
-"Відкриває діалогове вікно «Пошук або заміна у файлах», в якому ви можете "
-"ввести формальний вираз, який буде використано для пошуку у всіх файлах і "
-"теках, які ви вкажете. Знайдені збіги буде показано, ви зможете перейти "
-"напряму до відповідної точки тексту, ви також зможете виконати заміну тексту."
-
-#: grepviewplugin.cpp:134 grepviewplugin.cpp:155
-msgid "Find/Replace in This Folder"
-msgstr "Знайти і замінити у цій теці"
-
-#: grepviewplugin.cpp:145
-msgid "&Find/Replace in Files"
-msgstr "По&шук або заміна у файлах"
-
-#: grepoutputdelegate.cpp:94 grepoutputdelegate.cpp:162
-msgid "Line %1: "
-msgstr "Рядок %1: "
+#: grepjob.cpp:323
+msgid "Grep: %1"
+msgstr "Grep: %1"
 
 #: grepoutputview.cpp:70
 msgctxt "@title:window"
@@ -546,45 +585,6 @@ msgstr[1] "%2 і ще %1 пункти"
 msgstr[2] "%2 і ще %1 пунктів"
 msgstr[3] "%2 і ще один пункт"
 
-#: grepjob.cpp:107
-msgid "Find in Files"
-msgstr "Знайти у файлах"
-
-#: grepjob.cpp:122 grepjob.cpp:224
-msgid "Search aborted"
-msgstr "Пошук припинено"
-
-#: grepjob.cpp:131
-msgid "No files found matching the wildcard patterns"
-msgstr "Не знайдено жодного файла, що відповідає зразку"
-
-#: grepjob.cpp:149
-msgctxt ""
-"Capture is the text which is \"captured\" with () in regular expressions see "
-"http://doc.trolltech.com/qregexp.html#capturedTexts"
-msgid "Captures are not allowed in pattern string"
-msgstr "Захоплення даних у рядках шаблонів не передбачено"
-
-#: grepjob.cpp:169
-msgid "Searching for <b>%2</b> in one file"
-msgid_plural "Searching for <b>%2</b> in %1 files"
-msgstr[0] "Пошук <b>%2</b> у %1 файлі"
-msgstr[1] "Пошук <b>%2</b> у %1 файлах"
-msgstr[2] "Пошук <b>%2</b> у %1 файлах"
-msgstr[3] "Пошук <b>%2</b> у одному файлі"
-
-#: grepjob.cpp:190
-msgid "Collecting files..."
-msgstr "Збирання файлів…"
-
-#: grepjob.cpp:269
-msgid "Failed: %1"
-msgstr "Помилка: %1"
-
-#: grepjob.cpp:272
-msgid "No results found"
-msgstr "Нічого не знайдено"
-
-#: grepjob.cpp:331
-msgid "Grep: %1"
-msgstr "Grep: %1"
+#: grepoutputdelegate.cpp:94 grepoutputdelegate.cpp:162
+msgid "Line %1: "
+msgstr "Рядок %1: "

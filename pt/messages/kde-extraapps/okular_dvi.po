@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okular_dvi\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-05-05 17:54+0000\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2014-05-12 10:36+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-doc@kde.org>\n"
@@ -21,6 +21,52 @@ msgstr ""
 "X-POFile-SpellExtra: FreeType VF dvipdf pnm PK POST dvipdfm dvi Portable\n"
 "X-POFile-SpellExtra: checksum TeTeX ghostview PDFs dpi Document\n"
 "X-POFile-SpellExtra: ghostscript Okular Live Ghostview kpswhich\n"
+
+#: psgs.cpp:263
+msgid ""
+"The version of Ghostview that is installed on this computer does not contain "
+"any of the Ghostview device drivers that are known to Okular. PostScript "
+"support has therefore been turned off in Okular."
+msgstr ""
+"A versão do Ghostview que está instalada neste computador não contém nenhum "
+"dos controladores de dispositivos do Ghostview conhecidos pelo Okular. O "
+"suporte de PostScript está, deste modo, desactivado no Okular."
+
+#: psgs.cpp:267
+msgid ""
+"<qt><p>The Ghostview program, which Okular uses internally to display the "
+"PostScript graphics that is included in this DVI file, is generally able to "
+"write its output in a variety of formats. The sub-programs that Ghostview "
+"uses for these tasks are called 'device drivers'; there is one device driver "
+"for each format that Ghostview is able to write. Different versions of "
+"Ghostview often have different sets of device drivers available. It seems "
+"that the version of Ghostview that is installed on this computer does not "
+"contain <strong>any</strong> of the device drivers that are known to Okular."
+"</p><p>It seems unlikely that a regular installation of Ghostview would not "
+"contain these drivers. This error may therefore point to a serious "
+"misconfiguration of the Ghostview installation on your computer.</p><p>If "
+"you want to fix the problems with Ghostview, you can use the command "
+"<strong>gs --help</strong> to display the list of device drivers contained "
+"in Ghostview. Among others, Okular can use the 'png256', 'jpeg' and 'pnm' "
+"drivers. Note that Okular needs to be restarted to re-enable PostScript "
+"support.</p></qt>"
+msgstr ""
+"<qt><p>O pacote do Ghostview, o qual o Okular usa internamente para mostrar "
+"as imagens de PostScript que vêm incluídas neste ficheiro DVI, consegue "
+"gravar o seu resultado numa variedade de formatos. Os sub-programas que o "
+"Ghostview usa para estas tarefas chamam-se 'controladores de dispositivos'; "
+"existe um controlador por cada formato que o Ghostview consegue escrever. As "
+"várias versões do Ghostview  têm normalmente conjuntos diferentes de "
+"controladores disponíveis. Parece que a versão que está instalada neste "
+"computador não contém <strong>nenhum</strong> dos controladores conhecidos "
+"do Okular.</p><p>Parece pouco provável que uma instalação normal do "
+"Ghostview não contenha estes controladores. Este erro poder-se-á deste modo "
+"dever a uma má configuração da instalação do Ghostview no seu computador.</"
+"p><p>Se o utilizador quiser corrigir os problemas do Ghostview, poderá usar "
+"o comando <strong>gs --help</strong> para mostrar a lista dos controladores "
+"contidos no Ghostview. Entre outros, o Okular pode usar o 'png256', o 'jpeg' "
+"e o 'pnm'. Repare que as instâncias do Okular têm de ser reiniciadas, para "
+"activar de novo o suporte de PostScript.</p></qt>"
 
 #: dviFile.cpp:111
 msgid "The DVI file does not start with the preamble."
@@ -95,98 +141,6 @@ msgstr ""
 "um ficheiro PDF de todo. Este é o resultado do programa <strong>pdf2ps</"
 "strong> que o Okular usou:</p><p><strong>%2</strong></p></qt>"
 
-#: dviRenderer_prescan.cpp:86
-msgid "Embedding %1"
-msgstr "A incorporar o %1"
-
-#: dviRenderer_prescan.cpp:101
-msgid ""
-"Page %1: The PDF file <strong>%2</strong> could not be converted to "
-"PostScript.<br>"
-msgstr ""
-"Página %1: O ficheiro PDF <strong>%2</strong> não pôde ser convertido para "
-"PostScript.<br>"
-
-#: dviRenderer_prescan.cpp:103
-msgid ""
-"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
-msgstr ""
-"Página %1: O texto de pesquisa <strong>%2</strong> não foi encontrado.<br>"
-
-#: dviRenderer_prescan.cpp:252
-msgid "The papersize data '%1' could not be parsed."
-msgstr "Os dados do tamanho de papel '%1' não puderam ser analisados."
-
-#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
-msgid "The DVI code referred to font #%1, which was not previously defined."
-msgstr ""
-"O código DVI referencia o tipo de letra #%1, que não foi definido "
-"previamente."
-
-#: dviRenderer_draw.cpp:261
-msgid "The DVI code set a character of an unknown font."
-msgstr "O código do DVI define um carácter de um tipo de letra desconhecido."
-
-#: dviRenderer_draw.cpp:375
-msgid "The stack was not empty when the EOP command was encountered."
-msgstr "A pilha não estava vazia quando foi encontrado o comando EOP."
-
-#: dviRenderer_draw.cpp:387
-msgid "The stack was empty when a POP command was encountered."
-msgstr "A pilha estava vazia quando foi encontrado um comando POP."
-
-#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
-msgid "The DVI code referred to a font which was not previously defined."
-msgstr "O código DVI referenciou um tipo de letra não definido previamente."
-
-#: dviRenderer_draw.cpp:570
-msgid "An illegal command was encountered."
-msgstr "Foi encontrado um comando inválido."
-
-#: dviRenderer_draw.cpp:575
-msgid "The unknown op-code %1 was encountered."
-msgstr "Foi encontrado o código de operação desconhecido %1."
-
-#: util.cpp:77
-msgid ""
-"Fatal error.\n"
-"\n"
-msgstr ""
-"Erro fatal.\n"
-"\n"
-
-#: util.cpp:79
-msgid ""
-"\n"
-"\n"
-"This probably means that either you found a bug in Okular,\n"
-"or that the DVI file, or auxiliary files (such as font files, \n"
-"or virtual font files) were really badly broken.\n"
-"Okular will abort after this message. If you believe that you \n"
-"found a bug, or that Okular should behave better in this situation\n"
-"please report the problem."
-msgstr ""
-"\n"
-"\n"
-"Isto significa que provavelmente encontrou um erro no Okular\n"
-"ou o ficheiro DVI, ou algum ficheiro auxiliar (tipos de letra,\n"
-"ou tipos de letra virtuais), estavam bastante mal estruturados.\n"
-"O Okular vai terminar a operação agora. Se acha que encontrou\n"
-"um erro, ou que o Okular se devia comportar melhor nesta situação,\n"
-"por favor envie-nos os seus comentários."
-
-#: TeXFontDefinition.cpp:107
-msgid "Cannot find font %1, file %2."
-msgstr "Não foi possível encontrar o tipo de letra %1, ficheiro %2."
-
-#: TeXFontDefinition.cpp:123
-msgid "Checksum mismatch for font file %1"
-msgstr "Erro de 'checksum' para o tipo de letra %1"
-
-#: TeXFontDefinition.cpp:171
-msgid "Cannot recognize format for font file %1"
-msgstr "Não é possível reconhecer o formato do ficheiro de tipo de letra %1"
-
 #: special.cpp:37
 msgid "That makes 25 errors. Further error messages will not be printed."
 msgstr "Foram listados 25 erros. Não serão impressas mais mensagens de erro."
@@ -227,6 +181,62 @@ msgstr ""
 msgid "The special command '%1' is not implemented."
 msgstr "O comando especial '%1' não está implementado."
 
+#: util.cpp:77
+msgid ""
+"Fatal error.\n"
+"\n"
+msgstr ""
+"Erro fatal.\n"
+"\n"
+
+#: util.cpp:79
+msgid ""
+"\n"
+"\n"
+"This probably means that either you found a bug in Okular,\n"
+"or that the DVI file, or auxiliary files (such as font files, \n"
+"or virtual font files) were really badly broken.\n"
+"Okular will abort after this message. If you believe that you \n"
+"found a bug, or that Okular should behave better in this situation\n"
+"please report the problem."
+msgstr ""
+"\n"
+"\n"
+"Isto significa que provavelmente encontrou um erro no Okular\n"
+"ou o ficheiro DVI, ou algum ficheiro auxiliar (tipos de letra,\n"
+"ou tipos de letra virtuais), estavam bastante mal estruturados.\n"
+"O Okular vai terminar a operação agora. Se acha que encontrou\n"
+"um erro, ou que o Okular se devia comportar melhor nesta situação,\n"
+"por favor envie-nos os seus comentários."
+
+#: dviRenderer_prescan.cpp:86
+msgid "Embedding %1"
+msgstr "A incorporar o %1"
+
+#: dviRenderer_prescan.cpp:101
+msgid ""
+"Page %1: The PDF file <strong>%2</strong> could not be converted to "
+"PostScript.<br>"
+msgstr ""
+"Página %1: O ficheiro PDF <strong>%2</strong> não pôde ser convertido para "
+"PostScript.<br>"
+
+#: dviRenderer_prescan.cpp:103
+msgid ""
+"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
+msgstr ""
+"Página %1: O texto de pesquisa <strong>%2</strong> não foi encontrado.<br>"
+
+#: dviRenderer_prescan.cpp:252
+msgid "The papersize data '%1' could not be parsed."
+msgstr "Os dados do tamanho de papel '%1' não puderam ser analisados."
+
+#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
+msgid "The DVI code referred to font #%1, which was not previously defined."
+msgstr ""
+"O código DVI referencia o tipo de letra #%1, que não foi definido "
+"previamente."
+
 #: dviRenderer.cpp:231 dviRenderer.cpp:468
 msgid "File corruption. %1"
 msgstr "O ficheiro está danificado. %1"
@@ -262,6 +272,92 @@ msgid ""
 msgstr ""
 "O Okular não conseguiu localizar o ponto no ficheiro DVI que corresponde à "
 "linha %1 no ficheiro em TeX %2."
+
+#: TeXFont_PFB.cpp:42
+msgid ""
+"The font file %1 could be opened and read, but its font format is "
+"unsupported."
+msgstr ""
+"Foi possível aceder e ler o ficheiro do tipo de letra %1, mas o seu formato "
+"não é suportado."
+
+#: TeXFont_PFB.cpp:48
+msgid "The font file %1 is broken, or it could not be opened or read."
+msgstr ""
+"O ficheiro do tipo de letra %1 está corrompido, ou não consegue ser acedido "
+"ou lido."
+
+#: TeXFont_PFB.cpp:169
+msgid ""
+"FreeType reported an error when setting the character size for font file %1."
+msgstr ""
+"O FreeType devolveu um erro ao alterar o tamanho da letra para o ficheiro do "
+"tipo de letra %1."
+
+#: TeXFont_PFB.cpp:185
+msgid "FreeType is unable to load glyph #%1 from font file %2."
+msgstr ""
+"O FreeType não consegue ler o símbolo #%1 do ficheiro de tipo de letra %2."
+
+#: TeXFont_PFB.cpp:197
+msgid "FreeType is unable to render glyph #%1 from font file %2."
+msgstr ""
+"O FreeType não consegue desenhar o símbolo #%1 do ficheiro de tipo de letra "
+"%2."
+
+#: TeXFont_PFB.cpp:210
+msgid "Glyph #%1 is empty."
+msgstr "O símbolo #%1 está vazio."
+
+#: TeXFont_PFB.cpp:211
+msgid "Glyph #%1 from font file %2 is empty."
+msgstr "O símbolo #%1 do ficheiro de tipo de letra %2 está vazio."
+
+#: TeXFont_PFB.cpp:279
+msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
+msgstr ""
+"O FreeType não consegue ler a métrica para o símbolo #%1 do ficheiro de tipo "
+"de letra %2."
+
+#: TeXFontDefinition.cpp:107
+msgid "Cannot find font %1, file %2."
+msgstr "Não foi possível encontrar o tipo de letra %1, ficheiro %2."
+
+#: TeXFontDefinition.cpp:123
+msgid "Checksum mismatch for font file %1"
+msgstr "Erro de 'checksum' para o tipo de letra %1"
+
+#: TeXFontDefinition.cpp:171
+msgid "Cannot recognize format for font file %1"
+msgstr "Não é possível reconhecer o formato do ficheiro de tipo de letra %1"
+
+#: dviRenderer_draw.cpp:261
+msgid "The DVI code set a character of an unknown font."
+msgstr "O código do DVI define um carácter de um tipo de letra desconhecido."
+
+#: dviRenderer_draw.cpp:375
+msgid "The stack was not empty when the EOP command was encountered."
+msgstr "A pilha não estava vazia quando foi encontrado o comando EOP."
+
+#: dviRenderer_draw.cpp:387
+msgid "The stack was empty when a POP command was encountered."
+msgstr "A pilha estava vazia quando foi encontrado um comando POP."
+
+#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
+msgid "The DVI code referred to a font which was not previously defined."
+msgstr "O código DVI referenciou um tipo de letra não definido previamente."
+
+#: dviRenderer_draw.cpp:570
+msgid "An illegal command was encountered."
+msgstr "Foi encontrado um comando inválido."
+
+#: dviRenderer_draw.cpp:575
+msgid "The unknown op-code %1 was encountered."
+msgstr "Foi encontrado o código de operação desconhecido %1."
+
+#: vf.cpp:182
+msgid "Wrong command byte found in VF macro list: %1"
+msgstr "Foi encontrado um 'byte' de comando errado na lista de macros VF: %1"
 
 #: TeXFont_PK.cpp:90
 msgid "Cannot open font file %1."
@@ -311,13 +407,46 @@ msgstr "Gerador/Data"
 msgid "Font file not found"
 msgstr "O ficheiro do tipo de letra não foi encontrado"
 
-#: pageSize.cpp:324
-msgid "portrait"
-msgstr "retrato"
+#: fontpool.cpp:209
+msgid ""
+"<qt><p>Okular was not able to locate all the font files which are necessary "
+"to display the current DVI file. Your document might be unreadable.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>O Okular não foi capaz de encontrar todos os ficheiros de tipos de "
+"letra necessários para mostrar o ficheiro DVI actual. O seu documento poderá "
+"estar ilegível.</p><p><small><b>PATH:</b> %1</small></p><p><small>%2</"
+"small></p></qt>"
 
-#: pageSize.cpp:326
-msgid "landscape"
-msgstr "paisagem"
+#: fontpool.cpp:280
+msgid ""
+"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
+"font files could not be located, and your document might be unreadable.<br/"
+">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
+"your system, or it cannot be found in the current search path.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Ocorreram alguns problemas ao executar o 'kpsewhich'. Como tal, não "
+"foi possível localizar alguns dos ficheiros de tipos de letra, pelo que o "
+"seu documento poderá estar ilegível.<br/>Razão possível: O programa "
+"<em>kpsewhich</em> poderá não estar instalado no seu sistema, ou então não "
+"foi encontrado nos locais de pesquisa actuais.</p><p><small><b>PATH:</b> %1</"
+"small></p><p><small>%2</small></p></qt>"
+
+#: fontpool.cpp:299
+msgid ""
+"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
+"error %2). As a result, some font files could not be located, and your "
+"document might be unreadable.</qt>"
+msgstr ""
+"<qt>A geração do tipo de letra pelo <em>kpsewhich</em> foi interrompida "
+"(código de saída %1, erro %2). Em função disso, alguns ficheiros de tipos de "
+"letra não puderam ser localizados, pelo que o seu documento poderá ficar "
+"ilegível.</qt>"
+
+#: fontpool.cpp:477
+msgid "Currently generating %1 at %2 dpi..."
+msgstr "A gerar de momento o %1 a %2 ppp..."
 
 #: dviexport.cpp:129
 msgid ""
@@ -389,139 +518,10 @@ msgstr ""
 "erro. É melhor dar uma vista de olhos na <strong>janela de informação do "
 "documento</strong>, no menu Ficheiro, para um relatório preciso do erro.</qt>"
 
-#: psgs.cpp:263
-msgid ""
-"The version of Ghostview that is installed on this computer does not contain "
-"any of the Ghostview device drivers that are known to Okular. PostScript "
-"support has therefore been turned off in Okular."
-msgstr ""
-"A versão do Ghostview que está instalada neste computador não contém nenhum "
-"dos controladores de dispositivos do Ghostview conhecidos pelo Okular. O "
-"suporte de PostScript está, deste modo, desactivado no Okular."
+#: pageSize.cpp:324
+msgid "portrait"
+msgstr "retrato"
 
-#: psgs.cpp:267
-msgid ""
-"<qt><p>The Ghostview program, which Okular uses internally to display the "
-"PostScript graphics that is included in this DVI file, is generally able to "
-"write its output in a variety of formats. The sub-programs that Ghostview "
-"uses for these tasks are called 'device drivers'; there is one device driver "
-"for each format that Ghostview is able to write. Different versions of "
-"Ghostview often have different sets of device drivers available. It seems "
-"that the version of Ghostview that is installed on this computer does not "
-"contain <strong>any</strong> of the device drivers that are known to Okular."
-"</p><p>It seems unlikely that a regular installation of Ghostview would not "
-"contain these drivers. This error may therefore point to a serious "
-"misconfiguration of the Ghostview installation on your computer.</p><p>If "
-"you want to fix the problems with Ghostview, you can use the command "
-"<strong>gs --help</strong> to display the list of device drivers contained "
-"in Ghostview. Among others, Okular can use the 'png256', 'jpeg' and 'pnm' "
-"drivers. Note that Okular needs to be restarted to re-enable PostScript "
-"support.</p></qt>"
-msgstr ""
-"<qt><p>O pacote do Ghostview, o qual o Okular usa internamente para mostrar "
-"as imagens de PostScript que vêm incluídas neste ficheiro DVI, consegue "
-"gravar o seu resultado numa variedade de formatos. Os sub-programas que o "
-"Ghostview usa para estas tarefas chamam-se 'controladores de dispositivos'; "
-"existe um controlador por cada formato que o Ghostview consegue escrever. As "
-"várias versões do Ghostview  têm normalmente conjuntos diferentes de "
-"controladores disponíveis. Parece que a versão que está instalada neste "
-"computador não contém <strong>nenhum</strong> dos controladores conhecidos "
-"do Okular.</p><p>Parece pouco provável que uma instalação normal do "
-"Ghostview não contenha estes controladores. Este erro poder-se-á deste modo "
-"dever a uma má configuração da instalação do Ghostview no seu computador.</"
-"p><p>Se o utilizador quiser corrigir os problemas do Ghostview, poderá usar "
-"o comando <strong>gs --help</strong> para mostrar a lista dos controladores "
-"contidos no Ghostview. Entre outros, o Okular pode usar o 'png256', o 'jpeg' "
-"e o 'pnm'. Repare que as instâncias do Okular têm de ser reiniciadas, para "
-"activar de novo o suporte de PostScript.</p></qt>"
-
-#: fontpool.cpp:209
-msgid ""
-"<qt><p>Okular was not able to locate all the font files which are necessary "
-"to display the current DVI file. Your document might be unreadable.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>O Okular não foi capaz de encontrar todos os ficheiros de tipos de "
-"letra necessários para mostrar o ficheiro DVI actual. O seu documento poderá "
-"estar ilegível.</p><p><small><b>PATH:</b> %1</small></p><p><small>%2</"
-"small></p></qt>"
-
-#: fontpool.cpp:280
-msgid ""
-"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
-"font files could not be located, and your document might be unreadable.<br/"
-">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
-"your system, or it cannot be found in the current search path.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Ocorreram alguns problemas ao executar o 'kpsewhich'. Como tal, não "
-"foi possível localizar alguns dos ficheiros de tipos de letra, pelo que o "
-"seu documento poderá estar ilegível.<br/>Razão possível: O programa "
-"<em>kpsewhich</em> poderá não estar instalado no seu sistema, ou então não "
-"foi encontrado nos locais de pesquisa actuais.</p><p><small><b>PATH:</b> %1</"
-"small></p><p><small>%2</small></p></qt>"
-
-#: fontpool.cpp:299
-msgid ""
-"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
-"error %2). As a result, some font files could not be located, and your "
-"document might be unreadable.</qt>"
-msgstr ""
-"<qt>A geração do tipo de letra pelo <em>kpsewhich</em> foi interrompida "
-"(código de saída %1, erro %2). Em função disso, alguns ficheiros de tipos de "
-"letra não puderam ser localizados, pelo que o seu documento poderá ficar "
-"ilegível.</qt>"
-
-#: fontpool.cpp:477
-msgid "Currently generating %1 at %2 dpi..."
-msgstr "A gerar de momento o %1 a %2 ppp..."
-
-#: vf.cpp:182
-msgid "Wrong command byte found in VF macro list: %1"
-msgstr "Foi encontrado um 'byte' de comando errado na lista de macros VF: %1"
-
-#: TeXFont_PFB.cpp:42
-msgid ""
-"The font file %1 could be opened and read, but its font format is "
-"unsupported."
-msgstr ""
-"Foi possível aceder e ler o ficheiro do tipo de letra %1, mas o seu formato "
-"não é suportado."
-
-#: TeXFont_PFB.cpp:48
-msgid "The font file %1 is broken, or it could not be opened or read."
-msgstr ""
-"O ficheiro do tipo de letra %1 está corrompido, ou não consegue ser acedido "
-"ou lido."
-
-#: TeXFont_PFB.cpp:169
-msgid ""
-"FreeType reported an error when setting the character size for font file %1."
-msgstr ""
-"O FreeType devolveu um erro ao alterar o tamanho da letra para o ficheiro do "
-"tipo de letra %1."
-
-#: TeXFont_PFB.cpp:185
-msgid "FreeType is unable to load glyph #%1 from font file %2."
-msgstr ""
-"O FreeType não consegue ler o símbolo #%1 do ficheiro de tipo de letra %2."
-
-#: TeXFont_PFB.cpp:197
-msgid "FreeType is unable to render glyph #%1 from font file %2."
-msgstr ""
-"O FreeType não consegue desenhar o símbolo #%1 do ficheiro de tipo de letra "
-"%2."
-
-#: TeXFont_PFB.cpp:210
-msgid "Glyph #%1 is empty."
-msgstr "O símbolo #%1 está vazio."
-
-#: TeXFont_PFB.cpp:211
-msgid "Glyph #%1 from font file %2 is empty."
-msgstr "O símbolo #%1 do ficheiro de tipo de letra %2 está vazio."
-
-#: TeXFont_PFB.cpp:279
-msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
-msgstr ""
-"O FreeType não consegue ler a métrica para o símbolo #%1 do ficheiro de tipo "
-"de letra %2."
+#: pageSize.cpp:326
+msgid "landscape"
+msgstr "paisagem"

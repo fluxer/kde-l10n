@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevexternalscript\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-07-27 00:41+0300\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2013-11-07 10:28+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -16,10 +16,164 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: externalscriptplugin.cpp:56 externalscriptplugin.cpp:114
-#: externalscriptplugin.cpp:185 externalscriptview.cpp:41
+#: externalscriptview.cpp:41 externalscriptplugin.cpp:56
+#: externalscriptplugin.cpp:114 externalscriptplugin.cpp:185
 msgid "External Scripts"
 msgstr "Externe Skripte"
+
+#: externalscriptview.cpp:57
+msgid "Add External Script"
+msgstr "Externes Skript hinzufügen"
+
+#: externalscriptview.cpp:60
+msgid "Edit External Script"
+msgstr "Externes Skript bearbeiten"
+
+#: externalscriptview.cpp:63
+msgid "Remove External Script"
+msgstr "Externes Skript entfernen"
+
+#: externalscriptview.cpp:150
+msgid ""
+"<p>Do you really want to remove the external script configuration for <i>%1</"
+"i>?</p><p><i>Note:</i> The script itself will not be removed.</p>"
+msgstr ""
+"<p>Möchten Sie wirklich die externe Skript-Konfiguration für <i>%1</i> "
+"entfernen?</p><p><i>Hinweis:</i> Das Skript selbst wird dabei nicht gelöscht."
+"</p>"
+
+#: externalscriptview.cpp:152
+msgid "Confirm External Script Removal"
+msgstr "Entfernen des externen Skripts bestätigen"
+
+#: editexternalscript.cpp:42
+msgid ""
+"<p>Defines the command that should be executed when this script is run. "
+"Basic shell features of your platform should be available.</p>\n"
+"<p>There are a few placeholders you can use in the command:</p>\n"
+"<dl>\n"
+"  <dt><code>%u</code></dt>\n"
+"  <dd>Gets replaced by the URL of the active document.</dd>\n"
+"  <dt><code>%f</code></dt>\n"
+"  <dd>Gets replaced by the local filepath to the active document.</dd>\n"
+"  <dt><code>%n</code></dt>\n"
+"  <dd>Gets replaced by the name of the active document, including its "
+"extension.</dd>\n"
+"  <dt><code>%b</code></dt>\n"
+"  <dd>Gets replaced by the name of the active document without its extension."
+"</dd>\n"
+"  <dt><code>%d</code></dt>\n"
+"  <dd>Gets replaced by the path to the directory of the active document.</"
+"dd>\n"
+"  <dt><code>%p</code></dt>\n"
+"  <dd>Gets replaced by the URL to the project of the active document.</dd>\n"
+"  <dt><code>%s</code></dt>\n"
+"  <dd>Gets replaced with the shell escaped contents of the selection in the "
+"active document.</dd>\n"
+"  <dt><code>%i</code></dt>\n"
+"  <dd>Gets replaced with the PID of the currently running KDevelop process.</"
+"dd>\n"
+"</dl>\n"
+"<p><b>NOTE:</b>  It is your responsibility to prevent running hazardous "
+"commands that could lead to data loss.</p>\n"
+msgstr ""
+"<p>Legt den Befehl fest, der beim Start dieses Skripts ausgeführt werden "
+"soll.Grundlegende Funktionen der Shell Ihrer Plattform sollten verfügbar "
+"sein.</p>\n"
+"<p>Es gibt einige Platzhalter, die Sie im Befehl verwenden können:</p>\n"
+"<dl>\n"
+"  <dt><code>%u</code></dt>\n"
+"  <dd>Wird mit der URL des aktiven Dokuments ersetzt.</dd>\n"
+"  <dt><code>%f</code></dt>\n"
+"  <dd>Wird mit dem lokalen Dateipfad des aktiven Dokuments ersetzt.</dd>\n"
+"  <dt><code>%n</code></dt>\n"
+"  <dd>Wird mit dem Namen des aktiven Dokuments ersetzt, einschließlich "
+"seiner Erweiterung.</dd>\n"
+"  <dt><code>%b</code></dt>\n"
+"  <dd>Wird mit dem Namen des aktiven Dokuments ohne Erweiterung ersetzt.</"
+"dd>\n"
+"  <dt><code>%d</code></dt>\n"
+"  <dd>Wird mit dem Pfad zum Ordner des aktuellen Dokuments ersetzt.</dd>\n"
+"  <dt><code>%p</code></dt>\n"
+"  <dd>Wird mit der URL zum Projekt des aktuellen Dokuments ersetzt.</dd>\n"
+"  <dt><code>%s</code></dt>\n"
+"  <dd>Wird mit dem für die Shell maskierten Inhalt der Auswahl im aktiven "
+"Dokument ersetzt.</dd>\n"
+"  <dt><code>%i</code></dt>\n"
+"  <dd>Wird mit der PID des derzeit laufenden KDevelop-Prozesses ersetzt.</"
+"dd>\n"
+"</dl>\n"
+"<p><b>HINWEIS:</b> Es liegt in Ihrer Verantwortung zu verhindern, dass "
+"riskante Befehle ausgeführt werden, die zu Datenverlust führen können.</p>\n"
+
+#: editexternalscript.cpp:68
+msgid ""
+"<p>Defines what the external script should get as input (via <code>STDIN</"
+"code>).</p>"
+msgstr ""
+"<p>Legt fest, was das externe Skript als Eingabe bekommen soll (via "
+"<code>STDIN</code>).</p>"
+
+#: editexternalscript.cpp:74
+msgid ""
+"<p>Defines what should be done with the output (i.e. <code>STDOUT</code>) of "
+"the script.</p>"
+msgstr ""
+"<p>Legt fest, was mit der Ausgabe des Skripts geschehen soll (d. h. "
+"<code>STDOUT</code>)</p>"
+
+#: editexternalscript.cpp:80
+msgid ""
+"<p>Defines what should be done with the errors (i.e. <code>STDERR</code>) of "
+"the script.</p><p>Note: if the action is the same as that chosen for the "
+"output, the channels will be merged and handled together.</p>"
+msgstr ""
+"<p>Legt fest, was mit den Fehlern des Skripts geschehen soll (d. h. "
+"<code>STDERR</code>)</p><p>Hinweis: Wenn die Aktion dieselbe wie bei der "
+"Ausgabe ist, werden die Kanäle zusammengeführt und zusammen behandelt.</p>"
+
+#: editexternalscript.cpp:88
+msgid "<p>Defines the name of the script. Just for displaying purposes.</p>"
+msgstr "<p>Legt den Namen des Skripts fest. Nur zu Anzeigezwecken.</p>"
+
+#: editexternalscript.cpp:94
+msgid ""
+"<p>Defines the shortcut(s) you can use to execute this external script.</p>"
+msgstr ""
+"<p>Legt Tastenkürzel fest, die Sie zum Ausführen des externen Skripts "
+"verwenden können.</p>"
+
+#: editexternalscript.cpp:100
+msgid ""
+"<p>Defines whether documents should be saved before the script gets executed."
+"</p>"
+msgstr ""
+"<p>Legt fest, ob Dokumente vor der Ausführung des Skripts gespeichert werden "
+"sollen.</p>"
+
+#: editexternalscript.cpp:106
+msgid ""
+"<p>Defines whether the output of the script should be shown in a toolview.</"
+"p>"
+msgstr ""
+"<p>Legt fest, ob die Ausgabe des Skripts in einer Werkzeugansicht angezeigt "
+"werden soll.</p>"
+
+#: editexternalscript.cpp:110
+msgid ""
+"<p>Defines what type of filtering should be applied to the output. E.g. to "
+"indicate errors by red text.</p>"
+msgstr ""
+"<p>Legt den Filter fest, der auf die Ausgabe angewendet wird, z. B. um "
+"Fehler in roter Schriftfarbe anzuzeigen</p>"
+
+#: editexternalscript.cpp:118
+msgid "Create new external script"
+msgstr "Neues externes Skript erstellen"
+
+#: editexternalscript.cpp:120
+msgid "Edit external script '%1'"
+msgstr "Externes Skript „%1“ bearbeiten"
 
 #: externalscriptplugin.cpp:57
 msgid ""
@@ -301,157 +455,3 @@ msgid ""
 msgstr ""
 "*** Programm „%1“ kann nicht ausgeführt werden. Stellen Sie sicher, dass der "
 "Pfad richtig angegeben ist ***"
-
-#: externalscriptview.cpp:57
-msgid "Add External Script"
-msgstr "Externes Skript hinzufügen"
-
-#: externalscriptview.cpp:60
-msgid "Edit External Script"
-msgstr "Externes Skript bearbeiten"
-
-#: externalscriptview.cpp:63
-msgid "Remove External Script"
-msgstr "Externes Skript entfernen"
-
-#: externalscriptview.cpp:150
-msgid ""
-"<p>Do you really want to remove the external script configuration for <i>%1</"
-"i>?</p><p><i>Note:</i> The script itself will not be removed.</p>"
-msgstr ""
-"<p>Möchten Sie wirklich die externe Skript-Konfiguration für <i>%1</i> "
-"entfernen?</p><p><i>Hinweis:</i> Das Skript selbst wird dabei nicht gelöscht."
-"</p>"
-
-#: externalscriptview.cpp:152
-msgid "Confirm External Script Removal"
-msgstr "Entfernen des externen Skripts bestätigen"
-
-#: editexternalscript.cpp:42
-msgid ""
-"<p>Defines the command that should be executed when this script is run. "
-"Basic shell features of your platform should be available.</p>\n"
-"<p>There are a few placeholders you can use in the command:</p>\n"
-"<dl>\n"
-"  <dt><code>%u</code></dt>\n"
-"  <dd>Gets replaced by the URL of the active document.</dd>\n"
-"  <dt><code>%f</code></dt>\n"
-"  <dd>Gets replaced by the local filepath to the active document.</dd>\n"
-"  <dt><code>%n</code></dt>\n"
-"  <dd>Gets replaced by the name of the active document, including its "
-"extension.</dd>\n"
-"  <dt><code>%b</code></dt>\n"
-"  <dd>Gets replaced by the name of the active document without its extension."
-"</dd>\n"
-"  <dt><code>%d</code></dt>\n"
-"  <dd>Gets replaced by the path to the directory of the active document.</"
-"dd>\n"
-"  <dt><code>%p</code></dt>\n"
-"  <dd>Gets replaced by the URL to the project of the active document.</dd>\n"
-"  <dt><code>%s</code></dt>\n"
-"  <dd>Gets replaced with the shell escaped contents of the selection in the "
-"active document.</dd>\n"
-"  <dt><code>%i</code></dt>\n"
-"  <dd>Gets replaced with the PID of the currently running KDevelop process.</"
-"dd>\n"
-"</dl>\n"
-"<p><b>NOTE:</b>  It is your responsibility to prevent running hazardous "
-"commands that could lead to data loss.</p>\n"
-msgstr ""
-"<p>Legt den Befehl fest, der beim Start dieses Skripts ausgeführt werden "
-"soll.Grundlegende Funktionen der Shell Ihrer Plattform sollten verfügbar "
-"sein.</p>\n"
-"<p>Es gibt einige Platzhalter, die Sie im Befehl verwenden können:</p>\n"
-"<dl>\n"
-"  <dt><code>%u</code></dt>\n"
-"  <dd>Wird mit der URL des aktiven Dokuments ersetzt.</dd>\n"
-"  <dt><code>%f</code></dt>\n"
-"  <dd>Wird mit dem lokalen Dateipfad des aktiven Dokuments ersetzt.</dd>\n"
-"  <dt><code>%n</code></dt>\n"
-"  <dd>Wird mit dem Namen des aktiven Dokuments ersetzt, einschließlich "
-"seiner Erweiterung.</dd>\n"
-"  <dt><code>%b</code></dt>\n"
-"  <dd>Wird mit dem Namen des aktiven Dokuments ohne Erweiterung ersetzt.</"
-"dd>\n"
-"  <dt><code>%d</code></dt>\n"
-"  <dd>Wird mit dem Pfad zum Ordner des aktuellen Dokuments ersetzt.</dd>\n"
-"  <dt><code>%p</code></dt>\n"
-"  <dd>Wird mit der URL zum Projekt des aktuellen Dokuments ersetzt.</dd>\n"
-"  <dt><code>%s</code></dt>\n"
-"  <dd>Wird mit dem für die Shell maskierten Inhalt der Auswahl im aktiven "
-"Dokument ersetzt.</dd>\n"
-"  <dt><code>%i</code></dt>\n"
-"  <dd>Wird mit der PID des derzeit laufenden KDevelop-Prozesses ersetzt.</"
-"dd>\n"
-"</dl>\n"
-"<p><b>HINWEIS:</b> Es liegt in Ihrer Verantwortung zu verhindern, dass "
-"riskante Befehle ausgeführt werden, die zu Datenverlust führen können.</p>\n"
-
-#: editexternalscript.cpp:68
-msgid ""
-"<p>Defines what the external script should get as input (via <code>STDIN</"
-"code>).</p>"
-msgstr ""
-"<p>Legt fest, was das externe Skript als Eingabe bekommen soll (via "
-"<code>STDIN</code>).</p>"
-
-#: editexternalscript.cpp:74
-msgid ""
-"<p>Defines what should be done with the output (i.e. <code>STDOUT</code>) of "
-"the script.</p>"
-msgstr ""
-"<p>Legt fest, was mit der Ausgabe des Skripts geschehen soll (d. h. "
-"<code>STDOUT</code>)</p>"
-
-#: editexternalscript.cpp:80
-msgid ""
-"<p>Defines what should be done with the errors (i.e. <code>STDERR</code>) of "
-"the script.</p><p>Note: if the action is the same as that chosen for the "
-"output, the channels will be merged and handled together.</p>"
-msgstr ""
-"<p>Legt fest, was mit den Fehlern des Skripts geschehen soll (d. h. "
-"<code>STDERR</code>)</p><p>Hinweis: Wenn die Aktion dieselbe wie bei der "
-"Ausgabe ist, werden die Kanäle zusammengeführt und zusammen behandelt.</p>"
-
-#: editexternalscript.cpp:88
-msgid "<p>Defines the name of the script. Just for displaying purposes.</p>"
-msgstr "<p>Legt den Namen des Skripts fest. Nur zu Anzeigezwecken.</p>"
-
-#: editexternalscript.cpp:94
-msgid ""
-"<p>Defines the shortcut(s) you can use to execute this external script.</p>"
-msgstr ""
-"<p>Legt Tastenkürzel fest, die Sie zum Ausführen des externen Skripts "
-"verwenden können.</p>"
-
-#: editexternalscript.cpp:100
-msgid ""
-"<p>Defines whether documents should be saved before the script gets executed."
-"</p>"
-msgstr ""
-"<p>Legt fest, ob Dokumente vor der Ausführung des Skripts gespeichert werden "
-"sollen.</p>"
-
-#: editexternalscript.cpp:106
-msgid ""
-"<p>Defines whether the output of the script should be shown in a toolview.</"
-"p>"
-msgstr ""
-"<p>Legt fest, ob die Ausgabe des Skripts in einer Werkzeugansicht angezeigt "
-"werden soll.</p>"
-
-#: editexternalscript.cpp:110
-msgid ""
-"<p>Defines what type of filtering should be applied to the output. E.g. to "
-"indicate errors by red text.</p>"
-msgstr ""
-"<p>Legt den Filter fest, der auf die Ausgabe angewendet wird, z. B. um "
-"Fehler in roter Schriftfarbe anzuzeigen</p>"
-
-#: editexternalscript.cpp:118
-msgid "Create new external script"
-msgstr "Neues externes Skript erstellen"
-
-#: editexternalscript.cpp:120
-msgid "Edit external script '%1'"
-msgstr "Externes Skript „%1“ bearbeiten"

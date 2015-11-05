@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-07-27 00:41+0300\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2014-06-12 13:13+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -17,10 +17,154 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: externalscriptplugin.cpp:56 externalscriptplugin.cpp:114
-#: externalscriptplugin.cpp:185 externalscriptview.cpp:41
+#: externalscriptview.cpp:41 externalscriptplugin.cpp:56
+#: externalscriptplugin.cpp:114 externalscriptplugin.cpp:185
 msgid "External Scripts"
 msgstr "Välised skriptid"
+
+#: externalscriptview.cpp:57
+msgid "Add External Script"
+msgstr "Lisa väline skript"
+
+#: externalscriptview.cpp:60
+msgid "Edit External Script"
+msgstr "Muuda välist skripti"
+
+#: externalscriptview.cpp:63
+msgid "Remove External Script"
+msgstr "Eemalda väline skript"
+
+#: externalscriptview.cpp:150
+msgid ""
+"<p>Do you really want to remove the external script configuration for <i>%1</"
+"i>?</p><p><i>Note:</i> The script itself will not be removed.</p>"
+msgstr ""
+"<p>Kas tõesti eemaldada välise skripti <i>%1</i> seadistus?</p><p><i>Märkus:"
+"</i> skripti ennast ei eemaldata.</p>"
+
+#: externalscriptview.cpp:152
+msgid "Confirm External Script Removal"
+msgstr "Välise skripti eemaldamise kinnitus"
+
+#: editexternalscript.cpp:42
+msgid ""
+"<p>Defines the command that should be executed when this script is run. "
+"Basic shell features of your platform should be available.</p>\n"
+"<p>There are a few placeholders you can use in the command:</p>\n"
+"<dl>\n"
+"  <dt><code>%u</code></dt>\n"
+"  <dd>Gets replaced by the URL of the active document.</dd>\n"
+"  <dt><code>%f</code></dt>\n"
+"  <dd>Gets replaced by the local filepath to the active document.</dd>\n"
+"  <dt><code>%n</code></dt>\n"
+"  <dd>Gets replaced by the name of the active document, including its "
+"extension.</dd>\n"
+"  <dt><code>%b</code></dt>\n"
+"  <dd>Gets replaced by the name of the active document without its extension."
+"</dd>\n"
+"  <dt><code>%d</code></dt>\n"
+"  <dd>Gets replaced by the path to the directory of the active document.</"
+"dd>\n"
+"  <dt><code>%p</code></dt>\n"
+"  <dd>Gets replaced by the URL to the project of the active document.</dd>\n"
+"  <dt><code>%s</code></dt>\n"
+"  <dd>Gets replaced with the shell escaped contents of the selection in the "
+"active document.</dd>\n"
+"  <dt><code>%i</code></dt>\n"
+"  <dd>Gets replaced with the PID of the currently running KDevelop process.</"
+"dd>\n"
+"</dl>\n"
+"<p><b>NOTE:</b>  It is your responsibility to prevent running hazardous "
+"commands that could lead to data loss.</p>\n"
+msgstr ""
+"<p>Defineerib käsu, mis tuleb käivitada, kui skript käivitatakse. Kasutada "
+"saab sinu platvormi põhilisi shelli võimalusi.</p>\n"
+"<p>Käsus saab pruukida mõningaid kohatäitjaid:</p>\n"
+"<dl>\n"
+"  <dt><code>%u</code></dt>\n"
+"  <dd>Asendatakse aktiivse dokumendi URL-iga.</dd>\n"
+"  <dt><code>%f</code></dt>\n"
+"  <dd>Asendatakse aktiivse dokumendi kohaliku faili asukohaga.</dd>\n"
+"  <dt><code>%n</code></dt>\n"
+"  <dd>Asendatakse aktiivse dokumendi nimega, kaasa arvatud laiend.</dd>\n"
+"  <dt><code>%b</code></dt>\n"
+"  <dd>Asendatakse aktiivse dokumendi nimega ilma laiendita.</dd>\n"
+"  <dt><code>%d</code></dt>\n"
+"  <dd>Asendatakse aktiivse dokumendi kataloogi asukohaga.</dd>\n"
+"  <dt><code>%p</code></dt>\n"
+"  <dd>Asendatakse aktiivse dokumendi projekti URL-iga.</dd>\n"
+"  <dt><code>%s</code></dt>\n"
+"  <dd>Asendatakse aktiivse dokumendi valiku shellis varjestatud sisuga.</"
+"dd>\n"
+"  <dt><code>%i</code></dt>\n"
+"  <dd>Asendatakse parajasti töötava KDevelopi protsessi PID-iga.</dd>\n"
+"</dl>\n"
+"<p><b>MÄRKUS:</b> see sõltub ainult sinust, et ei käivitataks ohtlikke "
+"käske, mis võivad kaasa tuua andmekao.</p>\n"
+
+#: editexternalscript.cpp:68
+msgid ""
+"<p>Defines what the external script should get as input (via <code>STDIN</"
+"code>).</p>"
+msgstr ""
+"<p>Määrab, mida väline skript peab kasutama sisendina (standardsisendi "
+"<code>STDIN</code> kaudu).</p>"
+
+#: editexternalscript.cpp:74
+msgid ""
+"<p>Defines what should be done with the output (i.e. <code>STDOUT</code>) of "
+"the script.</p>"
+msgstr ""
+"<p>Määrab, mida teha väljundiga (s.t skripti standardväljundiga "
+"<code>STDOUT</code>).</p>"
+
+#: editexternalscript.cpp:80
+msgid ""
+"<p>Defines what should be done with the errors (i.e. <code>STDERR</code>) of "
+"the script.</p><p>Note: if the action is the same as that chosen for the "
+"output, the channels will be merged and handled together.</p>"
+msgstr ""
+"<p>Määrab, mida teha vigadega (s.t skripti standardveaväljundiga "
+"<code>STDERR</code>).</p><p>Märkus: kui valitud toiming on sama nagu "
+"väljundi puhul, kanalid ühendatakse ja neid käsitletakse üheskoos.</p>"
+
+#: editexternalscript.cpp:88
+msgid "<p>Defines the name of the script. Just for displaying purposes.</p>"
+msgstr "<p>Määrab skripti nime. See on lihtsalt selguse mõttes.</p>"
+
+#: editexternalscript.cpp:94
+msgid ""
+"<p>Defines the shortcut(s) you can use to execute this external script.</p>"
+msgstr ""
+"<p>Määrab kiirklahvi(d), mida saab kasutada välise skripti käivitamiseks.</p>"
+
+#: editexternalscript.cpp:100
+msgid ""
+"<p>Defines whether documents should be saved before the script gets executed."
+"</p>"
+msgstr "<p>Määrab, kas dokumendid salvestada enne skripti käivitamist.</p>"
+
+#: editexternalscript.cpp:106
+msgid ""
+"<p>Defines whether the output of the script should be shown in a toolview.</"
+"p>"
+msgstr "<p>Määrab, kas skripti väljund on nähtav tööriistavaates.</p>"
+
+#: editexternalscript.cpp:110
+msgid ""
+"<p>Defines what type of filtering should be applied to the output. E.g. to "
+"indicate errors by red text.</p>"
+msgstr ""
+"<p>Määrab, millist laadi filter väljundile rakendada. Nt. vigade märkimiseks "
+"punase tekstiga.</p>"
+
+#: editexternalscript.cpp:118
+msgid "Create new external script"
+msgstr "Uue välise skripti loomine"
+
+#: editexternalscript.cpp:120
+msgid "Edit external script '%1'"
+msgstr "Välise skripti \"%1\" muutmine"
 
 #: externalscriptplugin.cpp:57
 msgid ""
@@ -299,147 +443,3 @@ msgid ""
 msgstr ""
 "*** Programmi '%1' käivitamine nurjus. Kontrolli, kas otsingutee (path) on "
 "ikka korrektne ***"
-
-#: externalscriptview.cpp:57
-msgid "Add External Script"
-msgstr "Lisa väline skript"
-
-#: externalscriptview.cpp:60
-msgid "Edit External Script"
-msgstr "Muuda välist skripti"
-
-#: externalscriptview.cpp:63
-msgid "Remove External Script"
-msgstr "Eemalda väline skript"
-
-#: externalscriptview.cpp:150
-msgid ""
-"<p>Do you really want to remove the external script configuration for <i>%1</"
-"i>?</p><p><i>Note:</i> The script itself will not be removed.</p>"
-msgstr ""
-"<p>Kas tõesti eemaldada välise skripti <i>%1</i> seadistus?</p><p><i>Märkus:"
-"</i> skripti ennast ei eemaldata.</p>"
-
-#: externalscriptview.cpp:152
-msgid "Confirm External Script Removal"
-msgstr "Välise skripti eemaldamise kinnitus"
-
-#: editexternalscript.cpp:42
-msgid ""
-"<p>Defines the command that should be executed when this script is run. "
-"Basic shell features of your platform should be available.</p>\n"
-"<p>There are a few placeholders you can use in the command:</p>\n"
-"<dl>\n"
-"  <dt><code>%u</code></dt>\n"
-"  <dd>Gets replaced by the URL of the active document.</dd>\n"
-"  <dt><code>%f</code></dt>\n"
-"  <dd>Gets replaced by the local filepath to the active document.</dd>\n"
-"  <dt><code>%n</code></dt>\n"
-"  <dd>Gets replaced by the name of the active document, including its "
-"extension.</dd>\n"
-"  <dt><code>%b</code></dt>\n"
-"  <dd>Gets replaced by the name of the active document without its extension."
-"</dd>\n"
-"  <dt><code>%d</code></dt>\n"
-"  <dd>Gets replaced by the path to the directory of the active document.</"
-"dd>\n"
-"  <dt><code>%p</code></dt>\n"
-"  <dd>Gets replaced by the URL to the project of the active document.</dd>\n"
-"  <dt><code>%s</code></dt>\n"
-"  <dd>Gets replaced with the shell escaped contents of the selection in the "
-"active document.</dd>\n"
-"  <dt><code>%i</code></dt>\n"
-"  <dd>Gets replaced with the PID of the currently running KDevelop process.</"
-"dd>\n"
-"</dl>\n"
-"<p><b>NOTE:</b>  It is your responsibility to prevent running hazardous "
-"commands that could lead to data loss.</p>\n"
-msgstr ""
-"<p>Defineerib käsu, mis tuleb käivitada, kui skript käivitatakse. Kasutada "
-"saab sinu platvormi põhilisi shelli võimalusi.</p>\n"
-"<p>Käsus saab pruukida mõningaid kohatäitjaid:</p>\n"
-"<dl>\n"
-"  <dt><code>%u</code></dt>\n"
-"  <dd>Asendatakse aktiivse dokumendi URL-iga.</dd>\n"
-"  <dt><code>%f</code></dt>\n"
-"  <dd>Asendatakse aktiivse dokumendi kohaliku faili asukohaga.</dd>\n"
-"  <dt><code>%n</code></dt>\n"
-"  <dd>Asendatakse aktiivse dokumendi nimega, kaasa arvatud laiend.</dd>\n"
-"  <dt><code>%b</code></dt>\n"
-"  <dd>Asendatakse aktiivse dokumendi nimega ilma laiendita.</dd>\n"
-"  <dt><code>%d</code></dt>\n"
-"  <dd>Asendatakse aktiivse dokumendi kataloogi asukohaga.</dd>\n"
-"  <dt><code>%p</code></dt>\n"
-"  <dd>Asendatakse aktiivse dokumendi projekti URL-iga.</dd>\n"
-"  <dt><code>%s</code></dt>\n"
-"  <dd>Asendatakse aktiivse dokumendi valiku shellis varjestatud sisuga.</"
-"dd>\n"
-"  <dt><code>%i</code></dt>\n"
-"  <dd>Asendatakse parajasti töötava KDevelopi protsessi PID-iga.</dd>\n"
-"</dl>\n"
-"<p><b>MÄRKUS:</b> see sõltub ainult sinust, et ei käivitataks ohtlikke "
-"käske, mis võivad kaasa tuua andmekao.</p>\n"
-
-#: editexternalscript.cpp:68
-msgid ""
-"<p>Defines what the external script should get as input (via <code>STDIN</"
-"code>).</p>"
-msgstr ""
-"<p>Määrab, mida väline skript peab kasutama sisendina (standardsisendi "
-"<code>STDIN</code> kaudu).</p>"
-
-#: editexternalscript.cpp:74
-msgid ""
-"<p>Defines what should be done with the output (i.e. <code>STDOUT</code>) of "
-"the script.</p>"
-msgstr ""
-"<p>Määrab, mida teha väljundiga (s.t skripti standardväljundiga "
-"<code>STDOUT</code>).</p>"
-
-#: editexternalscript.cpp:80
-msgid ""
-"<p>Defines what should be done with the errors (i.e. <code>STDERR</code>) of "
-"the script.</p><p>Note: if the action is the same as that chosen for the "
-"output, the channels will be merged and handled together.</p>"
-msgstr ""
-"<p>Määrab, mida teha vigadega (s.t skripti standardveaväljundiga "
-"<code>STDERR</code>).</p><p>Märkus: kui valitud toiming on sama nagu "
-"väljundi puhul, kanalid ühendatakse ja neid käsitletakse üheskoos.</p>"
-
-#: editexternalscript.cpp:88
-msgid "<p>Defines the name of the script. Just for displaying purposes.</p>"
-msgstr "<p>Määrab skripti nime. See on lihtsalt selguse mõttes.</p>"
-
-#: editexternalscript.cpp:94
-msgid ""
-"<p>Defines the shortcut(s) you can use to execute this external script.</p>"
-msgstr ""
-"<p>Määrab kiirklahvi(d), mida saab kasutada välise skripti käivitamiseks.</p>"
-
-#: editexternalscript.cpp:100
-msgid ""
-"<p>Defines whether documents should be saved before the script gets executed."
-"</p>"
-msgstr "<p>Määrab, kas dokumendid salvestada enne skripti käivitamist.</p>"
-
-#: editexternalscript.cpp:106
-msgid ""
-"<p>Defines whether the output of the script should be shown in a toolview.</"
-"p>"
-msgstr "<p>Määrab, kas skripti väljund on nähtav tööriistavaates.</p>"
-
-#: editexternalscript.cpp:110
-msgid ""
-"<p>Defines what type of filtering should be applied to the output. E.g. to "
-"indicate errors by red text.</p>"
-msgstr ""
-"<p>Määrab, millist laadi filter väljundile rakendada. Nt. vigade märkimiseks "
-"punase tekstiga.</p>"
-
-#: editexternalscript.cpp:118
-msgid "Create new external script"
-msgstr "Uue välise skripti loomine"
-
-#: editexternalscript.cpp:120
-msgid "Edit external script '%1'"
-msgstr "Välise skripti \"%1\" muutmine"

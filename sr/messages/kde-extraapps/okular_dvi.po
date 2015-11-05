@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okular_dvi\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-05-05 17:54+0000\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2014-05-18 13:28+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -22,6 +22,50 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 "X-Associated-UI-Catalogs: okular\n"
+
+#: psgs.cpp:263
+msgid ""
+"The version of Ghostview that is installed on this computer does not contain "
+"any of the Ghostview device drivers that are known to Okular. PostScript "
+"support has therefore been turned off in Okular."
+msgstr ""
+"Верзија Гоствјуа инсталирана на овом рачунару не садржи ниједан драјвер "
+"уређаја који Окулар познаје. Због овога је искључена подршка за постскрипт у "
+"Окулару."
+
+#: psgs.cpp:267
+msgid ""
+"<qt><p>The Ghostview program, which Okular uses internally to display the "
+"PostScript graphics that is included in this DVI file, is generally able to "
+"write its output in a variety of formats. The sub-programs that Ghostview "
+"uses for these tasks are called 'device drivers'; there is one device driver "
+"for each format that Ghostview is able to write. Different versions of "
+"Ghostview often have different sets of device drivers available. It seems "
+"that the version of Ghostview that is installed on this computer does not "
+"contain <strong>any</strong> of the device drivers that are known to Okular."
+"</p><p>It seems unlikely that a regular installation of Ghostview would not "
+"contain these drivers. This error may therefore point to a serious "
+"misconfiguration of the Ghostview installation on your computer.</p><p>If "
+"you want to fix the problems with Ghostview, you can use the command "
+"<strong>gs --help</strong> to display the list of device drivers contained "
+"in Ghostview. Among others, Okular can use the 'png256', 'jpeg' and 'pnm' "
+"drivers. Note that Okular needs to be restarted to re-enable PostScript "
+"support.</p></qt>"
+msgstr ""
+"<qt><p>За приказивање постскрипт графике укључене у овај ДВИ фајл Окулар "
+"интерно користи програм Гоствју, који може да произведе многе различите "
+"формате на излазу. Потпрограми које Гоствју користи у ову сврху називају се "
+"„драјверима уређаја“, по један за сваки формат који Гоствју може да запише. "
+"Различита издања Гоствјуа често имају различите скупове драјвера. Изгледа да "
+"издање Гоствјуа инсталирано на овом рачунару не садржи <strong>ниједан</"
+"strong> драјвер познат Окулару.</p><p>Мало је вероватно да исправна "
+"инсталација Гоствјуа не садржи ниједан драјвер. Стога ова грешка вероватно "
+"указује на озбиљне грешке у постави Гоствјуа на овом рачунару.</p><p>Уколико "
+"желите да отклоните проблеме са Гоствјуом, можете извршити наредбу <icode>gs "
+"--help</icode> да добијете списак драјвера које Гоствју садржи. Између "
+"осталих, Окулар може да користи драјвере <icode>png256</icode>, <icode>jpeg</"
+"icode> и <icode>pnm</icode>. Окулар мора бити поново покренут да би се "
+"поново проверила подршка за постскрипт.</p></qt>"
 
 #: dviFile.cpp:111
 msgid "The DVI file does not start with the preamble."
@@ -94,95 +138,6 @@ msgstr ""
 "ПДФ фајл. Наредба <command>pdf2ps</command>, коју је Окулар употребио, "
 "исписала је следеће:</p><p><strong>%2</strong></p></qt>"
 
-#: dviRenderer_prescan.cpp:86
-msgid "Embedding %1"
-msgstr "Угнежђујем %1"
-
-#: dviRenderer_prescan.cpp:101
-msgid ""
-"Page %1: The PDF file <strong>%2</strong> could not be converted to "
-"PostScript.<br>"
-msgstr ""
-"<html>Страница %1: Не могу да претворим ПДФ фајл <filename>%2</filename> у "
-"постскрипт.<br/></html>"
-
-#: dviRenderer_prescan.cpp:103
-msgid ""
-"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
-msgstr ""
-"<html>Страница %1: Не могу да нађем постскрипт фајл <filename>%2</filename>."
-"<br/></html>"
-
-#: dviRenderer_prescan.cpp:252
-msgid "The papersize data '%1' could not be parsed."
-msgstr "Не могу да рашчланим податке о величини папира „%1“."
-
-#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
-msgid "The DVI code referred to font #%1, which was not previously defined."
-msgstr "ДВИ ко̂д помиње фонт #%1, који није претходно дефинисан."
-
-#: dviRenderer_draw.cpp:261
-msgid "The DVI code set a character of an unknown font."
-msgstr "ДВИ ко̂д наводи знак из непознатог фонта."
-
-#: dviRenderer_draw.cpp:375
-msgid "The stack was not empty when the EOP command was encountered."
-msgstr "Стек није био празан када је наишла наредба <icode>EOP</icode>."
-
-#: dviRenderer_draw.cpp:387
-msgid "The stack was empty when a POP command was encountered."
-msgstr "Стек је био празан када је наишла наредба <icode>POP</icode>."
-
-#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
-msgid "The DVI code referred to a font which was not previously defined."
-msgstr "ДВИ ко̂д помиње фонт који није претходно дефинисан."
-
-#: dviRenderer_draw.cpp:570
-msgid "An illegal command was encountered."
-msgstr "Наишла је недозвољена наредба."
-
-#: dviRenderer_draw.cpp:575
-msgid "The unknown op-code %1 was encountered."
-msgstr "Наишао је непознати оп‑ко̂д %1."
-
-#: util.cpp:77
-msgid ""
-"Fatal error.\n"
-"\n"
-msgstr ""
-"Кобна грешка.\n"
-"\n"
-
-#: util.cpp:79
-msgid ""
-"\n"
-"\n"
-"This probably means that either you found a bug in Okular,\n"
-"or that the DVI file, or auxiliary files (such as font files, \n"
-"or virtual font files) were really badly broken.\n"
-"Okular will abort after this message. If you believe that you \n"
-"found a bug, or that Okular should behave better in this situation\n"
-"please report the problem."
-msgstr ""
-"\n"
-"<html>Ово вероватно значи да сте или нашли грешку у Окулару, или да су ДВИ "
-"фајл или допунски фајлови (попут фајлова фонтова или виртуелних фонтова) "
-"озбиљно искварени. Окулар ће обуставити рад после ове поруке. Ако мислите да "
-"сте пронашли грешку, или да Окулар треба боље да се снађе у овој ситуацији, "
-"пријавите овај проблем.</html>"
-
-#: TeXFontDefinition.cpp:107
-msgid "Cannot find font %1, file %2."
-msgstr "Не могу да нађем фонт %1, фајл <filename>%2</filename>."
-
-#: TeXFontDefinition.cpp:123
-msgid "Checksum mismatch for font file %1"
-msgstr "Неслагање контролне суме за фајл фонта <filename>%1</filename>."
-
-#: TeXFontDefinition.cpp:171
-msgid "Cannot recognize format for font file %1"
-msgstr "Не могу да препознам формат фајла фонта <filename>%1</filename>."
-
 #: special.cpp:37
 msgid "That makes 25 errors. Further error messages will not be printed."
 msgstr ""
@@ -224,6 +179,59 @@ msgstr ""
 msgid "The special command '%1' is not implemented."
 msgstr "Специјална наредба <icode>%1</icode> није изведена."
 
+#: util.cpp:77
+msgid ""
+"Fatal error.\n"
+"\n"
+msgstr ""
+"Кобна грешка.\n"
+"\n"
+
+#: util.cpp:79
+msgid ""
+"\n"
+"\n"
+"This probably means that either you found a bug in Okular,\n"
+"or that the DVI file, or auxiliary files (such as font files, \n"
+"or virtual font files) were really badly broken.\n"
+"Okular will abort after this message. If you believe that you \n"
+"found a bug, or that Okular should behave better in this situation\n"
+"please report the problem."
+msgstr ""
+"\n"
+"<html>Ово вероватно значи да сте или нашли грешку у Окулару, или да су ДВИ "
+"фајл или допунски фајлови (попут фајлова фонтова или виртуелних фонтова) "
+"озбиљно искварени. Окулар ће обуставити рад после ове поруке. Ако мислите да "
+"сте пронашли грешку, или да Окулар треба боље да се снађе у овој ситуацији, "
+"пријавите овај проблем.</html>"
+
+#: dviRenderer_prescan.cpp:86
+msgid "Embedding %1"
+msgstr "Угнежђујем %1"
+
+#: dviRenderer_prescan.cpp:101
+msgid ""
+"Page %1: The PDF file <strong>%2</strong> could not be converted to "
+"PostScript.<br>"
+msgstr ""
+"<html>Страница %1: Не могу да претворим ПДФ фајл <filename>%2</filename> у "
+"постскрипт.<br/></html>"
+
+#: dviRenderer_prescan.cpp:103
+msgid ""
+"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
+msgstr ""
+"<html>Страница %1: Не могу да нађем постскрипт фајл <filename>%2</filename>."
+"<br/></html>"
+
+#: dviRenderer_prescan.cpp:252
+msgid "The papersize data '%1' could not be parsed."
+msgstr "Не могу да рашчланим податке о величини папира „%1“."
+
+#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
+msgid "The DVI code referred to font #%1, which was not previously defined."
+msgstr "ДВИ ко̂д помиње фонт #%1, који није претходно дефинисан."
+
 #: dviRenderer.cpp:231 dviRenderer.cpp:468
 msgid "File corruption. %1"
 msgstr "Фајл је искварен. %1"
@@ -257,6 +265,92 @@ msgid ""
 msgstr ""
 "Окулар не може да нађе место у ДВИ фајлу које одговара реду %1 у тех фајлу "
 "<filename>%2</filename>."
+
+#: TeXFont_PFB.cpp:42
+msgid ""
+"The font file %1 could be opened and read, but its font format is "
+"unsupported."
+msgstr ""
+"Фајл фонта <filename>%1</filename> може да се отвори и прочита, али формат "
+"фонта није подржан."
+
+#: TeXFont_PFB.cpp:48
+msgid "The font file %1 is broken, or it could not be opened or read."
+msgstr ""
+"Фајл фонта <filename>%1</filename> или је покварен, или не може да се "
+"отворили или прочита."
+
+#: TeXFont_PFB.cpp:169
+msgid ""
+"FreeType reported an error when setting the character size for font file %1."
+msgstr ""
+"Фритајп пријављује грешку при постављању величине знакова за фајл фонта "
+"<filename>%1</filename>."
+
+#: TeXFont_PFB.cpp:185
+msgid "FreeType is unable to load glyph #%1 from font file %2."
+msgstr ""
+"Фритајп не може да учита глиф #%1 из фајла фонта <filename>%2</filename>."
+
+#: TeXFont_PFB.cpp:197
+msgid "FreeType is unable to render glyph #%1 from font file %2."
+msgstr ""
+"Фритајп не може да изрендерује глиф #%1 из фајла фонта <filename>%2</"
+"filename>."
+
+#: TeXFont_PFB.cpp:210
+msgid "Glyph #%1 is empty."
+msgstr "Глиф #%1 је празан."
+
+#: TeXFont_PFB.cpp:211
+msgid "Glyph #%1 from font file %2 is empty."
+msgstr "Глиф #%1 из фајла фонта <filename>%2</filename> је празан."
+
+#: TeXFont_PFB.cpp:279
+msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
+msgstr ""
+"Фритајп не може да учита метрику за глиф #%1 из фајла фонта <filename>%2</"
+"filename>."
+
+#: TeXFontDefinition.cpp:107
+msgid "Cannot find font %1, file %2."
+msgstr "Не могу да нађем фонт %1, фајл <filename>%2</filename>."
+
+#: TeXFontDefinition.cpp:123
+msgid "Checksum mismatch for font file %1"
+msgstr "Неслагање контролне суме за фајл фонта <filename>%1</filename>."
+
+#: TeXFontDefinition.cpp:171
+msgid "Cannot recognize format for font file %1"
+msgstr "Не могу да препознам формат фајла фонта <filename>%1</filename>."
+
+#: dviRenderer_draw.cpp:261
+msgid "The DVI code set a character of an unknown font."
+msgstr "ДВИ ко̂д наводи знак из непознатог фонта."
+
+#: dviRenderer_draw.cpp:375
+msgid "The stack was not empty when the EOP command was encountered."
+msgstr "Стек није био празан када је наишла наредба <icode>EOP</icode>."
+
+#: dviRenderer_draw.cpp:387
+msgid "The stack was empty when a POP command was encountered."
+msgstr "Стек је био празан када је наишла наредба <icode>POP</icode>."
+
+#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
+msgid "The DVI code referred to a font which was not previously defined."
+msgstr "ДВИ ко̂д помиње фонт који није претходно дефинисан."
+
+#: dviRenderer_draw.cpp:570
+msgid "An illegal command was encountered."
+msgstr "Наишла је недозвољена наредба."
+
+#: dviRenderer_draw.cpp:575
+msgid "The unknown op-code %1 was encountered."
+msgstr "Наишао је непознати оп‑ко̂д %1."
+
+#: vf.cpp:182
+msgid "Wrong command byte found in VF macro list: %1"
+msgstr "Погрешан командни бајт пронађен у VF макро листи: %1"
 
 #: TeXFont_PK.cpp:90
 msgid "Cannot open font file %1."
@@ -306,13 +400,45 @@ msgstr "Генератор/датум"
 msgid "Font file not found"
 msgstr "Фонт није пронађен"
 
-#: pageSize.cpp:324
-msgid "portrait"
-msgstr "портрет"
+#: fontpool.cpp:209
+msgid ""
+"<qt><p>Okular was not able to locate all the font files which are necessary "
+"to display the current DVI file. Your document might be unreadable.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Окулар не може да пронађе све фајлове фонтове који су потребни за "
+"приказивање текућег ДВИ фајла. Документ може бити нечитљив.</"
+"p><p><small><b><envar>PATH</envar>:</b> %1</small></p><p><small>%2</small></"
+"p></qt>"
 
-#: pageSize.cpp:326
-msgid "landscape"
-msgstr "пејзаж"
+#: fontpool.cpp:280
+msgid ""
+"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
+"font files could not be located, and your document might be unreadable.<br/"
+">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
+"your system, or it cannot be found in the current search path.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Било је проблема при извршавању <command>kpsewhich</command>. "
+"Последица је да неки фајлови фонтова нису нађени, и документ може бити "
+"нечитљив.</p><p>Могући разлог: наредба <command>kpsewhich</command> можда "
+"није инсталирана на систему, или није доступна кроз тренутну путању претраге."
+"</p><p><small><b><envar>PATH</envar>:</b> %1</small></p><p><small>%2</"
+"small></p></qt>"
+
+#: fontpool.cpp:299
+msgid ""
+"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
+"error %2). As a result, some font files could not be located, and your "
+"document might be unreadable.</qt>"
+msgstr ""
+"<qt>Прекинуто је генерисање фонтова помоћу <command>kpsewhich</command> "
+"(излазни ко̂д %1, грешка %2). Због овога неки фонтови нису пронађени, и "
+"документ може бити нечитљив.</qt>"
+
+#: fontpool.cpp:477
+msgid "Currently generating %1 at %2 dpi..."
+msgstr "Тренутно генеришем %1 при %2 тпи..."
 
 #: dviexport.cpp:129
 msgid ""
@@ -383,136 +509,10 @@ msgstr ""
 "<strong>дијалогу података о документу</strong>, који позивате кроз мени "
 "<interface>Фајл</interface>.</qt>"
 
-#: psgs.cpp:263
-msgid ""
-"The version of Ghostview that is installed on this computer does not contain "
-"any of the Ghostview device drivers that are known to Okular. PostScript "
-"support has therefore been turned off in Okular."
-msgstr ""
-"Верзија Гоствјуа инсталирана на овом рачунару не садржи ниједан драјвер "
-"уређаја који Окулар познаје. Због овога је искључена подршка за постскрипт у "
-"Окулару."
+#: pageSize.cpp:324
+msgid "portrait"
+msgstr "портрет"
 
-#: psgs.cpp:267
-msgid ""
-"<qt><p>The Ghostview program, which Okular uses internally to display the "
-"PostScript graphics that is included in this DVI file, is generally able to "
-"write its output in a variety of formats. The sub-programs that Ghostview "
-"uses for these tasks are called 'device drivers'; there is one device driver "
-"for each format that Ghostview is able to write. Different versions of "
-"Ghostview often have different sets of device drivers available. It seems "
-"that the version of Ghostview that is installed on this computer does not "
-"contain <strong>any</strong> of the device drivers that are known to Okular."
-"</p><p>It seems unlikely that a regular installation of Ghostview would not "
-"contain these drivers. This error may therefore point to a serious "
-"misconfiguration of the Ghostview installation on your computer.</p><p>If "
-"you want to fix the problems with Ghostview, you can use the command "
-"<strong>gs --help</strong> to display the list of device drivers contained "
-"in Ghostview. Among others, Okular can use the 'png256', 'jpeg' and 'pnm' "
-"drivers. Note that Okular needs to be restarted to re-enable PostScript "
-"support.</p></qt>"
-msgstr ""
-"<qt><p>За приказивање постскрипт графике укључене у овај ДВИ фајл Окулар "
-"интерно користи програм Гоствју, који може да произведе многе различите "
-"формате на излазу. Потпрограми које Гоствју користи у ову сврху називају се "
-"„драјверима уређаја“, по један за сваки формат који Гоствју може да запише. "
-"Различита издања Гоствјуа често имају различите скупове драјвера. Изгледа да "
-"издање Гоствјуа инсталирано на овом рачунару не садржи <strong>ниједан</"
-"strong> драјвер познат Окулару.</p><p>Мало је вероватно да исправна "
-"инсталација Гоствјуа не садржи ниједан драјвер. Стога ова грешка вероватно "
-"указује на озбиљне грешке у постави Гоствјуа на овом рачунару.</p><p>Уколико "
-"желите да отклоните проблеме са Гоствјуом, можете извршити наредбу <icode>gs "
-"--help</icode> да добијете списак драјвера које Гоствју садржи. Између "
-"осталих, Окулар може да користи драјвере <icode>png256</icode>, <icode>jpeg</"
-"icode> и <icode>pnm</icode>. Окулар мора бити поново покренут да би се "
-"поново проверила подршка за постскрипт.</p></qt>"
-
-#: fontpool.cpp:209
-msgid ""
-"<qt><p>Okular was not able to locate all the font files which are necessary "
-"to display the current DVI file. Your document might be unreadable.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Окулар не може да пронађе све фајлове фонтове који су потребни за "
-"приказивање текућег ДВИ фајла. Документ може бити нечитљив.</"
-"p><p><small><b><envar>PATH</envar>:</b> %1</small></p><p><small>%2</small></"
-"p></qt>"
-
-#: fontpool.cpp:280
-msgid ""
-"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
-"font files could not be located, and your document might be unreadable.<br/"
-">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
-"your system, or it cannot be found in the current search path.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Било је проблема при извршавању <command>kpsewhich</command>. "
-"Последица је да неки фајлови фонтова нису нађени, и документ може бити "
-"нечитљив.</p><p>Могући разлог: наредба <command>kpsewhich</command> можда "
-"није инсталирана на систему, или није доступна кроз тренутну путању претраге."
-"</p><p><small><b><envar>PATH</envar>:</b> %1</small></p><p><small>%2</"
-"small></p></qt>"
-
-#: fontpool.cpp:299
-msgid ""
-"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
-"error %2). As a result, some font files could not be located, and your "
-"document might be unreadable.</qt>"
-msgstr ""
-"<qt>Прекинуто је генерисање фонтова помоћу <command>kpsewhich</command> "
-"(излазни ко̂д %1, грешка %2). Због овога неки фонтови нису пронађени, и "
-"документ може бити нечитљив.</qt>"
-
-#: fontpool.cpp:477
-msgid "Currently generating %1 at %2 dpi..."
-msgstr "Тренутно генеришем %1 при %2 тпи..."
-
-#: vf.cpp:182
-msgid "Wrong command byte found in VF macro list: %1"
-msgstr "Погрешан командни бајт пронађен у VF макро листи: %1"
-
-#: TeXFont_PFB.cpp:42
-msgid ""
-"The font file %1 could be opened and read, but its font format is "
-"unsupported."
-msgstr ""
-"Фајл фонта <filename>%1</filename> може да се отвори и прочита, али формат "
-"фонта није подржан."
-
-#: TeXFont_PFB.cpp:48
-msgid "The font file %1 is broken, or it could not be opened or read."
-msgstr ""
-"Фајл фонта <filename>%1</filename> или је покварен, или не може да се "
-"отворили или прочита."
-
-#: TeXFont_PFB.cpp:169
-msgid ""
-"FreeType reported an error when setting the character size for font file %1."
-msgstr ""
-"Фритајп пријављује грешку при постављању величине знакова за фајл фонта "
-"<filename>%1</filename>."
-
-#: TeXFont_PFB.cpp:185
-msgid "FreeType is unable to load glyph #%1 from font file %2."
-msgstr ""
-"Фритајп не може да учита глиф #%1 из фајла фонта <filename>%2</filename>."
-
-#: TeXFont_PFB.cpp:197
-msgid "FreeType is unable to render glyph #%1 from font file %2."
-msgstr ""
-"Фритајп не може да изрендерује глиф #%1 из фајла фонта <filename>%2</"
-"filename>."
-
-#: TeXFont_PFB.cpp:210
-msgid "Glyph #%1 is empty."
-msgstr "Глиф #%1 је празан."
-
-#: TeXFont_PFB.cpp:211
-msgid "Glyph #%1 from font file %2 is empty."
-msgstr "Глиф #%1 из фајла фонта <filename>%2</filename> је празан."
-
-#: TeXFont_PFB.cpp:279
-msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
-msgstr ""
-"Фритајп не може да учита метрику за глиф #%1 из фајла фонта <filename>%2</"
-"filename>."
+#: pageSize.cpp:326
+msgid "landscape"
+msgstr "пејзаж"

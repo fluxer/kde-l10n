@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-09-04 23:26+0000\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2014-03-03 20:18+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -23,6 +23,18 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Associated-UI-Catalogs: kdelibs4\n"
 "X-Environment: kde, kget\n"
+
+#. i18n: file: conf/dlgintegration.ui:93
+#. i18n: ectx: property (text), widget (KPushButton, increase)
+#: conf/verificationpreferences.cpp:35 rc.cpp:108
+msgid "&Increase Priority"
+msgstr "&Povećaj prioritet"
+
+#. i18n: file: conf/dlgintegration.ui:100
+#. i18n: ectx: property (text), widget (KPushButton, decrease)
+#: conf/verificationpreferences.cpp:36 rc.cpp:111
+msgid "&Decrease Priority"
+msgstr "&Smanji prioritet"
 
 # >> @title:column
 #: conf/autopastemodel.cpp:174
@@ -41,6 +53,10 @@ msgstr "Izbegavački niz"
 #: conf/autopastemodel.cpp:209 conf/integrationpreferences.cpp:37
 msgid "Regular expression"
 msgstr "Regularni izraz"
+
+#: conf/pluginselector.cpp:26 conf/preferencesdialog.cpp:78
+msgid "Plugins"
+msgstr "Priključci"
 
 #: conf/preferencesdialog.cpp:51
 msgid "Xml"
@@ -83,7 +99,7 @@ msgstr "Upravljajte grupama"
 
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:23
 #. i18n: ectx: property (title), widget (QGroupBox, networkGroupBox)
-#: conf/preferencesdialog.cpp:73 rc.cpp:269
+#: conf/preferencesdialog.cpp:73 rc.cpp:341
 msgid "Network"
 msgstr "Mreža"
 
@@ -117,21 +133,9 @@ msgstr "Napredno"
 msgid "Advanced Options"
 msgstr "Napredne opcije"
 
-#: conf/preferencesdialog.cpp:78 conf/pluginselector.cpp:26
-msgid "Plugins"
-msgstr "Priključci"
-
 #: conf/preferencesdialog.cpp:78
 msgid "Transfer Plugins"
 msgstr "Priključci prenosa"
-
-#: conf/dlgwebinterface.cpp:45 conf/dlgwebinterface.cpp:60
-msgid "Could not open KWallet"
-msgstr "Ne mogu da otvorim K‑novčanik"
-
-#: conf/transfersgrouptree.cpp:110 conf/transfersgrouptree.cpp:115
-msgid "New Group"
-msgstr "Nova grupa"
 
 #: conf/integrationpreferences.cpp:33
 msgid "Include"
@@ -141,17 +145,124 @@ msgstr "Uključi"
 msgid "Exclude"
 msgstr "Isključi"
 
-#. i18n: file: conf/dlgintegration.ui:93
-#. i18n: ectx: property (text), widget (KPushButton, increase)
-#: conf/verificationpreferences.cpp:35 rc.cpp:12
-msgid "&Increase Priority"
-msgstr "&Povećaj prioritet"
+#: conf/dlgwebinterface.cpp:45 conf/dlgwebinterface.cpp:60
+msgid "Could not open KWallet"
+msgstr "Ne mogu da otvorim K‑novčanik"
 
-#. i18n: file: conf/dlgintegration.ui:100
-#. i18n: ectx: property (text), widget (KPushButton, decrease)
-#: conf/verificationpreferences.cpp:36 rc.cpp:15
-msgid "&Decrease Priority"
-msgstr "&Smanji prioritet"
+#: conf/transfersgrouptree.cpp:110 conf/transfersgrouptree.cpp:115
+msgid "New Group"
+msgstr "Nova grupa"
+
+# >> @title:column +
+#: core/transfertreemodel.cpp:645
+msgctxt "name of download"
+msgid "Name"
+msgstr "ime"
+
+# >> @title:column +
+#: core/transfertreemodel.cpp:647
+msgctxt "status of download"
+msgid "Status"
+msgstr "stanje"
+
+# >> @title:column +
+#: core/transfertreemodel.cpp:649
+msgctxt "size of download"
+msgid "Size"
+msgstr "veličina"
+
+# >> @title:column +
+#: core/transfertreemodel.cpp:651
+msgctxt "progress of download"
+msgid "Progress"
+msgstr "napredak"
+
+# >> @title:column +
+#: core/transfertreemodel.cpp:653
+msgctxt "speed of download"
+msgid "Speed"
+msgstr "brzina"
+
+# >> @title:column +
+#: core/transfertreemodel.cpp:655
+msgctxt "remaining time of download"
+msgid "Remaining Time"
+msgstr "preostalo vreme"
+
+# >> @title:column
+#: core/verificationmodel.cpp:151
+msgctxt "the type of the hash, e.g. MD5"
+msgid "Type"
+msgstr "tip"
+
+#: core/verificationmodel.cpp:153
+msgctxt "the used hash for verification"
+msgid "Hash"
+msgstr "disperzija"
+
+#: core/verificationmodel.cpp:155
+msgctxt "verification-result of a file, can be true/false"
+msgid "Verified"
+msgstr "overeno"
+
+#: core/kgetkjobadapter.cpp:45
+msgid "KGet Transfer"
+msgstr "KGetova prenos"
+
+#: core/kgetglobaljob.cpp:56
+msgid "KGet is downloading %1 file"
+msgid_plural "KGet is downloading %1 files"
+msgstr[0] "KGet preuzima %1 fajl"
+msgstr[1] "KGet preuzima %1 fajla"
+msgstr[2] "KGet preuzima %1 fajlova"
+msgstr[3] "KGet preuzima %1 fajl"
+
+#: core/signature.cpp:228
+msgid "The key to verify the signature is missing, do you want to download it?"
+msgstr "Nedostaje ključ za overavanje potpisa, želite li da ga preuzmete?"
+
+#: core/signature.cpp:250
+msgid ""
+"The signature could not be verified for %1. See transfer settings for more "
+"information."
+msgstr ""
+"Potpis za %1 ne može da se dobavi. Pogledajte postavke prenosa za više "
+"detalja."
+
+#: core/signature.cpp:251
+msgid "Signature not verified"
+msgstr "Potpis nije overen"
+
+#: core/transferhandler.cpp:137
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:28
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:29
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:30
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:31
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:32
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:33
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:34
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:35
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:60
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:61
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:64
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:65
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:68
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:71
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:74
+#: transfer-plugins/bittorrent/btdetailswidget.cpp:77
+#: ui/transfersviewdelegate.cpp:396
+msgctxt "not available"
+msgid "n/a"
+msgstr "n/d"
+
+#: core/transferhandler.cpp:145 ui/transferdetails.cpp:86
+msgid "Stalled"
+msgstr "Zastoj"
+
+#: core/transferhandler.cpp:150 core/transfergrouphandler.cpp:113
+#: ui/transferdetails.cpp:90
+msgid "%1/s"
+msgstr "%1/s"
 
 #: core/urlchecker.cpp:47
 msgid "Question"
@@ -190,9 +301,8 @@ msgstr "Ne može da se piše u odredište preuzimanja."
 msgid "No URL specified."
 msgstr "Nije zadat URL."
 
-#: core/urlchecker.cpp:322
+#: core/urlchecker.cpp:322 transfer-plugins/bittorrent/bttransfer.cpp:257
 #: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:95
-#: transfer-plugins/bittorrent/bttransfer.cpp:257
 msgid "Malformed URL."
 msgstr "Nepravilan URL."
 
@@ -486,227 +596,10 @@ msgid "File already downloaded. Download anyway?"
 msgstr "Fajl je već preuzet. Preuzeti ga opet?"
 
 #: core/urlchecker.cpp:648 core/urlchecker.cpp:744 core/kget.cpp:1098
-#: core/kget.cpp:1101 transfer-plugins/metalink/metalink.cpp:710
-#: transfer-plugins/metalink/abstractmetalink.cpp:483
+#: core/kget.cpp:1101 transfer-plugins/metalink/abstractmetalink.cpp:483
+#: transfer-plugins/metalink/metalink.cpp:710
 msgid "File already exists"
 msgstr "Fajl već postoji"
-
-#: core/kget.h:357 ui/tray.cpp:41 main.cpp:103 mainwindow.cpp:90
-#: mainwindow.cpp:519
-msgid "KGet"
-msgstr "KGet"
-
-#: core/datasourcefactory.cpp:279
-msgid "Filesize is larger than maximum file size supported by VFAT."
-msgstr "Veličina fajla je veća od najveće koju podržava VFAT."
-
-#: core/datasourcefactory.cpp:279 core/datasourcefactory.cpp:624
-#: core/kget.cpp:1371 transfer-plugins/metalink/metalink.cpp:195
-#: transfer-plugins/metalink/metalinkxml.cpp:192
-#: transfer-plugins/metalink/metalinkhttp.cpp:236
-#: ui/metalinkcreator/metalinkcreator.cpp:161
-#: ui/metalinkcreator/metalinkcreator.cpp:178
-msgid "Error"
-msgstr "Greška"
-
-#: core/datasourcefactory.cpp:624
-msgctxt "A mirror is removed when the file has the wrong download size"
-msgid "%1 removed as it did report a wrong file size."
-msgstr "%1 je uklonjen pošto prijavljuje pogrešnu veličinu fajla."
-
-#: core/keydownloader.cpp:73
-msgid ""
-"No server for downloading keys is specified in settings. Downloading aborted."
-msgstr ""
-"Serveri za preuzimanje ključeva nisu zadati u postavkama. Preuzimanje "
-"obustavljeno."
-
-#: core/keydownloader.cpp:74 core/keydownloader.cpp:94
-msgid "No key server"
-msgstr "Nema servera ključeva"
-
-#: core/keydownloader.cpp:93
-msgid ""
-"No useful key server found, key not downloaded. Add more servers to the "
-"settings or restart KGet and retry downloading."
-msgstr ""
-"Ključ nije preuzet jer nema nijednog upotrebljivog servera ključeva. Dodajte "
-"još servera u postavkama, ili ponovo pokrenite KGet i pokušajte preuzimanje."
-
-# >> @title:column
-#: core/verificationmodel.cpp:151
-msgctxt "the type of the hash, e.g. MD5"
-msgid "Type"
-msgstr "tip"
-
-#: core/verificationmodel.cpp:153
-msgctxt "the used hash for verification"
-msgid "Hash"
-msgstr "disperzija"
-
-#: core/verificationmodel.cpp:155
-msgctxt "verification-result of a file, can be true/false"
-msgid "Verified"
-msgstr "overeno"
-
-#: core/transfergrouphandler.cpp:97
-msgid "1 Item"
-msgid_plural "%1 Items"
-msgstr[0] "%1 stavka"
-msgstr[1] "%1 stavke"
-msgstr[2] "%1 stavki"
-msgstr[3] "1 stavka"
-
-#: core/transfergrouphandler.cpp:113 core/transferhandler.cpp:150
-#: ui/transferdetails.cpp:90
-msgid "%1/s"
-msgstr "%1/s"
-
-#: core/transfergrouphandler.cpp:169
-msgctxt "start transfergroup downloads"
-msgid "Start"
-msgstr "Pokreni"
-
-#: core/transfergrouphandler.cpp:175
-msgctxt "stop transfergroup downloads"
-msgid "Stop"
-msgstr "Zaustavi"
-
-#: core/kgetglobaljob.cpp:56
-msgid "KGet is downloading %1 file"
-msgid_plural "KGet is downloading %1 files"
-msgstr[0] "KGet preuzima %1 fajl"
-msgstr[1] "KGet preuzima %1 fajla"
-msgstr[2] "KGet preuzima %1 fajlova"
-msgstr[3] "KGet preuzima %1 fajl"
-
-#: core/kgetkjobadapter.cpp:45
-msgid "KGet Transfer"
-msgstr "KGetova prenos"
-
-#: core/linkimporter.cpp:90
-msgid "Error trying to get %1"
-msgstr "Greška pri pokušaju dobavljanja %1"
-
-# >> @title:column +
-#: core/transfertreemodel.cpp:645
-msgctxt "name of download"
-msgid "Name"
-msgstr "ime"
-
-# >> @title:column +
-#: core/transfertreemodel.cpp:647
-msgctxt "status of download"
-msgid "Status"
-msgstr "stanje"
-
-# >> @title:column +
-#: core/transfertreemodel.cpp:649
-msgctxt "size of download"
-msgid "Size"
-msgstr "veličina"
-
-# >> @title:column +
-#: core/transfertreemodel.cpp:651
-msgctxt "progress of download"
-msgid "Progress"
-msgstr "napredak"
-
-# >> @title:column +
-#: core/transfertreemodel.cpp:653
-msgctxt "speed of download"
-msgid "Speed"
-msgstr "brzina"
-
-# >> @title:column +
-#: core/transfertreemodel.cpp:655
-msgctxt "remaining time of download"
-msgid "Remaining Time"
-msgstr "preostalo vreme"
-
-# >> @title:column
-#: core/filemodel.cpp:283
-msgctxt "file in a filesystem"
-msgid "File"
-msgstr "fajl"
-
-# >> @title:column
-#: core/filemodel.cpp:283
-msgctxt "status of the download"
-msgid "Status"
-msgstr "stanje"
-
-# >> @title:column
-#: core/filemodel.cpp:283
-msgctxt "size of the download"
-msgid "Size"
-msgstr "veličina"
-
-# >> @title:column
-#: core/filemodel.cpp:283
-msgctxt "checksum of a file"
-msgid "Checksum"
-msgstr "kontrolna suma"
-
-# >> @title:column
-#: core/filemodel.cpp:283
-msgctxt "signature of a file"
-msgid "Signature"
-msgstr "potpis"
-
-#: core/signature.cpp:228
-msgid "The key to verify the signature is missing, do you want to download it?"
-msgstr "Nedostaje ključ za overavanje potpisa, želite li da ga preuzmete?"
-
-#: core/signature.cpp:250
-msgid ""
-"The signature could not be verified for %1. See transfer settings for more "
-"information."
-msgstr ""
-"Potpis za %1 ne može da se dobavi. Pogledajte postavke prenosa za više "
-"detalja."
-
-#: core/signature.cpp:251
-msgid "Signature not verified"
-msgstr "Potpis nije overen"
-
-#: core/transfer.cpp:34
-msgid "Downloading...."
-msgstr "Preuzimam..."
-
-#: core/transfer.cpp:228 core/transfer.cpp:247
-#: transfer-plugins/bittorrent/bttransfer.cpp:299
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:85
-#: transfer-plugins/contentfetch/contentfetch.cpp:69
-msgctxt "transfer state: stopped"
-msgid "Stopped"
-msgstr "zaustavljen"
-
-#: core/transferhandler.cpp:137
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:28
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:29
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:30
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:31
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:32
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:33
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:34
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:35
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:60
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:61
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:64
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:65
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:68
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:71
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:74
-#: transfer-plugins/bittorrent/btdetailswidget.cpp:77
-#: ui/transfersviewdelegate.cpp:396
-msgctxt "not available"
-msgid "n/a"
-msgstr "n/d"
-
-#: core/transferhandler.cpp:145 ui/transferdetails.cpp:86
-msgid "Stalled"
-msgstr "Zastoj"
 
 #: core/kget.cpp:118
 msgid "Are you sure that you want to remove the group named %1?"
@@ -874,6 +767,16 @@ msgstr "<p>Započet je sledeći prenos:</p><p style=\"font-size: small;\">%1</p>
 msgid "Download started"
 msgstr "Započeto preuzimanje"
 
+#: core/kget.cpp:1371 core/datasourcefactory.cpp:278
+#: core/datasourcefactory.cpp:623
+#: transfer-plugins/metalink/metalinkhttp.cpp:236
+#: transfer-plugins/metalink/metalinkxml.cpp:192
+#: transfer-plugins/metalink/metalink.cpp:195
+#: ui/metalinkcreator/metalinkcreator.cpp:161
+#: ui/metalinkcreator/metalinkcreator.cpp:178
+msgid "Error"
+msgstr "Greška"
+
 #: core/kget.cpp:1371
 msgid ""
 "<p>There has been an error in the following transfer:</p><p style=\"font-"
@@ -936,6 +839,285 @@ msgstr "<p>Svi prenosi su završeni.</p>"
 msgid "Downloads completed"
 msgstr "Preuzimanja završena"
 
+#: core/transfer.cpp:34
+msgid "Downloading...."
+msgstr "Preuzimam..."
+
+#: core/transfer.cpp:228 core/transfer.cpp:247
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:85
+#: transfer-plugins/contentfetch/contentfetch.cpp:69
+#: transfer-plugins/bittorrent/bttransfer.cpp:299
+msgctxt "transfer state: stopped"
+msgid "Stopped"
+msgstr "zaustavljen"
+
+# >> @title:column
+#: core/filemodel.cpp:283
+msgctxt "file in a filesystem"
+msgid "File"
+msgstr "fajl"
+
+# >> @title:column
+#: core/filemodel.cpp:283
+msgctxt "status of the download"
+msgid "Status"
+msgstr "stanje"
+
+# >> @title:column
+#: core/filemodel.cpp:283
+msgctxt "size of the download"
+msgid "Size"
+msgstr "veličina"
+
+# >> @title:column
+#: core/filemodel.cpp:283
+msgctxt "checksum of a file"
+msgid "Checksum"
+msgstr "kontrolna suma"
+
+# >> @title:column
+#: core/filemodel.cpp:283
+msgctxt "signature of a file"
+msgid "Signature"
+msgstr "potpis"
+
+#: core/linkimporter.cpp:90
+msgid "Error trying to get %1"
+msgstr "Greška pri pokušaju dobavljanja %1"
+
+#: core/keydownloader.cpp:73
+msgid ""
+"No server for downloading keys is specified in settings. Downloading aborted."
+msgstr ""
+"Serveri za preuzimanje ključeva nisu zadati u postavkama. Preuzimanje "
+"obustavljeno."
+
+#: core/keydownloader.cpp:74 core/keydownloader.cpp:94
+msgid "No key server"
+msgstr "Nema servera ključeva"
+
+#: core/keydownloader.cpp:93
+msgid ""
+"No useful key server found, key not downloaded. Add more servers to the "
+"settings or restart KGet and retry downloading."
+msgstr ""
+"Ključ nije preuzet jer nema nijednog upotrebljivog servera ključeva. Dodajte "
+"još servera u postavkama, ili ponovo pokrenite KGet i pokušajte preuzimanje."
+
+#: core/kget.h:357 ui/tray.cpp:41 main.cpp:103 mainwindow.cpp:90
+#: mainwindow.cpp:519
+msgid "KGet"
+msgstr "KGet"
+
+#: core/datasourcefactory.cpp:278
+msgid "Filesize is larger than maximum file size supported by VFAT."
+msgstr "Veličina fajla je veća od najveće koju podržava VFAT."
+
+#: core/datasourcefactory.cpp:623
+msgctxt "A mirror is removed when the file has the wrong download size"
+msgid "%1 removed as it did report a wrong file size."
+msgstr "%1 je uklonjen pošto prijavljuje pogrešnu veličinu fajla."
+
+#: core/transfergrouphandler.cpp:97
+msgid "1 Item"
+msgid_plural "%1 Items"
+msgstr[0] "%1 stavka"
+msgstr[1] "%1 stavke"
+msgstr[2] "%1 stavki"
+msgstr[3] "1 stavka"
+
+#: core/transfergrouphandler.cpp:169
+msgctxt "start transfergroup downloads"
+msgid "Start"
+msgstr "Pokreni"
+
+#: core/transfergrouphandler.cpp:175
+msgctxt "stop transfergroup downloads"
+msgid "Stop"
+msgstr "Zaustavi"
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:50
+msgctxt "transfer state: running"
+msgid "Running...."
+msgstr "U toku..."
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:113
+msgctxt "Transfer State:Finished"
+msgid "Finished"
+msgstr "završen"
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:156
+msgid "Download failed, could not access this URL."
+msgstr "Preuzimanje propalo, ne mogu da pristupim URL‑u."
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:166
+msgid ""
+"This URL does not allow multiple connections,\n"
+"the download will take longer."
+msgstr ""
+"Ovaj URL ne dopušta višestruke veze,\n"
+"preuzimanje će duže trajati."
+
+#: transfer-plugins/metalink/metalinkhttp.cpp:159
+msgid "The download could not be verified, try to repair it?"
+msgstr "Preuzimanje ne može da se overi, pokušati popravljanje?"
+
+#: transfer-plugins/metalink/metalinkhttp.cpp:236
+#: transfer-plugins/metalink/metalinkxml.cpp:192
+#: transfer-plugins/metalink/metalink.cpp:195
+msgid "Download failed, no working URLs were found."
+msgstr "Preuzimanje propalo, nijedan URL ne radi."
+
+#: transfer-plugins/metalink/metalinkxml.cpp:75
+#: transfer-plugins/metalink/metalink.cpp:79
+msgid "Downloading Metalink File...."
+msgstr "Preuzimam fajl metaveze..."
+
+#: transfer-plugins/metalink/metalinkxml.cpp:109
+#: transfer-plugins/metalink/metalink.cpp:113
+msgid ""
+"A newer version of this Metalink might exist, do you want to download it?"
+msgstr ""
+"Možda je dostupna nova verzija ove metaveze, želite li da je preuzmete?"
+
+# >> @title:window
+#: transfer-plugins/metalink/metalinkxml.cpp:110
+#: transfer-plugins/metalink/metalink.cpp:114
+msgid "Redownload Metalink"
+msgstr "Ponovno preuzimanje metaveze"
+
+#: transfer-plugins/metalink/abstractmetalink.cpp:219
+#: transfer-plugins/metalink/metalink.cpp:483
+msgid ""
+"The download could not be verified, do you want to repair (if repairing does "
+"not work the download would be restarted) it?"
+msgstr ""
+"Preuzimanje ne može da se overi, želite li da ga popravite? (Ako ne može da "
+"se popravi, preuzimanje će početi iz početka.)"
+
+#: transfer-plugins/metalink/fileselectiondlg.cpp:32
+msgid "File Selection"
+msgstr "Izbor fajla"
+
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:252
+#: transfer-plugins/kio/transferKio.cpp:274
+msgid "The download (%1) could not be verified. Do you want to repair it?"
+msgstr "Preuzimanje (%1) ne može da se overi. Želite li da ga popravite?"
+
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:255
+#: transfer-plugins/kio/transferKio.cpp:277
+msgid "The download (%1) could not be verified. Do you want to redownload it?"
+msgstr ""
+"Preuzimanje (%1) ne može da se overi. Želite li da ga preuzmete ponovo?"
+
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:259
+#: transfer-plugins/kio/transferKio.cpp:281
+msgid "Verification failed."
+msgstr "Overa propala."
+
+#: transfer-plugins/multisegmentkio/segment.cpp:295
+msgid "Failed to write to the file."
+msgstr "Ne mogu da pišem u fajl."
+
+# >> @title:window
+#: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.cpp:116
+msgctxt "Configure script"
+msgid "Configure script"
+msgstr "Podešavanje skripte"
+
+#: transfer-plugins/contentfetch/contentfetch.cpp:52
+msgctxt "Transfer state: processing script"
+msgid "Processing script...."
+msgstr "Obrađujem skriptu..."
+
+#: transfer-plugins/contentfetch/contentfetch.cpp:83
+msgctxt "Transfer State: Finished"
+msgid "Finished"
+msgstr "Završen"
+
+#: transfer-plugins/contentfetch/contentfetch.cpp:92
+msgctxt "Transfer State: Aborted"
+msgid "Aborted"
+msgstr "Obustavljen"
+
+# >> @title:window
+#: transfer-plugins/contentfetch/dlgscriptediting.cpp:25
+msgid "Add New Script"
+msgstr "Dodavanje nove skripte"
+
+# >> @title:window
+#: transfer-plugins/contentfetch/dlgscriptediting.cpp:37
+msgid "Edit Script"
+msgstr "Uređivanje skripte"
+
+# >> @title:window
+#: transfer-plugins/contentfetch/dlgscriptediting.cpp:48
+msgid "Set Script File"
+msgstr "Zadavanje fajla skripte"
+
+#: transfer-plugins/checksumsearch/checksumsearch.cpp:30
+msgid "Append"
+msgstr "Izgled"
+
+# >? Wtf?
+#: transfer-plugins/checksumsearch/checksumsearch.cpp:30
+msgid "Replace file"
+msgstr "Zameni fajl"
+
+# >? Wtf?
+#: transfer-plugins/checksumsearch/checksumsearch.cpp:30
+msgid "Replace file-ending"
+msgstr "Zameni kraj fajla"
+
+# >> @title:window
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:43
+msgid "Add item"
+msgstr "Dodavanje stavke"
+
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:71
+msgid "%1 would become %2"
+msgstr "%1 bi postalo %2"
+
+# >> @title:column +
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:193
+msgctxt "the string that is used to modify an url"
+msgid "Change string"
+msgstr "Niska izmene"
+
+# >> @title:column +
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:194
+msgctxt "the mode defines how the url should be changed"
+msgid "Change mode"
+msgstr "Režim izmene"
+
+# >> @title:column +
+#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:195
+msgctxt "the type of the checksum e.g. md5"
+msgid "Checksum type"
+msgstr "tip kontrolne sume"
+
+# >> @title:window
+#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:25
+msgid "Insert Engine"
+msgstr "Umetanje pretraživača"
+
+#. i18n: file: transfer-plugins/mirrorsearch/dlgengineediting.ui:16
+#. i18n: ectx: property (text), widget (QLabel, engineNameLabel)
+#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:30 rc.cpp:285
+msgid "Engine name:"
+msgstr "Ime pretraživača:"
+
+#. i18n: file: transfer-plugins/mirrorsearch/dlgengineediting.ui:30
+#. i18n: ectx: property (text), widget (QLabel, urlLabel)
+#. i18n: file: ui/metalinkcreator/commondata.ui:170
+#. i18n: ectx: property (text), widget (QLabel, label_21)
+#. i18n: file: ui/newtransferwidget.ui:24
+#. i18n: ectx: property (text), widget (QLabel, urlLabel)
+#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:31 rc.cpp:288 rc.cpp:590
+#: rc.cpp:866
+msgid "URL:"
+msgstr "URL:"
+
 #: transfer-plugins/bittorrent/bttransferfactory.cpp:34
 msgid "Cannot initialize libktorrent. Torrent support might not work."
 msgstr "Ne mogu da pripremim libktorrent. Torenti možda neće raditi."
@@ -947,6 +1129,109 @@ msgstr "&Napredni detalji"
 #: transfer-plugins/bittorrent/bttransferfactory.cpp:90
 msgid "&Scan Files"
 msgstr "&Ispitaj fajlove"
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:133
+msgid "Downloading Torrent File...."
+msgstr "Preuzimam torent fajl..."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:161
+msgctxt "changing the destination of the file"
+msgid "Changing destination"
+msgstr "menja se odredište"
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:175
+#: transfer-plugins/bittorrent/bttransfer.cpp:278
+msgctxt "transfer state: downloading"
+msgid "Downloading...."
+msgstr "Preuzimam..."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:217
+#: transfer-plugins/bittorrent/bttransfer.cpp:295
+msgctxt "transfer state: finished"
+msgid "Finished"
+msgstr "završen"
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:252
+msgid "Cannot add a tracker to a private torrent."
+msgstr "Ne mogu da dodam pratioca u privatni torent."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:413
+msgid "Torrent file does not exist"
+msgstr "Torent fajl ne postoji"
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:418
+msgid "Analyzing torrent...."
+msgstr "Analiziram torent..."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:430
+msgid "Cannot initialize port..."
+msgstr "Ne mogu da pripremim port..."
+
+#: transfer-plugins/bittorrent/bttransfer.cpp:499
+msgctxt "Transfer status: seeding"
+msgid "Seeding...."
+msgstr "Sejem..."
+
+# >> @title:column
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:210
+msgid "Chunk"
+msgstr "parče"
+
+# >> @title:column
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:211
+msgid "Progress"
+msgstr "napredak"
+
+# >> @title:column
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:212
+msgid "Peer"
+msgstr "vršnjak"
+
+# >> @title:column
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:213
+#: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:309
+msgid "Down Speed"
+msgstr "brzina preuzimanja"
+
+# >! @title:tab
+# >! @title:column
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:214
+#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:64
+msgid "Files"
+msgstr "Fajlovi"
+
+# >> @info:tooltip
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:222
+msgid "Number of the chunk"
+msgstr "Broj parčeta."
+
+# >> @info:tooltip
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:223
+msgid "Download progress of the chunk"
+msgstr "Napredak preuzimanja parčeta."
+
+# >> @info:tooltip
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:224
+msgid "Which peer we are downloading it from"
+msgstr "Od kojeg vršnjak se preuzima."
+
+# >> @info:tooltip
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:225
+msgid "Download speed of the chunk"
+msgstr "Brzina preuzimanja parčeta."
+
+# >> @info:tooltip
+#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:226
+msgid "Which files the chunk is located in"
+msgstr "U kojim fajlovima se parče nalazi."
+
+#: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:94
+msgid "Cannot add the webseed %1, it is already part of the list of webseeds."
+msgstr "Ne mogu da dodam veb sejanje %1 jer je već na spisku veb sejanja."
+
+#: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:111
+msgid "Cannot remove webseed %1, it is part of the torrent."
+msgstr "Ne mogu da uklonim veb sejanje %1 jer je deo torenta."
 
 # >> @title:column
 #: transfer-plugins/bittorrent/advanceddetails/trackermodel.cpp:147
@@ -980,29 +1265,9 @@ msgstr "broj preuzimanja"
 msgid "Next Update"
 msgstr "sledeće ažuriranje"
 
-#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:52
-#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:56
-msgid "Advanced Details for %1"
-msgstr "Napredni detalji za %1"
-
-# >! @title:tab
-# >! @title:column
-#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:64
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:214
-msgid "Files"
-msgstr "Fajlovi"
-
-#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:72
-msgid "Trackers"
-msgstr "Pratioci"
-
-#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:75
-msgid "Webseeds"
-msgstr "Veb sejanja"
-
 # >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:376
 #: transfer-plugins/bittorrent/advanceddetails/torrentfilelistmodel.cpp:69
+#: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:376
 msgid "File"
 msgstr "fajl"
 
@@ -1010,91 +1275,111 @@ msgstr "fajl"
 # >> @item:inlistbox
 #. i18n: file: ui/history/transferhistory.ui:90
 #. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:377
 #: transfer-plugins/bittorrent/advanceddetails/torrentfilelistmodel.cpp:70
-#: rc.cpp:860
+#: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:377
+#: rc.cpp:734
 msgid "Size"
 msgstr "veličina"
 
+#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:32
+#. i18n: ectx: property (text), widget (QTreeWidget, enginesTreeWidget)
+#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:124
+#: ui/linkview/kget_linkview.cpp:94 rc.cpp:276
+msgid "URL"
+msgstr "URL"
+
 # >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:70
+#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:125
+msgid "Speed"
+msgstr "brzina"
+
+# >> @title:column
+#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:126
+#: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:318
+msgid "Downloaded"
+msgstr "preuzeto"
+
+#: transfer-plugins/bittorrent/advanceddetails/peerview.cpp:52
+msgid "Kick Peer"
+msgstr "Izbaci vršnjaka"
+
+#: transfer-plugins/bittorrent/advanceddetails/peerview.cpp:53
+msgid "Ban Peer"
+msgstr "Zabrani vršnjaka"
+
+# >> @title:column
 #: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:66
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:70
 msgid "Priority"
 msgstr "prioritet"
 
 # >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:71
 #: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:67
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:71
 msgid "Preview"
 msgstr "pregled"
 
 # >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:73
 #: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:69
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:73
 #, no-c-format
 msgctxt "Percent of File Downloaded"
 msgid "% Complete"
 msgstr "% završeno"
 
 # >> @item:intext
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:82
 #: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:78
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:82
 msgctxt "Download first"
 msgid "First"
 msgstr "prvo"
 
 # >> @item:intext
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:83
 #: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:79
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:83
 msgctxt "Download last"
 msgid "Last"
 msgstr "poslednje"
 
 # >> @item:intext
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:88
-msgctxt "Download normally(not as first or last)"
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:84
+msgctxt "Download Normal (not as first or last)"
 msgid "Normal"
 msgstr "normalno"
 
 # >> @item:intext
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:140
-msgctxt "preview available"
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:135
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:158
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:163
+msgctxt "Preview available"
 msgid "Available"
 msgstr "dostupan"
 
 # >> @item:intext
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:142
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:165
 #: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:137
 #: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:160
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:142
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:165
 msgctxt "Preview pending"
 msgid "Pending"
 msgstr "nastupa"
 
 # >> @item:intext
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:145
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:168
 #: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:140
 #: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:163
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:145
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:168
 msgctxt "No preview available"
 msgid "No"
 msgstr "nema"
 
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:144
+#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:167
 #: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:150
 #: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:170
 #: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:176
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:144
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:167
 msgid "%1 %"
 msgstr "%1 %"
-
-# >> @item:intext
-#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:163
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:135
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:158
-msgctxt "Preview available"
-msgid "Available"
-msgstr "dostupan"
 
 #: transfer-plugins/bittorrent/advanceddetails/fileview.cpp:66
 msgctxt "Open file"
@@ -1151,53 +1436,30 @@ msgstr[3] ""
 msgid "Select a directory to move the data to."
 msgstr "Izaberite fasciklu za premeštanje podataka."
 
-#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:32
-#. i18n: ectx: property (text), widget (QTreeWidget, enginesTreeWidget)
-#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:124
-#: ui/linkview/kget_linkview.cpp:94 rc.cpp:446
-msgid "URL"
-msgstr "URL"
+#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:52
+#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:56
+msgid "Advanced Details for %1"
+msgstr "Napredni detalji za %1"
 
-# >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:125
-msgid "Speed"
-msgstr "brzina"
+#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:72
+msgid "Trackers"
+msgstr "Pratioci"
 
-# >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/webseedsmodel.cpp:126
-#: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:318
-msgid "Downloaded"
-msgstr "preuzeto"
+#: transfer-plugins/bittorrent/advanceddetails/btadvanceddetailswidget.cpp:75
+msgid "Webseeds"
+msgstr "Veb sejanja"
 
-#: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:94
-msgid "Cannot add the webseed %1, it is already part of the list of webseeds."
-msgstr "Ne mogu da dodam veb sejanje %1 jer je već na spisku veb sejanja."
+# >> @item:intext
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:88
+msgctxt "Download normally(not as first or last)"
+msgid "Normal"
+msgstr "normalno"
 
-#: transfer-plugins/bittorrent/advanceddetails/webseedstab.cpp:111
-msgid "Cannot remove webseed %1, it is part of the torrent."
-msgstr "Ne mogu da uklonim veb sejanje %1 jer je deo torenta."
-
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:21
-#. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
-#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:87 rc.cpp:219
-msgid "Add Tracker"
-msgstr "Dodaj pratilac"
-
-#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:87
-msgid "Enter the URL of the tracker:"
-msgstr "Unesite URL pratioca:"
-
-#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:102
-msgid "There already is a tracker named <b>%1</b>."
-msgstr "Već postoji pratilac po imenu <b>%1</b>."
-
-#: transfer-plugins/bittorrent/advanceddetails/peerview.cpp:52
-msgid "Kick Peer"
-msgstr "Izbaci vršnjaka"
-
-#: transfer-plugins/bittorrent/advanceddetails/peerview.cpp:53
-msgid "Ban Peer"
-msgstr "Zabrani vršnjaka"
+# >> @item:intext
+#: transfer-plugins/bittorrent/advanceddetails/iwfiletreemodel.cpp:140
+msgctxt "preview available"
+msgid "Available"
+msgstr "dostupan"
 
 #: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:152
 msgctxt "Choked"
@@ -1255,12 +1517,6 @@ msgstr "IP adresa"
 #: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:308
 msgid "Client"
 msgstr "klijent"
-
-# >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:309
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:213
-msgid "Down Speed"
-msgstr "brzina preuzimanja"
 
 # >> @title:column
 #: transfer-plugins/bittorrent/advanceddetails/peerviewmodel.cpp:310
@@ -1396,61 +1652,19 @@ msgstr "Da li je vršnjak zainteresovan da preuzima od nas."
 msgid "Whether we are interested in downloading from this peer"
 msgstr "Da li smo mi zainteresovani da preuzimamo od vršnjaka."
 
-# >> @item:intext
-#: transfer-plugins/bittorrent/advanceddetails/iwfilelistmodel.cpp:84
-msgctxt "Download Normal (not as first or last)"
-msgid "Normal"
-msgstr "normalno"
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:21
+#. i18n: ectx: property (text), widget (KPushButton, m_add_tracker)
+#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:87 rc.cpp:305
+msgid "Add Tracker"
+msgstr "Dodaj pratilac"
 
-# >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:210
-msgid "Chunk"
-msgstr "parče"
+#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:87
+msgid "Enter the URL of the tracker:"
+msgstr "Unesite URL pratioca:"
 
-# >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:211
-msgid "Progress"
-msgstr "napredak"
-
-# >> @title:column
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:212
-msgid "Peer"
-msgstr "vršnjak"
-
-# >> @info:tooltip
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:222
-msgid "Number of the chunk"
-msgstr "Broj parčeta."
-
-# >> @info:tooltip
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:223
-msgid "Download progress of the chunk"
-msgstr "Napredak preuzimanja parčeta."
-
-# >> @info:tooltip
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:224
-msgid "Which peer we are downloading it from"
-msgstr "Od kojeg vršnjak se preuzima."
-
-# >> @info:tooltip
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:225
-msgid "Download speed of the chunk"
-msgstr "Brzina preuzimanja parčeta."
-
-# >> @info:tooltip
-#: transfer-plugins/bittorrent/advanceddetails/chunkdownloadmodel.cpp:226
-msgid "Which files the chunk is located in"
-msgstr "U kojim fajlovima se parče nalazi."
-
-#: transfer-plugins/bittorrent/scandlg.cpp:101
-#: transfer-plugins/bittorrent/scandlg.cpp:160
-#: transfer-plugins/bittorrent/scandlg.cpp:243
-msgid "Error scanning data: %1"
-msgstr "Greška pri ispitivanju podataka: %1"
-
-#: transfer-plugins/bittorrent/scandlg.cpp:166
-msgid "Scanning data of <b>%1</b> :"
-msgstr "Ispitujem podatke za <b>%1</b>:"
+#: transfer-plugins/bittorrent/advanceddetails/trackerview.cpp:102
+msgid "There already is a tracker named <b>%1</b>."
+msgstr "Već postoji pratilac po imenu <b>%1</b>."
 
 # >> @title:window
 #: transfer-plugins/bittorrent/btsettingswidget.cpp:38
@@ -1462,265 +1676,20 @@ msgstr "Izbor podrazumevane fascikle za torente"
 msgid "Select a default temporary folder"
 msgstr "Izbor podrazumevane privremene fascikle"
 
-#: transfer-plugins/bittorrent/bttransfer.cpp:133
-msgid "Downloading Torrent File...."
-msgstr "Preuzimam torent fajl..."
+#: transfer-plugins/bittorrent/scandlg.cpp:101
+#: transfer-plugins/bittorrent/scandlg.cpp:160
+#: transfer-plugins/bittorrent/scandlg.cpp:243
+msgid "Error scanning data: %1"
+msgstr "Greška pri ispitivanju podataka: %1"
 
-#: transfer-plugins/bittorrent/bttransfer.cpp:161
-msgctxt "changing the destination of the file"
-msgid "Changing destination"
-msgstr "menja se odredište"
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:175
-#: transfer-plugins/bittorrent/bttransfer.cpp:278
-msgctxt "transfer state: downloading"
-msgid "Downloading...."
-msgstr "Preuzimam..."
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:217
-#: transfer-plugins/bittorrent/bttransfer.cpp:295
-msgctxt "transfer state: finished"
-msgid "Finished"
-msgstr "završen"
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:252
-msgid "Cannot add a tracker to a private torrent."
-msgstr "Ne mogu da dodam pratioca u privatni torent."
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:413
-msgid "Torrent file does not exist"
-msgstr "Torent fajl ne postoji"
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:418
-msgid "Analyzing torrent...."
-msgstr "Analiziram torent..."
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:430
-msgid "Cannot initialize port..."
-msgstr "Ne mogu da pripremim port..."
-
-#: transfer-plugins/bittorrent/bttransfer.cpp:499
-msgctxt "Transfer status: seeding"
-msgid "Seeding...."
-msgstr "Sejem..."
-
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:50
-msgctxt "transfer state: running"
-msgid "Running...."
-msgstr "U toku..."
-
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:113
-msgctxt "Transfer State:Finished"
-msgid "Finished"
-msgstr "završen"
-
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:156
-msgid "Download failed, could not access this URL."
-msgstr "Preuzimanje propalo, ne mogu da pristupim URL‑u."
-
-#: transfer-plugins/mmsthreads/mmstransfer.cpp:166
-msgid ""
-"This URL does not allow multiple connections,\n"
-"the download will take longer."
-msgstr ""
-"Ovaj URL ne dopušta višestruke veze,\n"
-"preuzimanje će duže trajati."
-
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:252
-#: transfer-plugins/kio/transferKio.cpp:274
-msgid "The download (%1) could not be verified. Do you want to repair it?"
-msgstr "Preuzimanje (%1) ne može da se overi. Želite li da ga popravite?"
-
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:255
-#: transfer-plugins/kio/transferKio.cpp:277
-msgid "The download (%1) could not be verified. Do you want to redownload it?"
-msgstr ""
-"Preuzimanje (%1) ne može da se overi. Želite li da ga preuzmete ponovo?"
-
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:259
-#: transfer-plugins/kio/transferKio.cpp:281
-msgid "Verification failed."
-msgstr "Overa propala."
-
-#: transfer-plugins/multisegmentkio/segment.cpp:295
-msgid "Failed to write to the file."
-msgstr "Ne mogu da pišem u fajl."
-
-#: transfer-plugins/contentfetch/contentfetch.cpp:52
-msgctxt "Transfer state: processing script"
-msgid "Processing script...."
-msgstr "Obrađujem skriptu..."
-
-#: transfer-plugins/contentfetch/contentfetch.cpp:83
-msgctxt "Transfer State: Finished"
-msgid "Finished"
-msgstr "Završen"
-
-#: transfer-plugins/contentfetch/contentfetch.cpp:92
-msgctxt "Transfer State: Aborted"
-msgid "Aborted"
-msgstr "Obustavljen"
-
-# >> @title:window
-#: transfer-plugins/contentfetch/dlgscriptediting.cpp:25
-msgid "Add New Script"
-msgstr "Dodavanje nove skripte"
-
-# >> @title:window
-#: transfer-plugins/contentfetch/dlgscriptediting.cpp:37
-msgid "Edit Script"
-msgstr "Uređivanje skripte"
-
-# >> @title:window
-#: transfer-plugins/contentfetch/dlgscriptediting.cpp:48
-msgid "Set Script File"
-msgstr "Zadavanje fajla skripte"
-
-# >> @title:window
-#: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.cpp:116
-msgctxt "Configure script"
-msgid "Configure script"
-msgstr "Podešavanje skripte"
-
-#: transfer-plugins/metalink/metalink.cpp:79
-#: transfer-plugins/metalink/metalinkxml.cpp:75
-msgid "Downloading Metalink File...."
-msgstr "Preuzimam fajl metaveze..."
-
-#: transfer-plugins/metalink/metalink.cpp:113
-#: transfer-plugins/metalink/metalinkxml.cpp:109
-msgid ""
-"A newer version of this Metalink might exist, do you want to download it?"
-msgstr ""
-"Možda je dostupna nova verzija ove metaveze, želite li da je preuzmete?"
-
-# >> @title:window
-#: transfer-plugins/metalink/metalink.cpp:114
-#: transfer-plugins/metalink/metalinkxml.cpp:110
-msgid "Redownload Metalink"
-msgstr "Ponovno preuzimanje metaveze"
-
-#: transfer-plugins/metalink/metalink.cpp:195
-#: transfer-plugins/metalink/metalinkxml.cpp:192
-#: transfer-plugins/metalink/metalinkhttp.cpp:236
-msgid "Download failed, no working URLs were found."
-msgstr "Preuzimanje propalo, nijedan URL ne radi."
-
-#: transfer-plugins/metalink/metalink.cpp:483
-#: transfer-plugins/metalink/abstractmetalink.cpp:219
-msgid ""
-"The download could not be verified, do you want to repair (if repairing does "
-"not work the download would be restarted) it?"
-msgstr ""
-"Preuzimanje ne može da se overi, želite li da ga popravite? (Ako ne može da "
-"se popravi, preuzimanje će početi iz početka.)"
-
-#: transfer-plugins/metalink/fileselectiondlg.cpp:32
-msgid "File Selection"
-msgstr "Izbor fajla"
-
-#: transfer-plugins/metalink/metalinkhttp.cpp:159
-msgid "The download could not be verified, try to repair it?"
-msgstr "Preuzimanje ne može da se overi, pokušati popravljanje?"
-
-# >> @title:window
-#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:25
-msgid "Insert Engine"
-msgstr "Umetanje pretraživača"
-
-#. i18n: file: transfer-plugins/mirrorsearch/dlgengineediting.ui:16
-#. i18n: ectx: property (text), widget (QLabel, engineNameLabel)
-#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:30 rc.cpp:434
-msgid "Engine name:"
-msgstr "Ime pretraživača:"
-
-#. i18n: file: transfer-plugins/mirrorsearch/dlgengineediting.ui:30
-#. i18n: ectx: property (text), widget (QLabel, urlLabel)
-#. i18n: file: ui/newtransferwidget.ui:24
-#. i18n: ectx: property (text), widget (QLabel, urlLabel)
-#. i18n: file: ui/metalinkcreator/commondata.ui:170
-#. i18n: ectx: property (text), widget (QLabel, label_21)
-#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:31 rc.cpp:437 rc.cpp:470
-#: rc.cpp:572
-msgid "URL:"
-msgstr "URL:"
+#: transfer-plugins/bittorrent/scandlg.cpp:166
+msgid "Scanning data of <b>%1</b> :"
+msgstr "Ispitujem podatke za <b>%1</b>:"
 
 #: transfer-plugins/kio/transferKio.cpp:96
 msgctxt "transfer state: connecting"
 msgid "Connecting...."
 msgstr "Povezujem se..."
-
-# >> @title:window
-#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:43
-msgid "Add item"
-msgstr "Dodavanje stavke"
-
-#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:71
-msgid "%1 would become %2"
-msgstr "%1 bi postalo %2"
-
-# >> @title:column +
-#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:193
-msgctxt "the string that is used to modify an url"
-msgid "Change string"
-msgstr "Niska izmene"
-
-# >> @title:column +
-#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:194
-msgctxt "the mode defines how the url should be changed"
-msgid "Change mode"
-msgstr "Režim izmene"
-
-# >> @title:column +
-#: transfer-plugins/checksumsearch/dlgchecksumsearch.cpp:195
-msgctxt "the type of the checksum e.g. md5"
-msgid "Checksum type"
-msgstr "tip kontrolne sume"
-
-#: transfer-plugins/checksumsearch/checksumsearch.cpp:30
-msgid "Append"
-msgstr "Izgled"
-
-# >? Wtf?
-#: transfer-plugins/checksumsearch/checksumsearch.cpp:30
-msgid "Replace file"
-msgstr "Zameni fajl"
-
-# >? Wtf?
-#: transfer-plugins/checksumsearch/checksumsearch.cpp:30
-msgid "Replace file-ending"
-msgstr "Zameni kraj fajla"
-
-#: ui/transfersettingsdialog.cpp:33
-msgid "Transfer Settings for %1"
-msgstr "Postavke prenosa za %1"
-
-#: ui/transfersettingsdialog.cpp:165
-msgid ""
-"Changing the destination did not work, the destination stays unmodified."
-msgstr "Promena odredišta nije uspela, ostaje kakvo jeste."
-
-#: ui/transfersettingsdialog.cpp:165
-msgid "Destination unmodified"
-msgstr "Odredište nije izmenjeno"
-
-# >> @title:window
-#: ui/verificationdialog.cpp:39
-msgid "Add checksum"
-msgstr "Dodavanje kontrolne sume"
-
-#: ui/verificationdialog.cpp:96
-msgid "Transfer Verification for %1"
-msgstr "Overa prenosa za %1"
-
-# >> %1 file name
-#: ui/verificationdialog.cpp:209
-msgid "%1 was successfully verified."
-msgstr "Fajl %1 je uspešno overen."
-
-#: ui/verificationdialog.cpp:210
-msgid "Verification successful"
-msgstr "Overa uspešna"
 
 #: ui/signaturedlg.cpp:37
 msgctxt "trust level"
@@ -1851,17 +1820,8 @@ msgstr ""
 msgid "Feature is not supported, as KGet is not compiled with QPGME support."
 msgstr "Mogućnost nije podržana jer KGet nije kompilovan sa podrškom za GPGME."
 
-#: ui/groupsettingsdialog.cpp:21
-msgid "Group Settings for %1"
-msgstr "Postavke grupe za %1"
-
-# >> @title:window
-#: ui/metalinkcreator/dragdlg.cpp:69
-msgid "Import dropped files"
-msgstr "Uvoz ispuštenih fajlova"
-
-#: ui/metalinkcreator/dragdlg.cpp:92 ui/metalinkcreator/filedlg.cpp:66
-#: ui/metalinkcreator/filedlg.cpp:174
+#: ui/metalinkcreator/filedlg.cpp:66 ui/metalinkcreator/filedlg.cpp:174
+#: ui/metalinkcreator/dragdlg.cpp:92
 msgctxt "comma, to seperate members of a list"
 msgid ","
 msgstr ","
@@ -1881,6 +1841,11 @@ msgstr "Ime fajla već postoji, izaberite neko drugo."
 #: ui/metalinkcreator/filedlg.cpp:133
 msgid "Enter at least one URL."
 msgstr "Unesite bar jedan URL."
+
+# >> @title:window
+#: ui/metalinkcreator/dragdlg.cpp:69
+msgid "Import dropped files"
+msgstr "Uvoz ispuštenih fajlova"
 
 # >> @title:window
 #: ui/metalinkcreator/metalinkcreator.cpp:90
@@ -2000,7 +1965,7 @@ msgstr "ime fajla"
 # >> @title:column
 #. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:37
 #. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
-#: ui/linkview/kget_linkview.cpp:164 rc.cpp:407
+#: ui/linkview/kget_linkview.cpp:164 rc.cpp:192
 msgid "Description"
 msgstr "opis"
 
@@ -2025,7 +1990,7 @@ msgstr "&Izaberi sve filtrirane"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:180
 #. i18n: ectx: property (text), widget (KPushButton, selectAll)
-#: ui/linkview/kget_linkview.cpp:342 rc.cpp:719
+#: ui/linkview/kget_linkview.cpp:342 rc.cpp:671
 msgid "&Select All"
 msgstr "&Izaberi sve"
 
@@ -2035,7 +2000,7 @@ msgstr "&Poništi izbor filtriranih"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:196
 #. i18n: ectx: property (text), widget (KPushButton, deselectAll)
-#: ui/linkview/kget_linkview.cpp:343 rc.cpp:722
+#: ui/linkview/kget_linkview.cpp:343 rc.cpp:674
 msgid "D&eselect All"
 msgstr "&Poništi izbor"
 
@@ -2043,13 +2008,18 @@ msgstr "&Poništi izbor"
 msgid "Filter Column"
 msgstr "Kolona filtriranja"
 
-#: ui/newtransferdialog.cpp:318
-msgid "Select at least one source url."
-msgstr "Izaberite bar jedan izvorni URL."
+#: ui/transfersettingsdialog.cpp:33
+msgid "Transfer Settings for %1"
+msgstr "Postavke prenosa za %1"
 
-#: ui/newtransferdialog.cpp:336
-msgid "Files that exist already in the current folder have been marked."
-msgstr "Fajlovi koji već postoje u tekućoj fascikli su istaknuti."
+#: ui/transfersettingsdialog.cpp:165
+msgid ""
+"Changing the destination did not work, the destination stays unmodified."
+msgstr "Promena odredišta nije uspela, ostaje kakvo jeste."
+
+#: ui/transfersettingsdialog.cpp:165
+msgid "Destination unmodified"
+msgstr "Odredište nije izmenjeno"
 
 #: ui/renamefile.cpp:32
 msgid "Rename File"
@@ -2063,138 +2033,6 @@ msgstr "Preimenuj %1 u:"
 msgid "&Rename"
 msgstr "&Preimenuj"
 
-# >> @title:window
-#: ui/transfersview.cpp:127
-msgid "Select columns"
-msgstr "Izbor kolona"
-
-#: ui/transfersview.cpp:315
-msgid "Transfer Details"
-msgstr "Detalji prenosa"
-
-#: ui/droptarget.cpp:84
-msgctxt "fix position for droptarget"
-msgid "Sticky"
-msgstr "Lepljiv"
-
-# >! @item:inlistbox
-# >! @title:window
-# >! @action:button
-#. i18n: file: conf/dlgadvanced.ui:34
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_AfterFinishAction)
-#: ui/droptarget.cpp:91 mainwindow.cpp:359 rc.cpp:120
-msgid "Quit KGet"
-msgstr "Napusti KGet"
-
-#: ui/droptarget.cpp:224 mainwindow.cpp:1197
-msgid "The dropped file is a KGet Transfer List"
-msgstr "Ispušteni fajl je KGetova lista prenosa"
-
-#: ui/droptarget.cpp:225 mainwindow.cpp:1198
-msgid "&Download"
-msgstr "&Preuzmi"
-
-#: ui/droptarget.cpp:226 mainwindow.cpp:1199
-msgid "&Load transfer list"
-msgstr "&Učitaj listu prenosa"
-
-#: ui/droptarget.cpp:282
-msgid "Show Main Window"
-msgstr "Prikaži glavni prozor"
-
-#: ui/droptarget.cpp:283
-msgid "Hide Main Window"
-msgstr "Sakrij glavni prozor"
-
-#: ui/droptarget.cpp:374
-msgid "Drop Target"
-msgstr "Mesto za spuštanje"
-
-#: ui/droptarget.cpp:375
-msgid "You can drag download links into the drop target."
-msgstr "Možete prevući veze za preuzimanje na mesto za spuštanje."
-
-#: ui/droptarget.cpp:420
-msgctxt "%1 filename, %2 total size, %3 status"
-msgid "%1(%2) %3"
-msgstr "%1 (%2, %3)"
-
-#: ui/droptarget.cpp:426
-msgctxt "%1 filename, %2 percent complete, %3 downloaded out of %4 total size"
-msgid "%1(%2% %3/%4) Speed:%5/s"
-msgstr "%1 (%2%, %3/%4, brzina %5/s)"
-
-#: ui/droptarget.cpp:434
-msgctxt ""
-"%1 filename, %2 percent complete, %3 downloaded out of %4 total size, %5 "
-"status"
-msgid "%1(%2% %3/%4) %5"
-msgstr "%1 (%2%, %3/%4, %5)"
-
-# >> @info:tooltip
-#: ui/droptarget.cpp:448
-msgid "Ready"
-msgstr "Spreman."
-
-#: ui/tray.cpp:45
-msgid "Download Manager"
-msgstr "Menadžer preuzimanja"
-
-#: ui/contextmenu.cpp:118 mainwindow.cpp:198
-msgid "Delete Group"
-msgid_plural "Delete Groups"
-msgstr[0] "Obriši grupe"
-msgstr[1] "Obriši grupe"
-msgstr[2] "Obriši grupe"
-msgstr[3] "Obriši grupu"
-
-#: ui/contextmenu.cpp:122 mainwindow.cpp:204
-msgid "Rename Group..."
-msgid_plural "Rename Groups..."
-msgstr[0] "Preimenuj grupe"
-msgstr[1] "Preimenuj grupe"
-msgstr[2] "Preimenuj grupe"
-msgstr[3] "Preimenuj grupu"
-
-#. i18n: file: ui/mirror/mirroradddlg.ui:72
-#. i18n: ectx: property (specialValueText), widget (KIntNumInput, priority)
-#: ui/mirror/mirrormodel.cpp:214 ui/mirror/mirrormodel.cpp:232 rc.cpp:797
-msgid "not specified"
-msgstr "neodređeno"
-
-# >> @title:column
-#: ui/mirror/mirrormodel.cpp:388
-msgctxt "Mirror as in server, in url"
-msgid "Mirror"
-msgstr "ogledalo"
-
-# >> @title:column
-#: ui/mirror/mirrormodel.cpp:391
-msgctxt "The priority of the mirror"
-msgid "Priority"
-msgstr "prioritet"
-
-# >> @title:column
-#: ui/mirror/mirrormodel.cpp:396
-msgctxt "Number of paralell connections to the mirror"
-msgid "Connections"
-msgstr "povezivanja"
-
-# >> @title:column
-#: ui/mirror/mirrormodel.cpp:398
-msgctxt "Location = country"
-msgid "Location"
-msgstr "lokacija"
-
-# >> @title:window
-#: ui/mirror/mirrorsettings.cpp:53
-msgid "Add mirror"
-msgstr "Dodavanje ogledala"
-
-#: ui/mirror/mirrorsettings.cpp:150
-msgid "Modify the used mirrors"
-msgstr "Izmeni korišćena ogledala"
-
 #: ui/transferdetails.cpp:69
 msgid "Average speed: %1/s"
 msgstr "Prosečna brzina: %1/s"
@@ -2202,6 +2040,80 @@ msgstr "Prosečna brzina: %1/s"
 #: ui/transferdetails.cpp:74
 msgid "%1 of %2"
 msgstr "%1 od %2"
+
+# >> @title:window
+#: ui/verificationdialog.cpp:39
+msgid "Add checksum"
+msgstr "Dodavanje kontrolne sume"
+
+#: ui/verificationdialog.cpp:96
+msgid "Transfer Verification for %1"
+msgstr "Overa prenosa za %1"
+
+# >> %1 file name
+#: ui/verificationdialog.cpp:209
+msgid "%1 was successfully verified."
+msgstr "Fajl %1 je uspešno overen."
+
+#: ui/verificationdialog.cpp:210
+msgid "Verification successful"
+msgstr "Overa uspešna"
+
+# >> @title:group
+#: ui/history/transferhistorycategorizeddelegate.cpp:45
+#: ui/history/transferhistory.cpp:272
+msgid "Today"
+msgstr "Danas"
+
+# >> @title:group
+#: ui/history/transferhistorycategorizeddelegate.cpp:49
+#: ui/history/transferhistory.cpp:273
+msgid "Last week"
+msgstr "Prošla sedmica"
+
+# >> @title:group
+#: ui/history/transferhistorycategorizeddelegate.cpp:53
+msgid "Last Month"
+msgstr "Prošli mesec"
+
+# >> @title:group
+#: ui/history/transferhistorycategorizeddelegate.cpp:57
+#: ui/history/transferhistory.cpp:275
+msgid "A long time ago"
+msgstr "Odavno"
+
+# >> @title:group
+#: ui/history/transferhistorycategorizeddelegate.cpp:77
+msgid "Under 10MiB"
+msgstr "Ispod 10 MiB"
+
+# >> @title:group
+#: ui/history/transferhistorycategorizeddelegate.cpp:80
+msgid "Between 10MiB and 50MiB"
+msgstr "Od 10 do 50 MiB"
+
+# >> @title:group
+#: ui/history/transferhistorycategorizeddelegate.cpp:84
+msgid "Between 50MiB and 100MiB"
+msgstr "Od 50 do 100 MiB"
+
+# >> @title:group
+#: ui/history/transferhistorycategorizeddelegate.cpp:89
+msgid "More than 100MiB"
+msgstr "Više od 100 MiB"
+
+#: ui/history/transferhistoryitemdelegate.cpp:41
+msgid "Download again"
+msgstr "Preuzmi ponovo"
+
+#: ui/history/transferhistoryitemdelegate.cpp:46
+msgctxt "Delete selected history-item"
+msgid "Delete selected"
+msgstr "Obriši izabrano"
+
+#: ui/history/transferhistoryitemdelegate.cpp:51
+msgid "Open file"
+msgstr "Otvori fajl"
 
 #: ui/history/transferhistory.cpp:50
 msgid "Transfer History"
@@ -2277,70 +2189,158 @@ msgid "More than 1GiB"
 msgstr "Više od 1 GiB"
 
 # >> @title:group
-#: ui/history/transferhistory.cpp:272
-#: ui/history/transferhistorycategorizeddelegate.cpp:45
-msgid "Today"
-msgstr "Danas"
-
-# >> @title:group
-#: ui/history/transferhistory.cpp:273
-#: ui/history/transferhistorycategorizeddelegate.cpp:49
-msgid "Last week"
-msgstr "Prošla sedmica"
-
-# >> @title:group
 #: ui/history/transferhistory.cpp:274
 msgid "Last month"
 msgstr "Prošli mesec"
-
-# >> @title:group
-#: ui/history/transferhistory.cpp:275
-#: ui/history/transferhistorycategorizeddelegate.cpp:57
-msgid "A long time ago"
-msgstr "Odavno"
 
 #: ui/history/transferhistory.cpp:295
 msgctxt "the transfer has been finished"
 msgid "Finished"
 msgstr "završen"
 
-#: ui/history/transferhistoryitemdelegate.cpp:41
-msgid "Download again"
-msgstr "Preuzmi ponovo"
+#. i18n: file: ui/mirror/mirroradddlg.ui:72
+#. i18n: ectx: property (specialValueText), widget (KIntNumInput, priority)
+#: ui/mirror/mirrormodel.cpp:214 ui/mirror/mirrormodel.cpp:232 rc.cpp:764
+msgid "not specified"
+msgstr "neodređeno"
 
-#: ui/history/transferhistoryitemdelegate.cpp:46
-msgctxt "Delete selected history-item"
-msgid "Delete selected"
-msgstr "Obriši izabrano"
+# >> @title:column
+#: ui/mirror/mirrormodel.cpp:388
+msgctxt "Mirror as in server, in url"
+msgid "Mirror"
+msgstr "ogledalo"
 
-#: ui/history/transferhistoryitemdelegate.cpp:51
-msgid "Open file"
-msgstr "Otvori fajl"
+# >> @title:column
+#: ui/mirror/mirrormodel.cpp:391
+msgctxt "The priority of the mirror"
+msgid "Priority"
+msgstr "prioritet"
 
-# >> @title:group
-#: ui/history/transferhistorycategorizeddelegate.cpp:53
-msgid "Last Month"
-msgstr "Prošli mesec"
+# >> @title:column
+#: ui/mirror/mirrormodel.cpp:396
+msgctxt "Number of paralell connections to the mirror"
+msgid "Connections"
+msgstr "povezivanja"
 
-# >> @title:group
-#: ui/history/transferhistorycategorizeddelegate.cpp:77
-msgid "Under 10MiB"
-msgstr "Ispod 10 MiB"
+# >> @title:column
+#: ui/mirror/mirrormodel.cpp:398
+msgctxt "Location = country"
+msgid "Location"
+msgstr "lokacija"
 
-# >> @title:group
-#: ui/history/transferhistorycategorizeddelegate.cpp:80
-msgid "Between 10MiB and 50MiB"
-msgstr "Od 10 do 50 MiB"
+# >> @title:window
+#: ui/mirror/mirrorsettings.cpp:53
+msgid "Add mirror"
+msgstr "Dodavanje ogledala"
 
-# >> @title:group
-#: ui/history/transferhistorycategorizeddelegate.cpp:84
-msgid "Between 50MiB and 100MiB"
-msgstr "Od 50 do 100 MiB"
+#: ui/mirror/mirrorsettings.cpp:150
+msgid "Modify the used mirrors"
+msgstr "Izmeni korišćena ogledala"
 
-# >> @title:group
-#: ui/history/transferhistorycategorizeddelegate.cpp:89
-msgid "More than 100MiB"
-msgstr "Više od 100 MiB"
+#: ui/newtransferdialog.cpp:318
+msgid "Select at least one source url."
+msgstr "Izaberite bar jedan izvorni URL."
+
+#: ui/newtransferdialog.cpp:336
+msgid "Files that exist already in the current folder have been marked."
+msgstr "Fajlovi koji već postoje u tekućoj fascikli su istaknuti."
+
+# >> @title:window
+#: ui/transfersview.cpp:137
+msgid "Select columns"
+msgstr "Izbor kolona"
+
+#: ui/transfersview.cpp:325
+msgid "Transfer Details"
+msgstr "Detalji prenosa"
+
+#: ui/droptarget.cpp:84
+msgctxt "fix position for droptarget"
+msgid "Sticky"
+msgstr "Lepljiv"
+
+# >! @item:inlistbox
+# >! @title:window
+# >! @action:button
+#. i18n: file: conf/dlgadvanced.ui:34
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_AfterFinishAction)
+#: ui/droptarget.cpp:91 mainwindow.cpp:359 rc.cpp:21
+msgid "Quit KGet"
+msgstr "Napusti KGet"
+
+#: ui/droptarget.cpp:224 mainwindow.cpp:1197
+msgid "The dropped file is a KGet Transfer List"
+msgstr "Ispušteni fajl je KGetova lista prenosa"
+
+#: ui/droptarget.cpp:225 mainwindow.cpp:1198
+msgid "&Download"
+msgstr "&Preuzmi"
+
+#: ui/droptarget.cpp:226 mainwindow.cpp:1199
+msgid "&Load transfer list"
+msgstr "&Učitaj listu prenosa"
+
+#: ui/droptarget.cpp:282
+msgid "Show Main Window"
+msgstr "Prikaži glavni prozor"
+
+#: ui/droptarget.cpp:283
+msgid "Hide Main Window"
+msgstr "Sakrij glavni prozor"
+
+#: ui/droptarget.cpp:374
+msgid "Drop Target"
+msgstr "Mesto za spuštanje"
+
+#: ui/droptarget.cpp:375
+msgid "You can drag download links into the drop target."
+msgstr "Možete prevući veze za preuzimanje na mesto za spuštanje."
+
+#: ui/droptarget.cpp:420
+msgctxt "%1 filename, %2 total size, %3 status"
+msgid "%1(%2) %3"
+msgstr "%1 (%2, %3)"
+
+#: ui/droptarget.cpp:426
+msgctxt "%1 filename, %2 percent complete, %3 downloaded out of %4 total size"
+msgid "%1(%2% %3/%4) Speed:%5/s"
+msgstr "%1 (%2%, %3/%4, brzina %5/s)"
+
+#: ui/droptarget.cpp:434
+msgctxt ""
+"%1 filename, %2 percent complete, %3 downloaded out of %4 total size, %5 "
+"status"
+msgid "%1(%2% %3/%4) %5"
+msgstr "%1 (%2%, %3/%4, %5)"
+
+# >> @info:tooltip
+#: ui/droptarget.cpp:448
+msgid "Ready"
+msgstr "Spreman."
+
+#: ui/tray.cpp:45
+msgid "Download Manager"
+msgstr "Menadžer preuzimanja"
+
+#: ui/contextmenu.cpp:118 mainwindow.cpp:198
+msgid "Delete Group"
+msgid_plural "Delete Groups"
+msgstr[0] "Obriši grupe"
+msgstr[1] "Obriši grupe"
+msgstr[2] "Obriši grupe"
+msgstr[3] "Obriši grupu"
+
+#: ui/contextmenu.cpp:122 mainwindow.cpp:204
+msgid "Rename Group..."
+msgid_plural "Rename Groups..."
+msgstr[0] "Preimenuj grupe"
+msgstr[1] "Preimenuj grupe"
+msgstr[2] "Preimenuj grupe"
+msgstr[3] "Preimenuj grupu"
+
+#: ui/groupsettingsdialog.cpp:21
+msgid "Group Settings for %1"
+msgstr "Postavke grupe za %1"
 
 #: extensions/webinterface/httpserver.cpp:42
 #: extensions/webinterface/httpserver.cpp:58
@@ -2899,97 +2899,9 @@ msgstr ""
 "interface> i isključite <interface>Menadžer preuzimanja u K‑osvajaču</"
 "interface>.</html>"
 
-#. i18n: file: conf/dlgintegration.ui:17
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KonquerorIntegration)
-#: rc.cpp:3
-msgid "Use as download manager for Konqueror"
-msgstr "Menadžer preuzimanja u K‑osvajaču"
-
-#. i18n: file: conf/dlgintegration.ui:24
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_AutoPaste)
-#: rc.cpp:6
-msgid "Monitor Clipboard for Files to Download"
-msgstr "Prati klipbord za fajlove za preuzimanje"
-
-#. i18n: file: conf/dlgintegration.ui:36
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:9
-msgid "Case sensitive:"
-msgstr "Razlikovanje veličine slova:"
-
-#. i18n: file: conf/verificationpreferences.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ChecksumAutomaticVerification)
-#: rc.cpp:18
-msgid "Automatic checksums verification"
-msgstr "Automatska overa kontrolne sume"
-
-#. i18n: file: conf/verificationpreferences.ui:32
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:21
-msgid "Used checksum:"
-msgstr "Kontrolna suma:"
-
-#. i18n: file: conf/verificationpreferences.ui:51
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_4)
-#: rc.cpp:24
-msgid "Weak (fastest)"
-msgstr "slaba (najbrže)"
-
-#. i18n: file: conf/verificationpreferences.ui:58
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_5)
-#: rc.cpp:27
-msgid "Strong (recommended)"
-msgstr "jaka (preporučeno)"
-
-#. i18n: file: conf/verificationpreferences.ui:65
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_6)
-#: rc.cpp:30
-msgid "Strongest (slowest)"
-msgstr "najjača (najsporije)"
-
-#. i18n: file: conf/verificationpreferences.ui:78
-#. i18n: ectx: property (title), widget (QGroupBox, signatureGroup)
-#. i18n: file: ui/signaturedlg.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, sigGroup)
-#. i18n: file: ui/transfersettingsdialog.ui:176
-#. i18n: ectx: property (text), widget (KPushButton, signature)
-#: rc.cpp:33 rc.cpp:740 rc.cpp:845
-msgid "Signature"
-msgstr "Potpis"
-
-#. i18n: file: conf/verificationpreferences.ui:84
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SignatureAutomaticVerification)
-#: rc.cpp:36
-msgid "Automatic verification"
-msgstr "Automatska overa"
-
-#. i18n: file: conf/verificationpreferences.ui:91
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SignatureAutomaticDownloading)
-#: rc.cpp:39
-msgid "Automatic downloading of missing keys"
-msgstr "Automatsko preuzimanje nedostajućih ključeva"
-
-#. i18n: file: conf/verificationpreferences.ui:114
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:42
-msgid "Keyservers:"
-msgstr "Serveri ključeva:"
-
-#. i18n: file: conf/dlgappearance.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ShowDropTarget)
-#: rc.cpp:45
-msgid "Use Drop Target"
-msgstr "Mesto za spuštanje"
-
-#. i18n: file: conf/dlgappearance.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AnimateDropTarget)
-#: rc.cpp:48
-msgid "Enable animations"
-msgstr "Animacije"
-
 #. i18n: file: conf/dlgwebinterface.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_WebinterfaceEnabled)
-#: rc.cpp:51
+#: rc.cpp:3
 msgid "Enable Web Interface"
 msgstr "Upotreba veb sučelja"
 
@@ -2997,13 +2909,13 @@ msgstr "Upotreba veb sučelja"
 #. i18n: ectx: property (text), widget (QLabel, portLabel)
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:32
 #. i18n: ectx: property (text), widget (QLabel, portLabel)
-#: rc.cpp:54 rc.cpp:272
+#: rc.cpp:6 rc.cpp:344
 msgid "Port:"
 msgstr "Port:"
 
 #. i18n: file: conf/dlgwebinterface.ui:46
 #. i18n: ectx: property (text), widget (QLabel, userLabel)
-#: rc.cpp:57
+#: rc.cpp:9
 msgid "User:"
 msgstr "Korisnik:"
 
@@ -3011,32 +2923,118 @@ msgstr "Korisnik:"
 #. i18n: ectx: property (text), widget (QLabel, passwordLabel)
 #. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:87
 #. i18n: ectx: property (text), widget (QLabel, passwordLabel)
-#: rc.cpp:60 rc.cpp:377
+#: rc.cpp:12 rc.cpp:243
 msgid "Password:"
 msgstr "Lozinka:"
 
+#. i18n: file: conf/dlgadvanced.ui:17
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableSystemTray)
+#: rc.cpp:15
+msgid "Enable system tray icon"
+msgstr "Uključi ikonu u sistemskoj kaseti"
+
+#. i18n: file: conf/dlgadvanced.ui:26
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AfterFinishActionEnabled)
+#: rc.cpp:18
+msgid "Execute action after all downloads have been finished:"
+msgstr "Radnja nakon što se sva preuzimanja završe:"
+
+#. i18n: file: conf/dlgadvanced.ui:42
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:24
+msgid "At startup:"
+msgstr "Pri pokretanju:"
+
+#. i18n: file: conf/dlgadvanced.ui:50
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
+#: rc.cpp:27
+msgid "Restore Download State"
+msgstr "vrati stanje preuzimanja"
+
+#. i18n: file: conf/dlgadvanced.ui:55
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
+#: rc.cpp:30
+msgid "Start All Downloads"
+msgstr "započni sva preuzimanja"
+
+#. i18n: file: conf/dlgadvanced.ui:60
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
+#: rc.cpp:33
+msgid "Stop All Downloads"
+msgstr "zaustavi sva preuzimanja"
+
+#. i18n: file: conf/dlgadvanced.ui:71
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:36
+msgid "History backend:"
+msgstr "Pozadina istorijata:"
+
+#. i18n: file: conf/dlgadvanced.ui:80
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_EnableKUIServerIntegration)
+#: rc.cpp:39
+msgid "Enable KDE Global Progress Tracking"
+msgstr "KDE‑ovo globalno praćenje napretka"
+
+# >> @option:radio Enable KDE global progress tracking
+#. i18n: file: conf/dlgadvanced.ui:92
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExportSingleTransfer)
+#: rc.cpp:42
+msgid "Show every single download "
+msgstr "Za svako pojedinačno preuzimanje"
+
+# >> @option:radio Enable KDE global progress tracking
+#. i18n: file: conf/dlgadvanced.ui:99
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExportGlobalJob)
+#: rc.cpp:45
+msgid "Show overall progress"
+msgstr "Ukupan napredak"
+
+#. i18n: file: conf/dlgadvanced.ui:109
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:48
+msgid "Handle existing Files/Transfers"
+msgstr "Obrada postojećih fajlova i prenosa"
+
+#. i18n: file: conf/dlgadvanced.ui:115
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesAlwaysAsk)
+#: rc.cpp:51
+msgid "Always ask"
+msgstr "Uvek pitaj"
+
+#. i18n: file: conf/dlgadvanced.ui:122
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesAutomaticRename)
+#: rc.cpp:54
+msgid "Automatic rename"
+msgstr "Automatski preimenuj"
+
+#. i18n: file: conf/dlgadvanced.ui:129
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesOverwrite)
+#: rc.cpp:57
+msgid "Overwrite"
+msgstr "Prebriši"
+
 #. i18n: file: conf/dlgnetwork.ui:19
 #. i18n: ectx: property (text), widget (QLabel, lbl_maxnum)
-#: rc.cpp:63
+#: rc.cpp:60
 msgid "Maximum downloads per group:"
 msgstr "Najviše preuzimanja po grupi:"
 
 #. i18n: file: conf/dlgnetwork.ui:26
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, kcfg_MaxConnections)
-#: rc.cpp:66
+#: rc.cpp:63
 msgctxt "no limit for maximum downloads has been set"
 msgid "No limit"
 msgstr "bez ograničenja"
 
 #. i18n: file: conf/dlgnetwork.ui:35
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_SpeedLimit)
-#: rc.cpp:69
+#: rc.cpp:66
 msgid "Speed Limit"
 msgstr "Ograničenje brzine"
 
 #. i18n: file: conf/dlgnetwork.ui:44
 #. i18n: ectx: property (text), widget (QLabel, dllimitlb)
-#: rc.cpp:72
+#: rc.cpp:69
 msgid "Global &download limit:"
 msgstr "Globalno ograničenje &preuzimanja:"
 
@@ -3054,56 +3052,74 @@ msgstr "Globalno ograničenje &preuzimanja:"
 #. i18n: ectx: property (suffix), widget (QSpinBox, uploadSpin)
 #. i18n: file: ui/transfersettingsdialog.ui:74
 #. i18n: ectx: property (suffix), widget (QSpinBox, downloadSpin)
-#: rc.cpp:75 rc.cpp:81 rc.cpp:87 rc.cpp:497 rc.cpp:503 rc.cpp:812 rc.cpp:818
+#: rc.cpp:72 rc.cpp:78 rc.cpp:84 rc.cpp:707 rc.cpp:713 rc.cpp:779 rc.cpp:785
 msgid " KiB/s"
 msgstr "KiB/s"
 
 #. i18n: file: conf/dlgnetwork.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:78
+#: rc.cpp:75
 msgid "Global &upload limit:"
 msgstr "Globalno ograničenje &otpremanja:"
 
 #. i18n: file: conf/dlgnetwork.ui:96
 #. i18n: ectx: property (text), widget (QLabel, lb_per_transfer)
-#: rc.cpp:84
+#: rc.cpp:81
 msgid "Per transfer:"
 msgstr "Po prenosu:"
 
 #. i18n: file: conf/dlgnetwork.ui:119
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_ReconnectOnBroken)
-#: rc.cpp:90
+#: rc.cpp:87
 msgid "Reconnect on Broken Connection"
 msgstr "Ponovno povezivanje pri prekidu veze"
 
 #. i18n: file: conf/dlgnetwork.ui:128
 #. i18n: ectx: property (text), widget (QLabel, lb_retries_2)
-#: rc.cpp:93
+#: rc.cpp:90
 msgid "Number of retries:"
 msgstr "Broj pokušaja:"
 
 #. i18n: file: conf/dlgnetwork.ui:142
 #. i18n: ectx: property (text), widget (QLabel, lb_after_2)
-#: rc.cpp:96
+#: rc.cpp:93
 msgid "Retry after:"
 msgstr "Pokušaj ponovo nakon:"
 
 #. i18n: file: conf/dlgnetwork.ui:149
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_ReconnectDelay)
-#: rc.cpp:99
+#: rc.cpp:96
 msgid " sec"
 msgstr " sek."
+
+#. i18n: file: conf/dlgintegration.ui:17
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KonquerorIntegration)
+#: rc.cpp:99
+msgid "Use as download manager for Konqueror"
+msgstr "Menadžer preuzimanja u K‑osvajaču"
+
+#. i18n: file: conf/dlgintegration.ui:24
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_AutoPaste)
+#: rc.cpp:102
+msgid "Monitor Clipboard for Files to Download"
+msgstr "Prati klipbord za fajlove za preuzimanje"
+
+#. i18n: file: conf/dlgintegration.ui:36
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:105
+msgid "Case sensitive:"
+msgstr "Razlikovanje veličine slova:"
 
 # >> @option:check
 #. i18n: file: conf/dlggroups.ui:17
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DirectoriesAsSuggestion)
-#: rc.cpp:102
+#: rc.cpp:114
 msgid "Use default folders for groups as suggestion"
 msgstr "Podrazumevane fascikle za grupe kao predlozi"
 
 #. i18n: file: conf/dlggroups.ui:24
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AskForDestination)
-#: rc.cpp:105
+#: rc.cpp:117
 msgid "Ask for destination if there are no default folders"
 msgstr "Pitaj za odredište ako nema podrazumevanih fascikli"
 
@@ -3111,233 +3127,321 @@ msgstr "Pitaj za odredište ako nema podrazumevanih fascikli"
 #. i18n: ectx: property (text), widget (KPushButton, rename)
 #. i18n: file: ui/transfersettingsdialog.ui:156
 #. i18n: ectx: property (text), widget (KPushButton, rename)
-#: rc.cpp:108 rc.cpp:839
+#: rc.cpp:120 rc.cpp:806
 msgid "Rename"
 msgstr "Preimenuj"
 
 #. i18n: file: conf/dlggroups.ui:62
 #. i18n: ectx: property (text), widget (KIconButton, selectIcon)
-#: rc.cpp:111
+#: rc.cpp:123
 msgid "Select Icon..."
 msgstr "Izaberi ikonu..."
 
-#. i18n: file: conf/dlgadvanced.ui:17
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableSystemTray)
-#: rc.cpp:114
-msgid "Enable system tray icon"
-msgstr "Uključi ikonu u sistemskoj kaseti"
-
-#. i18n: file: conf/dlgadvanced.ui:26
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AfterFinishActionEnabled)
-#: rc.cpp:117
-msgid "Execute action after all downloads have been finished:"
-msgstr "Radnja nakon što se sva preuzimanja završe:"
-
-#. i18n: file: conf/dlgadvanced.ui:42
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:123
-msgid "At startup:"
-msgstr "Pri pokretanju:"
-
-#. i18n: file: conf/dlgadvanced.ui:50
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
+#. i18n: file: conf/verificationpreferences.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ChecksumAutomaticVerification)
 #: rc.cpp:126
-msgid "Restore Download State"
-msgstr "vrati stanje preuzimanja"
+msgid "Automatic checksums verification"
+msgstr "Automatska overa kontrolne sume"
 
-#. i18n: file: conf/dlgadvanced.ui:55
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
-#: rc.cpp:129
-msgid "Start All Downloads"
-msgstr "započni sva preuzimanja"
-
-#. i18n: file: conf/dlgadvanced.ui:60
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_StartupAction)
-#: rc.cpp:132
-msgid "Stop All Downloads"
-msgstr "zaustavi sva preuzimanja"
-
-#. i18n: file: conf/dlgadvanced.ui:71
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:135
-msgid "History backend:"
-msgstr "Pozadina istorijata:"
-
-#. i18n: file: conf/dlgadvanced.ui:80
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_EnableKUIServerIntegration)
-#: rc.cpp:138
-msgid "Enable KDE Global Progress Tracking"
-msgstr "KDE‑ovo globalno praćenje napretka"
-
-# >> @option:radio Enable KDE global progress tracking
-#. i18n: file: conf/dlgadvanced.ui:92
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExportSingleTransfer)
-#: rc.cpp:141
-msgid "Show every single download "
-msgstr "Za svako pojedinačno preuzimanje"
-
-# >> @option:radio Enable KDE global progress tracking
-#. i18n: file: conf/dlgadvanced.ui:99
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExportGlobalJob)
-#: rc.cpp:144
-msgid "Show overall progress"
-msgstr "Ukupan napredak"
-
-#. i18n: file: conf/dlgadvanced.ui:109
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:147
-msgid "Handle existing Files/Transfers"
-msgstr "Obrada postojećih fajlova i prenosa"
-
-#. i18n: file: conf/dlgadvanced.ui:115
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesAlwaysAsk)
-#: rc.cpp:150
-msgid "Always ask"
-msgstr "Uvek pitaj"
-
-#. i18n: file: conf/dlgadvanced.ui:122
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesAutomaticRename)
-#: rc.cpp:153
-msgid "Automatic rename"
-msgstr "Automatski preimenuj"
-
-#. i18n: file: conf/dlgadvanced.ui:129
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_FilesOverwrite)
-#: rc.cpp:156
-msgid "Overwrite"
-msgstr "Prebriši"
-
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:29
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:159
-msgid "Stats"
-msgstr "Statistika"
-
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:47
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:162
-msgid "Seeders:"
-msgstr "Sejači:"
-
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:60
-#. i18n: ectx: property (text), widget (QLabel, seederLabel)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:86
-#. i18n: ectx: property (text), widget (QLabel, dlSpeedLabel)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:112
-#. i18n: ectx: property (text), widget (QLabel, leecherLabel)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:138
-#. i18n: ectx: property (text), widget (QLabel, ulSpeedLabel)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:170
-#. i18n: ectx: property (text), widget (QLabel, chunksDownloadedLabel)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:184
-#. i18n: ectx: property (text), widget (QLabel, chunksLeftLabel)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:198
-#. i18n: ectx: property (text), widget (QLabel, chunksAllLabel)
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:212
-#. i18n: ectx: property (text), widget (QLabel, chunksExcludedLabel)
-#: rc.cpp:165 rc.cpp:171 rc.cpp:177 rc.cpp:183 rc.cpp:192 rc.cpp:198 rc.cpp:204
-#: rc.cpp:210
-msgid "<n>"
-msgstr "&lt;n&gt;"
-
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:73
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:168
-msgid "Download speed:"
-msgstr "Brzina preuzimanja:"
-
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:99
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:174
-msgid "Leechers:"
-msgstr "Pijavice:"
-
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:125
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:180
-msgid "Upload speed:"
-msgstr "Brzina otpremanja:"
-
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:154
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
-#: rc.cpp:186 rc.cpp:248
-msgid "Chunks"
-msgstr "Parčići"
-
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:163
+#. i18n: file: conf/verificationpreferences.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:95
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:189 rc.cpp:257
-msgid "Downloaded:"
-msgstr "Preuzeto:"
+#: rc.cpp:129
+msgid "Used checksum:"
+msgstr "Kontrolna suma:"
 
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:177
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:195
-msgctxt "chunks left"
-msgid "Left:"
-msgstr "Ostalo:"
+#. i18n: file: conf/verificationpreferences.ui:51
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_4)
+#: rc.cpp:132
+msgid "Weak (fastest)"
+msgstr "slaba (najbrže)"
 
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:191
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:201
-msgctxt "all chunks"
-msgid "All:"
-msgstr "Svi:"
+#. i18n: file: conf/verificationpreferences.ui:58
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_5)
+#: rc.cpp:135
+msgid "Strong (recommended)"
+msgstr "jaka (preporučeno)"
 
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:205
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:131
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
-#: rc.cpp:207 rc.cpp:260
-msgid "Excluded:"
-msgstr "Izuzeto:"
+#. i18n: file: conf/verificationpreferences.ui:65
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_6)
+#: rc.cpp:138
+msgid "Strongest (slowest)"
+msgstr "najjača (najsporije)"
 
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:240
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:213
-msgctxt "source-file"
-msgid "Source:"
-msgstr "Izvor:"
+#. i18n: file: conf/verificationpreferences.ui:78
+#. i18n: ectx: property (title), widget (QGroupBox, signatureGroup)
+#. i18n: file: ui/transfersettingsdialog.ui:176
+#. i18n: ectx: property (text), widget (KPushButton, signature)
+#. i18n: file: ui/signaturedlg.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, sigGroup)
+#: rc.cpp:141 rc.cpp:812 rc.cpp:824
+msgid "Signature"
+msgstr "Potpis"
 
-#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:247
+#. i18n: file: conf/verificationpreferences.ui:84
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SignatureAutomaticVerification)
+#: rc.cpp:144
+msgid "Automatic verification"
+msgstr "Automatska overa"
+
+#. i18n: file: conf/verificationpreferences.ui:91
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SignatureAutomaticDownloading)
+#: rc.cpp:147
+msgid "Automatic downloading of missing keys"
+msgstr "Automatsko preuzimanje nedostajućih ključeva"
+
+#. i18n: file: conf/verificationpreferences.ui:114
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:150
+msgid "Keyservers:"
+msgstr "Serveri ključeva:"
+
+#. i18n: file: conf/dlgappearance.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_ShowDropTarget)
+#: rc.cpp:153
+msgid "Use Drop Target"
+msgstr "Mesto za spuštanje"
+
+#. i18n: file: conf/dlgappearance.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AnimateDropTarget)
+#: rc.cpp:156
+msgid "Enable animations"
+msgstr "Animacije"
+
+#. i18n: file: transfer-plugins/mmsthreads/dlgmms.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:56
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:159 rc.cpp:168 rc.cpp:174
+msgid "Number of connections per URL:"
+msgstr "Broj povezivanja po URL‑u:"
+
+#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:162
+msgid "Number of simultaneous file downloads:"
+msgstr "Broj istovremenih preuzimanja:"
+
+#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:39
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: ui/transferdetailsfrm.ui:44
-#. i18n: ectx: property (text), widget (QLabel, destLabel)
-#: rc.cpp:216 rc.cpp:728
-msgid "Saving to:"
-msgstr "Upisujem u:"
+#: rc.cpp:165
+msgid "Number of mirrors per file:"
+msgstr "Broj ogledala po fajlu:"
 
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:28
-#. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
+#. i18n: file: transfer-plugins/metalink/fileselection.ui:17
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:171
+msgid "Select the files you want to be downloaded."
+msgstr "Izaberite fajlove koje treba preuzeti."
+
+#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:44
+#. i18n: ectx: property (text), widget (QCheckBox, enginesCheckBox)
+#: rc.cpp:177
+msgid "Use search engines"
+msgstr "Koristi pretraživače"
+
+#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:51
+#. i18n: ectx: property (text), widget (QCheckBox, verificationCheckBox)
+#: rc.cpp:180
+msgid "Search for verification information"
+msgstr "Traži podatke za overu"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:16
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:183
+msgid "User Scripts"
+msgstr "Korisničke skripte"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:27
+#. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
+#: rc.cpp:186
+msgid "Path"
+msgstr "putanja"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:32
+#. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
+#: rc.cpp:189
+msgid "RegExp"
+msgstr "regiz"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:60
+#. i18n: ectx: property (text), widget (QPushButton, newScriptButton)
+#: rc.cpp:195
+msgid "New Script...."
+msgstr "Nova skripta..."
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:67
+#. i18n: ectx: property (text), widget (QPushButton, removeScriptButton)
+#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:62
+#. i18n: ectx: property (text), widget (QPushButton, removeEngineBt)
+#: rc.cpp:198 rc.cpp:282
+msgid "Remove"
+msgstr "Ukloni"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:74
+#. i18n: ectx: property (text), widget (QPushButton, editScriptButton)
+#: rc.cpp:201
+msgid "Edit...."
+msgstr "Uredi..."
+
+#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:81
+#. i18n: ectx: property (text), widget (QPushButton, configureScriptButton)
+#: rc.cpp:204
+msgid "Configure...."
+msgstr "Podesi..."
+
+#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:29
+#. i18n: ectx: property (text), widget (QLabel, scriptUrlRegexpLabel)
+#: rc.cpp:207
+msgid "Regexp:"
+msgstr "Regiz:"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:36
+#. i18n: ectx: property (text), widget (QLabel, scriptPathLabel)
+#: rc.cpp:210
+msgid "Path:"
+msgstr "Putanja:"
+
+#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:43
+#. i18n: ectx: property (text), widget (QLabel, scriptDescriptionLabel)
+#. i18n: file: ui/metalinkcreator/commondata.ui:32
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:213 rc.cpp:551
+msgid "Description:"
+msgstr "Opis:"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, fileSettingGroupBox)
+#: rc.cpp:216
+msgid "File Settings"
+msgstr "Postavke fajla"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:25
+#. i18n: ectx: property (text), widget (QLabel, fileNameLabel)
+#. i18n: file: ui/metalinkcreator/filedlg.ui:54
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: rc.cpp:219 rc.cpp:485
+msgid "Filename:"
+msgstr "Ime fajla:"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:33
+#. i18n: ectx: property (text), item, widget (KComboBox, fileNameComboBox)
 #: rc.cpp:222
-msgid "Remove Tracker"
-msgstr "Ukloni pratilac"
+msgid "Use Normalized Name"
+msgstr "normalizovano ime"
 
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:35
-#. i18n: ectx: property (text), widget (KPushButton, m_change_tracker)
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:38
+#. i18n: ectx: property (text), item, widget (KComboBox, fileNameComboBox)
 #: rc.cpp:225
-msgid "Change Tracker"
-msgstr "Promeni pratilac"
+msgid "Use Literal Name"
+msgstr "doslovno ime"
 
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:42
-#. i18n: ectx: property (text), widget (QPushButton, m_scrape)
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:46
+#. i18n: ectx: property (text), widget (QLabel, qualityLabel)
 #: rc.cpp:228
-msgid "Update Trackers"
-msgstr "Ažuriraj pratioce"
+msgid "Quality:"
+msgstr "Kvalitet:"
 
-#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:62
-#. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:54
+#. i18n: ectx: property (text), item, widget (KComboBox, qualityComboBox)
 #: rc.cpp:231
-msgid "Restore Defaults"
-msgstr "Vrati podrazumevano"
+msgid "Best Quality (.mp4)"
+msgstr "najbolji (MP4)"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:59
+#. i18n: ectx: property (text), item, widget (KComboBox, qualityComboBox)
+#: rc.cpp:234
+msgid "Normal Quality (.flv)"
+msgstr "normalan (FLV)"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:70
+#. i18n: ectx: property (toolTip), widget (QGroupBox, loginGroupBox)
+#: rc.cpp:237
+msgid ""
+"Provide login info of your YouTube account in order to access restricted "
+"media."
+msgstr ""
+"Zadajte prijavne podatke svog naloga na YouTubeu da biste pristupili "
+"ograničenim sadržajima."
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:73
+#. i18n: ectx: property (title), widget (QGroupBox, loginGroupBox)
+#: rc.cpp:240
+msgid "Login Info"
+msgstr "Prijavni podaci"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:101
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: rc.cpp:246
+msgid "Username:"
+msgstr "Korisničko ime:"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:113
+#. i18n: ectx: property (toolTip), widget (QCheckBox, useNetrcCheck)
+#: rc.cpp:249
+msgid ".netrc must have a hostname called 'youtube'."
+msgstr ""
+"<html><filename>.netrc</filename> mora da sadrži ime domaćina "
+"<icode>youtube</icode>.</html>"
+
+#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:116
+#. i18n: ectx: property (text), widget (QCheckBox, useNetrcCheck)
+#: rc.cpp:252
+msgid "User .netrc file"
+msgstr "Korisnikov .netrc fajl"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:19
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: rc.cpp:255
+msgid "Change string:"
+msgstr "Niska izmene:"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:33
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:258
+msgid "Mode:"
+msgstr "Režim:"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:43
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:261
+msgid "Checksum type:"
+msgstr "Tip kontrolne sume:"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:77
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:264
+msgid "Result:"
+msgstr "Rezultat:"
+
+#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:84
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:267
+msgid "label"
+msgstr "etiketa"
+
+#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:16
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:270
+msgid "Search Engines"
+msgstr "Pretraživači"
+
+#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:27
+#. i18n: ectx: property (text), widget (QTreeWidget, enginesTreeWidget)
+#: rc.cpp:273
+msgid "Engine Name"
+msgstr "ime pretraživača"
+
+#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:55
+#. i18n: ectx: property (text), widget (QPushButton, newEngineBt)
+#: rc.cpp:279
+msgid "New Engine..."
+msgstr "Novi pretraživač..."
 
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/webseedstab.ui:21
 #. i18n: ectx: property (toolTip), widget (KLineEdit, m_webseed)
-#: rc.cpp:234
+#: rc.cpp:291
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
 "\">\n"
@@ -3360,43 +3464,91 @@ msgstr ""
 
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/webseedstab.ui:28
 #. i18n: ectx: property (text), widget (QPushButton, m_add)
-#: rc.cpp:242
+#: rc.cpp:299
 msgid "Add Webseed"
 msgstr "Dodaj veb sejanje"
 
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/webseedstab.ui:50
 #. i18n: ectx: property (text), widget (QPushButton, m_remove)
-#: rc.cpp:245
+#: rc.cpp:302
 msgid "Remove Webseed"
 msgstr "Ukloni veb sejanje"
 
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:28
+#. i18n: ectx: property (text), widget (KPushButton, m_remove_tracker)
+#: rc.cpp:308
+msgid "Remove Tracker"
+msgstr "Ukloni pratilac"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:35
+#. i18n: ectx: property (text), widget (KPushButton, m_change_tracker)
+#: rc.cpp:311
+msgid "Change Tracker"
+msgstr "Promeni pratilac"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:42
+#. i18n: ectx: property (text), widget (QPushButton, m_scrape)
+#: rc.cpp:314
+msgid "Update Trackers"
+msgstr "Ažuriraj pratioce"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/trackerview.ui:62
+#. i18n: ectx: property (text), widget (KPushButton, m_restore_defaults)
+#: rc.cpp:317
+msgid "Restore Defaults"
+msgstr "Vrati podrazumevano"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, ChunkDownloadView)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:154
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:320 rc.cpp:437
+msgid "Chunks"
+msgstr "Parčići"
+
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:23
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:251
+#: rc.cpp:323
 msgid "Total:"
 msgstr "Ukupno:"
 
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:59
 #. i18n: ectx: property (text), widget (QLabel, textLabel5)
-#: rc.cpp:254
+#: rc.cpp:326
 msgid "Currently downloading:"
 msgstr "Trenutno preuzimam:"
 
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:95
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:163
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:329 rc.cpp:440
+msgid "Downloaded:"
+msgstr "Preuzeto:"
+
+#. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:131
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_4)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:205
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:332 rc.cpp:458
+msgid "Excluded:"
+msgstr "Izuzeto:"
+
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:167
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2)
-#: rc.cpp:263
+#: rc.cpp:335
 msgid "Left:"
 msgstr "Preostalo:"
 
 #. i18n: file: transfer-plugins/bittorrent/advanceddetails/chunkdownloadview.ui:203
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_8)
-#: rc.cpp:266
+#: rc.cpp:338
 msgid "Size:"
 msgstr "Veličina:"
 
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:49
 #. i18n: ectx: property (text), widget (QLabel, uploadLimitLabel)
-#: rc.cpp:275
+#: rc.cpp:347
 msgid "Upload limit per transfer:"
 msgstr "Ograničenje otpremanja po prenosu:"
 
@@ -3404,7 +3556,7 @@ msgstr "Ograničenje otpremanja po prenosu:"
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, uploadBox)
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:76
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadBox)
-#: rc.cpp:278 rc.cpp:287
+#: rc.cpp:350 rc.cpp:359
 msgid "No Limit"
 msgstr "bez ograničenja"
 
@@ -3412,73 +3564,73 @@ msgstr "bez ograničenja"
 #. i18n: ectx: property (suffix), widget (QSpinBox, uploadBox)
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:79
 #. i18n: ectx: property (suffix), widget (QSpinBox, downloadBox)
-#: rc.cpp:281 rc.cpp:290
+#: rc.cpp:353 rc.cpp:362
 msgid "KiB"
 msgstr "KiB"
 
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:69
 #. i18n: ectx: property (text), widget (QLabel, downloadLabel)
-#: rc.cpp:284
+#: rc.cpp:356
 msgid "Download limit per transfer:"
 msgstr "Ograničenje preuzimanja po prenosu:"
 
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:89
 #. i18n: ectx: property (text), widget (QCheckBox, utpBox)
-#: rc.cpp:293
+#: rc.cpp:365
 msgid "Enable UTP protocol"
 msgstr "Uključi protokol UTP"
 
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:105
 #. i18n: ectx: property (title), widget (QGroupBox, folderGroupBox)
-#: rc.cpp:296
+#: rc.cpp:368
 msgid "Folders"
 msgstr "Fascikle"
 
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:117
 #. i18n: ectx: property (text), widget (QLabel, torrentFolderLabel)
-#: rc.cpp:299
+#: rc.cpp:371
 msgid "Default torrent folder:"
 msgstr "Podrazumevana fascikla za torente:"
 
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:137
 #. i18n: ectx: property (text), widget (QLabel, tempFolderLabel)
-#: rc.cpp:302
+#: rc.cpp:374
 msgid "Default temporary folder:"
 msgstr "Podrazumevana privremena fascikla:"
 
 #. i18n: file: transfer-plugins/bittorrent/btsettingswidget.ui:154
 #. i18n: ectx: property (text), widget (QCheckBox, preallocBox)
-#: rc.cpp:305
+#: rc.cpp:377
 msgid "Pre-allocate disk space"
 msgstr "Rezerviši prostor na disku"
 
 #. i18n: file: transfer-plugins/bittorrent/scandlg.ui:16
 #. i18n: ectx: property (text), widget (QLabel, torrent_label)
-#: rc.cpp:308
+#: rc.cpp:380
 msgid "Scanning data of torrent:"
 msgstr "Ispitujem podatke torenta:"
 
 #. i18n: file: transfer-plugins/bittorrent/scandlg.ui:30
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:311
+#: rc.cpp:383
 msgid "Number of chunks found:"
 msgstr "Broj nađenih parčića:"
 
 #. i18n: file: transfer-plugins/bittorrent/scandlg.ui:40
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:314
+#: rc.cpp:386
 msgid "Number of chunks failed:"
 msgstr "Broj neuspelih parčića:"
 
 #. i18n: file: transfer-plugins/bittorrent/scandlg.ui:50
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:317
+#: rc.cpp:389
 msgid "Number of chunks not downloaded:"
 msgstr "Broj nepreuzetih parčića:"
 
 #. i18n: file: transfer-plugins/bittorrent/scandlg.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:320
+#: rc.cpp:392
 msgid "Number of chunks downloaded:"
 msgstr "Broj preuzetih parčića:"
 
@@ -3490,486 +3642,186 @@ msgstr "Broj preuzetih parčića:"
 #. i18n: ectx: property (text), widget (QLabel, chunks_not_downloaded)
 #. i18n: file: transfer-plugins/bittorrent/scandlg.ui:137
 #. i18n: ectx: property (text), widget (QLabel, chunks_downloaded)
-#: rc.cpp:323 rc.cpp:326 rc.cpp:329 rc.cpp:332
+#: rc.cpp:395 rc.cpp:398 rc.cpp:401 rc.cpp:404
 msgid "0"
 msgstr "0"
 
 #. i18n: file: transfer-plugins/bittorrent/scandlg.ui:183
 #. i18n: ectx: property (text), widget (KPushButton, cancel)
-#: rc.cpp:335
+#: rc.cpp:407
 msgid "Cancel"
 msgstr "Otkaži"
 
-#. i18n: file: transfer-plugins/mmsthreads/dlgmms.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:56
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:338 rc.cpp:341 rc.cpp:428
-msgid "Number of connections per URL:"
-msgstr "Broj povezivanja po URL‑u:"
-
-#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:44
-#. i18n: ectx: property (text), widget (QCheckBox, enginesCheckBox)
-#: rc.cpp:344
-msgid "Use search engines"
-msgstr "Koristi pretraživače"
-
-#. i18n: file: transfer-plugins/multisegmentkio/dlgmultisegkio.ui:51
-#. i18n: ectx: property (text), widget (QCheckBox, verificationCheckBox)
-#: rc.cpp:347
-msgid "Search for verification information"
-msgstr "Traži podatke za overu"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, fileSettingGroupBox)
-#: rc.cpp:350
-msgid "File Settings"
-msgstr "Postavke fajla"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:25
-#. i18n: ectx: property (text), widget (QLabel, fileNameLabel)
-#. i18n: file: ui/metalinkcreator/filedlg.ui:54
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:353 rc.cpp:680
-msgid "Filename:"
-msgstr "Ime fajla:"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:33
-#. i18n: ectx: property (text), item, widget (KComboBox, fileNameComboBox)
-#: rc.cpp:356
-msgid "Use Normalized Name"
-msgstr "normalizovano ime"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:38
-#. i18n: ectx: property (text), item, widget (KComboBox, fileNameComboBox)
-#: rc.cpp:359
-msgid "Use Literal Name"
-msgstr "doslovno ime"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:46
-#. i18n: ectx: property (text), widget (QLabel, qualityLabel)
-#: rc.cpp:362
-msgid "Quality:"
-msgstr "Kvalitet:"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:54
-#. i18n: ectx: property (text), item, widget (KComboBox, qualityComboBox)
-#: rc.cpp:365
-msgid "Best Quality (.mp4)"
-msgstr "najbolji (MP4)"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:59
-#. i18n: ectx: property (text), item, widget (KComboBox, qualityComboBox)
-#: rc.cpp:368
-msgid "Normal Quality (.flv)"
-msgstr "normalan (FLV)"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:70
-#. i18n: ectx: property (toolTip), widget (QGroupBox, loginGroupBox)
-#: rc.cpp:371
-msgid ""
-"Provide login info of your YouTube account in order to access restricted "
-"media."
-msgstr ""
-"Zadajte prijavne podatke svog naloga na YouTubeu da biste pristupili "
-"ograničenim sadržajima."
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:73
-#. i18n: ectx: property (title), widget (QGroupBox, loginGroupBox)
-#: rc.cpp:374
-msgid "Login Info"
-msgstr "Prijavni podaci"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:101
-#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
-#: rc.cpp:380
-msgid "Username:"
-msgstr "Korisničko ime:"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:113
-#. i18n: ectx: property (toolTip), widget (QCheckBox, useNetrcCheck)
-#: rc.cpp:383
-msgid ".netrc must have a hostname called 'youtube'."
-msgstr ""
-"<html><filename>.netrc</filename> mora da sadrži ime domaćina "
-"<icode>youtube</icode>.</html>"
-
-#. i18n: file: transfer-plugins/contentfetch/scripts/youtubedl/youtube_option.ui:116
-#. i18n: ectx: property (text), widget (QCheckBox, useNetrcCheck)
-#: rc.cpp:386
-msgid "User .netrc file"
-msgstr "Korisnikov .netrc fajl"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:29
-#. i18n: ectx: property (text), widget (QLabel, scriptUrlRegexpLabel)
-#: rc.cpp:389
-msgid "Regexp:"
-msgstr "Regiz:"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:36
-#. i18n: ectx: property (text), widget (QLabel, scriptPathLabel)
-#: rc.cpp:392
-msgid "Path:"
-msgstr "Putanja:"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgscriptediting.ui:43
-#. i18n: ectx: property (text), widget (QLabel, scriptDescriptionLabel)
-#. i18n: file: ui/metalinkcreator/commondata.ui:32
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:395 rc.cpp:533
-msgid "Description:"
-msgstr "Opis:"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:16
-#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:398
-msgid "User Scripts"
-msgstr "Korisničke skripte"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:27
-#. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
-#: rc.cpp:401
-msgid "Path"
-msgstr "putanja"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:32
-#. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
-#: rc.cpp:404
-msgid "RegExp"
-msgstr "regiz"
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:60
-#. i18n: ectx: property (text), widget (QPushButton, newScriptButton)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:29
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: rc.cpp:410
-msgid "New Script...."
-msgstr "Nova skripta..."
+msgid "Stats"
+msgstr "Statistika"
 
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:67
-#. i18n: ectx: property (text), widget (QPushButton, removeScriptButton)
-#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:62
-#. i18n: ectx: property (text), widget (QPushButton, removeEngineBt)
-#: rc.cpp:413 rc.cpp:452
-msgid "Remove"
-msgstr "Ukloni"
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:47
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: rc.cpp:413
+msgid "Seeders:"
+msgstr "Sejači:"
 
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:74
-#. i18n: ectx: property (text), widget (QPushButton, editScriptButton)
-#: rc.cpp:416
-msgid "Edit...."
-msgstr "Uredi..."
-
-#. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:81
-#. i18n: ectx: property (text), widget (QPushButton, configureScriptButton)
-#: rc.cpp:419
-msgid "Configure...."
-msgstr "Podesi..."
-
-#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:422
-msgid "Number of simultaneous file downloads:"
-msgstr "Broj istovremenih preuzimanja:"
-
-#. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:425
-msgid "Number of mirrors per file:"
-msgstr "Broj ogledala po fajlu:"
-
-#. i18n: file: transfer-plugins/metalink/fileselection.ui:17
-#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:431
-msgid "Select the files you want to be downloaded."
-msgstr "Izaberite fajlove koje treba preuzeti."
-
-#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:16
-#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:440
-msgid "Search Engines"
-msgstr "Pretraživači"
-
-#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:27
-#. i18n: ectx: property (text), widget (QTreeWidget, enginesTreeWidget)
-#: rc.cpp:443
-msgid "Engine Name"
-msgstr "ime pretraživača"
-
-#. i18n: file: transfer-plugins/mirrorsearch/dlgmirrorsearch.ui:55
-#. i18n: ectx: property (text), widget (QPushButton, newEngineBt)
-#: rc.cpp:449
-msgid "New Engine..."
-msgstr "Novi pretraživač..."
-
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:19
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: rc.cpp:455
-msgid "Change string:"
-msgstr "Niska izmene:"
-
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:33
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:458
-msgid "Mode:"
-msgstr "Režim:"
-
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:43
-#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:60
+#. i18n: ectx: property (text), widget (QLabel, seederLabel)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:86
+#. i18n: ectx: property (text), widget (QLabel, dlSpeedLabel)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:112
+#. i18n: ectx: property (text), widget (QLabel, leecherLabel)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:138
+#. i18n: ectx: property (text), widget (QLabel, ulSpeedLabel)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:170
+#. i18n: ectx: property (text), widget (QLabel, chunksDownloadedLabel)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:184
+#. i18n: ectx: property (text), widget (QLabel, chunksLeftLabel)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:198
+#. i18n: ectx: property (text), widget (QLabel, chunksAllLabel)
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:212
+#. i18n: ectx: property (text), widget (QLabel, chunksExcludedLabel)
+#: rc.cpp:416 rc.cpp:422 rc.cpp:428 rc.cpp:434 rc.cpp:443 rc.cpp:449 rc.cpp:455
 #: rc.cpp:461
-msgid "Checksum type:"
-msgstr "Tip kontrolne sume:"
+msgid "<n>"
+msgstr "&lt;n&gt;"
 
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:77
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:464
-msgid "Result:"
-msgstr "Rezultat:"
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:73
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: rc.cpp:419
+msgid "Download speed:"
+msgstr "Brzina preuzimanja:"
 
-#. i18n: file: transfer-plugins/checksumsearch/checksumsearchadddlg.ui:84
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:467
-msgid "label"
-msgstr "etiketa"
-
-#. i18n: file: ui/newtransferwidget.ui:31
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:473
-msgid "Destination:"
-msgstr "Odredište:"
-
-#. i18n: file: ui/newtransferwidget.ui:41
-#. i18n: ectx: property (text), widget (QLabel, groupLabel)
-#: rc.cpp:476
-msgid "Transfer group:"
-msgstr "Grupa prenosa:"
-
-#. i18n: file: ui/groupsettingsdialog.ui:32
-#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:479
-msgid "Group Settings"
-msgstr "Postavke grupa"
-
-#. i18n: file: ui/groupsettingsdialog.ui:44
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:482
-msgid "Default &folder:"
-msgstr "Podrazumevana &fascikla:"
-
-#. i18n: file: ui/groupsettingsdialog.ui:61
-#. i18n: ectx: property (toolTip), widget (QLabel, label_2)
-#: rc.cpp:485
-msgid "Moves all transfers with the regular expression to this group"
-msgstr "Premešta sve prenose po regularnom izrazu u ovu grupu."
-
-#. i18n: file: ui/groupsettingsdialog.ui:64
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:488
-msgid "Regular &expression:"
-msgstr "&Regularni izraz:"
-
-#. i18n: file: ui/groupsettingsdialog.ui:74
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, regExpEdit)
-#: rc.cpp:491
-msgid "*movies*"
-msgstr "*film*"
-
-#. i18n: file: ui/groupsettingsdialog.ui:87
-#. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadBox)
-#. i18n: file: ui/groupsettingsdialog.ui:106
-#. i18n: ectx: property (specialValueText), widget (QSpinBox, uploadBox)
-#. i18n: file: ui/transfersettingsdialog.ui:55
-#. i18n: ectx: property (specialValueText), widget (QSpinBox, uploadSpin)
-#. i18n: file: ui/transfersettingsdialog.ui:71
-#. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadSpin)
-#. i18n: file: ui/transfersettingsdialog.ui:87
-#. i18n: ectx: property (specialValueText), widget (QDoubleSpinBox, ratioSpin)
-#: rc.cpp:494 rc.cpp:500 rc.cpp:809 rc.cpp:815 rc.cpp:821
-msgctxt "No value has been set"
-msgid "Not set"
-msgstr "neodređeno"
-
-#. i18n: file: ui/groupsettingsdialog.ui:119
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:506
-msgid "Maximum &download speed:"
-msgstr "Najveća brzina &preuzimanja:"
-
-#. i18n: file: ui/groupsettingsdialog.ui:129
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:509
-msgid "Maximum &upload speed:"
-msgstr "Najveća brzina &otpremanja:"
-
-#. i18n: file: ui/verificationdialog.ui:42
-#. i18n: ectx: property (toolTip), widget (KPushButton, verify)
-#: rc.cpp:512
-msgid "Verify the finished download with the selected checksum."
-msgstr "Overite završeno preuzimanje izabranom kontrolnom sumom."
-
-#. i18n: file: ui/verificationdialog.ui:45
-#. i18n: ectx: property (text), widget (KPushButton, verify)
-#: rc.cpp:515
-msgid "&Verify"
-msgstr "&Overi"
-
-#. i18n: file: ui/verificationdialog.ui:71
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:518
-msgid "Verifying:"
-msgstr "Overavam:"
-
-#. i18n: file: ui/verificationadddlg.ui:19
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:521
-msgctxt "hash type as in md5t, sha1 etc."
-msgid "Hash type:"
-msgstr "Tip disperzije:"
-
-#. i18n: file: ui/verificationadddlg.ui:26
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:524
-msgctxt "hash as a hash of type md5, sha1 etc."
-msgid "Hash:"
-msgstr "Disperzija:"
-
-#. i18n: file: ui/verificationadddlg.ui:33
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, newHash)
-#: rc.cpp:527
-msgid "Enter a hash key"
-msgstr "Unesite ključ disperzije"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:22
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:530
-msgid "Identity"
-msgstr "Identitet"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:46
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:536
-msgid "Version:"
-msgstr "Opis:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:56
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:539
-msgid "Logo:"
-msgstr "Logotip:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:63
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, logo)
-#: rc.cpp:542
-msgid "URL to the logo"
-msgstr "URL logotipa"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:73
-#. i18n: ectx: property (toolTip), widget (QLabel, label_13)
-#: rc.cpp:545
-msgid "The language of the file"
-msgstr "Jezik fajla"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:76
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:548
-msgid "Language:"
-msgstr "Jezik:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:86
-#. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:551
-msgid "Operating systems:"
-msgstr "Operativni sistemi:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:93
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, os)
-#: rc.cpp:554
-msgid "Supported OSes, separated with commas"
-msgstr "Podržani OS‑ovi, razdvojeni zapetama"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:103
-#. i18n: ectx: property (text), widget (QLabel, label_18)
-#: rc.cpp:557
-msgid "Copyright:"
-msgstr "Autorsko pravo:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:141
-#. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:560
-msgid "Publisher:"
-msgstr "Izdavač:"
-
-#. i18n: file: ui/metalinkcreator/commondata.ui:150
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:99
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:563
-msgid "Name:"
-msgstr "Ime:"
+#: rc.cpp:425
+msgid "Leechers:"
+msgstr "Pijavice:"
 
-#. i18n: file: ui/metalinkcreator/commondata.ui:157
-#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_name)
-#. i18n: file: ui/metalinkcreator/commondata.ui:177
-#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_url)
-#: rc.cpp:566 rc.cpp:575
-msgid "publisher"
-msgstr "izdavač"
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:125
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: rc.cpp:431
+msgid "Upload speed:"
+msgstr "Brzina otpremanja:"
 
-#. i18n: file: ui/metalinkcreator/commondata.ui:160
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_name)
-#: rc.cpp:569
-msgid "Name of the publisher"
-msgstr "Ime izdavača"
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:177
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:446
+msgctxt "chunks left"
+msgid "Left:"
+msgstr "Ostalo:"
 
-#. i18n: file: ui/metalinkcreator/commondata.ui:180
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_url)
-#: rc.cpp:578
-msgid "URL to the publisher"
-msgstr "URL do izdavača"
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:191
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:452
+msgctxt "all chunks"
+msgid "All:"
+msgstr "Svi:"
 
-#. i18n: file: ui/metalinkcreator/files.ui:26
-#. i18n: ectx: property (toolTip), widget (KPushButton, add_local_file)
-#: rc.cpp:581
-msgid "Adds local files adding a lot information automatically."
-msgstr "Dodaje lokalne fajlove dodajući automatski mnogo podataka."
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:240
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: rc.cpp:464
+msgctxt "source-file"
+msgid "Source:"
+msgstr "Izvor:"
 
-#. i18n: file: ui/metalinkcreator/files.ui:29
-#. i18n: ectx: property (text), widget (KPushButton, add_local_file)
-#: rc.cpp:584
-msgid "Add local files"
-msgstr "Dodaj lokalne fajlove"
+#. i18n: file: transfer-plugins/bittorrent/btdetailswidgetfrm.ui:247
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: ui/transferdetailsfrm.ui:44
+#. i18n: ectx: property (text), widget (QLabel, destLabel)
+#: rc.cpp:467 rc.cpp:470
+msgid "Saving to:"
+msgstr "Upisujem u:"
 
-#. i18n: file: ui/metalinkcreator/files.ui:66
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:587
-msgid "Adding local files..."
-msgstr "Dodajem lokalne fajlove..."
+#. i18n: file: ui/transferdetailsfrm.ui:51
+#. i18n: ectx: property (text), widget (QLabel, sourceLabel)
+#: rc.cpp:473
+msgctxt "@label transfer source"
+msgid "Source:"
+msgstr "Izvor:"
+
+#. i18n: file: ui/transferdetailsfrm.ui:114
+#. i18n: ectx: property (text), widget (QLabel, statusLabel)
+#: rc.cpp:476
+msgid "Status:"
+msgstr "Stanje:"
+
+#. i18n: file: ui/transferdetailsfrm.ui:165
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:479
+msgid "Remaining Time:"
+msgstr "Preostalo vreme:"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:24
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: rc.cpp:482
+msgid "Required"
+msgstr "Neophodno"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:95
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: rc.cpp:488
+msgid "Used Mirrors:"
+msgstr "Ogledala:"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:103
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: rc.cpp:491
+msgid "Recommended"
+msgstr "Preporučeno"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:111
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: rc.cpp:494
+msgid "File size (in bytes):"
+msgstr "Veličina fajla (bajtova):"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:121
+#. i18n: ectx: property (validChars), widget (KRestrictedLine, size)
+#: rc.cpp:497
+msgid "0123456789"
+msgstr "0123456789"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:152
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: ui/signaturedlg.ui:34
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:500 rc.cpp:827
+msgid "Verification:"
+msgstr "Overa:"
+
+#. i18n: file: ui/metalinkcreator/filedlg.ui:199
+#. i18n: ectx: attribute (title), widget (QWidget, Seite)
+#: rc.cpp:503
+msgid "Optional"
+msgstr "Opciono"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:590
+#: rc.cpp:506
 msgid "General information:"
 msgstr "Opšti podaci:"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:30
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:593
+#: rc.cpp:509
 msgid "Here you can enter optional general information on the metalink."
 msgstr "Ovde možete uneti opcione opšte podatke o metavezi."
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:61
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:596
+#: rc.cpp:512
 msgid "Origin:"
 msgstr "Poreklo:"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:68
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, origin)
-#: rc.cpp:599
+#: rc.cpp:515
 msgid "Web URL to the metalink"
 msgstr "Veb URL metaveze"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:75
 #. i18n: ectx: property (toolTip), widget (QLabel, labelDynamic)
-#: rc.cpp:602
+#: rc.cpp:518
 msgid "Dynamic means that updated metalinks can be found at \"Origin\"."
 msgstr ""
 "<html>Dinamički znači da se ažurirane metaveze mogu naći pod "
@@ -3977,13 +3829,13 @@ msgstr ""
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:78
 #. i18n: ectx: property (text), widget (QLabel, labelDynamic)
-#: rc.cpp:605
+#: rc.cpp:521
 msgid "Dynamic:"
 msgstr "Dinamički:"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:110
 #. i18n: ectx: property (title), widget (QGroupBox, publishedGroupBox)
-#: rc.cpp:608
+#: rc.cpp:524
 msgid "Metalink published"
 msgstr "Metaveza objavljena"
 
@@ -3991,7 +3843,7 @@ msgstr "Metaveza objavljena"
 #. i18n: ectx: property (text), widget (QLabel, label_30)
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:223
 #. i18n: ectx: property (text), widget (QLabel, label_29)
-#: rc.cpp:611 rc.cpp:629
+#: rc.cpp:527 rc.cpp:545
 msgid "Date and time:"
 msgstr "Datum i vreme:"
 
@@ -3999,7 +3851,7 @@ msgstr "Datum i vreme:"
 #. i18n: ectx: property (text), widget (QCheckBox, use_publishedtimeoffset)
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:213
 #. i18n: ectx: property (text), widget (QCheckBox, use_updatedtimeoffset)
-#: rc.cpp:614 rc.cpp:626
+#: rc.cpp:530 rc.cpp:542
 msgid "Timezone offset:"
 msgstr "Pomak vremenske zone:"
 
@@ -4007,91 +3859,105 @@ msgstr "Pomak vremenske zone:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:206
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:617 rc.cpp:623
+#: rc.cpp:533 rc.cpp:539
 msgid "Negative offset:"
 msgstr "Negativni pomak:"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:178
 #. i18n: ectx: property (title), widget (QGroupBox, updatedGroupBox)
-#: rc.cpp:620
+#: rc.cpp:536
 msgid "Metalink updated"
 msgstr "Metaveza ažurirana"
 
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:21
-#. i18n: ectx: attribute (title), widget (QWidget, Seite)
-#: rc.cpp:632
-msgctxt "General options."
-msgid "General"
-msgstr "Opšte"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:27
-#. i18n: ectx: property (text), widget (QCheckBox, partialChecksums)
-#: rc.cpp:635
-msgid "Create partial checksums"
-msgstr "Računaj parcijalne kontrolne sume"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:40
+#. i18n: file: ui/metalinkcreator/commondata.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:638
-msgid "General URL:"
-msgstr "Opšti URL:"
+#: rc.cpp:548
+msgid "Identity"
+msgstr "Identitet"
 
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:66
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:641
-msgid ""
-"Automatically create checksums for the selected types. Keep in mind that "
-"this might take a while."
-msgstr ""
-"Automatski računa kontrolne sume za izabrane tipove. Imajte u vidu da ovo "
-"može potrajati."
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:92
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:644
-msgid ""
-"Enter URLs here if all the dropped files are on that server and in the same "
-"directory. For each dropped file the URL would consist of the entered part "
-"and the filename."
-msgstr ""
-"Unesite URL‑ove ovde ako su svi ispušteni fajlovi na tom serveru i u istoj "
-"fascikli. Za svaki ispušteni fajl URL će se sastojati od unesene niske i "
-"imena fajla."
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:102
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:647
-msgid "Types of the checksums:"
-msgstr "Tipovi kontrolnih suma:"
-
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:115
+#. i18n: file: ui/metalinkcreator/commondata.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:650
-msgid "Create checksums:"
-msgstr "Računaj kontrolne sume:"
+#: rc.cpp:554
+msgid "Version:"
+msgstr "Opis:"
 
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:129
-#. i18n: ectx: attribute (title), widget (QWidget, Seite_2)
-#: rc.cpp:653
-msgctxt "These entries are optional."
-msgid "Optional"
-msgstr "Opciono"
+#. i18n: file: ui/metalinkcreator/commondata.ui:56
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: rc.cpp:557
+msgid "Logo:"
+msgstr "Logotip:"
 
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:141
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:656
-msgid "Optional data:"
-msgstr "Opcioni podaci:"
+#. i18n: file: ui/metalinkcreator/commondata.ui:63
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, logo)
+#: rc.cpp:560
+msgid "URL to the logo"
+msgstr "URL logotipa"
 
-#. i18n: file: ui/metalinkcreator/dragdlg.ui:166
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:659
-msgid "Enter information that all chosen files share."
-msgstr "Unesite podatke zajedničke svim izabranim fajlovima."
+#. i18n: file: ui/metalinkcreator/commondata.ui:73
+#. i18n: ectx: property (toolTip), widget (QLabel, label_13)
+#: rc.cpp:563
+msgid "The language of the file"
+msgstr "Jezik fajla"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:76
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: rc.cpp:566
+msgid "Language:"
+msgstr "Jezik:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:86
+#. i18n: ectx: property (text), widget (QLabel, label_14)
+#: rc.cpp:569
+msgid "Operating systems:"
+msgstr "Operativni sistemi:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:93
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, os)
+#: rc.cpp:572
+msgid "Supported OSes, separated with commas"
+msgstr "Podržani OS‑ovi, razdvojeni zapetama"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:103
+#. i18n: ectx: property (text), widget (QLabel, label_18)
+#: rc.cpp:575
+msgid "Copyright:"
+msgstr "Autorsko pravo:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:141
+#. i18n: ectx: property (text), widget (QLabel, label_20)
+#: rc.cpp:578
+msgid "Publisher:"
+msgstr "Izdavač:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:150
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: rc.cpp:581
+msgid "Name:"
+msgstr "Ime:"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:157
+#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_name)
+#. i18n: file: ui/metalinkcreator/commondata.ui:177
+#. i18n: ectx: property (toolTip), widget (KLineEdit, pub_url)
+#: rc.cpp:584 rc.cpp:593
+msgid "publisher"
+msgstr "izdavač"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:160
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_name)
+#: rc.cpp:587
+msgid "Name of the publisher"
+msgstr "Ime izdavača"
+
+#. i18n: file: ui/metalinkcreator/commondata.ui:180
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_url)
+#: rc.cpp:596
+msgid "URL to the publisher"
+msgstr "URL do izdavača"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:662
+#: rc.cpp:599
 msgid ""
 "This assistant allows you to create metalinks from scratch or base them on "
 "existing metalinks. A lot of the fields are optional or recommended, so "
@@ -4105,339 +3971,473 @@ msgstr ""
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:48
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:665
+#: rc.cpp:602
 msgid "Save created Metalink at:"
 msgstr "Sačuvaj novu metavezu u:"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:78
 #. i18n: ectx: property (text), widget (QRadioButton, createButton)
-#: rc.cpp:668
+#: rc.cpp:605
 msgid "Create new Metalink"
 msgstr "Nova metaveza"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:88
 #. i18n: ectx: property (text), widget (QRadioButton, loadButton)
-#: rc.cpp:671
+#: rc.cpp:608
 msgid "Load existing Metalink:"
 msgstr "Učitaj postojeću metavezu:"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:98
 #. i18n: ectx: property (filter), widget (KUrlRequester, load)
-#: rc.cpp:674
+#: rc.cpp:611
 msgid "*.metalink *.meta4|Metalink file (*.metalink *.meta4)"
 msgstr "*.metalink *.meta4|fajlovi metaveza"
 
-#. i18n: file: ui/metalinkcreator/filedlg.ui:24
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: rc.cpp:677
-msgid "Required"
-msgstr "Neophodno"
+#. i18n: file: ui/metalinkcreator/files.ui:26
+#. i18n: ectx: property (toolTip), widget (KPushButton, add_local_file)
+#: rc.cpp:614
+msgid "Adds local files adding a lot information automatically."
+msgstr "Dodaje lokalne fajlove dodajući automatski mnogo podataka."
 
-#. i18n: file: ui/metalinkcreator/filedlg.ui:95
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:683
-msgid "Used Mirrors:"
-msgstr "Ogledala:"
+#. i18n: file: ui/metalinkcreator/files.ui:29
+#. i18n: ectx: property (text), widget (KPushButton, add_local_file)
+#: rc.cpp:617
+msgid "Add local files"
+msgstr "Dodaj lokalne fajlove"
 
-#. i18n: file: ui/metalinkcreator/filedlg.ui:103
-#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: rc.cpp:686
-msgid "Recommended"
-msgstr "Preporučeno"
+#. i18n: file: ui/metalinkcreator/files.ui:66
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:620
+msgid "Adding local files..."
+msgstr "Dodajem lokalne fajlove..."
 
-#. i18n: file: ui/metalinkcreator/filedlg.ui:111
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:689
-msgid "File size (in bytes):"
-msgstr "Veličina fajla (bajtova):"
-
-#. i18n: file: ui/metalinkcreator/filedlg.ui:121
-#. i18n: ectx: property (validChars), widget (KRestrictedLine, size)
-#: rc.cpp:692
-msgid "0123456789"
-msgstr "0123456789"
-
-#. i18n: file: ui/metalinkcreator/filedlg.ui:152
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: ui/signaturedlg.ui:34
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:695 rc.cpp:743
-msgid "Verification:"
-msgstr "Overa:"
-
-#. i18n: file: ui/metalinkcreator/filedlg.ui:199
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:21
 #. i18n: ectx: attribute (title), widget (QWidget, Seite)
-#: rc.cpp:698
+#: rc.cpp:623
+msgctxt "General options."
+msgid "General"
+msgstr "Opšte"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:27
+#. i18n: ectx: property (text), widget (QCheckBox, partialChecksums)
+#: rc.cpp:626
+msgid "Create partial checksums"
+msgstr "Računaj parcijalne kontrolne sume"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:40
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:629
+msgid "General URL:"
+msgstr "Opšti URL:"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:66
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:632
+msgid ""
+"Automatically create checksums for the selected types. Keep in mind that "
+"this might take a while."
+msgstr ""
+"Automatski računa kontrolne sume za izabrane tipove. Imajte u vidu da ovo "
+"može potrajati."
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:92
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:635
+msgid ""
+"Enter URLs here if all the dropped files are on that server and in the same "
+"directory. For each dropped file the URL would consist of the entered part "
+"and the filename."
+msgstr ""
+"Unesite URL‑ove ovde ako su svi ispušteni fajlovi na tom serveru i u istoj "
+"fascikli. Za svaki ispušteni fajl URL će se sastojati od unesene niske i "
+"imena fajla."
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:102
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:638
+msgid "Types of the checksums:"
+msgstr "Tipovi kontrolnih suma:"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:115
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:641
+msgid "Create checksums:"
+msgstr "Računaj kontrolne sume:"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:129
+#. i18n: ectx: attribute (title), widget (QWidget, Seite_2)
+#: rc.cpp:644
+msgctxt "These entries are optional."
 msgid "Optional"
 msgstr "Opciono"
 
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:141
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:647
+msgid "Optional data:"
+msgstr "Opcioni podaci:"
+
+#. i18n: file: ui/metalinkcreator/dragdlg.ui:166
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:650
+msgid "Enter information that all chosen files share."
+msgstr "Unesite podatke zajedničke svim izabranim fajlovima."
+
 #. i18n: file: ui/linkview/importlinkdialog.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:701
+#: rc.cpp:653
 msgid "&File with links to import:"
 msgstr "Fajl sa &vezama za uvoz:"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:41
 #. i18n: ectx: property (text), widget (KPushButton, importLinks)
-#: rc.cpp:704
+#: rc.cpp:656
 msgid "&Import Links"
 msgstr "&Uvezi veze"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:58
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:707
+#: rc.cpp:659
 msgid "Show:"
 msgstr "Prikaži:"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:68
 #. i18n: ectx: property (text), widget (QCheckBox, showWebContent)
-#: rc.cpp:710
+#: rc.cpp:662
 msgid "Show &web content"
 msgstr "Prikaži &veb sadržaj"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:106
 #. i18n: ectx: property (toolTip), widget (KLineEdit, textFilter)
-#: rc.cpp:713
+#: rc.cpp:665
 msgid "You can use wildcards for filtering."
 msgstr "Možete koristiti džokere za filtriranje."
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:109
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, textFilter)
-#: rc.cpp:716
+#: rc.cpp:668
 msgid "Filter files here...."
 msgstr "Filtrirajte fajlove..."
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:212
 #. i18n: ectx: property (text), widget (KPushButton, invertSelection)
-#: rc.cpp:725
+#: rc.cpp:677
 msgid "Inver&t Selection"
 msgstr "&Izvrni izbor"
 
-#. i18n: file: ui/transferdetailsfrm.ui:51
-#. i18n: ectx: property (text), widget (QLabel, sourceLabel)
-#: rc.cpp:731
-msgctxt "@label transfer source"
-msgid "Source:"
-msgstr "Izvor:"
-
-#. i18n: file: ui/transferdetailsfrm.ui:114
-#. i18n: ectx: property (text), widget (QLabel, statusLabel)
-#: rc.cpp:734
-msgid "Status:"
-msgstr "Stanje:"
-
-#. i18n: file: ui/transferdetailsfrm.ui:165
+#. i18n: file: ui/verificationadddlg.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:737
-msgid "Remaining Time:"
-msgstr "Preostalo vreme:"
+#: rc.cpp:680
+msgctxt "hash type as in md5t, sha1 etc."
+msgid "Hash type:"
+msgstr "Tip disperzije:"
 
-#. i18n: file: ui/signaturedlg.ui:80
-#. i18n: ectx: property (text), widget (QLabel, binaryLabel)
-#: rc.cpp:746
-msgid "Has binary PGP signature."
-msgstr "Ima binarni PGP potpis."
-
-#. i18n: file: ui/signaturedlg.ui:87
-#. i18n: ectx: property (text), widget (QLabel, asciiLabel)
-#: rc.cpp:749
-msgid "Ascii PGP signature:"
-msgstr "ASCII PGP potpis:"
-
-#. i18n: file: ui/signaturedlg.ui:112
-#. i18n: ectx: property (text), widget (KPushButton, loadSignature)
-#: rc.cpp:752
-msgid "Load Signature"
-msgstr "Učitaj potpis"
-
-#. i18n: file: ui/signaturedlg.ui:119
-#. i18n: ectx: property (text), widget (KPushButton, verify)
-#: rc.cpp:755
-msgid "Verify"
-msgstr "Overi"
-
-#. i18n: file: ui/signaturedlg.ui:131
-#. i18n: ectx: property (title), widget (QGroupBox, keyGroup)
-#: rc.cpp:758
-msgid "Key"
-msgstr "Ključ"
-
-#. i18n: file: ui/signaturedlg.ui:143
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:761
-msgid "Issuer:"
-msgstr "Izdavač:"
-
-#. i18n: file: ui/signaturedlg.ui:166
+#. i18n: file: ui/verificationadddlg.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:764
-msgid "E-Mail:"
-msgstr "E‑pošta:"
+#: rc.cpp:683
+msgctxt "hash as a hash of type md5, sha1 etc."
+msgid "Hash:"
+msgstr "Disperzija:"
 
-#. i18n: file: ui/signaturedlg.ui:183
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:767
-msgid "Comment:"
-msgstr "Komentar:"
+#. i18n: file: ui/verificationadddlg.ui:33
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, newHash)
+#: rc.cpp:686
+msgid "Enter a hash key"
+msgstr "Unesite ključ disperzije"
 
-#. i18n: file: ui/signaturedlg.ui:197
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:770
-msgid "Creation:"
-msgstr "Stvoren:"
-
-#. i18n: file: ui/signaturedlg.ui:214
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:773
-msgid "Expiration:"
-msgstr "Ističe:"
-
-#. i18n: file: ui/signaturedlg.ui:255
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:776
-msgid "Trust:"
-msgstr "Pouzdanost:"
-
-#. i18n: file: ui/signaturedlg.ui:296
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:779
-msgid "Fingerprint:"
-msgstr "Otisak:"
-
-#. i18n: file: ui/mirror/mirroradddlg.ui:19
-#. i18n: ectx: property (text), widget (QLabel, labelMirror)
-#: rc.cpp:782
-msgid "Mirror:"
-msgstr "Ogledalo:"
-
-#. i18n: file: ui/mirror/mirroradddlg.ui:26
-#. i18n: ectx: property (text), widget (QLabel, labelConnections)
-#: rc.cpp:785
-msgid "Number of connections:"
-msgstr "Broj povezivanja:"
-
-#. i18n: file: ui/mirror/mirroradddlg.ui:33
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, url)
-#: rc.cpp:788
-msgid "Enter a URL"
-msgstr "Unesite URL"
-
-#. i18n: file: ui/mirror/mirroradddlg.ui:53
-#. i18n: ectx: property (text), widget (QLabel, labelPriority)
-#: rc.cpp:791
-msgid "Priority:"
-msgstr "Prioritet:"
-
-#. i18n: file: ui/mirror/mirroradddlg.ui:60
-#. i18n: ectx: property (toolTip), widget (KIntNumInput, priority)
-#: rc.cpp:794
-msgid "Optional: The priority of the mirror, 1 highest 999999 lowest."
-msgstr "Opciono: prioritet ogledala, 1 najviši, 999999 najniži."
-
-#. i18n: file: ui/mirror/mirroradddlg.ui:79
-#. i18n: ectx: property (text), widget (QLabel, labelLocation)
-#: rc.cpp:800
-msgid "Location:"
-msgstr "Lokacija:"
-
-#. i18n: file: ui/transfersettingsdialog.ui:23
+#. i18n: file: ui/groupsettingsdialog.ui:32
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:803
-msgid "Transfer Settings"
-msgstr "Postavke prenosa"
+#: rc.cpp:689
+msgid "Group Settings"
+msgstr "Postavke grupa"
 
-#. i18n: file: ui/transfersettingsdialog.ui:35
+#. i18n: file: ui/groupsettingsdialog.ui:44
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:806
-msgid "Download des&tination:"
-msgstr "Odredište pr&euzimanja:"
+#: rc.cpp:692
+msgid "Default &folder:"
+msgstr "Podrazumevana &fascikla:"
 
-#. i18n: file: ui/transfersettingsdialog.ui:94
-#. i18n: ectx: property (text), widget (QLabel, labelUpload)
-#: rc.cpp:824
-msgid "&Upload limit:"
-msgstr "Ograničenje &otpremanja:"
+#. i18n: file: ui/groupsettingsdialog.ui:61
+#. i18n: ectx: property (toolTip), widget (QLabel, label_2)
+#: rc.cpp:695
+msgid "Moves all transfers with the regular expression to this group"
+msgstr "Premešta sve prenose po regularnom izrazu u ovu grupu."
 
-#. i18n: file: ui/transfersettingsdialog.ui:104
-#. i18n: ectx: property (text), widget (QLabel, labelDownload)
-#: rc.cpp:827
-msgid "&Download limit:"
-msgstr "Ograničenje &preuzimanja:"
+#. i18n: file: ui/groupsettingsdialog.ui:64
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:698
+msgid "Regular &expression:"
+msgstr "&Regularni izraz:"
 
-#. i18n: file: ui/transfersettingsdialog.ui:114
-#. i18n: ectx: property (text), widget (QLabel, labelShareRatio)
-#: rc.cpp:830
-msgid "Maximum &share ratio:"
-msgstr "Najveći o&dnos deljenja:"
+#. i18n: file: ui/groupsettingsdialog.ui:74
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, regExpEdit)
+#: rc.cpp:701
+msgid "*movies*"
+msgstr "*film*"
 
-#. i18n: file: ui/transfersettingsdialog.ui:143
-#. i18n: ectx: property (toolTip), widget (KPushButton, mirrors)
-#: rc.cpp:833
-msgid "Modify the mirrors used for downloading."
-msgstr "Izmenite ogledala za preuzimanja."
+#. i18n: file: ui/groupsettingsdialog.ui:87
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadBox)
+#. i18n: file: ui/groupsettingsdialog.ui:106
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, uploadBox)
+#. i18n: file: ui/transfersettingsdialog.ui:55
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, uploadSpin)
+#. i18n: file: ui/transfersettingsdialog.ui:71
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadSpin)
+#. i18n: file: ui/transfersettingsdialog.ui:87
+#. i18n: ectx: property (specialValueText), widget (QDoubleSpinBox, ratioSpin)
+#: rc.cpp:704 rc.cpp:710 rc.cpp:776 rc.cpp:782 rc.cpp:788
+msgctxt "No value has been set"
+msgid "Not set"
+msgstr "neodređeno"
 
-#. i18n: file: ui/transfersettingsdialog.ui:146
-#. i18n: ectx: property (text), widget (KPushButton, mirrors)
-#: rc.cpp:836
-msgctxt "The available mirrors (servers) for downloading"
-msgid "Mirrors"
-msgstr "Ogledala"
+#. i18n: file: ui/groupsettingsdialog.ui:119
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:716
+msgid "Maximum &download speed:"
+msgstr "Najveća brzina &preuzimanja:"
 
-#. i18n: file: ui/transfersettingsdialog.ui:166
-#. i18n: ectx: property (text), widget (KPushButton, verification)
-#: rc.cpp:842
-msgctxt "verification of the download (e.g. by using MD5)"
-msgid "Verification"
-msgstr "Overa"
+#. i18n: file: ui/groupsettingsdialog.ui:129
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:719
+msgid "Maximum &upload speed:"
+msgstr "Najveća brzina &otpremanja:"
 
 #. i18n: file: ui/history/transferhistory.ui:27
 #. i18n: ectx: property (text), widget (QPushButton, clearButton)
-#: rc.cpp:848
+#: rc.cpp:722
 msgid "Clear History"
 msgstr "Očisti istorijat"
 
 #. i18n: file: ui/history/transferhistory.ui:47
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:851
+#: rc.cpp:725
 msgid "View Modes:"
 msgstr "Režimi prikaza:"
 
 #. i18n: file: ui/history/transferhistory.ui:77
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:854
+#: rc.cpp:728
 msgid "Select Ranges:"
 msgstr "Izbor opsegâ̂:"
 
 #. i18n: file: ui/history/transferhistory.ui:85
 #. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: rc.cpp:857
+#: rc.cpp:731
 msgid "Date"
 msgstr "datum"
 
 #. i18n: file: ui/history/transferhistory.ui:95
 #. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: rc.cpp:863
+#: rc.cpp:737
 msgid "Host"
 msgstr "domaćin"
 
 #. i18n: file: ui/history/transferhistory.ui:106
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, searchBar)
-#: rc.cpp:866
+#: rc.cpp:740
 msgid "Filter history"
 msgstr "Filtriraj istorijat"
 
 #. i18n: file: ui/history/transferhistory.ui:120
 #. i18n: ectx: property (text), widget (KLineEdit, searchBar)
-#: rc.cpp:869
+#: rc.cpp:743
 msgctxt "delete selected transfer"
 msgid "Delete Selected"
 msgstr "Obriši izabrano"
 
 #. i18n: file: ui/history/transferhistory.ui:125
 #. i18n: ectx: property (text), widget (KLineEdit, searchBar)
-#: rc.cpp:872
+#: rc.cpp:746
 msgid "Download"
 msgstr "Preuzmi"
+
+#. i18n: file: ui/mirror/mirroradddlg.ui:19
+#. i18n: ectx: property (text), widget (QLabel, labelMirror)
+#: rc.cpp:749
+msgid "Mirror:"
+msgstr "Ogledalo:"
+
+#. i18n: file: ui/mirror/mirroradddlg.ui:26
+#. i18n: ectx: property (text), widget (QLabel, labelConnections)
+#: rc.cpp:752
+msgid "Number of connections:"
+msgstr "Broj povezivanja:"
+
+#. i18n: file: ui/mirror/mirroradddlg.ui:33
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, url)
+#: rc.cpp:755
+msgid "Enter a URL"
+msgstr "Unesite URL"
+
+#. i18n: file: ui/mirror/mirroradddlg.ui:53
+#. i18n: ectx: property (text), widget (QLabel, labelPriority)
+#: rc.cpp:758
+msgid "Priority:"
+msgstr "Prioritet:"
+
+#. i18n: file: ui/mirror/mirroradddlg.ui:60
+#. i18n: ectx: property (toolTip), widget (KIntNumInput, priority)
+#: rc.cpp:761
+msgid "Optional: The priority of the mirror, 1 highest 999999 lowest."
+msgstr "Opciono: prioritet ogledala, 1 najviši, 999999 najniži."
+
+#. i18n: file: ui/mirror/mirroradddlg.ui:79
+#. i18n: ectx: property (text), widget (QLabel, labelLocation)
+#: rc.cpp:767
+msgid "Location:"
+msgstr "Lokacija:"
+
+#. i18n: file: ui/transfersettingsdialog.ui:23
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:770
+msgid "Transfer Settings"
+msgstr "Postavke prenosa"
+
+#. i18n: file: ui/transfersettingsdialog.ui:35
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:773
+msgid "Download des&tination:"
+msgstr "Odredište pr&euzimanja:"
+
+#. i18n: file: ui/transfersettingsdialog.ui:94
+#. i18n: ectx: property (text), widget (QLabel, labelUpload)
+#: rc.cpp:791
+msgid "&Upload limit:"
+msgstr "Ograničenje &otpremanja:"
+
+#. i18n: file: ui/transfersettingsdialog.ui:104
+#. i18n: ectx: property (text), widget (QLabel, labelDownload)
+#: rc.cpp:794
+msgid "&Download limit:"
+msgstr "Ograničenje &preuzimanja:"
+
+#. i18n: file: ui/transfersettingsdialog.ui:114
+#. i18n: ectx: property (text), widget (QLabel, labelShareRatio)
+#: rc.cpp:797
+msgid "Maximum &share ratio:"
+msgstr "Najveći o&dnos deljenja:"
+
+#. i18n: file: ui/transfersettingsdialog.ui:143
+#. i18n: ectx: property (toolTip), widget (KPushButton, mirrors)
+#: rc.cpp:800
+msgid "Modify the mirrors used for downloading."
+msgstr "Izmenite ogledala za preuzimanja."
+
+#. i18n: file: ui/transfersettingsdialog.ui:146
+#. i18n: ectx: property (text), widget (KPushButton, mirrors)
+#: rc.cpp:803
+msgctxt "The available mirrors (servers) for downloading"
+msgid "Mirrors"
+msgstr "Ogledala"
+
+#. i18n: file: ui/transfersettingsdialog.ui:166
+#. i18n: ectx: property (text), widget (KPushButton, verification)
+#: rc.cpp:809
+msgctxt "verification of the download (e.g. by using MD5)"
+msgid "Verification"
+msgstr "Overa"
+
+#. i18n: file: ui/verificationdialog.ui:42
+#. i18n: ectx: property (toolTip), widget (KPushButton, verify)
+#: rc.cpp:815
+msgid "Verify the finished download with the selected checksum."
+msgstr "Overite završeno preuzimanje izabranom kontrolnom sumom."
+
+#. i18n: file: ui/verificationdialog.ui:45
+#. i18n: ectx: property (text), widget (KPushButton, verify)
+#: rc.cpp:818
+msgid "&Verify"
+msgstr "&Overi"
+
+#. i18n: file: ui/verificationdialog.ui:71
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:821
+msgid "Verifying:"
+msgstr "Overavam:"
+
+#. i18n: file: ui/signaturedlg.ui:80
+#. i18n: ectx: property (text), widget (QLabel, binaryLabel)
+#: rc.cpp:830
+msgid "Has binary PGP signature."
+msgstr "Ima binarni PGP potpis."
+
+#. i18n: file: ui/signaturedlg.ui:87
+#. i18n: ectx: property (text), widget (QLabel, asciiLabel)
+#: rc.cpp:833
+msgid "Ascii PGP signature:"
+msgstr "ASCII PGP potpis:"
+
+#. i18n: file: ui/signaturedlg.ui:112
+#. i18n: ectx: property (text), widget (KPushButton, loadSignature)
+#: rc.cpp:836
+msgid "Load Signature"
+msgstr "Učitaj potpis"
+
+#. i18n: file: ui/signaturedlg.ui:119
+#. i18n: ectx: property (text), widget (KPushButton, verify)
+#: rc.cpp:839
+msgid "Verify"
+msgstr "Overi"
+
+#. i18n: file: ui/signaturedlg.ui:131
+#. i18n: ectx: property (title), widget (QGroupBox, keyGroup)
+#: rc.cpp:842
+msgid "Key"
+msgstr "Ključ"
+
+#. i18n: file: ui/signaturedlg.ui:143
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:845
+msgid "Issuer:"
+msgstr "Izdavač:"
+
+#. i18n: file: ui/signaturedlg.ui:166
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:848
+msgid "E-Mail:"
+msgstr "E‑pošta:"
+
+#. i18n: file: ui/signaturedlg.ui:183
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: rc.cpp:851
+msgid "Comment:"
+msgstr "Komentar:"
+
+#. i18n: file: ui/signaturedlg.ui:197
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:854
+msgid "Creation:"
+msgstr "Stvoren:"
+
+#. i18n: file: ui/signaturedlg.ui:214
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:857
+msgid "Expiration:"
+msgstr "Ističe:"
+
+#. i18n: file: ui/signaturedlg.ui:255
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:860
+msgid "Trust:"
+msgstr "Pouzdanost:"
+
+#. i18n: file: ui/signaturedlg.ui:296
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: rc.cpp:863
+msgid "Fingerprint:"
+msgstr "Otisak:"
+
+#. i18n: file: ui/newtransferwidget.ui:31
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:869
+msgid "Destination:"
+msgstr "Odredište:"
+
+#. i18n: file: ui/newtransferwidget.ui:41
+#. i18n: ectx: property (text), widget (QLabel, groupLabel)
+#: rc.cpp:872
+msgid "Transfer group:"
+msgstr "Grupa prenosa:"
 
 #. i18n: file: ui/kgetui.rc:4
 #. i18n: ectx: Menu (file)
@@ -4483,13 +4483,13 @@ msgstr "Spisak regiza za poklapanje ulaznog URL‑a"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:13
 #. i18n: ectx: label, entry (PathList), group (UserScripts)
-#. i18n: file: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:16
-#. i18n: ectx: label, entry (SearchEnginesUrlList), group (SearchEngines)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:13
 #. i18n: ectx: label, entry (UrlChangeModeList), group (ChecksumSearch)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:17
 #. i18n: ectx: label, entry (ChecksumTypeList), group (ChecksumSearch)
-#: rc.cpp:900 rc.cpp:917 rc.cpp:923 rc.cpp:926
+#. i18n: file: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:16
+#. i18n: ectx: label, entry (SearchEnginesUrlList), group (SearchEngines)
+#: rc.cpp:900 rc.cpp:917 rc.cpp:920 rc.cpp:926
 msgid "List of the available search engine URLs"
 msgstr "Spisak URL‑a dostupnih pretraživača"
 
@@ -4505,10 +4505,10 @@ msgstr "Spisak opisa korisničkih skripti"
 msgid "List of whether the script is enabled"
 msgstr "Spisak pokazatelja uključenosti skripti"
 
-#. i18n: file: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:12
-#. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:9
 #. i18n: ectx: label, entry (SearchStrings), group (ChecksumSearch)
-#: rc.cpp:914 rc.cpp:920
+#. i18n: file: transfer-plugins/mirrorsearch/kget_mirrorsearchfactory.kcfg:12
+#. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
+#: rc.cpp:914 rc.cpp:923
 msgid "List of the available search engines"
 msgstr "Spisak dostupnih pretraživača"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevexecute\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-09-04 23:26+0000\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2013-08-23 11:21+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -23,6 +23,98 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+
+#: nativeappjob.cpp:70
+msgid ""
+"No environment group specified, looks like a broken configuration, please "
+"check run configuration '%1'. Using default environment group."
+msgstr ""
+"Группа переменных среды не указана. Похоже, конфигурация неверна. Проверьте "
+"конфигурацию запуска «%1». Будет использоваться группа переменных среды по "
+"умолчанию."
+
+#: nativeappjob.cpp:144
+msgid "Starting: %1"
+msgstr "Запускается %1"
+
+#: nativeappjob.cpp:158
+msgid "*** Killed Application ***"
+msgstr "*** Приложение уничтожено ***"
+
+#: nativeappjob.cpp:174
+msgid "*** Exited normally ***"
+msgstr "*** Нормальное завершение ***"
+
+#: nativeappjob.cpp:176
+msgid "*** Exited with return code: %1 ***"
+msgstr "*** Завершено с кодом возврата %1 ***"
+
+#: nativeappjob.cpp:179
+msgid "*** Process aborted ***"
+msgstr "*** Процесс прерван ***"
+
+#: nativeappjob.cpp:182
+msgid "*** Crashed with return code: %1 ***"
+msgstr "*** Сбой с кодом возврата %1 ***"
+
+#: nativeappjob.cpp:199
+#, fuzzy
+msgid ""
+"*** Could not start program '%1'. Make sure that the path is specified "
+"correctly ***"
+msgstr ""
+"Запустить программу «%1» не удалось. Проверьте правильность заданного пути."
+
+#: executeplugin.cpp:65
+msgid "Execute support"
+msgstr "Поддержка запуска программ"
+
+#: executeplugin.cpp:65
+msgid ""
+"This plugin allows running of programs with no instrumentor, ie. natively by "
+"the current host."
+msgstr ""
+
+#: executeplugin.cpp:103
+msgid ""
+"There is a quoting error in the arguments for the launch configuration '%1'. "
+"Aborting start."
+msgstr ""
+"В параметрах запуска в конфигурации «%1» обнаружены непарные кавычки. Запуск "
+"отменён."
+
+#: executeplugin.cpp:107
+msgid ""
+"A shell meta character was included in the arguments for the launch "
+"configuration '%1', this is not supported currently. Aborting start."
+msgstr ""
+"В параметрах запуска в конфигурации «%1» обнаружен метасимвол командной "
+"оболочки. В настоящее время они не поддерживаются. Запуск отменён."
+
+#: executeplugin.cpp:136
+msgid "Couldn't resolve the dependency: %1"
+msgstr "Не удалось разрешить зависимость: %1"
+
+#: executeplugin.cpp:189
+msgid "No valid executable specified"
+msgstr "Запускаемый файл задан неверно"
+
+#: executeplugin.cpp:199
+msgid ""
+"There is a quoting error in the executable for the launch configuration "
+"'%1'. Aborting start."
+msgstr ""
+"В исполняемом файле конфигурации запуска «%1» обнаружены непарные кавычки. "
+"Запуск отменён."
+
+#: executeplugin.cpp:204
+msgid ""
+"A shell meta character was included in the executable for the launch "
+"configuration '%1', this is not supported currently. Aborting start."
+msgstr ""
+"В параметрах исполняемого файла в конфигурации запуска «%1» обнаружен "
+"метасимвол командной оболочки. В настоящее время они не поддерживаются. "
+"Запуск отменён."
 
 #. i18n: file: nativeappconfig.ui:17
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
@@ -253,47 +345,6 @@ msgstr "Переместить выделенную зависимость вв�
 msgid "Moves the selected dependency down in the list."
 msgstr "Переместить выделенную зависимость вниз по списку."
 
-#: nativeappjob.cpp:70
-msgid ""
-"No environment group specified, looks like a broken configuration, please "
-"check run configuration '%1'. Using default environment group."
-msgstr ""
-"Группа переменных среды не указана. Похоже, конфигурация неверна. Проверьте "
-"конфигурацию запуска «%1». Будет использоваться группа переменных среды по "
-"умолчанию."
-
-#: nativeappjob.cpp:144
-msgid "Starting: %1"
-msgstr "Запускается %1"
-
-#: nativeappjob.cpp:158
-msgid "*** Killed Application ***"
-msgstr "*** Приложение уничтожено ***"
-
-#: nativeappjob.cpp:174
-msgid "*** Exited normally ***"
-msgstr "*** Нормальное завершение ***"
-
-#: nativeappjob.cpp:176
-msgid "*** Exited with return code: %1 ***"
-msgstr "*** Завершено с кодом возврата %1 ***"
-
-#: nativeappjob.cpp:179
-msgid "*** Process aborted ***"
-msgstr "*** Процесс прерван ***"
-
-#: nativeappjob.cpp:182
-msgid "*** Crashed with return code: %1 ***"
-msgstr "*** Сбой с кодом возврата %1 ***"
-
-#: nativeappjob.cpp:199
-#, fuzzy
-msgid ""
-"*** Could not start program '%1'. Make sure that the path is specified "
-"correctly ***"
-msgstr ""
-"Запустить программу «%1» не удалось. Проверьте правильность заданного пути."
-
 #: nativeappconfig.cpp:288
 msgid "Configure Native Application"
 msgstr "Настройка обычного приложения"
@@ -309,54 +360,3 @@ msgstr ""
 #: nativeappconfig.cpp:440
 msgid "Project Executables"
 msgstr "Исполняемые файлы проекта"
-
-#: executeplugin.cpp:65
-msgid "Execute support"
-msgstr "Поддержка запуска программ"
-
-#: executeplugin.cpp:65
-msgid ""
-"This plugin allows running of programs with no instrumentor, ie. natively by "
-"the current host."
-msgstr ""
-
-#: executeplugin.cpp:103
-msgid ""
-"There is a quoting error in the arguments for the launch configuration '%1'. "
-"Aborting start."
-msgstr ""
-"В параметрах запуска в конфигурации «%1» обнаружены непарные кавычки. Запуск "
-"отменён."
-
-#: executeplugin.cpp:107
-msgid ""
-"A shell meta character was included in the arguments for the launch "
-"configuration '%1', this is not supported currently. Aborting start."
-msgstr ""
-"В параметрах запуска в конфигурации «%1» обнаружен метасимвол командной "
-"оболочки. В настоящее время они не поддерживаются. Запуск отменён."
-
-#: executeplugin.cpp:136
-msgid "Couldn't resolve the dependency: %1"
-msgstr "Не удалось разрешить зависимость: %1"
-
-#: executeplugin.cpp:189
-msgid "No valid executable specified"
-msgstr "Запускаемый файл задан неверно"
-
-#: executeplugin.cpp:199
-msgid ""
-"There is a quoting error in the executable for the launch configuration "
-"'%1'. Aborting start."
-msgstr ""
-"В исполняемом файле конфигурации запуска «%1» обнаружены непарные кавычки. "
-"Запуск отменён."
-
-#: executeplugin.cpp:204
-msgid ""
-"A shell meta character was included in the executable for the launch "
-"configuration '%1', this is not supported currently. Aborting start."
-msgstr ""
-"В параметрах исполняемого файла в конфигурации запуска «%1» обнаружен "
-"метасимвол командной оболочки. В настоящее время они не поддерживаются. "
-"Запуск отменён."

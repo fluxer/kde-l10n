@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmix\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-05-05 17:54+0000\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2014-08-14 01:59+0400\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -32,135 +32,307 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: core/volume.cpp:50
-msgctxt "Channel name"
-msgid "Left"
-msgstr "Левый"
+#: backends/mixer_oss4.cpp:496 backends/mixer_oss.cpp:234
+msgid ""
+"kmix: You do not have permission to access the mixer device.\n"
+"Login as root and do a 'chmod a+rw /dev/mixer*' to allow the access."
+msgstr ""
+"kmix: нет прав доступа к микшеру. Для разрешения доступа\n"
+"используйте «chmod a+rw /dev/mixer*», войдя в систему как root."
 
-#: core/volume.cpp:50
-msgctxt "Channel name"
-msgid "Right"
-msgstr "Правый"
+#: backends/mixer_oss4.cpp:500
+msgid ""
+"kmix: Mixer cannot be found.\n"
+"Please check that the soundcard is installed and the\n"
+"soundcard driver is loaded.\n"
+"On Linux you might need to use 'insmod' to load the driver.\n"
+"Use 'soundon' when using OSS4 from 4front."
+msgstr ""
+"kmix: микшер не найден.\n"
+"Проверьте, установлена ли звуковая плата,\n"
+"и загружен ли драйвер для неё.\n"
+"В Linux загрузка драйвера может осуществляться командой «insmod».\n"
+"Используйте «soundon» для модулей OSS4 от 4front."
 
-#: core/volume.cpp:51
-#, fuzzy
-msgctxt "Channel name"
-msgid "Center"
+#: backends/mixer_backend.cpp:306
+msgid ""
+"kmix:You do not have permission to access the mixer device.\n"
+"Please check your operating systems manual to allow the access."
+msgstr ""
+"kmix: Нет прав для использования микшера. Для разрешения доступа\n"
+"обратитесь к документации по операционной системе."
+
+#: backends/mixer_backend.cpp:310
+msgid "kmix: Could not write to mixer."
+msgstr "kmix: не удаётся записать в микшер."
+
+#: backends/mixer_backend.cpp:313
+msgid "kmix: Could not read from mixer."
+msgstr "kmix: не удаётся прочитать c микшера."
+
+#: backends/mixer_backend.cpp:316
+msgid ""
+"kmix: Mixer cannot be found.\n"
+"Please check that the soundcard is installed and that\n"
+"the soundcard driver is loaded.\n"
+msgstr ""
+"kmix: микшер не найден.\n"
+"Проверьте, установлена ли звуковая плата,\n"
+"и загружен ли драйвер для неё.\n"
+
+#: backends/mixer_backend.cpp:321
+msgid "kmix: Unknown error. Please report how you produced this error."
+msgstr ""
+"kmix: неизвестная ошибка. Сообщите разработчикам, как её воспроизвести."
+
+#: backends/mixer_sun.cpp:68
+msgid "Master Volume"
+msgstr "Уровень громкости"
+
+#: backends/mixer_sun.cpp:69
+msgid "Internal Speaker"
+msgstr "Динамик"
+
+#: backends/mixer_sun.cpp:70
+msgid "Headphone"
+msgstr "Наушники"
+
+#: backends/mixer_sun.cpp:71
+msgid "Line Out"
+msgstr "Линейный выход"
+
+#: backends/mixer_sun.cpp:72
+msgid "Record Monitor"
+msgstr "Монитор записи"
+
+#: backends/mixer_sun.cpp:73 backends/mixer_oss.cpp:60
+msgid "Microphone"
+msgstr "Микрофон"
+
+#: backends/mixer_sun.cpp:74
+msgid "Line In"
+msgstr "Линейный вход"
+
+#: backends/mixer_sun.cpp:75 backends/mixer_oss.cpp:60
+msgid "CD"
+msgstr "CD"
+
+#: backends/mixer_sun.cpp:240
+msgid ""
+"kmix: You do not have permission to access the mixer device.\n"
+"Ask your system administrator to fix /dev/audioctl to allow access."
+msgstr ""
+"kmix: нет прав доступа к микшеру. Обратитесь к \n"
+"системному администратору, чтобы он открыл доступ к /dev/audioctl."
+
+#: backends/mixer_backend_i18n.cpp:24
+msgid "Recording level of the microphone input."
+msgstr "Уровень записи микрофонного входа."
+
+#: backends/mixer_backend_i18n.cpp:25
+msgid ""
+"Controls the volume of the front speakers or all speakers (depending on your "
+"soundcard model). If you use a digital output, you might need to also use "
+"other controls like ADC or DAC. For headphones, soundcards often supply a "
+"Headphone control."
+msgstr ""
+"Управление громкостью фронтальных динамиков или всех динамиков, в "
+"зависимости от вашей звуковой карты. Если вы используете цифровой звуковой "
+"выход, может потребоваться регулировка АЦП или ЦАП. Для наушников звуковые "
+"карты часто имеют отдельный регулятор громкости."
+
+# Можно было бы перевести PCM как ИКМ, но название соответствующего регулятора перевести нельзя, поэтому для соответствия оставил PCM.
+#
+# Из Википедии: Импульсно-кодовая модуляция (ИКМ, англ. Pulse Code Modulation, PCM)
+#: backends/mixer_backend_i18n.cpp:26
+msgid ""
+"Most media, such as MP3s or Videos, are played back using the PCM channel. "
+"As such, the playback volume of such media is controlled by both this and "
+"the Master or Headphone channels."
+msgstr ""
+"Большинство мультимедийных файлов, например, MP3 и видеозаписи, "
+"воспроизводится через канал PCM. При этом громкость регулируется и этим "
+"каналом, и главным или микрофонным выходом."
+
+#: backends/mixer_backend_i18n.cpp:27
+msgid ""
+"Controls the headphone volume. Some soundcards include a switch that must be "
+"manually activated to enable the headphone output."
+msgstr ""
+"Управление громкостью наушников. Некоторые звуковые карты имеют выключатель "
+"выхода на наушники, который включается вручную."
+
+#: backends/mixer_backend_i18n.cpp:28
+msgid "---"
+msgstr "---"
+
+#: backends/mixer_pulse.cpp:340 backends/mixer_pulse.cpp:399
+msgid "Unknown Application"
+msgstr "Неизвестное приложение"
+
+#: backends/mixer_pulse.cpp:447 backends/mixer_pulse.cpp:483
+msgid "Event Sounds"
+msgstr "Звуки уведомлений"
+
+#: backends/mixer_pulse.cpp:1101
+msgid "Playback Devices"
+msgstr "Устройства воспроизведения"
+
+#: backends/mixer_pulse.cpp:1109
+msgid "Capture Devices"
+msgstr "Устройства захвата звука"
+
+#: backends/mixer_pulse.cpp:1117 backends/mixer_mpris2.cpp:52
+msgid "Playback Streams"
+msgstr "Воспроизведение звука"
+
+#: backends/mixer_pulse.cpp:1128
+msgid "Capture Streams"
+msgstr "Захват звука"
+
+#: backends/mixer_pulse.cpp:1229
+msgid "Volume Control Feedback Sound"
+msgstr "Управление акустической обратной связью"
+
+#: backends/mixer_oss.cpp:58
+msgid "Volume"
+msgstr "Громкость"
+
+#: backends/mixer_oss.cpp:58
+msgid "Bass"
+msgstr "Низкие"
+
+#: backends/mixer_oss.cpp:58
+msgid "Treble"
+msgstr "Высокие"
+
+#: backends/mixer_oss.cpp:59
+msgid "Synth"
+msgstr "Синтезатор"
+
+#: backends/mixer_oss.cpp:59
+msgid "Pcm"
+msgstr "PCM"
+
+#: backends/mixer_oss.cpp:59
+msgid "Speaker"
+msgstr "Динамик"
+
+#: backends/mixer_oss.cpp:60
+msgid "Line"
+msgstr "Линейный"
+
+#: backends/mixer_oss.cpp:61
+msgid "Mix"
+msgstr "Mix"
+
+#: backends/mixer_oss.cpp:61
+msgid "Pcm2"
+msgstr "PCM2"
+
+#: backends/mixer_oss.cpp:61
+msgid "RecMon"
+msgstr "Уровень записи"
+
+#: backends/mixer_oss.cpp:62
+msgid "IGain"
+msgstr "IGain"
+
+#: backends/mixer_oss.cpp:62
+msgid "OGain"
+msgstr "OGain"
+
+#: backends/mixer_oss.cpp:62
+msgid "Line1"
+msgstr "Линейный 1"
+
+#: backends/mixer_oss.cpp:63
+msgid "Line2"
+msgstr "Линейный 2"
+
+#: backends/mixer_oss.cpp:63
+msgid "Line3"
+msgstr "Линейный 3"
+
+#: backends/mixer_oss.cpp:63
+msgid "Digital1"
+msgstr "Цифровой 1"
+
+#: backends/mixer_oss.cpp:64
+msgid "Digital2"
+msgstr "Цифровой 2"
+
+#: backends/mixer_oss.cpp:64
+msgid "Digital3"
+msgstr "Цифровой 3"
+
+#: backends/mixer_oss.cpp:64
+msgid "PhoneIn"
+msgstr "Телефонный вход"
+
+#: backends/mixer_oss.cpp:65
+msgid "PhoneOut"
+msgstr "Телефонный выход"
+
+#: backends/mixer_oss.cpp:65
+msgid "Video"
+msgstr "Видео"
+
+#: backends/mixer_oss.cpp:65
+msgid "Radio"
+msgstr "Радио"
+
+#: backends/mixer_oss.cpp:66
+msgid "Monitor"
+msgstr "Монитор"
+
+#: backends/mixer_oss.cpp:66
+msgid "3D-depth"
+msgstr "3D-глубина"
+
+#: backends/mixer_oss.cpp:66
+msgid "3D-center"
 msgstr "3D-центровка"
 
-#: core/volume.cpp:51
-msgctxt "Channel name"
-msgid "Subwoofer"
-msgstr ""
-
-#: core/volume.cpp:52
-#, fuzzy
-msgctxt "Channel name"
-msgid "Surround Left"
-msgstr "Объём"
-
-#: core/volume.cpp:52
-#, fuzzy
-msgctxt "Channel name"
-msgid "Surround Right"
-msgstr "Объём"
-
-#: core/volume.cpp:53
-msgctxt "Channel name"
-msgid "Side Left"
-msgstr ""
-
-#: core/volume.cpp:53
-msgctxt "Channel name"
-msgid "Side Right"
-msgstr ""
-
-#: core/volume.cpp:54
-msgctxt "Channel name"
-msgid "Rear Center"
-msgstr ""
-
-#: core/mixertoolbox.cpp:283
-msgid "Sound drivers supported:"
-msgstr "Поддерживаемые звуковые драйверы:"
-
-#: core/mixertoolbox.cpp:284
-msgid "Sound drivers used:"
-msgstr "Используемые звуковые драйверы:"
-
-#: core/mixertoolbox.cpp:289
-msgid "Experimental multiple-Driver mode activated"
-msgstr ""
-
-#: core/mixdevice.cpp:133 backends/mixer_oss.cpp:67 backends/mixer_oss.cpp:68
+#: backends/mixer_oss.cpp:67 backends/mixer_oss.cpp:68 core/mixdevice.cpp:133
 msgid "unknown"
 msgstr "неизвестное"
 
-#. i18n: file: kmixui.rc:10
-#. i18n: ectx: Menu (file)
-#: rc.cpp:3
-msgid "&File"
-msgstr "&Файл"
+#: backends/mixer_oss.cpp:68
+msgid "unused"
+msgstr "не используется"
 
-#. i18n: file: kmixui.rc:21
-#. i18n: ectx: Menu (help)
-#: rc.cpp:6
-msgid "&Help"
-msgstr "&Справка"
+#: backends/mixer_oss.cpp:238
+msgid ""
+"kmix: Mixer cannot be found.\n"
+"Please check that the soundcard is installed and the\n"
+"soundcard driver is loaded.\n"
+"On Linux you might need to use 'insmod' to load the driver.\n"
+"Use 'soundon' when using commercial OSS."
+msgstr ""
+"kmix: микшер не найден.\n"
+"Проверьте, установлена ли звуковая плата,\n"
+"и загружен ли драйвер для неё.\n"
+"В Linux загрузка драйвера может осуществляться командой «insmod».\n"
+"Используйте «soundon» для коммерческих модулей OSS."
 
-#. i18n: file: colorwidget.ui:20
-#. i18n: ectx: property (text), widget (QCheckBox, customColors)
-#: rc.cpp:9
-msgid "&Use custom colors"
-msgstr "Поль&зовательские цвета"
+#: backends/mixer_alsa9.cpp:960
+msgid ""
+"You do not have permission to access the alsa mixer device.\n"
+"Please verify if all alsa devices are properly created."
+msgstr ""
+"Нет прав доступа к микшеру alsa.\n"
+"Проверьте, созданы ли все необходимые устройства alsa."
 
-#. i18n: file: colorwidget.ui:30
-#. i18n: ectx: property (title), widget (QGroupBox, activeColors)
-#: rc.cpp:12
-msgid "Active"
-msgstr "Активный"
-
-#. i18n: file: colorwidget.ui:52
-#. i18n: ectx: property (text), widget (QLabel, TextLabel3)
-#: rc.cpp:15
-msgid "&Silent:"
-msgstr "&Тихий:"
-
-#. i18n: file: colorwidget.ui:96
-#. i18n: ectx: property (text), widget (QLabel, labelLoad)
-#: rc.cpp:18
-msgid "&Loud:"
-msgstr "&Громкий:"
-
-#. i18n: file: colorwidget.ui:112
-#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
-#: rc.cpp:21
-msgid "&Background:"
-msgstr "&Фон:"
-
-#. i18n: file: colorwidget.ui:131
-#. i18n: ectx: property (title), widget (QGroupBox, mutedColors)
-#: rc.cpp:24
-msgid "Muted"
-msgstr "Звук выключен"
-
-#. i18n: file: colorwidget.ui:143
-#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
-#: rc.cpp:27
-msgid "Lou&d:"
-msgstr "Г&ромкий:"
-
-#. i18n: file: colorwidget.ui:159
-#. i18n: ectx: property (text), widget (QLabel, TextLabel8)
-#: rc.cpp:30
-msgid "Backgrou&nd:"
-msgstr "Ф&он:"
-
-#. i18n: file: colorwidget.ui:175
-#. i18n: ectx: property (text), widget (QLabel, TextLabel7)
-#: rc.cpp:33
-msgid "Silen&t:"
-msgstr "Ти&хий:"
+#: backends/mixer_alsa9.cpp:964
+msgid ""
+"Alsa mixer cannot be found.\n"
+"Please check that the soundcard is installed and the\n"
+"soundcard driver is loaded.\n"
+msgstr ""
+"Микшер alsa не найден.\n"
+"Проверьте, установлена ли звуковая плата\n"
+"и загружен ли драйвер для неё.\n"
 
 #: apps/kmix.cpp:195
 msgid "Audio Setup"
@@ -259,8 +431,8 @@ msgstr "Вспомогательное приложение не установ�
 msgid "Error"
 msgstr "Ошибка"
 
-#: apps/kmix.cpp:1348 gui/dialogchoosebackends.cpp:88
-#: gui/dialogselectmaster.cpp:113 gui/dialogaddview.cpp:132
+#: apps/kmix.cpp:1348 gui/dialogselectmaster.cpp:113 gui/dialogaddview.cpp:132
+#: gui/dialogchoosebackends.cpp:88
 msgid "No sound card is installed or currently plugged in."
 msgstr "Звуковая карта не установлена или не подключена."
 
@@ -393,379 +565,131 @@ msgstr "Сохранить текущий уровень как громкост
 msgid "Restore default volumes"
 msgstr "Восстановить значение громкости по умолчанию"
 
-#: backends/mixer_backend.cpp:306
-msgid ""
-"kmix:You do not have permission to access the mixer device.\n"
-"Please check your operating systems manual to allow the access."
-msgstr ""
-"kmix: Нет прав для использования микшера. Для разрешения доступа\n"
-"обратитесь к документации по операционной системе."
+#: core/volume.cpp:50
+msgctxt "Channel name"
+msgid "Left"
+msgstr "Левый"
 
-#: backends/mixer_backend.cpp:310
-msgid "kmix: Could not write to mixer."
-msgstr "kmix: не удаётся записать в микшер."
+#: core/volume.cpp:50
+msgctxt "Channel name"
+msgid "Right"
+msgstr "Правый"
 
-#: backends/mixer_backend.cpp:313
-msgid "kmix: Could not read from mixer."
-msgstr "kmix: не удаётся прочитать c микшера."
-
-#: backends/mixer_backend.cpp:316
-msgid ""
-"kmix: Mixer cannot be found.\n"
-"Please check that the soundcard is installed and that\n"
-"the soundcard driver is loaded.\n"
-msgstr ""
-"kmix: микшер не найден.\n"
-"Проверьте, установлена ли звуковая плата,\n"
-"и загружен ли драйвер для неё.\n"
-
-#: backends/mixer_backend.cpp:321
-msgid "kmix: Unknown error. Please report how you produced this error."
-msgstr ""
-"kmix: неизвестная ошибка. Сообщите разработчикам, как её воспроизвести."
-
-#: backends/mixer_mpris2.cpp:52 backends/mixer_pulse.cpp:1117
-msgid "Playback Streams"
-msgstr "Воспроизведение звука"
-
-#: backends/mixer_sun.cpp:68
-msgid "Master Volume"
-msgstr "Уровень громкости"
-
-#: backends/mixer_sun.cpp:69
-msgid "Internal Speaker"
-msgstr "Динамик"
-
-#: backends/mixer_sun.cpp:70
-msgid "Headphone"
-msgstr "Наушники"
-
-#: backends/mixer_sun.cpp:71
-msgid "Line Out"
-msgstr "Линейный выход"
-
-#: backends/mixer_sun.cpp:72
-msgid "Record Monitor"
-msgstr "Монитор записи"
-
-#: backends/mixer_sun.cpp:73 backends/mixer_oss.cpp:60
-msgid "Microphone"
-msgstr "Микрофон"
-
-#: backends/mixer_sun.cpp:74
-msgid "Line In"
-msgstr "Линейный вход"
-
-#: backends/mixer_sun.cpp:75 backends/mixer_oss.cpp:60
-msgid "CD"
-msgstr "CD"
-
-#: backends/mixer_sun.cpp:240
-msgid ""
-"kmix: You do not have permission to access the mixer device.\n"
-"Ask your system administrator to fix /dev/audioctl to allow access."
-msgstr ""
-"kmix: нет прав доступа к микшеру. Обратитесь к \n"
-"системному администратору, чтобы он открыл доступ к /dev/audioctl."
-
-#: backends/mixer_alsa9.cpp:960
-msgid ""
-"You do not have permission to access the alsa mixer device.\n"
-"Please verify if all alsa devices are properly created."
-msgstr ""
-"Нет прав доступа к микшеру alsa.\n"
-"Проверьте, созданы ли все необходимые устройства alsa."
-
-#: backends/mixer_alsa9.cpp:964
-msgid ""
-"Alsa mixer cannot be found.\n"
-"Please check that the soundcard is installed and the\n"
-"soundcard driver is loaded.\n"
-msgstr ""
-"Микшер alsa не найден.\n"
-"Проверьте, установлена ли звуковая плата\n"
-"и загружен ли драйвер для неё.\n"
-
-#: backends/mixer_backend_i18n.cpp:24
-msgid "Recording level of the microphone input."
-msgstr "Уровень записи микрофонного входа."
-
-#: backends/mixer_backend_i18n.cpp:25
-msgid ""
-"Controls the volume of the front speakers or all speakers (depending on your "
-"soundcard model). If you use a digital output, you might need to also use "
-"other controls like ADC or DAC. For headphones, soundcards often supply a "
-"Headphone control."
-msgstr ""
-"Управление громкостью фронтальных динамиков или всех динамиков, в "
-"зависимости от вашей звуковой карты. Если вы используете цифровой звуковой "
-"выход, может потребоваться регулировка АЦП или ЦАП. Для наушников звуковые "
-"карты часто имеют отдельный регулятор громкости."
-
-# Можно было бы перевести PCM как ИКМ, но название соответствующего регулятора перевести нельзя, поэтому для соответствия оставил PCM.
-#
-# Из Википедии: Импульсно-кодовая модуляция (ИКМ, англ. Pulse Code Modulation, PCM)
-#: backends/mixer_backend_i18n.cpp:26
-msgid ""
-"Most media, such as MP3s or Videos, are played back using the PCM channel. "
-"As such, the playback volume of such media is controlled by both this and "
-"the Master or Headphone channels."
-msgstr ""
-"Большинство мультимедийных файлов, например, MP3 и видеозаписи, "
-"воспроизводится через канал PCM. При этом громкость регулируется и этим "
-"каналом, и главным или микрофонным выходом."
-
-#: backends/mixer_backend_i18n.cpp:27
-msgid ""
-"Controls the headphone volume. Some soundcards include a switch that must be "
-"manually activated to enable the headphone output."
-msgstr ""
-"Управление громкостью наушников. Некоторые звуковые карты имеют выключатель "
-"выхода на наушники, который включается вручную."
-
-#: backends/mixer_backend_i18n.cpp:28
-msgid "---"
-msgstr "---"
-
-#: backends/mixer_pulse.cpp:340 backends/mixer_pulse.cpp:399
-msgid "Unknown Application"
-msgstr "Неизвестное приложение"
-
-#: backends/mixer_pulse.cpp:447 backends/mixer_pulse.cpp:483
-msgid "Event Sounds"
-msgstr "Звуки уведомлений"
-
-#: backends/mixer_pulse.cpp:1101
-msgid "Playback Devices"
-msgstr "Устройства воспроизведения"
-
-#: backends/mixer_pulse.cpp:1109
-msgid "Capture Devices"
-msgstr "Устройства захвата звука"
-
-#: backends/mixer_pulse.cpp:1128
-msgid "Capture Streams"
-msgstr "Захват звука"
-
-#: backends/mixer_pulse.cpp:1229
-msgid "Volume Control Feedback Sound"
-msgstr "Управление акустической обратной связью"
-
-#: backends/mixer_oss4.cpp:496 backends/mixer_oss.cpp:234
-msgid ""
-"kmix: You do not have permission to access the mixer device.\n"
-"Login as root and do a 'chmod a+rw /dev/mixer*' to allow the access."
-msgstr ""
-"kmix: нет прав доступа к микшеру. Для разрешения доступа\n"
-"используйте «chmod a+rw /dev/mixer*», войдя в систему как root."
-
-#: backends/mixer_oss4.cpp:500
-msgid ""
-"kmix: Mixer cannot be found.\n"
-"Please check that the soundcard is installed and the\n"
-"soundcard driver is loaded.\n"
-"On Linux you might need to use 'insmod' to load the driver.\n"
-"Use 'soundon' when using OSS4 from 4front."
-msgstr ""
-"kmix: микшер не найден.\n"
-"Проверьте, установлена ли звуковая плата,\n"
-"и загружен ли драйвер для неё.\n"
-"В Linux загрузка драйвера может осуществляться командой «insmod».\n"
-"Используйте «soundon» для модулей OSS4 от 4front."
-
-#: backends/mixer_oss.cpp:58
-msgid "Volume"
-msgstr "Громкость"
-
-#: backends/mixer_oss.cpp:58
-msgid "Bass"
-msgstr "Низкие"
-
-#: backends/mixer_oss.cpp:58
-msgid "Treble"
-msgstr "Высокие"
-
-#: backends/mixer_oss.cpp:59
-msgid "Synth"
-msgstr "Синтезатор"
-
-#: backends/mixer_oss.cpp:59
-msgid "Pcm"
-msgstr "PCM"
-
-#: backends/mixer_oss.cpp:59
-msgid "Speaker"
-msgstr "Динамик"
-
-#: backends/mixer_oss.cpp:60
-msgid "Line"
-msgstr "Линейный"
-
-#: backends/mixer_oss.cpp:61
-msgid "Mix"
-msgstr "Mix"
-
-#: backends/mixer_oss.cpp:61
-msgid "Pcm2"
-msgstr "PCM2"
-
-#: backends/mixer_oss.cpp:61
-msgid "RecMon"
-msgstr "Уровень записи"
-
-#: backends/mixer_oss.cpp:62
-msgid "IGain"
-msgstr "IGain"
-
-#: backends/mixer_oss.cpp:62
-msgid "OGain"
-msgstr "OGain"
-
-#: backends/mixer_oss.cpp:62
-msgid "Line1"
-msgstr "Линейный 1"
-
-#: backends/mixer_oss.cpp:63
-msgid "Line2"
-msgstr "Линейный 2"
-
-#: backends/mixer_oss.cpp:63
-msgid "Line3"
-msgstr "Линейный 3"
-
-#: backends/mixer_oss.cpp:63
-msgid "Digital1"
-msgstr "Цифровой 1"
-
-#: backends/mixer_oss.cpp:64
-msgid "Digital2"
-msgstr "Цифровой 2"
-
-#: backends/mixer_oss.cpp:64
-msgid "Digital3"
-msgstr "Цифровой 3"
-
-#: backends/mixer_oss.cpp:64
-msgid "PhoneIn"
-msgstr "Телефонный вход"
-
-#: backends/mixer_oss.cpp:65
-msgid "PhoneOut"
-msgstr "Телефонный выход"
-
-#: backends/mixer_oss.cpp:65
-msgid "Video"
-msgstr "Видео"
-
-#: backends/mixer_oss.cpp:65
-msgid "Radio"
-msgstr "Радио"
-
-#: backends/mixer_oss.cpp:66
-msgid "Monitor"
-msgstr "Монитор"
-
-#: backends/mixer_oss.cpp:66
-msgid "3D-depth"
-msgstr "3D-глубина"
-
-#: backends/mixer_oss.cpp:66
-msgid "3D-center"
+#: core/volume.cpp:51
+#, fuzzy
+msgctxt "Channel name"
+msgid "Center"
 msgstr "3D-центровка"
 
-#: backends/mixer_oss.cpp:68
-msgid "unused"
-msgstr "не используется"
-
-#: backends/mixer_oss.cpp:238
-msgid ""
-"kmix: Mixer cannot be found.\n"
-"Please check that the soundcard is installed and the\n"
-"soundcard driver is loaded.\n"
-"On Linux you might need to use 'insmod' to load the driver.\n"
-"Use 'soundon' when using commercial OSS."
+#: core/volume.cpp:51
+msgctxt "Channel name"
+msgid "Subwoofer"
 msgstr ""
-"kmix: микшер не найден.\n"
-"Проверьте, установлена ли звуковая плата,\n"
-"и загружен ли драйвер для неё.\n"
-"В Linux загрузка драйвера может осуществляться командой «insmod».\n"
-"Используйте «soundon» для коммерческих модулей OSS."
 
-#: gui/dialogviewconfiguration.cpp:161 gui/viewbase.cpp:102
-msgid "Configure Channels"
-msgstr "Настроить каналы"
+#: core/volume.cpp:52
+#, fuzzy
+msgctxt "Channel name"
+msgid "Surround Left"
+msgstr "Объём"
 
-#: gui/dialogviewconfiguration.cpp:175
-msgid "Configuration of the channels. Drag icon to update."
-msgstr "Настройка каналов. Перетащите значок для обновления."
+#: core/volume.cpp:52
+#, fuzzy
+msgctxt "Channel name"
+msgid "Surround Right"
+msgstr "Объём"
 
-#: gui/dialogviewconfiguration.cpp:267 gui/dialogviewconfiguration.cpp:365
-msgid "Visible channels"
-msgstr "Видимые каналы"
+#: core/volume.cpp:53
+msgctxt "Channel name"
+msgid "Side Left"
+msgstr ""
 
-#: gui/dialogviewconfiguration.cpp:270 gui/dialogviewconfiguration.cpp:366
-msgid "Available channels"
-msgstr "Доступные каналы:"
+#: core/volume.cpp:53
+msgctxt "Channel name"
+msgid "Side Right"
+msgstr ""
 
-#: gui/dialogviewconfiguration.cpp:363
-msgid "Show the selected channel"
-msgstr "Показать выбранный канал"
+#: core/volume.cpp:54
+msgctxt "Channel name"
+msgid "Rear Center"
+msgstr ""
 
-#: gui/dialogviewconfiguration.cpp:364
-msgid "Hide the selected channel"
-msgstr "Скрыть выбранный канал"
+#: core/mixertoolbox.cpp:283
+msgid "Sound drivers supported:"
+msgstr "Поддерживаемые звуковые драйверы:"
 
-#: gui/dialogchoosebackends.cpp:81
-msgid "Select the Mixers to display in the sound menu"
-msgstr "Выберите микшер для отображения в меню звука"
+#: core/mixertoolbox.cpp:284
+msgid "Sound drivers used:"
+msgstr "Используемые звуковые драйверы:"
 
-#: gui/dialogchoosebackends.cpp:104
-msgid "Select Mixers"
-msgstr "Выбрать микшер"
+#: core/mixertoolbox.cpp:289
+msgid "Experimental multiple-Driver mode activated"
+msgstr ""
 
-#: gui/mdwenum.cpp:60 gui/mdwslider.cpp:109
-msgid "&Hide"
-msgstr "Ск&рыть"
+#. i18n: file: kmixui.rc:10
+#. i18n: ectx: Menu (file)
+#: rc.cpp:3
+msgid "&File"
+msgstr "&Файл"
 
-#: gui/mdwenum.cpp:63 gui/mdwslider.cpp:132
-msgid "C&onfigure Shortcuts..."
-msgstr "&Комбинации клавиш..."
+#. i18n: file: kmixui.rc:21
+#. i18n: ectx: Menu (help)
+#: rc.cpp:6
+msgid "&Help"
+msgstr "&Справка"
 
-#: gui/viewsliders.cpp:226
-msgid "Nothing is capturing audio."
-msgstr "Не выполняется захват звука."
+#. i18n: file: colorwidget.ui:20
+#. i18n: ectx: property (text), widget (QCheckBox, customColors)
+#: rc.cpp:9
+msgid "&Use custom colors"
+msgstr "Поль&зовательские цвета"
 
-#: gui/viewsliders.cpp:228 gui/viewsliders.cpp:234
-msgid "Nothing is playing audio."
-msgstr "Не выполняется воспроизведение звука."
+#. i18n: file: colorwidget.ui:30
+#. i18n: ectx: property (title), widget (QGroupBox, activeColors)
+#: rc.cpp:12
+msgid "Active"
+msgstr "Активный"
 
-#: gui/viewsliders.cpp:230
-msgid "No capture devices."
-msgstr "Нет устройств захвата."
+#. i18n: file: colorwidget.ui:52
+#. i18n: ectx: property (text), widget (QLabel, TextLabel3)
+#: rc.cpp:15
+msgid "&Silent:"
+msgstr "&Тихий:"
 
-#: gui/viewsliders.cpp:232
-msgid "No playback devices."
-msgstr "Нет устройств воспроизведения."
+#. i18n: file: colorwidget.ui:96
+#. i18n: ectx: property (text), widget (QLabel, labelLoad)
+#: rc.cpp:18
+msgid "&Loud:"
+msgstr "&Громкий:"
 
-#: gui/kmixdockwidget.cpp:58
-msgid "Volume Control"
-msgstr "Регулятор громкости"
+#. i18n: file: colorwidget.ui:112
+#. i18n: ectx: property (text), widget (QLabel, TextLabel4)
+#: rc.cpp:21
+msgid "&Background:"
+msgstr "&Фон:"
 
-#: gui/kmixdockwidget.cpp:143
-msgid "M&ute"
-msgstr "&Выключить звук"
+#. i18n: file: colorwidget.ui:131
+#. i18n: ectx: property (title), widget (QGroupBox, mutedColors)
+#: rc.cpp:24
+msgid "Muted"
+msgstr "Звук выключен"
 
-#: gui/kmixdockwidget.cpp:168
-msgid "Mixer cannot be found"
-msgstr "Микшер не найден"
+#. i18n: file: colorwidget.ui:143
+#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
+#: rc.cpp:27
+msgid "Lou&d:"
+msgstr "Г&ромкий:"
 
-#: gui/kmixdockwidget.cpp:176
-msgid "Volume at %1%"
-msgstr "Громкость %1%"
+#. i18n: file: colorwidget.ui:159
+#. i18n: ectx: property (text), widget (QLabel, TextLabel8)
+#: rc.cpp:30
+msgid "Backgrou&nd:"
+msgstr "Ф&он:"
 
-#: gui/kmixdockwidget.cpp:178
-msgid " (Muted)"
-msgstr " (звук выключен)"
+#. i18n: file: colorwidget.ui:175
+#. i18n: ectx: property (text), widget (QLabel, TextLabel7)
+#: rc.cpp:33
+msgid "Silen&t:"
+msgstr "Ти&хий:"
 
 #: gui/dialogselectmaster.cpp:42 gui/dialogselectmaster.cpp:155
 msgid "Select Master Channel"
@@ -782,22 +706,6 @@ msgstr "Текущий микшер"
 #: gui/dialogselectmaster.cpp:106
 msgid "Select the channel representing the master volume:"
 msgstr "Выберите главный канал регулировки громкости:"
-
-#: gui/viewdockareapopup.cpp:347
-msgid "Mixer"
-msgstr "Микшер"
-
-#: gui/viewdockareapopup.cpp:380
-msgid "Load volume profile %1"
-msgstr "Загрузить профиль громкостей %1"
-
-#: gui/viewbase.cpp:163
-msgid "&Channels"
-msgstr "Ка&налы"
-
-#: gui/viewbase.cpp:216
-msgid "Device Settings"
-msgstr "Параметры устройства"
 
 #: gui/dialogaddview.cpp:52
 msgid "All controls"
@@ -822,6 +730,34 @@ msgstr "Выберите микшер:"
 #: gui/dialogaddview.cpp:125
 msgid "Select the design for the new view:"
 msgstr "Выберите оформление для нового вида:"
+
+#: gui/kmixdockwidget.cpp:58
+msgid "Volume Control"
+msgstr "Регулятор громкости"
+
+#: gui/kmixdockwidget.cpp:143
+msgid "M&ute"
+msgstr "&Выключить звук"
+
+#: gui/kmixdockwidget.cpp:168
+msgid "Mixer cannot be found"
+msgstr "Микшер не найден"
+
+#: gui/kmixdockwidget.cpp:176
+msgid "Volume at %1%"
+msgstr "Громкость %1%"
+
+#: gui/kmixdockwidget.cpp:178
+msgid " (Muted)"
+msgstr " (звук выключен)"
+
+#: gui/mdwenum.cpp:60 gui/mdwslider.cpp:109
+msgid "&Hide"
+msgstr "Ск&рыть"
+
+#: gui/mdwenum.cpp:63 gui/mdwslider.cpp:132
+msgid "C&onfigure Shortcuts..."
+msgstr "&Комбинации клавиш..."
 
 #: gui/kmixprefdlg.cpp:58
 msgid "Configure"
@@ -947,6 +883,14 @@ msgstr "Значок в сис&темном лотке"
 msgid "Docks the mixer into the KDE system tray"
 msgstr "Показывать значок микшера в системном лотке"
 
+#: gui/viewdockareapopup.cpp:347
+msgid "Mixer"
+msgstr "Микшер"
+
+#: gui/viewdockareapopup.cpp:380
+msgid "Load volume profile %1"
+msgstr "Загрузить профиль громкостей %1"
+
 #: gui/mdwslider.cpp:103
 msgid "&Split Channels"
 msgstr "Разделить ка&налы"
@@ -990,3 +934,59 @@ msgstr "%1 (захват)"
 #: gui/mdwslider.cpp:1216
 msgid "Automatic According to Category"
 msgstr "Автоматически, в зависимости от категории"
+
+#: gui/viewsliders.cpp:226
+msgid "Nothing is capturing audio."
+msgstr "Не выполняется захват звука."
+
+#: gui/viewsliders.cpp:228 gui/viewsliders.cpp:234
+msgid "Nothing is playing audio."
+msgstr "Не выполняется воспроизведение звука."
+
+#: gui/viewsliders.cpp:230
+msgid "No capture devices."
+msgstr "Нет устройств захвата."
+
+#: gui/viewsliders.cpp:232
+msgid "No playback devices."
+msgstr "Нет устройств воспроизведения."
+
+#: gui/dialogchoosebackends.cpp:81
+msgid "Select the Mixers to display in the sound menu"
+msgstr "Выберите микшер для отображения в меню звука"
+
+#: gui/dialogchoosebackends.cpp:104
+msgid "Select Mixers"
+msgstr "Выбрать микшер"
+
+#: gui/dialogviewconfiguration.cpp:161 gui/viewbase.cpp:102
+msgid "Configure Channels"
+msgstr "Настроить каналы"
+
+#: gui/dialogviewconfiguration.cpp:175
+msgid "Configuration of the channels. Drag icon to update."
+msgstr "Настройка каналов. Перетащите значок для обновления."
+
+#: gui/dialogviewconfiguration.cpp:267 gui/dialogviewconfiguration.cpp:365
+msgid "Visible channels"
+msgstr "Видимые каналы"
+
+#: gui/dialogviewconfiguration.cpp:270 gui/dialogviewconfiguration.cpp:366
+msgid "Available channels"
+msgstr "Доступные каналы:"
+
+#: gui/dialogviewconfiguration.cpp:363
+msgid "Show the selected channel"
+msgstr "Показать выбранный канал"
+
+#: gui/dialogviewconfiguration.cpp:364
+msgid "Hide the selected channel"
+msgstr "Скрыть выбранный канал"
+
+#: gui/viewbase.cpp:163
+msgid "&Channels"
+msgstr "Ка&налы"
+
+#: gui/viewbase.cpp:216
+msgid "Device Settings"
+msgstr "Параметры устройства"

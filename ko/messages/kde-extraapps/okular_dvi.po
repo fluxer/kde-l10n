@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: okular_dvi\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-05-05 17:54+0000\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2014-08-24 00:39+0900\n"
 "Last-Translator: Park Shinjo <kde@peremen.name>\n"
 "Language-Team: Korean <kde@peremen.name>\n"
@@ -17,6 +17,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.5\n"
+
+#: psgs.cpp:263
+msgid ""
+"The version of Ghostview that is installed on this computer does not contain "
+"any of the Ghostview device drivers that are known to Okular. PostScript "
+"support has therefore been turned off in Okular."
+msgstr ""
+"이 컴퓨터에 설치되어 있는 Ghostview는 Okular에서 지원하는 Ghostview 장치 드라"
+"이버를 포함하고 있지 않습니다. Okular의 포스트스크립트 지원을 끕니다."
+
+#: psgs.cpp:267
+msgid ""
+"<qt><p>The Ghostview program, which Okular uses internally to display the "
+"PostScript graphics that is included in this DVI file, is generally able to "
+"write its output in a variety of formats. The sub-programs that Ghostview "
+"uses for these tasks are called 'device drivers'; there is one device driver "
+"for each format that Ghostview is able to write. Different versions of "
+"Ghostview often have different sets of device drivers available. It seems "
+"that the version of Ghostview that is installed on this computer does not "
+"contain <strong>any</strong> of the device drivers that are known to Okular."
+"</p><p>It seems unlikely that a regular installation of Ghostview would not "
+"contain these drivers. This error may therefore point to a serious "
+"misconfiguration of the Ghostview installation on your computer.</p><p>If "
+"you want to fix the problems with Ghostview, you can use the command "
+"<strong>gs --help</strong> to display the list of device drivers contained "
+"in Ghostview. Among others, Okular can use the 'png256', 'jpeg' and 'pnm' "
+"drivers. Note that Okular needs to be restarted to re-enable PostScript "
+"support.</p></qt>"
+msgstr ""
+"<qt><p>이 DVI 파일에 포함된 포스트스크립트 그래픽을 보여주는 데 내부적으로 사"
+"용하는 Ghostview 프로그램은 다양한 형식으로 출력할 수 있습니다. Ghostview 프"
+"로그램에서 이 작업에 사용하는 프로그램은 장치 드라이버라고 불리며, 각각의 형"
+"식에 대한 장치 드라이버가 존재합니다. 다른 버전의 Ghostview는 서로 다른 장치 "
+"드라이버를 포함합니다. 이 컴퓨터에 설치되어 있는 Ghostview에는 <strong>알려지"
+"지 않은</strong> 버전의 드라이버만 설치되어 있습니다.</p><p>Ghostview가 올바"
+"르게 설치되었다면 이러한 드라이버만 포함하고 있지 않습니다. 컴퓨터에 "
+"Ghostview가 잘못 설치되었거나 설정된 것 같습니다.</p><p>이 문제를 해결하려"
+"면, <strong>gs --help</strong> 명령으로 현재 설치된 Ghostview의 장치 드라이버"
+"를 확인해 보십시오. 'png256', 'jpeg', 'pnm' 드라이버가 설치되어 있어야 합니"
+"다. 이 문제를 해결했으면 Okular를 다시 시작하십시오.</p></qt>"
 
 #: dviFile.cpp:111
 msgid "The DVI file does not start with the preamble."
@@ -86,93 +126,6 @@ msgstr ""
 "<strong>pdf2ps</strong> 프로그램의 출력입니다:</p><p><strong>%2</strong></"
 "p></qt>"
 
-#: dviRenderer_prescan.cpp:86
-msgid "Embedding %1"
-msgstr "%1 임베드 중"
-
-#: dviRenderer_prescan.cpp:101
-msgid ""
-"Page %1: The PDF file <strong>%2</strong> could not be converted to "
-"PostScript.<br>"
-msgstr ""
-"%1쪽: PDF 파일 <strong>%2</strong>을(를) 포스트스크립트 파일로 변환할 수 없습"
-"니다."
-
-#: dviRenderer_prescan.cpp:103
-msgid ""
-"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
-msgstr "%1쪽: 포스트스크립트 파일 <strong>%2</strong>을(를) 찾을 수 없습니다."
-
-#: dviRenderer_prescan.cpp:252
-msgid "The papersize data '%1' could not be parsed."
-msgstr "종이 크기 데이터 '%1'을(를) 처리할 수 없습니다."
-
-#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
-msgid "The DVI code referred to font #%1, which was not previously defined."
-msgstr "DVI 코드에서 정의되지 않은 글꼴 #%1을 참조했습니다."
-
-#: dviRenderer_draw.cpp:261
-msgid "The DVI code set a character of an unknown font."
-msgstr "DVI 코드에서 알 수 없는 글꼴의 문자를 설정했습니다."
-
-#: dviRenderer_draw.cpp:375
-msgid "The stack was not empty when the EOP command was encountered."
-msgstr "EOP 명령을 실행했을 때 스택이 비어 있지 않습니다."
-
-#: dviRenderer_draw.cpp:387
-msgid "The stack was empty when a POP command was encountered."
-msgstr "POP 명령을 실행했을 때 스택이 비었습니다."
-
-#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
-msgid "The DVI code referred to a font which was not previously defined."
-msgstr "DVI 코드에서 정의되지 않은 글꼴을 참고합니다."
-
-#: dviRenderer_draw.cpp:570
-msgid "An illegal command was encountered."
-msgstr "잘못된 명령어를 만났습니다."
-
-#: dviRenderer_draw.cpp:575
-msgid "The unknown op-code %1 was encountered."
-msgstr "알 수 없는 OP 코드 %1을(를) 만났습니다."
-
-#: util.cpp:77
-msgid ""
-"Fatal error.\n"
-"\n"
-msgstr ""
-"치명적 오류.\n"
-"\n"
-
-#: util.cpp:79
-msgid ""
-"\n"
-"\n"
-"This probably means that either you found a bug in Okular,\n"
-"or that the DVI file, or auxiliary files (such as font files, \n"
-"or virtual font files) were really badly broken.\n"
-"Okular will abort after this message. If you believe that you \n"
-"found a bug, or that Okular should behave better in this situation\n"
-"please report the problem."
-msgstr ""
-"\n"
-"\n"
-"이것은 Okular에 버그가 있거나 DVI 파일, 또는 글꼴과 가상 글꼴 파일\n"
-"과 같은 외부 파일이 심각하게 손상되었다는 뜻입니다.\n"
-"이 메시지가 출력된 후 중단할 것입니다. 버그를 찾았거나, 이 상황에서\n"
-"좀 더 좋게 대처할 필요가 있는 경우 문제를 보고해 주십시오."
-
-#: TeXFontDefinition.cpp:107
-msgid "Cannot find font %1, file %2."
-msgstr "글꼴 %1, 파일 %2을(를) 찾을 수 없습니다."
-
-#: TeXFontDefinition.cpp:123
-msgid "Checksum mismatch for font file %1"
-msgstr "글꼴 파일 %1의 합계가 맞지 않음"
-
-#: TeXFontDefinition.cpp:171
-msgid "Cannot recognize format for font file %1"
-msgstr "글꼴 파일 %1의 형식을 알 수 없음"
-
 #: special.cpp:37
 msgid "That makes 25 errors. Further error messages will not be printed."
 msgstr "25개의 오류가 발생했습니다. 더 이상의 메시지는 표시되지 않습니다."
@@ -211,6 +164,57 @@ msgstr "DVI 파일 '%1'의 %2쪽에서 오류 발생. 텍스트 회전 각도를
 msgid "The special command '%1' is not implemented."
 msgstr "특수 명령 '%1'은(는) 구현되지 않았습니다."
 
+#: util.cpp:77
+msgid ""
+"Fatal error.\n"
+"\n"
+msgstr ""
+"치명적 오류.\n"
+"\n"
+
+#: util.cpp:79
+msgid ""
+"\n"
+"\n"
+"This probably means that either you found a bug in Okular,\n"
+"or that the DVI file, or auxiliary files (such as font files, \n"
+"or virtual font files) were really badly broken.\n"
+"Okular will abort after this message. If you believe that you \n"
+"found a bug, or that Okular should behave better in this situation\n"
+"please report the problem."
+msgstr ""
+"\n"
+"\n"
+"이것은 Okular에 버그가 있거나 DVI 파일, 또는 글꼴과 가상 글꼴 파일\n"
+"과 같은 외부 파일이 심각하게 손상되었다는 뜻입니다.\n"
+"이 메시지가 출력된 후 중단할 것입니다. 버그를 찾았거나, 이 상황에서\n"
+"좀 더 좋게 대처할 필요가 있는 경우 문제를 보고해 주십시오."
+
+#: dviRenderer_prescan.cpp:86
+msgid "Embedding %1"
+msgstr "%1 임베드 중"
+
+#: dviRenderer_prescan.cpp:101
+msgid ""
+"Page %1: The PDF file <strong>%2</strong> could not be converted to "
+"PostScript.<br>"
+msgstr ""
+"%1쪽: PDF 파일 <strong>%2</strong>을(를) 포스트스크립트 파일로 변환할 수 없습"
+"니다."
+
+#: dviRenderer_prescan.cpp:103
+msgid ""
+"Page %1: The PostScript file <strong>%2</strong> could not be found.<br>"
+msgstr "%1쪽: 포스트스크립트 파일 <strong>%2</strong>을(를) 찾을 수 없습니다."
+
+#: dviRenderer_prescan.cpp:252
+msgid "The papersize data '%1' could not be parsed."
+msgstr "종이 크기 데이터 '%1'을(를) 처리할 수 없습니다."
+
+#: dviRenderer_prescan.cpp:648 dviRenderer_draw.cpp:290
+msgid "The DVI code referred to font #%1, which was not previously defined."
+msgstr "DVI 코드에서 정의되지 않은 글꼴 #%1을 참조했습니다."
+
 #: dviRenderer.cpp:231 dviRenderer.cpp:468
 msgid "File corruption. %1"
 msgstr "파일 잘못됨: %1"
@@ -243,6 +247,83 @@ msgid ""
 msgstr ""
 "Okular에서 TeX 파일 %2의 %1번째 줄에 해당하는 DVI 파일의 위치를 찾을 수 없습"
 "니다."
+
+#: TeXFont_PFB.cpp:42
+msgid ""
+"The font file %1 could be opened and read, but its font format is "
+"unsupported."
+msgstr ""
+"글꼴 파일 %1을(를) 불러오고 읽을 수 있지만 글꼴 형식을 지원하지 않습니다."
+
+#: TeXFont_PFB.cpp:48
+msgid "The font file %1 is broken, or it could not be opened or read."
+msgstr "글꼴 파일 %1이(가) 깨졌거나, 읽거나 열 수 없습니다."
+
+#: TeXFont_PFB.cpp:169
+msgid ""
+"FreeType reported an error when setting the character size for font file %1."
+msgstr ""
+"FreeType에서 글꼴 파일 %1의 글자 크기를 설정하는 중 오류가 발생했습니다."
+
+#: TeXFont_PFB.cpp:185
+msgid "FreeType is unable to load glyph #%1 from font file %2."
+msgstr "FreeType에서 글꼴 파일 %2의 문자 #%1을(를) 불러올 수 없습니다."
+
+#: TeXFont_PFB.cpp:197
+msgid "FreeType is unable to render glyph #%1 from font file %2."
+msgstr "FreeType에서 글꼴 파일 %2의 문자 #%1을(를) 그릴 수 없습니다."
+
+#: TeXFont_PFB.cpp:210
+msgid "Glyph #%1 is empty."
+msgstr "문자 #%1이(가) 비어 있습니다."
+
+#: TeXFont_PFB.cpp:211
+msgid "Glyph #%1 from font file %2 is empty."
+msgstr "글꼴 파일 %2의 문자 #%1이(가) 비어 있습니다."
+
+#: TeXFont_PFB.cpp:279
+msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
+msgstr "FreeType에서 글꼴 파일 %2의 문자 #%1의 크기를 불러올 수 없습니다."
+
+#: TeXFontDefinition.cpp:107
+msgid "Cannot find font %1, file %2."
+msgstr "글꼴 %1, 파일 %2을(를) 찾을 수 없습니다."
+
+#: TeXFontDefinition.cpp:123
+msgid "Checksum mismatch for font file %1"
+msgstr "글꼴 파일 %1의 합계가 맞지 않음"
+
+#: TeXFontDefinition.cpp:171
+msgid "Cannot recognize format for font file %1"
+msgstr "글꼴 파일 %1의 형식을 알 수 없음"
+
+#: dviRenderer_draw.cpp:261
+msgid "The DVI code set a character of an unknown font."
+msgstr "DVI 코드에서 알 수 없는 글꼴의 문자를 설정했습니다."
+
+#: dviRenderer_draw.cpp:375
+msgid "The stack was not empty when the EOP command was encountered."
+msgstr "EOP 명령을 실행했을 때 스택이 비어 있지 않습니다."
+
+#: dviRenderer_draw.cpp:387
+msgid "The stack was empty when a POP command was encountered."
+msgstr "POP 명령을 실행했을 때 스택이 비었습니다."
+
+#: dviRenderer_draw.cpp:520 dviRenderer_draw.cpp:529
+msgid "The DVI code referred to a font which was not previously defined."
+msgstr "DVI 코드에서 정의되지 않은 글꼴을 참고합니다."
+
+#: dviRenderer_draw.cpp:570
+msgid "An illegal command was encountered."
+msgstr "잘못된 명령어를 만났습니다."
+
+#: dviRenderer_draw.cpp:575
+msgid "The unknown op-code %1 was encountered."
+msgstr "알 수 없는 OP 코드 %1을(를) 만났습니다."
+
+#: vf.cpp:182
+msgid "Wrong command byte found in VF macro list: %1"
+msgstr "VF 매크로 목록에서 잘못된 명령 바이트: %1"
 
 #: TeXFont_PK.cpp:90
 msgid "Cannot open font file %1."
@@ -292,13 +373,43 @@ msgstr "작성자/일자"
 msgid "Font file not found"
 msgstr "글꼴 파일을 찾을 수 없음"
 
-#: pageSize.cpp:324
-msgid "portrait"
-msgstr "세로"
+#: fontpool.cpp:209
+msgid ""
+"<qt><p>Okular was not able to locate all the font files which are necessary "
+"to display the current DVI file. Your document might be unreadable.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p>Okular에서 현재 DVI 파일을 표시하기 위한 글꼴 파일 중 일부를 찾을 수 "
+"없습니다. 문서가 제대로 보이지 않을 수도 있습니다.</p><p><small><b>PATH:</b> "
+"%1</small></p><p><small>%2</small></p></qt>"
 
-#: pageSize.cpp:326
-msgid "landscape"
-msgstr "가로"
+#: fontpool.cpp:280
+msgid ""
+"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
+"font files could not be located, and your document might be unreadable.<br/"
+">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
+"your system, or it cannot be found in the current search path.</"
+"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
+msgstr ""
+"<qt><p><em>kpsewhich</em>를 실행하는 데 문제가 발생하였습니다. 일부 글꼴 파일"
+"의 위치를 찾을 수 없었으며 문서를 읽지 못할 수도 있습니다.<br/>가능한 원인: "
+"<em>kpsewhich</em> 프로그램이 시스템에 설치되어 있지 않거나 현재 검색 경로에 "
+"포함되어 있지 않을 수도 있습니다.</p><p><small><b>PATH:</b> %1</small></"
+"p><p><small>%2</small></p></qt>"
+
+#: fontpool.cpp:299
+msgid ""
+"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
+"error %2). As a result, some font files could not be located, and your "
+"document might be unreadable.</qt>"
+msgstr ""
+"<qt><em>kpsewhich</em>가 담당하는 글꼴 생성 과정이 중단되었습니다. (종료 코"
+"드 %1, 오류 %2) 일부 글꼴 파일을 찾을 수 없으므로 문서의 일부분을 읽지 못할 "
+"수도 있습니다.</qt>"
+
+#: fontpool.cpp:477
+msgid "Currently generating %1 at %2 dpi..."
+msgstr "%1을(를) %2 dpi로 생성 중..."
 
 #: dviexport.cpp:129
 msgid ""
@@ -363,121 +474,10 @@ msgstr ""
 "<qt>외부 프로그램 dvips에서 오류가 발생했습니다. 파일 메뉴에 있는 <strong>문"
 "서 정보 대화상자</strong>에서 자세한 오류를 알 수 있습니다.</qt>"
 
-#: psgs.cpp:263
-msgid ""
-"The version of Ghostview that is installed on this computer does not contain "
-"any of the Ghostview device drivers that are known to Okular. PostScript "
-"support has therefore been turned off in Okular."
-msgstr ""
-"이 컴퓨터에 설치되어 있는 Ghostview는 Okular에서 지원하는 Ghostview 장치 드라"
-"이버를 포함하고 있지 않습니다. Okular의 포스트스크립트 지원을 끕니다."
+#: pageSize.cpp:324
+msgid "portrait"
+msgstr "세로"
 
-#: psgs.cpp:267
-msgid ""
-"<qt><p>The Ghostview program, which Okular uses internally to display the "
-"PostScript graphics that is included in this DVI file, is generally able to "
-"write its output in a variety of formats. The sub-programs that Ghostview "
-"uses for these tasks are called 'device drivers'; there is one device driver "
-"for each format that Ghostview is able to write. Different versions of "
-"Ghostview often have different sets of device drivers available. It seems "
-"that the version of Ghostview that is installed on this computer does not "
-"contain <strong>any</strong> of the device drivers that are known to Okular."
-"</p><p>It seems unlikely that a regular installation of Ghostview would not "
-"contain these drivers. This error may therefore point to a serious "
-"misconfiguration of the Ghostview installation on your computer.</p><p>If "
-"you want to fix the problems with Ghostview, you can use the command "
-"<strong>gs --help</strong> to display the list of device drivers contained "
-"in Ghostview. Among others, Okular can use the 'png256', 'jpeg' and 'pnm' "
-"drivers. Note that Okular needs to be restarted to re-enable PostScript "
-"support.</p></qt>"
-msgstr ""
-"<qt><p>이 DVI 파일에 포함된 포스트스크립트 그래픽을 보여주는 데 내부적으로 사"
-"용하는 Ghostview 프로그램은 다양한 형식으로 출력할 수 있습니다. Ghostview 프"
-"로그램에서 이 작업에 사용하는 프로그램은 장치 드라이버라고 불리며, 각각의 형"
-"식에 대한 장치 드라이버가 존재합니다. 다른 버전의 Ghostview는 서로 다른 장치 "
-"드라이버를 포함합니다. 이 컴퓨터에 설치되어 있는 Ghostview에는 <strong>알려지"
-"지 않은</strong> 버전의 드라이버만 설치되어 있습니다.</p><p>Ghostview가 올바"
-"르게 설치되었다면 이러한 드라이버만 포함하고 있지 않습니다. 컴퓨터에 "
-"Ghostview가 잘못 설치되었거나 설정된 것 같습니다.</p><p>이 문제를 해결하려"
-"면, <strong>gs --help</strong> 명령으로 현재 설치된 Ghostview의 장치 드라이버"
-"를 확인해 보십시오. 'png256', 'jpeg', 'pnm' 드라이버가 설치되어 있어야 합니"
-"다. 이 문제를 해결했으면 Okular를 다시 시작하십시오.</p></qt>"
-
-#: fontpool.cpp:209
-msgid ""
-"<qt><p>Okular was not able to locate all the font files which are necessary "
-"to display the current DVI file. Your document might be unreadable.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p>Okular에서 현재 DVI 파일을 표시하기 위한 글꼴 파일 중 일부를 찾을 수 "
-"없습니다. 문서가 제대로 보이지 않을 수도 있습니다.</p><p><small><b>PATH:</b> "
-"%1</small></p><p><small>%2</small></p></qt>"
-
-#: fontpool.cpp:280
-msgid ""
-"<qt><p>There were problems running <em>kpsewhich</em>. As a result, some "
-"font files could not be located, and your document might be unreadable.<br/"
-">Possible reason: the <em>kpsewhich</em> program is perhaps not installed on "
-"your system, or it cannot be found in the current search path.</"
-"p><p><small><b>PATH:</b> %1</small></p><p><small>%2</small></p></qt>"
-msgstr ""
-"<qt><p><em>kpsewhich</em>를 실행하는 데 문제가 발생하였습니다. 일부 글꼴 파일"
-"의 위치를 찾을 수 없었으며 문서를 읽지 못할 수도 있습니다.<br/>가능한 원인: "
-"<em>kpsewhich</em> 프로그램이 시스템에 설치되어 있지 않거나 현재 검색 경로에 "
-"포함되어 있지 않을 수도 있습니다.</p><p><small><b>PATH:</b> %1</small></"
-"p><p><small>%2</small></p></qt>"
-
-#: fontpool.cpp:299
-msgid ""
-"<qt>The font generation by <em>kpsewhich</em> was aborted (exit code %1, "
-"error %2). As a result, some font files could not be located, and your "
-"document might be unreadable.</qt>"
-msgstr ""
-"<qt><em>kpsewhich</em>가 담당하는 글꼴 생성 과정이 중단되었습니다. (종료 코"
-"드 %1, 오류 %2) 일부 글꼴 파일을 찾을 수 없으므로 문서의 일부분을 읽지 못할 "
-"수도 있습니다.</qt>"
-
-#: fontpool.cpp:477
-msgid "Currently generating %1 at %2 dpi..."
-msgstr "%1을(를) %2 dpi로 생성 중..."
-
-#: vf.cpp:182
-msgid "Wrong command byte found in VF macro list: %1"
-msgstr "VF 매크로 목록에서 잘못된 명령 바이트: %1"
-
-#: TeXFont_PFB.cpp:42
-msgid ""
-"The font file %1 could be opened and read, but its font format is "
-"unsupported."
-msgstr ""
-"글꼴 파일 %1을(를) 불러오고 읽을 수 있지만 글꼴 형식을 지원하지 않습니다."
-
-#: TeXFont_PFB.cpp:48
-msgid "The font file %1 is broken, or it could not be opened or read."
-msgstr "글꼴 파일 %1이(가) 깨졌거나, 읽거나 열 수 없습니다."
-
-#: TeXFont_PFB.cpp:169
-msgid ""
-"FreeType reported an error when setting the character size for font file %1."
-msgstr ""
-"FreeType에서 글꼴 파일 %1의 글자 크기를 설정하는 중 오류가 발생했습니다."
-
-#: TeXFont_PFB.cpp:185
-msgid "FreeType is unable to load glyph #%1 from font file %2."
-msgstr "FreeType에서 글꼴 파일 %2의 문자 #%1을(를) 불러올 수 없습니다."
-
-#: TeXFont_PFB.cpp:197
-msgid "FreeType is unable to render glyph #%1 from font file %2."
-msgstr "FreeType에서 글꼴 파일 %2의 문자 #%1을(를) 그릴 수 없습니다."
-
-#: TeXFont_PFB.cpp:210
-msgid "Glyph #%1 is empty."
-msgstr "문자 #%1이(가) 비어 있습니다."
-
-#: TeXFont_PFB.cpp:211
-msgid "Glyph #%1 from font file %2 is empty."
-msgstr "글꼴 파일 %2의 문자 #%1이(가) 비어 있습니다."
-
-#: TeXFont_PFB.cpp:279
-msgid "FreeType is unable to load metric for glyph #%1 from font file %2."
-msgstr "FreeType에서 글꼴 파일 %2의 문자 #%1의 크기를 불러올 수 없습니다."
+#: pageSize.cpp:326
+msgid "landscape"
+msgstr "가로"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-07-27 00:41+0300\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2013-08-30 09:53+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -22,10 +22,161 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: externalscriptplugin.cpp:56 externalscriptplugin.cpp:114
-#: externalscriptplugin.cpp:185 externalscriptview.cpp:41
+#: externalscriptview.cpp:41 externalscriptplugin.cpp:56
+#: externalscriptplugin.cpp:114 externalscriptplugin.cpp:185
 msgid "External Scripts"
 msgstr "Внешние сценарии"
+
+#: externalscriptview.cpp:57
+msgid "Add External Script"
+msgstr "Добавить внешний сценарий"
+
+#: externalscriptview.cpp:60
+msgid "Edit External Script"
+msgstr "Изменить внешний сценарий"
+
+#: externalscriptview.cpp:63
+msgid "Remove External Script"
+msgstr "Удалить внешний сценарий"
+
+#: externalscriptview.cpp:150
+msgid ""
+"<p>Do you really want to remove the external script configuration for <i>%1</"
+"i>?</p><p><i>Note:</i> The script itself will not be removed.</p>"
+msgstr ""
+"<p>Удалить настройку внешнего сценария <i>%1</i>?</p><p><i>Примечание:</i> "
+"сам сценарий не будет удалён.</p>"
+
+#: externalscriptview.cpp:152
+msgid "Confirm External Script Removal"
+msgstr "Подтверждение удаления внешнего сценария"
+
+#: editexternalscript.cpp:42
+msgid ""
+"<p>Defines the command that should be executed when this script is run. "
+"Basic shell features of your platform should be available.</p>\n"
+"<p>There are a few placeholders you can use in the command:</p>\n"
+"<dl>\n"
+"  <dt><code>%u</code></dt>\n"
+"  <dd>Gets replaced by the URL of the active document.</dd>\n"
+"  <dt><code>%f</code></dt>\n"
+"  <dd>Gets replaced by the local filepath to the active document.</dd>\n"
+"  <dt><code>%n</code></dt>\n"
+"  <dd>Gets replaced by the name of the active document, including its "
+"extension.</dd>\n"
+"  <dt><code>%b</code></dt>\n"
+"  <dd>Gets replaced by the name of the active document without its extension."
+"</dd>\n"
+"  <dt><code>%d</code></dt>\n"
+"  <dd>Gets replaced by the path to the directory of the active document.</"
+"dd>\n"
+"  <dt><code>%p</code></dt>\n"
+"  <dd>Gets replaced by the URL to the project of the active document.</dd>\n"
+"  <dt><code>%s</code></dt>\n"
+"  <dd>Gets replaced with the shell escaped contents of the selection in the "
+"active document.</dd>\n"
+"  <dt><code>%i</code></dt>\n"
+"  <dd>Gets replaced with the PID of the currently running KDevelop process.</"
+"dd>\n"
+"</dl>\n"
+"<p><b>NOTE:</b>  It is your responsibility to prevent running hazardous "
+"commands that could lead to data loss.</p>\n"
+msgstr ""
+"<p>Назначьте команду, которая будет выполняться при запуске этого сценария. "
+"При этом доступны основные возможности командной оболочки на вашей платформе."
+"</p>\n"
+"<p>В команде можно использовать следующие выражения:</p>\n"
+"<dl>\n"
+"  <dt><code>%u</code></dt>\n"
+"  <dd>Заменяется адресом активного файла.</dd>\n"
+"  <dt><code>%f</code></dt>\n"
+"  <dd>Заменяется локальным путём активного файла.</dd>\n"
+"  <dt><code>%n</code></dt>\n"
+"  <dd>Заменяется именем активного файла с расширением.</dd>\n"
+"  <dt><code>%b</code></dt>\n"
+"  <dd>Заменяется именем активного файла без расширения.</dd>\n"
+"  <dt><code>%d</code></dt>\n"
+"  <dd>Заменяется путём к каталогу активного файла.</dd>\n"
+"  <dt><code>%p</code></dt>\n"
+"  <dd>Заменяется адресом проекта активного файла.</dd>\n"
+"  <dt><code>%s</code></dt>\n"
+"  <dd>Заменяется содержимым выделенного фрагмента активного файла, "
+"экранированном для командной оболочки.</dd>\n"
+"  <dt><code>%i</code></dt>\n"
+"  <dd>Заменяется идентификатором процесса (PID) текущего экземпляра KDevelop."
+"</dd>\n"
+"</dl>\n"
+"<p><b>ПРИМЕЧАНИЕ:</b> будьте аккуратны в составлении команд, так как ошибка "
+"в них может привести к потере данных.</p>\n"
+
+#: editexternalscript.cpp:68
+msgid ""
+"<p>Defines what the external script should get as input (via <code>STDIN</"
+"code>).</p>"
+msgstr ""
+"<p>Определите, что внешний сценарий получит на вход (через поток ввода "
+"<code>STDIN</code>).</p>"
+
+#: editexternalscript.cpp:74
+msgid ""
+"<p>Defines what should be done with the output (i.e. <code>STDOUT</code>) of "
+"the script.</p>"
+msgstr ""
+"<p>Определите, как будут обрабатываться сообщения, поступающие из потока "
+"вывода (<code>STDOUT</code>) внешнего сценария.</p>"
+
+#: editexternalscript.cpp:80
+msgid ""
+"<p>Defines what should be done with the errors (i.e. <code>STDERR</code>) of "
+"the script.</p><p>Note: if the action is the same as that chosen for the "
+"output, the channels will be merged and handled together.</p>"
+msgstr ""
+"<p>Определите, как будут обрабатываться сообщения, поступающие из потока "
+"ошибок (<code>STDERR</code>) внешнего сценария.</p><p>Примечание: если "
+"выбрать такое же действие, что и для потока вывода <code>STDOUT</code>, то "
+"потоки будут объединены и обработаны вместе.</p>"
+
+#: editexternalscript.cpp:88
+msgid "<p>Defines the name of the script. Just for displaying purposes.</p>"
+msgstr ""
+"<p>Определите название сценария (только для отображения на экране).</p>"
+
+#: editexternalscript.cpp:94
+msgid ""
+"<p>Defines the shortcut(s) you can use to execute this external script.</p>"
+msgstr ""
+"<p>Определите комбинации клавиш для запуска этого внешнего сценария.</p>"
+
+#: editexternalscript.cpp:100
+msgid ""
+"<p>Defines whether documents should be saved before the script gets executed."
+"</p>"
+msgstr ""
+"<p>Определите, нужно ли автоматически сохранять файлы перед запуском "
+"сценария.</p>"
+
+#: editexternalscript.cpp:106
+msgid ""
+"<p>Defines whether the output of the script should be shown in a toolview.</"
+"p>"
+msgstr ""
+"<p>Определите, будет ли вывод сценария показываться в служебной панели.</p>"
+
+#: editexternalscript.cpp:110
+msgid ""
+"<p>Defines what type of filtering should be applied to the output. E.g. to "
+"indicate errors by red text.</p>"
+msgstr ""
+"<p>Определите тип фильтра, применяемого к выводу. Например, фильтр может "
+"выделять ошибки красным.</p>"
+
+#: editexternalscript.cpp:118
+msgid "Create new external script"
+msgstr "Добавление нового внешнего сценария"
+
+#: editexternalscript.cpp:120
+msgid "Edit external script '%1'"
+msgstr "Изменение внешнего сценария «%1»"
 
 #: externalscriptplugin.cpp:57
 msgid ""
@@ -305,154 +456,3 @@ msgid ""
 "correctly ***"
 msgstr ""
 "Запустить программу «%1» не удалось. Проверьте правильность заданного пути."
-
-#: externalscriptview.cpp:57
-msgid "Add External Script"
-msgstr "Добавить внешний сценарий"
-
-#: externalscriptview.cpp:60
-msgid "Edit External Script"
-msgstr "Изменить внешний сценарий"
-
-#: externalscriptview.cpp:63
-msgid "Remove External Script"
-msgstr "Удалить внешний сценарий"
-
-#: externalscriptview.cpp:150
-msgid ""
-"<p>Do you really want to remove the external script configuration for <i>%1</"
-"i>?</p><p><i>Note:</i> The script itself will not be removed.</p>"
-msgstr ""
-"<p>Удалить настройку внешнего сценария <i>%1</i>?</p><p><i>Примечание:</i> "
-"сам сценарий не будет удалён.</p>"
-
-#: externalscriptview.cpp:152
-msgid "Confirm External Script Removal"
-msgstr "Подтверждение удаления внешнего сценария"
-
-#: editexternalscript.cpp:42
-msgid ""
-"<p>Defines the command that should be executed when this script is run. "
-"Basic shell features of your platform should be available.</p>\n"
-"<p>There are a few placeholders you can use in the command:</p>\n"
-"<dl>\n"
-"  <dt><code>%u</code></dt>\n"
-"  <dd>Gets replaced by the URL of the active document.</dd>\n"
-"  <dt><code>%f</code></dt>\n"
-"  <dd>Gets replaced by the local filepath to the active document.</dd>\n"
-"  <dt><code>%n</code></dt>\n"
-"  <dd>Gets replaced by the name of the active document, including its "
-"extension.</dd>\n"
-"  <dt><code>%b</code></dt>\n"
-"  <dd>Gets replaced by the name of the active document without its extension."
-"</dd>\n"
-"  <dt><code>%d</code></dt>\n"
-"  <dd>Gets replaced by the path to the directory of the active document.</"
-"dd>\n"
-"  <dt><code>%p</code></dt>\n"
-"  <dd>Gets replaced by the URL to the project of the active document.</dd>\n"
-"  <dt><code>%s</code></dt>\n"
-"  <dd>Gets replaced with the shell escaped contents of the selection in the "
-"active document.</dd>\n"
-"  <dt><code>%i</code></dt>\n"
-"  <dd>Gets replaced with the PID of the currently running KDevelop process.</"
-"dd>\n"
-"</dl>\n"
-"<p><b>NOTE:</b>  It is your responsibility to prevent running hazardous "
-"commands that could lead to data loss.</p>\n"
-msgstr ""
-"<p>Назначьте команду, которая будет выполняться при запуске этого сценария. "
-"При этом доступны основные возможности командной оболочки на вашей платформе."
-"</p>\n"
-"<p>В команде можно использовать следующие выражения:</p>\n"
-"<dl>\n"
-"  <dt><code>%u</code></dt>\n"
-"  <dd>Заменяется адресом активного файла.</dd>\n"
-"  <dt><code>%f</code></dt>\n"
-"  <dd>Заменяется локальным путём активного файла.</dd>\n"
-"  <dt><code>%n</code></dt>\n"
-"  <dd>Заменяется именем активного файла с расширением.</dd>\n"
-"  <dt><code>%b</code></dt>\n"
-"  <dd>Заменяется именем активного файла без расширения.</dd>\n"
-"  <dt><code>%d</code></dt>\n"
-"  <dd>Заменяется путём к каталогу активного файла.</dd>\n"
-"  <dt><code>%p</code></dt>\n"
-"  <dd>Заменяется адресом проекта активного файла.</dd>\n"
-"  <dt><code>%s</code></dt>\n"
-"  <dd>Заменяется содержимым выделенного фрагмента активного файла, "
-"экранированном для командной оболочки.</dd>\n"
-"  <dt><code>%i</code></dt>\n"
-"  <dd>Заменяется идентификатором процесса (PID) текущего экземпляра KDevelop."
-"</dd>\n"
-"</dl>\n"
-"<p><b>ПРИМЕЧАНИЕ:</b> будьте аккуратны в составлении команд, так как ошибка "
-"в них может привести к потере данных.</p>\n"
-
-#: editexternalscript.cpp:68
-msgid ""
-"<p>Defines what the external script should get as input (via <code>STDIN</"
-"code>).</p>"
-msgstr ""
-"<p>Определите, что внешний сценарий получит на вход (через поток ввода "
-"<code>STDIN</code>).</p>"
-
-#: editexternalscript.cpp:74
-msgid ""
-"<p>Defines what should be done with the output (i.e. <code>STDOUT</code>) of "
-"the script.</p>"
-msgstr ""
-"<p>Определите, как будут обрабатываться сообщения, поступающие из потока "
-"вывода (<code>STDOUT</code>) внешнего сценария.</p>"
-
-#: editexternalscript.cpp:80
-msgid ""
-"<p>Defines what should be done with the errors (i.e. <code>STDERR</code>) of "
-"the script.</p><p>Note: if the action is the same as that chosen for the "
-"output, the channels will be merged and handled together.</p>"
-msgstr ""
-"<p>Определите, как будут обрабатываться сообщения, поступающие из потока "
-"ошибок (<code>STDERR</code>) внешнего сценария.</p><p>Примечание: если "
-"выбрать такое же действие, что и для потока вывода <code>STDOUT</code>, то "
-"потоки будут объединены и обработаны вместе.</p>"
-
-#: editexternalscript.cpp:88
-msgid "<p>Defines the name of the script. Just for displaying purposes.</p>"
-msgstr ""
-"<p>Определите название сценария (только для отображения на экране).</p>"
-
-#: editexternalscript.cpp:94
-msgid ""
-"<p>Defines the shortcut(s) you can use to execute this external script.</p>"
-msgstr ""
-"<p>Определите комбинации клавиш для запуска этого внешнего сценария.</p>"
-
-#: editexternalscript.cpp:100
-msgid ""
-"<p>Defines whether documents should be saved before the script gets executed."
-"</p>"
-msgstr ""
-"<p>Определите, нужно ли автоматически сохранять файлы перед запуском "
-"сценария.</p>"
-
-#: editexternalscript.cpp:106
-msgid ""
-"<p>Defines whether the output of the script should be shown in a toolview.</"
-"p>"
-msgstr ""
-"<p>Определите, будет ли вывод сценария показываться в служебной панели.</p>"
-
-#: editexternalscript.cpp:110
-msgid ""
-"<p>Defines what type of filtering should be applied to the output. E.g. to "
-"indicate errors by red text.</p>"
-msgstr ""
-"<p>Определите тип фильтра, применяемого к выводу. Например, фильтр может "
-"выделять ошибки красным.</p>"
-
-#: editexternalscript.cpp:118
-msgid "Create new external script"
-msgstr "Добавление нового внешнего сценария"
-
-#: editexternalscript.cpp:120
-msgid "Edit external script '%1'"
-msgstr "Изменение внешнего сценария «%1»"

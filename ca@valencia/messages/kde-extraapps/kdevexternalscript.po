@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevexternalscript\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-07-27 00:41+0300\n"
+"POT-Creation-Date: 2015-11-05 07:06+0200\n"
 "PO-Revision-Date: 2013-11-12 13:14+0100\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@orange.es>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,10 +21,161 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: externalscriptplugin.cpp:56 externalscriptplugin.cpp:114
-#: externalscriptplugin.cpp:185 externalscriptview.cpp:41
+#: externalscriptview.cpp:41 externalscriptplugin.cpp:56
+#: externalscriptplugin.cpp:114 externalscriptplugin.cpp:185
 msgid "External Scripts"
 msgstr "Scripts externs"
+
+#: externalscriptview.cpp:57
+msgid "Add External Script"
+msgstr "Afig un script extern"
+
+#: externalscriptview.cpp:60
+msgid "Edit External Script"
+msgstr "Edita l'script extern"
+
+#: externalscriptview.cpp:63
+msgid "Remove External Script"
+msgstr "Elimina l'script extern"
+
+#: externalscriptview.cpp:150
+msgid ""
+"<p>Do you really want to remove the external script configuration for <i>%1</"
+"i>?</p><p><i>Note:</i> The script itself will not be removed.</p>"
+msgstr ""
+"<p>Esteu segur que voleu eliminar la configuració de l'script extern <i>%1</"
+"i>?</p><p><i>Nota:</i> No s'eliminarà el propi script.</p>"
+
+#: externalscriptview.cpp:152
+msgid "Confirm External Script Removal"
+msgstr "Confirmació per eliminar l'script extern"
+
+#: editexternalscript.cpp:42
+msgid ""
+"<p>Defines the command that should be executed when this script is run. "
+"Basic shell features of your platform should be available.</p>\n"
+"<p>There are a few placeholders you can use in the command:</p>\n"
+"<dl>\n"
+"  <dt><code>%u</code></dt>\n"
+"  <dd>Gets replaced by the URL of the active document.</dd>\n"
+"  <dt><code>%f</code></dt>\n"
+"  <dd>Gets replaced by the local filepath to the active document.</dd>\n"
+"  <dt><code>%n</code></dt>\n"
+"  <dd>Gets replaced by the name of the active document, including its "
+"extension.</dd>\n"
+"  <dt><code>%b</code></dt>\n"
+"  <dd>Gets replaced by the name of the active document without its extension."
+"</dd>\n"
+"  <dt><code>%d</code></dt>\n"
+"  <dd>Gets replaced by the path to the directory of the active document.</"
+"dd>\n"
+"  <dt><code>%p</code></dt>\n"
+"  <dd>Gets replaced by the URL to the project of the active document.</dd>\n"
+"  <dt><code>%s</code></dt>\n"
+"  <dd>Gets replaced with the shell escaped contents of the selection in the "
+"active document.</dd>\n"
+"  <dt><code>%i</code></dt>\n"
+"  <dd>Gets replaced with the PID of the currently running KDevelop process.</"
+"dd>\n"
+"</dl>\n"
+"<p><b>NOTE:</b>  It is your responsibility to prevent running hazardous "
+"commands that could lead to data loss.</p>\n"
+msgstr ""
+"<p>Defineix l'orde que s'hauria d'executar quan s'execute este script. "
+"Haurien d'estar disponibles les funcionalitats bàsiques de l'intèrpret "
+"d'ordes de la vostra plataforma.</p>\n"
+"<p>Hi ha algunes variables de substitució que podeu utilitzar a l'orde:</p>\n"
+"<dl>\n"
+"  <dt><code>%u</code></dt>\n"
+"  <dd>Se substitueix per l'URL del document actiu.</dd>\n"
+"  <dt><code>%f</code></dt>\n"
+"  <dd>Se substitueix pel camí del fitxer local del document actiu.</dd>\n"
+"  <dt><code>%n</code></dt>\n"
+"  <dd>Se substitueix pel nom del document actiu, incloent la seua extensió.</"
+"dd>\n"
+"  <dt><code>%b</code></dt>\n"
+"  <dd>Se substitueix pel nom del document actiu sense la seua extensió.</"
+"dd>\n"
+"  <dt><code>%d</code></dt>\n"
+"  <dd>Se substitueix pel camí al directori del document actiu.</dd>\n"
+"  <dt><code>%p</code></dt>\n"
+"  <dd>Se substitueix per l'URL al projecte del document actiu.</dd>\n"
+"  <dt><code>%s</code></dt>\n"
+"  <dd>Se substitueix amb el contingut escapat de l'intèrpret d'ordes de la "
+"selecció en el document actiu.</dd>\n"
+"  <dt><code>%i</code></dt>\n"
+"  <dd>Se substitueix amb el PID del procés actual del KDevelop en execució.</"
+"dd>\n"
+"</dl>\n"
+"<p><b>NOTE:</b> Està sota la vostra responsabilitat evitar l'execució "
+"d'ordes perilloses que puguen comportar la pèrdua de dades.</p>\n"
+
+#: editexternalscript.cpp:68
+msgid ""
+"<p>Defines what the external script should get as input (via <code>STDIN</"
+"code>).</p>"
+msgstr ""
+"<p>Defineix què hauria d'obtindre l'script extern com a entrada (via "
+"<code>STDIN</code>).</p>"
+
+#: editexternalscript.cpp:74
+msgid ""
+"<p>Defines what should be done with the output (i.e. <code>STDOUT</code>) of "
+"the script.</p>"
+msgstr ""
+"<p>Defineix què s'hauria de fer amb l'eixida (és a dir, <code>STDOUT</code>) "
+"de l'script.</p>"
+
+#: editexternalscript.cpp:80
+msgid ""
+"<p>Defines what should be done with the errors (i.e. <code>STDERR</code>) of "
+"the script.</p><p>Note: if the action is the same as that chosen for the "
+"output, the channels will be merged and handled together.</p>"
+msgstr ""
+"<p>Defineix què s'hauria de fer amb els errors (és a dir, <code>STDERR</"
+"code>) de l'script.</p><p>Nota: Si l'acció és la mateixa que l'escollida per "
+"l'eixida, els canals es barrejaran i gestionaran conjuntament.</p>"
+
+#: editexternalscript.cpp:88
+msgid "<p>Defines the name of the script. Just for displaying purposes.</p>"
+msgstr "<p>Defineix el nom de l'script. Només per motius de visualització.</p>"
+
+#: editexternalscript.cpp:94
+msgid ""
+"<p>Defines the shortcut(s) you can use to execute this external script.</p>"
+msgstr ""
+"<p>Defineix les dreceres que podeu utilitzar en executar este script extern."
+"</p>"
+
+#: editexternalscript.cpp:100
+msgid ""
+"<p>Defines whether documents should be saved before the script gets executed."
+"</p>"
+msgstr ""
+"<p>Defineix si els documents s'han de guardar abans d'executar l'script.</p>"
+
+#: editexternalscript.cpp:106
+msgid ""
+"<p>Defines whether the output of the script should be shown in a toolview.</"
+"p>"
+msgstr ""
+"<p>Defineix si l'eixida de l'script s'ha de mostrar en una eina de vista.</p>"
+
+#: editexternalscript.cpp:110
+msgid ""
+"<p>Defines what type of filtering should be applied to the output. E.g. to "
+"indicate errors by red text.</p>"
+msgstr ""
+"<p>Defineix quin tipus de filtre s'hauria d'aplicar a l'eixida. P.ex. per "
+"indicar els errors amb text roig.</p>"
+
+#: editexternalscript.cpp:118
+msgid "Create new external script"
+msgstr "Crea un script extern nou"
+
+#: editexternalscript.cpp:120
+msgid "Edit external script '%1'"
+msgstr "Edita l'script extern «%1»"
 
 #: externalscriptplugin.cpp:57
 msgid ""
@@ -306,154 +457,3 @@ msgid ""
 msgstr ""
 "*** No s'ha pogut iniciar el programa «%1». Assegureu-vos que teniu el camí "
 "definit correctament ***"
-
-#: externalscriptview.cpp:57
-msgid "Add External Script"
-msgstr "Afig un script extern"
-
-#: externalscriptview.cpp:60
-msgid "Edit External Script"
-msgstr "Edita l'script extern"
-
-#: externalscriptview.cpp:63
-msgid "Remove External Script"
-msgstr "Elimina l'script extern"
-
-#: externalscriptview.cpp:150
-msgid ""
-"<p>Do you really want to remove the external script configuration for <i>%1</"
-"i>?</p><p><i>Note:</i> The script itself will not be removed.</p>"
-msgstr ""
-"<p>Esteu segur que voleu eliminar la configuració de l'script extern <i>%1</"
-"i>?</p><p><i>Nota:</i> No s'eliminarà el propi script.</p>"
-
-#: externalscriptview.cpp:152
-msgid "Confirm External Script Removal"
-msgstr "Confirmació per eliminar l'script extern"
-
-#: editexternalscript.cpp:42
-msgid ""
-"<p>Defines the command that should be executed when this script is run. "
-"Basic shell features of your platform should be available.</p>\n"
-"<p>There are a few placeholders you can use in the command:</p>\n"
-"<dl>\n"
-"  <dt><code>%u</code></dt>\n"
-"  <dd>Gets replaced by the URL of the active document.</dd>\n"
-"  <dt><code>%f</code></dt>\n"
-"  <dd>Gets replaced by the local filepath to the active document.</dd>\n"
-"  <dt><code>%n</code></dt>\n"
-"  <dd>Gets replaced by the name of the active document, including its "
-"extension.</dd>\n"
-"  <dt><code>%b</code></dt>\n"
-"  <dd>Gets replaced by the name of the active document without its extension."
-"</dd>\n"
-"  <dt><code>%d</code></dt>\n"
-"  <dd>Gets replaced by the path to the directory of the active document.</"
-"dd>\n"
-"  <dt><code>%p</code></dt>\n"
-"  <dd>Gets replaced by the URL to the project of the active document.</dd>\n"
-"  <dt><code>%s</code></dt>\n"
-"  <dd>Gets replaced with the shell escaped contents of the selection in the "
-"active document.</dd>\n"
-"  <dt><code>%i</code></dt>\n"
-"  <dd>Gets replaced with the PID of the currently running KDevelop process.</"
-"dd>\n"
-"</dl>\n"
-"<p><b>NOTE:</b>  It is your responsibility to prevent running hazardous "
-"commands that could lead to data loss.</p>\n"
-msgstr ""
-"<p>Defineix l'orde que s'hauria d'executar quan s'execute este script. "
-"Haurien d'estar disponibles les funcionalitats bàsiques de l'intèrpret "
-"d'ordes de la vostra plataforma.</p>\n"
-"<p>Hi ha algunes variables de substitució que podeu utilitzar a l'orde:</p>\n"
-"<dl>\n"
-"  <dt><code>%u</code></dt>\n"
-"  <dd>Se substitueix per l'URL del document actiu.</dd>\n"
-"  <dt><code>%f</code></dt>\n"
-"  <dd>Se substitueix pel camí del fitxer local del document actiu.</dd>\n"
-"  <dt><code>%n</code></dt>\n"
-"  <dd>Se substitueix pel nom del document actiu, incloent la seua extensió.</"
-"dd>\n"
-"  <dt><code>%b</code></dt>\n"
-"  <dd>Se substitueix pel nom del document actiu sense la seua extensió.</"
-"dd>\n"
-"  <dt><code>%d</code></dt>\n"
-"  <dd>Se substitueix pel camí al directori del document actiu.</dd>\n"
-"  <dt><code>%p</code></dt>\n"
-"  <dd>Se substitueix per l'URL al projecte del document actiu.</dd>\n"
-"  <dt><code>%s</code></dt>\n"
-"  <dd>Se substitueix amb el contingut escapat de l'intèrpret d'ordes de la "
-"selecció en el document actiu.</dd>\n"
-"  <dt><code>%i</code></dt>\n"
-"  <dd>Se substitueix amb el PID del procés actual del KDevelop en execució.</"
-"dd>\n"
-"</dl>\n"
-"<p><b>NOTE:</b> Està sota la vostra responsabilitat evitar l'execució "
-"d'ordes perilloses que puguen comportar la pèrdua de dades.</p>\n"
-
-#: editexternalscript.cpp:68
-msgid ""
-"<p>Defines what the external script should get as input (via <code>STDIN</"
-"code>).</p>"
-msgstr ""
-"<p>Defineix què hauria d'obtindre l'script extern com a entrada (via "
-"<code>STDIN</code>).</p>"
-
-#: editexternalscript.cpp:74
-msgid ""
-"<p>Defines what should be done with the output (i.e. <code>STDOUT</code>) of "
-"the script.</p>"
-msgstr ""
-"<p>Defineix què s'hauria de fer amb l'eixida (és a dir, <code>STDOUT</code>) "
-"de l'script.</p>"
-
-#: editexternalscript.cpp:80
-msgid ""
-"<p>Defines what should be done with the errors (i.e. <code>STDERR</code>) of "
-"the script.</p><p>Note: if the action is the same as that chosen for the "
-"output, the channels will be merged and handled together.</p>"
-msgstr ""
-"<p>Defineix què s'hauria de fer amb els errors (és a dir, <code>STDERR</"
-"code>) de l'script.</p><p>Nota: Si l'acció és la mateixa que l'escollida per "
-"l'eixida, els canals es barrejaran i gestionaran conjuntament.</p>"
-
-#: editexternalscript.cpp:88
-msgid "<p>Defines the name of the script. Just for displaying purposes.</p>"
-msgstr "<p>Defineix el nom de l'script. Només per motius de visualització.</p>"
-
-#: editexternalscript.cpp:94
-msgid ""
-"<p>Defines the shortcut(s) you can use to execute this external script.</p>"
-msgstr ""
-"<p>Defineix les dreceres que podeu utilitzar en executar este script extern."
-"</p>"
-
-#: editexternalscript.cpp:100
-msgid ""
-"<p>Defines whether documents should be saved before the script gets executed."
-"</p>"
-msgstr ""
-"<p>Defineix si els documents s'han de guardar abans d'executar l'script.</p>"
-
-#: editexternalscript.cpp:106
-msgid ""
-"<p>Defines whether the output of the script should be shown in a toolview.</"
-"p>"
-msgstr ""
-"<p>Defineix si l'eixida de l'script s'ha de mostrar en una eina de vista.</p>"
-
-#: editexternalscript.cpp:110
-msgid ""
-"<p>Defines what type of filtering should be applied to the output. E.g. to "
-"indicate errors by red text.</p>"
-msgstr ""
-"<p>Defineix quin tipus de filtre s'hauria d'aplicar a l'eixida. P.ex. per "
-"indicar els errors amb text roig.</p>"
-
-#: editexternalscript.cpp:118
-msgid "Create new external script"
-msgstr "Crea un script extern nou"
-
-#: editexternalscript.cpp:120
-msgid "Edit external script '%1'"
-msgstr "Edita l'script extern «%1»"
