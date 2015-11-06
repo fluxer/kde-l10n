@@ -1,18 +1,18 @@
 project(kde-i18n-mr)
 
-# Search KDE installation
-find_package(KDE4 REQUIRED)
-find_package(Gettext REQUIRED)
-include (KDE4Defaults)
-include(MacroOptionalAddSubdirectory)
+if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
+    find_package(KDE4 4.18.0 REQUIRED)
+    find_package(Gettext REQUIRED)
 
-if (NOT GETTEXT_MSGMERGE_EXECUTABLE)
-   MESSAGE(FATAL_ERROR "Please install the msgmerge binary")
-endif (NOT GETTEXT_MSGMERGE_EXECUTABLE)
+    include(KDE4Defaults)
+    include(MacroOptionalAddSubdirectory)
 
-IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
-   MESSAGE(FATAL_ERROR "Please install the msgfmt binary")
-endif (NOT GETTEXT_MSGFMT_EXECUTABLE)
+    if(NOT GETTEXT_MSGMERGE_EXECUTABLE)
+        message(FATAL_ERROR "Please install the msgmerge binary")
+    elseif(NOT GETTEXT_MSGFMT_EXECUTABLE)
+        message(FATAL_ERROR "Please install the msgfmt binary")
+    endif()
+endif()
 
 set(CURRENT_LANG mr)
 

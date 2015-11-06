@@ -1,18 +1,16 @@
 project (kde-l10n)
 
 find_package(KDE4 4.18.0 REQUIRED)
+find_package(Gettext REQUIRED)
+
 include(KDE4Defaults)
+include(MacroOptionalAddSubdirectory)
 
-set(LIBRARY_TYPE SHARED)
-
-add_definitions(
-    ${QT_DEFINITIONS}
-    ${KDE4_DEFINITIONS}
-    -DQT_USE_FAST_CONCATENATION
-    -DQT_USE_FAST_OPERATOR_PLUS
-)
-
-include_directories(${CMAKE_CURRENT_BINARY_DIR} ${KDE4_INCLUDES})
+if(NOT GETTEXT_MSGMERGE_EXECUTABLE)
+    message(FATAL_ERROR "Please install the msgmerge binary")
+elseif(NOT GETTEXT_MSGFMT_EXECUTABLE)
+    message(FATAL_ERROR "Please install the msgfmt binary")
+endif()
 
 macro_optional_add_subdirectory( ar )
 macro_optional_add_subdirectory( ast )
