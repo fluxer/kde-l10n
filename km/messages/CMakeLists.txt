@@ -1,8 +1,14 @@
-add_subdirectory(applications)
-add_subdirectory(kdeaccessibility)
-add_subdirectory(kdelibs)
-add_subdirectory(kde-workspace)
-add_subdirectory(kde-extraapps)
-add_subdirectory(qt)
-install(FILES entry.desktop DESTINATION ${LOCALE_INSTALL_DIR}/${CURRENT_LANG}/ )
-install(FILES flag.png DESTINATION ${LOCALE_INSTALL_DIR}/${CURRENT_LANG}/ )
+file(GLOB_RECURSE _po_files *.po)
+
+GETTEXT_PROCESS_PO_FILES(
+    ${CURRENT_LANG}
+    ALL
+    INSTALL_DESTINATION ${LOCALE_INSTALL_DIR}
+    PO_FILES ${_po_files}
+)
+install(
+    FILES
+    entry.desktop
+    flag.png
+    DESTINATION ${LOCALE_INSTALL_DIR}/${CURRENT_LANG}
+)

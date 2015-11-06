@@ -1,13 +1,16 @@
 project (kde-l10n)
 
-set(QT_MIN_VERSION "4.8.2")
-find_package(KDE4 4.14.3 REQUIRED)
+find_package(KDE4 4.18.0 REQUIRED)
 include(KDE4Defaults)
 
 set(LIBRARY_TYPE SHARED)
 
-add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
-add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+add_definitions(
+    ${QT_DEFINITIONS}
+    ${KDE4_DEFINITIONS}
+    -DQT_USE_FAST_CONCATENATION
+    -DQT_USE_FAST_OPERATOR_PLUS
+)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${KDE4_INCLUDES})
 
