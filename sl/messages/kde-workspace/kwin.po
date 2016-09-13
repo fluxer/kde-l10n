@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwin\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-09-04 23:26+0000\n"
+"POT-Creation-Date: 2016-09-13 23:14+0000\n"
 "PO-Revision-Date: 2013-07-29 15:21+0200\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
-#: composite.cpp:456
+#: composite.cpp:397
 msgid ""
 "Desktop effects have been suspended by another application.<br/>You can "
 "resume using the '%1' shortcut."
@@ -33,31 +33,13 @@ msgstr ""
 "Nek program je prestavil namizne učinke v pripravljenost.<br/>Da jih spet "
 "vklopite, lahko uporabite bližnjico »%1«."
 
-#: compositingprefs.cpp:96
-msgid ""
-"<b>OpenGL compositing (the default) has crashed KWin in the past.</"
-"b><br>This was most likely due to a driver bug.<p>If you think that you have "
-"meanwhile upgraded to a stable driver,<br>you can reset this protection but "
-"<b>be aware that this might result in an immediate crash!</b></"
-"p><p>Alternatively, you might want to use the XRender backend instead.</p>"
-msgstr ""
-"<b>Skladnja 3D OpenGL (privzeta) je v preteklosti povzročila sesutje KWin-a."
-"</b><br>Vzrok je najverjetneje hrošč v gonilniku za grafično kartico.<p>Če "
-"ste med tem nadgradili gonilnik in menite, da je stabilen,<br>lahko "
-"ponastavite to zaščito. Zavedajte se, da <b>to lahko povzroči takojšnje "
-"sesutje!</b></p><p>Druga možnost je uporaba zaledja XRender.</p>"
-
-#: compositingprefs.cpp:103
+#: compositingprefs.cpp:54
 msgid "Required X extensions (XComposite and XDamage) are not available."
 msgstr "Zahtevani razširitvi za X (XComposite in XDamage) nista na voljo."
 
-#: compositingprefs.cpp:107
-msgid "GLX/OpenGL are not available and only OpenGL support is compiled."
-msgstr "GLX/OpenGL ni na voljo, prevedena je le podpora za OpenGL."
-
-#: compositingprefs.cpp:111
-msgid "GLX/OpenGL and XRender/XFixes are not available."
-msgstr "Niti GLX/OpenGL, niti XRender/XFixes nista na voljo."
+#: compositingprefs.cpp:58
+msgid "XRender/XFixes are not available."
+msgstr ""
 
 #: decorations.cpp:55
 msgid "KWin: "
@@ -393,65 +375,6 @@ msgstr ""
 msgid "Indicate that KWin has recently crashed n times"
 msgstr "Nakaži, da se je KWin nedavno sesul n-krat"
 
-#: scene_opengl.cpp:346
-msgid "Desktop effects were restarted due to a graphics reset"
-msgstr ""
-"Namizni učinki so bili znova zagnani zaradi ponovnega zagona grafičnega "
-"sistema"
-
-#: scene_opengl.cpp:553
-msgid ""
-"<h1>OpenGL desktop effects not possible</h1>Your system cannot perform "
-"OpenGL Desktop Effects at the current resolution<br><br>You can try to "
-"select the XRender backend, but it might be very slow for this resolution as "
-"well.<br>Alternatively, lower the combined resolution of all screens to %1x"
-"%2 "
-msgstr ""
-"<h1>Namizni učinki OpenGL niso mogoči</h1>Vaš sistem ne more izvajati "
-"namiznih učinkov OpenGL na trenutni ločljivosti.<br><br>Poskusite lahko "
-"izbrati zaledje XRender, ampak bo najbrž tudi to zelo počasno za to "
-"ločljivost.<br>Lahko pa znižate skupno ločljivost vseh zaslonov na screens "
-"to %1x%2 "
-
-#: scene_opengl.cpp:560
-msgid ""
-"The demanded resolution exceeds the GL_MAX_VIEWPORT_DIMS limitation of your "
-"GPU and is therefore not compatible with the OpenGL compositor.<br>XRender "
-"does not know such limitation, but the performance will usually be impacted "
-"by the hardware limitations that restrict the OpenGL viewport size."
-msgstr ""
-"Zahtevana ločljivost presega omejitev GL_MAX_VIEWPORT_DIMS vaše grafične "
-"kartice in zato ni združljiva z upravljalnikom skladnje 3D OpenGL."
-"<br>XRender takšne omejitve ne pozna, ampak bodo omejitve strojne opreme, ki "
-"omejujejo velikost vidnega polja OpenGL, vplivale na hitrost delovanja."
-
-#: scene_opengl.cpp:585
-msgid ""
-"<h1>OpenGL desktop effects might be unusable</h1>OpenGL Desktop Effects at "
-"the current resolution are supported but might be exceptionally slow."
-"<br>Also large windows will turn entirely black.<br><br>Consider to suspend "
-"compositing, switch to the XRender backend or lower the resolution to %1x%1."
-msgstr ""
-"<h1>Namizni učinki OpenGL bodo morda neuporabni</h1>Namizni učinki OpenGL so "
-"podprti na trenutni ločljivosti, ampak bodo morda izjemno počasni.<br>Velika "
-"okna bodo v celoti postala črna.<br><br>Razmislite o prestavitvi skladnje 3D "
-"v pripravljenost, preklopu na zaledje XRender ali znižanju ločljivosti na %1x"
-"%1."
-
-#: scene_opengl.cpp:591
-msgid ""
-"The demanded resolution exceeds the GL_MAX_TEXTURE_SIZE limitation of your "
-"GPU, thus windows of that size cannot be assigned to textures and will be "
-"entirely black.<br>Also this limit will often be a performance level barrier "
-"despite below GL_MAX_VIEWPORT_DIMS, because the driver might fall back to "
-"software rendering in this case."
-msgstr ""
-"Zahtevana ločljivost presega omejitev GL_MAX_TEXTURE_SIZE vaše grafične "
-"kartice, zato oknom te velikosti ni mogoče dodeliti tekstur in bodo "
-"popolnoma črna.<br>Ta omejitev bo tudi pogosto zmogljivostna ovira, kljub "
-"temu, da je pod GL_MAX_VIEWPORT_DIMS, saj lahko gonilnik preklopi v način "
-"programskega izrisovanja."
-
 #: useractions.cpp:180
 msgid ""
 "You have selected to show a window without its border.\n"
@@ -651,7 +574,7 @@ msgstr "Preklopi na eno namizje navzdol"
 msgid "Switch to Desktop %1"
 msgstr "Preklopi na namizje %1"
 
-#: workspace.cpp:1257
+#: workspace.cpp:1253
 msgctxt "Introductory text shown in the support information."
 msgid ""
 "KWin Support Information:\n"

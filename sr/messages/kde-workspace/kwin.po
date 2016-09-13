@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwin\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-09-04 23:26+0000\n"
+"POT-Creation-Date: 2016-09-13 23:14+0000\n"
 "PO-Revision-Date: 2013-06-01 14:48+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: composite.cpp:456
+#: composite.cpp:397
 msgid ""
 "Desktop effects have been suspended by another application.<br/>You can "
 "resume using the '%1' shortcut."
@@ -30,32 +30,13 @@ msgstr ""
 "<html>Други програм је суспендовао ефекте површи.<br/>Можете га наставити "
 "пречицом %1.</html>"
 
-# rewrite-msgid: /upgraded to/switched to/
-#: compositingprefs.cpp:96
-msgid ""
-"<b>OpenGL compositing (the default) has crashed KWin in the past.</"
-"b><br>This was most likely due to a driver bug.<p>If you think that you have "
-"meanwhile upgraded to a stable driver,<br>you can reset this protection but "
-"<b>be aware that this might result in an immediate crash!</b></"
-"p><p>Alternatively, you might want to use the XRender backend instead.</p>"
-msgstr ""
-"<p><b>ОпенГЛ слагање (подразумевано) умело је раније да сруши К‑вин.</b> "
-"Највероватнији узрок томе био је дефект драјвера.</p><p>Ову заштиту можете "
-"ресетовати ако сматрате да сте у међувремену прешли на стабилан драјвер, али "
-"<b>имајте на уму да тиме можете изазвати моментални пад!</b></p><p>Уместо "
-"овога можете покушати и са позадином Икс‑рендер.</p>"
-
-#: compositingprefs.cpp:103
+#: compositingprefs.cpp:54
 msgid "Required X extensions (XComposite and XDamage) are not available."
 msgstr "Неопходна проширења Икса (Икс‑композит и Икс‑демиџ) нису доступна."
 
-#: compositingprefs.cpp:107
-msgid "GLX/OpenGL are not available and only OpenGL support is compiled."
-msgstr "ГЛИкс/опенГЛ нису доступни а уграђена је само подршка за опенГЛ."
-
-#: compositingprefs.cpp:111
-msgid "GLX/OpenGL and XRender/XFixes are not available."
-msgstr "ГЛИкс/опенГЛ и Икс‑рендер/Икс‑фиксес нису доступни."
+#: compositingprefs.cpp:58
+msgid "XRender/XFixes are not available."
+msgstr ""
 
 #: decorations.cpp:55
 msgid "KWin: "
@@ -391,61 +372,6 @@ msgstr "Замени већ покренути ИЦЦЦМ‑у 2.0 саглас�
 msgid "Indicate that KWin has recently crashed n times"
 msgstr "Упозори да се К‑вин недавно срушио n пута"
 
-#: scene_opengl.cpp:346
-msgid "Desktop effects were restarted due to a graphics reset"
-msgstr "Ефекти површи су поново покренути због ресетовања графике."
-
-#: scene_opengl.cpp:553
-msgid ""
-"<h1>OpenGL desktop effects not possible</h1>Your system cannot perform "
-"OpenGL Desktop Effects at the current resolution<br><br>You can try to "
-"select the XRender backend, but it might be very slow for this resolution as "
-"well.<br>Alternatively, lower the combined resolution of all screens to %1x"
-"%2 "
-msgstr ""
-"<h1>ОпенГЛ ефекти површи нису могући</h1><p>Систем не може да изводи опенГЛ "
-"ефекте површи при текућој резолуцији.</p><p>Можете покушати са Икс‑рендером "
-"као позадином, али и то може бити преспоро у овој резолуцији. Иначе, смањите "
-"збирну резолуцију свих екрана на %1×%2.</p>"
-
-#: scene_opengl.cpp:560
-msgid ""
-"The demanded resolution exceeds the GL_MAX_VIEWPORT_DIMS limitation of your "
-"GPU and is therefore not compatible with the OpenGL compositor.<br>XRender "
-"does not know such limitation, but the performance will usually be impacted "
-"by the hardware limitations that restrict the OpenGL viewport size."
-msgstr ""
-"Затражена резолуција премашује ограничење GL_MAX_VIEWPORT_DIMS ГПУ‑а и зато "
-"није сагласна са опенГЛ слагачем. Икс‑рендер нема ово ограничење, али ће "
-"перформансе обично трпети због ограничења хардвера над величином опенГЛ "
-"видног поља."
-
-#: scene_opengl.cpp:585
-msgid ""
-"<h1>OpenGL desktop effects might be unusable</h1>OpenGL Desktop Effects at "
-"the current resolution are supported but might be exceptionally slow."
-"<br>Also large windows will turn entirely black.<br><br>Consider to suspend "
-"compositing, switch to the XRender backend or lower the resolution to %1x%1."
-msgstr ""
-"<h1>ОпенГЛ ефекти површи можда неће бити употребљиви</h1><p>ОпенГЛ ефекти "
-"површи при текућој резолуцији подржани су, али могу бити преспори. Велики "
-"прозори такође могу потпуно поцрнети.</p><p>Могли бисте да деактивирате "
-"слагање, пребаците на Икс‑рендер као позадину или смањите резолуцију на %1×"
-"%1.</p>"
-
-#: scene_opengl.cpp:591
-msgid ""
-"The demanded resolution exceeds the GL_MAX_TEXTURE_SIZE limitation of your "
-"GPU, thus windows of that size cannot be assigned to textures and will be "
-"entirely black.<br>Also this limit will often be a performance level barrier "
-"despite below GL_MAX_VIEWPORT_DIMS, because the driver might fall back to "
-"software rendering in this case."
-msgstr ""
-"Затражена резолуција премашује ограничење GL_MAX_TEXTURE_SIZE ГПУ‑а, па се "
-"прозори те величине не могу доделити текстурама и биће скроз црни. Ово "
-"ограничење такође ће често штетити перформансама и кад GL_MAX_VIEWPORT_DIMS "
-"није премашено, зато што драјвер може спасти на софтверско рендеровање."
-
 #: useractions.cpp:180
 msgid ""
 "You have selected to show a window without its border.\n"
@@ -647,7 +573,7 @@ msgstr "На прву површ испод"
 msgid "Switch to Desktop %1"
 msgstr "На површ %1"
 
-#: workspace.cpp:1257
+#: workspace.cpp:1253
 msgctxt "Introductory text shown in the support information."
 msgid ""
 "KWin Support Information:\n"

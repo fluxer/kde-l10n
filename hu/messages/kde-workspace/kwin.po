@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-09-04 23:26+0000\n"
+"POT-Creation-Date: 2016-09-13 23:14+0000\n"
 "PO-Revision-Date: 2014-02-02 14:23+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: composite.cpp:456
+#: composite.cpp:397
 msgid ""
 "Desktop effects have been suspended by another application.<br/>You can "
 "resume using the '%1' shortcut."
@@ -25,34 +25,13 @@ msgstr ""
 "Egy alkalmazás kikapcsolta az asztali effekteket.<br/>A(z) „%1” "
 "billentyűparanccsal kapcsolhatja be azokat."
 
-#: compositingprefs.cpp:96
-msgid ""
-"<b>OpenGL compositing (the default) has crashed KWin in the past.</"
-"b><br>This was most likely due to a driver bug.<p>If you think that you have "
-"meanwhile upgraded to a stable driver,<br>you can reset this protection but "
-"<b>be aware that this might result in an immediate crash!</b></"
-"p><p>Alternatively, you might want to use the XRender backend instead.</p>"
-msgstr ""
-"<b>Az OpenGL kompozitálás (ez az alapértelmezett) a KWin összeomlását okozta "
-"korábban.</b><br>Ez valószínűleg az illesztőprogram hibája miatt történt."
-"<p>Ha úgy gondolja, hogy azóta egy stabil illesztőprogramra frissített, "
-"<br>megszüntetheti ezt a védelmet, <b>ez azonban azonnali összeomlást "
-"okozhat.</b></p><p>Alternatívaként használhatja az XRender modult az OpenGL "
-"helyett.</p>"
-
-#: compositingprefs.cpp:103
+#: compositingprefs.cpp:54
 msgid "Required X extensions (XComposite and XDamage) are not available."
 msgstr "A szükséges X kiterjesztések (XComposite és XDamage) nem érhetők el."
 
-#: compositingprefs.cpp:107
-msgid "GLX/OpenGL are not available and only OpenGL support is compiled."
+#: compositingprefs.cpp:58
+msgid "XRender/XFixes are not available."
 msgstr ""
-"A GLX/OpenGL kiterjesztések nem érhetők el, csak az OpenGL támogatása lett "
-"lefordítva."
-
-#: compositingprefs.cpp:111
-msgid "GLX/OpenGL and XRender/XFixes are not available."
-msgstr "A GLX/OpenGL és XRender/XFixes kiterjesztések nem érhetők el."
 
 #: decorations.cpp:55
 msgid "KWin: "
@@ -386,64 +365,6 @@ msgstr "Átváltás már futó ICCCM2.0-kompatibilis ablakkezelőről"
 msgid "Indicate that KWin has recently crashed n times"
 msgstr "Jelzés, hogy a KWin n alkalommal lefagyott"
 
-#: scene_opengl.cpp:346
-msgid "Desktop effects were restarted due to a graphics reset"
-msgstr ""
-"Az asztali hatások újra lettek indítva egy grafikai visszaállítás miatt"
-
-#: scene_opengl.cpp:553
-msgid ""
-"<h1>OpenGL desktop effects not possible</h1>Your system cannot perform "
-"OpenGL Desktop Effects at the current resolution<br><br>You can try to "
-"select the XRender backend, but it might be very slow for this resolution as "
-"well.<br>Alternatively, lower the combined resolution of all screens to %1x"
-"%2 "
-msgstr ""
-"<h1>Az OpenGL asztali hatások nem lehetségesek</h1>A rendszere nem tudja "
-"végrehajtani az OpenGL asztali hatásokat a jelenlegi "
-"felbontásban<br><br>Megpróbálhatja kiválasztani az XRender háttérprogramot, "
-"de az is nagyon lassú lehet ehhez a felbontáshoz.<br>Alternatív megoldásként "
-"csökkentse az összesített felbontását minden képernyőnek %1x%2 értékre."
-
-#: scene_opengl.cpp:560
-msgid ""
-"The demanded resolution exceeds the GL_MAX_VIEWPORT_DIMS limitation of your "
-"GPU and is therefore not compatible with the OpenGL compositor.<br>XRender "
-"does not know such limitation, but the performance will usually be impacted "
-"by the hardware limitations that restrict the OpenGL viewport size."
-msgstr ""
-"Az igényelt felbontás túllépi a GPU GL_MAX_VIEWPORT_DIMS korlátozását, és "
-"ezért nem kompatibilis az OpenGL összeállítóval.<br>Az XRender nem ismer "
-"ilyen korlátozást, de a hardveres korlátozások hatással lesznek a "
-"teljesítményre, amelyek korlátozzák az OpenGL nézőpont méretét."
-
-#: scene_opengl.cpp:585
-msgid ""
-"<h1>OpenGL desktop effects might be unusable</h1>OpenGL Desktop Effects at "
-"the current resolution are supported but might be exceptionally slow."
-"<br>Also large windows will turn entirely black.<br><br>Consider to suspend "
-"compositing, switch to the XRender backend or lower the resolution to %1x%1."
-msgstr ""
-"<h1>Az OpenGL asztali hatások használhatatlanok lehetnek</h1>Az OpenGL "
-"asztali hatások a jelenlegi felbontásban támogatottak, de kivételesen "
-"lassúak lehetnek.<br>A nagy ablakok teljesen feketévé is válhatnak."
-"<br><br>Fontolja meg a elrendezés felfüggesztését, váltson át az XRender "
-"háttérprogramra vagy csökkentse a felbontást %1x%1 értékre."
-
-#: scene_opengl.cpp:591
-msgid ""
-"The demanded resolution exceeds the GL_MAX_TEXTURE_SIZE limitation of your "
-"GPU, thus windows of that size cannot be assigned to textures and will be "
-"entirely black.<br>Also this limit will often be a performance level barrier "
-"despite below GL_MAX_VIEWPORT_DIMS, because the driver might fall back to "
-"software rendering in this case."
-msgstr ""
-"Az igényelt felbontás túllépi a GPU GL_MAX_TEXTURE_SIZE korlátozását, ezért "
-"az akkora méretű ablakokat nem lehet hozzárendelni a textúrákhoz és egészen "
-"sötétek lesznek.<br>Szintén ez a korlát lesz gyakran teljesítményszint "
-"akadály a lenti GL_MAX_VIEWPORT_DIMS ellenére, mert a meghajtó ebben az "
-"esetben visszatérhet szoftveres kirajzolásra."
-
 #: useractions.cpp:180
 msgid ""
 "You have selected to show a window without its border.\n"
@@ -647,7 +568,7 @@ msgstr "Váltás a lefelé eső asztalra"
 msgid "Switch to Desktop %1"
 msgstr "Váltás a(z) %1. asztalra"
 
-#: workspace.cpp:1257
+#: workspace.cpp:1253
 msgctxt "Introductory text shown in the support information."
 msgid ""
 "KWin Support Information:\n"

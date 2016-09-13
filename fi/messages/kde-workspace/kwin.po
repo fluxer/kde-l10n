@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwin\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-09-04 23:26+0000\n"
+"POT-Creation-Date: 2016-09-13 23:14+0000\n"
 "PO-Revision-Date: 2014-07-02 20:56+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:22:29+0000\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: composite.cpp:456
+#: composite.cpp:397
 msgid ""
 "Desktop effects have been suspended by another application.<br/>You can "
 "resume using the '%1' shortcut."
@@ -34,35 +34,14 @@ msgstr ""
 "Jokin sovellus on poistanut työpöytätehosteet väliaikaisesti<br/>käytöstä. "
 "Voit jatkaa niiden käyttöä painamalla %1."
 
-# En pidä sanan ”backend” suomentamisesta tässä. Koostamistyyppi löytyy työpöytätehosteiden lisäasetuksista, vaikka ”koostamistapa” voisi olla vielä parempi.
-#: compositingprefs.cpp:96
-msgid ""
-"<b>OpenGL compositing (the default) has crashed KWin in the past.</"
-"b><br>This was most likely due to a driver bug.<p>If you think that you have "
-"meanwhile upgraded to a stable driver,<br>you can reset this protection but "
-"<b>be aware that this might result in an immediate crash!</b></"
-"p><p>Alternatively, you might want to use the XRender backend instead.</p>"
-msgstr ""
-"<b>OpenGL-koostaminen (oletus) on kaatanut KWinin.</b><br>Tämä johtui "
-"todennäköisesti ajurivirheestä.<p>Jos arvelet päivittäneesi sittemmin "
-"vakaaseen ajuriin,<br>voit nollata tämän suojauksen, mutta <b>tiedä, että "
-"tästä saattaa seurata välitön kaatuminen!</b></p><p>Vaihtoehtoisesti voit "
-"käyttää XRender-koostamistyyppiä.</p>"
-
-#: compositingprefs.cpp:103
+#: compositingprefs.cpp:54
 msgid "Required X extensions (XComposite and XDamage) are not available."
 msgstr ""
 "Tarvittavat X-laajennukset (XComposite ja XDamage) eivät ole käytettävissä."
 
-#: compositingprefs.cpp:107
-msgid "GLX/OpenGL are not available and only OpenGL support is compiled."
+#: compositingprefs.cpp:58
+msgid "XRender/XFixes are not available."
 msgstr ""
-"GLX/OpenGL-laajennusta ei ole käytettävissä, ja vain OpenGL-tuki on "
-"käännettymukaan."
-
-#: compositingprefs.cpp:111
-msgid "GLX/OpenGL and XRender/XFixes are not available."
-msgstr "GLX/OpenGL- ja XRender/XFixes-laajennuksia eivät ole käytettävissä."
 
 #: decorations.cpp:55
 msgid "KWin: "
@@ -403,64 +382,6 @@ msgstr "Korvaa käynnissä oleva ICCCM2.0-yhteensopiva ikkunointiohjelma"
 msgid "Indicate that KWin has recently crashed n times"
 msgstr "Ilmoita, että KWin on kaatunut n kertaa"
 
-#: scene_opengl.cpp:346
-msgid "Desktop effects were restarted due to a graphics reset"
-msgstr "Työpöytätehosteet käynnistettiin uudelleen, koska grafiikka nollattiin"
-
-#: scene_opengl.cpp:553
-msgid ""
-"<h1>OpenGL desktop effects not possible</h1>Your system cannot perform "
-"OpenGL Desktop Effects at the current resolution<br><br>You can try to "
-"select the XRender backend, but it might be very slow for this resolution as "
-"well.<br>Alternatively, lower the combined resolution of all screens to %1x"
-"%2 "
-msgstr ""
-"<h1>OpenGL-työpöytätehosteet eivät mahdollisia</h1> Järjestelmäsi ei voi "
-"toteuttaa OpenGL-työpöytätehosteita näytön nykyisellä tarkkuudella.<br> <br> "
-"Voit yrittää vaihtaa XRender-taustaosaan, mutta se voi osoittautua hyvin "
-"hitaaksi tällä tarkkuudella.<br> Vaihtoehtoisesti laske kaikkien näyttöjen "
-"yhteistarkkuus arvoon %1×%2 "
-
-#: scene_opengl.cpp:560
-msgid ""
-"The demanded resolution exceeds the GL_MAX_VIEWPORT_DIMS limitation of your "
-"GPU and is therefore not compatible with the OpenGL compositor.<br>XRender "
-"does not know such limitation, but the performance will usually be impacted "
-"by the hardware limitations that restrict the OpenGL viewport size."
-msgstr ""
-"Haluttu tarkkuus ylittää grafiikkasuorittimesi GL_MAX_VIEWPORT_DIMS-"
-"rajoituksen eikä siten ole yhteensopiva OpenGL-koostamisen kanssa.<br> "
-"XRender ei tunne tätä rajoitusta, mutta sen suorituskykyyn vaikuttavat "
-"yleisesti samat laitteistorajoitukset, jotka rajoittavat OpenGL-näkymän "
-"kokoa."
-
-#: scene_opengl.cpp:585
-msgid ""
-"<h1>OpenGL desktop effects might be unusable</h1>OpenGL Desktop Effects at "
-"the current resolution are supported but might be exceptionally slow."
-"<br>Also large windows will turn entirely black.<br><br>Consider to suspend "
-"compositing, switch to the XRender backend or lower the resolution to %1x%1."
-msgstr ""
-"<h1>OpenGL-työpöytätehosteet eivät ehkä käytettävissä</h1> Nykyinen näytön "
-"tarkkuus tukee OpenGL-työpöytätehosteita, mutta ne voivat olla hyvin hitaita."
-"<br> Suuret ikkunat näkyvät kokonaan mustina.<br> <br> Kokeile koostamisen "
-"keskeyttämistä, XRender-taustaosaan vaihtamista tai tarkkuuden asettamista "
-"arvoon %1×%1."
-
-#: scene_opengl.cpp:591
-msgid ""
-"The demanded resolution exceeds the GL_MAX_TEXTURE_SIZE limitation of your "
-"GPU, thus windows of that size cannot be assigned to textures and will be "
-"entirely black.<br>Also this limit will often be a performance level barrier "
-"despite below GL_MAX_VIEWPORT_DIMS, because the driver might fall back to "
-"software rendering in this case."
-msgstr ""
-"Haluttu tarkkuus ylittää grafiikkasuorittimesi GL_MAX_TEXTURE_SIZE-"
-"rajoituksen, joten tämän kokoisiin ikkunoihin ei voi asettaa tekstuuria ja "
-"ne näkyvät kokonaan mustina.<br> Rajoitus vaikuttaa usein myös "
-"suorituskykyyn GL_MAX_VIEWPORT_DIMS-arvon alla, koska ajuri saattaa "
-"turvautua tällöin ohjelmistohahmonnukseen."
-
 #: useractions.cpp:180
 msgid ""
 "You have selected to show a window without its border.\n"
@@ -661,7 +582,7 @@ msgstr "Vaihda työpöytää alas päin"
 msgid "Switch to Desktop %1"
 msgstr "Vaihda työpöytään %1"
 
-#: workspace.cpp:1257
+#: workspace.cpp:1253
 msgctxt "Introductory text shown in the support information."
 msgid ""
 "KWin Support Information:\n"

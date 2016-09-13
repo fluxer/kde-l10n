@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwin\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-09-04 23:26+0000\n"
+"POT-Creation-Date: 2016-09-13 23:14+0000\n"
 "PO-Revision-Date: 2013-11-17 21:50+0100\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: composite.cpp:456
+#: composite.cpp:397
 msgid ""
 "Desktop effects have been suspended by another application.<br/>You can "
 "resume using the '%1' shortcut."
@@ -32,31 +32,13 @@ msgstr ""
 "Masaüstü efektleri başka bir uygulama tarafından beklemeye alındı.<br/>'%1' "
 "kısayolunu kullanarak tekrar etkinleştirebilirsiniz."
 
-#: compositingprefs.cpp:96
-msgid ""
-"<b>OpenGL compositing (the default) has crashed KWin in the past.</"
-"b><br>This was most likely due to a driver bug.<p>If you think that you have "
-"meanwhile upgraded to a stable driver,<br>you can reset this protection but "
-"<b>be aware that this might result in an immediate crash!</b></"
-"p><p>Alternatively, you might want to use the XRender backend instead.</p>"
-msgstr ""
-"<b>Daha önceden OpenGL derlemesi (öntanımlı) KWin'in çökmesine sebep oldu.</"
-"b><br>Bu muhtemelen bir sürücü hatasından meydana gelmiş olabilir.<p>Eğer bu "
-"durumun kararlı bir sürücüye yükseltme yaparken olduğunu "
-"düşünüyorsanız<br>bu korumayı sıfırlayabilirsiniz ancak<b>bu işlemin!</b></"
-"p><p>Ek olarak XRender arka ucunu kullanmak isteyebilirsiniz.</p>"
-
-#: compositingprefs.cpp:103
+#: compositingprefs.cpp:54
 msgid "Required X extensions (XComposite and XDamage) are not available."
 msgstr "Gerekli olan X eklentileri (XComposite ve XDamage) bulunamadı."
 
-#: compositingprefs.cpp:107
-msgid "GLX/OpenGL are not available and only OpenGL support is compiled."
-msgstr "GLX/OpenGL kullanılabilir değil, sadece OpenGL desteği derlenmiş."
-
-#: compositingprefs.cpp:111
-msgid "GLX/OpenGL and XRender/XFixes are not available."
-msgstr "GLX/OpenGL ve XRender/XFixes kullanılabilir değil."
+#: compositingprefs.cpp:58
+msgid "XRender/XFixes are not available."
+msgstr ""
 
 #: decorations.cpp:55
 msgid "KWin: "
@@ -390,62 +372,6 @@ msgstr "Çalışmakta olan ICCCM2.0 uyumlu pencere yöneticisini değiştir"
 msgid "Indicate that KWin has recently crashed n times"
 msgstr "KWin uygulamasının kaç kez çöktüğünü göster"
 
-#: scene_opengl.cpp:346
-msgid "Desktop effects were restarted due to a graphics reset"
-msgstr "Grafik sıfırlaması nedeniyle masaüstü efektleri yeniden başlatıldı"
-
-#: scene_opengl.cpp:553
-msgid ""
-"<h1>OpenGL desktop effects not possible</h1>Your system cannot perform "
-"OpenGL Desktop Effects at the current resolution<br><br>You can try to "
-"select the XRender backend, but it might be very slow for this resolution as "
-"well.<br>Alternatively, lower the combined resolution of all screens to %1x"
-"%2 "
-msgstr ""
-"<h1>OpenGL masaüstü efektleri kullanılamaz</h1>Sisteminiz geçerli "
-"çözünürlükte OpenGL Masaüstü Efektlerini çalıştıramaz.<br><br>XRender arka "
-"ucunu seçmeyi deneyebilirsiniz ancak bu çözünürlükte efektler çok yavaş "
-"çalışabilir.<br>Ek olarak ekranların birleştirilmiş çözünürlüğünü %1x%2 "
-"olarak ayarlayın."
-
-#: scene_opengl.cpp:560
-msgid ""
-"The demanded resolution exceeds the GL_MAX_VIEWPORT_DIMS limitation of your "
-"GPU and is therefore not compatible with the OpenGL compositor.<br>XRender "
-"does not know such limitation, but the performance will usually be impacted "
-"by the hardware limitations that restrict the OpenGL viewport size."
-msgstr ""
-"İstenen çözünürlük grafik işlemci biriminizin GL_MAX_VIEWPORT_DIMS sınırını "
-"aşıyor ve OpenGL derleyicisi ile uyumlu değil.<br>XRender bu sınırdan "
-"haberdar değildir, fakat başarım, genellikle OpenGL görünüm penceresi "
-"boyutunu kısıtlayan donanım sınırlamaları tarafından etkilenecektir."
-
-#: scene_opengl.cpp:585
-msgid ""
-"<h1>OpenGL desktop effects might be unusable</h1>OpenGL Desktop Effects at "
-"the current resolution are supported but might be exceptionally slow."
-"<br>Also large windows will turn entirely black.<br><br>Consider to suspend "
-"compositing, switch to the XRender backend or lower the resolution to %1x%1."
-msgstr ""
-"<h1>OpenGL masaüstü efektleri kullanılamayabilir</h1>Geçerli çözünürlükte "
-"OpenGL Masaüstü Efektleri destekleniyor ancak oldukça yavaş çalışabilir."
-"<br>Ayrıca büyük pencereler tamamen siyah görünecektir.<br><br>Birleştirmeyi "
-"durdurun, XRender arka ucuna geçin veya çözünürlüğü %1x%1 olarak ayarlayın."
-
-#: scene_opengl.cpp:591
-msgid ""
-"The demanded resolution exceeds the GL_MAX_TEXTURE_SIZE limitation of your "
-"GPU, thus windows of that size cannot be assigned to textures and will be "
-"entirely black.<br>Also this limit will often be a performance level barrier "
-"despite below GL_MAX_VIEWPORT_DIMS, because the driver might fall back to "
-"software rendering in this case."
-msgstr ""
-"İstenen çözünürlük grafik işlemci biriminizin GL_MAX_VIEWPORT_DIMS sınırını "
-"aşıyor ve dolayısıyla bu boyuttaki pencere dokulara atanamayacak ve tamamen "
-"siyah olacak.<br>Ayrıca bu sınır sık sık GL_MAX_VIEWPORT_DIMS altında olsa "
-"da bir seviye engeli olacaktır çünkü bu durumda sürücü, yazılım tarafından "
-"derleme kipine geçebilir."
-
 #: useractions.cpp:180
 msgid ""
 "You have selected to show a window without its border.\n"
@@ -647,7 +573,7 @@ msgstr "Bir Alt Masaüstüne Geç"
 msgid "Switch to Desktop %1"
 msgstr "%1. Masaüstüne Geç"
 
-#: workspace.cpp:1257
+#: workspace.cpp:1253
 msgctxt "Introductory text shown in the support information."
 msgid ""
 "KWin Support Information:\n"

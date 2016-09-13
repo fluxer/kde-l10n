@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwin\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-09-04 23:26+0000\n"
+"POT-Creation-Date: 2016-09-13 23:14+0000\n"
 "PO-Revision-Date: 2013-05-23 08:01+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: composite.cpp:456
+#: composite.cpp:397
 msgid ""
 "Desktop effects have been suspended by another application.<br/>You can "
 "resume using the '%1' shortcut."
@@ -32,32 +32,13 @@ msgstr ""
 "Дію ефектів стільниці було призупинено сторонньою програмою.<br/>Ви можете "
 "поновити роботу за допомогою клавіатурного скорочення «%1»."
 
-#: compositingprefs.cpp:96
-msgid ""
-"<b>OpenGL compositing (the default) has crashed KWin in the past.</"
-"b><br>This was most likely due to a driver bug.<p>If you think that you have "
-"meanwhile upgraded to a stable driver,<br>you can reset this protection but "
-"<b>be aware that this might result in an immediate crash!</b></"
-"p><p>Alternatively, you might want to use the XRender backend instead.</p>"
-msgstr ""
-"<b>Композитний показ за допомогою OpenGL (типовий режим) призводив до аварій "
-"KWin.</b><br>Найімовірнішою причиною аварій є вада у драйвері.<p>Якщо ви "
-"вважаєте, що у вашому драйвері немає цієї вади,<br>ви можете скасувати цей "
-"захист, але <b>зважайте на те, що це може призвести до негайного аварійного "
-"завершення роботи!</b></p><p>Іншим варіантом вирішення проблеми є "
-"використання сервера обробки XRender.</p>"
-
-#: compositingprefs.cpp:103
+#: compositingprefs.cpp:54
 msgid "Required X extensions (XComposite and XDamage) are not available."
 msgstr "Немає потрібних розширень X (XComposite і XDamage)."
 
-#: compositingprefs.cpp:107
-msgid "GLX/OpenGL are not available and only OpenGL support is compiled."
-msgstr "GLX/OpenGL є недоступним, зібрано з підтримкою лише OpenGL."
-
-#: compositingprefs.cpp:111
-msgid "GLX/OpenGL and XRender/XFixes are not available."
-msgstr "GLX/OpenGL і XRender/XFixes є недоступними."
+#: compositingprefs.cpp:58
+msgid "XRender/XFixes are not available."
+msgstr ""
 
 #: decorations.cpp:55
 msgid "KWin: "
@@ -391,69 +372,6 @@ msgstr "Замістити вже завантажений менеджер ві
 msgid "Indicate that KWin has recently crashed n times"
 msgstr "Повідомляє, що KWin нещодавно аварійно завершився n разів"
 
-#: scene_opengl.cpp:346
-msgid "Desktop effects were restarted due to a graphics reset"
-msgstr ""
-"Ефекти стільниці було перезапущено через відновлення початкового стану "
-"графіки"
-
-#: scene_opengl.cpp:553
-msgid ""
-"<h1>OpenGL desktop effects not possible</h1>Your system cannot perform "
-"OpenGL Desktop Effects at the current resolution<br><br>You can try to "
-"select the XRender backend, but it might be very slow for this resolution as "
-"well.<br>Alternatively, lower the combined resolution of all screens to %1x"
-"%2 "
-msgstr ""
-"<h1>Використання стільничних ефектів OpenGL неможливе</h1>Використання "
-"стільничних ефектів OpenGL за поточної роздільної здатності екрана неможливе."
-"<br><br>Ви можете вибрати модуль обробки XRender, але за цієї роздільної "
-"здатності його робота також може бути дуже повільною.<br>Ви також можете "
-"знизити роздільну здатність на всіх екранах до %1⨯%2 "
-
-#: scene_opengl.cpp:560
-msgid ""
-"The demanded resolution exceeds the GL_MAX_VIEWPORT_DIMS limitation of your "
-"GPU and is therefore not compatible with the OpenGL compositor.<br>XRender "
-"does not know such limitation, but the performance will usually be impacted "
-"by the hardware limitations that restrict the OpenGL viewport size."
-msgstr ""
-"Вказана вами роздільна здатність перевищує обмеження GL_MAX_VIEWPORT_DIMS "
-"графічного процесора вашої системи і несумісна з системою композитного "
-"відтворення OpenGL.<br>У XRender такого обмеження немає, але швидкодія цього "
-"модуля зазвичай обмежена можливостями обладнання зокрема можливими розмірами "
-"області пам’яті OpenGL."
-
-#: scene_opengl.cpp:585
-msgid ""
-"<h1>OpenGL desktop effects might be unusable</h1>OpenGL Desktop Effects at "
-"the current resolution are supported but might be exceptionally slow."
-"<br>Also large windows will turn entirely black.<br><br>Consider to suspend "
-"compositing, switch to the XRender backend or lower the resolution to %1x%1."
-msgstr ""
-"<h1>Використання стільничних ефектів OpenGL може обмежити працездатність "
-"системи</h1>За поточної роздільної здатності екрана використання стільничних "
-"ефектів OpenGL можливе, але може призвести до надзвичайно повільної роботи "
-"системи.<br>Великі вікна можуть стати повністю чорними.<br><br>Вам варто "
-"вимкнути композитне відтворення, перемкнутися на використання модуля XRender "
-"або зменшити роздільну здатність екрана до %1⨯%1."
-
-#: scene_opengl.cpp:591
-msgid ""
-"The demanded resolution exceeds the GL_MAX_TEXTURE_SIZE limitation of your "
-"GPU, thus windows of that size cannot be assigned to textures and will be "
-"entirely black.<br>Also this limit will often be a performance level barrier "
-"despite below GL_MAX_VIEWPORT_DIMS, because the driver might fall back to "
-"software rendering in this case."
-msgstr ""
-"Вказане вами значення роздільної здатності екрана перевищує обмеження "
-"GL_MAX_TEXTURE_SIZE вашого графічного процесора, тому вікна відповідного "
-"розміру не зможуть отримувати пам’ять під текстури, їх буде показано "
-"повністю чорними.<br>Крім того, використання цієї роздільної здатності може "
-"бути обмежено швидкодією системи навіть за прийнятних значень "
-"GL_MAX_VIEWPORT_DIMS, оскільки драйвер може перейти до резервного "
-"використання програмного режиму обробки зображення."
-
 #: useractions.cpp:180
 msgid ""
 "You have selected to show a window without its border.\n"
@@ -654,7 +572,7 @@ msgstr "Однією стільницею вниз"
 msgid "Switch to Desktop %1"
 msgstr "Перемкнутися до стільниці %1"
 
-#: workspace.cpp:1257
+#: workspace.cpp:1253
 msgctxt "Introductory text shown in the support information."
 msgid ""
 "KWin Support Information:\n"

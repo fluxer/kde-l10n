@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwin\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-09-04 23:26+0000\n"
+"POT-Creation-Date: 2016-09-13 23:14+0000\n"
 "PO-Revision-Date: 2014-02-17 12:38+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: composite.cpp:456
+#: composite.cpp:397
 msgid ""
 "Desktop effects have been suspended by another application.<br/>You can "
 "resume using the '%1' shortcut."
@@ -28,36 +28,14 @@ msgstr ""
 "Die Arbeitsflächeneffekte wurden durch eine andere Anwendung ausgesetzt.<br/"
 ">Sie können mit Hilfe des Kurzbefehls „%1“ reaktiviert werden."
 
-#: compositingprefs.cpp:96
-msgid ""
-"<b>OpenGL compositing (the default) has crashed KWin in the past.</"
-"b><br>This was most likely due to a driver bug.<p>If you think that you have "
-"meanwhile upgraded to a stable driver,<br>you can reset this protection but "
-"<b>be aware that this might result in an immediate crash!</b></"
-"p><p>Alternatively, you might want to use the XRender backend instead.</p>"
-msgstr ""
-"<b>OpenGL-Compositing (Voreinstellung) hat KWin in der Vergangenheit zum "
-"Absturz gebracht.</b><br>Ursache war sehr wahrscheinlich ein fehlerhafter "
-"Treiber. <p>Wenn Sie glauben, in der Zwischenzeit auf eine stabile "
-"Treiberversion aktualisiert zu haben,<br>können Sie die Schutzfunktion "
-"zurücksetzen. Seien Sie sich jedoch im Klaren darüber,<br>dass das zu einem "
-"sofortigen Absturz führen kann.</b></p><p>Alternativ können Sie das XRender-"
-"Backend verwenden.</p>"
-
-#: compositingprefs.cpp:103
+#: compositingprefs.cpp:54
 msgid "Required X extensions (XComposite and XDamage) are not available."
 msgstr ""
 "Benötigte X-Erweiterungen (XComposite und XDamage) sind nicht verfügbar."
 
-#: compositingprefs.cpp:107
-msgid "GLX/OpenGL are not available and only OpenGL support is compiled."
+#: compositingprefs.cpp:58
+msgid "XRender/XFixes are not available."
 msgstr ""
-"GLX/OpenGL sind nicht verfügbar und es ist nur Unterstützung für OpenGL "
-"einkompiliert."
-
-#: compositingprefs.cpp:111
-msgid "GLX/OpenGL and XRender/XFixes are not available."
-msgstr "GLX/OpenGL und XRender/XFixes sind nicht verfügbar."
 
 #: decorations.cpp:55
 msgid "KWin: "
@@ -393,67 +371,6 @@ msgstr "Bereits laufenden ICCCM2.0-kompatiblen Fenstermanager ersetzen"
 msgid "Indicate that KWin has recently crashed n times"
 msgstr "Anzeigen, das KWin kürzlich n-mal abgestürzt ist"
 
-#: scene_opengl.cpp:346
-msgid "Desktop effects were restarted due to a graphics reset"
-msgstr ""
-"Arbeitsflächeneffekte wurden neu gestartet wegen der zurückgesetzten Grafik"
-
-#: scene_opengl.cpp:553
-msgid ""
-"<h1>OpenGL desktop effects not possible</h1>Your system cannot perform "
-"OpenGL Desktop Effects at the current resolution<br><br>You can try to "
-"select the XRender backend, but it might be very slow for this resolution as "
-"well.<br>Alternatively, lower the combined resolution of all screens to %1x"
-"%2 "
-msgstr ""
-"<h1>OpenGL-Desktop-Effekte nicht möglich</h1>Ihr System kann in der "
-"aktuellen Auflösung keine OpenGL-Desktop-Effekte ausführen.<br><br> Sie "
-"können das XRender-Backend probieren, aber bei dieser Auflösung wird es "
-"wahrscheinlich auch langsam arbeiten.<br>Eine Alternative ist, die "
-"kombinierte Auflösung aller Bildschirme auf %1 x %2 zu reduzieren."
-
-#: scene_opengl.cpp:560
-msgid ""
-"The demanded resolution exceeds the GL_MAX_VIEWPORT_DIMS limitation of your "
-"GPU and is therefore not compatible with the OpenGL compositor.<br>XRender "
-"does not know such limitation, but the performance will usually be impacted "
-"by the hardware limitations that restrict the OpenGL viewport size."
-msgstr ""
-"Die erwartete Auflösung überschreitet die GL_MAX_VIEWPORT_DIMS-Beschränkung "
-"Ihrer Grafikkarte (GPU) und ist daher nicht kompatibel mit dem OpenGL-"
-"Kompositor.<br/>XRender weist diese Beschränkung nicht auf, aber die "
-"Leistung wird normalerweise durch Hardware-Beschränkungen beeinträchtigt, "
-"die auch den Anzeigebereich in OpenGL begrenzen."
-
-#: scene_opengl.cpp:585
-msgid ""
-"<h1>OpenGL desktop effects might be unusable</h1>OpenGL Desktop Effects at "
-"the current resolution are supported but might be exceptionally slow."
-"<br>Also large windows will turn entirely black.<br><br>Consider to suspend "
-"compositing, switch to the XRender backend or lower the resolution to %1x%1."
-msgstr ""
-"<h1>OpenGL-Arbeitsflächeneffekte können unbrauchbar sein</h1>OpenGL-"
-"Arbeitsflächeneffekte werden bei der aktuellen Resolution unterstützt, sind "
-"möglicherweise aber außergewöhnlich langsam.<br>Außerdem werden große "
-"Fenster vollkommen schwarz erscheinen.<br><br>Überlegen Sie Compositing "
-"abzuschalten, zum XRender-Backend zu wechseln oder die Auflösung auf  %1 x "
-"%1 zu verringern."
-
-#: scene_opengl.cpp:591
-msgid ""
-"The demanded resolution exceeds the GL_MAX_TEXTURE_SIZE limitation of your "
-"GPU, thus windows of that size cannot be assigned to textures and will be "
-"entirely black.<br>Also this limit will often be a performance level barrier "
-"despite below GL_MAX_VIEWPORT_DIMS, because the driver might fall back to "
-"software rendering in this case."
-msgstr ""
-"Die angeforderte Auflösung übersteigt die maximale GL_MAX_TEXTURE_SIZE Ihrer "
-"GPU, daher können für Fenster in dieser Größe keine Texturen angewendet "
-"werden und sie werden vollkommen schwarz angezeigt.<br>Diese Begrenzung ist "
-"häufig auch eine  Leistungsbegrenzung, obwohl der Wert unter "
-"GL_MAX_VIEWPORT_DIMS, weil der Treiber in diesem Fall auf Software-Rendering "
-"ausweicht."
-
 #: useractions.cpp:180
 msgid ""
 "You have selected to show a window without its border.\n"
@@ -657,7 +574,7 @@ msgstr "Eine Arbeitsfläche nach unten"
 msgid "Switch to Desktop %1"
 msgstr "Auf Arbeitsfläche %1 umschalten"
 
-#: workspace.cpp:1257
+#: workspace.cpp:1253
 msgctxt "Introductory text shown in the support information."
 msgid ""
 "KWin Support Information:\n"
