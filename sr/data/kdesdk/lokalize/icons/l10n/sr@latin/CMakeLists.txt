@@ -1,1 +1,1 @@
-kde4_install_icons(${ICON_INSTALL_DIR} sr@latin)
+kde4_install_icons(${KDE4_ICON_INSTALL_DIR} sr@latin)

@@ -15,7 +15,7 @@ if(PYTHONINTERP_FOUND)
         string(REPLACE "/" ";" _subpathlst ${_subtsfile})
         list(GET _subpathlst 1 _tsmodule)
         install(FILES ${_tscfile}
-                DESTINATION ${LOCALE_INSTALL_DIR}/${CURRENT_LANG}/LC_SCRIPTS/${_tsmodule})
+		DESTINATION ${KDE4_LOCALE_INSTALL_DIR}/${CURRENT_LANG}/LC_SCRIPTS/${_tsmodule})
         set(_tscfiles ${_tscfiles} ${_tscfile})
         string(REPLACE "/" "-" _target ${_subtsfile})
         add_custom_target("pmapc-${_target}" ALL DEPENDS ${_tscfiles})

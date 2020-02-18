@@ -1,1 +1,1 @@
-install(FILES ca.xml DESTINATION ${DATA_INSTALL_DIR}/autocorrect)
+install(FILES ca.xml DESTINATION ${KDE4_DATA_INSTALL_DIR}/autocorrect)

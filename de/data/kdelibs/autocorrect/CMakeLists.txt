@@ -1,1 +1,1 @@
-install( FILES  de_DE.xml DESTINATION ${DATA_INSTALL_DIR}/autocorrect )
+install( FILES  de_DE.xml DESTINATION ${KDE4_DATA_INSTALL_DIR}/autocorrect )

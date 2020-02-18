@@ -3,7 +3,7 @@ file(GLOB_RECURSE _po_files *.po)
 GETTEXT_PROCESS_PO_FILES(
     ${CURRENT_LANG}
     ALL
-    INSTALL_DESTINATION ${LOCALE_INSTALL_DIR}
+    INSTALL_DESTINATION ${KDE4_LOCALE_INSTALL_DIR}
     PO_FILES ${_po_files}
 )
 install(
@@ -11,5 +11,5 @@ install(
     entry.desktop
     flag.png
     charset
-    DESTINATION ${LOCALE_INSTALL_DIR}/${CURRENT_LANG}
+    DESTINATION ${KDE4_LOCALE_INSTALL_DIR}/${CURRENT_LANG}
 )
