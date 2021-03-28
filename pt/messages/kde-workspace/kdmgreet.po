@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdm\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2010-03-04 15:08+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -18,17 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: consla\n"
 
-#: kconsole.cpp:70
-msgid "*** Cannot connect to console log ***"
-msgstr "*** Não é possível ligar ao registo da consola ***"
-
-#: kconsole.cpp:154
-msgid ""
-"\n"
-"*** Lost connection with console log ***"
-msgstr ""
-"\n"
-"*** Não é possível aceder ao código de registo da consola ***"
+#: kdmconfig.cpp:133
+msgctxt ""
+"@item:intext substitution for an undefined %X placeholder wrongly given in "
+"the config file 'kdmrc', telling the user to fix it"
+msgid "[fix kdmrc]"
+msgstr "[corrigir o kdmrc]"
 
 #: kgdialog.cpp:57
 msgid "Sw&itch User"
@@ -59,58 +54,86 @@ msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kchooser.cpp:59
+#: kgreeter.cpp:482
+msgctxt "@item:inlistbox session type"
+msgid "Default"
+msgstr "Predefinição"
+
+#: kgreeter.cpp:483
+msgctxt "@item:inlistbox session type"
+msgid "Custom"
+msgstr "Personalizada"
+
+#: kgreeter.cpp:484
+msgctxt "@item:inlistbox session type"
+msgid "Failsafe"
+msgstr "Emergência"
+
+#: kgreeter.cpp:560
+msgctxt "@item:inmenu session type"
+msgid "%1 (previous)"
+msgstr "%1 (anterior)"
+
+#: kgreeter.cpp:622
+msgid ""
+"Your saved session type '%1' is not valid any more.\n"
+"Please select a new one, otherwise 'default' will be used."
+msgstr ""
+"O tipo de sessão gravado '%1' já não é válido.\n"
+"Por favor seleccione outro, ou será utilizado o por omissão."
+
+#: kgreeter.cpp:750 kgverify.cpp:1085
+msgid "Login failed"
+msgstr "A autenticação falhou"
+
+#: kgreeter.cpp:799
+msgctxt "@title:menu"
+msgid "Session &Type"
+msgstr "&Tipo de Sessão"
+
+#: kgreeter.cpp:805
+msgctxt "@title:menu"
+msgid "&Authentication Method"
+msgstr "Método de &Autenticação"
+
+#: kgreeter.cpp:810
 msgctxt "@action:inmenu"
-msgid "&Local Login"
-msgstr "Ligação &Local"
+msgid "&Remote Login"
+msgstr "Ligação &Remota"
 
-#: kchooser.cpp:63
-msgid "XDMCP Host Menu"
-msgstr "Menu de Máquinas XDMCP"
+#: utils.cpp:87
+msgctxt "user: ..."
+msgid "%2: TTY login"
+msgid_plural "%2: %1 TTY logins"
+msgstr[0] "%2: ligação em TTY"
+msgstr[1] "%2: %1 ligações em TTY"
 
-#: kchooser.cpp:73
-msgctxt "@title:column"
-msgid "Hostname"
-msgstr "Máquina"
+#: utils.cpp:99
+msgctxt "... session"
+msgid "Unused"
+msgstr "Não utilizada"
 
-#: kchooser.cpp:74
-msgctxt "@title:column ... of named host"
-msgid "Status"
-msgstr "Estado"
+#: utils.cpp:101
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: kchooser.cpp:82
-msgctxt "XDMCP server"
-msgid "Hos&t:"
-msgstr "Má&quina:"
+#: utils.cpp:103
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "Sessão do X em %1"
 
-#: kchooser.cpp:84
-msgctxt "@action:button"
-msgid "A&dd"
-msgstr "A&dicionar"
+#: themer/kdmthemer.cpp:67
+msgid "Cannot open theme file %1"
+msgstr "Não foi possível abrir o ficheiro de tema %1"
 
-#: kchooser.cpp:93
-msgctxt "@action:button"
-msgid "&Accept"
-msgstr "&Aceitar"
+#: themer/kdmthemer.cpp:72
+msgid "Cannot parse theme file %1"
+msgstr "Não foi possível processar o ficheiro de tema %1"
 
-#: kchooser.cpp:95
-msgctxt "@action:button"
-msgid "&Refresh"
-msgstr "Actualiza&r"
-
-#: kchooser.cpp:105
-msgctxt "@action:button"
-msgid "&Menu"
-msgstr "&Menu"
-
-#: kchooser.cpp:203
-msgctxt "hostname or status"
-msgid "<unknown>"
-msgstr "<desconhecida>"
-
-#: kchooser.cpp:242
-msgid "Unknown host %1"
-msgstr "Servidor desconhecido %1"
+#: themer/kdmthemer.cpp:79
+msgid "%1 does not seem to be a correct theme file"
+msgstr "O '%1' não parece ser um ficheiro de tema válido"
 
 #: themer/kdmlabel.cpp:247
 msgctxt "@action:button"
@@ -194,163 +217,6 @@ msgstr[1] "%1 segundos"
 msgctxt "date format"
 msgid "%a %d %B"
 msgstr "%a %d %B"
-
-#: themer/kdmthemer.cpp:67
-msgid "Cannot open theme file %1"
-msgstr "Não foi possível abrir o ficheiro de tema %1"
-
-#: themer/kdmthemer.cpp:72
-msgid "Cannot parse theme file %1"
-msgstr "Não foi possível processar o ficheiro de tema %1"
-
-#: themer/kdmthemer.cpp:79
-msgid "%1 does not seem to be a correct theme file"
-msgstr "O '%1' não parece ser um ficheiro de tema válido"
-
-#: utils.cpp:87
-msgctxt "user: ..."
-msgid "%2: TTY login"
-msgid_plural "%2: %1 TTY logins"
-msgstr[0] "%2: ligação em TTY"
-msgstr[1] "%2: %1 ligações em TTY"
-
-#: utils.cpp:99
-msgctxt "... session"
-msgid "Unused"
-msgstr "Não utilizada"
-
-#: utils.cpp:101
-msgctxt "user: session type"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: utils.cpp:103
-msgctxt "... host"
-msgid "X login on %1"
-msgstr "Sessão do X em %1"
-
-#: kgverify.cpp:187
-msgid "No greeter widget plugin loaded. Check the configuration."
-msgstr ""
-"Nenhum 'plugin' de pedido de dados carregado. Verifique a configuração."
-
-#: kgverify.cpp:496
-msgid ""
-"Logging in %1...\n"
-"\n"
-msgstr ""
-"A iniciar a sessão em %1 ...\n"
-"\n"
-
-#: kgverify.cpp:500
-msgid "You are required to change your password immediately (password aged)."
-msgstr "Necessita de mudar a sua senha imediatamente (senha demasiado antiga)."
-
-#: kgverify.cpp:501
-msgid "You are required to change your password immediately (root enforced)."
-msgstr "Necessita de mudar a sua senha imediatamente (obrigado pelo root)."
-
-#: kgverify.cpp:502
-msgid "You are not allowed to login at the moment."
-msgstr "Neste momento não lhe é possível ligar-se."
-
-#: kgverify.cpp:503
-msgid "Home folder not available."
-msgstr "A pasta pessoal está indisponível."
-
-#: kgverify.cpp:504
-msgid ""
-"Logins are not allowed at the moment.\n"
-"Try again later."
-msgstr ""
-"Neste momento não são permitidas nenhumas ligações.\n"
-"Tente mais tarde."
-
-#: kgverify.cpp:505
-msgid "Your login shell is not listed in /etc/shells."
-msgstr "A sua 'shell' de arranque não consta no /etc/shells."
-
-#: kgverify.cpp:506
-msgid "Root logins are not allowed."
-msgstr "Não é permitido ao root autenticar-se."
-
-#: kgverify.cpp:507
-msgid "Your account has expired; please contact your system administrator."
-msgstr ""
-"A sua conta expirou; por favor contacte o seu administrador de sistemas."
-
-#: kgverify.cpp:517
-msgid ""
-"A critical error occurred.\n"
-"Please look at KDM's logfile(s) for more information\n"
-"or contact your system administrator."
-msgstr ""
-"Ocorreu um erro crítico.\n"
-"Examine o ficheiro de registo do KDM para mais\n"
-"informações ou contacte o seu administrador de sistemas."
-
-#: kgverify.cpp:542
-msgid "Your account expires tomorrow."
-msgid_plural "Your account expires in %1 days."
-msgstr[0] "A sua conta expira amanhã."
-msgstr[1] "A sua conta expira daqui a %1 dias."
-
-#: kgverify.cpp:544
-msgid "Your account expires today."
-msgstr "A sua conta expira hoje."
-
-#: kgverify.cpp:550
-msgid "Your password expires tomorrow."
-msgid_plural "Your password expires in %1 days."
-msgstr[0] "A sua senha expira amanhã."
-msgstr[1] "A sua senha expira daqui a %1 dias."
-
-#: kgverify.cpp:552
-msgid "Your password expires today."
-msgstr "A sua senha expira hoje."
-
-#: kgverify.cpp:626 kgverify.cpp:1086
-msgid "Authentication failed"
-msgstr "A autenticação foi mal-sucedida"
-
-#: kgverify.cpp:776
-msgid "Authenticated user (%1) does not match requested user (%2).\n"
-msgstr ""
-"O utilizador autenticado (%1) não coincide com o utilizador pedido (%2).\n"
-
-#: kgverify.cpp:1067
-msgid "Automatic login in 1 second..."
-msgid_plural "Automatic login in %1 seconds..."
-msgstr[0] "A iniciar a sessão automaticamente daqui a 1 segundo..."
-msgstr[1] "A iniciar a sessão automaticamente daqui a %1 segundos..."
-
-#: kgverify.cpp:1079
-msgid "Warning: Caps Lock is on"
-msgstr "Aviso: o Caps Lock está ligado"
-
-#: kgverify.cpp:1083
-msgid "Change failed"
-msgstr "A alteração falhou"
-
-#: kgverify.cpp:1085 kgreeter.cpp:750
-msgid "Login failed"
-msgstr "A autenticação falhou"
-
-#: kgverify.cpp:1136
-msgid "Theme not usable with authentication method '%1'."
-msgstr "O tema não pode ser usado com o método de autenticação '%1'."
-
-#: kgverify.cpp:1173
-msgctxt "@title:window"
-msgid "<qt><b>Changing authentication token</b></qt>"
-msgstr "<qt><b>A mudar o elemento de autenticação</b></qt>"
-
-#: kdmconfig.cpp:133
-msgctxt ""
-"@item:intext substitution for an undefined %X placeholder wrongly given in "
-"the config file 'kdmrc', telling the user to fix it"
-msgid "[fix kdmrc]"
-msgstr "[corrigir o kdmrc]"
 
 #: kdmshutdown.cpp:89
 msgid "Root authorization required."
@@ -542,45 +408,179 @@ msgstr ""
 "\n"
 "Após o tempo-limite: %1"
 
-#: kgreeter.cpp:482
-msgctxt "@item:inlistbox session type"
-msgid "Default"
-msgstr "Predefinição"
-
-#: kgreeter.cpp:483
-msgctxt "@item:inlistbox session type"
-msgid "Custom"
-msgstr "Personalizada"
-
-#: kgreeter.cpp:484
-msgctxt "@item:inlistbox session type"
-msgid "Failsafe"
-msgstr "Emergência"
-
-#: kgreeter.cpp:560
-msgctxt "@item:inmenu session type"
-msgid "%1 (previous)"
-msgstr "%1 (anterior)"
-
-#: kgreeter.cpp:622
-msgid ""
-"Your saved session type '%1' is not valid any more.\n"
-"Please select a new one, otherwise 'default' will be used."
+#: kgverify.cpp:187
+msgid "No greeter widget plugin loaded. Check the configuration."
 msgstr ""
-"O tipo de sessão gravado '%1' já não é válido.\n"
-"Por favor seleccione outro, ou será utilizado o por omissão."
+"Nenhum 'plugin' de pedido de dados carregado. Verifique a configuração."
 
-#: kgreeter.cpp:799
-msgctxt "@title:menu"
-msgid "Session &Type"
-msgstr "&Tipo de Sessão"
+#: kgverify.cpp:496
+msgid ""
+"Logging in %1...\n"
+"\n"
+msgstr ""
+"A iniciar a sessão em %1 ...\n"
+"\n"
 
-#: kgreeter.cpp:805
-msgctxt "@title:menu"
-msgid "&Authentication Method"
-msgstr "Método de &Autenticação"
+#: kgverify.cpp:500
+msgid "You are required to change your password immediately (password aged)."
+msgstr "Necessita de mudar a sua senha imediatamente (senha demasiado antiga)."
 
-#: kgreeter.cpp:810
+#: kgverify.cpp:501
+msgid "You are required to change your password immediately (root enforced)."
+msgstr "Necessita de mudar a sua senha imediatamente (obrigado pelo root)."
+
+#: kgverify.cpp:502
+msgid "You are not allowed to login at the moment."
+msgstr "Neste momento não lhe é possível ligar-se."
+
+#: kgverify.cpp:503
+msgid "Home folder not available."
+msgstr "A pasta pessoal está indisponível."
+
+#: kgverify.cpp:504
+msgid ""
+"Logins are not allowed at the moment.\n"
+"Try again later."
+msgstr ""
+"Neste momento não são permitidas nenhumas ligações.\n"
+"Tente mais tarde."
+
+#: kgverify.cpp:505
+msgid "Your login shell is not listed in /etc/shells."
+msgstr "A sua 'shell' de arranque não consta no /etc/shells."
+
+#: kgverify.cpp:506
+msgid "Root logins are not allowed."
+msgstr "Não é permitido ao root autenticar-se."
+
+#: kgverify.cpp:507
+msgid "Your account has expired; please contact your system administrator."
+msgstr ""
+"A sua conta expirou; por favor contacte o seu administrador de sistemas."
+
+#: kgverify.cpp:517
+msgid ""
+"A critical error occurred.\n"
+"Please look at KDM's logfile(s) for more information\n"
+"or contact your system administrator."
+msgstr ""
+"Ocorreu um erro crítico.\n"
+"Examine o ficheiro de registo do KDM para mais\n"
+"informações ou contacte o seu administrador de sistemas."
+
+#: kgverify.cpp:542
+msgid "Your account expires tomorrow."
+msgid_plural "Your account expires in %1 days."
+msgstr[0] "A sua conta expira amanhã."
+msgstr[1] "A sua conta expira daqui a %1 dias."
+
+#: kgverify.cpp:544
+msgid "Your account expires today."
+msgstr "A sua conta expira hoje."
+
+#: kgverify.cpp:550
+msgid "Your password expires tomorrow."
+msgid_plural "Your password expires in %1 days."
+msgstr[0] "A sua senha expira amanhã."
+msgstr[1] "A sua senha expira daqui a %1 dias."
+
+#: kgverify.cpp:552
+msgid "Your password expires today."
+msgstr "A sua senha expira hoje."
+
+#: kgverify.cpp:626 kgverify.cpp:1086
+msgid "Authentication failed"
+msgstr "A autenticação foi mal-sucedida"
+
+#: kgverify.cpp:776
+msgid "Authenticated user (%1) does not match requested user (%2).\n"
+msgstr ""
+"O utilizador autenticado (%1) não coincide com o utilizador pedido (%2).\n"
+
+#: kgverify.cpp:1067
+msgid "Automatic login in 1 second..."
+msgid_plural "Automatic login in %1 seconds..."
+msgstr[0] "A iniciar a sessão automaticamente daqui a 1 segundo..."
+msgstr[1] "A iniciar a sessão automaticamente daqui a %1 segundos..."
+
+#: kgverify.cpp:1079
+msgid "Warning: Caps Lock is on"
+msgstr "Aviso: o Caps Lock está ligado"
+
+#: kgverify.cpp:1083
+msgid "Change failed"
+msgstr "A alteração falhou"
+
+#: kgverify.cpp:1136
+msgid "Theme not usable with authentication method '%1'."
+msgstr "O tema não pode ser usado com o método de autenticação '%1'."
+
+#: kgverify.cpp:1173
+msgctxt "@title:window"
+msgid "<qt><b>Changing authentication token</b></qt>"
+msgstr "<qt><b>A mudar o elemento de autenticação</b></qt>"
+
+#: kchooser.cpp:59
 msgctxt "@action:inmenu"
-msgid "&Remote Login"
-msgstr "Ligação &Remota"
+msgid "&Local Login"
+msgstr "Ligação &Local"
+
+#: kchooser.cpp:63
+msgid "XDMCP Host Menu"
+msgstr "Menu de Máquinas XDMCP"
+
+#: kchooser.cpp:73
+msgctxt "@title:column"
+msgid "Hostname"
+msgstr "Máquina"
+
+#: kchooser.cpp:74
+msgctxt "@title:column ... of named host"
+msgid "Status"
+msgstr "Estado"
+
+#: kchooser.cpp:82
+msgctxt "XDMCP server"
+msgid "Hos&t:"
+msgstr "Má&quina:"
+
+#: kchooser.cpp:84
+msgctxt "@action:button"
+msgid "A&dd"
+msgstr "A&dicionar"
+
+#: kchooser.cpp:93
+msgctxt "@action:button"
+msgid "&Accept"
+msgstr "&Aceitar"
+
+#: kchooser.cpp:95
+msgctxt "@action:button"
+msgid "&Refresh"
+msgstr "Actualiza&r"
+
+#: kchooser.cpp:105
+msgctxt "@action:button"
+msgid "&Menu"
+msgstr "&Menu"
+
+#: kchooser.cpp:203
+msgctxt "hostname or status"
+msgid "<unknown>"
+msgstr "<desconhecida>"
+
+#: kchooser.cpp:242
+msgid "Unknown host %1"
+msgstr "Servidor desconhecido %1"
+
+#: kconsole.cpp:68
+msgid "*** Cannot connect to console log ***"
+msgstr "*** Não é possível ligar ao registo da consola ***"
+
+#: kconsole.cpp:152
+msgid ""
+"\n"
+"*** Lost connection with console log ***"
+msgstr ""
+"\n"
+"*** Não é possível aceder ao código de registo da consola ***"

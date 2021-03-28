@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-12-27 06:22+0200\n"
+"POT-Creation-Date: 2021-03-28 14:18+0300\n"
 "PO-Revision-Date: 2014-01-16 22:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -23,97 +23,874 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: Workspace.cpp:112
-msgid "Sheet %1"
-msgstr "Аркуш %1"
+#. i18n: file: ksysguardui.rc:4
+#. i18n: ectx: Menu (file)
+#: rc.cpp:3
+msgid "&File"
+msgstr "&Файл"
 
-#: Workspace.cpp:171
+#. i18n: file: ksysguardui.rc:14
+#. i18n: ectx: Menu (view)
+#: rc.cpp:6
+msgid "&View"
+msgstr "П&ерегляд"
+
+#. i18n: file: ksysguardui.rc:18
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:9
+msgid "&Settings"
+msgstr "&Параметри"
+
+#. i18n: file: ksysguardui.rc:21
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:12
+msgid "Main Toolbar"
+msgstr "Головний пенал"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, fileFrame)
+#: rc.cpp:15
+msgid "File"
+msgstr "Файл"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:31
+#. i18n: ectx: property (title), widget (QGroupBox, timerFrame)
+#: rc.cpp:18
+msgctxt "@title:group"
+msgid "Timer Interval"
+msgstr "Інтервал таймера"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:49
+#. i18n: ectx: property (suffix), widget (KIntNumInput, m_timerInterval)
+#: rc.cpp:21 WorkSheetSettings.cpp:94 TimerSettings.cpp:58
+msgid " sec"
+msgstr " с"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:59
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
+#: rc.cpp:24 SensorDisplayLib/DancingBarsSettings.cpp:107
+msgid "Alarm for Minimum Value"
+msgstr "Сигнал для мінімального значення"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:68
+#. i18n: ectx: property (text), widget (QCheckBox, m_lowerLimitActive)
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:59
+#. i18n: ectx: property (text), widget (QCheckBox, m_lowerLimitActive)
+#: rc.cpp:27 rc.cpp:63
+msgid "&Enable alarm"
+msgstr "&Ввімкнути сигнал"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:71
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_lowerLimitActive)
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:56
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_lowerLimitActive)
+#: rc.cpp:30 rc.cpp:60 SensorDisplayLib/DancingBarsSettings.cpp:113
+msgid "Enable the minimum value alarm."
+msgstr "Ввімкнути тривогу за мінімальним значенням."
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:97
+#. i18n: ectx: property (text), widget (QLabel, m_lblLowerLimit)
+#: rc.cpp:33 SensorDisplayLib/DancingBarsSettings.cpp:116
+msgid "Lower limit:"
+msgstr "Нижня межа:"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:123
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox1_2)
+#: rc.cpp:36 SensorDisplayLib/DancingBarsSettings.cpp:130
+msgid "Alarm for Maximum Value"
+msgstr "Сигнал для максимального значення"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:132
+#. i18n: ectx: property (text), widget (QCheckBox, m_upperLimitActive)
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:118
+#. i18n: ectx: property (text), widget (QCheckBox, m_upperLimitActive)
+#: rc.cpp:39 rc.cpp:72
+msgid "E&nable alarm"
+msgstr "&Ввімкнути сигнал"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:135
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_upperLimitActive)
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:115
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_upperLimitActive)
+#: rc.cpp:42 rc.cpp:69 SensorDisplayLib/DancingBarsSettings.cpp:136
+msgid "Enable the maximum value alarm."
+msgstr "Ввімкнути тривогу за максимальним значенням."
+
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:161
+#. i18n: ectx: property (text), widget (QLabel, m_lblUpperLimit)
+#: rc.cpp:45 SensorDisplayLib/DancingBarsSettings.cpp:139
+msgid "Upper limit:"
+msgstr "Верхня межа:"
+
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:25
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:48
+msgid "&Title:"
+msgstr "За&головок:"
+
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:35
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, m_title)
+#: rc.cpp:51 SensorDisplayLib/DancingBarsSettings.cpp:62
+#: SensorDisplayLib/FancyPlotterSettings.cpp:73
+msgid "Enter the title of the display here."
+msgstr "Введіть тут заголовок дисплея."
+
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:42
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_showUnit)
+#: rc.cpp:54
+msgid "Enable this to append the unit to the title of the display."
+msgstr "Ввімкніть, щоб додати елемент до заголовка показу."
+
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:45
+#. i18n: ectx: property (text), widget (QCheckBox, m_showUnit)
+#: rc.cpp:57
+msgid "&Show unit"
+msgstr "Показувати &одиниці"
+
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:85
+#. i18n: ectx: property (text), widget (QLabel, m_lblLowerLimit)
+#: rc.cpp:66
+msgid "Lo&wer limit:"
+msgstr "Ве&рхня межа:"
+
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:144
+#. i18n: ectx: property (text), widget (QLabel, m_lblUpperLimit)
+#: rc.cpp:75
+msgid "&Upper limit:"
+msgstr "&Верхня межа:"
+
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:174
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: rc.cpp:78
+msgid "Normal digit color:"
+msgstr "Звичайний колір:"
+
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:201
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
+#: rc.cpp:81
+msgid "Alarm digit color:"
+msgstr "Колір цифр під час тривоги:"
+
+#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:228
+#. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:77
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:64
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:67
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:84 rc.cpp:99 rc.cpp:111 rc.cpp:126
+#: SensorDisplayLib/DancingBarsSettings.cpp:175
+#: SensorDisplayLib/LogFile.cpp:100
+msgid "Background color:"
+msgstr "Колір тла:"
+
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, titleFrame)
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, titleFrame)
+#: rc.cpp:87 rc.cpp:102 SensorDisplayLib/DancingBarsSettings.cpp:57
+#: WorkSheetSettings.cpp:50
+msgid "Title"
+msgstr "Заголовок"
+
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:37
+#. i18n: ectx: property (title), widget (QGroupBox, colorFrame)
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:37
+#. i18n: ectx: property (title), widget (QGroupBox, colorFrame)
+#: rc.cpp:90 rc.cpp:105
+msgid "Colors"
+msgstr "Кольори"
+
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:51
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:51
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:93 rc.cpp:108
+msgid "Text color:"
+msgstr "Колір тексту:"
+
+#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:64
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:96
+msgid "Grid color:"
+msgstr "Колір ґратки:"
+
+#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:77
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:114
+msgid "Alarm color:"
+msgstr "Колір тривоги:"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:21
+#. i18n: ectx: attribute (title), widget (QWidget, textTab)
+#: rc.cpp:117
+msgid "&Text"
+msgstr "&Текст"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:29
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:120
+msgid "T&itle:"
+msgstr "З&аголовок:"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:54
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:123 SensorDisplayLib/LogFile.cpp:98
+msgid "Foreground color:"
+msgstr "Колір тексту:"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:139
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: rc.cpp:129
+msgid "Fi&lter"
+msgstr "Фі&льтр"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:160
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: rc.cpp:132
+msgid "&Add"
+msgstr "&Додати"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:167
+#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
+#: rc.cpp:135
+msgid "&Delete"
+msgstr "&Вилучити"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:174
+#. i18n: ectx: property (text), widget (QPushButton, changeButton)
+#: rc.cpp:138
+msgid "&Change"
+msgstr "&Змінити"
+
+#. i18n: tag WorkSheet attribute title
+#. i18n: file: ProcessTable.sgrd:3
+#. i18n: tag display attribute title
+#. i18n: file: ProcessTable.sgrd:5
+#: rc.cpp:141 rc.cpp:144
+msgid "Process Table"
+msgstr "Таблиця процесів"
+
+#. i18n: tag WorkSheet attribute title
+#. i18n: file: SystemLoad2.sgrd:3
+#: rc.cpp:147
+msgid "System Load"
+msgstr "Завантаження системи"
+
+#. i18n: tag display attribute title
+#. i18n: file: SystemLoad2.sgrd:5
+#: rc.cpp:150
+msgid "CPU History"
+msgstr "Журнал ЦП"
+
+#. i18n: tag display attribute title
+#. i18n: file: SystemLoad2.sgrd:8
+#: rc.cpp:153
+msgid "Memory and Swap History"
+msgstr "Журнал пам’яті і свопінгу"
+
+#. i18n: tag beam attribute summationName
+#. i18n: file: SystemLoad2.sgrd:9
+#: rc.cpp:156
+msgid "Memory"
+msgstr "Пам’ять"
+
+#. i18n: tag beam attribute summationName
+#. i18n: file: SystemLoad2.sgrd:10
+#: rc.cpp:159
+msgid "Swap"
+msgstr "Резервна пам’ять"
+
+#. i18n: tag display attribute title
+#. i18n: file: SystemLoad2.sgrd:12
+#: rc.cpp:162
+msgid "Network History"
+msgstr "Журнал мережі"
+
+#. i18n: tag beam attribute summationName
+#. i18n: file: SystemLoad2.sgrd:13
+#: rc.cpp:165
+msgid "Receiving"
+msgstr "Отримання"
+
+#. i18n: tag beam attribute summationName
+#. i18n: file: SystemLoad2.sgrd:14
+#: rc.cpp:168
+msgid "Sending"
+msgstr "Надсилання"
+
+#: SensorDisplayLib/SensorLoggerDlg.cpp:32
+#: SensorDisplayLib/SensorLogger.cpp:429
+msgid "Sensor Logger"
+msgstr "Реєстратор"
+
+#: SensorDisplayLib/SensorDisplay.cpp:117 SensorDisplayLib/SensorLogger.cpp:598
+msgid "&Properties"
+msgstr "В&ластивості"
+
+#: SensorDisplayLib/SensorDisplay.cpp:122 SensorDisplayLib/SensorLogger.cpp:603
+msgid "&Remove Display"
+msgstr "&Вилучити індикатор"
+
+#: SensorDisplayLib/SensorDisplay.cpp:189
 msgid ""
-"The tab '%1' contains unsaved data.\n"
-"Do you want to save the tab?"
+"<qt><p>This is a sensor display. To customize a sensor display click the "
+"right mouse button here and select the <i>Properties</i> entry from the "
+"popup menu. Select <i>Remove</i> to delete the display from the worksheet.</"
+"p>%1</qt>"
 msgstr ""
-"На вкладці «%1» містяться незбережені дані.\n"
-"Зберегти цю вкладку?"
+"<qt><p>Це індикатор датчика. Щоб змінити його параметри, клацніть сюди "
+"правою кнопкою мишки і виберіть <i>Властивості</i> у вигулькному меню. "
+"Виберіть <i>Вилучити</i>, щоб вилучити індикатор з аркуша.</p>%1</qt>"
 
-#: Workspace.cpp:186
-msgid "*.sgrd|Sensor Files (*.sgrd)"
-msgstr "*.sgrd|Файли сенсорів (*.sgrd)"
+#: SensorDisplayLib/SensorModel.cpp:166
+msgid "Host"
+msgstr "Вузол"
 
-#: Workspace.cpp:186
-msgid "Select Tab File to Import"
-msgstr "Виберіть файл вкладки для імпорту"
+#: SensorDisplayLib/SensorModel.cpp:169
+msgid "Sensor"
+msgstr "Датчик"
 
-#: Workspace.cpp:214 Workspace.cpp:235
-msgid "You do not have a tab that could be saved."
-msgstr "Немає жодної вкладки, яку можна було б зберегти."
+#: SensorDisplayLib/SensorModel.cpp:172
+msgid "Unit"
+msgstr "Одиниця"
 
-#: Workspace.cpp:242
-msgid "Export Tab"
-msgstr "Експортувати вкладку"
+#: SensorDisplayLib/SensorModel.cpp:175
+msgid "Status"
+msgstr "Стан"
 
-#: Workspace.cpp:260
-msgid "There are no tabs that could be deleted."
-msgstr "Немає жодної вкладки, яку можна було б вилучити."
+#: SensorDisplayLib/SensorModel.cpp:178
+msgid "Label"
+msgstr "Заголовок"
 
-#: WorkSheet.cpp:83
-msgid "Cannot open the file %1."
-msgstr "Неможливо відкрити файл %1."
+#: SensorDisplayLib/FancyPlotter.cpp:178
+msgctxt "Largest axis title"
+msgid "99999 XXXX"
+msgstr "99999 XXXX"
 
-#: WorkSheet.cpp:91
-msgid "The file %1 does not contain valid XML."
-msgstr "Файл %1 не містить правильного XML."
+#: SensorDisplayLib/FancyPlotter.cpp:282 SensorDisplayLib/DancingBars.cpp:96
+msgid "OK"
+msgstr "Гаразд"
 
-#: WorkSheet.cpp:98
+#: SensorDisplayLib/FancyPlotter.cpp:282 SensorDisplayLib/FancyPlotter.cpp:518
+#: SensorDisplayLib/FancyPlotter.cpp:596 SensorDisplayLib/DancingBars.cpp:96
+msgid "Error"
+msgstr "Помилка"
+
+#: SensorDisplayLib/FancyPlotter.cpp:514 SensorDisplayLib/FancyPlotter.cpp:585
+#: SensorDisplayLib/FancyPlotter.cpp:648
+msgctxt "units"
+msgid "%1%"
+msgstr "%1%"
+
+#: SensorDisplayLib/FancyPlotter.cpp:522
+msgctxt "%1 is what is being shown statistics for, like 'Memory', 'Swap', etc."
+msgid "<p><b>%1:</b><br>"
+msgstr "<p><b>%1:</b><br>"
+
+#: SensorDisplayLib/FancyPlotter.cpp:593
+msgid "%1 of %2%1"
+msgstr "%1 з %2%1"
+
+#: SensorDisplayLib/FancyPlotter.cpp:621
+msgctxt "units"
+msgid "%1 TiB"
+msgstr "%1 ТіБ"
+
+#: SensorDisplayLib/FancyPlotter.cpp:624
+msgctxt "units"
+msgid "%1 GiB"
+msgstr "%1 ГіБ"
+
+#: SensorDisplayLib/FancyPlotter.cpp:627
+msgctxt "units"
+msgid "%1 MiB"
+msgstr "%1 МіБ"
+
+#: SensorDisplayLib/FancyPlotter.cpp:630
+msgctxt "units"
+msgid "%1 KiB"
+msgstr "%1 КіБ"
+
+#: SensorDisplayLib/FancyPlotter.cpp:635
+msgctxt "units"
+msgid "%1 TiB/s"
+msgstr "%1 ТіБ/с"
+
+#: SensorDisplayLib/FancyPlotter.cpp:638
+msgctxt "units"
+msgid "%1 GiB/s"
+msgstr "%1 ГіБ/с"
+
+#: SensorDisplayLib/FancyPlotter.cpp:641
+msgctxt "units"
+msgid "%1 MiB/s"
+msgstr "%1 МіБ/с"
+
+#: SensorDisplayLib/FancyPlotter.cpp:644
+msgctxt "units"
+msgid "%1 KiB/s"
+msgstr "%1 КіБ/с"
+
+#: SensorDisplayLib/FancyPlotter.cpp:650
+msgctxt "unitless - just a number"
+msgid "%1"
+msgstr "%1"
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:43
+msgid "Edit BarGraph Preferences"
+msgstr "Редагувати параметри діаграм"
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:52
+msgid "Range"
+msgstr "Діапазон"
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:67
+msgid "Display Range"
+msgstr "Діапазон відображення"
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:72
+#: SensorDisplayLib/FancyPlotterSettings.cpp:101
+msgid "Minimum value:"
+msgstr "Мінімальне значення:"
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:80
 msgid ""
-"The file %1 does not contain a valid worksheet definition, which must have a "
-"document type 'KSysGuardWorkSheet'."
+"Enter the minimum value for the display here. If both values are 0, "
+"automatic range detection is enabled."
 msgstr ""
-"Файл %1 не містить правильний опис аркуша, який повинен мати тип документа "
-"«KSysGuardWorkSheet»."
+"Введіть тут мінімальне значення для відображення. Якщо обидва значення "
+"дорівнюватимуть 0, застосовується автоматичне визначення діапазону."
 
-#: WorkSheet.cpp:110
-msgid "The file %1 has an invalid worksheet size."
-msgstr "Файл %1 містить неправильний розмір аркуша."
+#: SensorDisplayLib/DancingBarsSettings.cpp:84
+#: SensorDisplayLib/FancyPlotterSettings.cpp:112
+msgid "Maximum value:"
+msgstr "Максимальне значення:"
 
-#: WorkSheet.cpp:231
-msgid "Cannot save file %1"
-msgstr "Не вдається зберегти файл %1"
+#: SensorDisplayLib/DancingBarsSettings.cpp:92
+msgid ""
+"Enter the maximum value for the display here. If both values are 0, "
+"automatic range detection is enabled."
+msgstr ""
+"Введіть тут максимальне значення для відображення. Якщо обидва значення "
+"дорівнюватимуть 0, застосовується автоматичне визначення діапазону."
 
-#: WorkSheet.cpp:277
-msgid "The clipboard does not contain a valid display description."
-msgstr "Кишеня не містить правильного опису дисплея."
+#: SensorDisplayLib/DancingBarsSettings.cpp:102
+msgid "Alarms"
+msgstr "Сигнали тривоги"
 
-#: WorkSheet.cpp:377
-msgid "Select Display Type"
-msgstr "Виберіть тип дисплея"
+#: SensorDisplayLib/DancingBarsSettings.cpp:112
+#: SensorDisplayLib/DancingBarsSettings.cpp:135
+msgid "Enable alarm"
+msgstr "Ввімкнути сигнал"
 
-#: WorkSheet.cpp:378
-msgid "&Line graph"
-msgstr "&Лінійний графік"
+#: SensorDisplayLib/DancingBarsSettings.cpp:156
+msgctxt "@title:tab Appearance of the bar graph"
+msgid "Look"
+msgstr "Вигляд"
 
-#: WorkSheet.cpp:379
-msgid "&Digital display"
-msgstr "&Цифрове відображення"
+#: SensorDisplayLib/DancingBarsSettings.cpp:161
+msgid "Normal bar color:"
+msgstr "Звичайний колір стовпчика:"
 
-#: WorkSheet.cpp:380
-msgid "&Bar graph"
-msgstr "&Стовпчикова діаграма"
+#: SensorDisplayLib/DancingBarsSettings.cpp:168
+msgid "Out-of-range color:"
+msgstr "Колір критичного значення:"
 
-#: WorkSheet.cpp:381
-msgid "Log to a &file"
-msgstr "Записувати у &файл журналу"
+#: SensorDisplayLib/DancingBarsSettings.cpp:182
+#: SensorDisplayLib/FancyPlotterSettings.cpp:183
+msgid "Font size:"
+msgstr "Розмір шрифту:"
 
-#: WorkSheet.cpp:537
-msgid "Remove this display?"
-msgstr "Вилучити цей індикатор?"
+#: SensorDisplayLib/DancingBarsSettings.cpp:186
+msgid ""
+"This determines the size of the font used to print a label underneath the "
+"bars. Bars are automatically suppressed if text becomes too large, so it is "
+"advisable to use a small font size here."
+msgstr ""
+"Це визначає розмір шрифту що використовується для друку заголовку нижче "
+"стовпчиків. Стовпчики автоматично блокуються, якщо текст стає дуже великім, "
+"ми радимо використовувати малий розмір шрифту."
 
-#: WorkSheet.cpp:538
-msgid "Remove Display"
-msgstr "Вилучити індикатор"
+#: SensorDisplayLib/DancingBarsSettings.cpp:194
+#: SensorDisplayLib/FancyPlotterSettings.cpp:198
+msgid "Sensors"
+msgstr "Датчики"
 
-#: WorkSheet.cpp:579
-msgid "Dummy"
-msgstr "Макет"
+#: SensorDisplayLib/DancingBarsSettings.cpp:207
+msgid "Edit..."
+msgstr "Редагувати..."
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:208
+msgid "Push this button to configure the label."
+msgstr "Натисніть цю кнопку для того, щоб налаштувати заголовок."
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:211
+#: SensorDisplayLib/FancyPlotterSettings.cpp:231
+msgid "Delete"
+msgstr "Вилучити"
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:212
+#: SensorDisplayLib/FancyPlotterSettings.cpp:232
+msgid "Push this button to delete the sensor."
+msgstr "Натисніть цю кнопку для того, щоб вилучити датчик."
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:366
+msgid "Label of Bar Graph"
+msgstr "Надпис стовпчикової діаграми"
+
+#: SensorDisplayLib/DancingBarsSettings.cpp:367
+msgid "Enter new label:"
+msgstr "Введіть новий надпис:"
+
+#: SensorDisplayLib/ListView.cpp:45
+msgid "%1 K"
+msgstr "%1 К"
+
+#: SensorDisplayLib/ListView.cpp:46
+msgid "%1 M"
+msgstr "%1 М"
+
+#: SensorDisplayLib/ListView.cpp:47
+msgid "%1 G"
+msgstr "%1 Г"
+
+#: SensorDisplayLib/ListView.cpp:48
+msgid "%1 T"
+msgstr "%1 Т"
+
+#: SensorDisplayLib/ListView.cpp:49
+msgid "%1 P"
+msgstr "%1 П"
+
+#: SensorDisplayLib/ListView.cpp:152
+msgid "Display Units"
+msgstr "Одиниці показу"
+
+#: SensorDisplayLib/ListView.cpp:156
+msgid "Mixed"
+msgstr "Мішані"
+
+#: SensorDisplayLib/ListView.cpp:162
+msgid "Kilobytes"
+msgstr "Кілобайти"
+
+#: SensorDisplayLib/ListView.cpp:168
+msgid "Megabytes"
+msgstr "Мегабайти"
+
+#: SensorDisplayLib/ListView.cpp:174
+msgid "Gigabytes"
+msgstr "Гігабайти"
+
+#: SensorDisplayLib/ListView.cpp:180
+msgid "Terabytes"
+msgstr "Терабайти"
+
+#: SensorDisplayLib/ListViewSettings.cpp:30
+msgid "List View Settings"
+msgstr "Параметри списків"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:51
+msgid "Plotter Settings"
+msgstr "Параметри креслення"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:64
+msgid "General"
+msgstr "Загальне"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:69
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:77
+msgid "Stack the beams on top of each other"
+msgstr "Складати смужки у стос одна над одною"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:78
+msgid ""
+"The beams are stacked on top of each other, and the area is drawn filled in. "
+"So if one beam has a value of 2 and another beam has a value of 3, the first "
+"beam will be drawn at value 2 and the other beam drawn at 2+3=5."
+msgstr ""
+"Смужки накладаються одна на одну у стос з заповненням кольором. Отже, якщо "
+"одна зі смужок відповідає значенню 2, а інша — значенню 3, першу смужку буде "
+"намальовано на рівні 2, а іншу — на рівні 2+3=5."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:85
+msgid "Scales"
+msgstr "Шкала"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:90
+msgid "Vertical scale"
+msgstr "Вертикальна шкала"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:96
+msgid "Specify graph range:"
+msgstr "Вкажіть діапазон графіка:"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:97
+msgid ""
+"Check this box if you want the display range to adapt dynamically to the "
+"currently displayed values; if you do not check this, you have to specify "
+"the range you want in the fields below."
+msgstr ""
+"Позначте цей пункт, якщо ви хочете, щоб діапазон показу автоматично "
+"змінювався, відповідно до поточних значень датчика. Якщо ви не позначите цей "
+"пункт, вам доведеться вказати власний діапазон показу."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:107
+msgid "Enter the minimum value for the display here."
+msgstr "У це поле введіть мінімальне значення показу."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:118
+msgid ""
+"Enter the soft maximum value for the display here. The upper range will not "
+"be reduced below this value, but will still go above this number for values "
+"above this value."
+msgstr ""
+"У це поле введіть плаваюче значення максимуму області показу. Верхня границя "
+"діапазону не зможе бути меншою за це значення, але саме значення може бути "
+"збільшено зі збільшенням верхньої границі."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:125
+msgid "Horizontal scale"
+msgstr "Горизонтальна шкала"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:132
+msgid "Pixels per time period:"
+msgstr "Пікселів на проміжок часу:"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:139
+msgid "Grid"
+msgstr "Ґратка"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:144
+msgid "Lines"
+msgstr "Лінії"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:150
+msgid "Vertical lines"
+msgstr "Вертикальні лінії"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:151
+msgid "Check this to activate the vertical lines if display is large enough."
+msgstr ""
+"Позначте цей пункт, щоб ввімкнути вертикальні лінії, якщо дисплей достатньо "
+"великий."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:154
+msgid "Distance:"
+msgstr "Відстань:"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:160
+msgid "Enter the distance between two vertical lines here."
+msgstr "Введіть тут відстань між вертикальними лініями."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:164
+msgid "Vertical lines scroll"
+msgstr "Прокручування вертикальних ліній"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:167
+msgid "Horizontal lines"
+msgstr "Горизонтальні лінії"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:168
+msgid "Check this to enable horizontal lines if display is large enough."
+msgstr ""
+"Позначте цей пункт, щоб ввімкнути горизонтальні лінії, якщо дисплей "
+"достатньо великий."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:173
+msgid "Text"
+msgstr "Текст"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:179
+msgid "Show axis labels"
+msgstr "Показати позначки осей"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:180
+msgid ""
+"Check this box if horizontal lines should be decorated with the values they "
+"mark."
+msgstr ""
+"Позначте цей пункт, щоб до горизонтальних ліній було додано значення, що їм "
+"відповідають."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:223
+msgid "Set Color..."
+msgstr "Встановити колір..."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:224
+msgid "Push this button to configure the color of the sensor in the diagram."
+msgstr "Натисніть цю кнопку, щоб налаштувати колір датчика на діаграмі."
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:236
+msgid "Move Up"
+msgstr "Пересунути вгору"
+
+#: SensorDisplayLib/FancyPlotterSettings.cpp:241
+msgid "Move Down"
+msgstr "Пересунути вниз"
+
+#: SensorDisplayLib/LogFile.cpp:92
+msgid "File logging settings"
+msgstr "Параметри записування у журнал"
+
+#: SensorDisplayLib/DummyDisplay.cpp:30 SensorDisplayLib/DummyDisplay.cpp:38
+msgid "Drop Sensor Here"
+msgstr "Киньте датчик сюди"
+
+#: SensorDisplayLib/DummyDisplay.cpp:32
+msgid ""
+"This is an empty space in a worksheet. Drag a sensor from the Sensor Browser "
+"and drop it here. A sensor display will appear that allows you to monitor "
+"the values of the sensor over time."
+msgstr ""
+"Це вільне поле на аркуші. Перекиньте датчик з «Навігатора датчиків» на це "
+"місце. На індикаторі, що з'явиться, ви зможете спостерігати значення датчика "
+"у часі."
+
+#: SensorDisplayLib/SensorLoggerSettings.cpp:30
+msgid "Sensor Logger Settings"
+msgstr "Параметри реєстратора"
+
+#: SensorDisplayLib/MultiMeterSettings.cpp:31
+msgctxt ""
+"Multimeter is a sensor display that mimics 'digital multimeter' aparatus"
+msgid "Multimeter Settings"
+msgstr "Параметри набору датчиків"
+
+#: SensorDisplayLib/SensorLogger.cpp:138
+msgctxt "@title:column"
+msgid "Logging"
+msgstr "Реєстрування"
+
+#: SensorDisplayLib/SensorLogger.cpp:141
+msgctxt "@title:column"
+msgid "Timer Interval"
+msgstr "Інтервал таймера"
+
+#: SensorDisplayLib/SensorLogger.cpp:144
+msgctxt "@title:column"
+msgid "Sensor Name"
+msgstr "Назва датчика"
+
+#: SensorDisplayLib/SensorLogger.cpp:147
+msgctxt "@title:column"
+msgid "Host Name"
+msgstr "Назва вузла"
+
+#: SensorDisplayLib/SensorLogger.cpp:150
+msgctxt "@title:column"
+msgid "Log File"
+msgstr "Файл журналу"
+
+#: SensorDisplayLib/SensorLogger.cpp:608
+msgid "&Remove Sensor"
+msgstr "&Вилучити датчик"
+
+#: SensorDisplayLib/SensorLogger.cpp:613
+msgid "&Edit Sensor..."
+msgstr "&Редагувати датчик..."
+
+#: SensorDisplayLib/SensorLogger.cpp:621
+msgid "St&op Logging"
+msgstr "Зуп&инити реєстрування"
+
+#: SensorDisplayLib/SensorLogger.cpp:624
+msgid "S&tart Logging"
+msgstr "За&пустити реєстрування"
+
+#: HostConnector.cpp:44
+msgid "Connect Host"
+msgstr "Під'єднати вузол"
+
+#: HostConnector.cpp:55
+msgid "Host:"
+msgstr "Вузол:"
+
+#: HostConnector.cpp:65
+msgid "Enter the name of the host you want to connect to."
+msgstr "Введіть назву вузла з яким потрібно з'єднатися."
+
+#: HostConnector.cpp:71
+msgid "Connection Type"
+msgstr "Тип з'єднання"
+
+#: HostConnector.cpp:77
+msgid "ssh"
+msgstr "ssh"
+
+#: HostConnector.cpp:80
+msgid "Select this to use the secure shell to login to the remote host."
+msgstr ""
+"Позначте цей пункт, щоб наказати програмі використовувати безпечну оболонку "
+"при реєстрації на віддаленому вузлі."
+
+#: HostConnector.cpp:83
+msgid "rsh"
+msgstr "rsh"
+
+#: HostConnector.cpp:84
+msgid "Select this to use the remote shell to login to the remote host."
+msgstr ""
+"Позначте цей пункт, щоб наказати програмі використовувати безпечну оболонку "
+"при реєстрації на віддаленому вузлі."
+
+#: HostConnector.cpp:87
+msgid "Daemon"
+msgstr "Фонова служба"
+
+#: HostConnector.cpp:88
+msgid ""
+"Select this if you want to connect to a ksysguard daemon that is running on "
+"the machine you want to connect to, and is listening for client requests."
+msgstr ""
+"Виберіть це, якщо ви хочете під'єднатися до фонової служби ksysguard, який "
+"чекає на з'єднання на вузлі до якого ви хочете під'єднатися."
+
+#: HostConnector.cpp:91
+msgid "Custom command"
+msgstr "Нетипова команда"
+
+#: HostConnector.cpp:92
+msgid ""
+"Select this to use the command you entered below to start ksysguardd on the "
+"remote host."
+msgstr ""
+"Позначте цей пункт, щоб наказати програмі використовувати команду, яку "
+"введено нижче, для ksysguardd на віддаленому вузлі."
+
+#: HostConnector.cpp:95
+msgid "Port:"
+msgstr "Порт:"
+
+#: HostConnector.cpp:102
+msgid ""
+"Enter the port number on which the ksysguard daemon is listening for "
+"connections."
+msgstr ""
+"Введіть тут номер порту на якому фонова служба ksysguard чекає на з'єднання."
+
+#: HostConnector.cpp:105
+msgid "e.g.  3112"
+msgstr "напр.,  3112"
+
+#: HostConnector.cpp:108
+msgid "Command:"
+msgstr "Команда:"
+
+#: HostConnector.cpp:117
+msgid "Enter the command that runs ksysguardd on the host you want to monitor."
+msgstr ""
+"Введіть команду, яка запускає ksysguardd на вузлі, який ви хочете "
+"відстежувати."
+
+#: HostConnector.cpp:121
+msgid "e.g. ssh -l root remote.host.org ksysguardd"
+msgstr "напр. ssh -l root remote.host.org ksysguardd"
 
 #: ksysguard.cpp:71
 msgid "KDE System Monitor"
@@ -244,413 +1021,6 @@ msgstr ""
 msgid "Optional worksheet files to load"
 msgstr "Додаткові файли аркушів для завантаження"
 
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, fileFrame)
-#: rc.cpp:3
-msgid "File"
-msgstr "Файл"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:31
-#. i18n: ectx: property (title), widget (QGroupBox, timerFrame)
-#: rc.cpp:6
-msgctxt "@title:group"
-msgid "Timer Interval"
-msgstr "Інтервал таймера"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:49
-#. i18n: ectx: property (suffix), widget (KIntNumInput, m_timerInterval)
-#: rc.cpp:9 WorkSheetSettings.cpp:94 TimerSettings.cpp:58
-msgid " sec"
-msgstr " с"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:59
-#. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
-#: rc.cpp:12 SensorDisplayLib/DancingBarsSettings.cpp:107
-msgid "Alarm for Minimum Value"
-msgstr "Сигнал для мінімального значення"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:68
-#. i18n: ectx: property (text), widget (QCheckBox, m_lowerLimitActive)
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:59
-#. i18n: ectx: property (text), widget (QCheckBox, m_lowerLimitActive)
-#: rc.cpp:15 rc.cpp:105
-msgid "&Enable alarm"
-msgstr "&Ввімкнути сигнал"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:71
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_lowerLimitActive)
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:56
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_lowerLimitActive)
-#: rc.cpp:18 rc.cpp:102 SensorDisplayLib/DancingBarsSettings.cpp:113
-msgid "Enable the minimum value alarm."
-msgstr "Ввімкнути тривогу за мінімальним значенням."
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:97
-#. i18n: ectx: property (text), widget (QLabel, m_lblLowerLimit)
-#: rc.cpp:21 SensorDisplayLib/DancingBarsSettings.cpp:116
-msgid "Lower limit:"
-msgstr "Нижня межа:"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:123
-#. i18n: ectx: property (title), widget (QGroupBox, GroupBox1_2)
-#: rc.cpp:24 SensorDisplayLib/DancingBarsSettings.cpp:130
-msgid "Alarm for Maximum Value"
-msgstr "Сигнал для максимального значення"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:132
-#. i18n: ectx: property (text), widget (QCheckBox, m_upperLimitActive)
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:118
-#. i18n: ectx: property (text), widget (QCheckBox, m_upperLimitActive)
-#: rc.cpp:27 rc.cpp:114
-msgid "E&nable alarm"
-msgstr "&Ввімкнути сигнал"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:135
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_upperLimitActive)
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:115
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_upperLimitActive)
-#: rc.cpp:30 rc.cpp:111 SensorDisplayLib/DancingBarsSettings.cpp:136
-msgid "Enable the maximum value alarm."
-msgstr "Ввімкнути тривогу за максимальним значенням."
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:161
-#. i18n: ectx: property (text), widget (QLabel, m_lblUpperLimit)
-#: rc.cpp:33 SensorDisplayLib/DancingBarsSettings.cpp:139
-msgid "Upper limit:"
-msgstr "Верхня межа:"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, titleFrame)
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, titleFrame)
-#: rc.cpp:36 rc.cpp:75 WorkSheetSettings.cpp:50
-#: SensorDisplayLib/DancingBarsSettings.cpp:57
-msgid "Title"
-msgstr "Заголовок"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:37
-#. i18n: ectx: property (title), widget (QGroupBox, colorFrame)
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:37
-#. i18n: ectx: property (title), widget (QGroupBox, colorFrame)
-#: rc.cpp:39 rc.cpp:78
-msgid "Colors"
-msgstr "Кольори"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:51
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:51
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:42 rc.cpp:81
-msgid "Text color:"
-msgstr "Колір тексту:"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:64
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:67
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:77
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:228
-#. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
-#: rc.cpp:45 rc.cpp:60 rc.cpp:87 rc.cpp:126 SensorDisplayLib/LogFile.cpp:100
-#: SensorDisplayLib/DancingBarsSettings.cpp:175
-msgid "Background color:"
-msgstr "Колір тла:"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:77
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:48
-msgid "Alarm color:"
-msgstr "Колір тривоги:"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:21
-#. i18n: ectx: attribute (title), widget (QWidget, textTab)
-#: rc.cpp:51
-msgid "&Text"
-msgstr "&Текст"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:29
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:54
-msgid "T&itle:"
-msgstr "З&аголовок:"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:54
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:57 SensorDisplayLib/LogFile.cpp:98
-msgid "Foreground color:"
-msgstr "Колір тексту:"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:139
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:63
-msgid "Fi&lter"
-msgstr "Фі&льтр"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:160
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: rc.cpp:66
-msgid "&Add"
-msgstr "&Додати"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:167
-#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
-#: rc.cpp:69
-msgid "&Delete"
-msgstr "&Вилучити"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:174
-#. i18n: ectx: property (text), widget (QPushButton, changeButton)
-#: rc.cpp:72
-msgid "&Change"
-msgstr "&Змінити"
-
-#. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:64
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:84
-msgid "Grid color:"
-msgstr "Колір ґратки:"
-
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:25
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:90
-msgid "&Title:"
-msgstr "За&головок:"
-
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:35
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, m_title)
-#: rc.cpp:93 SensorDisplayLib/FancyPlotterSettings.cpp:73
-#: SensorDisplayLib/DancingBarsSettings.cpp:62
-msgid "Enter the title of the display here."
-msgstr "Введіть тут заголовок дисплея."
-
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:42
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_showUnit)
-#: rc.cpp:96
-msgid "Enable this to append the unit to the title of the display."
-msgstr "Ввімкніть, щоб додати елемент до заголовка показу."
-
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:45
-#. i18n: ectx: property (text), widget (QCheckBox, m_showUnit)
-#: rc.cpp:99
-msgid "&Show unit"
-msgstr "Показувати &одиниці"
-
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:85
-#. i18n: ectx: property (text), widget (QLabel, m_lblLowerLimit)
-#: rc.cpp:108
-msgid "Lo&wer limit:"
-msgstr "Ве&рхня межа:"
-
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:144
-#. i18n: ectx: property (text), widget (QLabel, m_lblUpperLimit)
-#: rc.cpp:117
-msgid "&Upper limit:"
-msgstr "&Верхня межа:"
-
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:174
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:120
-msgid "Normal digit color:"
-msgstr "Звичайний колір:"
-
-#. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:201
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
-#: rc.cpp:123
-msgid "Alarm digit color:"
-msgstr "Колір цифр під час тривоги:"
-
-#. i18n: file: ksysguardui.rc:4
-#. i18n: ectx: Menu (file)
-#: rc.cpp:129
-msgid "&File"
-msgstr "&Файл"
-
-#. i18n: file: ksysguardui.rc:14
-#. i18n: ectx: Menu (view)
-#: rc.cpp:132
-msgid "&View"
-msgstr "П&ерегляд"
-
-#. i18n: file: ksysguardui.rc:18
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:135
-msgid "&Settings"
-msgstr "&Параметри"
-
-#. i18n: file: ksysguardui.rc:21
-#. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:138
-msgid "Main Toolbar"
-msgstr "Головний пенал"
-
-#. i18n: tag WorkSheet attribute title
-#. i18n: file: SystemLoad2.sgrd:3
-#: rc.cpp:141
-msgid "System Load"
-msgstr "Завантаження системи"
-
-#. i18n: tag display attribute title
-#. i18n: file: SystemLoad2.sgrd:5
-#: rc.cpp:144
-msgid "CPU History"
-msgstr "Журнал ЦП"
-
-#. i18n: tag display attribute title
-#. i18n: file: SystemLoad2.sgrd:8
-#: rc.cpp:147
-msgid "Memory and Swap History"
-msgstr "Журнал пам’яті і свопінгу"
-
-#. i18n: tag beam attribute summationName
-#. i18n: file: SystemLoad2.sgrd:9
-#: rc.cpp:150
-msgid "Memory"
-msgstr "Пам’ять"
-
-#. i18n: tag beam attribute summationName
-#. i18n: file: SystemLoad2.sgrd:10
-#: rc.cpp:153
-msgid "Swap"
-msgstr "Резервна пам’ять"
-
-#. i18n: tag display attribute title
-#. i18n: file: SystemLoad2.sgrd:12
-#: rc.cpp:156
-msgid "Network History"
-msgstr "Журнал мережі"
-
-#. i18n: tag beam attribute summationName
-#. i18n: file: SystemLoad2.sgrd:13
-#: rc.cpp:159
-msgid "Receiving"
-msgstr "Отримання"
-
-#. i18n: tag beam attribute summationName
-#. i18n: file: SystemLoad2.sgrd:14
-#: rc.cpp:162
-msgid "Sending"
-msgstr "Надсилання"
-
-#. i18n: tag WorkSheet attribute title
-#. i18n: file: ProcessTable.sgrd:3
-#. i18n: tag display attribute title
-#. i18n: file: ProcessTable.sgrd:5
-#: rc.cpp:165 rc.cpp:168
-msgid "Process Table"
-msgstr "Таблиця процесів"
-
-#: SensorBrowser.cpp:117
-msgid "Sensor Browser"
-msgstr "Навігатор датчиків"
-
-#: SensorBrowser.cpp:474
-msgid "Drag sensors to empty cells of a worksheet "
-msgstr "Перекиньте датчики до вільних полів у робочому просторі"
-
-#: SensorBrowser.cpp:475
-msgid ""
-"The sensor browser lists the connected hosts and the sensors that they "
-"provide. Click and drag sensors into drop zones of a worksheet. A display "
-"will appear that visualizes the values provided by the sensor. Some sensor "
-"displays can display values of multiple sensors. Simply drag other sensors "
-"on to the display to add more sensors."
-msgstr ""
-"Навігатор датчиків показує приєднані вузли та датчики на цих вузлах. "
-"Виберіть та перетягніть ці датчики до вільних місць на аркушах. На "
-"індикаторі, що з'явиться, будуть відображатися значення цього датчика. Деякі "
-"індикатори можуть відображати значення багатьох датчиків. Щоб додати датчик, "
-"просто перетягніть його на індикатор."
-
-#: HostConnector.cpp:44
-msgid "Connect Host"
-msgstr "Під'єднати вузол"
-
-#: HostConnector.cpp:55
-msgid "Host:"
-msgstr "Вузол:"
-
-#: HostConnector.cpp:65
-msgid "Enter the name of the host you want to connect to."
-msgstr "Введіть назву вузла з яким потрібно з'єднатися."
-
-#: HostConnector.cpp:71
-msgid "Connection Type"
-msgstr "Тип з'єднання"
-
-#: HostConnector.cpp:77
-msgid "ssh"
-msgstr "ssh"
-
-#: HostConnector.cpp:80
-msgid "Select this to use the secure shell to login to the remote host."
-msgstr ""
-"Позначте цей пункт, щоб наказати програмі використовувати безпечну оболонку "
-"при реєстрації на віддаленому вузлі."
-
-#: HostConnector.cpp:83
-msgid "rsh"
-msgstr "rsh"
-
-#: HostConnector.cpp:84
-msgid "Select this to use the remote shell to login to the remote host."
-msgstr ""
-"Позначте цей пункт, щоб наказати програмі використовувати безпечну оболонку "
-"при реєстрації на віддаленому вузлі."
-
-#: HostConnector.cpp:87
-msgid "Daemon"
-msgstr "Фонова служба"
-
-#: HostConnector.cpp:88
-msgid ""
-"Select this if you want to connect to a ksysguard daemon that is running on "
-"the machine you want to connect to, and is listening for client requests."
-msgstr ""
-"Виберіть це, якщо ви хочете під'єднатися до фонової служби ksysguard, який "
-"чекає на з'єднання на вузлі до якого ви хочете під'єднатися."
-
-#: HostConnector.cpp:91
-msgid "Custom command"
-msgstr "Нетипова команда"
-
-#: HostConnector.cpp:92
-msgid ""
-"Select this to use the command you entered below to start ksysguardd on the "
-"remote host."
-msgstr ""
-"Позначте цей пункт, щоб наказати програмі використовувати команду, яку "
-"введено нижче, для ksysguardd на віддаленому вузлі."
-
-#: HostConnector.cpp:95
-msgid "Port:"
-msgstr "Порт:"
-
-#: HostConnector.cpp:102
-msgid ""
-"Enter the port number on which the ksysguard daemon is listening for "
-"connections."
-msgstr ""
-"Введіть тут номер порту на якому фонова служба ksysguard чекає на з'єднання."
-
-#: HostConnector.cpp:105
-msgid "e.g.  3112"
-msgstr "напр.,  3112"
-
-#: HostConnector.cpp:108
-msgid "Command:"
-msgstr "Команда:"
-
-#: HostConnector.cpp:117
-msgid "Enter the command that runs ksysguardd on the host you want to monitor."
-msgstr ""
-"Введіть команду, яка запускає ksysguardd на вузлі, який ви хочете "
-"відстежувати."
-
-#: HostConnector.cpp:121
-msgid "e.g. ssh -l root remote.host.org ksysguardd"
-msgstr "напр. ssh -l root remote.host.org ksysguardd"
-
 #: WorkSheetSettings.cpp:40
 msgid "Tab Properties"
 msgstr "Властивості вкладки"
@@ -687,488 +1057,119 @@ msgstr "Всі поля на аркуші будуть відновлювати�
 msgid "Enter the title of the worksheet here."
 msgstr "Введіть заголовок аркуша."
 
-#: SensorDisplayLib/SensorLoggerSettings.cpp:30
-msgid "Sensor Logger Settings"
-msgstr "Параметри реєстратора"
+#: SensorBrowser.cpp:117
+msgid "Sensor Browser"
+msgstr "Навігатор датчиків"
 
-#: SensorDisplayLib/DancingBars.cpp:96 SensorDisplayLib/FancyPlotter.cpp:282
-msgid "OK"
-msgstr "Гаразд"
+#: SensorBrowser.cpp:474
+msgid "Drag sensors to empty cells of a worksheet "
+msgstr "Перекиньте датчики до вільних полів у робочому просторі"
 
-#: SensorDisplayLib/DancingBars.cpp:96 SensorDisplayLib/FancyPlotter.cpp:282
-#: SensorDisplayLib/FancyPlotter.cpp:518 SensorDisplayLib/FancyPlotter.cpp:596
-msgid "Error"
-msgstr "Помилка"
-
-#: SensorDisplayLib/FancyPlotter.cpp:178
-msgctxt "Largest axis title"
-msgid "99999 XXXX"
-msgstr "99999 XXXX"
-
-#: SensorDisplayLib/FancyPlotter.cpp:514 SensorDisplayLib/FancyPlotter.cpp:585
-#: SensorDisplayLib/FancyPlotter.cpp:648
-msgctxt "units"
-msgid "%1%"
-msgstr "%1%"
-
-#: SensorDisplayLib/FancyPlotter.cpp:522
-msgctxt "%1 is what is being shown statistics for, like 'Memory', 'Swap', etc."
-msgid "<p><b>%1:</b><br>"
-msgstr "<p><b>%1:</b><br>"
-
-#: SensorDisplayLib/FancyPlotter.cpp:593
-msgid "%1 of %2%1"
-msgstr "%1 з %2%1"
-
-#: SensorDisplayLib/FancyPlotter.cpp:621
-msgctxt "units"
-msgid "%1 TiB"
-msgstr "%1 ТіБ"
-
-#: SensorDisplayLib/FancyPlotter.cpp:624
-msgctxt "units"
-msgid "%1 GiB"
-msgstr "%1 ГіБ"
-
-#: SensorDisplayLib/FancyPlotter.cpp:627
-msgctxt "units"
-msgid "%1 MiB"
-msgstr "%1 МіБ"
-
-#: SensorDisplayLib/FancyPlotter.cpp:630
-msgctxt "units"
-msgid "%1 KiB"
-msgstr "%1 КіБ"
-
-#: SensorDisplayLib/FancyPlotter.cpp:635
-msgctxt "units"
-msgid "%1 TiB/s"
-msgstr "%1 ТіБ/с"
-
-#: SensorDisplayLib/FancyPlotter.cpp:638
-msgctxt "units"
-msgid "%1 GiB/s"
-msgstr "%1 ГіБ/с"
-
-#: SensorDisplayLib/FancyPlotter.cpp:641
-msgctxt "units"
-msgid "%1 MiB/s"
-msgstr "%1 МіБ/с"
-
-#: SensorDisplayLib/FancyPlotter.cpp:644
-msgctxt "units"
-msgid "%1 KiB/s"
-msgstr "%1 КіБ/с"
-
-#: SensorDisplayLib/FancyPlotter.cpp:650
-msgctxt "unitless - just a number"
-msgid "%1"
-msgstr "%1"
-
-#: SensorDisplayLib/SensorDisplay.cpp:117 SensorDisplayLib/SensorLogger.cpp:598
-msgid "&Properties"
-msgstr "В&ластивості"
-
-#: SensorDisplayLib/SensorDisplay.cpp:122 SensorDisplayLib/SensorLogger.cpp:603
-msgid "&Remove Display"
-msgstr "&Вилучити індикатор"
-
-#: SensorDisplayLib/SensorDisplay.cpp:189
+#: SensorBrowser.cpp:475
 msgid ""
-"<qt><p>This is a sensor display. To customize a sensor display click the "
-"right mouse button here and select the <i>Properties</i> entry from the "
-"popup menu. Select <i>Remove</i> to delete the display from the worksheet.</"
-"p>%1</qt>"
+"The sensor browser lists the connected hosts and the sensors that they "
+"provide. Click and drag sensors into drop zones of a worksheet. A display "
+"will appear that visualizes the values provided by the sensor. Some sensor "
+"displays can display values of multiple sensors. Simply drag other sensors "
+"on to the display to add more sensors."
 msgstr ""
-"<qt><p>Це індикатор датчика. Щоб змінити його параметри, клацніть сюди "
-"правою кнопкою мишки і виберіть <i>Властивості</i> у вигулькному меню. "
-"Виберіть <i>Вилучити</i>, щоб вилучити індикатор з аркуша.</p>%1</qt>"
+"Навігатор датчиків показує приєднані вузли та датчики на цих вузлах. "
+"Виберіть та перетягніть ці датчики до вільних місць на аркушах. На "
+"індикаторі, що з'явиться, будуть відображатися значення цього датчика. Деякі "
+"індикатори можуть відображати значення багатьох датчиків. Щоб додати датчик, "
+"просто перетягніть його на індикатор."
 
-#: SensorDisplayLib/MultiMeterSettings.cpp:31
-msgctxt ""
-"Multimeter is a sensor display that mimics 'digital multimeter' aparatus"
-msgid "Multimeter Settings"
-msgstr "Параметри набору датчиків"
+#: WorkSheet.cpp:83
+msgid "Cannot open the file %1."
+msgstr "Неможливо відкрити файл %1."
 
-#: SensorDisplayLib/ListView.cpp:45
-msgid "%1 K"
-msgstr "%1 К"
+#: WorkSheet.cpp:91
+msgid "The file %1 does not contain valid XML."
+msgstr "Файл %1 не містить правильного XML."
 
-#: SensorDisplayLib/ListView.cpp:46
-msgid "%1 M"
-msgstr "%1 М"
-
-#: SensorDisplayLib/ListView.cpp:47
-msgid "%1 G"
-msgstr "%1 Г"
-
-#: SensorDisplayLib/ListView.cpp:48
-msgid "%1 T"
-msgstr "%1 Т"
-
-#: SensorDisplayLib/ListView.cpp:49
-msgid "%1 P"
-msgstr "%1 П"
-
-#: SensorDisplayLib/ListView.cpp:152
-msgid "Display Units"
-msgstr "Одиниці показу"
-
-#: SensorDisplayLib/ListView.cpp:156
-msgid "Mixed"
-msgstr "Мішані"
-
-#: SensorDisplayLib/ListView.cpp:162
-msgid "Kilobytes"
-msgstr "Кілобайти"
-
-#: SensorDisplayLib/ListView.cpp:168
-msgid "Megabytes"
-msgstr "Мегабайти"
-
-#: SensorDisplayLib/ListView.cpp:174
-msgid "Gigabytes"
-msgstr "Гігабайти"
-
-#: SensorDisplayLib/ListView.cpp:180
-msgid "Terabytes"
-msgstr "Терабайти"
-
-#: SensorDisplayLib/SensorModel.cpp:166
-msgid "Host"
-msgstr "Вузол"
-
-#: SensorDisplayLib/SensorModel.cpp:169
-msgid "Sensor"
-msgstr "Датчик"
-
-#: SensorDisplayLib/SensorModel.cpp:172
-msgid "Unit"
-msgstr "Одиниця"
-
-#: SensorDisplayLib/SensorModel.cpp:175
-msgid "Status"
-msgstr "Стан"
-
-#: SensorDisplayLib/SensorModel.cpp:178
-msgid "Label"
-msgstr "Заголовок"
-
-#: SensorDisplayLib/SensorLoggerDlg.cpp:32
-#: SensorDisplayLib/SensorLogger.cpp:429
-msgid "Sensor Logger"
-msgstr "Реєстратор"
-
-#: SensorDisplayLib/ListViewSettings.cpp:30
-msgid "List View Settings"
-msgstr "Параметри списків"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:51
-msgid "Plotter Settings"
-msgstr "Параметри креслення"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:64
-msgid "General"
-msgstr "Загальне"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:69
-msgid "Title:"
-msgstr "Заголовок:"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:77
-msgid "Stack the beams on top of each other"
-msgstr "Складати смужки у стос одна над одною"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:78
+#: WorkSheet.cpp:98
 msgid ""
-"The beams are stacked on top of each other, and the area is drawn filled in. "
-"So if one beam has a value of 2 and another beam has a value of 3, the first "
-"beam will be drawn at value 2 and the other beam drawn at 2+3=5."
+"The file %1 does not contain a valid worksheet definition, which must have a "
+"document type 'KSysGuardWorkSheet'."
 msgstr ""
-"Смужки накладаються одна на одну у стос з заповненням кольором. Отже, якщо "
-"одна зі смужок відповідає значенню 2, а інша — значенню 3, першу смужку буде "
-"намальовано на рівні 2, а іншу — на рівні 2+3=5."
+"Файл %1 не містить правильний опис аркуша, який повинен мати тип документа "
+"«KSysGuardWorkSheet»."
 
-#: SensorDisplayLib/FancyPlotterSettings.cpp:85
-msgid "Scales"
-msgstr "Шкала"
+#: WorkSheet.cpp:110
+msgid "The file %1 has an invalid worksheet size."
+msgstr "Файл %1 містить неправильний розмір аркуша."
 
-#: SensorDisplayLib/FancyPlotterSettings.cpp:90
-msgid "Vertical scale"
-msgstr "Вертикальна шкала"
+#: WorkSheet.cpp:231
+msgid "Cannot save file %1"
+msgstr "Не вдається зберегти файл %1"
 
-#: SensorDisplayLib/FancyPlotterSettings.cpp:96
-msgid "Specify graph range:"
-msgstr "Вкажіть діапазон графіка:"
+#: WorkSheet.cpp:277
+msgid "The clipboard does not contain a valid display description."
+msgstr "Кишеня не містить правильного опису дисплея."
 
-#: SensorDisplayLib/FancyPlotterSettings.cpp:97
+#: WorkSheet.cpp:377
+msgid "Select Display Type"
+msgstr "Виберіть тип дисплея"
+
+#: WorkSheet.cpp:378
+msgid "&Line graph"
+msgstr "&Лінійний графік"
+
+#: WorkSheet.cpp:379
+msgid "&Digital display"
+msgstr "&Цифрове відображення"
+
+#: WorkSheet.cpp:380
+msgid "&Bar graph"
+msgstr "&Стовпчикова діаграма"
+
+#: WorkSheet.cpp:381
+msgid "Log to a &file"
+msgstr "Записувати у &файл журналу"
+
+#: WorkSheet.cpp:537
+msgid "Remove this display?"
+msgstr "Вилучити цей індикатор?"
+
+#: WorkSheet.cpp:538
+msgid "Remove Display"
+msgstr "Вилучити індикатор"
+
+#: WorkSheet.cpp:579
+msgid "Dummy"
+msgstr "Макет"
+
+#: Workspace.cpp:112
+msgid "Sheet %1"
+msgstr "Аркуш %1"
+
+#: Workspace.cpp:171
 msgid ""
-"Check this box if you want the display range to adapt dynamically to the "
-"currently displayed values; if you do not check this, you have to specify "
-"the range you want in the fields below."
+"The tab '%1' contains unsaved data.\n"
+"Do you want to save the tab?"
 msgstr ""
-"Позначте цей пункт, якщо ви хочете, щоб діапазон показу автоматично "
-"змінювався, відповідно до поточних значень датчика. Якщо ви не позначите цей "
-"пункт, вам доведеться вказати власний діапазон показу."
+"На вкладці «%1» містяться незбережені дані.\n"
+"Зберегти цю вкладку?"
 
-#: SensorDisplayLib/FancyPlotterSettings.cpp:101
-#: SensorDisplayLib/DancingBarsSettings.cpp:72
-msgid "Minimum value:"
-msgstr "Мінімальне значення:"
+#: Workspace.cpp:186
+msgid "*.sgrd|Sensor Files (*.sgrd)"
+msgstr "*.sgrd|Файли сенсорів (*.sgrd)"
 
-#: SensorDisplayLib/FancyPlotterSettings.cpp:107
-msgid "Enter the minimum value for the display here."
-msgstr "У це поле введіть мінімальне значення показу."
+#: Workspace.cpp:186
+msgid "Select Tab File to Import"
+msgstr "Виберіть файл вкладки для імпорту"
 
-#: SensorDisplayLib/FancyPlotterSettings.cpp:112
-#: SensorDisplayLib/DancingBarsSettings.cpp:84
-msgid "Maximum value:"
-msgstr "Максимальне значення:"
+#: Workspace.cpp:214 Workspace.cpp:235
+msgid "You do not have a tab that could be saved."
+msgstr "Немає жодної вкладки, яку можна було б зберегти."
 
-#: SensorDisplayLib/FancyPlotterSettings.cpp:118
-msgid ""
-"Enter the soft maximum value for the display here. The upper range will not "
-"be reduced below this value, but will still go above this number for values "
-"above this value."
-msgstr ""
-"У це поле введіть плаваюче значення максимуму області показу. Верхня границя "
-"діапазону не зможе бути меншою за це значення, але саме значення може бути "
-"збільшено зі збільшенням верхньої границі."
+#: Workspace.cpp:242
+msgid "Export Tab"
+msgstr "Експортувати вкладку"
 
-#: SensorDisplayLib/FancyPlotterSettings.cpp:125
-msgid "Horizontal scale"
-msgstr "Горизонтальна шкала"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:132
-msgid "Pixels per time period:"
-msgstr "Пікселів на проміжок часу:"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:139
-msgid "Grid"
-msgstr "Ґратка"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:144
-msgid "Lines"
-msgstr "Лінії"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:150
-msgid "Vertical lines"
-msgstr "Вертикальні лінії"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:151
-msgid "Check this to activate the vertical lines if display is large enough."
-msgstr ""
-"Позначте цей пункт, щоб ввімкнути вертикальні лінії, якщо дисплей достатньо "
-"великий."
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:154
-msgid "Distance:"
-msgstr "Відстань:"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:160
-msgid "Enter the distance between two vertical lines here."
-msgstr "Введіть тут відстань між вертикальними лініями."
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:164
-msgid "Vertical lines scroll"
-msgstr "Прокручування вертикальних ліній"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:167
-msgid "Horizontal lines"
-msgstr "Горизонтальні лінії"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:168
-msgid "Check this to enable horizontal lines if display is large enough."
-msgstr ""
-"Позначте цей пункт, щоб ввімкнути горизонтальні лінії, якщо дисплей "
-"достатньо великий."
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:173
-msgid "Text"
-msgstr "Текст"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:179
-msgid "Show axis labels"
-msgstr "Показати позначки осей"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:180
-msgid ""
-"Check this box if horizontal lines should be decorated with the values they "
-"mark."
-msgstr ""
-"Позначте цей пункт, щоб до горизонтальних ліній було додано значення, що їм "
-"відповідають."
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:183
-#: SensorDisplayLib/DancingBarsSettings.cpp:182
-msgid "Font size:"
-msgstr "Розмір шрифту:"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:198
-#: SensorDisplayLib/DancingBarsSettings.cpp:194
-msgid "Sensors"
-msgstr "Датчики"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:223
-msgid "Set Color..."
-msgstr "Встановити колір..."
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:224
-msgid "Push this button to configure the color of the sensor in the diagram."
-msgstr "Натисніть цю кнопку, щоб налаштувати колір датчика на діаграмі."
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:231
-#: SensorDisplayLib/DancingBarsSettings.cpp:211
-msgid "Delete"
-msgstr "Вилучити"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:232
-#: SensorDisplayLib/DancingBarsSettings.cpp:212
-msgid "Push this button to delete the sensor."
-msgstr "Натисніть цю кнопку для того, щоб вилучити датчик."
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:236
-msgid "Move Up"
-msgstr "Пересунути вгору"
-
-#: SensorDisplayLib/FancyPlotterSettings.cpp:241
-msgid "Move Down"
-msgstr "Пересунути вниз"
-
-#: SensorDisplayLib/LogFile.cpp:92
-msgid "File logging settings"
-msgstr "Параметри записування у журнал"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:43
-msgid "Edit BarGraph Preferences"
-msgstr "Редагувати параметри діаграм"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:52
-msgid "Range"
-msgstr "Діапазон"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:67
-msgid "Display Range"
-msgstr "Діапазон відображення"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:80
-msgid ""
-"Enter the minimum value for the display here. If both values are 0, "
-"automatic range detection is enabled."
-msgstr ""
-"Введіть тут мінімальне значення для відображення. Якщо обидва значення "
-"дорівнюватимуть 0, застосовується автоматичне визначення діапазону."
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:92
-msgid ""
-"Enter the maximum value for the display here. If both values are 0, "
-"automatic range detection is enabled."
-msgstr ""
-"Введіть тут максимальне значення для відображення. Якщо обидва значення "
-"дорівнюватимуть 0, застосовується автоматичне визначення діапазону."
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:102
-msgid "Alarms"
-msgstr "Сигнали тривоги"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:112
-#: SensorDisplayLib/DancingBarsSettings.cpp:135
-msgid "Enable alarm"
-msgstr "Ввімкнути сигнал"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:156
-msgctxt "@title:tab Appearance of the bar graph"
-msgid "Look"
-msgstr "Вигляд"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:161
-msgid "Normal bar color:"
-msgstr "Звичайний колір стовпчика:"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:168
-msgid "Out-of-range color:"
-msgstr "Колір критичного значення:"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:186
-msgid ""
-"This determines the size of the font used to print a label underneath the "
-"bars. Bars are automatically suppressed if text becomes too large, so it is "
-"advisable to use a small font size here."
-msgstr ""
-"Це визначає розмір шрифту що використовується для друку заголовку нижче "
-"стовпчиків. Стовпчики автоматично блокуються, якщо текст стає дуже великім, "
-"ми радимо використовувати малий розмір шрифту."
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:207
-msgid "Edit..."
-msgstr "Редагувати..."
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:208
-msgid "Push this button to configure the label."
-msgstr "Натисніть цю кнопку для того, щоб налаштувати заголовок."
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:366
-msgid "Label of Bar Graph"
-msgstr "Надпис стовпчикової діаграми"
-
-#: SensorDisplayLib/DancingBarsSettings.cpp:367
-msgid "Enter new label:"
-msgstr "Введіть новий надпис:"
-
-#: SensorDisplayLib/SensorLogger.cpp:138
-msgctxt "@title:column"
-msgid "Logging"
-msgstr "Реєстрування"
-
-#: SensorDisplayLib/SensorLogger.cpp:141
-msgctxt "@title:column"
-msgid "Timer Interval"
-msgstr "Інтервал таймера"
-
-#: SensorDisplayLib/SensorLogger.cpp:144
-msgctxt "@title:column"
-msgid "Sensor Name"
-msgstr "Назва датчика"
-
-#: SensorDisplayLib/SensorLogger.cpp:147
-msgctxt "@title:column"
-msgid "Host Name"
-msgstr "Назва вузла"
-
-#: SensorDisplayLib/SensorLogger.cpp:150
-msgctxt "@title:column"
-msgid "Log File"
-msgstr "Файл журналу"
-
-#: SensorDisplayLib/SensorLogger.cpp:608
-msgid "&Remove Sensor"
-msgstr "&Вилучити датчик"
-
-#: SensorDisplayLib/SensorLogger.cpp:613
-msgid "&Edit Sensor..."
-msgstr "&Редагувати датчик..."
-
-#: SensorDisplayLib/SensorLogger.cpp:621
-msgid "St&op Logging"
-msgstr "Зуп&инити реєстрування"
-
-#: SensorDisplayLib/SensorLogger.cpp:624
-msgid "S&tart Logging"
-msgstr "За&пустити реєстрування"
-
-#: SensorDisplayLib/DummyDisplay.cpp:30 SensorDisplayLib/DummyDisplay.cpp:38
-msgid "Drop Sensor Here"
-msgstr "Киньте датчик сюди"
-
-#: SensorDisplayLib/DummyDisplay.cpp:32
-msgid ""
-"This is an empty space in a worksheet. Drag a sensor from the Sensor Browser "
-"and drop it here. A sensor display will appear that allows you to monitor "
-"the values of the sensor over time."
-msgstr ""
-"Це вільне поле на аркуші. Перекиньте датчик з «Навігатора датчиків» на це "
-"місце. На індикаторі, що з'явиться, ви зможете спостерігати значення датчика "
-"у часі."
+#: Workspace.cpp:260
+msgid "There are no tabs that could be deleted."
+msgstr "Немає жодної вкладки, яку можна було б вилучити."
 
 #: TimerSettings.cpp:38
 msgid "Timer Settings"

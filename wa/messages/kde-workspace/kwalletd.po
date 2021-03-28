@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletd\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2011-07-17 16:06+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -19,49 +19,359 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: knewwalletdialog.cpp:64
-#, fuzzy
+#: backend/kwalletbackend.cc:233
+msgid "Already open."
+msgstr "Dedja drovou."
+
+#: backend/kwalletbackend.cc:235
+msgid "Error opening file."
+msgstr "Åk n' a nén stî come dji sayive di drovi l' fitchî."
+
+#: backend/kwalletbackend.cc:237
+msgid "Not a wallet file."
+msgstr "Ça n' est nén on fitchî poite-manoye."
+
+#: backend/kwalletbackend.cc:239
+msgid "Unsupported file format revision."
+msgstr "Revizion del cogne do fitchî nén sopoirtêye."
+
+#: backend/kwalletbackend.cc:241
+msgid "Unknown encryption scheme."
+msgstr "Arindjmint d' ecriptaedje nén cnoxhou."
+
+#: backend/kwalletbackend.cc:243
+msgid "Corrupt file?"
+msgstr "Cron fitchî ?"
+
+#: backend/kwalletbackend.cc:245
+msgid "Error validating wallet integrity. Possibly corrupted."
+msgstr ""
+"Åk n' a nén stî come dj' asprouvéve kel poite-manoye est saive. Motoit k' il "
+"est cron."
+
+#: backend/kwalletbackend.cc:249
+msgid "Read error - possibly incorrect password."
+msgstr "Aroke å léjhaedje - motoit on mwais scret."
+
+#: backend/kwalletbackend.cc:251
+msgid "Decryption error."
+msgstr "Aroke di discriptaedje."
+
+#: backend/kwalletbackend.cc:409
 msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. This is used "
-"to store sensitive data in a secure fashion. Please choose the new wallet's "
-"type below or click cancel to deny the application's request.</qt>"
+"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
+msgstr ""
+
+#: kwalletwizard.cpp:40
+msgid "KWallet"
+msgstr "KPoiteManoye"
+
+#: kwalletwizard.cpp:149
+msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
+msgstr "<qt>Li scret est vude. <b>(ADVIERTIXHMINT : nén såve)</b></qt>"
+
+#: kwalletwizard.cpp:151
+msgid "Passwords match."
+msgstr "Les screts sont les minmes."
+
+#: kwalletwizard.cpp:154
+msgid "Passwords do not match."
+msgstr "Les sicrets sont diferins."
+
+#. i18n: file: kwalletwizardpageintro.ui:17
+#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:3
+msgid "The KDE Wallet System"
+msgstr "Li sistinme di poite-manoye da KDE"
+
+#. i18n: file: kwalletwizardpageintro.ui:30
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:6
+msgid ""
+"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
+"passwords and other personal information on disk in an encrypted file, "
+"preventing others from viewing the information.  This wizard will tell you "
+"about KWallet and help you configure it for the first time."
+msgstr ""
+"Wilicome e KPoiteManoye, li sistinme di poite-manoye da KDE. KPoiteManoye "
+"vos permet d' wårder vos screts eyet d' ôtes informåcions da vosse sol plake "
+"dins on fitchî ecripté, espaitchant ls ôtès djins d' vey l' informåcion. Ci "
+"macrea ci vs aprindrè çou ki fåt åd fwait d' KPoiteManoye eyet vs aidî a l' "
+"apontyî l' prumî côp."
+
+#. i18n: file: kwalletwizardpageintro.ui:69
+#. i18n: ectx: property (text), widget (QRadioButton, _basic)
+#: rc.cpp:9
+msgid "&Basic setup (recommended)"
+msgstr "Apontiaedje di &båze (ricmandé)"
+
+#. i18n: file: kwalletwizardpageintro.ui:79
+#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
+#: rc.cpp:12
+msgid "&Advanced setup"
+msgstr "&Sipepieus apontiaedje"
+
+#. i18n: file: kbetterthankdialogbase.ui:50
+#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
+#: rc.cpp:15
+msgid "Allow &Once"
+msgstr "Permete &on côp"
+
+#. i18n: file: kbetterthankdialogbase.ui:60
+#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
+#: rc.cpp:18
+msgid "Allow &Always"
+msgstr "To&fer permete"
+
+#. i18n: file: kbetterthankdialogbase.ui:67
+#. i18n: ectx: property (text), widget (KPushButton, _deny)
+#: rc.cpp:21
+msgid "&Deny"
+msgstr "&Rifuzer"
+
+#. i18n: file: kbetterthankdialogbase.ui:74
+#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
+#: rc.cpp:24
+msgid "Deny &Forever"
+msgstr "Rifuze &tofer"
+
+#. i18n: file: kwalletwizardpageoptions.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:27
+msgid ""
+"The KDE Wallet system allows you to control the level of security of your "
+"personal data.  Some of these settings do impact usability.  While the "
+"default settings are generally acceptable for most users, you may wish to "
+"change some of them.  You may further tune these settings from the KWallet "
+"control module."
+msgstr ""
+"Li sistinme di poite-manoye da KDE vs permete di controler l' livea d' "
+"såvrité des dnêyes da vosse. I gn a d' ses apontiaedjes ki candjront l' "
+"eployåvisté. D' abôrd ki les tchuzes prémetowes sont les troes cwårts do "
+"tins acceptåves pol pupårt des uzeus, vos vôroz kécfeye ndè candjî n' onk ou "
+"l' ôte. Vos savoz mete co pus a pont ces tchuzes a pårti do module di "
+"controle då KPoiteManoye."
+
+#. i18n: file: kwalletwizardpageoptions.ui:48
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: rc.cpp:30
+msgid "Automatically close idle wallets"
+msgstr "Clôre otomaticmint les poites-manoyes ki n' fijhèt rén"
+
+#. i18n: file: kwalletwizardpageoptions.ui:55
+#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
+#: rc.cpp:33
+msgid "Store network passwords and local passwords in separate wallet files"
+msgstr ""
+"Wårder les screts del rantoele eyet les screts coinreces dins des fitchîs d' "
+"poite-manoye a pårt"
+
+#. i18n: file: kwalletwizardpagepassword.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:36
+msgid ""
+"Various applications may attempt to use the KDE wallet to store passwords or "
+"other information such as web form data and cookies.  If you would like "
+"these applications to use the wallet, you must enable it now and choose a "
+"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
+"and will allow anyone who knows it to obtain all the information contained "
+"in the wallet."
+msgstr ""
+"Sacwants programes pôront sayî d' eployî l' poite-manoye da KDE po wårder "
+"des screts ou d' ôtès informåcions come des dnêyes di formulaire waibe eyet "
+"des coûkes. Si vs voloz k' ces programes eployexhe li poite-manoye, vos l' "
+"divoz mete èn alaedje eyet tchoezi on scret. Li scret k' vos tchoeziroz "
+"<i>ni sårè nén</i> esse rapexhî s' il est pierdou eyet permetrè a tolminme "
+"kî kel conoxhrè d' obtini totes les informåcions k' i gn a e poite-manoye."
+
+#. i18n: file: kwalletwizardpagepassword.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
+#: rc.cpp:39
+msgid "Yes, I wish to use the KDE wallet to store my personal information."
+msgstr ""
+"Oyi, dji m' vout siervi do poite-manoye da KDE po wårder les informåcions da "
+"minne."
+
+#. i18n: file: kwalletwizardpagepassword.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:42
+msgid "Enter a new password:"
+msgstr "Tapez on novea scret :"
+
+#. i18n: file: kwalletwizardpagepassword.ui:104
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:45
+msgid "Verify password:"
+msgstr "Verifiaedje do scret :"
+
+#. i18n: file: kwalletwizardpageexplanation.ui:17
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:48
+msgid ""
+"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
+"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
+"The data is only written in the encrypted form of your choice - blowfish "
+"algorithm with your password as the key. When a wallet is opened, the wallet "
+"manager application will launch and display an icon in the system tray. You "
+"can use this application to manage all of your wallets. It even permits you "
+"to drag wallets and wallet contents, allowing you to easily copy a wallet to "
+"a remote system.</p></body></html>"
+msgstr ""
+
+#: kwalletd.cpp:412 kwalletd.cpp:502 kwalletd.cpp:567 kwalletd.cpp:663
+#: kwalletd.cpp:765 kwalletd.cpp:777 kwalletd.cpp:786 kwalletd.cpp:791
+#: kwalletd.cpp:1304 main.cpp:151 main.cpp:152
+msgid "KDE Wallet Service"
+msgstr "Siervice di poite-manoye KDE"
+
+#: kwalletd.cpp:495
+msgid ""
+"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
+"password for this wallet below.</qt>"
+msgstr ""
+"<qt>KDE a dmandé po drovi l' poite-manoye « <b>%1</b> ». Tapez l' sicret do "
+"poite-manoye chal pa dzo s' i vs plait.</qt>"
+
+#: kwalletd.cpp:497
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
+"b>'. Please enter the password for this wallet below.</qt>"
+msgstr ""
+"<qt>Li programe « <b>%1</b> » a dmandé po drovi l' poite-manoye « <b>%2</b> "
+"».  Tapez l' sicret do poite-manoye chal pa dzo s' i vs plait.</qt>"
+
+#: kwalletd.cpp:501
+msgid "&Open"
+msgstr "Dr&ovi"
+
+#: kwalletd.cpp:511
+msgctxt "Text of a button to ignore the open-wallet notification"
+msgid "Ignore"
+msgstr "Passer houte"
+
+#: kwalletd.cpp:513
+msgid "<b>KDE</b> has requested to open a wallet (%1)."
+msgstr "<b>KDE</b> a dmandé po drovi on poite-manoye (%1)."
+
+#: kwalletd.cpp:516
+msgctxt ""
+"Text of a button for switching to the (unnamed) application requesting a "
+"password"
+msgid "Switch there"
+msgstr "Passez chal"
+
+#: kwalletd.cpp:518
+msgid "<b>%1</b> has requested to open a wallet (%2)."
+msgstr "<b>%1</b> a dmandé po drovi on poite-manoye (%2)."
+
+#: kwalletd.cpp:521
+msgctxt ""
+"Text of a button for switching to the application requesting a password"
+msgid "Switch to %1"
+msgstr "Passer a %1"
+
+#: kwalletd.cpp:536 kwalletd.cpp:576
+msgid ""
+"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
+"%2: %3)</qt>"
+msgstr ""
+"<qt>Åk n' a nén stî come dji droveu l' poite-manoye « <b>%1</b> ». Sayîz co "
+"on côp s' i vs plait.<br />(Côde d' aroke %2: %3)</qt>"
+
+#: kwalletd.cpp:556
+msgid ""
+"KDE has requested to open the wallet. This is used to store sensitive data "
+"in a secure fashion. Please enter a password to use with this wallet or "
+"click cancel to deny the application's request."
 msgstr ""
 "KDE a dmandé po drovi l' poite-manoye. Ci chal est eployî po wårder des "
 "sinsibès dnêyes d' ene såve manire. Tapez on scret a eployî avou c' poite-"
 "manoye, s' i vs plait oudon-bén clitchî so Rinoncî po rbôrer l' dimande do "
 "programe."
 
-#: knewwalletdialog.cpp:66
-#, fuzzy
+#: kwalletd.cpp:558
 msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. This is used to store sensitive data in a secure fashion. "
-"Please choose the new wallet's type below or click cancel to deny the "
-"application's request.</qt>"
+"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
+"is used to store sensitive data in a secure fashion. Please enter a password "
+"to use with this wallet or click cancel to deny the application's request.</"
+"qt>"
 msgstr ""
 "<qt>Li programe « <b>%1</b> » a dmandé po drovi l' poite-manoye KDE. Ci chal "
 "est eployî po wårder des sinsibès dnêyes d' ene såve manire. Tapez on scret "
 "a eployî avou c' poite-manoye, s' i vs plait oudon-bén clitchî so Rinoncî po "
 "rbôrer l' dimande do programe.</qt>"
 
-#: knewwalletdialog.cpp:127 knewwalletdialog.cpp:133 kwalletwizard.cpp:162
-#: kwalletwizard.cpp:166
+#: kwalletd.cpp:562
 msgid ""
-"The QGpgME library failed to initialize for the OpenPGP protocol. Please "
-"check your system's configuration then try again."
+"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
+"choose a password for this wallet, or cancel to deny the application's "
+"request.</qt>"
 msgstr ""
+"<qt>KDE a dmandé po ahiver on novea poite-manoye lomé « <b>%1</b> ». "
+"Tchoezixhoz on scret po c' poite-manoye s' i vs plait oudon-bén rinoncî po "
+"rbôrer l' dimande då programe.</qt>"
 
-#: knewwalletdialog.cpp:153
+#: kwalletd.cpp:564
 msgid ""
-"Seems that your system has no keys suitable for encryption. Please set-up at "
-"least an encryption key, then try again."
+"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
+"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
+"application's request.</qt>"
 msgstr ""
+"<qt>Li programe « <b>%1</b> » a dmandé po ahiver on novea poite-manoye lomé "
+"« <b>%2</b> ». Tchoezixhoz on scret po c' poite-manoye s' i vs plait oudon-"
+"bén rinoncî po rbôrer l' dimande då programe.</qt>"
 
-#: main.cpp:151 main.cpp:152 kwalletd.cpp:424 kwalletd.cpp:538 kwalletd.cpp:627
-#: kwalletd.cpp:726 kwalletd.cpp:829 kwalletd.cpp:848 kwalletd.cpp:857
-#: kwalletd.cpp:862 kwalletd.cpp:1378
-msgid "KDE Wallet Service"
-msgstr "Siervice di poite-manoye KDE"
+#: kwalletd.cpp:568
+msgid "C&reate"
+msgstr "A&hiver"
+
+#: kwalletd.cpp:665
+msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
+msgstr "<qt>KDE a dmandé d' moussî el poite-manoye drovowe « <b>%1</b> ».</qt>"
+
+#: kwalletd.cpp:667
+msgid ""
+"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
+"%2</b>'.</qt>"
+msgstr ""
+"<qt>Li programe « <b>%1</b> » a dmandé d' moussî el poite-manoye drovowe « "
+"<b>%2</b> ».</qt>"
+
+#: kwalletd.cpp:765
+msgid ""
+"Unable to open wallet. The wallet must be opened in order to change the "
+"password."
+msgstr ""
+"Dji n' sai drovi l' poite-manoye. I fåt kel poite-manoye soeye drovou po "
+"saveur candjî l' sicret."
+
+#: kwalletd.cpp:776
+msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
+msgstr ""
+"<qt>Tchoezixhoz on novea scret pol poite-manoye « <b>%1</b> », s' i vs plait."
+"</qt>"
+
+#: kwalletd.cpp:786
+msgid "Error re-encrypting the wallet. Password was not changed."
+msgstr ""
+"Åk n' a nén stî come dji recripteu l' poite-manoye. Li scret n' a nén stî "
+"candjî."
+
+#: kwalletd.cpp:791
+msgid "Error reopening the wallet. Data may be lost."
+msgstr ""
+"Åk n' a nén stî come dji rdroveu l' poite-manoye. Des dnêyes on kécfeye sitî "
+"pierdowes."
+
+#: kwalletd.cpp:1304
+msgid ""
+"There have been repeated failed attempts to gain access to a wallet. An "
+"application may be misbehaving."
+msgstr ""
+"Ons a sayî mwints côps d' moussî dins on poite-manoye. On programe si moenne "
+"motoit må."
 
 #: main.cpp:153
 #, fuzzy
@@ -92,566 +402,3 @@ msgstr "Thiago Maceira"
 #: main.cpp:156
 msgid "D-Bus Interface"
 msgstr "Eterface D-Bus"
-
-#: main.cpp:157
-msgid "Valentin Rusu"
-msgstr ""
-
-#: main.cpp:157
-msgid "GPG backend support"
-msgstr ""
-
-#: kwalletd.cpp:531
-msgid ""
-"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
-"password for this wallet below.</qt>"
-msgstr ""
-"<qt>KDE a dmandé po drovi l' poite-manoye « <b>%1</b> ». Tapez l' sicret do "
-"poite-manoye chal pa dzo s' i vs plait.</qt>"
-
-#: kwalletd.cpp:533
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
-"b>'. Please enter the password for this wallet below.</qt>"
-msgstr ""
-"<qt>Li programe « <b>%1</b> » a dmandé po drovi l' poite-manoye « <b>%2</b> "
-"».  Tapez l' sicret do poite-manoye chal pa dzo s' i vs plait.</qt>"
-
-#: kwalletd.cpp:537
-msgid "&Open"
-msgstr "Dr&ovi"
-
-#: kwalletd.cpp:547
-msgctxt "Text of a button to ignore the open-wallet notification"
-msgid "Ignore"
-msgstr "Passer houte"
-
-#: kwalletd.cpp:549
-msgid "<b>KDE</b> has requested to open a wallet (%1)."
-msgstr "<b>KDE</b> a dmandé po drovi on poite-manoye (%1)."
-
-#: kwalletd.cpp:552
-msgctxt ""
-"Text of a button for switching to the (unnamed) application requesting a "
-"password"
-msgid "Switch there"
-msgstr "Passez chal"
-
-#: kwalletd.cpp:554
-msgid "<b>%1</b> has requested to open a wallet (%2)."
-msgstr "<b>%1</b> a dmandé po drovi on poite-manoye (%2)."
-
-#: kwalletd.cpp:557
-msgctxt ""
-"Text of a button for switching to the application requesting a password"
-msgid "Switch to %1"
-msgstr "Passer a %1"
-
-#: kwalletd.cpp:572 kwalletd.cpp:636
-msgid ""
-"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
-"%2: %3)</qt>"
-msgstr ""
-"<qt>Åk n' a nén stî come dji droveu l' poite-manoye « <b>%1</b> ». Sayîz co "
-"on côp s' i vs plait.<br />(Côde d' aroke %2: %3)</qt>"
-
-#: kwalletd.cpp:616
-msgid ""
-"KDE has requested to open the wallet. This is used to store sensitive data "
-"in a secure fashion. Please enter a password to use with this wallet or "
-"click cancel to deny the application's request."
-msgstr ""
-"KDE a dmandé po drovi l' poite-manoye. Ci chal est eployî po wårder des "
-"sinsibès dnêyes d' ene såve manire. Tapez on scret a eployî avou c' poite-"
-"manoye, s' i vs plait oudon-bén clitchî so Rinoncî po rbôrer l' dimande do "
-"programe."
-
-#: kwalletd.cpp:618
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
-"is used to store sensitive data in a secure fashion. Please enter a password "
-"to use with this wallet or click cancel to deny the application's request.</"
-"qt>"
-msgstr ""
-"<qt>Li programe « <b>%1</b> » a dmandé po drovi l' poite-manoye KDE. Ci chal "
-"est eployî po wårder des sinsibès dnêyes d' ene såve manire. Tapez on scret "
-"a eployî avou c' poite-manoye, s' i vs plait oudon-bén clitchî so Rinoncî po "
-"rbôrer l' dimande do programe.</qt>"
-
-#: kwalletd.cpp:622
-msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
-"choose a password for this wallet, or cancel to deny the application's "
-"request.</qt>"
-msgstr ""
-"<qt>KDE a dmandé po ahiver on novea poite-manoye lomé « <b>%1</b> ». "
-"Tchoezixhoz on scret po c' poite-manoye s' i vs plait oudon-bén rinoncî po "
-"rbôrer l' dimande då programe.</qt>"
-
-#: kwalletd.cpp:624
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
-"application's request.</qt>"
-msgstr ""
-"<qt>Li programe « <b>%1</b> » a dmandé po ahiver on novea poite-manoye lomé "
-"« <b>%2</b> ». Tchoezixhoz on scret po c' poite-manoye s' i vs plait oudon-"
-"bén rinoncî po rbôrer l' dimande då programe.</qt>"
-
-#: kwalletd.cpp:628
-msgid "C&reate"
-msgstr "A&hiver"
-
-#: kwalletd.cpp:728
-msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
-msgstr "<qt>KDE a dmandé d' moussî el poite-manoye drovowe « <b>%1</b> ».</qt>"
-
-#: kwalletd.cpp:730
-msgid ""
-"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
-"%2</b>'.</qt>"
-msgstr ""
-"<qt>Li programe « <b>%1</b> » a dmandé d' moussî el poite-manoye drovowe « "
-"<b>%2</b> ».</qt>"
-
-#: kwalletd.cpp:829
-msgid ""
-"Unable to open wallet. The wallet must be opened in order to change the "
-"password."
-msgstr ""
-"Dji n' sai drovi l' poite-manoye. I fåt kel poite-manoye soeye drovou po "
-"saveur candjî l' sicret."
-
-#: kwalletd.cpp:843
-msgid ""
-"<qt>The <b>%1</b> wallet is encrypted using GPG key <b>%2</b>. Please use "
-"<b>GPG</b> tools (such as <b>kleopatra</b>) to change the passphrase "
-"associated to that key.</qt>"
-msgstr ""
-
-#: kwalletd.cpp:847
-msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
-msgstr ""
-"<qt>Tchoezixhoz on novea scret pol poite-manoye « <b>%1</b> », s' i vs plait."
-"</qt>"
-
-#: kwalletd.cpp:857
-msgid "Error re-encrypting the wallet. Password was not changed."
-msgstr ""
-"Åk n' a nén stî come dji recripteu l' poite-manoye. Li scret n' a nén stî "
-"candjî."
-
-#: kwalletd.cpp:862
-msgid "Error reopening the wallet. Data may be lost."
-msgstr ""
-"Åk n' a nén stî come dji rdroveu l' poite-manoye. Des dnêyes on kécfeye sitî "
-"pierdowes."
-
-#: kwalletd.cpp:1378
-msgid ""
-"There have been repeated failed attempts to gain access to a wallet. An "
-"application may be misbehaving."
-msgstr ""
-"Ons a sayî mwints côps d' moussî dins on poite-manoye. On programe si moenne "
-"motoit må."
-
-#. i18n: file: kbetterthankdialogbase.ui:50
-#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
-#: rc.cpp:3
-msgid "Allow &Once"
-msgstr "Permete &on côp"
-
-#. i18n: file: kbetterthankdialogbase.ui:60
-#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
-#: rc.cpp:6
-msgid "Allow &Always"
-msgstr "To&fer permete"
-
-#. i18n: file: kbetterthankdialogbase.ui:67
-#. i18n: ectx: property (text), widget (KPushButton, _deny)
-#: rc.cpp:9
-msgid "&Deny"
-msgstr "&Rifuzer"
-
-#. i18n: file: kbetterthankdialogbase.ui:74
-#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
-#: rc.cpp:12
-msgid "Deny &Forever"
-msgstr "Rifuze &tofer"
-
-#. i18n: file: kwalletwizardpageexplanation.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:15
-#, fuzzy
-msgid ""
-"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
-"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
-"The data is only written in the encrypted form of your choice - blowfish "
-"algorithm with your password as the key or using a GPG encryption key. When "
-"a wallet is opened, the wallet manager application will launch and display "
-"an icon in the system tray. You can use this application to manage all of "
-"your wallets. It even permits you to drag wallets and wallet contents, "
-"allowing you to easily copy a wallet to a remote system.</p></body></html>"
-msgstr ""
-"Li sistinme di poite-manoye da KDE wåde vos dnêyes dins on fitchî <i>poite-"
-"manoye</i> so vosse deure plake coinrece. Les dnêyes ni sont scrîtes ki dins "
-"ene cogne ecriptêye, tot s' siervant di l' algorite blowfish avou vosse "
-"sicret come clé. Cwand on poite-manoye est drovou, li programe di "
-"manaedjmint do poite-manoye si drove eyet håyene ene imådjete el boesse ås "
-"imådjetes sistinme. Vos vs savoz siervi di c' programe la po manaedjî vos "
-"poites-manoyes. I vs permet minme di bodjî eyet saetchî des poites-manoye "
-"eyet leus ådvins, vos permetant insi d' copyî åjheymint on poite-manoye dins "
-"on sistinme då lon."
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:18
-msgid ""
-"<html><head/><body><p>The GPG-based wallet use a GPG encryption key to "
-"securely encrypt data on disk. The key must be available when decrypting is "
-"needed or your wallet will not be accessible. For example, if you choose a "
-"SmartCard-based encryption key, the GPG system will prompt you to enter it "
-"and its associated PIN when attempting to open the wallet. <b>NOTE:</b> only "
-"\"ultimate-level\" trusted keys are shown in this list.</p></body></html>"
-msgstr ""
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:21
-msgid "Select encryption GPG key:"
-msgstr ""
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:78
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:24
-msgid ""
-"Unable to locate at least one <b>encrypting GPG key</b>. KDE Wallet needs "
-"such <b>encrypting key</b> to securely store passwords or other sensitive "
-"data on disk. If you still want to setup a GPG-based wallet, then cancel "
-"this wizard, set-up an <b>encrypting GPG key</b>, then retry this assistant. "
-"Otherwise, you may still click back, then choose a classic, blowfish "
-"encrypted file format on the previous page."
-msgstr ""
-
-#. i18n: file: kwalletwizardpageintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#. i18n: file: knewwalletdialogintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:27 rc.cpp:84
-msgid "The KDE Wallet System"
-msgstr "Li sistinme di poite-manoye da KDE"
-
-#. i18n: file: kwalletwizardpageintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:30
-msgid ""
-"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
-"passwords and other personal information on disk in an encrypted file, "
-"preventing others from viewing the information.  This wizard will tell you "
-"about KWallet and help you configure it for the first time."
-msgstr ""
-"Wilicome e KPoiteManoye, li sistinme di poite-manoye da KDE. KPoiteManoye "
-"vos permet d' wårder vos screts eyet d' ôtes informåcions da vosse sol plake "
-"dins on fitchî ecripté, espaitchant ls ôtès djins d' vey l' informåcion. Ci "
-"macrea ci vs aprindrè çou ki fåt åd fwait d' KPoiteManoye eyet vs aidî a l' "
-"apontyî l' prumî côp."
-
-#. i18n: file: kwalletwizardpageintro.ui:69
-#. i18n: ectx: property (text), widget (QRadioButton, _basic)
-#: rc.cpp:33
-msgid "&Basic setup (recommended)"
-msgstr "Apontiaedje di &båze (ricmandé)"
-
-#. i18n: file: kwalletwizardpageintro.ui:79
-#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
-#: rc.cpp:36
-msgid "&Advanced setup"
-msgstr "&Sipepieus apontiaedje"
-
-#. i18n: file: kwalletwizardpageoptions.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:39
-msgid ""
-"The KDE Wallet system allows you to control the level of security of your "
-"personal data.  Some of these settings do impact usability.  While the "
-"default settings are generally acceptable for most users, you may wish to "
-"change some of them.  You may further tune these settings from the KWallet "
-"control module."
-msgstr ""
-"Li sistinme di poite-manoye da KDE vs permete di controler l' livea d' "
-"såvrité des dnêyes da vosse. I gn a d' ses apontiaedjes ki candjront l' "
-"eployåvisté. D' abôrd ki les tchuzes prémetowes sont les troes cwårts do "
-"tins acceptåves pol pupårt des uzeus, vos vôroz kécfeye ndè candjî n' onk ou "
-"l' ôte. Vos savoz mete co pus a pont ces tchuzes a pårti do module di "
-"controle då KPoiteManoye."
-
-#. i18n: file: kwalletwizardpageoptions.ui:48
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: rc.cpp:42
-msgid "Automatically close idle wallets"
-msgstr "Clôre otomaticmint les poites-manoyes ki n' fijhèt rén"
-
-#. i18n: file: kwalletwizardpageoptions.ui:55
-#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
-#: rc.cpp:45
-msgid "Store network passwords and local passwords in separate wallet files"
-msgstr ""
-"Wårder les screts del rantoele eyet les screts coinreces dins des fitchîs d' "
-"poite-manoye a pårt"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:48
-#, fuzzy
-msgid ""
-"<html><head/><body><p>Various applications may attempt to use the KDE wallet "
-"to store passwords or other information such as web form data and cookies. "
-"If you would like these applications to use the wallet, you must enable it "
-"now and choose method for its encryption.</p><p>GPG method is more secure, "
-"but you must have configured at least one encrypting key on your system.</"
-"p><p>If you choose the classic format, be warned that the password you "
-"choose <span style=\" font-style:italic;\">cannot</span> be recovered if it "
-"is lost, and will allow anyone who knows it to obtain all the information "
-"contained in the wallet.</p></body></html>"
-msgstr ""
-"Sacwants programes pôront sayî d' eployî l' poite-manoye da KDE po wårder "
-"des screts ou d' ôtès informåcions come des dnêyes di formulaire waibe eyet "
-"des coûkes. Si vs voloz k' ces programes eployexhe li poite-manoye, vos l' "
-"divoz mete èn alaedje eyet tchoezi on scret. Li scret k' vos tchoeziroz "
-"<i>ni sårè nén</i> esse rapexhî s' il est pierdou eyet permetrè a tolminme "
-"kî kel conoxhrè d' obtini totes les informåcions k' i gn a e poite-manoye."
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:30
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#. i18n: file: kwalletwizardpagepassword.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#: rc.cpp:51 rc.cpp:100
-msgid "Yes, I wish to use the KDE wallet to store my personal information."
-msgstr ""
-"Oyi, dji m' vout siervi do poite-manoye da KDE po wårder les informåcions da "
-"minne."
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:46
-#. i18n: ectx: property (title), widget (QGroupBox, _groupBox)
-#: rc.cpp:54
-msgid "What kind of encryption do you wish?"
-msgstr ""
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:55
-#. i18n: ectx: property (text), widget (QRadioButton, _radioGpg)
-#. i18n: file: knewwalletdialogintro.ui:73
-#. i18n: ectx: property (text), widget (QRadioButton, radioGpg)
-#: rc.cpp:57 rc.cpp:94
-msgid "Use GPG encryption, for better protection"
-msgstr ""
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:68
-#. i18n: ectx: property (text), widget (QRadioButton, _radioBlowfish)
-#. i18n: file: knewwalletdialogintro.ui:66
-#. i18n: ectx: property (text), widget (QRadioButton, radioBlowfish)
-#: rc.cpp:60 rc.cpp:91
-msgid "Classic, blowfish encrypted file"
-msgstr ""
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:106
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#. i18n: file: kwalletwizardpagepassword.ui:88
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:63 rc.cpp:103
-msgid "Enter a new password:"
-msgstr "Tapez on novea scret :"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:122
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#. i18n: file: kwalletwizardpagepassword.ui:104
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:66 rc.cpp:106
-msgid "Verify password:"
-msgstr "Verifiaedje do scret :"
-
-#. i18n: file: knewwalletdialoggpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:69
-msgid "Please select the signing key from the list below:"
-msgstr ""
-
-#. i18n: file: knewwalletdialoggpg.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:72
-msgid ""
-"<html><head/><body><p><span style=\" font-weight:600;\">NOTE:</span> this "
-"list shows only \"ultimate-level\" trusted keys</p></body></html>"
-msgstr ""
-
-#. i18n: file: knewwalletdialoggpg.ui:59
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:75
-msgid "Name"
-msgstr ""
-
-#. i18n: file: knewwalletdialoggpg.ui:64
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:78
-msgid "E-Mail"
-msgstr ""
-
-#. i18n: file: knewwalletdialoggpg.ui:69
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:81
-msgid "Key-ID"
-msgstr ""
-
-#. i18n: file: knewwalletdialogintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, labelIntro)
-#: rc.cpp:88
-#, fuzzy, no-c-format
-msgid ""
-"<html><head/><body><p>The application '<span style=\" font-weight:600;\">%1</"
-"span>' has requested to open the KDE wallet. This is used to store sensitive "
-"data in a secure fashion. Please choose the new wallet's type below or click "
-"cancel to deny the application's request.</p></body></html>"
-msgstr ""
-"<qt>Li programe « <b>%1</b> » a dmandé po drovi l' poite-manoye KDE. Ci chal "
-"est eployî po wårder des sinsibès dnêyes d' ene såve manire. Tapez on scret "
-"a eployî avou c' poite-manoye, s' i vs plait oudon-bén clitchî so Rinoncî po "
-"rbôrer l' dimande do programe.</qt>"
-
-#. i18n: file: kwalletwizardpagepassword.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:97
-msgid ""
-"Various applications may attempt to use the KDE wallet to store passwords or "
-"other information such as web form data and cookies.  If you would like "
-"these applications to use the wallet, you must enable it now and choose a "
-"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
-"and will allow anyone who knows it to obtain all the information contained "
-"in the wallet."
-msgstr ""
-"Sacwants programes pôront sayî d' eployî l' poite-manoye da KDE po wårder "
-"des screts ou d' ôtès informåcions come des dnêyes di formulaire waibe eyet "
-"des coûkes. Si vs voloz k' ces programes eployexhe li poite-manoye, vos l' "
-"divoz mete èn alaedje eyet tchoezi on scret. Li scret k' vos tchoeziroz "
-"<i>ni sårè nén</i> esse rapexhî s' il est pierdou eyet permetrè a tolminme "
-"kî kel conoxhrè d' obtini totes les informåcions k' i gn a e poite-manoye."
-
-#: kwalletwizard.cpp:54
-msgid "KWallet"
-msgstr "KPoiteManoye"
-
-#: kwalletwizard.cpp:278
-msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
-msgstr "<qt>Li scret est vude. <b>(ADVIERTIXHMINT : nén såve)</b></qt>"
-
-#: kwalletwizard.cpp:280
-msgid "Passwords match."
-msgstr "Les screts sont les minmes."
-
-#: kwalletwizard.cpp:283
-msgid "Passwords do not match."
-msgstr "Les sicrets sont diferins."
-
-#: backend/backendpersisthandler.cpp:489
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-
-#: backend/backendpersisthandler.cpp:497
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-
-#: backend/backendpersisthandler.cpp:548
-msgid ""
-"<qt>Encryption error while attempting to save the wallet <b>%1</b>. Error "
-"code is <b>%2 (%3)</b>. Please fix your system configuration, then try again!"
-"</qt>"
-msgstr ""
-
-#: backend/backendpersisthandler.cpp:560
-msgid ""
-"<qt>File handling error while attempting to save the wallet <b>%1</b>. Error "
-"was <b>%2</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-
-#: backend/backendpersisthandler.cpp:573
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-
-#: backend/backendpersisthandler.cpp:591
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-
-#: backend/backendpersisthandler.cpp:601
-msgid "Retry"
-msgstr ""
-
-#: backend/backendpersisthandler.cpp:603
-msgid ""
-"<qt>Error when attempting to decrypt the wallet <b>%1</b> using GPG. If "
-"you're using a SmartCard, please ensure it's inserted then try again."
-"<br><br>GPG error was <b>%2</b></qt>"
-msgstr ""
-
-#: backend/backendpersisthandler.cpp:604
-msgid "kwalletd GPG backend"
-msgstr ""
-
-#: backend/backendpersisthandler.cpp:648
-msgid ""
-"<qt>Error when attempting to open the wallet <b>%1</b>. The wallet was "
-"encrypted using the GPG Key ID <b>%2</b> but this key was not found on your "
-"system.</qt>"
-msgstr ""
-
-#: backend/kwalletbackend.cc:236
-msgid "Already open."
-msgstr "Dedja drovou."
-
-#: backend/kwalletbackend.cc:238
-msgid "Error opening file."
-msgstr "Åk n' a nén stî come dji sayive di drovi l' fitchî."
-
-#: backend/kwalletbackend.cc:240
-msgid "Not a wallet file."
-msgstr "Ça n' est nén on fitchî poite-manoye."
-
-#: backend/kwalletbackend.cc:242
-msgid "Unsupported file format revision."
-msgstr "Revizion del cogne do fitchî nén sopoirtêye."
-
-#: backend/kwalletbackend.cc:244
-msgid "Unknown encryption scheme."
-msgstr "Arindjmint d' ecriptaedje nén cnoxhou."
-
-#: backend/kwalletbackend.cc:246
-msgid "Corrupt file?"
-msgstr "Cron fitchî ?"
-
-#: backend/kwalletbackend.cc:248
-msgid "Error validating wallet integrity. Possibly corrupted."
-msgstr ""
-"Åk n' a nén stî come dj' asprouvéve kel poite-manoye est saive. Motoit k' il "
-"est cron."
-
-#: backend/kwalletbackend.cc:252
-msgid "Read error - possibly incorrect password."
-msgstr "Aroke å léjhaedje - motoit on mwais scret."
-
-#: backend/kwalletbackend.cc:254
-msgid "Decryption error."
-msgstr "Aroke di discriptaedje."
-
-#: backend/kwalletbackend.cc:423
-msgid ""
-"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
-msgstr ""

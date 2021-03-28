@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletd\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2014-07-06 10:00+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -18,50 +18,349 @@ msgstr ""
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: knewwalletdialog.cpp:64
-msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. This is used "
-"to store sensitive data in a secure fashion. Please choose the new wallet's "
-"type below or click cancel to deny the application's request.</qt>"
-msgstr ""
-"<qt>KDE har begärt att en ny plånbok vid namn '<b>%1</b>' ska skapas. Den "
-"används för att lagra känslig information på ett säkert sätt. Ange den nya "
-"plånbokens typ eller klicka på Avbryt för att neka programmets begäran.</qt>"
+#: backend/kwalletbackend.cc:233
+msgid "Already open."
+msgstr "Redan öppen."
 
-#: knewwalletdialog.cpp:66
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. This is used to store sensitive data in a secure fashion. "
-"Please choose the new wallet's type below or click cancel to deny the "
-"application's request.</qt>"
-msgstr ""
-"<qt>Programmet '<b>%1</b>' har begärt att en ny plånbok vid namn '<b>%2</b>' "
-"ska skapas. Den används för att lagra känslig information på ett säkert "
-"sätt. Ange den nya plånbokens typ eller klicka på Avbryt för att neka "
-"programmets begäran.</qt>"
+#: backend/kwalletbackend.cc:235
+msgid "Error opening file."
+msgstr "Fel när filen skulle öppnas."
 
-#: knewwalletdialog.cpp:127 knewwalletdialog.cpp:133 kwalletwizard.cpp:162
-#: kwalletwizard.cpp:166
-msgid ""
-"The QGpgME library failed to initialize for the OpenPGP protocol. Please "
-"check your system's configuration then try again."
-msgstr ""
-"Initiering av biblioteket QGpgME för OpenPGP-protokollet misslyckades. "
-"Kontrollera systemets inställning och försök igen."
+#: backend/kwalletbackend.cc:237
+msgid "Not a wallet file."
+msgstr "Inte en plånboksfil."
 
-#: knewwalletdialog.cpp:153
-msgid ""
-"Seems that your system has no keys suitable for encryption. Please set-up at "
-"least an encryption key, then try again."
-msgstr ""
-"Det verkar som systemet inte har några nycklar lämpliga för kryptering. "
-"Ställ in minst en krypteringsnyckel, och försök därefter igen."
+#: backend/kwalletbackend.cc:239
+msgid "Unsupported file format revision."
+msgstr "Version av filformatet som inte stöds."
 
-#: main.cpp:151 main.cpp:152 kwalletd.cpp:424 kwalletd.cpp:538 kwalletd.cpp:627
-#: kwalletd.cpp:726 kwalletd.cpp:829 kwalletd.cpp:848 kwalletd.cpp:857
-#: kwalletd.cpp:862 kwalletd.cpp:1378
+#: backend/kwalletbackend.cc:241
+msgid "Unknown encryption scheme."
+msgstr "Okänd krypteringsmetod."
+
+#: backend/kwalletbackend.cc:243
+msgid "Corrupt file?"
+msgstr "Felaktig fil?"
+
+#: backend/kwalletbackend.cc:245
+msgid "Error validating wallet integrity. Possibly corrupted."
+msgstr "Fel vid validering av plånbokens integritet. Möjligen felaktig."
+
+#: backend/kwalletbackend.cc:249
+msgid "Read error - possibly incorrect password."
+msgstr "Läsfel: möjligen felaktigt lösenord."
+
+#: backend/kwalletbackend.cc:251
+msgid "Decryption error."
+msgstr "Avkodningsfel."
+
+#: backend/kwalletbackend.cc:409
+msgid ""
+"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
+msgstr ""
+"Misslyckades synkronisera plånbok <b>%1</b> till disk. Felkoderna är:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Skicka in en FELRAPPORT till bugs.kde.org med denna "
+"information."
+
+#: kwalletwizard.cpp:40
+msgid "KWallet"
+msgstr "Kwallet"
+
+#: kwalletwizard.cpp:149
+msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
+msgstr "<qt>Lösenordet är tomt.  <b>Varning: osäkert</b></qt>"
+
+#: kwalletwizard.cpp:151
+msgid "Passwords match."
+msgstr "Lösenorden stämmer."
+
+#: kwalletwizard.cpp:154
+msgid "Passwords do not match."
+msgstr "Lösenorden stämmer inte överens."
+
+#. i18n: file: kwalletwizardpageintro.ui:17
+#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:3
+msgid "The KDE Wallet System"
+msgstr "KDE:s plånbokssystem"
+
+#. i18n: file: kwalletwizardpageintro.ui:30
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:6
+msgid ""
+"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
+"passwords and other personal information on disk in an encrypted file, "
+"preventing others from viewing the information.  This wizard will tell you "
+"about KWallet and help you configure it for the first time."
+msgstr ""
+"Välkommen till Kwallet, KDE:s plånbokssystem. Kwallet låter dig lagra "
+"lösenord och annan personlig information på disk i en krypterad fil, vilket "
+"förhindrar att andra ser informationen. Guiden informerar om Kwallet och "
+"hjälper dig att ställa in det första gången."
+
+#. i18n: file: kwalletwizardpageintro.ui:69
+#. i18n: ectx: property (text), widget (QRadioButton, _basic)
+#: rc.cpp:9
+msgid "&Basic setup (recommended)"
+msgstr "&Grundläggande inställning (rekommenderas)"
+
+#. i18n: file: kwalletwizardpageintro.ui:79
+#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
+#: rc.cpp:12
+msgid "&Advanced setup"
+msgstr "&Avancerad inställning"
+
+#. i18n: file: kbetterthankdialogbase.ui:50
+#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
+#: rc.cpp:15
+msgid "Allow &Once"
+msgstr "Tillåt en &gång"
+
+#. i18n: file: kbetterthankdialogbase.ui:60
+#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
+#: rc.cpp:18
+msgid "Allow &Always"
+msgstr "Tillåt &alltid"
+
+#. i18n: file: kbetterthankdialogbase.ui:67
+#. i18n: ectx: property (text), widget (KPushButton, _deny)
+#: rc.cpp:21
+msgid "&Deny"
+msgstr "&Neka"
+
+#. i18n: file: kbetterthankdialogbase.ui:74
+#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
+#: rc.cpp:24
+msgid "Deny &Forever"
+msgstr "Neka &för alltid"
+
+#. i18n: file: kwalletwizardpageoptions.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:27
+msgid ""
+"The KDE Wallet system allows you to control the level of security of your "
+"personal data.  Some of these settings do impact usability.  While the "
+"default settings are generally acceptable for most users, you may wish to "
+"change some of them.  You may further tune these settings from the KWallet "
+"control module."
+msgstr ""
+"KDE:s plånbokssystem låter dig styra säkerhetsnivån för personlig "
+"information. Vissa inställningar påverkar användarvänligheten. Även om "
+"standardinställningarna i allmänhet är acceptabla för de flesta användare, "
+"kan du vilja ändra några av dem. Du kan finjustera inställningarna "
+"ytterligare i plånbokens inställningsmodul."
+
+#. i18n: file: kwalletwizardpageoptions.ui:48
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: rc.cpp:30
+msgid "Automatically close idle wallets"
+msgstr "Stäng plånböcker utan aktivitet automatiskt"
+
+#. i18n: file: kwalletwizardpageoptions.ui:55
+#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
+#: rc.cpp:33
+msgid "Store network passwords and local passwords in separate wallet files"
+msgstr "Lagra nätverkslösenord och lokala lösenord i olika plånböcker"
+
+#. i18n: file: kwalletwizardpagepassword.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:36
+msgid ""
+"Various applications may attempt to use the KDE wallet to store passwords or "
+"other information such as web form data and cookies.  If you would like "
+"these applications to use the wallet, you must enable it now and choose a "
+"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
+"and will allow anyone who knows it to obtain all the information contained "
+"in the wallet."
+msgstr ""
+"Diverse program kan försöka använda KDE:s plånbok för att lagra lösenord "
+"eller annan information, som data i webbformulär och kakor. Om du vill att "
+"programmen ska använda plånboken, måste du aktivera det nu och välja ett "
+"lösenord. Lösenordet du väljer kan <i>inte</i> återfås om det går förlorat, "
+"och låter alla som känner till det hämta all information som finns i "
+"plånboken."
+
+#. i18n: file: kwalletwizardpagepassword.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
+#: rc.cpp:39
+msgid "Yes, I wish to use the KDE wallet to store my personal information."
+msgstr ""
+"Ja, jag vill använda KDE:s plånbok för att lagra personlig information."
+
+#. i18n: file: kwalletwizardpagepassword.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:42
+msgid "Enter a new password:"
+msgstr "Ange ett nytt lösenord:"
+
+#. i18n: file: kwalletwizardpagepassword.ui:104
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:45
+msgid "Verify password:"
+msgstr "Verifiera lösenord:"
+
+#. i18n: file: kwalletwizardpageexplanation.ui:17
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:48
+msgid ""
+"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
+"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
+"The data is only written in the encrypted form of your choice - blowfish "
+"algorithm with your password as the key. When a wallet is opened, the wallet "
+"manager application will launch and display an icon in the system tray. You "
+"can use this application to manage all of your wallets. It even permits you "
+"to drag wallets and wallet contents, allowing you to easily copy a wallet to "
+"a remote system.</p></body></html>"
+msgstr ""
+
+#: kwalletd.cpp:412 kwalletd.cpp:502 kwalletd.cpp:567 kwalletd.cpp:663
+#: kwalletd.cpp:765 kwalletd.cpp:777 kwalletd.cpp:786 kwalletd.cpp:791
+#: kwalletd.cpp:1304 main.cpp:151 main.cpp:152
 msgid "KDE Wallet Service"
 msgstr "KDE:s plånbokstjänst"
+
+#: kwalletd.cpp:495
+msgid ""
+"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
+"password for this wallet below.</qt>"
+msgstr ""
+"<qt>KDE har begärt att plånboken '<b>%1</b>' ska öppnas. Ange plånbokens "
+"lösenord nedan.</qt>"
+
+#: kwalletd.cpp:497
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
+"b>'. Please enter the password for this wallet below.</qt>"
+msgstr ""
+"<qt>Programmet '<b>%1</b>' har begärt att plånboken '<b>%2</b>' ska öppnas. "
+"Ange plånbokens lösenord nedan.</qt>"
+
+#: kwalletd.cpp:501
+msgid "&Open"
+msgstr "Ö&ppna"
+
+#: kwalletd.cpp:511
+msgctxt "Text of a button to ignore the open-wallet notification"
+msgid "Ignore"
+msgstr "Ignorera"
+
+#: kwalletd.cpp:513
+msgid "<b>KDE</b> has requested to open a wallet (%1)."
+msgstr "<b>KDE</b> har begärt att öppna en plånbok (%1)."
+
+#: kwalletd.cpp:516
+msgctxt ""
+"Text of a button for switching to the (unnamed) application requesting a "
+"password"
+msgid "Switch there"
+msgstr "Byt dit"
+
+#: kwalletd.cpp:518
+msgid "<b>%1</b> has requested to open a wallet (%2)."
+msgstr "<b>%1</b> har begärt att öppna en plånbok (%2)."
+
+#: kwalletd.cpp:521
+msgctxt ""
+"Text of a button for switching to the application requesting a password"
+msgid "Switch to %1"
+msgstr "Byt till %1"
+
+#: kwalletd.cpp:536 kwalletd.cpp:576
+msgid ""
+"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
+"%2: %3)</qt>"
+msgstr ""
+"<qt>Fel när plånboken '<b>%1</b>' skulle öppnas. Försök igen.<br />(Felkod "
+"%2: %3)</qt>"
+
+#: kwalletd.cpp:556
+msgid ""
+"KDE has requested to open the wallet. This is used to store sensitive data "
+"in a secure fashion. Please enter a password to use with this wallet or "
+"click cancel to deny the application's request."
+msgstr ""
+"KDE har begärt att plånboken ska öppnas. Den används för att lagra känslig "
+"information på ett säkert sätt. Ange ett lösenord som ska användas med "
+"plånboken, eller klicka på Avbryt för att neka programmets begäran."
+
+#: kwalletd.cpp:558
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
+"is used to store sensitive data in a secure fashion. Please enter a password "
+"to use with this wallet or click cancel to deny the application's request.</"
+"qt>"
+msgstr ""
+"<qt>Programmet '<b>%1</b>' har begärt att KDE:s plånbok ska öppnas. Den "
+"används för att lagra känslig information på ett säkert sätt. Ange ett "
+"lösenord som ska användas med plånboken, eller klicka på Avbryt för att neka "
+"programmets begäran.</qt>"
+
+#: kwalletd.cpp:562
+msgid ""
+"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
+"choose a password for this wallet, or cancel to deny the application's "
+"request.</qt>"
+msgstr ""
+"<qt>KDE har begärt att en ny plånbok med namn '<b>%1</b>' ska skapas. Välj "
+"ett lösenord för plånboken, eller avbryt för att inte tillåta programmets "
+"begäran.</qt>"
+
+#: kwalletd.cpp:564
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
+"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
+"application's request.</qt>"
+msgstr ""
+"<qt>Programmet '<b>%1</b>' har begärt att en ny plånbok med namn '<b>%2</b>' "
+"ska skapas. Välj ett lösenord för plånboken, eller avbryt för att inte "
+"tillåta programmets begäran.</qt>"
+
+#: kwalletd.cpp:568
+msgid "C&reate"
+msgstr "&Skapa"
+
+#: kwalletd.cpp:665
+msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
+msgstr "<qt>KDE har begärt att komma åt den öppna plånboken '<b>%1</b>'.</qt>"
+
+#: kwalletd.cpp:667
+msgid ""
+"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
+"%2</b>'.</qt>"
+msgstr ""
+"<qt>Programmet '<b>%1</b>' har begärt att komma åt den öppna plånboken '<b>"
+"%2</b>'.</qt>"
+
+#: kwalletd.cpp:765
+msgid ""
+"Unable to open wallet. The wallet must be opened in order to change the "
+"password."
+msgstr ""
+"Kunde inte öppna plånboken. Plånboken måste öppnas för att kunna ändra "
+"lösenordet."
+
+#: kwalletd.cpp:776
+msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
+msgstr "<qt>Välj ett nytt lösenord för plånboken '<b>%1</b>'.</qt>"
+
+#: kwalletd.cpp:786
+msgid "Error re-encrypting the wallet. Password was not changed."
+msgstr "Fel vid omkryptering av plånboken. Lösenordet ändrades inte."
+
+#: kwalletd.cpp:791
+msgid "Error reopening the wallet. Data may be lost."
+msgstr "Fel när plånboken skulle återöppnas. Data kan ha gått förlorad."
+
+#: kwalletd.cpp:1304
+msgid ""
+"There have been repeated failed attempts to gain access to a wallet. An "
+"application may be misbehaving."
+msgstr ""
+"Upprepade misslyckade försök att komma åt en plånbok har gjorts. Det kan "
+"vara ett program som beter sig felaktigt."
 
 #: main.cpp:153
 msgid ""
@@ -92,595 +391,3 @@ msgstr "Thiago Maceira"
 #: main.cpp:156
 msgid "D-Bus Interface"
 msgstr "D-Bus gränssnitt"
-
-#: main.cpp:157
-msgid "Valentin Rusu"
-msgstr "Valentin Rusu"
-
-#: main.cpp:157
-msgid "GPG backend support"
-msgstr "GPG-gränssnittsstöd"
-
-#: kwalletd.cpp:531
-msgid ""
-"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
-"password for this wallet below.</qt>"
-msgstr ""
-"<qt>KDE har begärt att plånboken '<b>%1</b>' ska öppnas. Ange plånbokens "
-"lösenord nedan.</qt>"
-
-#: kwalletd.cpp:533
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
-"b>'. Please enter the password for this wallet below.</qt>"
-msgstr ""
-"<qt>Programmet '<b>%1</b>' har begärt att plånboken '<b>%2</b>' ska öppnas. "
-"Ange plånbokens lösenord nedan.</qt>"
-
-#: kwalletd.cpp:537
-msgid "&Open"
-msgstr "Ö&ppna"
-
-#: kwalletd.cpp:547
-msgctxt "Text of a button to ignore the open-wallet notification"
-msgid "Ignore"
-msgstr "Ignorera"
-
-#: kwalletd.cpp:549
-msgid "<b>KDE</b> has requested to open a wallet (%1)."
-msgstr "<b>KDE</b> har begärt att öppna en plånbok (%1)."
-
-#: kwalletd.cpp:552
-msgctxt ""
-"Text of a button for switching to the (unnamed) application requesting a "
-"password"
-msgid "Switch there"
-msgstr "Byt dit"
-
-#: kwalletd.cpp:554
-msgid "<b>%1</b> has requested to open a wallet (%2)."
-msgstr "<b>%1</b> har begärt att öppna en plånbok (%2)."
-
-#: kwalletd.cpp:557
-msgctxt ""
-"Text of a button for switching to the application requesting a password"
-msgid "Switch to %1"
-msgstr "Byt till %1"
-
-#: kwalletd.cpp:572 kwalletd.cpp:636
-msgid ""
-"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
-"%2: %3)</qt>"
-msgstr ""
-"<qt>Fel när plånboken '<b>%1</b>' skulle öppnas. Försök igen.<br />(Felkod "
-"%2: %3)</qt>"
-
-#: kwalletd.cpp:616
-msgid ""
-"KDE has requested to open the wallet. This is used to store sensitive data "
-"in a secure fashion. Please enter a password to use with this wallet or "
-"click cancel to deny the application's request."
-msgstr ""
-"KDE har begärt att plånboken ska öppnas. Den används för att lagra känslig "
-"information på ett säkert sätt. Ange ett lösenord som ska användas med "
-"plånboken, eller klicka på Avbryt för att neka programmets begäran."
-
-#: kwalletd.cpp:618
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
-"is used to store sensitive data in a secure fashion. Please enter a password "
-"to use with this wallet or click cancel to deny the application's request.</"
-"qt>"
-msgstr ""
-"<qt>Programmet '<b>%1</b>' har begärt att KDE:s plånbok ska öppnas. Den "
-"används för att lagra känslig information på ett säkert sätt. Ange ett "
-"lösenord som ska användas med plånboken, eller klicka på Avbryt för att neka "
-"programmets begäran.</qt>"
-
-#: kwalletd.cpp:622
-msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
-"choose a password for this wallet, or cancel to deny the application's "
-"request.</qt>"
-msgstr ""
-"<qt>KDE har begärt att en ny plånbok med namn '<b>%1</b>' ska skapas. Välj "
-"ett lösenord för plånboken, eller avbryt för att inte tillåta programmets "
-"begäran.</qt>"
-
-#: kwalletd.cpp:624
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
-"application's request.</qt>"
-msgstr ""
-"<qt>Programmet '<b>%1</b>' har begärt att en ny plånbok med namn '<b>%2</b>' "
-"ska skapas. Välj ett lösenord för plånboken, eller avbryt för att inte "
-"tillåta programmets begäran.</qt>"
-
-#: kwalletd.cpp:628
-msgid "C&reate"
-msgstr "&Skapa"
-
-#: kwalletd.cpp:728
-msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
-msgstr "<qt>KDE har begärt att komma åt den öppna plånboken '<b>%1</b>'.</qt>"
-
-#: kwalletd.cpp:730
-msgid ""
-"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
-"%2</b>'.</qt>"
-msgstr ""
-"<qt>Programmet '<b>%1</b>' har begärt att komma åt den öppna plånboken '<b>"
-"%2</b>'.</qt>"
-
-#: kwalletd.cpp:829
-msgid ""
-"Unable to open wallet. The wallet must be opened in order to change the "
-"password."
-msgstr ""
-"Kunde inte öppna plånboken. Plånboken måste öppnas för att kunna ändra "
-"lösenordet."
-
-#: kwalletd.cpp:843
-msgid ""
-"<qt>The <b>%1</b> wallet is encrypted using GPG key <b>%2</b>. Please use "
-"<b>GPG</b> tools (such as <b>kleopatra</b>) to change the passphrase "
-"associated to that key.</qt>"
-msgstr ""
-"<qt>Plånboken <b>%1</b> är krypterad genom att använda GPG-nyckeln <b>%2</"
-"b>. Använd ett <b>GPG-verktyg</b> (såsom <b>kleopatra</b>) för att ändra "
-"lösenordsfrasen som hör ihop med den nyckeln.</qt>"
-
-#: kwalletd.cpp:847
-msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
-msgstr "<qt>Välj ett nytt lösenord för plånboken '<b>%1</b>'.</qt>"
-
-#: kwalletd.cpp:857
-msgid "Error re-encrypting the wallet. Password was not changed."
-msgstr "Fel vid omkryptering av plånboken. Lösenordet ändrades inte."
-
-#: kwalletd.cpp:862
-msgid "Error reopening the wallet. Data may be lost."
-msgstr "Fel när plånboken skulle återöppnas. Data kan ha gått förlorad."
-
-#: kwalletd.cpp:1378
-msgid ""
-"There have been repeated failed attempts to gain access to a wallet. An "
-"application may be misbehaving."
-msgstr ""
-"Upprepade misslyckade försök att komma åt en plånbok har gjorts. Det kan "
-"vara ett program som beter sig felaktigt."
-
-#. i18n: file: kbetterthankdialogbase.ui:50
-#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
-#: rc.cpp:3
-msgid "Allow &Once"
-msgstr "Tillåt en &gång"
-
-#. i18n: file: kbetterthankdialogbase.ui:60
-#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
-#: rc.cpp:6
-msgid "Allow &Always"
-msgstr "Tillåt &alltid"
-
-#. i18n: file: kbetterthankdialogbase.ui:67
-#. i18n: ectx: property (text), widget (KPushButton, _deny)
-#: rc.cpp:9
-msgid "&Deny"
-msgstr "&Neka"
-
-#. i18n: file: kbetterthankdialogbase.ui:74
-#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
-#: rc.cpp:12
-msgid "Deny &Forever"
-msgstr "Neka &för alltid"
-
-#. i18n: file: kwalletwizardpageexplanation.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:15
-msgid ""
-"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
-"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
-"The data is only written in the encrypted form of your choice - blowfish "
-"algorithm with your password as the key or using a GPG encryption key. When "
-"a wallet is opened, the wallet manager application will launch and display "
-"an icon in the system tray. You can use this application to manage all of "
-"your wallets. It even permits you to drag wallets and wallet contents, "
-"allowing you to easily copy a wallet to a remote system.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>KDE:s plånbokssystem lagrar information i en <span "
-"style=\" font-style:italic;\">plånboksfil</span> på den lokala hårddisken. "
-"Informationen skrivs bara med den krypterade form du väljer, algoritmen "
-"blowfish med ditt lösenord som nyckel eller genom att använda en GPG-"
-"krypteringsnyckel. När en plånbok öppnas, startas "
-"plånbokshanteringsprogrammet och en ikon i systembrickan visas. Du kan "
-"använda programmet för att hantera alla dina plånböcker. Det låter dig dra "
-"plånböcker och innehållet i plånböcker, vilket gör det lätt att kopiera en "
-"plånbok till en annan dator.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:18
-msgid ""
-"<html><head/><body><p>The GPG-based wallet use a GPG encryption key to "
-"securely encrypt data on disk. The key must be available when decrypting is "
-"needed or your wallet will not be accessible. For example, if you choose a "
-"SmartCard-based encryption key, the GPG system will prompt you to enter it "
-"and its associated PIN when attempting to open the wallet. <b>NOTE:</b> only "
-"\"ultimate-level\" trusted keys are shown in this list.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Den GPG-baserade plånboken använder en GPG-"
-"krypteringsnyckel för att kryptera data säkert på hårddisken. Nyckeln måste "
-"vara tillgänglig när avkodning behövs, annars går det inte att komma åt "
-"plånboken. Om du till exempel väljer en krypteringsnyckel baserad på ett "
-"smartkort, ber GPG-systemet dig om att mata in det och dess tillhörande PIN-"
-"kod vid försök att öppna plånboken.<b>Observera:</b> Bara fullständigt "
-"pålitliga nycklar visas i listan.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:21
-msgid "Select encryption GPG key:"
-msgstr "Välj GPG-krypteringsverktyg:"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:78
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:24
-msgid ""
-"Unable to locate at least one <b>encrypting GPG key</b>. KDE Wallet needs "
-"such <b>encrypting key</b> to securely store passwords or other sensitive "
-"data on disk. If you still want to setup a GPG-based wallet, then cancel "
-"this wizard, set-up an <b>encrypting GPG key</b>, then retry this assistant. "
-"Otherwise, you may still click back, then choose a classic, blowfish "
-"encrypted file format on the previous page."
-msgstr ""
-"Kan inte hitta någon enda <b>GPG-krypteringsnyckel</b>. KDE:s plånbok "
-"behöver en sådan <b>krypteringsnyckel</b> för att säkert lagra lösenord "
-"eller annan känslig information på hårddisken. Om du ändå vill skapa en GPG-"
-"baserad plånbok, avbryt guiden, ställ in en <b>GPG-krypteringsnyckel</b> och "
-"prova guiden igen. Annars kan du ännu klicka bakåt, och välja ett klassiskt "
-"filformat krypterat med Blowfish på föregående sida."
-
-#. i18n: file: kwalletwizardpageintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#. i18n: file: knewwalletdialogintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:27 rc.cpp:84
-msgid "The KDE Wallet System"
-msgstr "KDE:s plånbokssystem"
-
-#. i18n: file: kwalletwizardpageintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:30
-msgid ""
-"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
-"passwords and other personal information on disk in an encrypted file, "
-"preventing others from viewing the information.  This wizard will tell you "
-"about KWallet and help you configure it for the first time."
-msgstr ""
-"Välkommen till Kwallet, KDE:s plånbokssystem. Kwallet låter dig lagra "
-"lösenord och annan personlig information på disk i en krypterad fil, vilket "
-"förhindrar att andra ser informationen. Guiden informerar om Kwallet och "
-"hjälper dig att ställa in det första gången."
-
-#. i18n: file: kwalletwizardpageintro.ui:69
-#. i18n: ectx: property (text), widget (QRadioButton, _basic)
-#: rc.cpp:33
-msgid "&Basic setup (recommended)"
-msgstr "&Grundläggande inställning (rekommenderas)"
-
-#. i18n: file: kwalletwizardpageintro.ui:79
-#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
-#: rc.cpp:36
-msgid "&Advanced setup"
-msgstr "&Avancerad inställning"
-
-#. i18n: file: kwalletwizardpageoptions.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:39
-msgid ""
-"The KDE Wallet system allows you to control the level of security of your "
-"personal data.  Some of these settings do impact usability.  While the "
-"default settings are generally acceptable for most users, you may wish to "
-"change some of them.  You may further tune these settings from the KWallet "
-"control module."
-msgstr ""
-"KDE:s plånbokssystem låter dig styra säkerhetsnivån för personlig "
-"information. Vissa inställningar påverkar användarvänligheten. Även om "
-"standardinställningarna i allmänhet är acceptabla för de flesta användare, "
-"kan du vilja ändra några av dem. Du kan finjustera inställningarna "
-"ytterligare i plånbokens inställningsmodul."
-
-#. i18n: file: kwalletwizardpageoptions.ui:48
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: rc.cpp:42
-msgid "Automatically close idle wallets"
-msgstr "Stäng plånböcker utan aktivitet automatiskt"
-
-#. i18n: file: kwalletwizardpageoptions.ui:55
-#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
-#: rc.cpp:45
-msgid "Store network passwords and local passwords in separate wallet files"
-msgstr "Lagra nätverkslösenord och lokala lösenord i olika plånböcker"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:48
-msgid ""
-"<html><head/><body><p>Various applications may attempt to use the KDE wallet "
-"to store passwords or other information such as web form data and cookies. "
-"If you would like these applications to use the wallet, you must enable it "
-"now and choose method for its encryption.</p><p>GPG method is more secure, "
-"but you must have configured at least one encrypting key on your system.</"
-"p><p>If you choose the classic format, be warned that the password you "
-"choose <span style=\" font-style:italic;\">cannot</span> be recovered if it "
-"is lost, and will allow anyone who knows it to obtain all the information "
-"contained in the wallet.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Diverse program kan försöka använda KDE:s plånbok för "
-"att lagra lösenord eller annan information, som data i webbformulär och "
-"kakor. Om du vill att programmen ska använda plånboken, måste du aktivera "
-"det nu och välja dess krypteringsmetod.</p><p>GPG-metoden är säkrare, men du "
-"måste ha ställt in minst en krypteringsnyckel på systemet.</p><p>Om du "
-"väljer det klassiska formatet, var medveten om att lösenordet du väljer "
-"<span style=\" font-style:italic;\">inte</span> kan återfås om det går "
-"förlorat, och låter alla som känner till det hämta all information som finns "
-"i plånboken.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:30
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#. i18n: file: kwalletwizardpagepassword.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#: rc.cpp:51 rc.cpp:100
-msgid "Yes, I wish to use the KDE wallet to store my personal information."
-msgstr ""
-"Ja, jag vill använda KDE:s plånbok för att lagra personlig information."
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:46
-#. i18n: ectx: property (title), widget (QGroupBox, _groupBox)
-#: rc.cpp:54
-msgid "What kind of encryption do you wish?"
-msgstr "Vilken typ av kryptering vill du använda?"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:55
-#. i18n: ectx: property (text), widget (QRadioButton, _radioGpg)
-#. i18n: file: knewwalletdialogintro.ui:73
-#. i18n: ectx: property (text), widget (QRadioButton, radioGpg)
-#: rc.cpp:57 rc.cpp:94
-msgid "Use GPG encryption, for better protection"
-msgstr "Använd GPG-kryptering, för bättre skydd"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:68
-#. i18n: ectx: property (text), widget (QRadioButton, _radioBlowfish)
-#. i18n: file: knewwalletdialogintro.ui:66
-#. i18n: ectx: property (text), widget (QRadioButton, radioBlowfish)
-#: rc.cpp:60 rc.cpp:91
-msgid "Classic, blowfish encrypted file"
-msgstr "Klassisk, fil krypterad med Blowfish"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:106
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#. i18n: file: kwalletwizardpagepassword.ui:88
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:63 rc.cpp:103
-msgid "Enter a new password:"
-msgstr "Ange ett nytt lösenord:"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:122
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#. i18n: file: kwalletwizardpagepassword.ui:104
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:66 rc.cpp:106
-msgid "Verify password:"
-msgstr "Verifiera lösenord:"
-
-#. i18n: file: knewwalletdialoggpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:69
-msgid "Please select the signing key from the list below:"
-msgstr "Välj signeringsnyckeln i listan nedan:"
-
-#. i18n: file: knewwalletdialoggpg.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:72
-msgid ""
-"<html><head/><body><p><span style=\" font-weight:600;\">NOTE:</span> this "
-"list shows only \"ultimate-level\" trusted keys</p></body></html>"
-msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">Observera:</span> "
-"Listan visa bara fullständigt pålitliga nycklar</p></body></html>"
-
-#. i18n: file: knewwalletdialoggpg.ui:59
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:75
-msgid "Name"
-msgstr "Namn"
-
-#. i18n: file: knewwalletdialoggpg.ui:64
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:78
-msgid "E-Mail"
-msgstr "E-post"
-
-#. i18n: file: knewwalletdialoggpg.ui:69
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:81
-msgid "Key-ID"
-msgstr "Nyckel-ID"
-
-#. i18n: file: knewwalletdialogintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, labelIntro)
-#: rc.cpp:88
-#, no-c-format
-msgid ""
-"<html><head/><body><p>The application '<span style=\" font-weight:600;\">%1</"
-"span>' has requested to open the KDE wallet. This is used to store sensitive "
-"data in a secure fashion. Please choose the new wallet's type below or click "
-"cancel to deny the application's request.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Programmet '<span style=\" font-weight:600;\">%1</"
-"span>' har begärt att KDE:s plånbok ska öppnas. Den används för att lagra "
-"känslig information på ett säkert sätt. Ange den nya plånbokens typ eller "
-"klicka på Avbryt för att neka programmets begäran.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagepassword.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:97
-msgid ""
-"Various applications may attempt to use the KDE wallet to store passwords or "
-"other information such as web form data and cookies.  If you would like "
-"these applications to use the wallet, you must enable it now and choose a "
-"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
-"and will allow anyone who knows it to obtain all the information contained "
-"in the wallet."
-msgstr ""
-"Diverse program kan försöka använda KDE:s plånbok för att lagra lösenord "
-"eller annan information, som data i webbformulär och kakor. Om du vill att "
-"programmen ska använda plånboken, måste du aktivera det nu och välja ett "
-"lösenord. Lösenordet du väljer kan <i>inte</i> återfås om det går förlorat, "
-"och låter alla som känner till det hämta all information som finns i "
-"plånboken."
-
-#: kwalletwizard.cpp:54
-msgid "KWallet"
-msgstr "Kwallet"
-
-#: kwalletwizard.cpp:278
-msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
-msgstr "<qt>Lösenordet är tomt.  <b>Varning: osäkert</b></qt>"
-
-#: kwalletwizard.cpp:280
-msgid "Passwords match."
-msgstr "Lösenorden stämmer."
-
-#: kwalletwizard.cpp:283
-msgid "Passwords do not match."
-msgstr "Lösenorden stämmer inte överens."
-
-#: backend/backendpersisthandler.cpp:489
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-"<qt>Fel vid försök att initiera OpenPGP när plånboken <b>%1</b> skulle "
-"sparas. Felkoden är <b>%2</b>. Rätta systeminställningen, och försök igen.</"
-"qt>"
-
-#: backend/backendpersisthandler.cpp:497
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Fel vid försök att initiera OpenPGP när plånboken <b>%1</b> skulle "
-"sparas. Rätta systeminställningen, och försök igen.</qt>"
-
-#: backend/backendpersisthandler.cpp:548
-msgid ""
-"<qt>Encryption error while attempting to save the wallet <b>%1</b>. Error "
-"code is <b>%2 (%3)</b>. Please fix your system configuration, then try again!"
-"</qt>"
-msgstr ""
-"<qt>Krypteringsfel vid försök att spara plånboken <b>%1</b>. Felkoden är <b>"
-"%2 (%3)</b>. Rätta systeminställningen, och försök igen.</qt>"
-
-#: backend/backendpersisthandler.cpp:560
-msgid ""
-"<qt>File handling error while attempting to save the wallet <b>%1</b>. Error "
-"was <b>%2</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Filhanteringsfel vid försök att spara plånboken <b>%1</b>. Felkoden är "
-"<b>%2</b> Rätta systeminställningen, och försök igen.</qt>"
-
-#: backend/backendpersisthandler.cpp:573
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-"<qt>Fel vid försök att initiera OpenPGP när plånboken <b>%1</b> skulle "
-"öppnas. Felkoden är <b>%2</b>. Rätta systeminställningen, och försök igen.</"
-"qt>"
-
-#: backend/backendpersisthandler.cpp:591
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Fel vid försök att initiera OpenPGP när plånboken <b>%1</b> skulle "
-"öppnas. Rätta systeminställningen, och försök igen.</qt>"
-
-#: backend/backendpersisthandler.cpp:601
-msgid "Retry"
-msgstr "Försök igen"
-
-#: backend/backendpersisthandler.cpp:603
-msgid ""
-"<qt>Error when attempting to decrypt the wallet <b>%1</b> using GPG. If "
-"you're using a SmartCard, please ensure it's inserted then try again."
-"<br><br>GPG error was <b>%2</b></qt>"
-msgstr ""
-"<qt>Fel vid försök att avkoda plånboken <b>%1</b> med GPG. Om du använder "
-"ett smartkort, försäkra dig om att det är inmatat och försök igen."
-"<br><br>GPG-felet är <b>%2</b></qt>"
-
-#: backend/backendpersisthandler.cpp:604
-msgid "kwalletd GPG backend"
-msgstr "GPG-bakgrundsprogram för plånboken"
-
-#: backend/backendpersisthandler.cpp:648
-msgid ""
-"<qt>Error when attempting to open the wallet <b>%1</b>. The wallet was "
-"encrypted using the GPG Key ID <b>%2</b> but this key was not found on your "
-"system.</qt>"
-msgstr ""
-"<qt>Fel vid försök att öppna plånboken <b>%1</b>. Plånboken krypterades med "
-"användning av GPG-nyckeln <b>%2</b> men nyckeln hittades inte på systemet.</"
-"qt>"
-
-#: backend/kwalletbackend.cc:236
-msgid "Already open."
-msgstr "Redan öppen."
-
-#: backend/kwalletbackend.cc:238
-msgid "Error opening file."
-msgstr "Fel när filen skulle öppnas."
-
-#: backend/kwalletbackend.cc:240
-msgid "Not a wallet file."
-msgstr "Inte en plånboksfil."
-
-#: backend/kwalletbackend.cc:242
-msgid "Unsupported file format revision."
-msgstr "Version av filformatet som inte stöds."
-
-#: backend/kwalletbackend.cc:244
-msgid "Unknown encryption scheme."
-msgstr "Okänd krypteringsmetod."
-
-#: backend/kwalletbackend.cc:246
-msgid "Corrupt file?"
-msgstr "Felaktig fil?"
-
-#: backend/kwalletbackend.cc:248
-msgid "Error validating wallet integrity. Possibly corrupted."
-msgstr "Fel vid validering av plånbokens integritet. Möjligen felaktig."
-
-#: backend/kwalletbackend.cc:252
-msgid "Read error - possibly incorrect password."
-msgstr "Läsfel: möjligen felaktigt lösenord."
-
-#: backend/kwalletbackend.cc:254
-msgid "Decryption error."
-msgstr "Avkodningsfel."
-
-#: backend/kwalletbackend.cc:423
-msgid ""
-"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
-msgstr ""
-"Misslyckades synkronisera plånbok <b>%1</b> till disk. Felkoderna är:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Skicka in en FELRAPPORT till bugs.kde.org med denna "
-"information."

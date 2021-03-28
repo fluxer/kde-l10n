@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletd\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2014-10-22 15:12+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,50 +18,340 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: knewwalletdialog.cpp:64
-msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. This is used "
-"to store sensitive data in a secure fashion. Please choose the new wallet's "
-"type below or click cancel to deny the application's request.</qt>"
-msgstr ""
-"<qt>KDE požaduje vytvoření nové úschovny pojmenované '<b>%1</b>'. Ta je "
-"používána pro bezpečné uložení citlivých dat. Prosím vyberte typ nové "
-"úschovny níže nebo stiskněte Zrušit pro odmítnutí tohoto požadavku.</qt>"
+#: backend/kwalletbackend.cc:233
+msgid "Already open."
+msgstr "Již otevřen."
 
-#: knewwalletdialog.cpp:66
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. This is used to store sensitive data in a secure fashion. "
-"Please choose the new wallet's type below or click cancel to deny the "
-"application's request.</qt>"
-msgstr ""
-"<qt>Aplikace '<b>%1</b>' požaduje vytvoření nové úschovny pojmenované '<b>"
-"%2</b>'. Ta je používána pro bezpečné uložení citlivých dat. Prosím vyberte "
-"typ nové úschovny níže nebo stiskněte Zrušit pro odmítnutí tohoto požadavku."
-"</qt>"
+#: backend/kwalletbackend.cc:235
+msgid "Error opening file."
+msgstr "Chyba při otevírání souboru."
 
-#: knewwalletdialog.cpp:127 knewwalletdialog.cpp:133 kwalletwizard.cpp:162
-#: kwalletwizard.cpp:166
-msgid ""
-"The QGpgME library failed to initialize for the OpenPGP protocol. Please "
-"check your system's configuration then try again."
-msgstr ""
-"Knihovně QGpgME se nezdařilo spustit protokol OpenPGP. Prosím, zkontrolujte "
-"nastavení systému a zkuste to znovu."
+#: backend/kwalletbackend.cc:237
+msgid "Not a wallet file."
+msgstr "Toto není soubor úschovny."
 
-#: knewwalletdialog.cpp:153
-msgid ""
-"Seems that your system has no keys suitable for encryption. Please set-up at "
-"least an encryption key, then try again."
-msgstr ""
-"Zdá se, že váš systém nemá klíče vhodné pro šifrování. Prosím, nastavte "
-"aspoň šifrovací klíč a pak zkuste znova."
+#: backend/kwalletbackend.cc:239
+msgid "Unsupported file format revision."
+msgstr "Nepodporovaná revize formátu souborů."
 
-#: main.cpp:151 main.cpp:152 kwalletd.cpp:424 kwalletd.cpp:538 kwalletd.cpp:627
-#: kwalletd.cpp:726 kwalletd.cpp:829 kwalletd.cpp:848 kwalletd.cpp:857
-#: kwalletd.cpp:862 kwalletd.cpp:1378
+#: backend/kwalletbackend.cc:241
+msgid "Unknown encryption scheme."
+msgstr "Neznámé šifrovací schéma."
+
+#: backend/kwalletbackend.cc:243
+msgid "Corrupt file?"
+msgstr "Poškozený soubor?"
+
+#: backend/kwalletbackend.cc:245
+msgid "Error validating wallet integrity. Possibly corrupted."
+msgstr "Chyba při kontrole integrity úschovny; pravděpodobně je poškozená."
+
+#: backend/kwalletbackend.cc:249
+msgid "Read error - possibly incorrect password."
+msgstr "Chyba ve čtení - pravděpodobně chybné heslo."
+
+#: backend/kwalletbackend.cc:251
+msgid "Decryption error."
+msgstr "Chyba v dešifrování."
+
+#: backend/kwalletbackend.cc:409
+msgid ""
+"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
+msgstr ""
+"Selhala synchronizace úschovny <b>%1</b> na disk. Kód chyby:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Prosím, nahlaste chybu obsahující tuto informaci na bugs.kde."
+"org"
+
+#: kwalletwizard.cpp:40
+msgid "KWallet"
+msgstr "KWallet"
+
+#: kwalletwizard.cpp:149
+msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
+msgstr "<qt>Heslo je prázdné  <b>(VAROVÁNÍ: Není bezpečné)</b></qt>"
+
+#: kwalletwizard.cpp:151
+msgid "Passwords match."
+msgstr "Hesla se shodují."
+
+#: kwalletwizard.cpp:154
+msgid "Passwords do not match."
+msgstr "Hesla se neshodují."
+
+#. i18n: file: kwalletwizardpageintro.ui:17
+#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:3
+msgid "The KDE Wallet System"
+msgstr "Systém úschovny pro KDE"
+
+#. i18n: file: kwalletwizardpageintro.ui:30
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:6
+msgid ""
+"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
+"passwords and other personal information on disk in an encrypted file, "
+"preventing others from viewing the information.  This wizard will tell you "
+"about KWallet and help you configure it for the first time."
+msgstr ""
+"Vítejte v KWallet, Systému úschovny KDE. KWallet vám umožňuje ukládat hesla "
+"a ostatní osobní informace na disk v zašifrovaném souboru, čímž znemožní "
+"ostatním prohlížet si tyto údaje. Tento průvodce vám pomůže s prvním "
+"nastavením této aplikace."
+
+#. i18n: file: kwalletwizardpageintro.ui:69
+#. i18n: ectx: property (text), widget (QRadioButton, _basic)
+#: rc.cpp:9
+msgid "&Basic setup (recommended)"
+msgstr "Zák&ladní nastavení (doporučeno)"
+
+#. i18n: file: kwalletwizardpageintro.ui:79
+#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
+#: rc.cpp:12
+msgid "&Advanced setup"
+msgstr "Pokročilé n&atavení"
+
+#. i18n: file: kbetterthankdialogbase.ui:50
+#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
+#: rc.cpp:15
+msgid "Allow &Once"
+msgstr "P&ovolit jednou"
+
+#. i18n: file: kbetterthankdialogbase.ui:60
+#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
+#: rc.cpp:18
+msgid "Allow &Always"
+msgstr "Povolit vžd&y"
+
+#. i18n: file: kbetterthankdialogbase.ui:67
+#. i18n: ectx: property (text), widget (KPushButton, _deny)
+#: rc.cpp:21
+msgid "&Deny"
+msgstr "O&depřít"
+
+#. i18n: file: kbetterthankdialogbase.ui:74
+#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
+#: rc.cpp:24
+msgid "Deny &Forever"
+msgstr "Navžd&y odepřít"
+
+#. i18n: file: kwalletwizardpageoptions.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:27
+msgid ""
+"The KDE Wallet system allows you to control the level of security of your "
+"personal data.  Some of these settings do impact usability.  While the "
+"default settings are generally acceptable for most users, you may wish to "
+"change some of them.  You may further tune these settings from the KWallet "
+"control module."
+msgstr ""
+"Systém úschovny KDE vám umožňuje kontrolovat úroveň zabezpečení vašich dat. "
+"Některá tato nastavení mají vliv na použitelnost; ačkoliv je výchozí "
+"konfigurace přijatelná pro většinu uživatelů, možná si budete přát některá "
+"změnit. Dále si můžete vyladit nastavení v ovládacím modulu úschovny."
+
+#. i18n: file: kwalletwizardpageoptions.ui:48
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: rc.cpp:30
+msgid "Automatically close idle wallets"
+msgstr "Automaticky uzavírat nečinné úschovny"
+
+#. i18n: file: kwalletwizardpageoptions.ui:55
+#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
+#: rc.cpp:33
+msgid "Store network passwords and local passwords in separate wallet files"
+msgstr "Ukládat síťová a lokální hesla do oddělených úschoven"
+
+#. i18n: file: kwalletwizardpagepassword.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:36
+msgid ""
+"Various applications may attempt to use the KDE wallet to store passwords or "
+"other information such as web form data and cookies.  If you would like "
+"these applications to use the wallet, you must enable it now and choose a "
+"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
+"and will allow anyone who knows it to obtain all the information contained "
+"in the wallet."
+msgstr ""
+"Různé aplikace mohou využívat úschovnu KDE k ukládání hesel, cookies nebo "
+"jiných informací. Pokud si přejete, aby ji tyto aplikace směly využívat, "
+"musíte tuto možnost nyní povolit a zadat heslo. Heslo, které zvolíte, "
+"<i>nelze obnovit</i>, pokud jej zapomenete nebo ztratíte a kdokoliv jej "
+"zjistí, bude mít přístup k vaší úschovně i datům v ní."
+
+#. i18n: file: kwalletwizardpagepassword.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
+#: rc.cpp:39
+msgid "Yes, I wish to use the KDE wallet to store my personal information."
+msgstr "Ano, přeji si, aby KDE úschovna uchovávala mé osobní údaje."
+
+#. i18n: file: kwalletwizardpagepassword.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:42
+msgid "Enter a new password:"
+msgstr "Zadejte nové heslo:"
+
+#. i18n: file: kwalletwizardpagepassword.ui:104
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:45
+msgid "Verify password:"
+msgstr "Ověřit heslo:"
+
+#. i18n: file: kwalletwizardpageexplanation.ui:17
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:48
+msgid ""
+"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
+"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
+"The data is only written in the encrypted form of your choice - blowfish "
+"algorithm with your password as the key. When a wallet is opened, the wallet "
+"manager application will launch and display an icon in the system tray. You "
+"can use this application to manage all of your wallets. It even permits you "
+"to drag wallets and wallet contents, allowing you to easily copy a wallet to "
+"a remote system.</p></body></html>"
+msgstr ""
+
+#: kwalletd.cpp:412 kwalletd.cpp:502 kwalletd.cpp:567 kwalletd.cpp:663
+#: kwalletd.cpp:765 kwalletd.cpp:777 kwalletd.cpp:786 kwalletd.cpp:791
+#: kwalletd.cpp:1304 main.cpp:151 main.cpp:152
 msgid "KDE Wallet Service"
 msgstr "Služba úschovny KDE"
+
+#: kwalletd.cpp:495
+msgid ""
+"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
+"password for this wallet below.</qt>"
+msgstr ""
+"<qt>KDE požaduje otevření úschovny <b>%1</b>. Prosím zadejte níže heslo.</qt>"
+
+#: kwalletd.cpp:497
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
+"b>'. Please enter the password for this wallet below.</qt>"
+msgstr ""
+"<qt>Aplikace <b>%1</b> požaduje otevření úschovny <b>%2</b>. Prosím zadejte "
+"níže heslo.</qt>"
+
+#: kwalletd.cpp:501
+msgid "&Open"
+msgstr "&Otevřít"
+
+#: kwalletd.cpp:511
+msgctxt "Text of a button to ignore the open-wallet notification"
+msgid "Ignore"
+msgstr "Ignorovat"
+
+#: kwalletd.cpp:513
+msgid "<b>KDE</b> has requested to open a wallet (%1)."
+msgstr "<b>KDE</b> požaduje přístup k otevřené úschovně (%1)."
+
+#: kwalletd.cpp:516
+msgctxt ""
+"Text of a button for switching to the (unnamed) application requesting a "
+"password"
+msgid "Switch there"
+msgstr "Přepnout zde"
+
+#: kwalletd.cpp:518
+msgid "<b>%1</b> has requested to open a wallet (%2)."
+msgstr "Aplikace <b>%1</b> požaduje přístup k úschovně (%2)."
+
+#: kwalletd.cpp:521
+msgctxt ""
+"Text of a button for switching to the application requesting a password"
+msgid "Switch to %1"
+msgstr "Přepnout na %1"
+
+#: kwalletd.cpp:536 kwalletd.cpp:576
+msgid ""
+"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
+"%2: %3)</qt>"
+msgstr ""
+"<qt>Chyba při otevírání úschovny '<b>%1</b>'. Prosím zkuste znovu.<br/> "
+"(Chybový kód %2: %3)</qt>"
+
+#: kwalletd.cpp:556
+msgid ""
+"KDE has requested to open the wallet. This is used to store sensitive data "
+"in a secure fashion. Please enter a password to use with this wallet or "
+"click cancel to deny the application's request."
+msgstr ""
+"KDE požaduje otevření úschovny. Ta je používána pro bezpečné uložení "
+"citlivých dat. Prosím zadejte heslo pro tuto úschovnu, nebo stiskněte Zrušit "
+"pro odmítnutí tohoto požadavku."
+
+#: kwalletd.cpp:558
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
+"is used to store sensitive data in a secure fashion. Please enter a password "
+"to use with this wallet or click cancel to deny the application's request.</"
+"qt>"
+msgstr ""
+"<qt>Aplikace <b>%1</b> požaduje otevření úschovny. Ta je používána pro "
+"bezpečné uložení citlivých dat. Prosím zadejte heslo pro tuto úschovnu, nebo "
+"stiskněte Zrušit pro odmítnutí tohoto požadavku.</qt>"
+
+#: kwalletd.cpp:562
+msgid ""
+"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
+"choose a password for this wallet, or cancel to deny the application's "
+"request.</qt>"
+msgstr ""
+"<qt>KDE požaduje vytvoření úschovny <b>%1</b>. Prosím zadejte heslo pro tuto "
+"úschovnu, nebo stiskněte Zrušit pro odmítnutí tohoto požadavku.</qt>"
+
+#: kwalletd.cpp:564
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
+"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
+"application's request.</qt>"
+msgstr ""
+"<qt>Aplikace <b>%1</b> požaduje vytvoření úschovny <b>%2</b>. Prosím zadejte "
+"heslo pro tuto úschovnu, nebo stiskněte Zrušit pro odmítnutí tohoto "
+"požadavku.</qt>"
+
+#: kwalletd.cpp:568
+msgid "C&reate"
+msgstr "V&ytvořit"
+
+#: kwalletd.cpp:665
+msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
+msgstr "<qt>KDE požaduje přístup k otevřené úschovny <b>%1</b>.</qt>"
+
+#: kwalletd.cpp:667
+msgid ""
+"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
+"%2</b>'.</qt>"
+msgstr ""
+"<qt>Aplikace <b>%1</b> požaduje přístup k otevřené úschovně <b>%2</b>.</qt>"
+
+#: kwalletd.cpp:765
+msgid ""
+"Unable to open wallet. The wallet must be opened in order to change the "
+"password."
+msgstr "Nelze otevřít úschovnu. Pro změnu hesla je potřeba ji nejprve otevřít."
+
+#: kwalletd.cpp:776
+msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
+msgstr "<qt>Prosím zvolte nové heslo pro úschovnu <b>%1</b>.</qt>"
+
+#: kwalletd.cpp:786
+msgid "Error re-encrypting the wallet. Password was not changed."
+msgstr "Chyba při opětovném zašifrování úschovny. Změna hesla neprovedena."
+
+#: kwalletd.cpp:791
+msgid "Error reopening the wallet. Data may be lost."
+msgstr "Chyba při otevírání úschovny. Data mohou být ztracena."
+
+#: kwalletd.cpp:1304
+msgid ""
+"There have been repeated failed attempts to gain access to a wallet. An "
+"application may be misbehaving."
+msgstr ""
+"Pokusy o přístup k úschovně opakovaně selhaly. Některá aplikace je "
+"pravděpodobně poškozená."
 
 #: main.cpp:153
 msgid ""
@@ -92,584 +382,3 @@ msgstr "Thiago Maceira"
 #: main.cpp:156
 msgid "D-Bus Interface"
 msgstr "Rozhraní DBus"
-
-#: main.cpp:157
-msgid "Valentin Rusu"
-msgstr "Valentin Rusu"
-
-#: main.cpp:157
-msgid "GPG backend support"
-msgstr "Podpůrná vrstva GPG"
-
-#: kwalletd.cpp:531
-msgid ""
-"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
-"password for this wallet below.</qt>"
-msgstr ""
-"<qt>KDE požaduje otevření úschovny <b>%1</b>. Prosím zadejte níže heslo.</qt>"
-
-#: kwalletd.cpp:533
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
-"b>'. Please enter the password for this wallet below.</qt>"
-msgstr ""
-"<qt>Aplikace <b>%1</b> požaduje otevření úschovny <b>%2</b>. Prosím zadejte "
-"níže heslo.</qt>"
-
-#: kwalletd.cpp:537
-msgid "&Open"
-msgstr "&Otevřít"
-
-#: kwalletd.cpp:547
-msgctxt "Text of a button to ignore the open-wallet notification"
-msgid "Ignore"
-msgstr "Ignorovat"
-
-#: kwalletd.cpp:549
-msgid "<b>KDE</b> has requested to open a wallet (%1)."
-msgstr "<b>KDE</b> požaduje přístup k otevřené úschovně (%1)."
-
-#: kwalletd.cpp:552
-msgctxt ""
-"Text of a button for switching to the (unnamed) application requesting a "
-"password"
-msgid "Switch there"
-msgstr "Přepnout zde"
-
-#: kwalletd.cpp:554
-msgid "<b>%1</b> has requested to open a wallet (%2)."
-msgstr "Aplikace <b>%1</b> požaduje přístup k úschovně (%2)."
-
-#: kwalletd.cpp:557
-msgctxt ""
-"Text of a button for switching to the application requesting a password"
-msgid "Switch to %1"
-msgstr "Přepnout na %1"
-
-#: kwalletd.cpp:572 kwalletd.cpp:636
-msgid ""
-"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
-"%2: %3)</qt>"
-msgstr ""
-"<qt>Chyba při otevírání úschovny '<b>%1</b>'. Prosím zkuste znovu.<br/> "
-"(Chybový kód %2: %3)</qt>"
-
-#: kwalletd.cpp:616
-msgid ""
-"KDE has requested to open the wallet. This is used to store sensitive data "
-"in a secure fashion. Please enter a password to use with this wallet or "
-"click cancel to deny the application's request."
-msgstr ""
-"KDE požaduje otevření úschovny. Ta je používána pro bezpečné uložení "
-"citlivých dat. Prosím zadejte heslo pro tuto úschovnu, nebo stiskněte Zrušit "
-"pro odmítnutí tohoto požadavku."
-
-#: kwalletd.cpp:618
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
-"is used to store sensitive data in a secure fashion. Please enter a password "
-"to use with this wallet or click cancel to deny the application's request.</"
-"qt>"
-msgstr ""
-"<qt>Aplikace <b>%1</b> požaduje otevření úschovny. Ta je používána pro "
-"bezpečné uložení citlivých dat. Prosím zadejte heslo pro tuto úschovnu, nebo "
-"stiskněte Zrušit pro odmítnutí tohoto požadavku.</qt>"
-
-#: kwalletd.cpp:622
-msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
-"choose a password for this wallet, or cancel to deny the application's "
-"request.</qt>"
-msgstr ""
-"<qt>KDE požaduje vytvoření úschovny <b>%1</b>. Prosím zadejte heslo pro tuto "
-"úschovnu, nebo stiskněte Zrušit pro odmítnutí tohoto požadavku.</qt>"
-
-#: kwalletd.cpp:624
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
-"application's request.</qt>"
-msgstr ""
-"<qt>Aplikace <b>%1</b> požaduje vytvoření úschovny <b>%2</b>. Prosím zadejte "
-"heslo pro tuto úschovnu, nebo stiskněte Zrušit pro odmítnutí tohoto "
-"požadavku.</qt>"
-
-#: kwalletd.cpp:628
-msgid "C&reate"
-msgstr "V&ytvořit"
-
-#: kwalletd.cpp:728
-msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
-msgstr "<qt>KDE požaduje přístup k otevřené úschovny <b>%1</b>.</qt>"
-
-#: kwalletd.cpp:730
-msgid ""
-"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
-"%2</b>'.</qt>"
-msgstr ""
-"<qt>Aplikace <b>%1</b> požaduje přístup k otevřené úschovně <b>%2</b>.</qt>"
-
-#: kwalletd.cpp:829
-msgid ""
-"Unable to open wallet. The wallet must be opened in order to change the "
-"password."
-msgstr "Nelze otevřít úschovnu. Pro změnu hesla je potřeba ji nejprve otevřít."
-
-#: kwalletd.cpp:843
-msgid ""
-"<qt>The <b>%1</b> wallet is encrypted using GPG key <b>%2</b>. Please use "
-"<b>GPG</b> tools (such as <b>kleopatra</b>) to change the passphrase "
-"associated to that key.</qt>"
-msgstr ""
-"<qt>Úschovna <b>%1</b> je zašifrována pomocí GPG klíče <b>%2</b>. Prosím "
-"použijte nástroje <b>GPG</b> (jako např. <b>kleopatra</b>) ke změně hesla "
-"přidělenému tomuto klíči.</qt>"
-
-#: kwalletd.cpp:847
-msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
-msgstr "<qt>Prosím zvolte nové heslo pro úschovnu <b>%1</b>.</qt>"
-
-#: kwalletd.cpp:857
-msgid "Error re-encrypting the wallet. Password was not changed."
-msgstr "Chyba při opětovném zašifrování úschovny. Změna hesla neprovedena."
-
-#: kwalletd.cpp:862
-msgid "Error reopening the wallet. Data may be lost."
-msgstr "Chyba při otevírání úschovny. Data mohou být ztracena."
-
-#: kwalletd.cpp:1378
-msgid ""
-"There have been repeated failed attempts to gain access to a wallet. An "
-"application may be misbehaving."
-msgstr ""
-"Pokusy o přístup k úschovně opakovaně selhaly. Některá aplikace je "
-"pravděpodobně poškozená."
-
-#. i18n: file: kbetterthankdialogbase.ui:50
-#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
-#: rc.cpp:3
-msgid "Allow &Once"
-msgstr "P&ovolit jednou"
-
-#. i18n: file: kbetterthankdialogbase.ui:60
-#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
-#: rc.cpp:6
-msgid "Allow &Always"
-msgstr "Povolit vžd&y"
-
-#. i18n: file: kbetterthankdialogbase.ui:67
-#. i18n: ectx: property (text), widget (KPushButton, _deny)
-#: rc.cpp:9
-msgid "&Deny"
-msgstr "O&depřít"
-
-#. i18n: file: kbetterthankdialogbase.ui:74
-#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
-#: rc.cpp:12
-msgid "Deny &Forever"
-msgstr "Navžd&y odepřít"
-
-#. i18n: file: kwalletwizardpageexplanation.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:15
-msgid ""
-"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
-"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
-"The data is only written in the encrypted form of your choice - blowfish "
-"algorithm with your password as the key or using a GPG encryption key. When "
-"a wallet is opened, the wallet manager application will launch and display "
-"an icon in the system tray. You can use this application to manage all of "
-"your wallets. It even permits you to drag wallets and wallet contents, "
-"allowing you to easily copy a wallet to a remote system.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Systém úschovny KDE ukládá vaše data do souboru s "
-"<span style=\" font-style:italic;\">úschovnou</span> na místním pevném "
-"disku. Data jsou zapisována ve formě jakou zvolíte - algoritmus Blowfish s "
-"vaším heslem jako klíčem nebo pomocí šifrovacího klíče GPG. Jakmile je "
-"úschovna otevřena, spustí se aplikace správce úschovny a zobrazí se ikona v "
-"systémovém panelu. Tuto aplikaci můžete použít pro správu své úschovny. "
-"Umožňuje mimo jiné přesouvat úschovny a jejich obsah pomocí myši; můžete "
-"takto například jednoduše zkopírovat úschovnu na vzdálený systém.</p></"
-"body></html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:18
-msgid ""
-"<html><head/><body><p>The GPG-based wallet use a GPG encryption key to "
-"securely encrypt data on disk. The key must be available when decrypting is "
-"needed or your wallet will not be accessible. For example, if you choose a "
-"SmartCard-based encryption key, the GPG system will prompt you to enter it "
-"and its associated PIN when attempting to open the wallet. <b>NOTE:</b> only "
-"\"ultimate-level\" trusted keys are shown in this list.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Úschovna založená na GPG používá šifrovací klíč GPG "
-"pro bezpečné šifrování dat na disku. Klíč musí být dostupný při dešifrování "
-"nebo. Pokud není, úschovna nebude dostupná. Např. pokud si vyberete "
-"šifrovací klíč na SmartCard, systém GPG si vyžádá jej i příslušný PIN při "
-"pokusu o otevření úschovny. <b>POZNÁMKA:</b> tento seznam zobrazuje pouze "
-"důvěryhodné klíče \"nejvyšší úrovně\".</p></body></html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:21
-msgid "Select encryption GPG key:"
-msgstr "Vyberte šifrovací klíč GPG:"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:78
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:24
-msgid ""
-"Unable to locate at least one <b>encrypting GPG key</b>. KDE Wallet needs "
-"such <b>encrypting key</b> to securely store passwords or other sensitive "
-"data on disk. If you still want to setup a GPG-based wallet, then cancel "
-"this wizard, set-up an <b>encrypting GPG key</b>, then retry this assistant. "
-"Otherwise, you may still click back, then choose a classic, blowfish "
-"encrypted file format on the previous page."
-msgstr ""
-"Nelze najít alespoň jeden <b>šifrovací klíč GPG</b>. KDE Wallet takový "
-"<b>šifrovací klíč</b> potřebuje pro bezpečné uložení hesel a dalších "
-"citlivých dat na disk. Pokud chcete stále nastavit úschovnu založenou na "
-"GPG, pak zrušte tohoto průvodce, nastavte <b>šifrovací klíč</b> a spusťte "
-"tohoto průvodce znovu. Jinak se můžete pořád vrátit a na předchozí stránce "
-"vybrat klasický formát souboru šifrovaného pomoci blowfish."
-
-#. i18n: file: kwalletwizardpageintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#. i18n: file: knewwalletdialogintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:27 rc.cpp:84
-msgid "The KDE Wallet System"
-msgstr "Systém úschovny pro KDE"
-
-#. i18n: file: kwalletwizardpageintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:30
-msgid ""
-"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
-"passwords and other personal information on disk in an encrypted file, "
-"preventing others from viewing the information.  This wizard will tell you "
-"about KWallet and help you configure it for the first time."
-msgstr ""
-"Vítejte v KWallet, Systému úschovny KDE. KWallet vám umožňuje ukládat hesla "
-"a ostatní osobní informace na disk v zašifrovaném souboru, čímž znemožní "
-"ostatním prohlížet si tyto údaje. Tento průvodce vám pomůže s prvním "
-"nastavením této aplikace."
-
-#. i18n: file: kwalletwizardpageintro.ui:69
-#. i18n: ectx: property (text), widget (QRadioButton, _basic)
-#: rc.cpp:33
-msgid "&Basic setup (recommended)"
-msgstr "Zák&ladní nastavení (doporučeno)"
-
-#. i18n: file: kwalletwizardpageintro.ui:79
-#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
-#: rc.cpp:36
-msgid "&Advanced setup"
-msgstr "Pokročilé n&atavení"
-
-#. i18n: file: kwalletwizardpageoptions.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:39
-msgid ""
-"The KDE Wallet system allows you to control the level of security of your "
-"personal data.  Some of these settings do impact usability.  While the "
-"default settings are generally acceptable for most users, you may wish to "
-"change some of them.  You may further tune these settings from the KWallet "
-"control module."
-msgstr ""
-"Systém úschovny KDE vám umožňuje kontrolovat úroveň zabezpečení vašich dat. "
-"Některá tato nastavení mají vliv na použitelnost; ačkoliv je výchozí "
-"konfigurace přijatelná pro většinu uživatelů, možná si budete přát některá "
-"změnit. Dále si můžete vyladit nastavení v ovládacím modulu úschovny."
-
-#. i18n: file: kwalletwizardpageoptions.ui:48
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: rc.cpp:42
-msgid "Automatically close idle wallets"
-msgstr "Automaticky uzavírat nečinné úschovny"
-
-#. i18n: file: kwalletwizardpageoptions.ui:55
-#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
-#: rc.cpp:45
-msgid "Store network passwords and local passwords in separate wallet files"
-msgstr "Ukládat síťová a lokální hesla do oddělených úschoven"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:48
-msgid ""
-"<html><head/><body><p>Various applications may attempt to use the KDE wallet "
-"to store passwords or other information such as web form data and cookies. "
-"If you would like these applications to use the wallet, you must enable it "
-"now and choose method for its encryption.</p><p>GPG method is more secure, "
-"but you must have configured at least one encrypting key on your system.</"
-"p><p>If you choose the classic format, be warned that the password you "
-"choose <span style=\" font-style:italic;\">cannot</span> be recovered if it "
-"is lost, and will allow anyone who knows it to obtain all the information "
-"contained in the wallet.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Různé aplikace mohou využívat úschovnu KDE k ukládání "
-"hesel nebo jiných informací jako jsou data webového formuláře nebo Cookies. "
-"Pokud si přejete, aby ji tyto aplikace směly využívat, musíte tuto možnost "
-"nyní povolit a vybrat metodu pro její šifrování.</p><p>Metoda GPG je "
-"bezpečnější, ale musíte mít v systému nastaven alespoň jeden šifrovací klíč."
-"</p><p>Pokud zvolíte klasický formát, vězte, že zvolené heslo <i>nelze "
-"obnovit</i>, pokud jej zapomenete nebo ztratíte a kdokoliv jej zjistí, bude "
-"mít přístup k vaší úschovně i datům v ní.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:30
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#. i18n: file: kwalletwizardpagepassword.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#: rc.cpp:51 rc.cpp:100
-msgid "Yes, I wish to use the KDE wallet to store my personal information."
-msgstr "Ano, přeji si, aby KDE úschovna uchovávala mé osobní údaje."
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:46
-#. i18n: ectx: property (title), widget (QGroupBox, _groupBox)
-#: rc.cpp:54
-msgid "What kind of encryption do you wish?"
-msgstr "Jaký druh šifrování si přejete použít?"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:55
-#. i18n: ectx: property (text), widget (QRadioButton, _radioGpg)
-#. i18n: file: knewwalletdialogintro.ui:73
-#. i18n: ectx: property (text), widget (QRadioButton, radioGpg)
-#: rc.cpp:57 rc.cpp:94
-msgid "Use GPG encryption, for better protection"
-msgstr "Pro lepší zabezpečení použijte šifrování GPG"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:68
-#. i18n: ectx: property (text), widget (QRadioButton, _radioBlowfish)
-#. i18n: file: knewwalletdialogintro.ui:66
-#. i18n: ectx: property (text), widget (QRadioButton, radioBlowfish)
-#: rc.cpp:60 rc.cpp:91
-msgid "Classic, blowfish encrypted file"
-msgstr "Klasický soubor šifrovaný blowfish"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:106
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#. i18n: file: kwalletwizardpagepassword.ui:88
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:63 rc.cpp:103
-msgid "Enter a new password:"
-msgstr "Zadejte nové heslo:"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:122
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#. i18n: file: kwalletwizardpagepassword.ui:104
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:66 rc.cpp:106
-msgid "Verify password:"
-msgstr "Ověřit heslo:"
-
-#. i18n: file: knewwalletdialoggpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:69
-msgid "Please select the signing key from the list below:"
-msgstr "Prosím, vyberte klíč pro podpis ze seznamu níže:"
-
-#. i18n: file: knewwalletdialoggpg.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:72
-msgid ""
-"<html><head/><body><p><span style=\" font-weight:600;\">NOTE:</span> this "
-"list shows only \"ultimate-level\" trusted keys</p></body></html>"
-msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">POZNÁMKA:</span> "
-"tento seznam zobrazuje pouze důvěryhodné klíče \"nejvyšší úrovně\"</p></"
-"body></html>"
-
-#. i18n: file: knewwalletdialoggpg.ui:59
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:75
-msgid "Name"
-msgstr "Jméno"
-
-#. i18n: file: knewwalletdialoggpg.ui:64
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:78
-msgid "E-Mail"
-msgstr "E-Mail"
-
-#. i18n: file: knewwalletdialoggpg.ui:69
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:81
-msgid "Key-ID"
-msgstr "ID klíče"
-
-#. i18n: file: knewwalletdialogintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, labelIntro)
-#: rc.cpp:88
-#, no-c-format
-msgid ""
-"<html><head/><body><p>The application '<span style=\" font-weight:600;\">%1</"
-"span>' has requested to open the KDE wallet. This is used to store sensitive "
-"data in a secure fashion. Please choose the new wallet's type below or click "
-"cancel to deny the application's request.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Aplikace  '<span style=\" font-weight:600;\">%1</"
-"span>' požaduje otevření úschovny KDE. Ta je používána pro bezpečné uložení "
-"citlivých dat. Prosím zadejte heslo pro tuto úschovnu, nebo stiskněte Zrušit "
-"pro odmítnutí tohoto požadavku.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagepassword.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:97
-msgid ""
-"Various applications may attempt to use the KDE wallet to store passwords or "
-"other information such as web form data and cookies.  If you would like "
-"these applications to use the wallet, you must enable it now and choose a "
-"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
-"and will allow anyone who knows it to obtain all the information contained "
-"in the wallet."
-msgstr ""
-"Různé aplikace mohou využívat úschovnu KDE k ukládání hesel, cookies nebo "
-"jiných informací. Pokud si přejete, aby ji tyto aplikace směly využívat, "
-"musíte tuto možnost nyní povolit a zadat heslo. Heslo, které zvolíte, "
-"<i>nelze obnovit</i>, pokud jej zapomenete nebo ztratíte a kdokoliv jej "
-"zjistí, bude mít přístup k vaší úschovně i datům v ní."
-
-#: kwalletwizard.cpp:54
-msgid "KWallet"
-msgstr "KWallet"
-
-#: kwalletwizard.cpp:278
-msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
-msgstr "<qt>Heslo je prázdné  <b>(VAROVÁNÍ: Není bezpečné)</b></qt>"
-
-#: kwalletwizard.cpp:280
-msgid "Passwords match."
-msgstr "Hesla se shodují."
-
-#: kwalletwizard.cpp:283
-msgid "Passwords do not match."
-msgstr "Hesla se neshodují."
-
-#: backend/backendpersisthandler.cpp:489
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-"<qt>Chyba při pokusu spustit OpenPGP při ukládání úschovny <b>%1</b>. Kód "
-"chyby je <b>%2</b>. Prosím, opravte nastavení systému a zkuste to znovu.</qt>"
-
-#: backend/backendpersisthandler.cpp:497
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Chyba při pokusu spustit OpenPGP při ukládání úschovny <b>%1</b>. "
-"Prosím, opravte nastavení systému a zkuste to znovu.</qt>"
-
-#: backend/backendpersisthandler.cpp:548
-msgid ""
-"<qt>Encryption error while attempting to save the wallet <b>%1</b>. Error "
-"code is <b>%2 (%3)</b>. Please fix your system configuration, then try again!"
-"</qt>"
-msgstr ""
-"<qt>Chyba během šifrování při ukládání úschovny <b>%1</b>. Kód chyby je <b>"
-"%2 (%3)</b>. Prosím, opravte nastavení systému a zkuste to znovu.</qt>"
-
-#: backend/backendpersisthandler.cpp:560
-msgid ""
-"<qt>File handling error while attempting to save the wallet <b>%1</b>. Error "
-"was <b>%2</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Chyba při zacházení se souborem při pokusu o uložení úschovny <b>%1</b>. "
-"Chyba byla <b>%2</b>. Prosím, opravte si nastavení systému a zkuste to znovu."
-"</qt>"
-
-#: backend/backendpersisthandler.cpp:573
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-"<qt>Chyba při pokusu spustit OpenPGP při otevírání úschovny <b>%1</b>. Kód "
-"chyby je <b>%2</b>. Prosím, opravte nastavení systému a zkuste to znovu.</qt>"
-
-#: backend/backendpersisthandler.cpp:591
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Chyba při pokusu spustit OpenPGP při otevírání úschovny <b>%1</b>. "
-"Prosím, opravte nastavení systému a zkuste to znovu.</qt>"
-
-#: backend/backendpersisthandler.cpp:601
-msgid "Retry"
-msgstr "Zkusit znovu"
-
-#: backend/backendpersisthandler.cpp:603
-msgid ""
-"<qt>Error when attempting to decrypt the wallet <b>%1</b> using GPG. If "
-"you're using a SmartCard, please ensure it's inserted then try again."
-"<br><br>GPG error was <b>%2</b></qt>"
-msgstr ""
-"<qt>Chyba při pokusu o dešifrování úschovny <b>%1</b> pomocí GPG. Pokud "
-"používáte SmartCard, ujistěte se prosím, že je zasunuta a zkuste to znova."
-"<br><br>Chyba GPG byla <b>%2</b></qt>"
-
-#: backend/backendpersisthandler.cpp:604
-msgid "kwalletd GPG backend"
-msgstr "Podpůrná vrstva GPG kwalletd"
-
-#: backend/backendpersisthandler.cpp:648
-msgid ""
-"<qt>Error when attempting to open the wallet <b>%1</b>. The wallet was "
-"encrypted using the GPG Key ID <b>%2</b> but this key was not found on your "
-"system.</qt>"
-msgstr ""
-"<qt>Chyba při pokusu o otevření úschovny <b>%1</b>. Tato byla zašifrována "
-"pomocí GPG klíče s ID <b>%2</b> ale tento klíč ve vašem systému nebyl "
-"nalezen.</qt>"
-
-#: backend/kwalletbackend.cc:236
-msgid "Already open."
-msgstr "Již otevřen."
-
-#: backend/kwalletbackend.cc:238
-msgid "Error opening file."
-msgstr "Chyba při otevírání souboru."
-
-#: backend/kwalletbackend.cc:240
-msgid "Not a wallet file."
-msgstr "Toto není soubor úschovny."
-
-#: backend/kwalletbackend.cc:242
-msgid "Unsupported file format revision."
-msgstr "Nepodporovaná revize formátu souborů."
-
-#: backend/kwalletbackend.cc:244
-msgid "Unknown encryption scheme."
-msgstr "Neznámé šifrovací schéma."
-
-#: backend/kwalletbackend.cc:246
-msgid "Corrupt file?"
-msgstr "Poškozený soubor?"
-
-#: backend/kwalletbackend.cc:248
-msgid "Error validating wallet integrity. Possibly corrupted."
-msgstr "Chyba při kontrole integrity úschovny; pravděpodobně je poškozená."
-
-#: backend/kwalletbackend.cc:252
-msgid "Read error - possibly incorrect password."
-msgstr "Chyba ve čtení - pravděpodobně chybné heslo."
-
-#: backend/kwalletbackend.cc:254
-msgid "Decryption error."
-msgstr "Chyba v dešifrování."
-
-#: backend/kwalletbackend.cc:423
-msgid ""
-"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
-msgstr ""
-"Selhala synchronizace úschovny <b>%1</b> na disk. Kód chyby:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Prosím, nahlaste chybu obsahující tuto informaci na bugs.kde."
-"org"

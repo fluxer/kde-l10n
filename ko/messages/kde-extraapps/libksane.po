@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libksane\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-11-05 07:06+0200\n"
+"POT-Creation-Date: 2021-03-28 14:18+0300\n"
 "PO-Revision-Date: 2013-01-17 00:36+0900\n"
 "Last-Translator: Park Shinjo <peremen@gmail.com>\n"
 "Language-Team: Korean <cho.sungjae@gmail.com>\n"
@@ -17,23 +17,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ksane_widget_private.cpp:371
-msgid "Separate color intensity tables"
-msgstr "색상 강도 테이블 분리하기"
+#: ksane_device_dialog.cpp:57
+msgid "Reload devices list"
+msgstr "장치 목록 새로 고침"
 
-#: ksane_widget_private.cpp:389
-msgid "Invert colors"
-msgstr "색 반전"
+#: ksane_device_dialog.cpp:70
+msgid ""
+"<html>The SANE (Scanner Access Now Easy) system could not find any device."
+"<br>Check that the scanner is plugged in and turned on<br>or check your "
+"systems scanner setup.<br>For details about SANE see the <a href='http://www."
+"sane-project.org/'>SANE homepage</a>.</html>"
+msgstr ""
+"<html>SANE (Scanner Access Now Easy) 시스템에서 장치를 찾을 수 없습니다.<br>"
+"스캐너가 연결되어 있고 켜져 있는지 확인하거나<br>시스템의 스캐너 설정을 확인"
+"하십시오.<br> SANE에 대한 정보를 보려면 <a href='http://www.sane-project."
+"org/'>SANE 홈페이지</a>를 참조하십시오.</html>"
 
-#: ksane_widget_private.cpp:1057
-msgctxt "This is compared to the option string returned by sane"
-msgid "Transparency"
-msgstr "투명"
+#: ksane_device_dialog.cpp:109
+msgid "Looking for devices. Please wait."
+msgstr "장치를 찾고 있습니다. 기다려 주십시오."
 
-#: ksane_widget_private.cpp:1059
-msgctxt "This is compared to the option string returned by sane"
-msgid "Negative"
-msgstr "역상"
+#: ksane_device_dialog.cpp:148
+msgid "Sorry. No devices found."
+msgstr "장치가 없습니다."
+
+#: ksane_device_dialog.cpp:158
+msgid "Found devices:"
+msgstr "찾은 장치:"
+
+#: widgets/labeled_entry.cpp:47
+msgctxt "Label for button to reset text in a KLineEdit"
+msgid "Reset"
+msgstr "초기화"
+
+#: widgets/labeled_entry.cpp:49
+msgctxt "Label for button to write text in a KLineEdit to sane"
+msgid "Set"
+msgstr "설정"
+
+#: widgets/labeled_gamma.cpp:47
+msgid "Brightness"
+msgstr "밝기"
+
+#: widgets/labeled_gamma.cpp:50
+msgid "Contrast"
+msgstr "명암"
+
+#: widgets/labeled_gamma.cpp:53
+msgid "Gamma"
+msgstr "감마"
+
+#: widgets/ksane_option_widget.cpp:59
+msgctxt "Label for a scanner option"
+msgid "%1:"
+msgstr "%1:"
 
 #: dummy-hplip.cpp:3
 msgid "None"
@@ -151,25 +188,67 @@ msgstr "정확함"
 msgid "???"
 msgstr "???"
 
-#: ksane_viewer.cpp:131 ksane_widget.cpp:142
-msgid "Zoom In"
-msgstr "확대"
+#: options/ksane_option.cpp:316
+msgctxt "SpinBox parameter unit"
+msgid " Pixel"
+msgid_plural " Pixels"
+msgstr[0] " 픽셀"
 
-#: ksane_viewer.cpp:134 ksane_widget.cpp:148
-msgid "Zoom Out"
-msgstr "축소"
+#: options/ksane_option.cpp:317
+msgctxt "SpinBox parameter unit"
+msgid " Bit"
+msgid_plural " Bits"
+msgstr[0] " 비트"
 
-#: ksane_viewer.cpp:137 ksane_widget.cpp:154
-msgid "Zoom to Selection"
-msgstr "선택 영역으로 크기 조절"
+#: options/ksane_option.cpp:318
+msgctxt "SpinBox parameter unit (Millimeter)"
+msgid " mm"
+msgstr " mm"
 
-#: ksane_viewer.cpp:140 ksane_widget.cpp:160
-msgid "Zoom to Fit"
-msgstr "맞추기"
+#: options/ksane_option.cpp:319
+msgctxt "SpinBox parameter unit (Dots Per Inch)"
+msgid " DPI"
+msgstr " DPI"
 
-#: ksane_viewer.cpp:143 ksane_widget.cpp:166
-msgid "Clear Selections"
-msgstr "선택 지우기"
+#: options/ksane_option.cpp:320
+msgctxt "SpinBox parameter unit (Percentage)"
+msgid " %"
+msgstr " %"
+
+#: options/ksane_option.cpp:321
+msgctxt "SpinBox parameter unit (Microseconds)"
+msgid " µs"
+msgstr " µs"
+
+#: options/ksane_option.cpp:331
+msgctxt "Double numbers. SpinBox parameter unit"
+msgid " Pixels"
+msgstr " 픽셀"
+
+#: options/ksane_option.cpp:332
+msgctxt "Double numbers. SpinBox parameter unit"
+msgid " Bits"
+msgstr " 비트"
+
+#: options/ksane_option.cpp:333
+msgctxt "Double numbers. SpinBox parameter unit (Millimeter)"
+msgid " mm"
+msgstr " mm"
+
+#: options/ksane_option.cpp:334
+msgctxt "Double numbers. SpinBox parameter unit (Dots Per Inch)"
+msgid " DPI"
+msgstr " DPI"
+
+#: options/ksane_option.cpp:335
+msgctxt "Double numbers. SpinBox parameter unit (Percentage)"
+msgid " %"
+msgstr " %"
+
+#: options/ksane_option.cpp:336
+msgctxt "Double numbers. SpinBox parameter unit (Microseconds)"
+msgid " µs"
+msgstr " µs"
 
 #: options/ksane_opt_combo.cpp:145
 msgid "%1 Pixel"
@@ -233,122 +312,43 @@ msgctxt "Parameter and Unit (Microseconds)"
 msgid "%1 µs"
 msgstr "%1µs"
 
-#: options/ksane_option.cpp:316
-msgctxt "SpinBox parameter unit"
-msgid " Pixel"
-msgid_plural " Pixels"
-msgstr[0] " 픽셀"
+#: ksane_widget_private.cpp:371
+msgid "Separate color intensity tables"
+msgstr "색상 강도 테이블 분리하기"
 
-#: options/ksane_option.cpp:317
-msgctxt "SpinBox parameter unit"
-msgid " Bit"
-msgid_plural " Bits"
-msgstr[0] " 비트"
+#: ksane_widget_private.cpp:389
+msgid "Invert colors"
+msgstr "색 반전"
 
-#: options/ksane_option.cpp:318
-msgctxt "SpinBox parameter unit (Millimeter)"
-msgid " mm"
-msgstr " mm"
+#: ksane_widget_private.cpp:1057
+msgctxt "This is compared to the option string returned by sane"
+msgid "Transparency"
+msgstr "투명"
 
-#: options/ksane_option.cpp:319
-msgctxt "SpinBox parameter unit (Dots Per Inch)"
-msgid " DPI"
-msgstr " DPI"
+#: ksane_widget_private.cpp:1059
+msgctxt "This is compared to the option string returned by sane"
+msgid "Negative"
+msgstr "역상"
 
-#: options/ksane_option.cpp:320
-msgctxt "SpinBox parameter unit (Percentage)"
-msgid " %"
-msgstr " %"
+#: ksane_viewer.cpp:131 ksane_widget.cpp:142
+msgid "Zoom In"
+msgstr "확대"
 
-#: options/ksane_option.cpp:321
-msgctxt "SpinBox parameter unit (Microseconds)"
-msgid " µs"
-msgstr " µs"
+#: ksane_viewer.cpp:134 ksane_widget.cpp:148
+msgid "Zoom Out"
+msgstr "축소"
 
-#: options/ksane_option.cpp:331
-msgctxt "Double numbers. SpinBox parameter unit"
-msgid " Pixels"
-msgstr " 픽셀"
+#: ksane_viewer.cpp:137 ksane_widget.cpp:154
+msgid "Zoom to Selection"
+msgstr "선택 영역으로 크기 조절"
 
-#: options/ksane_option.cpp:332
-msgctxt "Double numbers. SpinBox parameter unit"
-msgid " Bits"
-msgstr " 비트"
+#: ksane_viewer.cpp:140 ksane_widget.cpp:160
+msgid "Zoom to Fit"
+msgstr "맞추기"
 
-#: options/ksane_option.cpp:333
-msgctxt "Double numbers. SpinBox parameter unit (Millimeter)"
-msgid " mm"
-msgstr " mm"
-
-#: options/ksane_option.cpp:334
-msgctxt "Double numbers. SpinBox parameter unit (Dots Per Inch)"
-msgid " DPI"
-msgstr " DPI"
-
-#: options/ksane_option.cpp:335
-msgctxt "Double numbers. SpinBox parameter unit (Percentage)"
-msgid " %"
-msgstr " %"
-
-#: options/ksane_option.cpp:336
-msgctxt "Double numbers. SpinBox parameter unit (Microseconds)"
-msgid " µs"
-msgstr " µs"
-
-#: widgets/ksane_option_widget.cpp:59
-msgctxt "Label for a scanner option"
-msgid "%1:"
-msgstr "%1:"
-
-#: widgets/labeled_gamma.cpp:47
-msgid "Brightness"
-msgstr "밝기"
-
-#: widgets/labeled_gamma.cpp:50
-msgid "Contrast"
-msgstr "명암"
-
-#: widgets/labeled_gamma.cpp:53
-msgid "Gamma"
-msgstr "감마"
-
-#: widgets/labeled_entry.cpp:47
-msgctxt "Label for button to reset text in a KLineEdit"
-msgid "Reset"
-msgstr "초기화"
-
-#: widgets/labeled_entry.cpp:49
-msgctxt "Label for button to write text in a KLineEdit to sane"
-msgid "Set"
-msgstr "설정"
-
-#: ksane_device_dialog.cpp:57
-msgid "Reload devices list"
-msgstr "장치 목록 새로 고침"
-
-#: ksane_device_dialog.cpp:70
-msgid ""
-"<html>The SANE (Scanner Access Now Easy) system could not find any device."
-"<br>Check that the scanner is plugged in and turned on<br>or check your "
-"systems scanner setup.<br>For details about SANE see the <a href='http://www."
-"sane-project.org/'>SANE homepage</a>.</html>"
-msgstr ""
-"<html>SANE (Scanner Access Now Easy) 시스템에서 장치를 찾을 수 없습니다.<br>"
-"스캐너가 연결되어 있고 켜져 있는지 확인하거나<br>시스템의 스캐너 설정을 확인"
-"하십시오.<br> SANE에 대한 정보를 보려면 <a href='http://www.sane-project."
-"org/'>SANE 홈페이지</a>를 참조하십시오.</html>"
-
-#: ksane_device_dialog.cpp:109
-msgid "Looking for devices. Please wait."
-msgstr "장치를 찾고 있습니다. 기다려 주십시오."
-
-#: ksane_device_dialog.cpp:148
-msgid "Sorry. No devices found."
-msgstr "장치가 없습니다."
-
-#: ksane_device_dialog.cpp:158
-msgid "Found devices:"
-msgstr "찾은 장치:"
+#: ksane_viewer.cpp:143 ksane_widget.cpp:166
+msgid "Clear Selections"
+msgstr "선택 지우기"
 
 #: ksane_widget.cpp:117
 msgid "Waiting for the scan to start."

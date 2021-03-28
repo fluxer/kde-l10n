@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletd\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2014-07-06 21:42+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -19,52 +19,354 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: knewwalletdialog.cpp:64
-msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. This is used "
-"to store sensitive data in a secure fashion. Please choose the new wallet's "
-"type below or click cancel to deny the application's request.</qt>"
-msgstr ""
-"<qt>KDE will en nieg Knipp mit den Naam \"<b>%1</b>\" opstellen. Se warrt "
-"för't Sekern vun schuulsam Daten op sekere Oort bruukt. Bitte söök den Typ "
-"för disse Knipp ut oder klick op Afbreken, wenn Du dat Programm dat nich "
-"verlöven wullt, wat dat de Knipp bruukt.</qt>"
+#: backend/kwalletbackend.cc:233
+msgid "Already open."
+msgstr "Is al opmaakt."
 
-#: knewwalletdialog.cpp:66
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. This is used to store sensitive data in a secure fashion. "
-"Please choose the new wallet's type below or click cancel to deny the "
-"application's request.</qt>"
-msgstr ""
-"<qt>Dat Programm \"<b>%1</b>\" will en nieg Knipp mit den Naam \"<b>%2</b>\" "
-"opstellen. Se warrt för't Sekern vun schuulsam Daten op sekere Oort bruukt. "
-"Bitte söök den Typ för disse Knipp ut oder klick op Afbreken, wenn Du dat "
-"Programm dat nich verlöven wullt, wat dat de Knipp bruukt.</qt>"
+#: backend/kwalletbackend.cc:235
+msgid "Error opening file."
+msgstr "Fehler bi't Opmaken vun de Datei."
 
-#: knewwalletdialog.cpp:127 knewwalletdialog.cpp:133 kwalletwizard.cpp:162
-#: kwalletwizard.cpp:166
-msgid ""
-"The QGpgME library failed to initialize for the OpenPGP protocol. Please "
-"check your system's configuration then try again."
-msgstr ""
-"De QGpgME-Bibliotheek kunn dat OpenPGP-Protokoll nich torechtmaken. Prööv "
-"bitte Dien Systeeminstellen un versöök dat denn nochmaal."
+#: backend/kwalletbackend.cc:237
+msgid "Not a wallet file."
+msgstr "Keen Knippdatei."
 
-#: knewwalletdialog.cpp:153
-msgid ""
-"Seems that your system has no keys suitable for encryption. Please set-up at "
-"least an encryption key, then try again."
-msgstr ""
-"As dat lett gifft dat op Dien Reekner keen Slötels, de sik för't Verslöteln "
-"bruken laat. Richt bitte tominnst een Verslötel-Slötel in un versöök dat "
-"denn nochmaal."
+#: backend/kwalletbackend.cc:239
+msgid "Unsupported file format revision."
+msgstr "Disse Verschoon vun't Dateiformaat warrt nich ünnerstütt."
 
-#: main.cpp:151 main.cpp:152 kwalletd.cpp:424 kwalletd.cpp:538 kwalletd.cpp:627
-#: kwalletd.cpp:726 kwalletd.cpp:829 kwalletd.cpp:848 kwalletd.cpp:857
-#: kwalletd.cpp:862 kwalletd.cpp:1378
+#: backend/kwalletbackend.cc:241
+msgid "Unknown encryption scheme."
+msgstr "Verslötelmetood is nich begäng."
+
+#: backend/kwalletbackend.cc:243
+msgid "Corrupt file?"
+msgstr "Datei schaadhaftig?"
+
+#: backend/kwalletbackend.cc:245
+msgid "Error validating wallet integrity. Possibly corrupted."
+msgstr ""
+"Fehler bi't Pröven vun de Knipp ehr Integriteet, villicht is se schaadhaftig."
+
+#: backend/kwalletbackend.cc:249
+msgid "Read error - possibly incorrect password."
+msgstr "Fehler bi't Lesen - dat Passwoort mag leeg wesen."
+
+#: backend/kwalletbackend.cc:251
+msgid "Decryption error."
+msgstr "Fehler bi't Opslöteln."
+
+#: backend/kwalletbackend.cc:409
+msgid ""
+"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
+msgstr ""
+"Fehler bi't Synkroniseren vun de Knipp <b>%1</b> mit de Fastplaat-Datei. "
+"Fehlerkoden:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Stüer bugs.kde.org bitte en Fehlerbericht mit disse "
+"Informatschonen dor binnen to."
+
+#: kwalletwizard.cpp:40
+msgid "KWallet"
+msgstr "Knipp"
+
+#: kwalletwizard.cpp:149
+msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
+msgstr ""
+"<qt>Passwoort is leddig.  <b>(Wohrscho: Dat is böös riskant.)</b>.</qt>"
+
+#: kwalletwizard.cpp:151
+msgid "Passwords match."
+msgstr "De Passwöör sünd liek."
+
+#: kwalletwizard.cpp:154
+msgid "Passwords do not match."
+msgstr "De Passwöör sünd nich liek."
+
+#. i18n: file: kwalletwizardpageintro.ui:17
+#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:3
+msgid "The KDE Wallet System"
+msgstr "Dat Knippen-Systeem vun KDE"
+
+#. i18n: file: kwalletwizardpageintro.ui:30
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:6
+msgid ""
+"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
+"passwords and other personal information on disk in an encrypted file, "
+"preventing others from viewing the information.  This wizard will tell you "
+"about KWallet and help you configure it for the first time."
+msgstr ""
+"Willkamen bi KWallet, dat Knippen-Systeem vun KDE. KWallet sekert Dien "
+"Passwöör un anner persöönliche Daten in en verslötelte Datei op de "
+"Fastplaat, so dat anner Lüüd de Daten nich ankieken köönt. Disse Hölper "
+"verkloort Di KWallet un föhrt Di bi't eerste Inrichten."
+
+#. i18n: file: kwalletwizardpageintro.ui:69
+#. i18n: ectx: property (text), widget (QRadioButton, _basic)
+#: rc.cpp:9
+msgid "&Basic setup (recommended)"
+msgstr "&Grundinstellen (anraadt)"
+
+#. i18n: file: kwalletwizardpageintro.ui:79
+#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
+#: rc.cpp:12
+msgid "&Advanced setup"
+msgstr "&Verwiederte Instellen"
+
+#. i18n: file: kbetterthankdialogbase.ui:50
+#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
+#: rc.cpp:15
+msgid "Allow &Once"
+msgstr "&Eenmaal verlöven"
+
+#. i18n: file: kbetterthankdialogbase.ui:60
+#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
+#: rc.cpp:18
+msgid "Allow &Always"
+msgstr "&Jümmers verlöven"
+
+#. i18n: file: kbetterthankdialogbase.ui:67
+#. i18n: ectx: property (text), widget (KPushButton, _deny)
+#: rc.cpp:21
+msgid "&Deny"
+msgstr "&Torüchwiesen"
+
+#. i18n: file: kbetterthankdialogbase.ui:74
+#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
+#: rc.cpp:24
+msgid "Deny &Forever"
+msgstr "Jü&mmers torüchwiesen"
+
+#. i18n: file: kwalletwizardpageoptions.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:27
+msgid ""
+"The KDE Wallet system allows you to control the level of security of your "
+"personal data.  Some of these settings do impact usability.  While the "
+"default settings are generally acceptable for most users, you may wish to "
+"change some of them.  You may further tune these settings from the KWallet "
+"control module."
+msgstr ""
+"Du kannst en Reeg Sekerheitstopen för Dien Daten binnen dat KDE-"
+"Knippensysteem fastleggen. Mit en poor vun de Instellen laat sik de Knippen "
+"ok wat sworer bedenen. De Standard-Instellen sünd för de mehrsten Brukers "
+"goot, man villicht wullt Du dor liekers en poor vun ännern. Binnen dat "
+"Kuntrullmoduul \"KDE-Knipp\" gifft dat ok noch anner Instellen."
+
+#. i18n: file: kwalletwizardpageoptions.ui:48
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: rc.cpp:30
+msgid "Automatically close idle wallets"
+msgstr "Nich bruukte Knippen automaatsch tomaken"
+
+#. i18n: file: kwalletwizardpageoptions.ui:55
+#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
+#: rc.cpp:33
+msgid "Store network passwords and local passwords in separate wallet files"
+msgstr "Nettwark-Passwöör un lokale Passwöör binnen verscheden Dateien sekern"
+
+#. i18n: file: kwalletwizardpagepassword.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:36
+msgid ""
+"Various applications may attempt to use the KDE wallet to store passwords or "
+"other information such as web form data and cookies.  If you would like "
+"these applications to use the wallet, you must enable it now and choose a "
+"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
+"and will allow anyone who knows it to obtain all the information contained "
+"in the wallet."
+msgstr ""
+"En hele Reeg Programmen bruukt de Knipp för't Sekern vun Passwöör oder anner "
+"Informatschonen as Formulordaten un Kookjes. Wenn Du wullt, dat disse "
+"Programmen de Knipp bruukt, muttst Du ehr nu anmaken un en Passwoort "
+"utsöken. Dat Passwoort lett sik <i>nich wedderherstellen</i>, wenn Du dat "
+"vergeten deist. All Lüüd, de dat kennt, köönt sik all Daten binnen de Knipp "
+"ankieken."
+
+#. i18n: file: kwalletwizardpagepassword.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
+#: rc.cpp:39
+msgid "Yes, I wish to use the KDE wallet to store my personal information."
+msgstr ""
+"Jo, ik will de KDE-Knipp bruken un mien persöönliche Daten dor binnen sekern."
+
+#. i18n: file: kwalletwizardpagepassword.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:42
+msgid "Enter a new password:"
+msgstr "Nieg Passwoort ingeven:"
+
+#. i18n: file: kwalletwizardpagepassword.ui:104
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:45
+msgid "Verify password:"
+msgstr "Passwoort wedderhalen:"
+
+#. i18n: file: kwalletwizardpageexplanation.ui:17
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:48
+msgid ""
+"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
+"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
+"The data is only written in the encrypted form of your choice - blowfish "
+"algorithm with your password as the key. When a wallet is opened, the wallet "
+"manager application will launch and display an icon in the system tray. You "
+"can use this application to manage all of your wallets. It even permits you "
+"to drag wallets and wallet contents, allowing you to easily copy a wallet to "
+"a remote system.</p></body></html>"
+msgstr ""
+
+#: kwalletd.cpp:412 kwalletd.cpp:502 kwalletd.cpp:567 kwalletd.cpp:663
+#: kwalletd.cpp:765 kwalletd.cpp:777 kwalletd.cpp:786 kwalletd.cpp:791
+#: kwalletd.cpp:1304 main.cpp:151 main.cpp:152
 msgid "KDE Wallet Service"
 msgstr "KDE-Deenst för Knippen"
+
+#: kwalletd.cpp:495
+msgid ""
+"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
+"password for this wallet below.</qt>"
+msgstr ""
+"<qt>KDE will de Knipp <b>%1</b> opmaken. Bitte giff nerrn dat Passwoort för "
+"disse Knipp in.</qt>"
+
+#: kwalletd.cpp:497
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
+"b>'. Please enter the password for this wallet below.</qt>"
+msgstr ""
+"<qt>Dat Programm <b>%1</b> will de Knipp <b>%2</b> opmaken. Bitte giff nerrn "
+"dat Passwoort för disse Knipp in.</qt>"
+
+#: kwalletd.cpp:501
+msgid "&Open"
+msgstr "&Opmaken"
+
+#: kwalletd.cpp:511
+msgctxt "Text of a button to ignore the open-wallet notification"
+msgid "Ignore"
+msgstr "Övergahn"
+
+#: kwalletd.cpp:513
+msgid "<b>KDE</b> has requested to open a wallet (%1)."
+msgstr "<b>KDE</b> will en Knipp opmaken (%1)."
+
+#: kwalletd.cpp:516
+msgctxt ""
+"Text of a button for switching to the (unnamed) application requesting a "
+"password"
+msgid "Switch there"
+msgstr "Hierhen wesseln"
+
+#: kwalletd.cpp:518
+msgid "<b>%1</b> has requested to open a wallet (%2)."
+msgstr "<b>%1</b> will en Knipp opmaken (%2)."
+
+#: kwalletd.cpp:521
+msgctxt ""
+"Text of a button for switching to the application requesting a password"
+msgid "Switch to %1"
+msgstr "Wesseln na %1"
+
+#: kwalletd.cpp:536 kwalletd.cpp:576
+msgid ""
+"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
+"%2: %3)</qt>"
+msgstr ""
+"<qt>Fehler bi't Opmaken vun de Knipp <b>%1</b>. Versöök dat nochmaal. <br /"
+">(Fehlerkode %2: %3)</qt>"
+
+#: kwalletd.cpp:556
+msgid ""
+"KDE has requested to open the wallet. This is used to store sensitive data "
+"in a secure fashion. Please enter a password to use with this wallet or "
+"click cancel to deny the application's request."
+msgstr ""
+"KDE will de Knipp opmaken. Se warrt för't Sekern vun schuulsam Daten op "
+"sekere Oort bruukt. Bitte giff dat Passwoort för disse Knipp in oder klick "
+"op Afbreken, wenn Du dat Programm dat nich verlöven wullt, wat dat de Knipp "
+"bruukt."
+
+#: kwalletd.cpp:558
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
+"is used to store sensitive data in a secure fashion. Please enter a password "
+"to use with this wallet or click cancel to deny the application's request.</"
+"qt>"
+msgstr ""
+"<qt>Dat Programm <b>%1</b> will de Knipp opmaken. Se wohrt schuulsam Daten "
+"op sekere Oort. Bitte giff dat Passwoort för disse Knipp in oder klick op "
+"\"Afbreken\", wenn Du ehr dat Programm dat nich verlöven wullt, wat dat de "
+"Knipp bruukt.</qt>"
+
+#: kwalletd.cpp:562
+msgid ""
+"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
+"choose a password for this wallet, or cancel to deny the application's "
+"request.</qt>"
+msgstr ""
+"<qt>KDE will en niege Knipp mit den Naam <b>%1</b> opstellen. Bitte söök en "
+"Passwoort för disse Knipp ut, oder klick op \"Afbreken\", wenn Du dat nich "
+"wullt.</qt>"
+
+#: kwalletd.cpp:564
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
+"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
+"application's request.</qt>"
+msgstr ""
+"<qt>Dat Programm <b>%1</b> will en niege Knipp mit den Naam <b>%2</b> "
+"opstellen. Bitte söök en Passwoort för disse Knipp ut, oder klick op "
+"\"Afbreken\", wenn Du dat nich wullt.</qt>"
+
+#: kwalletd.cpp:568
+msgid "C&reate"
+msgstr "&Opstellen"
+
+#: kwalletd.cpp:665
+msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
+msgstr "<qt>KDE will op de opmaakte Knipp <b>%1</b> togriepen.</qt>"
+
+#: kwalletd.cpp:667
+msgid ""
+"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
+"%2</b>'.</qt>"
+msgstr ""
+"<qt>Dat Programm <b>%1</b> will op de opmaakte Knipp <b>%2</b> togriepen.</"
+"qt>"
+
+#: kwalletd.cpp:765
+msgid ""
+"Unable to open wallet. The wallet must be opened in order to change the "
+"password."
+msgstr ""
+"Knipp lett sik nich opmaken. De Knipp mutt opmaakt wesen, wenn Du dat "
+"Passwoort ännern wullt."
+
+#: kwalletd.cpp:776
+msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
+msgstr "<qt>Söök bitte en nieg Passwoort för de Knipp <b>%1</b> ut.</qt>"
+
+#: kwalletd.cpp:786
+msgid "Error re-encrypting the wallet. Password was not changed."
+msgstr "Fehler bi't niege Verslöteln vun de Knipp. Passwoort wöör nich ännert."
+
+#: kwalletd.cpp:791
+msgid "Error reopening the wallet. Data may be lost."
+msgstr ""
+"Fehler bi't Wedderopmaken vun de Knipp. Villicht geev dat ok en Datenverlust."
+
+#: kwalletd.cpp:1304
+msgid ""
+"There have been repeated failed attempts to gain access to a wallet. An "
+"application may be misbehaving."
+msgstr ""
+"Dat geev en Reeg fehlslaan Versöken bi't Opmaken vun en Knipp. Villicht deit "
+"en Programm nich, wat dat schall."
 
 #: main.cpp:153
 msgid ""
@@ -95,602 +397,3 @@ msgstr "Thiago Maceira"
 #: main.cpp:156
 msgid "D-Bus Interface"
 msgstr "D-Bus-Koppelsteed"
-
-#: main.cpp:157
-msgid "Valentin Rusu"
-msgstr "Valentin Rusu"
-
-#: main.cpp:157
-msgid "GPG backend support"
-msgstr " Ünnerstütten för't GPG-Hülpprogramm"
-
-#: kwalletd.cpp:531
-msgid ""
-"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
-"password for this wallet below.</qt>"
-msgstr ""
-"<qt>KDE will de Knipp <b>%1</b> opmaken. Bitte giff nerrn dat Passwoort för "
-"disse Knipp in.</qt>"
-
-#: kwalletd.cpp:533
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
-"b>'. Please enter the password for this wallet below.</qt>"
-msgstr ""
-"<qt>Dat Programm <b>%1</b> will de Knipp <b>%2</b> opmaken. Bitte giff nerrn "
-"dat Passwoort för disse Knipp in.</qt>"
-
-#: kwalletd.cpp:537
-msgid "&Open"
-msgstr "&Opmaken"
-
-#: kwalletd.cpp:547
-msgctxt "Text of a button to ignore the open-wallet notification"
-msgid "Ignore"
-msgstr "Övergahn"
-
-#: kwalletd.cpp:549
-msgid "<b>KDE</b> has requested to open a wallet (%1)."
-msgstr "<b>KDE</b> will en Knipp opmaken (%1)."
-
-#: kwalletd.cpp:552
-msgctxt ""
-"Text of a button for switching to the (unnamed) application requesting a "
-"password"
-msgid "Switch there"
-msgstr "Hierhen wesseln"
-
-#: kwalletd.cpp:554
-msgid "<b>%1</b> has requested to open a wallet (%2)."
-msgstr "<b>%1</b> will en Knipp opmaken (%2)."
-
-#: kwalletd.cpp:557
-msgctxt ""
-"Text of a button for switching to the application requesting a password"
-msgid "Switch to %1"
-msgstr "Wesseln na %1"
-
-#: kwalletd.cpp:572 kwalletd.cpp:636
-msgid ""
-"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
-"%2: %3)</qt>"
-msgstr ""
-"<qt>Fehler bi't Opmaken vun de Knipp <b>%1</b>. Versöök dat nochmaal. <br /"
-">(Fehlerkode %2: %3)</qt>"
-
-#: kwalletd.cpp:616
-msgid ""
-"KDE has requested to open the wallet. This is used to store sensitive data "
-"in a secure fashion. Please enter a password to use with this wallet or "
-"click cancel to deny the application's request."
-msgstr ""
-"KDE will de Knipp opmaken. Se warrt för't Sekern vun schuulsam Daten op "
-"sekere Oort bruukt. Bitte giff dat Passwoort för disse Knipp in oder klick "
-"op Afbreken, wenn Du dat Programm dat nich verlöven wullt, wat dat de Knipp "
-"bruukt."
-
-#: kwalletd.cpp:618
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
-"is used to store sensitive data in a secure fashion. Please enter a password "
-"to use with this wallet or click cancel to deny the application's request.</"
-"qt>"
-msgstr ""
-"<qt>Dat Programm <b>%1</b> will de Knipp opmaken. Se wohrt schuulsam Daten "
-"op sekere Oort. Bitte giff dat Passwoort för disse Knipp in oder klick op "
-"\"Afbreken\", wenn Du ehr dat Programm dat nich verlöven wullt, wat dat de "
-"Knipp bruukt.</qt>"
-
-#: kwalletd.cpp:622
-msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
-"choose a password for this wallet, or cancel to deny the application's "
-"request.</qt>"
-msgstr ""
-"<qt>KDE will en niege Knipp mit den Naam <b>%1</b> opstellen. Bitte söök en "
-"Passwoort för disse Knipp ut, oder klick op \"Afbreken\", wenn Du dat nich "
-"wullt.</qt>"
-
-#: kwalletd.cpp:624
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
-"application's request.</qt>"
-msgstr ""
-"<qt>Dat Programm <b>%1</b> will en niege Knipp mit den Naam <b>%2</b> "
-"opstellen. Bitte söök en Passwoort för disse Knipp ut, oder klick op "
-"\"Afbreken\", wenn Du dat nich wullt.</qt>"
-
-#: kwalletd.cpp:628
-msgid "C&reate"
-msgstr "&Opstellen"
-
-#: kwalletd.cpp:728
-msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
-msgstr "<qt>KDE will op de opmaakte Knipp <b>%1</b> togriepen.</qt>"
-
-#: kwalletd.cpp:730
-msgid ""
-"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
-"%2</b>'.</qt>"
-msgstr ""
-"<qt>Dat Programm <b>%1</b> will op de opmaakte Knipp <b>%2</b> togriepen.</"
-"qt>"
-
-#: kwalletd.cpp:829
-msgid ""
-"Unable to open wallet. The wallet must be opened in order to change the "
-"password."
-msgstr ""
-"Knipp lett sik nich opmaken. De Knipp mutt opmaakt wesen, wenn Du dat "
-"Passwoort ännern wullt."
-
-#: kwalletd.cpp:843
-msgid ""
-"<qt>The <b>%1</b> wallet is encrypted using GPG key <b>%2</b>. Please use "
-"<b>GPG</b> tools (such as <b>kleopatra</b>) to change the passphrase "
-"associated to that key.</qt>"
-msgstr ""
-"<qt>De Knipp <b>%1</b> is mit den GPG-Slötel <b>%2</b> verslötelt. Bruuk "
-"bitte de <b>GPG</b>-Warktüüch (so as <b>kleopatra</b>), wenn Du den Slötel "
-"sien Slötelsatz ännern wullt.</qt>"
-
-#: kwalletd.cpp:847
-msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
-msgstr "<qt>Söök bitte en nieg Passwoort för de Knipp <b>%1</b> ut.</qt>"
-
-#: kwalletd.cpp:857
-msgid "Error re-encrypting the wallet. Password was not changed."
-msgstr "Fehler bi't niege Verslöteln vun de Knipp. Passwoort wöör nich ännert."
-
-#: kwalletd.cpp:862
-msgid "Error reopening the wallet. Data may be lost."
-msgstr ""
-"Fehler bi't Wedderopmaken vun de Knipp. Villicht geev dat ok en Datenverlust."
-
-#: kwalletd.cpp:1378
-msgid ""
-"There have been repeated failed attempts to gain access to a wallet. An "
-"application may be misbehaving."
-msgstr ""
-"Dat geev en Reeg fehlslaan Versöken bi't Opmaken vun en Knipp. Villicht deit "
-"en Programm nich, wat dat schall."
-
-#. i18n: file: kbetterthankdialogbase.ui:50
-#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
-#: rc.cpp:3
-msgid "Allow &Once"
-msgstr "&Eenmaal verlöven"
-
-#. i18n: file: kbetterthankdialogbase.ui:60
-#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
-#: rc.cpp:6
-msgid "Allow &Always"
-msgstr "&Jümmers verlöven"
-
-#. i18n: file: kbetterthankdialogbase.ui:67
-#. i18n: ectx: property (text), widget (KPushButton, _deny)
-#: rc.cpp:9
-msgid "&Deny"
-msgstr "&Torüchwiesen"
-
-#. i18n: file: kbetterthankdialogbase.ui:74
-#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
-#: rc.cpp:12
-msgid "Deny &Forever"
-msgstr "Jü&mmers torüchwiesen"
-
-#. i18n: file: kwalletwizardpageexplanation.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:15
-msgid ""
-"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
-"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
-"The data is only written in the encrypted form of your choice - blowfish "
-"algorithm with your password as the key or using a GPG encryption key. When "
-"a wallet is opened, the wallet manager application will launch and display "
-"an icon in the system tray. You can use this application to manage all of "
-"your wallets. It even permits you to drag wallets and wallet contents, "
-"allowing you to easily copy a wallet to a remote system.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Dat KDE-Knippensysteem sekert Dien Daten in en <span "
-"style=\" font-style:italic;\">Knipp</span>, dat is en Datei op Dien lokale "
-"Fastplaat. De Daten warrt as vun Di utsöcht verslötelt - mit den Blowfish-"
-"Algoritmus mit Dien Passwoort as Slötel oder mit en GPG-Slötel. Wenn en "
-"Knipp opmaakt warrt, start de Knippenpleger un en Lüttbild dukt binnen den "
-"Systeemafsnitt op. Mit den Knippenpleger kannst Du all Dien Knippen plegen. "
-"Du kannst ok Knippen un ehr Inholden hen- un hertrecken, dat kannst Du a.B. "
-"bruken, wenn Du eenfach en Knipp na en anner Reekner koperen wullt.</p></"
-"body></html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:18
-msgid ""
-"<html><head/><body><p>The GPG-based wallet use a GPG encryption key to "
-"securely encrypt data on disk. The key must be available when decrypting is "
-"needed or your wallet will not be accessible. For example, if you choose a "
-"SmartCard-based encryption key, the GPG system will prompt you to enter it "
-"and its associated PIN when attempting to open the wallet. <b>NOTE:</b> only "
-"\"ultimate-level\" trusted keys are shown in this list.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>De GPG-baseert Knipp bruukt en GPG-Verslötel-Slötel "
-"för't sekere Verslöteln vun Daten op de Fastplaat. De Slötel mutt bi't "
-"Opslöteln verföögbor wesen, anners kannst Du op den Inholt nich togriepen. "
-"Wenn Du a.B. en smartkoort-baseert Slötel utsöchst, fraagt Di dat GPG-"
-"Systeem na de Koort un de tohören PIN, wenn de Knipp opmaakt warrn schall. "
-"<b>Beacht:</b>  Disse List wiest bloots „büterst troot“ Slötels.</p></body></"
-"html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:21
-msgid "Select encryption GPG key:"
-msgstr "GPG-Verslötelslötel utsöken:"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:78
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:24
-msgid ""
-"Unable to locate at least one <b>encrypting GPG key</b>. KDE Wallet needs "
-"such <b>encrypting key</b> to securely store passwords or other sensitive "
-"data on disk. If you still want to setup a GPG-based wallet, then cancel "
-"this wizard, set-up an <b>encrypting GPG key</b>, then retry this assistant. "
-"Otherwise, you may still click back, then choose a classic, blowfish "
-"encrypted file format on the previous page."
-msgstr ""
-"Dor lett sik nich een <b>GPG-Verslötelslötel</b> finnen. Dat Knippensysteem "
-"bruukt so een <b>Verslötel-Slötel</b> för't sekere Wohren vun Passwöör un "
-"anner schuulsam Daten op de Fastplaat. Wenn Du jümmers noch en GPG-baseert "
-"Knipp inrichten wullt, breek dissen Hölper af, maak Di en <b>Verslötel-"
-"Slötel</b> un start dissen Hölper nieg. Du kannst ok torüchgahn un dat "
-"klass'sche, blowfish-baseerte Dateiformaat op de verleden Siet utsöken."
-
-#. i18n: file: kwalletwizardpageintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#. i18n: file: knewwalletdialogintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:27 rc.cpp:84
-msgid "The KDE Wallet System"
-msgstr "Dat Knippen-Systeem vun KDE"
-
-#. i18n: file: kwalletwizardpageintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:30
-msgid ""
-"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
-"passwords and other personal information on disk in an encrypted file, "
-"preventing others from viewing the information.  This wizard will tell you "
-"about KWallet and help you configure it for the first time."
-msgstr ""
-"Willkamen bi KWallet, dat Knippen-Systeem vun KDE. KWallet sekert Dien "
-"Passwöör un anner persöönliche Daten in en verslötelte Datei op de "
-"Fastplaat, so dat anner Lüüd de Daten nich ankieken köönt. Disse Hölper "
-"verkloort Di KWallet un föhrt Di bi't eerste Inrichten."
-
-#. i18n: file: kwalletwizardpageintro.ui:69
-#. i18n: ectx: property (text), widget (QRadioButton, _basic)
-#: rc.cpp:33
-msgid "&Basic setup (recommended)"
-msgstr "&Grundinstellen (anraadt)"
-
-#. i18n: file: kwalletwizardpageintro.ui:79
-#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
-#: rc.cpp:36
-msgid "&Advanced setup"
-msgstr "&Verwiederte Instellen"
-
-#. i18n: file: kwalletwizardpageoptions.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:39
-msgid ""
-"The KDE Wallet system allows you to control the level of security of your "
-"personal data.  Some of these settings do impact usability.  While the "
-"default settings are generally acceptable for most users, you may wish to "
-"change some of them.  You may further tune these settings from the KWallet "
-"control module."
-msgstr ""
-"Du kannst en Reeg Sekerheitstopen för Dien Daten binnen dat KDE-"
-"Knippensysteem fastleggen. Mit en poor vun de Instellen laat sik de Knippen "
-"ok wat sworer bedenen. De Standard-Instellen sünd för de mehrsten Brukers "
-"goot, man villicht wullt Du dor liekers en poor vun ännern. Binnen dat "
-"Kuntrullmoduul \"KDE-Knipp\" gifft dat ok noch anner Instellen."
-
-#. i18n: file: kwalletwizardpageoptions.ui:48
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: rc.cpp:42
-msgid "Automatically close idle wallets"
-msgstr "Nich bruukte Knippen automaatsch tomaken"
-
-#. i18n: file: kwalletwizardpageoptions.ui:55
-#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
-#: rc.cpp:45
-msgid "Store network passwords and local passwords in separate wallet files"
-msgstr "Nettwark-Passwöör un lokale Passwöör binnen verscheden Dateien sekern"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:48
-msgid ""
-"<html><head/><body><p>Various applications may attempt to use the KDE wallet "
-"to store passwords or other information such as web form data and cookies. "
-"If you would like these applications to use the wallet, you must enable it "
-"now and choose method for its encryption.</p><p>GPG method is more secure, "
-"but you must have configured at least one encrypting key on your system.</"
-"p><p>If you choose the classic format, be warned that the password you "
-"choose <span style=\" font-style:italic;\">cannot</span> be recovered if it "
-"is lost, and will allow anyone who knows it to obtain all the information "
-"contained in the wallet.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>En heel Reeg Programmen bruukt de Knipp för't Sekern "
-"vun Passwöör oder anner Informatschonen as Formulordaten un Kookjes. Wenn Du "
-"wullt, dat disse Programmen de Knipp bruukt, muttst Du ehr nu anmaken un en "
-"Metood för ehr Verslöteln utsöken.</p><p>Bi GPG is de Sekerheit beter,  man "
-"Du muttst tominnst een Verslötel-Slötel op Dien Systeem inricht hebben.</"
-"p><p>Beacht bi't klass'sche Formaat bitte, Dien Passwoort lett sik <span "
-"style=\" font-style:italic;\">nich wedderherstellen</span>, wenn Du dat "
-"verleren deist. All Lüüd, de dat kennt, köönt all Daten binnen de Knipp "
-"ankieken un bruken.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:30
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#. i18n: file: kwalletwizardpagepassword.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#: rc.cpp:51 rc.cpp:100
-msgid "Yes, I wish to use the KDE wallet to store my personal information."
-msgstr ""
-"Jo, ik will de KDE-Knipp bruken un mien persöönliche Daten dor binnen sekern."
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:46
-#. i18n: ectx: property (title), widget (QGroupBox, _groupBox)
-#: rc.cpp:54
-msgid "What kind of encryption do you wish?"
-msgstr "Welk Verslötelmetood wullt Du bruken?"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:55
-#. i18n: ectx: property (text), widget (QRadioButton, _radioGpg)
-#. i18n: file: knewwalletdialogintro.ui:73
-#. i18n: ectx: property (text), widget (QRadioButton, radioGpg)
-#: rc.cpp:57 rc.cpp:94
-msgid "Use GPG encryption, for better protection"
-msgstr "GPG-Verslöteln bruken, för beter Schuul"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:68
-#. i18n: ectx: property (text), widget (QRadioButton, _radioBlowfish)
-#. i18n: file: knewwalletdialogintro.ui:66
-#. i18n: ectx: property (text), widget (QRadioButton, radioBlowfish)
-#: rc.cpp:60 rc.cpp:91
-msgid "Classic, blowfish encrypted file"
-msgstr "Klass'sch mit Blowfish verslötelt Datei"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:106
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#. i18n: file: kwalletwizardpagepassword.ui:88
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:63 rc.cpp:103
-msgid "Enter a new password:"
-msgstr "Nieg Passwoort ingeven:"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:122
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#. i18n: file: kwalletwizardpagepassword.ui:104
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:66 rc.cpp:106
-msgid "Verify password:"
-msgstr "Passwoort wedderhalen:"
-
-#. i18n: file: knewwalletdialoggpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:69
-msgid "Please select the signing key from the list below:"
-msgstr "Söök bitte den Ünnerschrift-Slötel ut de List nerrn ut:"
-
-#. i18n: file: knewwalletdialoggpg.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:72
-msgid ""
-"<html><head/><body><p><span style=\" font-weight:600;\">NOTE:</span> this "
-"list shows only \"ultimate-level\" trusted keys</p></body></html>"
-msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">Beacht:</span> Disse "
-"List wiest bloots \"büterst troot\" Slötels</p></body></html>"
-
-#. i18n: file: knewwalletdialoggpg.ui:59
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:75
-msgid "Name"
-msgstr "Naam"
-
-#. i18n: file: knewwalletdialoggpg.ui:64
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:78
-msgid "E-Mail"
-msgstr "Nettpost"
-
-#. i18n: file: knewwalletdialoggpg.ui:69
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:81
-msgid "Key-ID"
-msgstr "Slötel-ID"
-
-#. i18n: file: knewwalletdialogintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, labelIntro)
-#: rc.cpp:88
-#, no-c-format
-msgid ""
-"<html><head/><body><p>The application '<span style=\" font-weight:600;\">%1</"
-"span>' has requested to open the KDE wallet. This is used to store sensitive "
-"data in a secure fashion. Please choose the new wallet's type below or click "
-"cancel to deny the application's request.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Dat Programm \"<span style=\" font-weight:600;\">%1</"
-"span>\" will de KDE-Knipp opmaken. Se wohrt schuulsam Daten op sekere Oort. "
-"Bitte söök den Typ för de niege Knipp nerrn ut oder klick op \"Afbreken\", "
-"wenn Du dat Programm dat nich verlöven wullt, wat dat de Knipp bruukt.</p></"
-"body></html>"
-
-#. i18n: file: kwalletwizardpagepassword.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:97
-msgid ""
-"Various applications may attempt to use the KDE wallet to store passwords or "
-"other information such as web form data and cookies.  If you would like "
-"these applications to use the wallet, you must enable it now and choose a "
-"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
-"and will allow anyone who knows it to obtain all the information contained "
-"in the wallet."
-msgstr ""
-"En hele Reeg Programmen bruukt de Knipp för't Sekern vun Passwöör oder anner "
-"Informatschonen as Formulordaten un Kookjes. Wenn Du wullt, dat disse "
-"Programmen de Knipp bruukt, muttst Du ehr nu anmaken un en Passwoort "
-"utsöken. Dat Passwoort lett sik <i>nich wedderherstellen</i>, wenn Du dat "
-"vergeten deist. All Lüüd, de dat kennt, köönt sik all Daten binnen de Knipp "
-"ankieken."
-
-#: kwalletwizard.cpp:54
-msgid "KWallet"
-msgstr "Knipp"
-
-#: kwalletwizard.cpp:278
-msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
-msgstr ""
-"<qt>Passwoort is leddig.  <b>(Wohrscho: Dat is böös riskant.)</b>.</qt>"
-
-#: kwalletwizard.cpp:280
-msgid "Passwords match."
-msgstr "De Passwöör sünd liek."
-
-#: kwalletwizard.cpp:283
-msgid "Passwords do not match."
-msgstr "De Passwöör sünd nich liek."
-
-#: backend/backendpersisthandler.cpp:489
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-"<qt>Fehler bi't Torechtmaken vun OpenPGP bi't Sekern vun de Knipp <b>%1</b>. "
-"Fehlerkode is <b>%2</b>. Richt bitte Dien Systeeminstellen un versöök dat "
-"denn nochmaal!</qt>"
-
-#: backend/backendpersisthandler.cpp:497
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Fehler bi't Torechtmaken vun OpenPGP bi't Sekern vun de Knipp <b>%1</b>. "
-"Richt bitte Dien Systeeminstellen un versöök dat denn nochmaal!</qt>"
-
-#: backend/backendpersisthandler.cpp:548
-msgid ""
-"<qt>Encryption error while attempting to save the wallet <b>%1</b>. Error "
-"code is <b>%2 (%3)</b>. Please fix your system configuration, then try again!"
-"</qt>"
-msgstr ""
-"<qt>Verslötel-Fehler bi't Sekern vun de Knipp <b>%1</b>. Fehlerkode is <b>%2 "
-"(%3)</b>. Richt bitte Dien Systeeminstellen un versöök dat denn nochmaal!</"
-"qt>"
-
-#: backend/backendpersisthandler.cpp:560
-msgid ""
-"<qt>File handling error while attempting to save the wallet <b>%1</b>. Error "
-"was <b>%2</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Dateihanteer-Fehler bi't Sekern vun de Knipp <b>%1</b>. Fehlerkode is <b>"
-"%2</b>. Richt bitte Dien Systeeminstellen un versöök dat denn nochmaal!</qt>"
-
-#: backend/backendpersisthandler.cpp:573
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-"<qt>Fehler bi't Torechtmaken vun OpenPGP bi't Opmaken vun de Knipp <b>%1</"
-"b>. Fehlerkode is <b>%2</b>. Richt bitte Dien Systeeminstellen un versöök "
-"dat denn nochmaal!</qt>"
-
-#: backend/backendpersisthandler.cpp:591
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Fehler bi't Torechtmaken vun OpenPGP bi't Opmaken vun de Knipp <b>%1</"
-"b>. Richt bitte Dien Systeeminstellen un versöök dat denn nochmaal!</qt>"
-
-#: backend/backendpersisthandler.cpp:601
-msgid "Retry"
-msgstr "Nochmaal versöken"
-
-#: backend/backendpersisthandler.cpp:603
-msgid ""
-"<qt>Error when attempting to decrypt the wallet <b>%1</b> using GPG. If "
-"you're using a SmartCard, please ensure it's inserted then try again."
-"<br><br>GPG error was <b>%2</b></qt>"
-msgstr ""
-"<qt>Fehler bi't Opslöteln vun de Knipp <b>%1</b> mit GPG. Wenn Du en "
-"Smartkoort bruukst, kiek wat de propper sitten deit, un versöök dat nochmaal."
-"<br><br>GPG-Fehler weer <b>%2</b></qt>"
-
-#: backend/backendpersisthandler.cpp:604
-msgid "kwalletd GPG backend"
-msgstr "kwalletd-Hülpprogramm GPG"
-
-#: backend/backendpersisthandler.cpp:648
-msgid ""
-"<qt>Error when attempting to open the wallet <b>%1</b>. The wallet was "
-"encrypted using the GPG Key ID <b>%2</b> but this key was not found on your "
-"system.</qt>"
-msgstr ""
-"<qt>Fehler bi't Opmaken vun de Knipp <b>%1</b>. De Knipp wöör mit den Slötel "
-"mit de GPG-ID <b>%2</b> verslötelt, man disse Slötel lett sik op Dien "
-"Reekner nich finnen.</qt>"
-
-#: backend/kwalletbackend.cc:236
-msgid "Already open."
-msgstr "Is al opmaakt."
-
-#: backend/kwalletbackend.cc:238
-msgid "Error opening file."
-msgstr "Fehler bi't Opmaken vun de Datei."
-
-#: backend/kwalletbackend.cc:240
-msgid "Not a wallet file."
-msgstr "Keen Knippdatei."
-
-#: backend/kwalletbackend.cc:242
-msgid "Unsupported file format revision."
-msgstr "Disse Verschoon vun't Dateiformaat warrt nich ünnerstütt."
-
-#: backend/kwalletbackend.cc:244
-msgid "Unknown encryption scheme."
-msgstr "Verslötelmetood is nich begäng."
-
-#: backend/kwalletbackend.cc:246
-msgid "Corrupt file?"
-msgstr "Datei schaadhaftig?"
-
-#: backend/kwalletbackend.cc:248
-msgid "Error validating wallet integrity. Possibly corrupted."
-msgstr ""
-"Fehler bi't Pröven vun de Knipp ehr Integriteet, villicht is se schaadhaftig."
-
-#: backend/kwalletbackend.cc:252
-msgid "Read error - possibly incorrect password."
-msgstr "Fehler bi't Lesen - dat Passwoort mag leeg wesen."
-
-#: backend/kwalletbackend.cc:254
-msgid "Decryption error."
-msgstr "Fehler bi't Opslöteln."
-
-#: backend/kwalletbackend.cc:423
-msgid ""
-"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
-msgstr ""
-"Fehler bi't Synkroniseren vun de Knipp <b>%1</b> mit de Fastplaat-Datei. "
-"Fehlerkoden:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Stüer bugs.kde.org bitte en Fehlerbericht mit disse "
-"Informatschonen dor binnen to."

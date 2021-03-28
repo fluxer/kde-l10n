@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwalletd\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2014-07-06 21:22+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
@@ -20,50 +20,349 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: knewwalletdialog.cpp:64
-msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. This is used "
-"to store sensitive data in a secure fashion. Please choose the new wallet's "
-"type below or click cancel to deny the application's request.</qt>"
-msgstr ""
-"<qt>KDEk '<b>%1</b>' izeneko zorro berria sortzea eskatu du. Babes berezia "
-"behar duten datuak era seguruan gordetzeko erabiltzen da hau. Hautatu azpian "
-"zorro berriaren mota, edo klikatu 'Utzi' aplikazioaren eskaera ukatzeko.</qt>"
+#: backend/kwalletbackend.cc:233
+msgid "Already open."
+msgstr "Lehendik irekita."
 
-#: knewwalletdialog.cpp:66
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. This is used to store sensitive data in a secure fashion. "
-"Please choose the new wallet's type below or click cancel to deny the "
-"application's request.</qt>"
-msgstr ""
-"<qt>'<b>%1</b>' aplikazioak '<b>%2</b>' izeneko zorro berria sortzea eskatu "
-"du. Babes berezia behar duten datuak era seguruan gordetzeko erabiltzen da. "
-"Hautatu azpian zorro berriaren mota, edo klikatu 'Utzi' aplikazioaren "
-"eskaera ukatzeko.</qt>"
+#: backend/kwalletbackend.cc:235
+msgid "Error opening file."
+msgstr "Errorea gertatu da fitxategia irekitzean."
 
-#: knewwalletdialog.cpp:127 knewwalletdialog.cpp:133 kwalletwizard.cpp:162
-#: kwalletwizard.cpp:166
-msgid ""
-"The QGpgME library failed to initialize for the OpenPGP protocol. Please "
-"check your system's configuration then try again."
-msgstr ""
-"Huts egin du QGpgME liburutegia OpenPGP protokoloarentzat hasieratzeak. "
-"Egiaztatu zure sistemaren konfigurazioa eta saiatu berriro."
+#: backend/kwalletbackend.cc:237
+msgid "Not a wallet file."
+msgstr "Ez da zorro-fitxategia."
 
-#: knewwalletdialog.cpp:153
-msgid ""
-"Seems that your system has no keys suitable for encryption. Please set-up at "
-"least an encryption key, then try again."
-msgstr ""
-"Ematen du zure sistemak ez duela zifratzeko gako egokirik. Ezarri gutxienez "
-"zifratzeko gako bat, eta saiatu berriro."
+#: backend/kwalletbackend.cc:239
+msgid "Unsupported file format revision."
+msgstr "Fitxategi-formatuaren berrikuspena ez da onartzen."
 
-#: main.cpp:151 main.cpp:152 kwalletd.cpp:424 kwalletd.cpp:538 kwalletd.cpp:627
-#: kwalletd.cpp:726 kwalletd.cpp:829 kwalletd.cpp:848 kwalletd.cpp:857
-#: kwalletd.cpp:862 kwalletd.cpp:1378
+#: backend/kwalletbackend.cc:241
+msgid "Unknown encryption scheme."
+msgstr "Zifratzeko-eskema ezezaguna."
+
+#: backend/kwalletbackend.cc:243
+msgid "Corrupt file?"
+msgstr "Fitxategi hondatua?"
+
+#: backend/kwalletbackend.cc:245
+msgid "Error validating wallet integrity. Possibly corrupted."
+msgstr ""
+"Errorea gertatu da zorro-osotasuna balidatzean. Baliteke hondatuta egotea."
+
+#: backend/kwalletbackend.cc:249
+msgid "Read error - possibly incorrect password."
+msgstr "Irakurketa-errorea; beharbada, pasahitza okerra izango da."
+
+#: backend/kwalletbackend.cc:251
+msgid "Decryption error."
+msgstr "Deszifratzeko-errorea."
+
+#: backend/kwalletbackend.cc:409
+msgid ""
+"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
+msgstr ""
+"Huts egin du <b>%1</b> zorroa diskoan sinkronizatzean. Error-kodeak:\n"
+"RC <b>%2</b>\n"
+"SF <b>%3</b>. Bidali akats-txosten bat informazioa erabiliz bugs.kde.org "
+"lekura"
+
+#: kwalletwizard.cpp:40
+msgid "KWallet"
+msgstr "KWallet"
+
+#: kwalletwizard.cpp:149
+msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
+msgstr "<qt>Pasahitza hutsik dago. <b>(KONTUZ: ez da segurua)</b></qt>"
+
+#: kwalletwizard.cpp:151
+msgid "Passwords match."
+msgstr "Pasahitzak bat datoz."
+
+#: kwalletwizard.cpp:154
+msgid "Passwords do not match."
+msgstr "Pasahitzak ez datoz bat."
+
+#. i18n: file: kwalletwizardpageintro.ui:17
+#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
+#: rc.cpp:3
+msgid "The KDE Wallet System"
+msgstr "KDEren zorro-sistema"
+
+#. i18n: file: kwalletwizardpageintro.ui:30
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:6
+msgid ""
+"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
+"passwords and other personal information on disk in an encrypted file, "
+"preventing others from viewing the information.  This wizard will tell you "
+"about KWallet and help you configure it for the first time."
+msgstr ""
+"Ongi etorri KWallet-era, KDEren zorro-sistemara. KWallet-ek pasahitzak eta "
+"bestelako informazio pertsonala diskoan, fitxategi zifratu batean gordetzeko "
+"aukera ematen du, besteek informazioa ikus ez dezaten. Morroi honek KWallet-"
+"i buruzko informazioa eman, eta lehen aldiz konfiguratzen lagunduko dizu."
+
+#. i18n: file: kwalletwizardpageintro.ui:69
+#. i18n: ectx: property (text), widget (QRadioButton, _basic)
+#: rc.cpp:9
+msgid "&Basic setup (recommended)"
+msgstr "&Oinarrizko ezarpena (gomendatua)"
+
+#. i18n: file: kwalletwizardpageintro.ui:79
+#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
+#: rc.cpp:12
+msgid "&Advanced setup"
+msgstr "Konfigurazio &aurreratua"
+
+#. i18n: file: kbetterthankdialogbase.ui:50
+#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
+#: rc.cpp:15
+msgid "Allow &Once"
+msgstr "Onartu &behin"
+
+#. i18n: file: kbetterthankdialogbase.ui:60
+#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
+#: rc.cpp:18
+msgid "Allow &Always"
+msgstr "Onartu b&eti"
+
+#. i18n: file: kbetterthankdialogbase.ui:67
+#. i18n: ectx: property (text), widget (KPushButton, _deny)
+#: rc.cpp:21
+msgid "&Deny"
+msgstr "&Ukatu"
+
+#. i18n: file: kbetterthankdialogbase.ui:74
+#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
+#: rc.cpp:24
+msgid "Deny &Forever"
+msgstr "Ukatu be&ti"
+
+#. i18n: file: kwalletwizardpageoptions.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:27
+msgid ""
+"The KDE Wallet system allows you to control the level of security of your "
+"personal data.  Some of these settings do impact usability.  While the "
+"default settings are generally acceptable for most users, you may wish to "
+"change some of them.  You may further tune these settings from the KWallet "
+"control module."
+msgstr ""
+"KDE zorro-sistemak aukera ematen du datu pertsonalen segurtasun-maila "
+"kontrolatzeko. Ezarpen horietako batzuek eragina izan dezakete "
+"erabilgarritasunean. Ezarpen lehenetsiak onargarriak dira erabiltzaile "
+"gehienentzat, baina baliteke zuk haietako batzuk aldatu nahi izatea. KWallet-"
+"en aginte-moduluan doitu ditzakezu ezarpen horiek."
+
+#. i18n: file: kwalletwizardpageoptions.ui:48
+#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
+#: rc.cpp:30
+msgid "Automatically close idle wallets"
+msgstr "Automatikoki itxi inaktibo dauden zorroak"
+
+#. i18n: file: kwalletwizardpageoptions.ui:55
+#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
+#: rc.cpp:33
+msgid "Store network passwords and local passwords in separate wallet files"
+msgstr ""
+"Gorde sareko pasahitzak eta pasahitz lokalak aparteko zorro-fitxategitan"
+
+#. i18n: file: kwalletwizardpagepassword.ui:16
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: rc.cpp:36
+msgid ""
+"Various applications may attempt to use the KDE wallet to store passwords or "
+"other information such as web form data and cookies.  If you would like "
+"these applications to use the wallet, you must enable it now and choose a "
+"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
+"and will allow anyone who knows it to obtain all the information contained "
+"in the wallet."
+msgstr ""
+"Baliteke aplikazio batzuk KDE zorroa erabiltzen saiatzea pasahitzak edo "
+"bestelako informazioa gordetzeko, hala nola web-formularioetako datuak eta "
+"cookie-ak. Aplikazio horiek zorroa erabiltzea nahi baduzu, orain gaitu behar "
+"duzu, eta pasahitz bat aukeratu. Aukeratzen duzun pasahitza galtzen bada, "
+"<i>ezin</i> da berreskuratu, eta pasahitz hori eskuratzen duen edonork "
+"zorroko informazio guztia eskuratu ahal izango du."
+
+#. i18n: file: kwalletwizardpagepassword.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
+#: rc.cpp:39
+msgid "Yes, I wish to use the KDE wallet to store my personal information."
+msgstr "Bai, nire informazio pertsonala KDE zorroan gordetzea nahi dut."
+
+#. i18n: file: kwalletwizardpagepassword.ui:88
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+#: rc.cpp:42
+msgid "Enter a new password:"
+msgstr "Sartu pasahitz berria:"
+
+#. i18n: file: kwalletwizardpagepassword.ui:104
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:45
+msgid "Verify password:"
+msgstr "Egiaztatu pasahitza:"
+
+#. i18n: file: kwalletwizardpageexplanation.ui:17
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
+#: rc.cpp:48
+msgid ""
+"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
+"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
+"The data is only written in the encrypted form of your choice - blowfish "
+"algorithm with your password as the key. When a wallet is opened, the wallet "
+"manager application will launch and display an icon in the system tray. You "
+"can use this application to manage all of your wallets. It even permits you "
+"to drag wallets and wallet contents, allowing you to easily copy a wallet to "
+"a remote system.</p></body></html>"
+msgstr ""
+
+#: kwalletd.cpp:412 kwalletd.cpp:502 kwalletd.cpp:567 kwalletd.cpp:663
+#: kwalletd.cpp:765 kwalletd.cpp:777 kwalletd.cpp:786 kwalletd.cpp:791
+#: kwalletd.cpp:1304 main.cpp:151 main.cpp:152
 msgid "KDE Wallet Service"
 msgstr "KDEren zorro-zerbitzua"
+
+#: kwalletd.cpp:495
+msgid ""
+"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
+"password for this wallet below.</qt>"
+msgstr ""
+"<qt>KDEk '<b>%1</b>' zorroa irekitzea eskatu du. Sartu zorro honen pasahitza."
+"</qt>"
+
+#: kwalletd.cpp:497
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
+"b>'. Please enter the password for this wallet below.</qt>"
+msgstr ""
+"<qt>'<b>%1</b>' aplikazioak '<b>%2</b>' zorroa irekitzeko eskatu du. Sartu "
+"zorro honen pasahitza.</qt>"
+
+#: kwalletd.cpp:501
+msgid "&Open"
+msgstr "I&reki"
+
+#: kwalletd.cpp:511
+msgctxt "Text of a button to ignore the open-wallet notification"
+msgid "Ignore"
+msgstr "Ez ikusi egin"
+
+#: kwalletd.cpp:513
+msgid "<b>KDE</b> has requested to open a wallet (%1)."
+msgstr "<b>KDEk</b> zorro bat (%1) irekitzeko eskatu du."
+
+#: kwalletd.cpp:516
+msgctxt ""
+"Text of a button for switching to the (unnamed) application requesting a "
+"password"
+msgid "Switch there"
+msgstr "Aldatu hona:"
+
+#: kwalletd.cpp:518
+msgid "<b>%1</b> has requested to open a wallet (%2)."
+msgstr "<b>%1</b>-(e)k zorro bat (%2) irekitzea eskatu du."
+
+#: kwalletd.cpp:521
+msgctxt ""
+"Text of a button for switching to the application requesting a password"
+msgid "Switch to %1"
+msgstr "Aldatu hona: %1"
+
+#: kwalletd.cpp:536 kwalletd.cpp:576
+msgid ""
+"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
+"%2: %3)</qt>"
+msgstr ""
+"<qt>Errorea gertatu da '<b>%1</b>' zorroa irekitzean. Saiatu berriro.<br /"
+">(%2 errore-kodea: %3)</qt>"
+
+#: kwalletd.cpp:556
+msgid ""
+"KDE has requested to open the wallet. This is used to store sensitive data "
+"in a secure fashion. Please enter a password to use with this wallet or "
+"click cancel to deny the application's request."
+msgstr ""
+"KDEk zorroa irekitzeko eskatu du. Bereziki babestutako datuak biltegiratzeko "
+"erabiltzen da. Sartu zorro hau erabiltzeko pasahitza, edo sakatu Utzi, "
+"aplikazioaren eskakizunei uko egiteko."
+
+#: kwalletd.cpp:558
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
+"is used to store sensitive data in a secure fashion. Please enter a password "
+"to use with this wallet or click cancel to deny the application's request.</"
+"qt>"
+msgstr ""
+"<qt>'<b>%1</b>' aplikazioak KDEren zorroa irekitzeko eskatu du. Bereziki "
+"babestutako datuak biltegiratzeko erabiltzen da. Sartu zorro hau erabiltzeko "
+"pasahitza, edo sakatu Utzi, aplikazioak eskatutakoari uko egiteko.</qt>"
+
+#: kwalletd.cpp:562
+msgid ""
+"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
+"choose a password for this wallet, or cancel to deny the application's "
+"request.</qt>"
+msgstr ""
+"<qt>KDEk eskatu du '<b>%1</b>' izeneko zorro berri bat sortzeko. Aukeratu "
+"zorro horrentzako pasahitza, edo sakatu Utzi, aplikazioak eskatutakoari uko "
+"egiteko.</qt>"
+
+#: kwalletd.cpp:564
+msgid ""
+"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
+"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
+"application's request.</qt>"
+msgstr ""
+"<qt>'<b>%1</b>' aplikazioak eskatu du '<b>%2</b>' izeneko zorro berri bat "
+"sortzeko. Aukeratu zorro horrentzako pasahitza, edo sakatu Utzi, aplikazioak "
+"eskatutakoari uko egiteko.</qt>"
+
+#: kwalletd.cpp:568
+msgid "C&reate"
+msgstr "&Sortu"
+
+#: kwalletd.cpp:665
+msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
+msgstr "<qt>KDEk irekita dagoen '<b>%1</b>' zorrora sartzeko eskatu du.</qt>"
+
+#: kwalletd.cpp:667
+msgid ""
+"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
+"%2</b>'.</qt>"
+msgstr ""
+"<qt>'<b>%1</b>' aplikazioak irekita dagoen '<b>%2</b>' zorroa atzitzea "
+"eskatu du.</qt>"
+
+#: kwalletd.cpp:765
+msgid ""
+"Unable to open wallet. The wallet must be opened in order to change the "
+"password."
+msgstr ""
+"Ezin da ireki zorroa. Pasahitza aldatzeko, irekita eduki behar da zorroa."
+
+#: kwalletd.cpp:776
+msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
+msgstr "<qt>Aukeratu beste pasahitz bat '<b>%1</b>' zorroarentzat.</qt>"
+
+#: kwalletd.cpp:786
+msgid "Error re-encrypting the wallet. Password was not changed."
+msgstr "Errorea gertatu da zorroa berriro zifratzean. Pasahitza ez da aldatu."
+
+#: kwalletd.cpp:791
+msgid "Error reopening the wallet. Data may be lost."
+msgstr ""
+"Errorea gertatu da zorroa berriro irekitzean. Baliteke datuak galdu izana."
+
+#: kwalletd.cpp:1304
+msgid ""
+"There have been repeated failed attempts to gain access to a wallet. An "
+"application may be misbehaving."
+msgstr ""
+"Huts egin dute zorrora sartzeko hainbat saiakerak. Baliteke aplikazio bat "
+"behar bezala ez ibiltzea."
 
 #: main.cpp:153
 msgid ""
@@ -94,600 +393,3 @@ msgstr "Thiago Maceira"
 #: main.cpp:156
 msgid "D-Bus Interface"
 msgstr "D-Bus interfazea"
-
-#: main.cpp:157
-msgid "Valentin Rusu"
-msgstr "Valentin Rusu"
-
-#: main.cpp:157
-msgid "GPG backend support"
-msgstr "GPG bizkarraldekoen euskarria"
-
-#: kwalletd.cpp:531
-msgid ""
-"<qt>KDE has requested to open the wallet '<b>%1</b>'. Please enter the "
-"password for this wallet below.</qt>"
-msgstr ""
-"<qt>KDEk '<b>%1</b>' zorroa irekitzea eskatu du. Sartu zorro honen pasahitza."
-"</qt>"
-
-#: kwalletd.cpp:533
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the wallet '<b>%2</"
-"b>'. Please enter the password for this wallet below.</qt>"
-msgstr ""
-"<qt>'<b>%1</b>' aplikazioak '<b>%2</b>' zorroa irekitzeko eskatu du. Sartu "
-"zorro honen pasahitza.</qt>"
-
-#: kwalletd.cpp:537
-msgid "&Open"
-msgstr "I&reki"
-
-#: kwalletd.cpp:547
-msgctxt "Text of a button to ignore the open-wallet notification"
-msgid "Ignore"
-msgstr "Ez ikusi egin"
-
-#: kwalletd.cpp:549
-msgid "<b>KDE</b> has requested to open a wallet (%1)."
-msgstr "<b>KDEk</b> zorro bat (%1) irekitzeko eskatu du."
-
-#: kwalletd.cpp:552
-msgctxt ""
-"Text of a button for switching to the (unnamed) application requesting a "
-"password"
-msgid "Switch there"
-msgstr "Aldatu hona:"
-
-#: kwalletd.cpp:554
-msgid "<b>%1</b> has requested to open a wallet (%2)."
-msgstr "<b>%1</b>-(e)k zorro bat (%2) irekitzea eskatu du."
-
-#: kwalletd.cpp:557
-msgctxt ""
-"Text of a button for switching to the application requesting a password"
-msgid "Switch to %1"
-msgstr "Aldatu hona: %1"
-
-#: kwalletd.cpp:572 kwalletd.cpp:636
-msgid ""
-"<qt>Error opening the wallet '<b>%1</b>'. Please try again.<br />(Error code "
-"%2: %3)</qt>"
-msgstr ""
-"<qt>Errorea gertatu da '<b>%1</b>' zorroa irekitzean. Saiatu berriro.<br /"
-">(%2 errore-kodea: %3)</qt>"
-
-#: kwalletd.cpp:616
-msgid ""
-"KDE has requested to open the wallet. This is used to store sensitive data "
-"in a secure fashion. Please enter a password to use with this wallet or "
-"click cancel to deny the application's request."
-msgstr ""
-"KDEk zorroa irekitzeko eskatu du. Bereziki babestutako datuak biltegiratzeko "
-"erabiltzen da. Sartu zorro hau erabiltzeko pasahitza, edo sakatu Utzi, "
-"aplikazioaren eskakizunei uko egiteko."
-
-#: kwalletd.cpp:618
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to open the KDE wallet. This "
-"is used to store sensitive data in a secure fashion. Please enter a password "
-"to use with this wallet or click cancel to deny the application's request.</"
-"qt>"
-msgstr ""
-"<qt>'<b>%1</b>' aplikazioak KDEren zorroa irekitzeko eskatu du. Bereziki "
-"babestutako datuak biltegiratzeko erabiltzen da. Sartu zorro hau erabiltzeko "
-"pasahitza, edo sakatu Utzi, aplikazioak eskatutakoari uko egiteko.</qt>"
-
-#: kwalletd.cpp:622
-msgid ""
-"<qt>KDE has requested to create a new wallet named '<b>%1</b>'. Please "
-"choose a password for this wallet, or cancel to deny the application's "
-"request.</qt>"
-msgstr ""
-"<qt>KDEk eskatu du '<b>%1</b>' izeneko zorro berri bat sortzeko. Aukeratu "
-"zorro horrentzako pasahitza, edo sakatu Utzi, aplikazioak eskatutakoari uko "
-"egiteko.</qt>"
-
-#: kwalletd.cpp:624
-msgid ""
-"<qt>The application '<b>%1</b>' has requested to create a new wallet named "
-"'<b>%2</b>'. Please choose a password for this wallet, or cancel to deny the "
-"application's request.</qt>"
-msgstr ""
-"<qt>'<b>%1</b>' aplikazioak eskatu du '<b>%2</b>' izeneko zorro berri bat "
-"sortzeko. Aukeratu zorro horrentzako pasahitza, edo sakatu Utzi, aplikazioak "
-"eskatutakoari uko egiteko.</qt>"
-
-#: kwalletd.cpp:628
-msgid "C&reate"
-msgstr "&Sortu"
-
-#: kwalletd.cpp:728
-msgid "<qt>KDE has requested access to the open wallet '<b>%1</b>'.</qt>"
-msgstr "<qt>KDEk irekita dagoen '<b>%1</b>' zorrora sartzeko eskatu du.</qt>"
-
-#: kwalletd.cpp:730
-msgid ""
-"<qt>The application '<b>%1</b>' has requested access to the open wallet '<b>"
-"%2</b>'.</qt>"
-msgstr ""
-"<qt>'<b>%1</b>' aplikazioak irekita dagoen '<b>%2</b>' zorroa atzitzea "
-"eskatu du.</qt>"
-
-#: kwalletd.cpp:829
-msgid ""
-"Unable to open wallet. The wallet must be opened in order to change the "
-"password."
-msgstr ""
-"Ezin da ireki zorroa. Pasahitza aldatzeko, irekita eduki behar da zorroa."
-
-#: kwalletd.cpp:843
-msgid ""
-"<qt>The <b>%1</b> wallet is encrypted using GPG key <b>%2</b>. Please use "
-"<b>GPG</b> tools (such as <b>kleopatra</b>) to change the passphrase "
-"associated to that key.</qt>"
-msgstr ""
-"<qt><b>%1</b> zorroa zifratuta dago <b>%2</b> gakoa erabiliz. Erabili "
-"<b>GPG</b> tresnak (<b>kleopatra</b> esaterako) haren pasaesaldia aldatzeko."
-"</qt>"
-
-#: kwalletd.cpp:847
-msgid "<qt>Please choose a new password for the wallet '<b>%1</b>'.</qt>"
-msgstr "<qt>Aukeratu beste pasahitz bat '<b>%1</b>' zorroarentzat.</qt>"
-
-#: kwalletd.cpp:857
-msgid "Error re-encrypting the wallet. Password was not changed."
-msgstr "Errorea gertatu da zorroa berriro zifratzean. Pasahitza ez da aldatu."
-
-#: kwalletd.cpp:862
-msgid "Error reopening the wallet. Data may be lost."
-msgstr ""
-"Errorea gertatu da zorroa berriro irekitzean. Baliteke datuak galdu izana."
-
-#: kwalletd.cpp:1378
-msgid ""
-"There have been repeated failed attempts to gain access to a wallet. An "
-"application may be misbehaving."
-msgstr ""
-"Huts egin dute zorrora sartzeko hainbat saiakerak. Baliteke aplikazio bat "
-"behar bezala ez ibiltzea."
-
-#. i18n: file: kbetterthankdialogbase.ui:50
-#. i18n: ectx: property (text), widget (KPushButton, _allowOnce)
-#: rc.cpp:3
-msgid "Allow &Once"
-msgstr "Onartu &behin"
-
-#. i18n: file: kbetterthankdialogbase.ui:60
-#. i18n: ectx: property (text), widget (KPushButton, _allowAlways)
-#: rc.cpp:6
-msgid "Allow &Always"
-msgstr "Onartu b&eti"
-
-#. i18n: file: kbetterthankdialogbase.ui:67
-#. i18n: ectx: property (text), widget (KPushButton, _deny)
-#: rc.cpp:9
-msgid "&Deny"
-msgstr "&Ukatu"
-
-#. i18n: file: kbetterthankdialogbase.ui:74
-#. i18n: ectx: property (text), widget (KPushButton, _denyForever)
-#: rc.cpp:12
-msgid "Deny &Forever"
-msgstr "Ukatu be&ti"
-
-#. i18n: file: kwalletwizardpageexplanation.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:15
-msgid ""
-"<html><head/><body><p>The KDE Wallet system stores your data in a <span "
-"style=\" font-style:italic;\">wallet</span> file on your local hard disk. "
-"The data is only written in the encrypted form of your choice - blowfish "
-"algorithm with your password as the key or using a GPG encryption key. When "
-"a wallet is opened, the wallet manager application will launch and display "
-"an icon in the system tray. You can use this application to manage all of "
-"your wallets. It even permits you to drag wallets and wallet contents, "
-"allowing you to easily copy a wallet to a remote system.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>KDEren <span style=\" font-style:italic;\">zorro</"
-"span> sistemak zure datuak <i>zorro</i> fitxategi batean gordetzen ditu "
-"disko zurrunean. Datuak zuk hautatutako moduan baino ez dira zifratzen - "
-"blowfish algoritmoa zure pasahitza gako gisa duela edo GPGren zifratzeko "
-"gako bat erabiliz. Zorro bat irekitzen denean, zorroak kudeatzeko "
-"aplikazioak ikono bat bistaratuko du sistema-erretiluan. Aplikazio hau "
-"erabili dezakezu zure zorro guztiak kudeatzeko. Zorroak eta zorroetako "
-"edukia arrastatzen ere uzten dizu, urruneko sistema batera zorro bat erraz "
-"kopiatzeko.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:18
-msgid ""
-"<html><head/><body><p>The GPG-based wallet use a GPG encryption key to "
-"securely encrypt data on disk. The key must be available when decrypting is "
-"needed or your wallet will not be accessible. For example, if you choose a "
-"SmartCard-based encryption key, the GPG system will prompt you to enter it "
-"and its associated PIN when attempting to open the wallet. <b>NOTE:</b> only "
-"\"ultimate-level\" trusted keys are shown in this list.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>GPG-oinarridun zorroak GPG zifratzeko gako bat "
-"erabiltzen du diskoan datuak seguru zifratzeko. Gakoa erabilgarri egon behar "
-"da deszifratzea behar denean edo zure zorroa ez da eskuragarri egongo. "
-"Adibidez, txartel adimendun batean oinarritutako zifratzeko gakoa hautatzen "
-"baduzu, GPG sistemak hau eta berekin elkartutako PIN sartzeko eskatuko dizu "
-"zorroa ireki nahi duzunean. <b>OHARRA:</b> soilik \"erabateko maila\" "
-"konfiantza duten gakoak erakusten dira zerrenda honetan.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:21
-msgid "Select encryption GPG key:"
-msgstr "Hautatu zifratzeko GPG gakoa:"
-
-#. i18n: file: kwalletwizardpagegpgkey.ui:78
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:24
-msgid ""
-"Unable to locate at least one <b>encrypting GPG key</b>. KDE Wallet needs "
-"such <b>encrypting key</b> to securely store passwords or other sensitive "
-"data on disk. If you still want to setup a GPG-based wallet, then cancel "
-"this wizard, set-up an <b>encrypting GPG key</b>, then retry this assistant. "
-"Otherwise, you may still click back, then choose a classic, blowfish "
-"encrypted file format on the previous page."
-msgstr ""
-"Ezin da aurkitu <b>zifratzeko GPG gako</b> bakarra ere. KDEren zorroak "
-"halako <b>zifratzeko gako</b> bat behar du babes berezia behar duten "
-"pasahitzak edo beste informazio batzuk diskoan era seguruan gordetzeko. "
-"Oraindik GPG oinarridun zorro bat nahi baduzu, utzi morroi hau, ezarri "
-"<b>zifratzeko GPG gako</b> bat, eta gero, saiatu laguntzailearekin. Bestela, "
-"atzera klikatu dezakezu, gero, klasikoa, blowfish zifratutako fitxategi "
-"formatua hautatu aurreko orrian."
-
-#. i18n: file: kwalletwizardpageintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#. i18n: file: knewwalletdialogintro.ui:17
-#. i18n: ectx: property (comment), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:27 rc.cpp:84
-msgid "The KDE Wallet System"
-msgstr "KDEren zorro-sistema"
-
-#. i18n: file: kwalletwizardpageintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:30
-msgid ""
-"Welcome to KWallet, the KDE Wallet System.  KWallet allows you to store your "
-"passwords and other personal information on disk in an encrypted file, "
-"preventing others from viewing the information.  This wizard will tell you "
-"about KWallet and help you configure it for the first time."
-msgstr ""
-"Ongi etorri KWallet-era, KDEren zorro-sistemara. KWallet-ek pasahitzak eta "
-"bestelako informazio pertsonala diskoan, fitxategi zifratu batean gordetzeko "
-"aukera ematen du, besteek informazioa ikus ez dezaten. Morroi honek KWallet-"
-"i buruzko informazioa eman, eta lehen aldiz konfiguratzen lagunduko dizu."
-
-#. i18n: file: kwalletwizardpageintro.ui:69
-#. i18n: ectx: property (text), widget (QRadioButton, _basic)
-#: rc.cpp:33
-msgid "&Basic setup (recommended)"
-msgstr "&Oinarrizko ezarpena (gomendatua)"
-
-#. i18n: file: kwalletwizardpageintro.ui:79
-#. i18n: ectx: property (text), widget (QRadioButton, _advanced)
-#: rc.cpp:36
-msgid "&Advanced setup"
-msgstr "Konfigurazio &aurreratua"
-
-#. i18n: file: kwalletwizardpageoptions.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:39
-msgid ""
-"The KDE Wallet system allows you to control the level of security of your "
-"personal data.  Some of these settings do impact usability.  While the "
-"default settings are generally acceptable for most users, you may wish to "
-"change some of them.  You may further tune these settings from the KWallet "
-"control module."
-msgstr ""
-"KDE zorro-sistemak aukera ematen du datu pertsonalen segurtasun-maila "
-"kontrolatzeko. Ezarpen horietako batzuek eragina izan dezakete "
-"erabilgarritasunean. Ezarpen lehenetsiak onargarriak dira erabiltzaile "
-"gehienentzat, baina baliteke zuk haietako batzuk aldatu nahi izatea. KWallet-"
-"en aginte-moduluan doitu ditzakezu ezarpen horiek."
-
-#. i18n: file: kwalletwizardpageoptions.ui:48
-#. i18n: ectx: property (text), widget (QCheckBox, _closeIdle)
-#: rc.cpp:42
-msgid "Automatically close idle wallets"
-msgstr "Automatikoki itxi inaktibo dauden zorroak"
-
-#. i18n: file: kwalletwizardpageoptions.ui:55
-#. i18n: ectx: property (text), widget (QCheckBox, _networkWallet)
-#: rc.cpp:45
-msgid "Store network passwords and local passwords in separate wallet files"
-msgstr ""
-"Gorde sareko pasahitzak eta pasahitz lokalak aparteko zorro-fitxategitan"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:48
-msgid ""
-"<html><head/><body><p>Various applications may attempt to use the KDE wallet "
-"to store passwords or other information such as web form data and cookies. "
-"If you would like these applications to use the wallet, you must enable it "
-"now and choose method for its encryption.</p><p>GPG method is more secure, "
-"but you must have configured at least one encrypting key on your system.</"
-"p><p>If you choose the classic format, be warned that the password you "
-"choose <span style=\" font-style:italic;\">cannot</span> be recovered if it "
-"is lost, and will allow anyone who knows it to obtain all the information "
-"contained in the wallet.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Zenbait aplikazio KDEren zorroa pasahitzak edo beste "
-"informazio batzuk —web-formularioen datuak eta cookiak esaterako— gordetzeko "
-"erabiltzen saiatu daitezke. Aplikazio hauek zorroa erabiltzea nahi baduzu, "
-"orain gaitu behar duzu, eta bera zifratzeko metodoa hautatu.</p><p>GPG "
-"metodoa seguruago da, baina zure sisteman gutxienez zifratzeko gako bat "
-"konfiguratuta izan bahar duzu.</p><p>Formatu klasikoa hautatzen baduzu, "
-"jakizu hautatzen duzun gakoa galtzen bada <span style=\" font-style:italic;"
-"\">ezin</span> dela berreskuratu, eta hura dakien orok zorroan gordetako "
-"informazio guztia eskuratu ahal izango duela.</p></body></html>"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:30
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#. i18n: file: kwalletwizardpagepassword.ui:29
-#. i18n: ectx: property (text), widget (QCheckBox, _useWallet)
-#: rc.cpp:51 rc.cpp:100
-msgid "Yes, I wish to use the KDE wallet to store my personal information."
-msgstr "Bai, nire informazio pertsonala KDE zorroan gordetzea nahi dut."
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:46
-#. i18n: ectx: property (title), widget (QGroupBox, _groupBox)
-#: rc.cpp:54
-msgid "What kind of encryption do you wish?"
-msgstr "Zer motako zifratzea nahi duzu?"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:55
-#. i18n: ectx: property (text), widget (QRadioButton, _radioGpg)
-#. i18n: file: knewwalletdialogintro.ui:73
-#. i18n: ectx: property (text), widget (QRadioButton, radioGpg)
-#: rc.cpp:57 rc.cpp:94
-msgid "Use GPG encryption, for better protection"
-msgstr "Erabili GPG zifraketa, babes hobea lortzeko"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:68
-#. i18n: ectx: property (text), widget (QRadioButton, _radioBlowfish)
-#. i18n: file: knewwalletdialogintro.ui:66
-#. i18n: ectx: property (text), widget (QRadioButton, radioBlowfish)
-#: rc.cpp:60 rc.cpp:91
-msgid "Classic, blowfish encrypted file"
-msgstr "Klasikoa, blowfish erabiliz zifratutako fitxategia"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:106
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#. i18n: file: kwalletwizardpagepassword.ui:88
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:63 rc.cpp:103
-msgid "Enter a new password:"
-msgstr "Sartu pasahitz berria:"
-
-#. i18n: file: kwalletwizardpagepasswordgpg.ui:122
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#. i18n: file: kwalletwizardpagepassword.ui:104
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_3)
-#: rc.cpp:66 rc.cpp:106
-msgid "Verify password:"
-msgstr "Egiaztatu pasahitza:"
-
-#. i18n: file: knewwalletdialoggpg.ui:17
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:69
-msgid "Please select the signing key from the list below:"
-msgstr "Hautatu sinatzeko gakoa azpiko zerrendatik:"
-
-#. i18n: file: knewwalletdialoggpg.ui:24
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:72
-msgid ""
-"<html><head/><body><p><span style=\" font-weight:600;\">NOTE:</span> this "
-"list shows only \"ultimate-level\" trusted keys</p></body></html>"
-msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">OHARRA:</span> "
-"zerrenda honek erakusten ditu soilik \"erabateko maila\" konfiantza duten "
-"gakoak</p></body></html>"
-
-#. i18n: file: knewwalletdialoggpg.ui:59
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:75
-msgid "Name"
-msgstr "Izena"
-
-#. i18n: file: knewwalletdialoggpg.ui:64
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:78
-msgid "E-Mail"
-msgstr "Posta elektronikoa:"
-
-#. i18n: file: knewwalletdialoggpg.ui:69
-#. i18n: ectx: property (text), widget (QTableWidget, listCertificates)
-#: rc.cpp:81
-msgid "Key-ID"
-msgstr "Gako IDa"
-
-#. i18n: file: knewwalletdialogintro.ui:30
-#. i18n: ectx: property (text), widget (QLabel, labelIntro)
-#: rc.cpp:88
-#, no-c-format
-msgid ""
-"<html><head/><body><p>The application '<span style=\" font-weight:600;\">%1</"
-"span>' has requested to open the KDE wallet. This is used to store sensitive "
-"data in a secure fashion. Please choose the new wallet's type below or click "
-"cancel to deny the application's request.</p></body></html>"
-msgstr ""
-"<html><head/><body><p><span style=\" font-weight:600;\">%1</span> "
-"aplikazioak KDEren zorroa irekitzea eskatu du. Babes berezi behar duten "
-"datuak era seguruan gordetzeko erabiltzen da. Hautatu zorro berriaren mota "
-"azpian, edo klikatu \"Utzi\" aplikazioaren eskaera ukatzeko</p></body></html>"
-
-#. i18n: file: kwalletwizardpagepassword.ui:16
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:97
-msgid ""
-"Various applications may attempt to use the KDE wallet to store passwords or "
-"other information such as web form data and cookies.  If you would like "
-"these applications to use the wallet, you must enable it now and choose a "
-"password.  The password you choose <i>cannot</i> be recovered if it is lost, "
-"and will allow anyone who knows it to obtain all the information contained "
-"in the wallet."
-msgstr ""
-"Baliteke aplikazio batzuk KDE zorroa erabiltzen saiatzea pasahitzak edo "
-"bestelako informazioa gordetzeko, hala nola web-formularioetako datuak eta "
-"cookie-ak. Aplikazio horiek zorroa erabiltzea nahi baduzu, orain gaitu behar "
-"duzu, eta pasahitz bat aukeratu. Aukeratzen duzun pasahitza galtzen bada, "
-"<i>ezin</i> da berreskuratu, eta pasahitz hori eskuratzen duen edonork "
-"zorroko informazio guztia eskuratu ahal izango du."
-
-#: kwalletwizard.cpp:54
-msgid "KWallet"
-msgstr "KWallet"
-
-#: kwalletwizard.cpp:278
-msgid "<qt>Password is empty.  <b>(WARNING: Insecure)</b></qt>"
-msgstr "<qt>Pasahitza hutsik dago. <b>(KONTUZ: ez da segurua)</b></qt>"
-
-#: kwalletwizard.cpp:280
-msgid "Passwords match."
-msgstr "Pasahitzak bat datoz."
-
-#: kwalletwizard.cpp:283
-msgid "Passwords do not match."
-msgstr "Pasahitzak ez datoz bat."
-
-#: backend/backendpersisthandler.cpp:489
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-"<qt>Errorea OpenPGP hasieratzen saiatzean  <b>%1</b> zorroa gordetzen "
-"saiatzen zen bitartean. Error-kodea <b>%2</b> da. Konpondu sistema-"
-"konfigurazioa, eta saiatu berriro!</qt>"
-
-#: backend/backendpersisthandler.cpp:497
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to save the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Errorea OpenPGP hasieratzen saiatzean  <b>%1</b> zorroa gordetzen "
-"saiatzen zen bitartean. Konpondu sistema-konfigurazioa, eta saiatu berriro!</"
-"qt>"
-
-#: backend/backendpersisthandler.cpp:548
-msgid ""
-"<qt>Encryption error while attempting to save the wallet <b>%1</b>. Error "
-"code is <b>%2 (%3)</b>. Please fix your system configuration, then try again!"
-"</qt>"
-msgstr ""
-"<qt>Zifratze-errorea <b>%1</b> zorroa gordetzen saiatzen zen bitartean. "
-"Error-kodea <b>%2 (%3) da</b>. Konpondu sistema-konfigurazioa, eta saiatu "
-"berriro!</qt>"
-
-#: backend/backendpersisthandler.cpp:560
-msgid ""
-"<qt>File handling error while attempting to save the wallet <b>%1</b>. Error "
-"was <b>%2</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Fitxategil-kudeaketa errorea <b>%1</b> zorroa gordetzen saiatzen zen "
-"bitartean. Errorea <b>%2</b> izan da. Konpondu sistema-konfigurazioa, eta "
-"saiatu berriro!</qt>"
-
-#: backend/backendpersisthandler.cpp:573
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Error code is <b>%2</b>. Please fix your system "
-"configuration, then try again!</qt>"
-msgstr ""
-"<qt>Errorea OpenPGP hasieratzen saiatzean <b>%1</b> zorroa irekitzen "
-"saiatzen zen bitartean. Error-kodea <b>%2</b> da. Konpondu sistema-"
-"konfigurazioa, eta saiatu berriro!</qt>"
-
-#: backend/backendpersisthandler.cpp:591
-msgid ""
-"<qt>Error when attempting to initialize OpenPGP while attempting to open the "
-"wallet <b>%1</b>. Please fix your system configuration, then try again!</qt>"
-msgstr ""
-"<qt>Errorea OpenPGP hasieratzen saiatzean <b>%1</b> zorroa irekitzen "
-"saiatzen zen bitartean. Konpondu sistema-konfigurazioa, eta saiatu berriro!</"
-"qt>"
-
-#: backend/backendpersisthandler.cpp:601
-msgid "Retry"
-msgstr "Berriro saiatu"
-
-#: backend/backendpersisthandler.cpp:603
-msgid ""
-"<qt>Error when attempting to decrypt the wallet <b>%1</b> using GPG. If "
-"you're using a SmartCard, please ensure it's inserted then try again."
-"<br><br>GPG error was <b>%2</b></qt>"
-msgstr ""
-"<qt>Errorea, GPG erabiliz <b>%1</b> zorroa deszifratzen saiatzean. SmartCard "
-"bat erabiltzen ari bazara, ziurtatu ondo sartuta dagoela, eta saiatu berriro."
-"<br><br>GPG errorea <b>%2</b> izan da</qt>"
-
-#: backend/backendpersisthandler.cpp:604
-msgid "kwalletd GPG backend"
-msgstr "kwalletd GPG bizkarraldekoa"
-
-#: backend/backendpersisthandler.cpp:648
-msgid ""
-"<qt>Error when attempting to open the wallet <b>%1</b>. The wallet was "
-"encrypted using the GPG Key ID <b>%2</b> but this key was not found on your "
-"system.</qt>"
-msgstr ""
-"<qt>Errorea <b>%1</b> zorroa irekitzen saiatzean. Zorroa <b>%2</b> GPG gako "
-"ID erabiliz zifratu zen, baina ez da aurkitzen zure sisteman.</qt>"
-
-#: backend/kwalletbackend.cc:236
-msgid "Already open."
-msgstr "Lehendik irekita."
-
-#: backend/kwalletbackend.cc:238
-msgid "Error opening file."
-msgstr "Errorea gertatu da fitxategia irekitzean."
-
-#: backend/kwalletbackend.cc:240
-msgid "Not a wallet file."
-msgstr "Ez da zorro-fitxategia."
-
-#: backend/kwalletbackend.cc:242
-msgid "Unsupported file format revision."
-msgstr "Fitxategi-formatuaren berrikuspena ez da onartzen."
-
-#: backend/kwalletbackend.cc:244
-msgid "Unknown encryption scheme."
-msgstr "Zifratzeko-eskema ezezaguna."
-
-#: backend/kwalletbackend.cc:246
-msgid "Corrupt file?"
-msgstr "Fitxategi hondatua?"
-
-#: backend/kwalletbackend.cc:248
-msgid "Error validating wallet integrity. Possibly corrupted."
-msgstr ""
-"Errorea gertatu da zorro-osotasuna balidatzean. Baliteke hondatuta egotea."
-
-#: backend/kwalletbackend.cc:252
-msgid "Read error - possibly incorrect password."
-msgstr "Irakurketa-errorea; beharbada, pasahitza okerra izango da."
-
-#: backend/kwalletbackend.cc:254
-msgid "Decryption error."
-msgstr "Deszifratzeko-errorea."
-
-#: backend/kwalletbackend.cc:423
-msgid ""
-"Failed to sync wallet <b>%1</b> to disk. Error codes are:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Please file a BUG report using this information to bugs.kde.org"
-msgstr ""
-"Huts egin du <b>%1</b> zorroa diskoan sinkronizatzean. Error-kodeak:\n"
-"RC <b>%2</b>\n"
-"SF <b>%3</b>. Bidali akats-txosten bat informazioa erabiliz bugs.kde.org "
-"lekura"

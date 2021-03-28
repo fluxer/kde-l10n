@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdmgreet\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2014-05-07 22:40+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -19,17 +19,12 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kconsole.cpp:70
-msgid "*** Cannot connect to console log ***"
-msgstr "*** Konsool-Logbook lett sik nich faatkriegen ***"
-
-#: kconsole.cpp:154
-msgid ""
-"\n"
-"*** Lost connection with console log ***"
-msgstr ""
-"\n"
-"*** Verbinnen na Konsool-Logbook afreten ***"
+#: kdmconfig.cpp:133
+msgctxt ""
+"@item:intext substitution for an undefined %X placeholder wrongly given in "
+"the config file 'kdmrc', telling the user to fix it"
+msgid "[fix kdmrc]"
+msgstr "[bitte kdmrc richten]"
 
 #: kgdialog.cpp:57
 msgid "Sw&itch User"
@@ -60,58 +55,86 @@ msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kchooser.cpp:59
+#: kgreeter.cpp:482
+msgctxt "@item:inlistbox session type"
+msgid "Default"
+msgstr "Standard"
+
+#: kgreeter.cpp:483
+msgctxt "@item:inlistbox session type"
+msgid "Custom"
+msgstr "Egen"
+
+#: kgreeter.cpp:484
+msgctxt "@item:inlistbox session type"
+msgid "Failsafe"
+msgstr "Afsekert"
+
+#: kgreeter.cpp:560
+msgctxt "@item:inmenu session type"
+msgid "%1 (previous)"
+msgstr "%1 (verleden)"
+
+#: kgreeter.cpp:622
+msgid ""
+"Your saved session type '%1' is not valid any more.\n"
+"Please select a new one, otherwise 'default' will be used."
+msgstr ""
+"De sekerte Törntyp „%1“ gellt nich mehr.\n"
+"Bitte söök en niegen ut, anners warrt de Vörinstellen bruukt."
+
+#: kgreeter.cpp:750 kgverify.cpp:1085
+msgid "Login failed"
+msgstr "Anmellen fehlslaan"
+
+#: kgreeter.cpp:799
+msgctxt "@title:menu"
+msgid "Session &Type"
+msgstr "&Törntyp"
+
+#: kgreeter.cpp:805
+msgctxt "@title:menu"
+msgid "&Authentication Method"
+msgstr "&Identiteetprööv-Metood"
+
+#: kgreeter.cpp:810
 msgctxt "@action:inmenu"
-msgid "&Local Login"
-msgstr "&Lokaal anmellen"
+msgid "&Remote Login"
+msgstr "Op anner &Reekner anmellen"
 
-#: kchooser.cpp:63
-msgid "XDMCP Host Menu"
-msgstr "XDMCP-Reeknermenü"
+#: utils.cpp:87
+msgctxt "user: ..."
+msgid "%2: TTY login"
+msgid_plural "%2: %1 TTY logins"
+msgstr[0] "%2: TTY-Anmellen"
+msgstr[1] "%2: %1 TTY-Anmellen"
 
-#: kchooser.cpp:73
-msgctxt "@title:column"
-msgid "Hostname"
-msgstr "Reeknernaam"
+#: utils.cpp:99
+msgctxt "... session"
+msgid "Unused"
+msgstr "Nich in Bruuk"
 
-#: kchooser.cpp:74
-msgctxt "@title:column ... of named host"
-msgid "Status"
-msgstr "Tostand"
+#: utils.cpp:101
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: kchooser.cpp:82
-msgctxt "XDMCP server"
-msgid "Hos&t:"
-msgstr "&Reekner:"
+#: utils.cpp:103
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "X-Anmellen op %1"
 
-#: kchooser.cpp:84
-msgctxt "@action:button"
-msgid "A&dd"
-msgstr "&Tofögen"
+#: themer/kdmthemer.cpp:67
+msgid "Cannot open theme file %1"
+msgstr "De Musterdatei „%1“ lett sik nich opmaken"
 
-#: kchooser.cpp:93
-msgctxt "@action:button"
-msgid "&Accept"
-msgstr "Ö&vernehmen"
+#: themer/kdmthemer.cpp:72
+msgid "Cannot parse theme file %1"
+msgstr "Musterdatei „%1“ lett sik nich inlesen"
 
-#: kchooser.cpp:95
-msgctxt "@action:button"
-msgid "&Refresh"
-msgstr "&Opfrischen"
-
-#: kchooser.cpp:105
-msgctxt "@action:button"
-msgid "&Menu"
-msgstr "&Menü"
-
-#: kchooser.cpp:203
-msgctxt "hostname or status"
-msgid "<unknown>"
-msgstr "<nich begäng>"
-
-#: kchooser.cpp:242
-msgid "Unknown host %1"
-msgstr "Nich begäng Reekner %1"
+#: themer/kdmthemer.cpp:79
+msgid "%1 does not seem to be a correct theme file"
+msgstr "As't lett gellt „%1“ nich as Musterdatei"
 
 #: themer/kdmlabel.cpp:247
 msgctxt "@action:button"
@@ -195,162 +218,6 @@ msgstr[1] "%1 Sekunnen"
 msgctxt "date format"
 msgid "%a %d %B"
 msgstr "%a., de %d. %B"
-
-#: themer/kdmthemer.cpp:67
-msgid "Cannot open theme file %1"
-msgstr "De Musterdatei „%1“ lett sik nich opmaken"
-
-#: themer/kdmthemer.cpp:72
-msgid "Cannot parse theme file %1"
-msgstr "Musterdatei „%1“ lett sik nich inlesen"
-
-#: themer/kdmthemer.cpp:79
-msgid "%1 does not seem to be a correct theme file"
-msgstr "As't lett gellt „%1“ nich as Musterdatei"
-
-#: utils.cpp:87
-msgctxt "user: ..."
-msgid "%2: TTY login"
-msgid_plural "%2: %1 TTY logins"
-msgstr[0] "%2: TTY-Anmellen"
-msgstr[1] "%2: %1 TTY-Anmellen"
-
-#: utils.cpp:99
-msgctxt "... session"
-msgid "Unused"
-msgstr "Nich in Bruuk"
-
-#: utils.cpp:101
-msgctxt "user: session type"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: utils.cpp:103
-msgctxt "... host"
-msgid "X login on %1"
-msgstr "X-Anmellen op %1"
-
-#: kgverify.cpp:187
-msgid "No greeter widget plugin loaded. Check the configuration."
-msgstr "Keen Moduul för't Gröten laadt. Bitte prööv de Instellen."
-
-#: kgverify.cpp:496
-msgid ""
-"Logging in %1...\n"
-"\n"
-msgstr ""
-"%1 warrt anmeldt...\n"
-"\n"
-
-#: kgverify.cpp:500
-msgid "You are required to change your password immediately (password aged)."
-msgstr "Du muttst fuurts Dien Passwoort ännern, dat is to oolt."
-
-#: kgverify.cpp:501
-msgid "You are required to change your password immediately (root enforced)."
-msgstr "Du muttst fuurts Dien Passwoort ännern (Systeempleger-Anornen)"
-
-#: kgverify.cpp:502
-msgid "You are not allowed to login at the moment."
-msgstr "Du muttst Di opstunns nich anmellen."
-
-#: kgverify.cpp:503
-msgid "Home folder not available."
-msgstr "Tohuusorner nich verföögbor."
-
-#: kgverify.cpp:504
-msgid ""
-"Logins are not allowed at the moment.\n"
-"Try again later."
-msgstr ""
-"Opstunns sünd keen Anmellen tolaten.\n"
-"Versöök dat later nochmaal."
-
-#: kgverify.cpp:505
-msgid "Your login shell is not listed in /etc/shells."
-msgstr "Dien Anmell-Konsool is nich in /etc/shells oplist."
-
-#: kgverify.cpp:506
-msgid "Root logins are not allowed."
-msgstr "Dat Anmellen as Systeempleger is nich tolaten."
-
-#: kgverify.cpp:507
-msgid "Your account has expired; please contact your system administrator."
-msgstr "Dien Togang is aflopen, bitte snack mit Dien Systeempleger."
-
-#: kgverify.cpp:517
-msgid ""
-"A critical error occurred.\n"
-"Please look at KDM's logfile(s) for more information\n"
-"or contact your system administrator."
-msgstr ""
-"Dat geev en sworen Fehler.\n"
-"Bitte kiek binnen de Logbookdatei(en) vun KDM na mehr\n"
-"Informatschonen oder snack mit Dien Systeempleger."
-
-#: kgverify.cpp:542
-msgid "Your account expires tomorrow."
-msgid_plural "Your account expires in %1 days."
-msgstr[0] "Dien Togang löppt morgen af."
-msgstr[1] "Dien Togang löppt in %1 Daag af."
-
-#: kgverify.cpp:544
-msgid "Your account expires today."
-msgstr "Dien Togang löppt vundaag af."
-
-#: kgverify.cpp:550
-msgid "Your password expires tomorrow."
-msgid_plural "Your password expires in %1 days."
-msgstr[0] "Dien Passwoort löppt morgen af."
-msgstr[1] "Dien Passwoort löppt in %1 Daag af."
-
-#: kgverify.cpp:552
-msgid "Your password expires today."
-msgstr "Dien Passwoort löppt vundaag af."
-
-#: kgverify.cpp:626 kgverify.cpp:1086
-msgid "Authentication failed"
-msgstr "De Identiteetprööv is fehlslaan"
-
-#: kgverify.cpp:776
-msgid "Authenticated user (%1) does not match requested user (%2).\n"
-msgstr ""
-"De Bruker, vun den de Identiteet pröövt wöör (%1), is nich de nafraagte "
-"Bruker (%2).\n"
-
-#: kgverify.cpp:1067
-msgid "Automatic login in 1 second..."
-msgid_plural "Automatic login in %1 seconds..."
-msgstr[0] "Automaatsche Anmellen in 1 Sekunn..."
-msgstr[1] "Automaatsche Anmellen in %1 Sekunnen..."
-
-#: kgverify.cpp:1079
-msgid "Warning: Caps Lock is on"
-msgstr "Wohrschoen: Grootschriev-Rast is inleggt"
-
-#: kgverify.cpp:1083
-msgid "Change failed"
-msgstr "Ännern fehlslaan"
-
-#: kgverify.cpp:1085 kgreeter.cpp:750
-msgid "Login failed"
-msgstr "Anmellen fehlslaan"
-
-#: kgverify.cpp:1136
-msgid "Theme not usable with authentication method '%1'."
-msgstr "Dat Muster lett sik nich mit de Identiteetprööv-Metood „%1“ bruken."
-
-#: kgverify.cpp:1173
-msgctxt "@title:window"
-msgid "<qt><b>Changing authentication token</b></qt>"
-msgstr "<qt><b>Identiteetprööv-Teken ännern</b></qt>"
-
-#: kdmconfig.cpp:133
-msgctxt ""
-"@item:intext substitution for an undefined %X placeholder wrongly given in "
-"the config file 'kdmrc', telling the user to fix it"
-msgid "[fix kdmrc]"
-msgstr "[bitte kdmrc richten]"
 
 #: kdmshutdown.cpp:89
 msgid "Root authorization required."
@@ -541,45 +408,178 @@ msgstr ""
 "\n"
 "Na Tietafloop: %1"
 
-#: kgreeter.cpp:482
-msgctxt "@item:inlistbox session type"
-msgid "Default"
-msgstr "Standard"
+#: kgverify.cpp:187
+msgid "No greeter widget plugin loaded. Check the configuration."
+msgstr "Keen Moduul för't Gröten laadt. Bitte prööv de Instellen."
 
-#: kgreeter.cpp:483
-msgctxt "@item:inlistbox session type"
-msgid "Custom"
-msgstr "Egen"
-
-#: kgreeter.cpp:484
-msgctxt "@item:inlistbox session type"
-msgid "Failsafe"
-msgstr "Afsekert"
-
-#: kgreeter.cpp:560
-msgctxt "@item:inmenu session type"
-msgid "%1 (previous)"
-msgstr "%1 (verleden)"
-
-#: kgreeter.cpp:622
+#: kgverify.cpp:496
 msgid ""
-"Your saved session type '%1' is not valid any more.\n"
-"Please select a new one, otherwise 'default' will be used."
+"Logging in %1...\n"
+"\n"
 msgstr ""
-"De sekerte Törntyp „%1“ gellt nich mehr.\n"
-"Bitte söök en niegen ut, anners warrt de Vörinstellen bruukt."
+"%1 warrt anmeldt...\n"
+"\n"
 
-#: kgreeter.cpp:799
-msgctxt "@title:menu"
-msgid "Session &Type"
-msgstr "&Törntyp"
+#: kgverify.cpp:500
+msgid "You are required to change your password immediately (password aged)."
+msgstr "Du muttst fuurts Dien Passwoort ännern, dat is to oolt."
 
-#: kgreeter.cpp:805
-msgctxt "@title:menu"
-msgid "&Authentication Method"
-msgstr "&Identiteetprööv-Metood"
+#: kgverify.cpp:501
+msgid "You are required to change your password immediately (root enforced)."
+msgstr "Du muttst fuurts Dien Passwoort ännern (Systeempleger-Anornen)"
 
-#: kgreeter.cpp:810
+#: kgverify.cpp:502
+msgid "You are not allowed to login at the moment."
+msgstr "Du muttst Di opstunns nich anmellen."
+
+#: kgverify.cpp:503
+msgid "Home folder not available."
+msgstr "Tohuusorner nich verföögbor."
+
+#: kgverify.cpp:504
+msgid ""
+"Logins are not allowed at the moment.\n"
+"Try again later."
+msgstr ""
+"Opstunns sünd keen Anmellen tolaten.\n"
+"Versöök dat later nochmaal."
+
+#: kgverify.cpp:505
+msgid "Your login shell is not listed in /etc/shells."
+msgstr "Dien Anmell-Konsool is nich in /etc/shells oplist."
+
+#: kgverify.cpp:506
+msgid "Root logins are not allowed."
+msgstr "Dat Anmellen as Systeempleger is nich tolaten."
+
+#: kgverify.cpp:507
+msgid "Your account has expired; please contact your system administrator."
+msgstr "Dien Togang is aflopen, bitte snack mit Dien Systeempleger."
+
+#: kgverify.cpp:517
+msgid ""
+"A critical error occurred.\n"
+"Please look at KDM's logfile(s) for more information\n"
+"or contact your system administrator."
+msgstr ""
+"Dat geev en sworen Fehler.\n"
+"Bitte kiek binnen de Logbookdatei(en) vun KDM na mehr\n"
+"Informatschonen oder snack mit Dien Systeempleger."
+
+#: kgverify.cpp:542
+msgid "Your account expires tomorrow."
+msgid_plural "Your account expires in %1 days."
+msgstr[0] "Dien Togang löppt morgen af."
+msgstr[1] "Dien Togang löppt in %1 Daag af."
+
+#: kgverify.cpp:544
+msgid "Your account expires today."
+msgstr "Dien Togang löppt vundaag af."
+
+#: kgverify.cpp:550
+msgid "Your password expires tomorrow."
+msgid_plural "Your password expires in %1 days."
+msgstr[0] "Dien Passwoort löppt morgen af."
+msgstr[1] "Dien Passwoort löppt in %1 Daag af."
+
+#: kgverify.cpp:552
+msgid "Your password expires today."
+msgstr "Dien Passwoort löppt vundaag af."
+
+#: kgverify.cpp:626 kgverify.cpp:1086
+msgid "Authentication failed"
+msgstr "De Identiteetprööv is fehlslaan"
+
+#: kgverify.cpp:776
+msgid "Authenticated user (%1) does not match requested user (%2).\n"
+msgstr ""
+"De Bruker, vun den de Identiteet pröövt wöör (%1), is nich de nafraagte "
+"Bruker (%2).\n"
+
+#: kgverify.cpp:1067
+msgid "Automatic login in 1 second..."
+msgid_plural "Automatic login in %1 seconds..."
+msgstr[0] "Automaatsche Anmellen in 1 Sekunn..."
+msgstr[1] "Automaatsche Anmellen in %1 Sekunnen..."
+
+#: kgverify.cpp:1079
+msgid "Warning: Caps Lock is on"
+msgstr "Wohrschoen: Grootschriev-Rast is inleggt"
+
+#: kgverify.cpp:1083
+msgid "Change failed"
+msgstr "Ännern fehlslaan"
+
+#: kgverify.cpp:1136
+msgid "Theme not usable with authentication method '%1'."
+msgstr "Dat Muster lett sik nich mit de Identiteetprööv-Metood „%1“ bruken."
+
+#: kgverify.cpp:1173
+msgctxt "@title:window"
+msgid "<qt><b>Changing authentication token</b></qt>"
+msgstr "<qt><b>Identiteetprööv-Teken ännern</b></qt>"
+
+#: kchooser.cpp:59
 msgctxt "@action:inmenu"
-msgid "&Remote Login"
-msgstr "Op anner &Reekner anmellen"
+msgid "&Local Login"
+msgstr "&Lokaal anmellen"
+
+#: kchooser.cpp:63
+msgid "XDMCP Host Menu"
+msgstr "XDMCP-Reeknermenü"
+
+#: kchooser.cpp:73
+msgctxt "@title:column"
+msgid "Hostname"
+msgstr "Reeknernaam"
+
+#: kchooser.cpp:74
+msgctxt "@title:column ... of named host"
+msgid "Status"
+msgstr "Tostand"
+
+#: kchooser.cpp:82
+msgctxt "XDMCP server"
+msgid "Hos&t:"
+msgstr "&Reekner:"
+
+#: kchooser.cpp:84
+msgctxt "@action:button"
+msgid "A&dd"
+msgstr "&Tofögen"
+
+#: kchooser.cpp:93
+msgctxt "@action:button"
+msgid "&Accept"
+msgstr "Ö&vernehmen"
+
+#: kchooser.cpp:95
+msgctxt "@action:button"
+msgid "&Refresh"
+msgstr "&Opfrischen"
+
+#: kchooser.cpp:105
+msgctxt "@action:button"
+msgid "&Menu"
+msgstr "&Menü"
+
+#: kchooser.cpp:203
+msgctxt "hostname or status"
+msgid "<unknown>"
+msgstr "<nich begäng>"
+
+#: kchooser.cpp:242
+msgid "Unknown host %1"
+msgstr "Nich begäng Reekner %1"
+
+#: kconsole.cpp:68
+msgid "*** Cannot connect to console log ***"
+msgstr "*** Konsool-Logbook lett sik nich faatkriegen ***"
+
+#: kconsole.cpp:152
+msgid ""
+"\n"
+"*** Lost connection with console log ***"
+msgstr ""
+"\n"
+"*** Verbinnen na Konsool-Logbook afreten ***"

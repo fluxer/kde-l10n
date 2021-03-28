@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdmgreet\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2010-09-13 06:29+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -26,17 +26,12 @@ msgstr ""
 "\n"
 "\n"
 
-#: kconsole.cpp:70
-msgid "*** Cannot connect to console log ***"
-msgstr "*** Консоль журналымен қатынас болмады ***"
-
-#: kconsole.cpp:154
-msgid ""
-"\n"
-"*** Lost connection with console log ***"
-msgstr ""
-"\n"
-"*** Консоль журналымен қатынас ұзілді ***"
+#: kdmconfig.cpp:133
+msgctxt ""
+"@item:intext substitution for an undefined %X placeholder wrongly given in "
+"the config file 'kdmrc', telling the user to fix it"
+msgid "[fix kdmrc]"
+msgstr "[kdmrc-ты түзету]"
 
 #: kgdialog.cpp:57
 msgid "Sw&itch User"
@@ -67,58 +62,85 @@ msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kchooser.cpp:59
+#: kgreeter.cpp:482
+msgctxt "@item:inlistbox session type"
+msgid "Default"
+msgstr "Әдетті"
+
+#: kgreeter.cpp:483
+msgctxt "@item:inlistbox session type"
+msgid "Custom"
+msgstr "Қалауы бойынша"
+
+#: kgreeter.cpp:484
+msgctxt "@item:inlistbox session type"
+msgid "Failsafe"
+msgstr "Қираудан корғалған"
+
+#: kgreeter.cpp:560
+msgctxt "@item:inmenu session type"
+msgid "%1 (previous)"
+msgstr "%1 (алдыңғы)"
+
+#: kgreeter.cpp:622
+msgid ""
+"Your saved session type '%1' is not valid any more.\n"
+"Please select a new one, otherwise 'default' will be used."
+msgstr ""
+"Сақталған сеанстың '%1' деген түрі енді дұрыс емес.\n"
+"Жаңасын таңдаңыз немесе әдеттегі түрі қолданылады."
+
+#: kgreeter.cpp:750 kgverify.cpp:1085
+msgid "Login failed"
+msgstr "Жүйеге кіру жаңылысы"
+
+#: kgreeter.cpp:799
+msgctxt "@title:menu"
+msgid "Session &Type"
+msgstr "Сеанстың &түрі"
+
+#: kgreeter.cpp:805
+msgctxt "@title:menu"
+msgid "&Authentication Method"
+msgstr "&Аутентификациялау тәсілі"
+
+#: kgreeter.cpp:810
 msgctxt "@action:inmenu"
-msgid "&Local Login"
-msgstr "&Жергілікті жүйеге кіру"
+msgid "&Remote Login"
+msgstr "Қа&шықтан жүйеге кіру"
 
-#: kchooser.cpp:63
-msgid "XDMCP Host Menu"
-msgstr "XDMCP хосттың мәзірі"
+#: utils.cpp:87
+msgctxt "user: ..."
+msgid "%2: TTY login"
+msgid_plural "%2: %1 TTY logins"
+msgstr[0] "%2: %1 терминалмен кіру"
 
-#: kchooser.cpp:73
-msgctxt "@title:column"
-msgid "Hostname"
-msgstr "Хост атауы"
+#: utils.cpp:99
+msgctxt "... session"
+msgid "Unused"
+msgstr "Қолданылмайды"
 
-#: kchooser.cpp:74
-msgctxt "@title:column ... of named host"
-msgid "Status"
-msgstr "Күй-жайы"
+#: utils.cpp:101
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: kchooser.cpp:82
-msgctxt "XDMCP server"
-msgid "Hos&t:"
-msgstr "Хос&т:"
+#: utils.cpp:103
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "%1 хостта X кіру"
 
-#: kchooser.cpp:84
-msgctxt "@action:button"
-msgid "A&dd"
-msgstr "Қ&осу"
+#: themer/kdmthemer.cpp:67
+msgid "Cannot open theme file %1"
+msgstr "%1 нақыш файлы ашылмады"
 
-#: kchooser.cpp:93
-msgctxt "@action:button"
-msgid "&Accept"
-msgstr "Қа&былдау"
+#: themer/kdmthemer.cpp:72
+msgid "Cannot parse theme file %1"
+msgstr "%1 нақыш файлы талдауға келмейді"
 
-#: kchooser.cpp:95
-msgctxt "@action:button"
-msgid "&Refresh"
-msgstr "&Жаңарту"
-
-#: kchooser.cpp:105
-msgctxt "@action:button"
-msgid "&Menu"
-msgstr "&Мәзір"
-
-#: kchooser.cpp:203
-msgctxt "hostname or status"
-msgid "<unknown>"
-msgstr "<беймәлім>"
-
-#: kchooser.cpp:242
-msgid "Unknown host %1"
-msgstr "%1 деген беймәлім хост"
+#: themer/kdmthemer.cpp:79
+msgid "%1 does not seem to be a correct theme file"
+msgstr "%1 жарамды нақыш файлы емес сияқты"
 
 #: themer/kdmlabel.cpp:247
 msgctxt "@action:button"
@@ -201,158 +223,6 @@ msgstr[0] "%1 секунд"
 msgctxt "date format"
 msgid "%a %d %B"
 msgstr "%d %a %B"
-
-#: themer/kdmthemer.cpp:67
-msgid "Cannot open theme file %1"
-msgstr "%1 нақыш файлы ашылмады"
-
-#: themer/kdmthemer.cpp:72
-msgid "Cannot parse theme file %1"
-msgstr "%1 нақыш файлы талдауға келмейді"
-
-#: themer/kdmthemer.cpp:79
-msgid "%1 does not seem to be a correct theme file"
-msgstr "%1 жарамды нақыш файлы емес сияқты"
-
-#: utils.cpp:87
-msgctxt "user: ..."
-msgid "%2: TTY login"
-msgid_plural "%2: %1 TTY logins"
-msgstr[0] "%2: %1 терминалмен кіру"
-
-#: utils.cpp:99
-msgctxt "... session"
-msgid "Unused"
-msgstr "Қолданылмайды"
-
-#: utils.cpp:101
-msgctxt "user: session type"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: utils.cpp:103
-msgctxt "... host"
-msgid "X login on %1"
-msgstr "%1 хостта X кіру"
-
-#: kgverify.cpp:187
-msgid "No greeter widget plugin loaded. Check the configuration."
-msgstr "Сәлемдесу модулі жүктелмеген. Баптауды тексеріңіз."
-
-#: kgverify.cpp:496
-msgid ""
-"Logging in %1...\n"
-"\n"
-msgstr ""
-"%1 дегенге кіру...\n"
-"\n"
-
-#: kgverify.cpp:500
-msgid "You are required to change your password immediately (password aged)."
-msgstr "Парольді қазір өзгертуіңіз қажет (парольдің мерзімі бітті)."
-
-#: kgverify.cpp:501
-msgid "You are required to change your password immediately (root enforced)."
-msgstr "Парольді қазір өзгертуіңіз қажет (әкімшінің талабы)."
-
-#: kgverify.cpp:502
-msgid "You are not allowed to login at the moment."
-msgstr "Дәл қазір Сізге жүйеге кіруге рұқсат жоқ."
-
-#: kgverify.cpp:503
-msgid "Home folder not available."
-msgstr "Мекен қапшығы қол жеткізбеуде."
-
-#: kgverify.cpp:504
-msgid ""
-"Logins are not allowed at the moment.\n"
-"Try again later."
-msgstr ""
-"Дәл қазір жүйеге кіруге рұқсат жоқ.\n"
-"Кейінірек қайталап көріңіз."
-
-#: kgverify.cpp:505
-msgid "Your login shell is not listed in /etc/shells."
-msgstr "Сіздің қоршау-ортаңыз /etc/shells тізімінде жоқ."
-
-#: kgverify.cpp:506
-msgid "Root logins are not allowed."
-msgstr "Root ретінде жүйеге кіруіңізге рұқсат жоқ."
-
-#: kgverify.cpp:507
-msgid "Your account has expired; please contact your system administrator."
-msgstr "Тіркелгіңіздің мерзімі бітті. Жүйе әкімшісімен байланысыңыз."
-
-#: kgverify.cpp:517
-msgid ""
-"A critical error occurred.\n"
-"Please look at KDM's logfile(s) for more information\n"
-"or contact your system administrator."
-msgstr ""
-"Дағдарыстық қате пайда болды.\n"
-"KDM журналын қараңыз не жүйе әкімшісімен\n"
-"байланысыңыз."
-
-#: kgverify.cpp:542
-msgid "Your account expires tomorrow."
-msgid_plural "Your account expires in %1 days."
-msgstr[0] "Тіркелгіңіздің мерзімі %1 күннен кейін бітеді."
-
-#: kgverify.cpp:544
-msgid "Your account expires today."
-msgstr "Тіркелгіңіздің мерзімі бүгін бітеді."
-
-#: kgverify.cpp:550
-msgid "Your password expires tomorrow."
-msgid_plural "Your password expires in %1 days."
-msgstr[0] "Пароліңіздің мерзімі %1 күннен кейін бітеді."
-
-#: kgverify.cpp:552
-msgid "Your password expires today."
-msgstr "Пароліңіздің мерзімі бүгін бітеді."
-
-#: kgverify.cpp:626 kgverify.cpp:1086
-msgid "Authentication failed"
-msgstr "Идентификациялау қатесі"
-
-#: kgverify.cpp:776
-msgid "Authenticated user (%1) does not match requested user (%2).\n"
-msgstr ""
-"Идентификацияланған пайдаланушы (%1) талап етілген\n"
-"пайдаланушыға (%2) сәйкес келмейді.\n"
-
-#: kgverify.cpp:1067
-msgid "Automatic login in 1 second..."
-msgid_plural "Automatic login in %1 seconds..."
-msgstr[0] "%1 секундтан кейін автоматты түрде жүйеге кіру..."
-
-#: kgverify.cpp:1079
-msgid "Warning: Caps Lock is on"
-msgstr "Ескерту: Caps Lock қосылған"
-
-#: kgverify.cpp:1083
-msgid "Change failed"
-msgstr "Парольді өзгерту қатесі"
-
-#: kgverify.cpp:1085 kgreeter.cpp:750
-msgid "Login failed"
-msgstr "Жүйеге кіру жаңылысы"
-
-#: kgverify.cpp:1136
-msgid "Theme not usable with authentication method '%1'."
-msgstr "Бұл нақыш '%1' аутентификациялау әдісімен үйлеспейді."
-
-#: kgverify.cpp:1173
-msgctxt "@title:window"
-msgid "<qt><b>Changing authentication token</b></qt>"
-msgstr "<qt><b>Аутентификациялауды өзгерту</b></qt>"
-
-#: kdmconfig.cpp:133
-msgctxt ""
-"@item:intext substitution for an undefined %X placeholder wrongly given in "
-"the config file 'kdmrc', telling the user to fix it"
-msgid "[fix kdmrc]"
-msgstr "[kdmrc-ты түзету]"
 
 #: kdmshutdown.cpp:89
 msgid "Root authorization required."
@@ -543,45 +413,175 @@ msgstr ""
 "\n"
 "Келесі уақытынан кейін: %1"
 
-#: kgreeter.cpp:482
-msgctxt "@item:inlistbox session type"
-msgid "Default"
-msgstr "Әдетті"
+#: kgverify.cpp:187
+msgid "No greeter widget plugin loaded. Check the configuration."
+msgstr "Сәлемдесу модулі жүктелмеген. Баптауды тексеріңіз."
 
-#: kgreeter.cpp:483
-msgctxt "@item:inlistbox session type"
-msgid "Custom"
-msgstr "Қалауы бойынша"
-
-#: kgreeter.cpp:484
-msgctxt "@item:inlistbox session type"
-msgid "Failsafe"
-msgstr "Қираудан корғалған"
-
-#: kgreeter.cpp:560
-msgctxt "@item:inmenu session type"
-msgid "%1 (previous)"
-msgstr "%1 (алдыңғы)"
-
-#: kgreeter.cpp:622
+#: kgverify.cpp:496
 msgid ""
-"Your saved session type '%1' is not valid any more.\n"
-"Please select a new one, otherwise 'default' will be used."
+"Logging in %1...\n"
+"\n"
 msgstr ""
-"Сақталған сеанстың '%1' деген түрі енді дұрыс емес.\n"
-"Жаңасын таңдаңыз немесе әдеттегі түрі қолданылады."
+"%1 дегенге кіру...\n"
+"\n"
 
-#: kgreeter.cpp:799
-msgctxt "@title:menu"
-msgid "Session &Type"
-msgstr "Сеанстың &түрі"
+#: kgverify.cpp:500
+msgid "You are required to change your password immediately (password aged)."
+msgstr "Парольді қазір өзгертуіңіз қажет (парольдің мерзімі бітті)."
 
-#: kgreeter.cpp:805
-msgctxt "@title:menu"
-msgid "&Authentication Method"
-msgstr "&Аутентификациялау тәсілі"
+#: kgverify.cpp:501
+msgid "You are required to change your password immediately (root enforced)."
+msgstr "Парольді қазір өзгертуіңіз қажет (әкімшінің талабы)."
 
-#: kgreeter.cpp:810
+#: kgverify.cpp:502
+msgid "You are not allowed to login at the moment."
+msgstr "Дәл қазір Сізге жүйеге кіруге рұқсат жоқ."
+
+#: kgverify.cpp:503
+msgid "Home folder not available."
+msgstr "Мекен қапшығы қол жеткізбеуде."
+
+#: kgverify.cpp:504
+msgid ""
+"Logins are not allowed at the moment.\n"
+"Try again later."
+msgstr ""
+"Дәл қазір жүйеге кіруге рұқсат жоқ.\n"
+"Кейінірек қайталап көріңіз."
+
+#: kgverify.cpp:505
+msgid "Your login shell is not listed in /etc/shells."
+msgstr "Сіздің қоршау-ортаңыз /etc/shells тізімінде жоқ."
+
+#: kgverify.cpp:506
+msgid "Root logins are not allowed."
+msgstr "Root ретінде жүйеге кіруіңізге рұқсат жоқ."
+
+#: kgverify.cpp:507
+msgid "Your account has expired; please contact your system administrator."
+msgstr "Тіркелгіңіздің мерзімі бітті. Жүйе әкімшісімен байланысыңыз."
+
+#: kgverify.cpp:517
+msgid ""
+"A critical error occurred.\n"
+"Please look at KDM's logfile(s) for more information\n"
+"or contact your system administrator."
+msgstr ""
+"Дағдарыстық қате пайда болды.\n"
+"KDM журналын қараңыз не жүйе әкімшісімен\n"
+"байланысыңыз."
+
+#: kgverify.cpp:542
+msgid "Your account expires tomorrow."
+msgid_plural "Your account expires in %1 days."
+msgstr[0] "Тіркелгіңіздің мерзімі %1 күннен кейін бітеді."
+
+#: kgverify.cpp:544
+msgid "Your account expires today."
+msgstr "Тіркелгіңіздің мерзімі бүгін бітеді."
+
+#: kgverify.cpp:550
+msgid "Your password expires tomorrow."
+msgid_plural "Your password expires in %1 days."
+msgstr[0] "Пароліңіздің мерзімі %1 күннен кейін бітеді."
+
+#: kgverify.cpp:552
+msgid "Your password expires today."
+msgstr "Пароліңіздің мерзімі бүгін бітеді."
+
+#: kgverify.cpp:626 kgverify.cpp:1086
+msgid "Authentication failed"
+msgstr "Идентификациялау қатесі"
+
+#: kgverify.cpp:776
+msgid "Authenticated user (%1) does not match requested user (%2).\n"
+msgstr ""
+"Идентификацияланған пайдаланушы (%1) талап етілген\n"
+"пайдаланушыға (%2) сәйкес келмейді.\n"
+
+#: kgverify.cpp:1067
+msgid "Automatic login in 1 second..."
+msgid_plural "Automatic login in %1 seconds..."
+msgstr[0] "%1 секундтан кейін автоматты түрде жүйеге кіру..."
+
+#: kgverify.cpp:1079
+msgid "Warning: Caps Lock is on"
+msgstr "Ескерту: Caps Lock қосылған"
+
+#: kgverify.cpp:1083
+msgid "Change failed"
+msgstr "Парольді өзгерту қатесі"
+
+#: kgverify.cpp:1136
+msgid "Theme not usable with authentication method '%1'."
+msgstr "Бұл нақыш '%1' аутентификациялау әдісімен үйлеспейді."
+
+#: kgverify.cpp:1173
+msgctxt "@title:window"
+msgid "<qt><b>Changing authentication token</b></qt>"
+msgstr "<qt><b>Аутентификациялауды өзгерту</b></qt>"
+
+#: kchooser.cpp:59
 msgctxt "@action:inmenu"
-msgid "&Remote Login"
-msgstr "Қа&шықтан жүйеге кіру"
+msgid "&Local Login"
+msgstr "&Жергілікті жүйеге кіру"
+
+#: kchooser.cpp:63
+msgid "XDMCP Host Menu"
+msgstr "XDMCP хосттың мәзірі"
+
+#: kchooser.cpp:73
+msgctxt "@title:column"
+msgid "Hostname"
+msgstr "Хост атауы"
+
+#: kchooser.cpp:74
+msgctxt "@title:column ... of named host"
+msgid "Status"
+msgstr "Күй-жайы"
+
+#: kchooser.cpp:82
+msgctxt "XDMCP server"
+msgid "Hos&t:"
+msgstr "Хос&т:"
+
+#: kchooser.cpp:84
+msgctxt "@action:button"
+msgid "A&dd"
+msgstr "Қ&осу"
+
+#: kchooser.cpp:93
+msgctxt "@action:button"
+msgid "&Accept"
+msgstr "Қа&былдау"
+
+#: kchooser.cpp:95
+msgctxt "@action:button"
+msgid "&Refresh"
+msgstr "&Жаңарту"
+
+#: kchooser.cpp:105
+msgctxt "@action:button"
+msgid "&Menu"
+msgstr "&Мәзір"
+
+#: kchooser.cpp:203
+msgctxt "hostname or status"
+msgid "<unknown>"
+msgstr "<беймәлім>"
+
+#: kchooser.cpp:242
+msgid "Unknown host %1"
+msgstr "%1 деген беймәлім хост"
+
+#: kconsole.cpp:68
+msgid "*** Cannot connect to console log ***"
+msgstr "*** Консоль журналымен қатынас болмады ***"
+
+#: kconsole.cpp:152
+msgid ""
+"\n"
+"*** Lost connection with console log ***"
+msgstr ""
+"\n"
+"*** Консоль журналымен қатынас ұзілді ***"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdmgreet\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2013-07-08 00:23+0200\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -24,17 +24,12 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: kconsole.cpp:70
-msgid "*** Cannot connect to console log ***"
-msgstr "*** Konsol günlüğüne bağlanılamıyor ***"
-
-#: kconsole.cpp:154
-msgid ""
-"\n"
-"*** Lost connection with console log ***"
-msgstr ""
-"\n"
-"*** Konsol günlüğüne yapılan bağlantı kesildi ***"
+#: kdmconfig.cpp:133
+msgctxt ""
+"@item:intext substitution for an undefined %X placeholder wrongly given in "
+"the config file 'kdmrc', telling the user to fix it"
+msgid "[fix kdmrc]"
+msgstr "[fix kdmrc]"
 
 #: kgdialog.cpp:57
 msgid "Sw&itch User"
@@ -65,58 +60,87 @@ msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kchooser.cpp:59
+#: kgreeter.cpp:482
+msgctxt "@item:inlistbox session type"
+msgid "Default"
+msgstr "Öntanımlı"
+
+#: kgreeter.cpp:483
+msgctxt "@item:inlistbox session type"
+msgid "Custom"
+msgstr "Özel"
+
+#: kgreeter.cpp:484
+msgctxt "@item:inlistbox session type"
+msgid "Failsafe"
+msgstr "Hatasız giriş"
+
+#: kgreeter.cpp:560
+msgctxt "@item:inmenu session type"
+msgid "%1 (previous)"
+msgstr "%1 (önceki)"
+
+#: kgreeter.cpp:622
+msgid ""
+"Your saved session type '%1' is not valid any more.\n"
+"Please select a new one, otherwise 'default' will be used."
+msgstr ""
+"Kayıtlı oturum türü (%1) artık geçerli değil.\n"
+"Yeni bir oturum türü seçin. Eğer seçim yapılmaz ise 'öntanımlı' "
+"kullanılacaktır."
+
+#: kgreeter.cpp:750 kgverify.cpp:1085
+msgid "Login failed"
+msgstr "Giriş başarısız"
+
+#: kgreeter.cpp:799
+msgctxt "@title:menu"
+msgid "Session &Type"
+msgstr "&Oturum Tipi"
+
+#: kgreeter.cpp:805
+msgctxt "@title:menu"
+msgid "&Authentication Method"
+msgstr "&Kimlik Doğrulama Yöntemi"
+
+#: kgreeter.cpp:810
 msgctxt "@action:inmenu"
-msgid "&Local Login"
-msgstr "&Yerel Giriş"
+msgid "&Remote Login"
+msgstr "&Uzaktan Giriş"
 
-#: kchooser.cpp:63
-msgid "XDMCP Host Menu"
-msgstr "XDMCP Bilgisayar Menüsü"
+#: utils.cpp:87
+msgctxt "user: ..."
+msgid "%2: TTY login"
+msgid_plural "%2: %1 TTY logins"
+msgstr[0] "%2: %1 TTY girişi"
+msgstr[1] "%2: %1 TTY girişi"
 
-#: kchooser.cpp:73
-msgctxt "@title:column"
-msgid "Hostname"
-msgstr "Makine adı"
+#: utils.cpp:99
+msgctxt "... session"
+msgid "Unused"
+msgstr "Kullanılmayan"
 
-#: kchooser.cpp:74
-msgctxt "@title:column ... of named host"
-msgid "Status"
-msgstr "Durum"
+#: utils.cpp:101
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: kchooser.cpp:82
-msgctxt "XDMCP server"
-msgid "Hos&t:"
-msgstr "&Makine:"
+#: utils.cpp:103
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "%1 makinesinde grafik ekran girişi"
 
-#: kchooser.cpp:84
-msgctxt "@action:button"
-msgid "A&dd"
-msgstr "&Ekle"
+#: themer/kdmthemer.cpp:67
+msgid "Cannot open theme file %1"
+msgstr "%1 tema dosyası açılamadı"
 
-#: kchooser.cpp:93
-msgctxt "@action:button"
-msgid "&Accept"
-msgstr "&Onayla"
+#: themer/kdmthemer.cpp:72
+msgid "Cannot parse theme file %1"
+msgstr "%1 tema dosyası açılamadı"
 
-#: kchooser.cpp:95
-msgctxt "@action:button"
-msgid "&Refresh"
-msgstr "&Tazele"
-
-#: kchooser.cpp:105
-msgctxt "@action:button"
-msgid "&Menu"
-msgstr "&Menü"
-
-#: kchooser.cpp:203
-msgctxt "hostname or status"
-msgid "<unknown>"
-msgstr "<bilinmeyen>"
-
-#: kchooser.cpp:242
-msgid "Unknown host %1"
-msgstr "Bilinmeyen makine: %1"
+#: themer/kdmthemer.cpp:79
+msgid "%1 does not seem to be a correct theme file"
+msgstr "%1 doğru bir tema dosyası gibi görünmüyor"
 
 #: themer/kdmlabel.cpp:247
 msgctxt "@action:button"
@@ -200,162 +224,6 @@ msgstr[1] "%1 saniye"
 msgctxt "date format"
 msgid "%a %d %B"
 msgstr "%d %B %a"
-
-#: themer/kdmthemer.cpp:67
-msgid "Cannot open theme file %1"
-msgstr "%1 tema dosyası açılamadı"
-
-#: themer/kdmthemer.cpp:72
-msgid "Cannot parse theme file %1"
-msgstr "%1 tema dosyası açılamadı"
-
-#: themer/kdmthemer.cpp:79
-msgid "%1 does not seem to be a correct theme file"
-msgstr "%1 doğru bir tema dosyası gibi görünmüyor"
-
-#: utils.cpp:87
-msgctxt "user: ..."
-msgid "%2: TTY login"
-msgid_plural "%2: %1 TTY logins"
-msgstr[0] "%2: %1 TTY girişi"
-msgstr[1] "%2: %1 TTY girişi"
-
-#: utils.cpp:99
-msgctxt "... session"
-msgid "Unused"
-msgstr "Kullanılmayan"
-
-#: utils.cpp:101
-msgctxt "user: session type"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: utils.cpp:103
-msgctxt "... host"
-msgid "X login on %1"
-msgstr "%1 makinesinde grafik ekran girişi"
-
-#: kgverify.cpp:187
-msgid "No greeter widget plugin loaded. Check the configuration."
-msgstr ""
-"Hiç karşılama parçacığı eklentisi yüklenmedi. Yapılandırmayı kontrol edin."
-
-#: kgverify.cpp:496
-msgid ""
-"Logging in %1...\n"
-"\n"
-msgstr ""
-"%1 giriş yapılıyor...\n"
-"\n"
-
-#: kgverify.cpp:500
-msgid "You are required to change your password immediately (password aged)."
-msgstr "Parolanızı hemen değiştirmeniz gerekiyor."
-
-#: kgverify.cpp:501
-msgid "You are required to change your password immediately (root enforced)."
-msgstr "Parolanızı hemen değiştirmeniz gerekiyor."
-
-#: kgverify.cpp:502
-msgid "You are not allowed to login at the moment."
-msgstr "Şu anda giriş yapmanıza izin verilmemektedir."
-
-#: kgverify.cpp:503
-msgid "Home folder not available."
-msgstr "Ev dizini bulunamadı."
-
-#: kgverify.cpp:504
-msgid ""
-"Logins are not allowed at the moment.\n"
-"Try again later."
-msgstr ""
-"Şu anda giriş kabul edemiyoruz.\n"
-"Lütfen daha sonra deneyiniz."
-
-#: kgverify.cpp:505
-msgid "Your login shell is not listed in /etc/shells."
-msgstr "Kullandığınız giriş kabuğu /etc/shells dosyasında bulunmuyor."
-
-#: kgverify.cpp:506
-msgid "Root logins are not allowed."
-msgstr "Root kullanıcı girişlerine izin verilmiyor."
-
-#: kgverify.cpp:507
-msgid "Your account has expired; please contact your system administrator."
-msgstr "Hesabınızın süresi dolmuş. Lütfen sistem yöneticiniz ile görüşün."
-
-#: kgverify.cpp:517
-msgid ""
-"A critical error occurred.\n"
-"Please look at KDM's logfile(s) for more information\n"
-"or contact your system administrator."
-msgstr ""
-"Önemli bir hata oluştu.\n"
-"Lütfen daha geniş bilgi için KDM kayıt dosyalarına \n"
-"bakın, ya da sistem yöneticinize başvurun."
-
-#: kgverify.cpp:542
-msgid "Your account expires tomorrow."
-msgid_plural "Your account expires in %1 days."
-msgstr[0] "Hesabınızın süresi %1 gün sonra doluyor."
-msgstr[1] "Hesabınızın süresi %1 gün sonra doluyor."
-
-#: kgverify.cpp:544
-msgid "Your account expires today."
-msgstr "Hesabınızın süresi bugün doluyor."
-
-#: kgverify.cpp:550
-msgid "Your password expires tomorrow."
-msgid_plural "Your password expires in %1 days."
-msgstr[0] "Parolanızın süresi %1 gün sonra doluyor."
-msgstr[1] "Parolanızın süresi %1 gün sonra doluyor."
-
-#: kgverify.cpp:552
-msgid "Your password expires today."
-msgstr "Parolanız bugün doluyor."
-
-#: kgverify.cpp:626 kgverify.cpp:1086
-msgid "Authentication failed"
-msgstr "Kimlik sınamasında hata oluştu"
-
-#: kgverify.cpp:776
-msgid "Authenticated user (%1) does not match requested user (%2).\n"
-msgstr ""
-"Kimliği doğrulanmış olan kullanıcı (%1) istenilen kullanıcı değil (%2).\n"
-
-#: kgverify.cpp:1067
-msgid "Automatic login in 1 second..."
-msgid_plural "Automatic login in %1 seconds..."
-msgstr[0] "%1 saniye içerisinde otomatik giriş yapılacak..."
-msgstr[1] "%1 saniye içerisinde otomatik giriş yapılacak..."
-
-#: kgverify.cpp:1079
-msgid "Warning: Caps Lock is on"
-msgstr "Uyarı: Caps tuşu basılı durumda"
-
-#: kgverify.cpp:1083
-msgid "Change failed"
-msgstr "Değiştirme işlemi başarısız"
-
-#: kgverify.cpp:1085 kgreeter.cpp:750
-msgid "Login failed"
-msgstr "Giriş başarısız"
-
-#: kgverify.cpp:1136
-msgid "Theme not usable with authentication method '%1'."
-msgstr "Tema '%1' doğrulama yöntemi ile birlikte kullanılabilir değil."
-
-#: kgverify.cpp:1173
-msgctxt "@title:window"
-msgid "<qt><b>Changing authentication token</b></qt>"
-msgstr "<qt><b> Kimlik sınama anahtarı değiştiriliyor</b></qt>"
-
-#: kdmconfig.cpp:133
-msgctxt ""
-"@item:intext substitution for an undefined %X placeholder wrongly given in "
-"the config file 'kdmrc', telling the user to fix it"
-msgid "[fix kdmrc]"
-msgstr "[fix kdmrc]"
 
 #: kdmshutdown.cpp:89
 msgid "Root authorization required."
@@ -546,46 +414,178 @@ msgstr ""
 "\n"
 "Süre bitiminden sonra: %1"
 
-#: kgreeter.cpp:482
-msgctxt "@item:inlistbox session type"
-msgid "Default"
-msgstr "Öntanımlı"
-
-#: kgreeter.cpp:483
-msgctxt "@item:inlistbox session type"
-msgid "Custom"
-msgstr "Özel"
-
-#: kgreeter.cpp:484
-msgctxt "@item:inlistbox session type"
-msgid "Failsafe"
-msgstr "Hatasız giriş"
-
-#: kgreeter.cpp:560
-msgctxt "@item:inmenu session type"
-msgid "%1 (previous)"
-msgstr "%1 (önceki)"
-
-#: kgreeter.cpp:622
-msgid ""
-"Your saved session type '%1' is not valid any more.\n"
-"Please select a new one, otherwise 'default' will be used."
+#: kgverify.cpp:187
+msgid "No greeter widget plugin loaded. Check the configuration."
 msgstr ""
-"Kayıtlı oturum türü (%1) artık geçerli değil.\n"
-"Yeni bir oturum türü seçin. Eğer seçim yapılmaz ise 'öntanımlı' "
-"kullanılacaktır."
+"Hiç karşılama parçacığı eklentisi yüklenmedi. Yapılandırmayı kontrol edin."
 
-#: kgreeter.cpp:799
-msgctxt "@title:menu"
-msgid "Session &Type"
-msgstr "&Oturum Tipi"
+#: kgverify.cpp:496
+msgid ""
+"Logging in %1...\n"
+"\n"
+msgstr ""
+"%1 giriş yapılıyor...\n"
+"\n"
 
-#: kgreeter.cpp:805
-msgctxt "@title:menu"
-msgid "&Authentication Method"
-msgstr "&Kimlik Doğrulama Yöntemi"
+#: kgverify.cpp:500
+msgid "You are required to change your password immediately (password aged)."
+msgstr "Parolanızı hemen değiştirmeniz gerekiyor."
 
-#: kgreeter.cpp:810
+#: kgverify.cpp:501
+msgid "You are required to change your password immediately (root enforced)."
+msgstr "Parolanızı hemen değiştirmeniz gerekiyor."
+
+#: kgverify.cpp:502
+msgid "You are not allowed to login at the moment."
+msgstr "Şu anda giriş yapmanıza izin verilmemektedir."
+
+#: kgverify.cpp:503
+msgid "Home folder not available."
+msgstr "Ev dizini bulunamadı."
+
+#: kgverify.cpp:504
+msgid ""
+"Logins are not allowed at the moment.\n"
+"Try again later."
+msgstr ""
+"Şu anda giriş kabul edemiyoruz.\n"
+"Lütfen daha sonra deneyiniz."
+
+#: kgverify.cpp:505
+msgid "Your login shell is not listed in /etc/shells."
+msgstr "Kullandığınız giriş kabuğu /etc/shells dosyasında bulunmuyor."
+
+#: kgverify.cpp:506
+msgid "Root logins are not allowed."
+msgstr "Root kullanıcı girişlerine izin verilmiyor."
+
+#: kgverify.cpp:507
+msgid "Your account has expired; please contact your system administrator."
+msgstr "Hesabınızın süresi dolmuş. Lütfen sistem yöneticiniz ile görüşün."
+
+#: kgverify.cpp:517
+msgid ""
+"A critical error occurred.\n"
+"Please look at KDM's logfile(s) for more information\n"
+"or contact your system administrator."
+msgstr ""
+"Önemli bir hata oluştu.\n"
+"Lütfen daha geniş bilgi için KDM kayıt dosyalarına \n"
+"bakın, ya da sistem yöneticinize başvurun."
+
+#: kgverify.cpp:542
+msgid "Your account expires tomorrow."
+msgid_plural "Your account expires in %1 days."
+msgstr[0] "Hesabınızın süresi %1 gün sonra doluyor."
+msgstr[1] "Hesabınızın süresi %1 gün sonra doluyor."
+
+#: kgverify.cpp:544
+msgid "Your account expires today."
+msgstr "Hesabınızın süresi bugün doluyor."
+
+#: kgverify.cpp:550
+msgid "Your password expires tomorrow."
+msgid_plural "Your password expires in %1 days."
+msgstr[0] "Parolanızın süresi %1 gün sonra doluyor."
+msgstr[1] "Parolanızın süresi %1 gün sonra doluyor."
+
+#: kgverify.cpp:552
+msgid "Your password expires today."
+msgstr "Parolanız bugün doluyor."
+
+#: kgverify.cpp:626 kgverify.cpp:1086
+msgid "Authentication failed"
+msgstr "Kimlik sınamasında hata oluştu"
+
+#: kgverify.cpp:776
+msgid "Authenticated user (%1) does not match requested user (%2).\n"
+msgstr ""
+"Kimliği doğrulanmış olan kullanıcı (%1) istenilen kullanıcı değil (%2).\n"
+
+#: kgverify.cpp:1067
+msgid "Automatic login in 1 second..."
+msgid_plural "Automatic login in %1 seconds..."
+msgstr[0] "%1 saniye içerisinde otomatik giriş yapılacak..."
+msgstr[1] "%1 saniye içerisinde otomatik giriş yapılacak..."
+
+#: kgverify.cpp:1079
+msgid "Warning: Caps Lock is on"
+msgstr "Uyarı: Caps tuşu basılı durumda"
+
+#: kgverify.cpp:1083
+msgid "Change failed"
+msgstr "Değiştirme işlemi başarısız"
+
+#: kgverify.cpp:1136
+msgid "Theme not usable with authentication method '%1'."
+msgstr "Tema '%1' doğrulama yöntemi ile birlikte kullanılabilir değil."
+
+#: kgverify.cpp:1173
+msgctxt "@title:window"
+msgid "<qt><b>Changing authentication token</b></qt>"
+msgstr "<qt><b> Kimlik sınama anahtarı değiştiriliyor</b></qt>"
+
+#: kchooser.cpp:59
 msgctxt "@action:inmenu"
-msgid "&Remote Login"
-msgstr "&Uzaktan Giriş"
+msgid "&Local Login"
+msgstr "&Yerel Giriş"
+
+#: kchooser.cpp:63
+msgid "XDMCP Host Menu"
+msgstr "XDMCP Bilgisayar Menüsü"
+
+#: kchooser.cpp:73
+msgctxt "@title:column"
+msgid "Hostname"
+msgstr "Makine adı"
+
+#: kchooser.cpp:74
+msgctxt "@title:column ... of named host"
+msgid "Status"
+msgstr "Durum"
+
+#: kchooser.cpp:82
+msgctxt "XDMCP server"
+msgid "Hos&t:"
+msgstr "&Makine:"
+
+#: kchooser.cpp:84
+msgctxt "@action:button"
+msgid "A&dd"
+msgstr "&Ekle"
+
+#: kchooser.cpp:93
+msgctxt "@action:button"
+msgid "&Accept"
+msgstr "&Onayla"
+
+#: kchooser.cpp:95
+msgctxt "@action:button"
+msgid "&Refresh"
+msgstr "&Tazele"
+
+#: kchooser.cpp:105
+msgctxt "@action:button"
+msgid "&Menu"
+msgstr "&Menü"
+
+#: kchooser.cpp:203
+msgctxt "hostname or status"
+msgid "<unknown>"
+msgstr "<bilinmeyen>"
+
+#: kchooser.cpp:242
+msgid "Unknown host %1"
+msgstr "Bilinmeyen makine: %1"
+
+#: kconsole.cpp:68
+msgid "*** Cannot connect to console log ***"
+msgstr "*** Konsol günlüğüne bağlanılamıyor ***"
+
+#: kconsole.cpp:152
+msgid ""
+"\n"
+"*** Lost connection with console log ***"
+msgstr ""
+"\n"
+"*** Konsol günlüğüne yapılan bağlantı kesildi ***"

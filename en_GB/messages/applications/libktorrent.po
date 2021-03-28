@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2015-11-05 07:06+0200\n"
+"POT-Creation-Date: 2021-03-28 14:18+0300\n"
 "PO-Revision-Date: 2010-06-22 23:42+0100\n"
 "Last-Translator: Andrew Coles <andrew_coles@yahoo.co.uk>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
@@ -19,34 +19,130 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: examples/ktcli/main.cpp:60
-#, fuzzy
-msgid "Torrent to open"
-msgstr "Document to open"
+#: src/download/webseed.cpp:52 src/download/webseed.cpp:99
+#: src/download/httpconnection.cpp:44
+msgid "Not connected"
+msgstr "Not connected"
 
-#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
-#, fuzzy
-msgid "Port to use"
-msgstr "Not in use"
+#: src/download/webseed.cpp:348 src/download/httpconnection.cpp:153
+msgid "Connection closed"
+msgstr "Connection closed"
 
-#: examples/ktcli/main.cpp:63
-#, fuzzy
-msgid "Whether or not to enable encryption"
-msgstr "Whether or not to enable a custom download order."
-
-#: examples/ktcli/main.cpp:64
-#, fuzzy
-msgid "Whether or not to enable peer exchange"
-msgstr "Whether or not to use µTorrent compatible peer exchange."
-
-#: examples/ktcli/main.cpp:65
-#, fuzzy
-msgid "Whether or not to use utp"
-msgstr "Whether or not to show system tray popup messages."
-
-#: examples/ktcli/main.cpp:67
-msgid "ktcli"
+#: src/download/webseed.cpp:558
+msgid "Unused for %1 seconds (Too many connection failures)"
 msgstr ""
+
+#: src/download/httpconnection.cpp:115
+msgid "Resolving proxy %1:%2"
+msgstr "Resolving proxy %1:%2"
+
+#: src/download/httpconnection.cpp:121 src/download/httpconnection.cpp:139
+#, fuzzy
+msgid "Not enough system resources available"
+msgstr "There is not enough diskspace available."
+
+#: src/download/httpconnection.cpp:133
+msgid "Resolving hostname %1"
+msgstr "Resolving hostname %1"
+
+#: src/download/httpconnection.cpp:160
+msgid "Error: request failed: %1"
+msgstr "Error: request failed: %1"
+
+#: src/download/httpconnection.cpp:188 src/download/httpconnection.cpp:222
+msgid "Connected"
+msgstr "Connected"
+
+#: src/download/httpconnection.cpp:199
+msgid "Error: Failed to connect to webseed"
+msgstr "Error: Failed to connect to webseed"
+
+#: src/download/httpconnection.cpp:229
+msgid "Connecting"
+msgstr "Connecting"
+
+#: src/download/httpconnection.cpp:240
+msgid "Failed to connect to webseed"
+msgstr "Failed to connect to webseed"
+
+#: src/download/httpconnection.cpp:247
+msgid "Failed to resolve hostname of webseed"
+msgstr "Failed to resolve hostname of webseed"
+
+#: src/download/httpconnection.cpp:325
+msgid "Error: failed to connect, server not responding"
+msgstr "Error: failed to connect, server not responding"
+
+#: src/download/httpconnection.cpp:336
+msgid "Error: request timed out"
+msgstr "Error: request timed out"
+
+#: src/download/httpconnection.cpp:401
+msgid "Redirected without a new location."
+msgstr "Redirected without a new location."
+
+#: src/download/chunkdownload.cpp:383
+msgid "1 peer"
+msgid_plural "%1 peers"
+msgstr[0] "1 peer"
+msgstr[1] "%1 peers"
+
+#: src/download/downloader.cpp:808
+#, fuzzy
+msgid "Disabled because webseed does not match torrent"
+msgstr "Displays all the webseeds of a torrent"
+
+#: src/migrate/migrate.cpp:45
+msgid "The directory %1 does not exist"
+msgstr "The directory %1 does not exist"
+
+#: src/upnp/upnprouter.cpp:167
+#, fuzzy
+msgid "Failed to download %1: %2"
+msgstr "Failed to download %1 : %2"
+
+#: src/upnp/upnprouter.cpp:178
+msgid "Error parsing router description."
+msgstr "Error parsing router description."
+
+#: src/upnp/upnprouter.cpp:216
+#, fuzzy
+msgid ""
+"Forwarding failed:\n"
+"Device does not have a WANIPConnection or WANPPPConnection."
+msgstr ""
+"Forwarding failed: \n"
+"Device does not have a WANIPConnection or WANPPPConnection."
+
+#: src/upnp/upnprouter.cpp:314
+msgid "Cannot find port forwarding service in the device's description."
+msgstr "Cannot find port forwarding service in the device's description."
+
+#: src/upnp/httprequest.cpp:96
+#, fuzzy
+msgid "Connection closed unexpectedly"
+msgstr "Connection closed unexpectedly."
+
+#: src/upnp/httprequest.cpp:155
+msgid "Operation timed out"
+msgstr ""
+
+#: src/interfaces/trackerinterface.cpp:58
+msgid "OK"
+msgstr "OK"
+
+#: src/interfaces/trackerinterface.cpp:58
+#, fuzzy
+msgid "Warning: %1"
+msgstr "Opening %1"
+
+#: src/interfaces/trackerinterface.cpp:59
+msgid "Announcing"
+msgstr "Announcing"
+
+#: src/interfaces/trackerinterface.cpp:60 src/torrent/torrentstats.cpp:87
+msgid "Error: %1"
+msgstr "Error: %1"
 
 #: src/tracker/httpannouncejob.cpp:144
 msgid "Redirect without a redirect location"
@@ -74,6 +170,13 @@ msgstr "Timeout contacting tracker %1"
 msgid "Unable to resolve hostname %1"
 msgstr "Unable to resolve hostname %1"
 
+#: src/datachecker/singledatachecker.cpp:49
+#: src/datachecker/multidatachecker.cpp:209 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745 src/torrent/torrentcreator.cpp:124
+#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
+msgid "Cannot open file %1: %2"
+msgstr "Cannot open file %1: %2"
+
 #: src/datachecker/datacheckerjob.cpp:82
 msgid "Waiting for other data checks to finish"
 msgstr ""
@@ -86,175 +189,6 @@ msgstr "Checking data"
 #, fuzzy
 msgid "Checking Data"
 msgstr "Checking data"
-
-#: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/torrent/torrentcreator.cpp:124
-#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#: src/diskio/multifilecache.cpp:706 src/diskio/multifilecache.cpp:745
-msgid "Cannot open file %1: %2"
-msgstr "Cannot open file %1: %2"
-
-#: src/torrent/torrentstats.cpp:73
-msgid "Not started"
-msgstr "Not started"
-
-#: src/torrent/torrentstats.cpp:75
-msgid "Download completed"
-msgstr "Download completed"
-
-#: src/torrent/torrentstats.cpp:77
-msgid "Seeding completed"
-msgstr "Seeding completed"
-
-#: src/torrent/torrentstats.cpp:79
-msgctxt "Status of a torrent file"
-msgid "Seeding"
-msgstr "Seeding"
-
-#: src/torrent/torrentstats.cpp:81
-msgid "Downloading"
-msgstr "Downloading"
-
-#: src/torrent/torrentstats.cpp:83
-msgid "Stalled"
-msgstr "Stalled"
-
-#: src/torrent/torrentstats.cpp:85
-msgid "Stopped"
-msgstr "Stopped"
-
-#: src/torrent/torrentstats.cpp:87 src/interfaces/trackerinterface.cpp:60
-msgid "Error: %1"
-msgstr "Error: %1"
-
-#: src/torrent/torrentstats.cpp:89
-msgid "Allocating diskspace"
-msgstr "Allocating diskspace"
-
-#: src/torrent/torrentstats.cpp:91
-msgid "Queued for seeding"
-msgstr "Queued for seeding"
-
-#: src/torrent/torrentstats.cpp:91
-msgid "Queued for downloading"
-msgstr "Queued for downloading"
-
-#: src/torrent/torrentstats.cpp:95
-msgid "Stopped. No space left on device."
-msgstr "Stopped. No space left on device."
-
-#: src/torrent/torrentstats.cpp:97
-msgid "Paused"
-msgstr "Paused"
-
-#: src/torrent/torrentstats.cpp:99
-#, fuzzy
-msgid "Superseeding"
-msgstr "Seeding"
-
-#: src/torrent/torrentcontrol.cpp:300
-msgid "Error writing to disk, do you have enough diskspace?"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:546
-msgid ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-msgstr ""
-"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
-"torrent is probably corrupt or is not a valid torrent file."
-
-#: src/torrent/torrentcontrol.cpp:576
-msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
-msgstr ""
-
-#: src/torrent/torrentcontrol.cpp:587
-#, fuzzy
-msgid "Unable to create %1: %2"
-msgstr "Unable to create %1 : %2"
-
-#: src/torrent/torrentcontrol.cpp:602
-msgid ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-msgstr ""
-"You are already downloading the torrent <b>%1</b>. The tracker lists from "
-"both torrents have been merged."
-
-#: src/torrent/torrentcontrol.cpp:607
-msgid "You are already downloading the torrent <b>%1</b>."
-msgstr "You are already downloading the torrent <b>%1</b>."
-
-#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
-#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
-#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
-#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
-msgid "Corrupted torrent."
-msgstr "Corrupted torrent."
-
-#: src/torrent/torrent.cpp:165
-#, fuzzy
-msgid "Unable to open torrent file %1: %2"
-msgstr " Unable to open torrent file %1 : %2"
-
-#: src/torrent/torrentcreator.cpp:361
-msgid "Cannot create index file: %1"
-msgstr "Cannot create index file: %1"
-
-#: src/migrate/migrate.cpp:45
-msgid "The directory %1 does not exist"
-msgstr "The directory %1 does not exist"
-
-#: src/bcodec/bdecoder.cpp:71
-msgid "Illegal token: %1"
-msgstr "Illegal token: %1"
-
-#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
-msgid "Decode error"
-msgstr "Decode error"
-
-#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
-msgid "Unexpected end of input"
-msgstr "Unexpected end of input"
-
-#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
-msgid "Cannot convert %1 to an int"
-msgstr "Cannot convert %1 to an int"
-
-#: src/bcodec/bdecoder.cpp:260
-msgid "Torrent is incomplete."
-msgstr "Torrent is incomplete."
-
-#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
-#, fuzzy
-msgid "Failed to open %1: %2"
-msgstr "Failed to open %1 : %2"
-
-#: src/diskio/multifilecache.cpp:118 src/diskio/cache.cpp:170
-#: src/diskio/singlefilecache.cpp:85
-#, fuzzy
-msgid "Failed to create %1: %2"
-msgstr "Failed to create %1 : %2"
-
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-#, fuzzy
-msgid "Cannot open index file %1: %2"
-msgstr "Cannot open index file %1 : %2"
-
-#: src/diskio/dndfile.cpp:89
-#, fuzzy
-msgid "Cannot create file %1: %2"
-msgstr "Cannot create file %1 : %2"
-
-#: src/diskio/dndfile.cpp:137
-#, fuzzy
-msgid "Failed to write first chunk to DND file: %1"
-msgstr "Failed to write first chunk to DND file : %1"
-
-#: src/diskio/dndfile.cpp:155
-#, fuzzy
-msgid "Failed to write last chunk to DND file: %1"
-msgstr "Failed to write last chunk to DND file : %1"
 
 #: src/diskio/movedatafilesjob.cpp:140
 msgid "Waiting for other move jobs to finish"
@@ -277,6 +211,21 @@ msgstr "Destination"
 msgctxt "@title job"
 msgid "Moving"
 msgstr "Moving average"
+
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr ""
+
+#: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
+#, fuzzy
+msgid "Failed to open %1: %2"
+msgstr "Failed to open %1 : %2"
+
+#: src/diskio/multifilecache.cpp:118 src/diskio/cache.cpp:170
+#: src/diskio/singlefilecache.cpp:85
+#, fuzzy
+msgid "Failed to create %1: %2"
+msgstr "Failed to create %1 : %2"
 
 #: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:361
 #: src/util/fileops.cpp:406
@@ -330,130 +279,148 @@ msgstr "Failed to write to file %1 : %2"
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Cannot preallocate diskspace : %1"
 
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
+#: src/diskio/chunkmanager.cpp:932 src/diskio/chunkmanager.cpp:958
+#, fuzzy
+msgid "Cannot open index file %1: %2"
+msgstr "Cannot open index file %1 : %2"
+
+#: src/diskio/dndfile.cpp:89
+#, fuzzy
+msgid "Cannot create file %1: %2"
+msgstr "Cannot create file %1 : %2"
+
+#: src/diskio/dndfile.cpp:137
+#, fuzzy
+msgid "Failed to write first chunk to DND file: %1"
+msgstr "Failed to write first chunk to DND file : %1"
+
+#: src/diskio/dndfile.cpp:155
+#, fuzzy
+msgid "Failed to write last chunk to DND file: %1"
+msgstr "Failed to write last chunk to DND file : %1"
+
+#: src/torrent/torrentcreator.cpp:361
+msgid "Cannot create index file: %1"
+msgstr "Cannot create index file: %1"
+
+#: src/torrent/torrentcontrol.cpp:300
+msgid "Error writing to disk, do you have enough diskspace?"
 msgstr ""
 
-#: src/download/webseed.cpp:52 src/download/webseed.cpp:99
-#: src/download/httpconnection.cpp:44
-msgid "Not connected"
-msgstr "Not connected"
-
-#: src/download/webseed.cpp:348 src/download/httpconnection.cpp:153
-msgid "Connection closed"
-msgstr "Connection closed"
-
-#: src/download/webseed.cpp:558
-msgid "Unused for %1 seconds (Too many connection failures)"
-msgstr ""
-
-#: src/download/chunkdownload.cpp:383
-msgid "1 peer"
-msgid_plural "%1 peers"
-msgstr[0] "1 peer"
-msgstr[1] "%1 peers"
-
-#: src/download/httpconnection.cpp:115
-msgid "Resolving proxy %1:%2"
-msgstr "Resolving proxy %1:%2"
-
-#: src/download/httpconnection.cpp:121 src/download/httpconnection.cpp:139
-#, fuzzy
-msgid "Not enough system resources available"
-msgstr "There is not enough diskspace available."
-
-#: src/download/httpconnection.cpp:133
-msgid "Resolving hostname %1"
-msgstr "Resolving hostname %1"
-
-#: src/download/httpconnection.cpp:160
-msgid "Error: request failed: %1"
-msgstr "Error: request failed: %1"
-
-#: src/download/httpconnection.cpp:188 src/download/httpconnection.cpp:222
-msgid "Connected"
-msgstr "Connected"
-
-#: src/download/httpconnection.cpp:199
-msgid "Error: Failed to connect to webseed"
-msgstr "Error: Failed to connect to webseed"
-
-#: src/download/httpconnection.cpp:229
-msgid "Connecting"
-msgstr "Connecting"
-
-#: src/download/httpconnection.cpp:240
-msgid "Failed to connect to webseed"
-msgstr "Failed to connect to webseed"
-
-#: src/download/httpconnection.cpp:247
-msgid "Failed to resolve hostname of webseed"
-msgstr "Failed to resolve hostname of webseed"
-
-#: src/download/httpconnection.cpp:325
-msgid "Error: failed to connect, server not responding"
-msgstr "Error: failed to connect, server not responding"
-
-#: src/download/httpconnection.cpp:336
-msgid "Error: request timed out"
-msgstr "Error: request timed out"
-
-#: src/download/httpconnection.cpp:401
-msgid "Redirected without a new location."
-msgstr "Redirected without a new location."
-
-#: src/download/downloader.cpp:808
-#, fuzzy
-msgid "Disabled because webseed does not match torrent"
-msgstr "Displays all the webseeds of a torrent"
-
-#: src/upnp/upnprouter.cpp:167
-#, fuzzy
-msgid "Failed to download %1: %2"
-msgstr "Failed to download %1 : %2"
-
-#: src/upnp/upnprouter.cpp:178
-msgid "Error parsing router description."
-msgstr "Error parsing router description."
-
-#: src/upnp/upnprouter.cpp:216
-#, fuzzy
+#: src/torrent/torrentcontrol.cpp:546
 msgid ""
-"Forwarding failed:\n"
-"Device does not have a WANIPConnection or WANPPPConnection."
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
 msgstr ""
-"Forwarding failed: \n"
-"Device does not have a WANIPConnection or WANPPPConnection."
+"An error occurred while loading the torrent <b>%1</b>:<br/><b>%2</b><br/>The "
+"torrent is probably corrupt or is not a valid torrent file."
 
-#: src/upnp/upnprouter.cpp:314
-msgid "Cannot find port forwarding service in the device's description."
-msgstr "Cannot find port forwarding service in the device's description."
-
-#: src/upnp/httprequest.cpp:96
-#, fuzzy
-msgid "Connection closed unexpectedly"
-msgstr "Connection closed unexpectedly."
-
-#: src/upnp/httprequest.cpp:155
-msgid "Operation timed out"
+#: src/torrent/torrentcontrol.cpp:576
+msgid "An error occurred while loading <b>%1</b>:<br/><b>%2</b>"
 msgstr ""
 
-#: src/peer/peerid.cpp:228
-msgid "Unknown client"
-msgstr "Unknown client"
-
-#: src/interfaces/trackerinterface.cpp:58
-msgid "OK"
-msgstr "OK"
-
-#: src/interfaces/trackerinterface.cpp:58
+#: src/torrent/torrentcontrol.cpp:587
 #, fuzzy
-msgid "Warning: %1"
-msgstr "Opening %1"
+msgid "Unable to create %1: %2"
+msgstr "Unable to create %1 : %2"
 
-#: src/interfaces/trackerinterface.cpp:59
-msgid "Announcing"
-msgstr "Announcing"
+#: src/torrent/torrentcontrol.cpp:602
+msgid ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+msgstr ""
+"You are already downloading the torrent <b>%1</b>. The tracker lists from "
+"both torrents have been merged."
+
+#: src/torrent/torrentcontrol.cpp:607
+msgid "You are already downloading the torrent <b>%1</b>."
+msgstr "You are already downloading the torrent <b>%1</b>."
+
+#: src/torrent/torrentstats.cpp:73
+msgid "Not started"
+msgstr "Not started"
+
+#: src/torrent/torrentstats.cpp:75
+msgid "Download completed"
+msgstr "Download completed"
+
+#: src/torrent/torrentstats.cpp:77
+msgid "Seeding completed"
+msgstr "Seeding completed"
+
+#: src/torrent/torrentstats.cpp:79
+msgctxt "Status of a torrent file"
+msgid "Seeding"
+msgstr "Seeding"
+
+#: src/torrent/torrentstats.cpp:81
+msgid "Downloading"
+msgstr "Downloading"
+
+#: src/torrent/torrentstats.cpp:83
+msgid "Stalled"
+msgstr "Stalled"
+
+#: src/torrent/torrentstats.cpp:85
+msgid "Stopped"
+msgstr "Stopped"
+
+#: src/torrent/torrentstats.cpp:89
+msgid "Allocating diskspace"
+msgstr "Allocating diskspace"
+
+#: src/torrent/torrentstats.cpp:91
+msgid "Queued for seeding"
+msgstr "Queued for seeding"
+
+#: src/torrent/torrentstats.cpp:91
+msgid "Queued for downloading"
+msgstr "Queued for downloading"
+
+#: src/torrent/torrentstats.cpp:95
+msgid "Stopped. No space left on device."
+msgstr "Stopped. No space left on device."
+
+#: src/torrent/torrentstats.cpp:97
+msgid "Paused"
+msgstr "Paused"
+
+#: src/torrent/torrentstats.cpp:99
+#, fuzzy
+msgid "Superseeding"
+msgstr "Seeding"
+
+#: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
+#: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
+#: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
+#: src/torrent/torrent.cpp:242 src/torrent/torrent.cpp:313
+msgid "Corrupted torrent."
+msgstr "Corrupted torrent."
+
+#: src/torrent/torrent.cpp:165
+#, fuzzy
+msgid "Unable to open torrent file %1: %2"
+msgstr " Unable to open torrent file %1 : %2"
+
+#: src/bcodec/bdecoder.cpp:71
+msgid "Illegal token: %1"
+msgstr "Illegal token: %1"
+
+#: src/bcodec/bdecoder.cpp:133 src/bcodec/bdecoder.cpp:141
+msgid "Decode error"
+msgstr "Decode error"
+
+#: src/bcodec/bdecoder.cpp:201 src/bcodec/bdecoder.cpp:246
+msgid "Unexpected end of input"
+msgstr "Unexpected end of input"
+
+#: src/bcodec/bdecoder.cpp:221 src/bcodec/bdecoder.cpp:255
+msgid "Cannot convert %1 to an int"
+msgstr "Cannot convert %1 to an int"
+
+#: src/bcodec/bdecoder.cpp:260
+msgid "Torrent is incomplete."
+msgstr "Torrent is incomplete."
 
 #: src/util/logsystemmanager.cpp:33
 msgid "General"
@@ -479,15 +446,14 @@ msgstr "Disk Input/Output"
 msgid "µTP"
 msgstr "µTP"
 
-#: src/util/signalcatcher.cpp:80
+#: src/util/file.cpp:84
 #, fuzzy
-msgid "Error when writing to disk"
-msgstr "Error writing to %1"
+msgid "Cannot write to %1: %2"
+msgstr "Cannot write to %1 : %2"
 
-#: src/util/signalcatcher.cpp:80
-#, fuzzy
-msgid "Error when reading from disk"
-msgstr "Error reading from %1"
+#: src/util/file.cpp:98
+msgid "Cannot read from %1"
+msgstr "Cannot read from %1"
 
 #: src/util/functions.cpp:234
 msgid "%1/s"
@@ -542,11 +508,45 @@ msgstr "Cannot expand file: %1"
 msgid "Cannot seek in file: %1"
 msgstr "Cannot seek in file : %1"
 
-#: src/util/file.cpp:84
+#: src/util/signalcatcher.cpp:80
 #, fuzzy
-msgid "Cannot write to %1: %2"
-msgstr "Cannot write to %1 : %2"
+msgid "Error when writing to disk"
+msgstr "Error writing to %1"
 
-#: src/util/file.cpp:98
-msgid "Cannot read from %1"
-msgstr "Cannot read from %1"
+#: src/util/signalcatcher.cpp:80
+#, fuzzy
+msgid "Error when reading from disk"
+msgstr "Error reading from %1"
+
+#: src/peer/peerid.cpp:228
+msgid "Unknown client"
+msgstr "Unknown client"
+
+#: examples/ktcli/main.cpp:60
+#, fuzzy
+msgid "Torrent to open"
+msgstr "Document to open"
+
+#: examples/ktcli/main.cpp:61 examples/ktcli/main.cpp:62
+#, fuzzy
+msgid "Port to use"
+msgstr "Not in use"
+
+#: examples/ktcli/main.cpp:63
+#, fuzzy
+msgid "Whether or not to enable encryption"
+msgstr "Whether or not to enable a custom download order."
+
+#: examples/ktcli/main.cpp:64
+#, fuzzy
+msgid "Whether or not to enable peer exchange"
+msgstr "Whether or not to use µTorrent compatible peer exchange."
+
+#: examples/ktcli/main.cpp:65
+#, fuzzy
+msgid "Whether or not to use utp"
+msgstr "Whether or not to show system tray popup messages."
+
+#: examples/ktcli/main.cpp:67
+msgid "ktcli"
+msgstr ""

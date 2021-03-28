@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdmgreet\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2014-10-22 13:03+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,17 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: kconsole.cpp:70
-msgid "*** Cannot connect to console log ***"
-msgstr "*** Nelze otevřít zdroj pro konzolový záznam ***"
-
-#: kconsole.cpp:154
-msgid ""
-"\n"
-"*** Lost connection with console log ***"
-msgstr ""
-"\n"
-"*** Spojení pro konzolový záznam ztraceno ***"
+#: kdmconfig.cpp:133
+msgctxt ""
+"@item:intext substitution for an undefined %X placeholder wrongly given in "
+"the config file 'kdmrc', telling the user to fix it"
+msgid "[fix kdmrc]"
+msgstr "[opravit kdmrc]"
 
 #: kgdialog.cpp:57
 msgid "Sw&itch User"
@@ -59,58 +54,87 @@ msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kchooser.cpp:59
+#: kgreeter.cpp:482
+msgctxt "@item:inlistbox session type"
+msgid "Default"
+msgstr "Výchozí"
+
+#: kgreeter.cpp:483
+msgctxt "@item:inlistbox session type"
+msgid "Custom"
+msgstr "Vlastní"
+
+#: kgreeter.cpp:484
+msgctxt "@item:inlistbox session type"
+msgid "Failsafe"
+msgstr "Bezpečný režim"
+
+#: kgreeter.cpp:560
+msgctxt "@item:inmenu session type"
+msgid "%1 (previous)"
+msgstr "%1 (předchozí)"
+
+#: kgreeter.cpp:622
+msgid ""
+"Your saved session type '%1' is not valid any more.\n"
+"Please select a new one, otherwise 'default' will be used."
+msgstr ""
+"Vaše uložené sezení typu '%1' již není platné.\n"
+"Prosím zvolte jiné, jinak bude použito výchozí ('default')."
+
+#: kgreeter.cpp:750 kgverify.cpp:1085
+msgid "Login failed"
+msgstr "Přihlášení neúspěšné"
+
+#: kgreeter.cpp:799
+msgctxt "@title:menu"
+msgid "Session &Type"
+msgstr "&Typ sezení"
+
+#: kgreeter.cpp:805
+msgctxt "@title:menu"
+msgid "&Authentication Method"
+msgstr "Metod&a ověření"
+
+#: kgreeter.cpp:810
 msgctxt "@action:inmenu"
-msgid "&Local Login"
-msgstr "Místní přih&lášení"
+msgid "&Remote Login"
+msgstr "Vz&dálené přihlášení"
 
-#: kchooser.cpp:63
-msgid "XDMCP Host Menu"
-msgstr "Nabídka XDMCP počítačů"
+#: utils.cpp:87
+msgctxt "user: ..."
+msgid "%2: TTY login"
+msgid_plural "%2: %1 TTY logins"
+msgstr[0] "%2: TTY přihlášení"
+msgstr[1] "%2: %1 TTY přihlášení"
+msgstr[2] "%2: %1 TTY přihlášení"
 
-#: kchooser.cpp:73
-msgctxt "@title:column"
-msgid "Hostname"
-msgstr "Jméno počítače"
+#: utils.cpp:99
+msgctxt "... session"
+msgid "Unused"
+msgstr "Nepoužito"
 
-#: kchooser.cpp:74
-msgctxt "@title:column ... of named host"
-msgid "Status"
-msgstr "Stav"
+#: utils.cpp:101
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: kchooser.cpp:82
-msgctxt "XDMCP server"
-msgid "Hos&t:"
-msgstr "Počí&tač:"
+#: utils.cpp:103
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "X přihlášení na %1"
 
-#: kchooser.cpp:84
-msgctxt "@action:button"
-msgid "A&dd"
-msgstr "Při&dat"
+#: themer/kdmthemer.cpp:67
+msgid "Cannot open theme file %1"
+msgstr "Nelze otevřít soubor s motivem %1"
 
-#: kchooser.cpp:93
-msgctxt "@action:button"
-msgid "&Accept"
-msgstr "Př&ijmout"
+#: themer/kdmthemer.cpp:72
+msgid "Cannot parse theme file %1"
+msgstr "Nelze analyzovat soubor s motivem %1"
 
-#: kchooser.cpp:95
-msgctxt "@action:button"
-msgid "&Refresh"
-msgstr "O&bnovit"
-
-#: kchooser.cpp:105
-msgctxt "@action:button"
-msgid "&Menu"
-msgstr "Na&bídka"
-
-#: kchooser.cpp:203
-msgctxt "hostname or status"
-msgid "<unknown>"
-msgstr "<neznámé>"
-
-#: kchooser.cpp:242
-msgid "Unknown host %1"
-msgstr "Neznámý počítač %1"
+#: themer/kdmthemer.cpp:79
+msgid "%1 does not seem to be a correct theme file"
+msgstr "%1 se nezdá být platným souborem motivu"
 
 #: themer/kdmlabel.cpp:247
 msgctxt "@action:button"
@@ -195,166 +219,6 @@ msgstr[2] "%1 sekund"
 msgctxt "date format"
 msgid "%a %d %B"
 msgstr "%a %e. %B"
-
-#: themer/kdmthemer.cpp:67
-msgid "Cannot open theme file %1"
-msgstr "Nelze otevřít soubor s motivem %1"
-
-#: themer/kdmthemer.cpp:72
-msgid "Cannot parse theme file %1"
-msgstr "Nelze analyzovat soubor s motivem %1"
-
-#: themer/kdmthemer.cpp:79
-msgid "%1 does not seem to be a correct theme file"
-msgstr "%1 se nezdá být platným souborem motivu"
-
-#: utils.cpp:87
-msgctxt "user: ..."
-msgid "%2: TTY login"
-msgid_plural "%2: %1 TTY logins"
-msgstr[0] "%2: TTY přihlášení"
-msgstr[1] "%2: %1 TTY přihlášení"
-msgstr[2] "%2: %1 TTY přihlášení"
-
-#: utils.cpp:99
-msgctxt "... session"
-msgid "Unused"
-msgstr "Nepoužito"
-
-#: utils.cpp:101
-msgctxt "user: session type"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: utils.cpp:103
-msgctxt "... host"
-msgid "X login on %1"
-msgstr "X přihlášení na %1"
-
-#: kgverify.cpp:187
-msgid "No greeter widget plugin loaded. Check the configuration."
-msgstr ""
-"Modul pro přihlašovací obrazovku nebyl načten.\n"
-"Zkontrolujte nastavení."
-
-#: kgverify.cpp:496
-msgid ""
-"Logging in %1...\n"
-"\n"
-msgstr ""
-"Přihlašuje se %1...\n"
-"\n"
-
-#: kgverify.cpp:500
-msgid "You are required to change your password immediately (password aged)."
-msgstr "Musíte si okamžitě změnit heslo (zastaralé heslo)."
-
-#: kgverify.cpp:501
-msgid "You are required to change your password immediately (root enforced)."
-msgstr "Musíte si okamžitě změnit heslo (vyžadováno uživatelem root)."
-
-#: kgverify.cpp:502
-msgid "You are not allowed to login at the moment."
-msgstr "Momentálně vám není dovoleno se přihlásit."
-
-#: kgverify.cpp:503
-msgid "Home folder not available."
-msgstr "Domovská složka je nedostupná."
-
-#: kgverify.cpp:504
-msgid ""
-"Logins are not allowed at the moment.\n"
-"Try again later."
-msgstr ""
-"Momentálně se nelze přihlašovat.\n"
-"Zkuste znovu později."
-
-#: kgverify.cpp:505
-msgid "Your login shell is not listed in /etc/shells."
-msgstr "Váš přihlašovací shell není uveden v /etc/shells."
-
-#: kgverify.cpp:506
-msgid "Root logins are not allowed."
-msgstr "Přihlášení superuživatele není dovolené."
-
-#: kgverify.cpp:507
-msgid "Your account has expired; please contact your system administrator."
-msgstr "Vaše konto vypršelo; prosím kontaktujte správce systému."
-
-#: kgverify.cpp:517
-msgid ""
-"A critical error occurred.\n"
-"Please look at KDM's logfile(s) for more information\n"
-"or contact your system administrator."
-msgstr ""
-"Nastala kritická chyba.\n"
-"Prosím podívejte se do záznamového souboru KDM pro více informací\n"
-"anebo kontaktujte svého systémového administrátora."
-
-#: kgverify.cpp:542
-msgid "Your account expires tomorrow."
-msgid_plural "Your account expires in %1 days."
-msgstr[0] "Vaše konto vyprší zítra."
-msgstr[1] "Vaše konto vyprší za %1 dny."
-msgstr[2] "Vaše konto vyprší za %1 dnů."
-
-#: kgverify.cpp:544
-msgid "Your account expires today."
-msgstr "Vaše konto vyprší dnes."
-
-#: kgverify.cpp:550
-msgid "Your password expires tomorrow."
-msgid_plural "Your password expires in %1 days."
-msgstr[0] "Vaše heslo vyprší zítra."
-msgstr[1] "Vaše heslo vyprší za %1 dny."
-msgstr[2] "Vaše heslo vyprší za %1 dnů."
-
-#: kgverify.cpp:552
-msgid "Your password expires today."
-msgstr "Vaše heslo vyprší dnes."
-
-#: kgverify.cpp:626 kgverify.cpp:1086
-msgid "Authentication failed"
-msgstr "Ověření selhalo"
-
-#: kgverify.cpp:776
-msgid "Authenticated user (%1) does not match requested user (%2).\n"
-msgstr "Přihlášený uživatel (%1) se neshoduje s požadovaným uživatelem (%2).\n"
-
-#: kgverify.cpp:1067
-msgid "Automatic login in 1 second..."
-msgid_plural "Automatic login in %1 seconds..."
-msgstr[0] "Automatické přihlášení za %1 sekundu..."
-msgstr[1] "Automatické přihlášení za %1 sekundy..."
-msgstr[2] "Automatické přihlášení za %1 sekund..."
-
-#: kgverify.cpp:1079
-msgid "Warning: Caps Lock is on"
-msgstr "Varování: zapnut CapsLock"
-
-#: kgverify.cpp:1083
-msgid "Change failed"
-msgstr "Změna neúspěšná"
-
-#: kgverify.cpp:1085 kgreeter.cpp:750
-msgid "Login failed"
-msgstr "Přihlášení neúspěšné"
-
-#: kgverify.cpp:1136
-msgid "Theme not usable with authentication method '%1'."
-msgstr "Motiv není použitelný s ověřovací metodou '%1'."
-
-#: kgverify.cpp:1173
-msgctxt "@title:window"
-msgid "<qt><b>Changing authentication token</b></qt>"
-msgstr "<qt><b>Měním ověřovací token</b></qt>"
-
-#: kdmconfig.cpp:133
-msgctxt ""
-"@item:intext substitution for an undefined %X placeholder wrongly given in "
-"the config file 'kdmrc', telling the user to fix it"
-msgid "[fix kdmrc]"
-msgstr "[opravit kdmrc]"
 
 #: kdmshutdown.cpp:89
 msgid "Root authorization required."
@@ -545,45 +409,181 @@ msgstr ""
 "\n"
 "Po prodlevě: %1"
 
-#: kgreeter.cpp:482
-msgctxt "@item:inlistbox session type"
-msgid "Default"
-msgstr "Výchozí"
-
-#: kgreeter.cpp:483
-msgctxt "@item:inlistbox session type"
-msgid "Custom"
-msgstr "Vlastní"
-
-#: kgreeter.cpp:484
-msgctxt "@item:inlistbox session type"
-msgid "Failsafe"
-msgstr "Bezpečný režim"
-
-#: kgreeter.cpp:560
-msgctxt "@item:inmenu session type"
-msgid "%1 (previous)"
-msgstr "%1 (předchozí)"
-
-#: kgreeter.cpp:622
-msgid ""
-"Your saved session type '%1' is not valid any more.\n"
-"Please select a new one, otherwise 'default' will be used."
+#: kgverify.cpp:187
+msgid "No greeter widget plugin loaded. Check the configuration."
 msgstr ""
-"Vaše uložené sezení typu '%1' již není platné.\n"
-"Prosím zvolte jiné, jinak bude použito výchozí ('default')."
+"Modul pro přihlašovací obrazovku nebyl načten.\n"
+"Zkontrolujte nastavení."
 
-#: kgreeter.cpp:799
-msgctxt "@title:menu"
-msgid "Session &Type"
-msgstr "&Typ sezení"
+#: kgverify.cpp:496
+msgid ""
+"Logging in %1...\n"
+"\n"
+msgstr ""
+"Přihlašuje se %1...\n"
+"\n"
 
-#: kgreeter.cpp:805
-msgctxt "@title:menu"
-msgid "&Authentication Method"
-msgstr "Metod&a ověření"
+#: kgverify.cpp:500
+msgid "You are required to change your password immediately (password aged)."
+msgstr "Musíte si okamžitě změnit heslo (zastaralé heslo)."
 
-#: kgreeter.cpp:810
+#: kgverify.cpp:501
+msgid "You are required to change your password immediately (root enforced)."
+msgstr "Musíte si okamžitě změnit heslo (vyžadováno uživatelem root)."
+
+#: kgverify.cpp:502
+msgid "You are not allowed to login at the moment."
+msgstr "Momentálně vám není dovoleno se přihlásit."
+
+#: kgverify.cpp:503
+msgid "Home folder not available."
+msgstr "Domovská složka je nedostupná."
+
+#: kgverify.cpp:504
+msgid ""
+"Logins are not allowed at the moment.\n"
+"Try again later."
+msgstr ""
+"Momentálně se nelze přihlašovat.\n"
+"Zkuste znovu později."
+
+#: kgverify.cpp:505
+msgid "Your login shell is not listed in /etc/shells."
+msgstr "Váš přihlašovací shell není uveden v /etc/shells."
+
+#: kgverify.cpp:506
+msgid "Root logins are not allowed."
+msgstr "Přihlášení superuživatele není dovolené."
+
+#: kgverify.cpp:507
+msgid "Your account has expired; please contact your system administrator."
+msgstr "Vaše konto vypršelo; prosím kontaktujte správce systému."
+
+#: kgverify.cpp:517
+msgid ""
+"A critical error occurred.\n"
+"Please look at KDM's logfile(s) for more information\n"
+"or contact your system administrator."
+msgstr ""
+"Nastala kritická chyba.\n"
+"Prosím podívejte se do záznamového souboru KDM pro více informací\n"
+"anebo kontaktujte svého systémového administrátora."
+
+#: kgverify.cpp:542
+msgid "Your account expires tomorrow."
+msgid_plural "Your account expires in %1 days."
+msgstr[0] "Vaše konto vyprší zítra."
+msgstr[1] "Vaše konto vyprší za %1 dny."
+msgstr[2] "Vaše konto vyprší za %1 dnů."
+
+#: kgverify.cpp:544
+msgid "Your account expires today."
+msgstr "Vaše konto vyprší dnes."
+
+#: kgverify.cpp:550
+msgid "Your password expires tomorrow."
+msgid_plural "Your password expires in %1 days."
+msgstr[0] "Vaše heslo vyprší zítra."
+msgstr[1] "Vaše heslo vyprší za %1 dny."
+msgstr[2] "Vaše heslo vyprší za %1 dnů."
+
+#: kgverify.cpp:552
+msgid "Your password expires today."
+msgstr "Vaše heslo vyprší dnes."
+
+#: kgverify.cpp:626 kgverify.cpp:1086
+msgid "Authentication failed"
+msgstr "Ověření selhalo"
+
+#: kgverify.cpp:776
+msgid "Authenticated user (%1) does not match requested user (%2).\n"
+msgstr "Přihlášený uživatel (%1) se neshoduje s požadovaným uživatelem (%2).\n"
+
+#: kgverify.cpp:1067
+msgid "Automatic login in 1 second..."
+msgid_plural "Automatic login in %1 seconds..."
+msgstr[0] "Automatické přihlášení za %1 sekundu..."
+msgstr[1] "Automatické přihlášení za %1 sekundy..."
+msgstr[2] "Automatické přihlášení za %1 sekund..."
+
+#: kgverify.cpp:1079
+msgid "Warning: Caps Lock is on"
+msgstr "Varování: zapnut CapsLock"
+
+#: kgverify.cpp:1083
+msgid "Change failed"
+msgstr "Změna neúspěšná"
+
+#: kgverify.cpp:1136
+msgid "Theme not usable with authentication method '%1'."
+msgstr "Motiv není použitelný s ověřovací metodou '%1'."
+
+#: kgverify.cpp:1173
+msgctxt "@title:window"
+msgid "<qt><b>Changing authentication token</b></qt>"
+msgstr "<qt><b>Měním ověřovací token</b></qt>"
+
+#: kchooser.cpp:59
 msgctxt "@action:inmenu"
-msgid "&Remote Login"
-msgstr "Vz&dálené přihlášení"
+msgid "&Local Login"
+msgstr "Místní přih&lášení"
+
+#: kchooser.cpp:63
+msgid "XDMCP Host Menu"
+msgstr "Nabídka XDMCP počítačů"
+
+#: kchooser.cpp:73
+msgctxt "@title:column"
+msgid "Hostname"
+msgstr "Jméno počítače"
+
+#: kchooser.cpp:74
+msgctxt "@title:column ... of named host"
+msgid "Status"
+msgstr "Stav"
+
+#: kchooser.cpp:82
+msgctxt "XDMCP server"
+msgid "Hos&t:"
+msgstr "Počí&tač:"
+
+#: kchooser.cpp:84
+msgctxt "@action:button"
+msgid "A&dd"
+msgstr "Při&dat"
+
+#: kchooser.cpp:93
+msgctxt "@action:button"
+msgid "&Accept"
+msgstr "Př&ijmout"
+
+#: kchooser.cpp:95
+msgctxt "@action:button"
+msgid "&Refresh"
+msgstr "O&bnovit"
+
+#: kchooser.cpp:105
+msgctxt "@action:button"
+msgid "&Menu"
+msgstr "Na&bídka"
+
+#: kchooser.cpp:203
+msgctxt "hostname or status"
+msgid "<unknown>"
+msgstr "<neznámé>"
+
+#: kchooser.cpp:242
+msgid "Unknown host %1"
+msgstr "Neznámý počítač %1"
+
+#: kconsole.cpp:68
+msgid "*** Cannot connect to console log ***"
+msgstr "*** Nelze otevřít zdroj pro konzolový záznam ***"
+
+#: kconsole.cpp:152
+msgid ""
+"\n"
+"*** Lost connection with console log ***"
+msgstr ""
+"\n"
+"*** Spojení pro konzolový záznam ztraceno ***"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdmgreet 0\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2010-03-19 13:30+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -22,17 +22,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: kconsole.cpp:70
-msgid "*** Cannot connect to console log ***"
-msgstr "*** Ne mogu se spojiti na dnevnik konzole ***"
-
-#: kconsole.cpp:154
-msgid ""
-"\n"
-"*** Lost connection with console log ***"
-msgstr ""
-"\n"
-"*** Izgubljena je veza sa dnevnikom konzole ***"
+#: kdmconfig.cpp:133
+msgctxt ""
+"@item:intext substitution for an undefined %X placeholder wrongly given in "
+"the config file 'kdmrc', telling the user to fix it"
+msgid "[fix kdmrc]"
+msgstr "[popravi kdmrc]"
 
 #: kgdialog.cpp:57
 msgid "Sw&itch User"
@@ -63,58 +58,87 @@ msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kchooser.cpp:59
+#: kgreeter.cpp:482
+msgctxt "@item:inlistbox session type"
+msgid "Default"
+msgstr "Zadano"
+
+#: kgreeter.cpp:483
+msgctxt "@item:inlistbox session type"
+msgid "Custom"
+msgstr "Prilagođeno"
+
+#: kgreeter.cpp:484
+msgctxt "@item:inlistbox session type"
+msgid "Failsafe"
+msgstr "Sigurno"
+
+#: kgreeter.cpp:560
+msgctxt "@item:inmenu session type"
+msgid "%1 (previous)"
+msgstr "%1 (prethodno)"
+
+#: kgreeter.cpp:622
+msgid ""
+"Your saved session type '%1' is not valid any more.\n"
+"Please select a new one, otherwise 'default' will be used."
+msgstr ""
+"Vaša snimljena vrsta sesije „%1“ više nije valjana.\n"
+"Odaberite drugu ili će biti korištena uobičajena."
+
+#: kgreeter.cpp:750 kgverify.cpp:1085
+msgid "Login failed"
+msgstr "Prijava nije uspjela"
+
+#: kgreeter.cpp:799
+msgctxt "@title:menu"
+msgid "Session &Type"
+msgstr "&Tip sesije"
+
+#: kgreeter.cpp:805
+msgctxt "@title:menu"
+msgid "&Authentication Method"
+msgstr "&Metoda ovjere autentičnosti"
+
+#: kgreeter.cpp:810
 msgctxt "@action:inmenu"
-msgid "&Local Login"
-msgstr "&Lokalna prijava"
+msgid "&Remote Login"
+msgstr "P&rijava na udaljeno računalo"
 
-#: kchooser.cpp:63
-msgid "XDMCP Host Menu"
-msgstr "Izbornik XDMCP računala"
+#: utils.cpp:87
+msgctxt "user: ..."
+msgid "%2: TTY login"
+msgid_plural "%2: %1 TTY logins"
+msgstr[0] "%2: %1 TTY prijava"
+msgstr[1] "%2: %1 TTY prijave"
+msgstr[2] "%2: %1 TTY prijava"
 
-#: kchooser.cpp:73
-msgctxt "@title:column"
-msgid "Hostname"
-msgstr "Ime računala"
+#: utils.cpp:99
+msgctxt "... session"
+msgid "Unused"
+msgstr "Neiskorišteno"
 
-#: kchooser.cpp:74
-msgctxt "@title:column ... of named host"
-msgid "Status"
-msgstr "Stanje"
+#: utils.cpp:101
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: kchooser.cpp:82
-msgctxt "XDMCP server"
-msgid "Hos&t:"
-msgstr "&Ime računala:"
+#: utils.cpp:103
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "X prijava na %1"
 
-#: kchooser.cpp:84
-msgctxt "@action:button"
-msgid "A&dd"
-msgstr "&Dodaj"
+#: themer/kdmthemer.cpp:67
+msgid "Cannot open theme file %1"
+msgstr "Ne mogu otvoriti datoteku teme %1"
 
-#: kchooser.cpp:93
-msgctxt "@action:button"
-msgid "&Accept"
-msgstr "&Prihvati"
+#: themer/kdmthemer.cpp:72
+msgid "Cannot parse theme file %1"
+msgstr "Ne mogu raščlaniti datoteku teme %1"
 
-#: kchooser.cpp:95
-msgctxt "@action:button"
-msgid "&Refresh"
-msgstr "&Osvježi"
-
-#: kchooser.cpp:105
-msgctxt "@action:button"
-msgid "&Menu"
-msgstr "&Izbornik"
-
-#: kchooser.cpp:203
-msgctxt "hostname or status"
-msgid "<unknown>"
-msgstr "<unknown>"
-
-#: kchooser.cpp:242
-msgid "Unknown host %1"
-msgstr "Nepoznato računalo %1"
+#: themer/kdmthemer.cpp:79
+msgid "%1 does not seem to be a correct theme file"
+msgstr "%1 izgleda da nije ispravna datoteka teme"
 
 #: themer/kdmlabel.cpp:247
 msgctxt "@action:button"
@@ -199,165 +223,6 @@ msgstr[2] "%1 sekundi"
 msgctxt "date format"
 msgid "%a %d %B"
 msgstr "%a %d %B"
-
-#: themer/kdmthemer.cpp:67
-msgid "Cannot open theme file %1"
-msgstr "Ne mogu otvoriti datoteku teme %1"
-
-#: themer/kdmthemer.cpp:72
-msgid "Cannot parse theme file %1"
-msgstr "Ne mogu raščlaniti datoteku teme %1"
-
-#: themer/kdmthemer.cpp:79
-msgid "%1 does not seem to be a correct theme file"
-msgstr "%1 izgleda da nije ispravna datoteka teme"
-
-#: utils.cpp:87
-msgctxt "user: ..."
-msgid "%2: TTY login"
-msgid_plural "%2: %1 TTY logins"
-msgstr[0] "%2: %1 TTY prijava"
-msgstr[1] "%2: %1 TTY prijave"
-msgstr[2] "%2: %1 TTY prijava"
-
-#: utils.cpp:99
-msgctxt "... session"
-msgid "Unused"
-msgstr "Neiskorišteno"
-
-#: utils.cpp:101
-msgctxt "user: session type"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: utils.cpp:103
-msgctxt "... host"
-msgid "X login on %1"
-msgstr "X prijava na %1"
-
-#: kgverify.cpp:187
-msgid "No greeter widget plugin loaded. Check the configuration."
-msgstr "Nije učitan kontrolni umetak za pozdravljanje. Provjerite podešavanja."
-
-#: kgverify.cpp:496
-msgid ""
-"Logging in %1...\n"
-"\n"
-msgstr ""
-"Prijava u %1...\n"
-"\n"
-
-#: kgverify.cpp:500
-msgid "You are required to change your password immediately (password aged)."
-msgstr "Morate odmah promijeniti lozinku (zastarjela lozinka)."
-
-#: kgverify.cpp:501
-msgid "You are required to change your password immediately (root enforced)."
-msgstr "Morate odmah promijeniti lozinku (administrator je naredio)."
-
-#: kgverify.cpp:502
-msgid "You are not allowed to login at the moment."
-msgstr "Prijavljivanje vam trenutno nije dozvoljeno."
-
-#: kgverify.cpp:503
-msgid "Home folder not available."
-msgstr "Početna mapa nije dostupna."
-
-#: kgverify.cpp:504
-msgid ""
-"Logins are not allowed at the moment.\n"
-"Try again later."
-msgstr ""
-"Prijavljivanje trenutno nije dozvoljeno.\n"
-"Milim pokušajte kasnije."
-
-#: kgverify.cpp:505
-msgid "Your login shell is not listed in /etc/shells."
-msgstr "Vaša prijavna ljuska nije navedena u /etc/shells."
-
-#: kgverify.cpp:506
-msgid "Root logins are not allowed."
-msgstr "Prijava root-a nije dozvoljena."
-
-#: kgverify.cpp:507
-msgid "Your account has expired; please contact your system administrator."
-msgstr ""
-"Vaš račun je istekao; molim vas da kontaktirate vašeg administratora sustava."
-
-#: kgverify.cpp:517
-msgid ""
-"A critical error occurred.\n"
-"Please look at KDM's logfile(s) for more information\n"
-"or contact your system administrator."
-msgstr ""
-"Dogodila se kritična greška.\n"
-"Molim pogledajte u KDM-ov dnevnik za detaljnije informacije\n"
-"ili pitajte vašeg adminsitratora sustava."
-
-#: kgverify.cpp:542
-msgid "Your account expires tomorrow."
-msgid_plural "Your account expires in %1 days."
-msgstr[0] "Vaš račun istječe za %1 dan."
-msgstr[1] "Vaš račun istječe za %1 dana."
-msgstr[2] "Vaš račun istječe za %1 dana."
-
-#: kgverify.cpp:544
-msgid "Your account expires today."
-msgstr "Vaš račun istječe danas."
-
-#: kgverify.cpp:550
-msgid "Your password expires tomorrow."
-msgid_plural "Your password expires in %1 days."
-msgstr[0] "Vaša zaporka istječe za %1 dan."
-msgstr[1] "Vaša zaporka istječe za %1 dana."
-msgstr[2] "Vaša zaporka istječe za %1 dana."
-
-#: kgverify.cpp:552
-msgid "Your password expires today."
-msgstr "Vaša šifra istječe danas."
-
-#: kgverify.cpp:626 kgverify.cpp:1086
-msgid "Authentication failed"
-msgstr "Neuspješna identifikacija"
-
-#: kgverify.cpp:776
-msgid "Authenticated user (%1) does not match requested user (%2).\n"
-msgstr "Autenticirani korisnik (%1) nije jednak traženom korisniku (%2).\n"
-
-#: kgverify.cpp:1067
-msgid "Automatic login in 1 second..."
-msgid_plural "Automatic login in %1 seconds..."
-msgstr[0] "Automatska prijava za %1 sekundu …"
-msgstr[1] "Automatska prijava za %1 sekunde …"
-msgstr[2] "Automatska prijava za %1 sekundi …"
-
-#: kgverify.cpp:1079
-msgid "Warning: Caps Lock is on"
-msgstr "Upozorenje: Uključena su velika slova"
-
-#: kgverify.cpp:1083
-msgid "Change failed"
-msgstr "Promijena nije uspjela"
-
-#: kgverify.cpp:1085 kgreeter.cpp:750
-msgid "Login failed"
-msgstr "Prijava nije uspjela"
-
-#: kgverify.cpp:1136
-msgid "Theme not usable with authentication method '%1'."
-msgstr "Tema nije iskoristiva sa metodom ovjere '%1'."
-
-#: kgverify.cpp:1173
-msgctxt "@title:window"
-msgid "<qt><b>Changing authentication token</b></qt>"
-msgstr "<qt><b>Mijenjam oznaku ovjere</b></qt>"
-
-#: kdmconfig.cpp:133
-msgctxt ""
-"@item:intext substitution for an undefined %X placeholder wrongly given in "
-"the config file 'kdmrc', telling the user to fix it"
-msgid "[fix kdmrc]"
-msgstr "[popravi kdmrc]"
 
 #: kdmshutdown.cpp:89
 msgid "Root authorization required."
@@ -548,45 +413,180 @@ msgstr ""
 "\n"
 "Nakon završetka: %1"
 
-#: kgreeter.cpp:482
-msgctxt "@item:inlistbox session type"
-msgid "Default"
-msgstr "Zadano"
+#: kgverify.cpp:187
+msgid "No greeter widget plugin loaded. Check the configuration."
+msgstr "Nije učitan kontrolni umetak za pozdravljanje. Provjerite podešavanja."
 
-#: kgreeter.cpp:483
-msgctxt "@item:inlistbox session type"
-msgid "Custom"
-msgstr "Prilagođeno"
-
-#: kgreeter.cpp:484
-msgctxt "@item:inlistbox session type"
-msgid "Failsafe"
-msgstr "Sigurno"
-
-#: kgreeter.cpp:560
-msgctxt "@item:inmenu session type"
-msgid "%1 (previous)"
-msgstr "%1 (prethodno)"
-
-#: kgreeter.cpp:622
+#: kgverify.cpp:496
 msgid ""
-"Your saved session type '%1' is not valid any more.\n"
-"Please select a new one, otherwise 'default' will be used."
+"Logging in %1...\n"
+"\n"
 msgstr ""
-"Vaša snimljena vrsta sesije „%1“ više nije valjana.\n"
-"Odaberite drugu ili će biti korištena uobičajena."
+"Prijava u %1...\n"
+"\n"
 
-#: kgreeter.cpp:799
-msgctxt "@title:menu"
-msgid "Session &Type"
-msgstr "&Tip sesije"
+#: kgverify.cpp:500
+msgid "You are required to change your password immediately (password aged)."
+msgstr "Morate odmah promijeniti lozinku (zastarjela lozinka)."
 
-#: kgreeter.cpp:805
-msgctxt "@title:menu"
-msgid "&Authentication Method"
-msgstr "&Metoda ovjere autentičnosti"
+#: kgverify.cpp:501
+msgid "You are required to change your password immediately (root enforced)."
+msgstr "Morate odmah promijeniti lozinku (administrator je naredio)."
 
-#: kgreeter.cpp:810
+#: kgverify.cpp:502
+msgid "You are not allowed to login at the moment."
+msgstr "Prijavljivanje vam trenutno nije dozvoljeno."
+
+#: kgverify.cpp:503
+msgid "Home folder not available."
+msgstr "Početna mapa nije dostupna."
+
+#: kgverify.cpp:504
+msgid ""
+"Logins are not allowed at the moment.\n"
+"Try again later."
+msgstr ""
+"Prijavljivanje trenutno nije dozvoljeno.\n"
+"Milim pokušajte kasnije."
+
+#: kgverify.cpp:505
+msgid "Your login shell is not listed in /etc/shells."
+msgstr "Vaša prijavna ljuska nije navedena u /etc/shells."
+
+#: kgverify.cpp:506
+msgid "Root logins are not allowed."
+msgstr "Prijava root-a nije dozvoljena."
+
+#: kgverify.cpp:507
+msgid "Your account has expired; please contact your system administrator."
+msgstr ""
+"Vaš račun je istekao; molim vas da kontaktirate vašeg administratora sustava."
+
+#: kgverify.cpp:517
+msgid ""
+"A critical error occurred.\n"
+"Please look at KDM's logfile(s) for more information\n"
+"or contact your system administrator."
+msgstr ""
+"Dogodila se kritična greška.\n"
+"Molim pogledajte u KDM-ov dnevnik za detaljnije informacije\n"
+"ili pitajte vašeg adminsitratora sustava."
+
+#: kgverify.cpp:542
+msgid "Your account expires tomorrow."
+msgid_plural "Your account expires in %1 days."
+msgstr[0] "Vaš račun istječe za %1 dan."
+msgstr[1] "Vaš račun istječe za %1 dana."
+msgstr[2] "Vaš račun istječe za %1 dana."
+
+#: kgverify.cpp:544
+msgid "Your account expires today."
+msgstr "Vaš račun istječe danas."
+
+#: kgverify.cpp:550
+msgid "Your password expires tomorrow."
+msgid_plural "Your password expires in %1 days."
+msgstr[0] "Vaša zaporka istječe za %1 dan."
+msgstr[1] "Vaša zaporka istječe za %1 dana."
+msgstr[2] "Vaša zaporka istječe za %1 dana."
+
+#: kgverify.cpp:552
+msgid "Your password expires today."
+msgstr "Vaša šifra istječe danas."
+
+#: kgverify.cpp:626 kgverify.cpp:1086
+msgid "Authentication failed"
+msgstr "Neuspješna identifikacija"
+
+#: kgverify.cpp:776
+msgid "Authenticated user (%1) does not match requested user (%2).\n"
+msgstr "Autenticirani korisnik (%1) nije jednak traženom korisniku (%2).\n"
+
+#: kgverify.cpp:1067
+msgid "Automatic login in 1 second..."
+msgid_plural "Automatic login in %1 seconds..."
+msgstr[0] "Automatska prijava za %1 sekundu …"
+msgstr[1] "Automatska prijava za %1 sekunde …"
+msgstr[2] "Automatska prijava za %1 sekundi …"
+
+#: kgverify.cpp:1079
+msgid "Warning: Caps Lock is on"
+msgstr "Upozorenje: Uključena su velika slova"
+
+#: kgverify.cpp:1083
+msgid "Change failed"
+msgstr "Promijena nije uspjela"
+
+#: kgverify.cpp:1136
+msgid "Theme not usable with authentication method '%1'."
+msgstr "Tema nije iskoristiva sa metodom ovjere '%1'."
+
+#: kgverify.cpp:1173
+msgctxt "@title:window"
+msgid "<qt><b>Changing authentication token</b></qt>"
+msgstr "<qt><b>Mijenjam oznaku ovjere</b></qt>"
+
+#: kchooser.cpp:59
 msgctxt "@action:inmenu"
-msgid "&Remote Login"
-msgstr "P&rijava na udaljeno računalo"
+msgid "&Local Login"
+msgstr "&Lokalna prijava"
+
+#: kchooser.cpp:63
+msgid "XDMCP Host Menu"
+msgstr "Izbornik XDMCP računala"
+
+#: kchooser.cpp:73
+msgctxt "@title:column"
+msgid "Hostname"
+msgstr "Ime računala"
+
+#: kchooser.cpp:74
+msgctxt "@title:column ... of named host"
+msgid "Status"
+msgstr "Stanje"
+
+#: kchooser.cpp:82
+msgctxt "XDMCP server"
+msgid "Hos&t:"
+msgstr "&Ime računala:"
+
+#: kchooser.cpp:84
+msgctxt "@action:button"
+msgid "A&dd"
+msgstr "&Dodaj"
+
+#: kchooser.cpp:93
+msgctxt "@action:button"
+msgid "&Accept"
+msgstr "&Prihvati"
+
+#: kchooser.cpp:95
+msgctxt "@action:button"
+msgid "&Refresh"
+msgstr "&Osvježi"
+
+#: kchooser.cpp:105
+msgctxt "@action:button"
+msgid "&Menu"
+msgstr "&Izbornik"
+
+#: kchooser.cpp:203
+msgctxt "hostname or status"
+msgid "<unknown>"
+msgstr "<unknown>"
+
+#: kchooser.cpp:242
+msgid "Unknown host %1"
+msgstr "Nepoznato računalo %1"
+
+#: kconsole.cpp:68
+msgid "*** Cannot connect to console log ***"
+msgstr "*** Ne mogu se spojiti na dnevnik konzole ***"
+
+#: kconsole.cpp:152
+msgid ""
+"\n"
+"*** Lost connection with console log ***"
+msgstr ""
+"\n"
+"*** Izgubljena je veza sa dnevnikom konzole ***"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdmgreet\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2020-02-03 04:11+0000\n"
+"POT-Creation-Date: 2021-03-28 14:17+0300\n"
 "PO-Revision-Date: 2013-12-22 13:56+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
@@ -29,17 +29,12 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:22:25+0000\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: kconsole.cpp:70
-msgid "*** Cannot connect to console log ***"
-msgstr "*** Ei voida avata konsolilokia ***"
-
-#: kconsole.cpp:154
-msgid ""
-"\n"
-"*** Lost connection with console log ***"
-msgstr ""
-"\n"
-"*** Yhteys konsolilokiin katkesi ***"
+#: kdmconfig.cpp:133
+msgctxt ""
+"@item:intext substitution for an undefined %X placeholder wrongly given in "
+"the config file 'kdmrc', telling the user to fix it"
+msgid "[fix kdmrc]"
+msgstr "[korjaa kdmrc-tiedosto]"
 
 #: kgdialog.cpp:57
 msgid "Sw&itch User"
@@ -70,58 +65,86 @@ msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kchooser.cpp:59
+#: kgreeter.cpp:482
+msgctxt "@item:inlistbox session type"
+msgid "Default"
+msgstr "Oletus"
+
+#: kgreeter.cpp:483
+msgctxt "@item:inlistbox session type"
+msgid "Custom"
+msgstr "Muokattu"
+
+#: kgreeter.cpp:484
+msgctxt "@item:inlistbox session type"
+msgid "Failsafe"
+msgstr "Vikatila"
+
+#: kgreeter.cpp:560
+msgctxt "@item:inmenu session type"
+msgid "%1 (previous)"
+msgstr "%1 (edellinen)"
+
+#: kgreeter.cpp:622
+msgid ""
+"Your saved session type '%1' is not valid any more.\n"
+"Please select a new one, otherwise 'default' will be used."
+msgstr ""
+"Tallentamasi istuntotyyppi ’%1’ ei ole enää kelvollinen.\n"
+"Valitse uusi, tai muuten käytetään oletusta."
+
+#: kgreeter.cpp:750 kgverify.cpp:1085
+msgid "Login failed"
+msgstr "Kirjautuminen epäonnistui!"
+
+#: kgreeter.cpp:799
+msgctxt "@title:menu"
+msgid "Session &Type"
+msgstr "Istunto&tyyppi"
+
+#: kgreeter.cpp:805
+msgctxt "@title:menu"
+msgid "&Authentication Method"
+msgstr "&Tunnistustapa"
+
+#: kgreeter.cpp:810
 msgctxt "@action:inmenu"
-msgid "&Local Login"
-msgstr "&Paikallinen kirjautuminen"
+msgid "&Remote Login"
+msgstr "&Etäkirjautuminen"
 
-#: kchooser.cpp:63
-msgid "XDMCP Host Menu"
-msgstr "XDMCP-isäntävalikko"
+#: utils.cpp:87
+msgctxt "user: ..."
+msgid "%2: TTY login"
+msgid_plural "%2: %1 TTY logins"
+msgstr[0] "%2: TTY-kirjautuminen"
+msgstr[1] "%2: %1 TTY-kirjautumiset"
 
-#: kchooser.cpp:73
-msgctxt "@title:column"
-msgid "Hostname"
-msgstr "Isäntänimi"
+#: utils.cpp:99
+msgctxt "... session"
+msgid "Unused"
+msgstr "Käyttämätön"
 
-#: kchooser.cpp:74
-msgctxt "@title:column ... of named host"
-msgid "Status"
-msgstr "Tila"
+#: utils.cpp:101
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: kchooser.cpp:82
-msgctxt "XDMCP server"
-msgid "Hos&t:"
-msgstr "&Isäntäkone:"
+#: utils.cpp:103
+msgctxt "... host"
+msgid "X login on %1"
+msgstr "X-kirjautuminen koneella %1"
 
-#: kchooser.cpp:84
-msgctxt "@action:button"
-msgid "A&dd"
-msgstr "&Lisää"
+#: themer/kdmthemer.cpp:67
+msgid "Cannot open theme file %1"
+msgstr "Teematiedostoa %1 ei voi avata"
 
-#: kchooser.cpp:93
-msgctxt "@action:button"
-msgid "&Accept"
-msgstr "&Hyväksy"
+#: themer/kdmthemer.cpp:72
+msgid "Cannot parse theme file %1"
+msgstr "Teematiedostoa %1 ei voi jäsentää"
 
-#: kchooser.cpp:95
-msgctxt "@action:button"
-msgid "&Refresh"
-msgstr "&Päivitä"
-
-#: kchooser.cpp:105
-msgctxt "@action:button"
-msgid "&Menu"
-msgstr "&Valikko"
-
-#: kchooser.cpp:203
-msgctxt "hostname or status"
-msgid "<unknown>"
-msgstr "<tuntematon>"
-
-#: kchooser.cpp:242
-msgid "Unknown host %1"
-msgstr "Isäntäkone %1 on tuntematon"
+#: themer/kdmthemer.cpp:79
+msgid "%1 does not seem to be a correct theme file"
+msgstr "%1 ei näytä olevan kelvollinen teematiedosto"
 
 #: themer/kdmlabel.cpp:247
 msgctxt "@action:button"
@@ -205,161 +228,6 @@ msgstr[1] "%1 sekunnin kuluttua"
 msgctxt "date format"
 msgid "%a %d %B"
 msgstr "%a %d %B"
-
-#: themer/kdmthemer.cpp:67
-msgid "Cannot open theme file %1"
-msgstr "Teematiedostoa %1 ei voi avata"
-
-#: themer/kdmthemer.cpp:72
-msgid "Cannot parse theme file %1"
-msgstr "Teematiedostoa %1 ei voi jäsentää"
-
-#: themer/kdmthemer.cpp:79
-msgid "%1 does not seem to be a correct theme file"
-msgstr "%1 ei näytä olevan kelvollinen teematiedosto"
-
-#: utils.cpp:87
-msgctxt "user: ..."
-msgid "%2: TTY login"
-msgid_plural "%2: %1 TTY logins"
-msgstr[0] "%2: TTY-kirjautuminen"
-msgstr[1] "%2: %1 TTY-kirjautumiset"
-
-#: utils.cpp:99
-msgctxt "... session"
-msgid "Unused"
-msgstr "Käyttämätön"
-
-#: utils.cpp:101
-msgctxt "user: session type"
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: utils.cpp:103
-msgctxt "... host"
-msgid "X login on %1"
-msgstr "X-kirjautuminen koneella %1"
-
-#: kgverify.cpp:187
-msgid "No greeter widget plugin loaded. Check the configuration."
-msgstr "Ei tervehdysliitännäistä ladattuna. Tarkista asetukset."
-
-#: kgverify.cpp:496
-msgid ""
-"Logging in %1...\n"
-"\n"
-msgstr ""
-"Kirjaudutaan sisään järjestelmään %1…\n"
-"\n"
-
-#: kgverify.cpp:500
-msgid "You are required to change your password immediately (password aged)."
-msgstr "Sinun täytyy vaihtaa salasana välittömästi (salasana vanhentunut)."
-
-#: kgverify.cpp:501
-msgid "You are required to change your password immediately (root enforced)."
-msgstr "Sinun täytyy vaihtaa salasana välittömästi (pääkäyttäjän vaatimus)."
-
-#: kgverify.cpp:502
-msgid "You are not allowed to login at the moment."
-msgstr "Et voi kirjautua järjestelmään tällä hetkellä."
-
-#: kgverify.cpp:503
-msgid "Home folder not available."
-msgstr "Kotikansiota ei ole saatavilla."
-
-#: kgverify.cpp:504
-msgid ""
-"Logins are not allowed at the moment.\n"
-"Try again later."
-msgstr ""
-"Järjestelmään ei voi kirjautua tällä hetkellä.\n"
-"Yritä myöhemmin uudelleen."
-
-#: kgverify.cpp:505
-msgid "Your login shell is not listed in /etc/shells."
-msgstr "Komentotulkkiasi ei ole lueteltu tiedostossa /etc/shells."
-
-#: kgverify.cpp:506
-msgid "Root logins are not allowed."
-msgstr "Pääkäyttäjänä ei voi kirjautua."
-
-#: kgverify.cpp:507
-msgid "Your account has expired; please contact your system administrator."
-msgstr ""
-"Käyttäjätunnuksesi on vanhentunut. Ota yhteyttä järjestelmän ylläpitäjään."
-
-#: kgverify.cpp:517
-msgid ""
-"A critical error occurred.\n"
-"Please look at KDM's logfile(s) for more information\n"
-"or contact your system administrator."
-msgstr ""
-"Tapahtui kriittinen virhe.\n"
-"Saadaksesi lisätietoja katso KDM:n lokitiedostoa tai ota\n"
-"yhteys järjestelmänvalvojaan."
-
-#: kgverify.cpp:542
-msgid "Your account expires tomorrow."
-msgid_plural "Your account expires in %1 days."
-msgstr[0] "Käyttäjätunnuksesi vanhentuu huomenna."
-msgstr[1] "Käyttäjätunnuksesi vanhentuu %1 päivän kuluttua."
-
-#: kgverify.cpp:544
-msgid "Your account expires today."
-msgstr "Tilisi vanhentuu tänään."
-
-#: kgverify.cpp:550
-msgid "Your password expires tomorrow."
-msgid_plural "Your password expires in %1 days."
-msgstr[0] "Salasanasi vanhentuu huomenna."
-msgstr[1] "Salasanasi vanhentuu %1 päivän kuluttua."
-
-#: kgverify.cpp:552
-msgid "Your password expires today."
-msgstr "Salasanasi vanhentuu tänään."
-
-#: kgverify.cpp:626 kgverify.cpp:1086
-msgid "Authentication failed"
-msgstr "Tunnistaminen epäonnistui"
-
-#: kgverify.cpp:776
-msgid "Authenticated user (%1) does not match requested user (%2).\n"
-msgstr "Tunnistettu käyttäjä (%1) ei täsmää pyydettyyn käyttäjään (%2).\n"
-
-#: kgverify.cpp:1067
-msgid "Automatic login in 1 second..."
-msgid_plural "Automatic login in %1 seconds..."
-msgstr[0] "Automaattinen kirjautuminen 1 sekunnin kuluttua…"
-msgstr[1] "Automaattinen kirjautuminen %1 sekunnin kuluttua…"
-
-#: kgverify.cpp:1079
-msgid "Warning: Caps Lock is on"
-msgstr "Varoitus: Vaihtolukko on käytössä"
-
-#: kgverify.cpp:1083
-msgid "Change failed"
-msgstr "Vaihtaminen epäonnistui"
-
-#: kgverify.cpp:1085 kgreeter.cpp:750
-msgid "Login failed"
-msgstr "Kirjautuminen epäonnistui!"
-
-#: kgverify.cpp:1136
-msgid "Theme not usable with authentication method '%1'."
-msgstr "Teema ei ole käytettävissä varmennusmenetelmässä ’%1’."
-
-#: kgverify.cpp:1173
-msgctxt "@title:window"
-msgid "<qt><b>Changing authentication token</b></qt>"
-msgstr "<qt><b>Vaihdetaan tunnistautumismerkkiä</b></qt>"
-
-#: kdmconfig.cpp:133
-msgctxt ""
-"@item:intext substitution for an undefined %X placeholder wrongly given in "
-"the config file 'kdmrc', telling the user to fix it"
-msgid "[fix kdmrc]"
-msgstr "[korjaa kdmrc-tiedosto]"
 
 #: kdmshutdown.cpp:89
 msgid "Root authorization required."
@@ -550,45 +418,177 @@ msgstr ""
 "\n"
 "Aikalisän jälkeen: %1"
 
-#: kgreeter.cpp:482
-msgctxt "@item:inlistbox session type"
-msgid "Default"
-msgstr "Oletus"
+#: kgverify.cpp:187
+msgid "No greeter widget plugin loaded. Check the configuration."
+msgstr "Ei tervehdysliitännäistä ladattuna. Tarkista asetukset."
 
-#: kgreeter.cpp:483
-msgctxt "@item:inlistbox session type"
-msgid "Custom"
-msgstr "Muokattu"
-
-#: kgreeter.cpp:484
-msgctxt "@item:inlistbox session type"
-msgid "Failsafe"
-msgstr "Vikatila"
-
-#: kgreeter.cpp:560
-msgctxt "@item:inmenu session type"
-msgid "%1 (previous)"
-msgstr "%1 (edellinen)"
-
-#: kgreeter.cpp:622
+#: kgverify.cpp:496
 msgid ""
-"Your saved session type '%1' is not valid any more.\n"
-"Please select a new one, otherwise 'default' will be used."
+"Logging in %1...\n"
+"\n"
 msgstr ""
-"Tallentamasi istuntotyyppi ’%1’ ei ole enää kelvollinen.\n"
-"Valitse uusi, tai muuten käytetään oletusta."
+"Kirjaudutaan sisään järjestelmään %1…\n"
+"\n"
 
-#: kgreeter.cpp:799
-msgctxt "@title:menu"
-msgid "Session &Type"
-msgstr "Istunto&tyyppi"
+#: kgverify.cpp:500
+msgid "You are required to change your password immediately (password aged)."
+msgstr "Sinun täytyy vaihtaa salasana välittömästi (salasana vanhentunut)."
 
-#: kgreeter.cpp:805
-msgctxt "@title:menu"
-msgid "&Authentication Method"
-msgstr "&Tunnistustapa"
+#: kgverify.cpp:501
+msgid "You are required to change your password immediately (root enforced)."
+msgstr "Sinun täytyy vaihtaa salasana välittömästi (pääkäyttäjän vaatimus)."
 
-#: kgreeter.cpp:810
+#: kgverify.cpp:502
+msgid "You are not allowed to login at the moment."
+msgstr "Et voi kirjautua järjestelmään tällä hetkellä."
+
+#: kgverify.cpp:503
+msgid "Home folder not available."
+msgstr "Kotikansiota ei ole saatavilla."
+
+#: kgverify.cpp:504
+msgid ""
+"Logins are not allowed at the moment.\n"
+"Try again later."
+msgstr ""
+"Järjestelmään ei voi kirjautua tällä hetkellä.\n"
+"Yritä myöhemmin uudelleen."
+
+#: kgverify.cpp:505
+msgid "Your login shell is not listed in /etc/shells."
+msgstr "Komentotulkkiasi ei ole lueteltu tiedostossa /etc/shells."
+
+#: kgverify.cpp:506
+msgid "Root logins are not allowed."
+msgstr "Pääkäyttäjänä ei voi kirjautua."
+
+#: kgverify.cpp:507
+msgid "Your account has expired; please contact your system administrator."
+msgstr ""
+"Käyttäjätunnuksesi on vanhentunut. Ota yhteyttä järjestelmän ylläpitäjään."
+
+#: kgverify.cpp:517
+msgid ""
+"A critical error occurred.\n"
+"Please look at KDM's logfile(s) for more information\n"
+"or contact your system administrator."
+msgstr ""
+"Tapahtui kriittinen virhe.\n"
+"Saadaksesi lisätietoja katso KDM:n lokitiedostoa tai ota\n"
+"yhteys järjestelmänvalvojaan."
+
+#: kgverify.cpp:542
+msgid "Your account expires tomorrow."
+msgid_plural "Your account expires in %1 days."
+msgstr[0] "Käyttäjätunnuksesi vanhentuu huomenna."
+msgstr[1] "Käyttäjätunnuksesi vanhentuu %1 päivän kuluttua."
+
+#: kgverify.cpp:544
+msgid "Your account expires today."
+msgstr "Tilisi vanhentuu tänään."
+
+#: kgverify.cpp:550
+msgid "Your password expires tomorrow."
+msgid_plural "Your password expires in %1 days."
+msgstr[0] "Salasanasi vanhentuu huomenna."
+msgstr[1] "Salasanasi vanhentuu %1 päivän kuluttua."
+
+#: kgverify.cpp:552
+msgid "Your password expires today."
+msgstr "Salasanasi vanhentuu tänään."
+
+#: kgverify.cpp:626 kgverify.cpp:1086
+msgid "Authentication failed"
+msgstr "Tunnistaminen epäonnistui"
+
+#: kgverify.cpp:776
+msgid "Authenticated user (%1) does not match requested user (%2).\n"
+msgstr "Tunnistettu käyttäjä (%1) ei täsmää pyydettyyn käyttäjään (%2).\n"
+
+#: kgverify.cpp:1067
+msgid "Automatic login in 1 second..."
+msgid_plural "Automatic login in %1 seconds..."
+msgstr[0] "Automaattinen kirjautuminen 1 sekunnin kuluttua…"
+msgstr[1] "Automaattinen kirjautuminen %1 sekunnin kuluttua…"
+
+#: kgverify.cpp:1079
+msgid "Warning: Caps Lock is on"
+msgstr "Varoitus: Vaihtolukko on käytössä"
+
+#: kgverify.cpp:1083
+msgid "Change failed"
+msgstr "Vaihtaminen epäonnistui"
+
+#: kgverify.cpp:1136
+msgid "Theme not usable with authentication method '%1'."
+msgstr "Teema ei ole käytettävissä varmennusmenetelmässä ’%1’."
+
+#: kgverify.cpp:1173
+msgctxt "@title:window"
+msgid "<qt><b>Changing authentication token</b></qt>"
+msgstr "<qt><b>Vaihdetaan tunnistautumismerkkiä</b></qt>"
+
+#: kchooser.cpp:59
 msgctxt "@action:inmenu"
-msgid "&Remote Login"
-msgstr "&Etäkirjautuminen"
+msgid "&Local Login"
+msgstr "&Paikallinen kirjautuminen"
+
+#: kchooser.cpp:63
+msgid "XDMCP Host Menu"
+msgstr "XDMCP-isäntävalikko"
+
+#: kchooser.cpp:73
+msgctxt "@title:column"
+msgid "Hostname"
+msgstr "Isäntänimi"
+
+#: kchooser.cpp:74
+msgctxt "@title:column ... of named host"
+msgid "Status"
+msgstr "Tila"
+
+#: kchooser.cpp:82
+msgctxt "XDMCP server"
+msgid "Hos&t:"
+msgstr "&Isäntäkone:"
+
+#: kchooser.cpp:84
+msgctxt "@action:button"
+msgid "A&dd"
+msgstr "&Lisää"
+
+#: kchooser.cpp:93
+msgctxt "@action:button"
+msgid "&Accept"
+msgstr "&Hyväksy"
+
+#: kchooser.cpp:95
+msgctxt "@action:button"
+msgid "&Refresh"
+msgstr "&Päivitä"
+
+#: kchooser.cpp:105
+msgctxt "@action:button"
+msgid "&Menu"
+msgstr "&Valikko"
+
+#: kchooser.cpp:203
+msgctxt "hostname or status"
+msgid "<unknown>"
+msgstr "<tuntematon>"
+
+#: kchooser.cpp:242
+msgid "Unknown host %1"
+msgstr "Isäntäkone %1 on tuntematon"
+
+#: kconsole.cpp:68
+msgid "*** Cannot connect to console log ***"
+msgstr "*** Ei voida avata konsolilokia ***"
+
+#: kconsole.cpp:152
+msgid ""
+"\n"
+"*** Lost connection with console log ***"
+msgstr ""
+"\n"
+"*** Yhteys konsolilokiin katkesi ***"
