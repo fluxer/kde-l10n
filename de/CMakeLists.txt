@@ -18,4 +18,3 @@ set(CURRENT_LANG de)
 
 macro_optional_add_subdirectory( messages )
 macro_optional_add_subdirectory( data )
-macro_optional_add_subdirectory( scripts )

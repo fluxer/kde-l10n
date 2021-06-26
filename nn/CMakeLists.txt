@@ -17,4 +17,3 @@ endif()
 set(CURRENT_LANG nn)
 
 macro_optional_add_subdirectory( messages )
-macro_optional_add_subdirectory( scripts )
