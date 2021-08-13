@@ -1,7 +1,7 @@
 project(kde-i18n-ro)
 
 if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
-    find_package(KDE4 4.18.0 REQUIRED)
+    find_package(KDE4 4.21.0 REQUIRED)
     find_package(Gettext REQUIRED)
 
     include(KDE4Defaults)
