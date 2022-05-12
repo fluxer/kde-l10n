@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio4\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2022-03-07 17:13+0200\n"
+"POT-Creation-Date: 2022-05-12 03:36+0300\n"
 "PO-Revision-Date: 2014-10-24 13:18+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -426,7 +426,18 @@ msgstr "Jedna instance"
 msgid "Run Until Finished"
 msgstr "Spustit až do dokončení"
 
-#: kio/kdirlister.cpp:390 kio/renamedialog.cpp:415 kio/krun.cpp:1072
+#: metadata/kfilemetadata_ffmpeg.cpp:139 metadata/kfilemetadata_ffmpeg.cpp:180
+#: metadata/kfilemetadata_taglib.cpp:189 kio/kfilemetainfo.cpp:234
+msgctxt "kfilemetadata"
+msgid "%1 kb/s"
+msgstr ""
+
+#: metadata/kfilemetadata_taglib.cpp:198 kio/kfilemetainfo.cpp:235
+msgctxt "kfilemetadata"
+msgid "%1 Hz"
+msgstr ""
+
+#: kio/kdirlister.cpp:390 kio/renamedialog.cpp:415 kio/krun.cpp:1067
 #: kio/paste.cpp:319
 msgid ""
 "Malformed URL\n"
@@ -629,36 +640,20 @@ msgctxt "@title job"
 msgid "Unmounting"
 msgstr "Odpojování"
 
-#: kio/job.cpp:1915 kio/copyjob.cpp:1390 kio/copyjob.cpp:1966
+#: kio/job.cpp:1893 kio/copyjob.cpp:1397 kio/copyjob.cpp:1979
 #: kio/global.cpp:640 kio/paste.cpp:101
 msgid "File Already Exists"
 msgstr "Soubor již existuje"
-
-#: kio/kimageio.cpp:136
-msgid "All Pictures"
-msgstr "Všechny obrázky"
-
-#: kio/kdbusservicestarter.cpp:75
-msgid "No service implementing %1"
-msgstr "Neexistuje služba implementující '%1'."
 
 #: kio/copyjob.cpp:1074 kio/global.cpp:650
 msgid "Folder Already Exists"
 msgstr "Složka již existuje"
 
-#: kio/copyjob.cpp:1390 kio/copyjob.cpp:1966
+#: kio/copyjob.cpp:1397 kio/copyjob.cpp:1979
 msgid "Already Exists as Folder"
 msgstr "Již existuje jako složka"
 
-#: kio/kscan.cpp:50
-msgid "Acquire Image"
-msgstr "Získat obrázek"
-
-#: kio/kscan.cpp:99
-msgid "OCR Image"
-msgstr "Aplikovat OCR na obrázek"
-
-#: kio/netaccess.cpp:104
+#: kio/netaccess.cpp:102
 msgid "File '%1' is not readable"
 msgstr "Soubor '%1' není určen ke čtení"
 
@@ -2425,15 +2420,7 @@ msgstr "&Ano"
 msgid "&No"
 msgstr "&Ne"
 
-#: kio/krun.cpp:117
-msgid ""
-"<qt>Unable to enter <b>%1</b>.\n"
-"You do not have access rights to this location.</qt>"
-msgstr ""
-"<qt>Není možné vstoupit do <b>%1</b>.\n"
-"Nemáte dostatečná přístupová práva k tomuto umístění.</qt>"
-
-#: kio/krun.cpp:142
+#: kio/krun.cpp:137
 msgid ""
 "<qt>The file <b>%1</b> is an executable program. For safety it will not be "
 "started.</qt>"
@@ -2441,41 +2428,41 @@ msgstr ""
 "<qt>Soubor <b>%1</b> je spustitelný. S ohledem na bezpečnost nebude spuštěn."
 "</qt>"
 
-#: kio/krun.cpp:165
+#: kio/krun.cpp:160
 msgid "Open with:"
 msgstr "Otevřít pomocí:"
 
-#: kio/krun.cpp:534
+#: kio/krun.cpp:529
 msgid "You are not authorized to execute this file."
 msgstr "Nemáte oprávnění ke spuštění tohoto souboru."
 
-#: kio/krun.cpp:557
+#: kio/krun.cpp:552
 msgid "Launching %1"
 msgstr "Spouštím %1"
 
-#: kio/krun.cpp:665
+#: kio/krun.cpp:660
 msgid "Error processing Exec field in %1"
 msgstr "Chyba ve zpracování Exec pole %1"
 
-#: kio/krun.cpp:851
+#: kio/krun.cpp:846
 msgctxt "Warning about executing unknown .desktop file"
 msgid "Warning"
 msgstr "Varování"
 
-#: kio/krun.cpp:865
+#: kio/krun.cpp:860
 msgctxt "program name follows in a line edit below"
 msgid "This will start the program:"
 msgstr "Tímto spustíte program:"
 
-#: kio/krun.cpp:879
+#: kio/krun.cpp:874
 msgid "If you do not trust this program, click Cancel"
 msgstr "Pokud tomuto programu nedůvěřujete, klikněte na Zrušit"
 
-#: kio/krun.cpp:912
+#: kio/krun.cpp:907
 msgid "Unable to make the service %1 executable, aborting execution"
 msgstr "Nelze nastavit službu %1 jako spustitelnou, přerušuje se spuštění"
 
-#: kio/krun.cpp:1094
+#: kio/krun.cpp:1089
 msgid ""
 "<qt>Unable to run the command specified. The file or folder <b>%1</b> does "
 "not exist.</qt>"
@@ -2483,7 +2470,7 @@ msgstr ""
 "<qt>Není možné spustit zadaný příkaz. Soubor nebo složka <b>%1</b> "
 "neexistuje.</qt>"
 
-#: kio/krun.cpp:1679
+#: kio/krun.cpp:1674
 msgid "Could not find the program '%1'"
 msgstr "Není možné nalézt program '%1'"
 
@@ -2507,18 +2494,18 @@ msgstr "U&pravit..."
 msgid "Click this button to display the familiar KDE mime type editor."
 msgstr "Kliknutím na toto tlačítko zobrazíte známý editor MIME typů pro KDE."
 
-#: kio/jobuidelegate.cpp:154 ../kfile/kdiroperator.cpp:793
+#: kio/jobuidelegate.cpp:149 ../kfile/kdiroperator.cpp:793
 msgid "Do you really want to delete this item?"
 msgid_plural "Do you really want to delete these %1 items?"
 msgstr[0] "Opravdu si přejete smazat tuto položku?"
 msgstr[1] "Opravdu si přejete smazat tyto %1 položky?"
 msgstr[2] "Opravdu si přejete smazat těchto %1 položek?"
 
-#: kio/jobuidelegate.cpp:156 ../kfile/kdiroperator.cpp:795
+#: kio/jobuidelegate.cpp:151 ../kfile/kdiroperator.cpp:795
 msgid "Delete Files"
 msgstr "Smazat soubory"
 
-#: kio/jobuidelegate.cpp:164
+#: kio/jobuidelegate.cpp:159
 msgctxt "@info"
 msgid ""
 "Do you want to permanently delete all items from Trash? This action cannot "
@@ -2527,23 +2514,23 @@ msgstr ""
 "Opravdu si přejete natrvalo odstranit všechny položky z koše? Tento krok "
 "nelze vrátit."
 
-#: kio/jobuidelegate.cpp:166 ../kfile/kfileplacesview.cpp:643
+#: kio/jobuidelegate.cpp:161 ../kfile/kfileplacesview.cpp:643
 msgctxt "@action:button"
 msgid "Empty Trash"
 msgstr "Vyprázdnit koš"
 
-#: kio/jobuidelegate.cpp:175
+#: kio/jobuidelegate.cpp:170
 msgid "Do you really want to move this item to the trash?"
 msgid_plural "Do you really want to move these %1 items to the trash?"
 msgstr[0] "Opravdu si přejete přesunout tuto položku do koše?"
 msgstr[1] "Opravdu si přejete přesunout tyto %1 položky do koše?"
 msgstr[2] "Opravdu si přejete přesunout těchto %1 položek do koše?"
 
-#: kio/jobuidelegate.cpp:177 ../kfile/kdiroperator.cpp:1778
+#: kio/jobuidelegate.cpp:172 ../kfile/kdiroperator.cpp:1778
 msgid "Move to Trash"
 msgstr "Přesunout do koše"
 
-#: kio/jobuidelegate.cpp:178
+#: kio/jobuidelegate.cpp:173
 msgctxt "Verb"
 msgid "&Trash"
 msgstr "Vyhodi&t do koše"
@@ -2639,44 +2626,444 @@ msgstr ""
 msgid "&Skip File"
 msgstr "Přeskočit &soubor"
 
-#: kio/kfilemetainfo.cpp:151
-msgid "Row at top, column at left"
+#: kio/kfilemetainfo.cpp:240
+msgctxt "@label"
+msgid "Modified"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:155
-msgid "Row at top, column at right"
+#: kio/kfilemetainfo.cpp:241
+msgctxt "@label"
+msgid "Owner"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:159
-msgid "Row at bottom, column at right"
+#: kio/kfilemetainfo.cpp:242
+msgctxt "@label"
+msgid "Permissions"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:163
-msgid "Row at bottom, column at left"
+#: kio/kfilemetainfo.cpp:243
+msgctxt "@label"
+msgid "Size"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:167
-msgid "Row at left, column at top"
+#: kio/kfilemetainfo.cpp:244
+msgctxt "@label"
+msgid "Total Size"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:171
-msgid "Row at right, column at top"
+#: kio/kfilemetainfo.cpp:245
+msgctxt "@label"
+msgid "Type"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:175
-msgid "Row at right, column at bottom"
+#: kio/kfilemetainfo.cpp:246
+msgctxt "@label"
+msgid "MIME Type"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:179
-msgid "Row at left, column at bottom"
+#: kio/kfilemetainfo.cpp:248
+msgctxt "@label"
+msgid "Filename"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:219 kio/kfilemetainfo.cpp:223
-msgid "%1 per second"
+#: kio/kfilemetainfo.cpp:249
+msgctxt "@label file URL"
+msgid "URL"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:227
-msgid "%1 kHz"
+#: kio/kfilemetainfo.cpp:250
+msgctxt "@label"
+msgid "Width"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:251
+msgctxt "@label"
+msgid "Height"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:252
+msgctxt "@label"
+msgid "Average Bitrate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:253
+msgctxt "@label"
+msgid "Sample Rate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:254
+msgctxt "@label"
+msgid "Channels"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:255
+msgctxt "@label"
+msgid "Duration"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:256
+msgctxt "@label"
+msgid "Frame Rate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:257
+msgctxt "@label"
+msgid "Video Codec"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:258
+msgctxt "@label"
+msgid "Audio Codec"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:259
+msgctxt "@label"
+msgid "Subtitle Codec"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:260
+msgctxt "@label"
+msgid "Audio Bit Rate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:261
+msgctxt "@label"
+msgid "Video Bit Rate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:262
+msgctxt "@label"
+msgid "Copyright"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:263
+msgctxt "@label"
+msgid "Comment"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:264
+msgctxt "@label music title"
+msgid "Title"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:265
+msgctxt "@label"
+msgid "Keyword"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:266
+msgctxt "@label"
+msgid "Description"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:267
+msgctxt "@label Software used to generate content"
+msgid "Generator"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:268
+msgctxt "@label modification date"
+msgid "Modified"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:269
+msgctxt "@label creation date"
+msgid "Created"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:270
+msgctxt "@label"
+msgid "Subject"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:271
+msgctxt "@label music album"
+msgid "Album"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:272
+msgctxt "@label music genre"
+msgid "Genre"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:273
+msgctxt "@label"
+msgid "Performer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:274
+msgctxt "@label music track number"
+msgid "Track"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:275
+msgctxt "@label music composer"
+msgid "Composer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:276
+msgctxt "@label"
+msgid "Encoder"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:277
+msgctxt "@label"
+msgid "Encoded By"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:278
+msgctxt "@label"
+msgid "Original Release Year"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:279
+msgctxt "@label"
+msgid "URI"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:280
+msgctxt "@label"
+msgid "Text Writer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:281
+msgctxt "@label"
+msgid "Publisher"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:282
+msgctxt "@label"
+msgid "Creator"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:283
+msgctxt "@label"
+msgid "Contributor"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:284
+msgctxt "@label EXIF"
+msgid "Manufacturer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:285
+msgctxt "@label EXIF"
+msgid "Model"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:286
+msgctxt "@label EXIF"
+msgid "Orientation"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:287
+msgctxt "@label music or image artist"
+msgid "Artist"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:288
+msgctxt "@label"
+msgid "GPS Latitude Reference"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:289
+msgctxt "@label"
+msgid "GPS Longitude Reference"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:290
+msgctxt "@label EXIF"
+msgid "Flash"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:291
+msgctxt "@label EXIF"
+msgid "Exposure Time"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:292
+msgctxt "@label EXIF"
+msgid "Exposure Bias Value"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:293
+msgctxt "@label EXIF"
+msgid "Exposure Mode"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:294
+msgctxt "@label EXIF aperture value"
+msgid "Aperture"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:295
+msgctxt "@label EXIF"
+msgid "Focal Length"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:296
+msgctxt "@label EXIF"
+msgid "Focal Length 35 mm"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:297
+msgctxt "@label EXIF"
+msgid "ISO Speed Ratings"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:298
+msgctxt "@label EXIF"
+msgid "Metering Mode"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:299
+msgctxt "@label EXIF"
+msgid "White Balance"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:301
+msgctxt "@label"
+msgid "Page Count"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:302
+msgctxt "@label"
+msgid "Creator E-Mail"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:303
+msgctxt "@label"
+msgid "Hash Value"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:304
+msgctxt "@label"
+msgid "Hash Algorithm"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:305
+msgctxt "@label"
+msgid "Country"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:306
+msgctxt "@label"
+msgid "Summary"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:307
+msgctxt "@label"
+msgid "Character Set"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:308
+msgctxt "@label number of lines"
+msgid "Lines"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:309
+msgctxt "@label number of words"
+msgid "Words"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:310
+msgctxt "@label"
+msgid "Character Count"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:311
+msgctxt "@label"
+msgid "Revision"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:312
+msgctxt "@label"
+msgid "Contact"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:313
+msgctxt "@label"
+msgid "Disclaimer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:314
+msgctxt "@label video director"
+msgid "Director"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:315
+msgctxt "@label"
+msgid "Conductor"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:316
+msgctxt "@label"
+msgid "Interpreted By"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:317
+msgctxt "@label"
+msgid "Beats Per Minute"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:318
+msgctxt "@label"
+msgid "Original Artist"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:319
+msgctxt "@label"
+msgid "Original Text Writer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:320
+msgctxt "@label"
+msgid "Lyrics"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:321
+msgctxt "@label"
+msgid "Licensee"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:322
+msgctxt "@label"
+msgid "Musician Credits"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:323
+msgctxt "@label"
+msgid "Subtitle"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:324
+msgctxt "@label"
+msgid "Codec"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:325
+msgctxt "@label"
+msgid "Container Format"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:326
+msgctxt "@label"
+msgid "Grouping"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:327
+msgctxt "@label"
+msgid "Audio Bit Depth"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:328
+msgctxt "@label"
+msgid "Video Bit Depth"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:329
+msgctxt "@label"
+msgid "Aspect Ratio"
 msgstr ""
 
 #: kio/fileundomanager.cpp:119
@@ -2738,17 +3125,21 @@ msgstr ""
 msgid "Undo File Copy Confirmation"
 msgstr "Potvrzení vrácení kopie souboru"
 
-#: kio/kfileitem.cpp:1138
+#: kio/kfileitem.cpp:1174
 msgid "(Symbolic Link to %1)"
 msgstr "(Symbolický odkaz na %1)"
 
-#: kio/kfileitem.cpp:1140
+#: kio/kfileitem.cpp:1176
 msgid "(%1, Link to %2)"
 msgstr "(%1, odkaz na %2)"
 
-#: kio/kfileitem.cpp:1144
+#: kio/kfileitem.cpp:1180
 msgid " (Points to %1)"
 msgstr " (Odkazuje na: %1)"
+
+#: kio/slavebase.cpp:889
+msgid "Authentication Dialog"
+msgstr ""
 
 #: kio/pastedialog.cpp:55
 msgid "Data format:"
@@ -2774,11 +3165,11 @@ msgstr ""
 "Není možné vytvořit io-slave:\n"
 "klauncher hlásí: %1"
 
-#: kio/kdesktopfileactions.cpp:55
+#: kio/kdesktopfileactions.cpp:53
 msgid "The desktop entry file %1 has no Type=... entry."
 msgstr "Soubor pracovní plochy %1 neobsahuje položku Type=... ."
 
-#: kio/kdesktopfileactions.cpp:71
+#: kio/kdesktopfileactions.cpp:69
 msgid ""
 "The desktop entry of type\n"
 "%1\n"
@@ -2788,8 +3179,8 @@ msgstr ""
 "%1\n"
 "je neznámý."
 
-#: kio/kdesktopfileactions.cpp:85 kio/kdesktopfileactions.cpp:159
-#: kio/kdesktopfileactions.cpp:260
+#: kio/kdesktopfileactions.cpp:83 kio/kdesktopfileactions.cpp:157
+#: kio/kdesktopfileactions.cpp:258
 msgid ""
 "The desktop entry file\n"
 "%1\n"
@@ -2799,7 +3190,7 @@ msgstr ""
 "%1\n"
 "je typu FSDevice, ale nemá položku Dev=..."
 
-#: kio/kdesktopfileactions.cpp:127
+#: kio/kdesktopfileactions.cpp:125
 msgid ""
 "The desktop entry file\n"
 "%1\n"
@@ -2809,112 +3200,112 @@ msgstr ""
 "%1\n"
 "je typu Link, ale neobsahuje položku URL=..."
 
-#: kio/kdesktopfileactions.cpp:174
+#: kio/kdesktopfileactions.cpp:172
 msgid "Mount"
 msgstr "Připojit"
 
-#: kio/kdesktopfileactions.cpp:180
+#: kio/kdesktopfileactions.cpp:178
 msgid "Unmount"
 msgstr "Odpojit"
 
-#: kfile/kpropertiesdialog.cpp:197 kfile/kpropertiesdialog.cpp:212
-#: kfile/kpropertiesdialog.cpp:224 kfile/kpropertiesdialog.cpp:239
-#: kfile/kpropertiesdialog.cpp:255
+#: kfile/kpropertiesdialog.cpp:198 kfile/kpropertiesdialog.cpp:213
+#: kfile/kpropertiesdialog.cpp:225 kfile/kpropertiesdialog.cpp:240
+#: kfile/kpropertiesdialog.cpp:256
 msgid "Properties for %1"
 msgstr "Vlastnosti pro %1"
 
-#: kfile/kpropertiesdialog.cpp:222
+#: kfile/kpropertiesdialog.cpp:223
 msgid "Properties for 1 item"
 msgid_plural "Properties for %1 Selected Items"
 msgstr[0] "Vlastnosti pro jednu položku"
 msgstr[1] "Vlastnosti pro %1 položky"
 msgstr[2] "Vlastnosti pro %1 položek"
 
-#: kfile/kpropertiesdialog.cpp:720
+#: kfile/kpropertiesdialog.cpp:727
 msgctxt "@title:tab File properties"
 msgid "&General"
 msgstr "&Obecné"
 
-#: kfile/kpropertiesdialog.cpp:906
+#: kfile/kpropertiesdialog.cpp:913
 msgid "Type:"
 msgstr "Typ:"
 
-#: kfile/kpropertiesdialog.cpp:919
+#: kfile/kpropertiesdialog.cpp:926
 msgid "Create New File Type"
 msgstr "Vytvořit nový typ souboru"
 
-#: kfile/kpropertiesdialog.cpp:921
+#: kfile/kpropertiesdialog.cpp:928
 msgid "File Type Options"
 msgstr "Možnosti typu souborů"
 
-#: kfile/kpropertiesdialog.cpp:928
+#: kfile/kpropertiesdialog.cpp:935
 msgid "Contents:"
 msgstr "Obsah:"
 
-#: kfile/kpropertiesdialog.cpp:937 kfile/kurlrequesterdialog.cpp:58
+#: kfile/kpropertiesdialog.cpp:944 kfile/kurlrequesterdialog.cpp:58
 msgid "Location:"
 msgstr "Umístění:"
 
-#: kfile/kpropertiesdialog.cpp:951
+#: kfile/kpropertiesdialog.cpp:958
 msgid "Size:"
 msgstr "Velikost:"
 
-#: kfile/kpropertiesdialog.cpp:970
+#: kfile/kpropertiesdialog.cpp:977
 msgid "Calculate"
 msgstr "Spočítat"
 
-#: kfile/kpropertiesdialog.cpp:971
+#: kfile/kpropertiesdialog.cpp:978
 msgid "Stop"
 msgstr "Zastavit"
 
-#: kfile/kpropertiesdialog.cpp:981 kfile/kpropertiesdialog.cpp:1184
+#: kfile/kpropertiesdialog.cpp:988 kfile/kpropertiesdialog.cpp:1191
 msgid "Refresh"
 msgstr "Obnovit"
 
-#: kfile/kpropertiesdialog.cpp:989
+#: kfile/kpropertiesdialog.cpp:996
 msgid "Points to:"
 msgstr "Odkazuje na:"
 
-#: kfile/kpropertiesdialog.cpp:1002
+#: kfile/kpropertiesdialog.cpp:1009
 msgid "Created:"
 msgstr "Vytvořený:"
 
-#: kfile/kpropertiesdialog.cpp:1012
+#: kfile/kpropertiesdialog.cpp:1019
 msgid "Modified:"
 msgstr "Změněný:"
 
-#: kfile/kpropertiesdialog.cpp:1022
+#: kfile/kpropertiesdialog.cpp:1029
 msgid "Accessed:"
 msgstr "Poslední přístup:"
 
-#: kfile/kpropertiesdialog.cpp:1043
+#: kfile/kpropertiesdialog.cpp:1050
 msgid "Mounted on:"
 msgstr "Místo připojení:"
 
-#: kfile/kpropertiesdialog.cpp:1051 kfile/kpropertiesdialog.cpp:2735
+#: kfile/kpropertiesdialog.cpp:1058 kfile/kpropertiesdialog.cpp:2742
 msgid "Device usage:"
 msgstr "Využití zařízení:"
 
-#: kfile/kpropertiesdialog.cpp:1146 kfile/kpropertiesdialog.cpp:2863
+#: kfile/kpropertiesdialog.cpp:1153 kfile/kpropertiesdialog.cpp:2870
 msgctxt "Available space out of total partition size (percent used)"
 msgid "%1 free of %2 (%3% used)"
 msgstr "%1 volné z %2 (%3% použito)"
 
-#: kfile/kpropertiesdialog.cpp:1163 kfile/kpropertiesdialog.cpp:1179
+#: kfile/kpropertiesdialog.cpp:1170 kfile/kpropertiesdialog.cpp:1186
 msgid "1 file"
 msgid_plural "%1 files"
 msgstr[0] "1 soubor"
 msgstr[1] "%1 soubory"
 msgstr[2] "%1 souborů"
 
-#: kfile/kpropertiesdialog.cpp:1164 kfile/kpropertiesdialog.cpp:1180
+#: kfile/kpropertiesdialog.cpp:1171 kfile/kpropertiesdialog.cpp:1187
 msgid "1 sub-folder"
 msgid_plural "%1 sub-folders"
 msgstr[0] "1 podsložka"
 msgstr[1] "%1 podsložky"
 msgstr[2] "%1 podsložek"
 
-#: kfile/kpropertiesdialog.cpp:1160
+#: kfile/kpropertiesdialog.cpp:1167
 msgid ""
 "Calculating... %1 (%2)\n"
 "%3, %4"
@@ -2922,20 +3313,20 @@ msgstr ""
 "Počítám... %1 (%2)\n"
 "%3, %4"
 
-#: kfile/kpropertiesdialog.cpp:1193
+#: kfile/kpropertiesdialog.cpp:1200
 msgid "Calculating..."
 msgstr "Počítám..."
 
-#: kfile/kpropertiesdialog.cpp:1228
+#: kfile/kpropertiesdialog.cpp:1235
 msgid "At least %1"
 msgstr "Nejméně %1"
 
-#: kfile/kpropertiesdialog.cpp:1265
+#: kfile/kpropertiesdialog.cpp:1272
 msgid "The new file name is empty."
 msgstr "Nový název souboru je prázdný."
 
-#: kfile/kpropertiesdialog.cpp:1441 kfile/kpropertiesdialog.cpp:2609
-#: kfile/kpropertiesdialog.cpp:2903 kfile/kpropertiesdialog.cpp:3154
+#: kfile/kpropertiesdialog.cpp:1448 kfile/kpropertiesdialog.cpp:2616
+#: kfile/kpropertiesdialog.cpp:2910 kfile/kpropertiesdialog.cpp:3161
 msgid ""
 "<qt>Could not save properties. You do not have sufficient access to write to "
 "<b>%1</b>.</qt>"
@@ -2943,89 +3334,89 @@ msgstr ""
 "<qt>Není možné uložit vlastnosti. Je pravděpodobné, že nemáte oprávnění k "
 "zápisu do <b>%1</b>.</qt>"
 
-#: kfile/kpropertiesdialog.cpp:1516 kfile/kpropertiesdialog.cpp:1520
-#: kfile/kpropertiesdialog.cpp:1525
+#: kfile/kpropertiesdialog.cpp:1523 kfile/kpropertiesdialog.cpp:1527
+#: kfile/kpropertiesdialog.cpp:1532
 msgid "Forbidden"
 msgstr "Zakázáno"
 
-#: kfile/kpropertiesdialog.cpp:1517
+#: kfile/kpropertiesdialog.cpp:1524
 msgid "Can Read"
 msgstr "Může číst"
 
-#: kfile/kpropertiesdialog.cpp:1518
+#: kfile/kpropertiesdialog.cpp:1525
 msgid "Can Read & Write"
 msgstr "Může číst a zapisovat"
 
-#: kfile/kpropertiesdialog.cpp:1521
+#: kfile/kpropertiesdialog.cpp:1528
 msgid "Can View Content"
 msgstr "Může prohlížet obsah"
 
-#: kfile/kpropertiesdialog.cpp:1522
+#: kfile/kpropertiesdialog.cpp:1529
 msgid "Can View & Modify Content"
 msgstr "Může prohlížet a měnit obsah"
 
-#: kfile/kpropertiesdialog.cpp:1526
+#: kfile/kpropertiesdialog.cpp:1533
 msgid "Can View Content & Read"
 msgstr "Může prohlížet obsah a číst"
 
-#: kfile/kpropertiesdialog.cpp:1527
+#: kfile/kpropertiesdialog.cpp:1534
 msgid "Can View/Read & Modify/Write"
 msgstr "Může prohlížet/číst a měnit/zapisovat"
 
-#: kfile/kpropertiesdialog.cpp:1623
+#: kfile/kpropertiesdialog.cpp:1630
 msgid "&Permissions"
 msgstr "O&právnění"
 
-#: kfile/kpropertiesdialog.cpp:1635 kfile/kpropertiesdialog.cpp:1873
+#: kfile/kpropertiesdialog.cpp:1642 kfile/kpropertiesdialog.cpp:1880
 msgid "Access Permissions"
 msgstr "Přístupová práva"
 
-#: kfile/kpropertiesdialog.cpp:1643
+#: kfile/kpropertiesdialog.cpp:1650
 msgid "This file is a link and does not have permissions."
 msgid_plural "All files are links and do not have permissions."
 msgstr[0] "Tento soubor je odkaz a neobsahuje oprávnění."
 msgstr[1] "Tyto soubory jsou odkazy a neobsahují oprávnění."
 msgstr[2] "Tyto soubory jsou odkazy a neobsahují oprávnění."
 
-#: kfile/kpropertiesdialog.cpp:1647
+#: kfile/kpropertiesdialog.cpp:1654
 msgid "Only the owner can change permissions."
 msgstr "Pouze vlastník může měnit oprávnění."
 
-#: kfile/kpropertiesdialog.cpp:1650
+#: kfile/kpropertiesdialog.cpp:1657
 msgid "O&wner:"
 msgstr "V&lastník:"
 
-#: kfile/kpropertiesdialog.cpp:1656
+#: kfile/kpropertiesdialog.cpp:1663
 msgid "Specifies the actions that the owner is allowed to do."
 msgstr "Určuje činnosti, které jsou vlastníkovi povoleny."
 
-#: kfile/kpropertiesdialog.cpp:1658
+#: kfile/kpropertiesdialog.cpp:1665
 msgid "Gro&up:"
 msgstr "Sk&upina:"
 
-#: kfile/kpropertiesdialog.cpp:1664
+#: kfile/kpropertiesdialog.cpp:1671
 msgid "Specifies the actions that the members of the group are allowed to do."
 msgstr "Určuje činnosti, které jsou členům skupiny povoleny."
 
-#: kfile/kpropertiesdialog.cpp:1666
+#: kfile/kpropertiesdialog.cpp:1673
 msgid "O&thers:"
 msgstr "Os&tatní:"
 
-#: kfile/kpropertiesdialog.cpp:1672
+#: kfile/kpropertiesdialog.cpp:1679
 msgid ""
 "Specifies the actions that all users, who are neither owner nor in the "
 "group, are allowed to do."
 msgstr "Určuje činnosti, které jsou všem uživatelům povoleny."
 
-#: kfile/kpropertiesdialog.cpp:1677
+#: kfile/kpropertiesdialog.cpp:1684
 msgid "Only own&er can rename and delete folder content"
 msgstr "Pouz&e vlastník smí přejmenovávat a mazat obsah složky"
 
-#: kfile/kpropertiesdialog.cpp:1678
+#: kfile/kpropertiesdialog.cpp:1685
 msgid "Is &executable"
 msgstr "J&e spustitelný"
 
-#: kfile/kpropertiesdialog.cpp:1682
+#: kfile/kpropertiesdialog.cpp:1689
 msgid ""
 "Enable this option to allow only the folder's owner to delete or rename the "
 "contained files and folders. Other users can only add new files, which "
@@ -3035,7 +3426,7 @@ msgstr ""
 "nebo přejmenovávat obsažené soubory a složky. Ostatní uživatelé mohou pouze "
 "přidávat nové soubory, což vyžaduje oprávnění ke změně obsahu."
 
-#: kfile/kpropertiesdialog.cpp:1686
+#: kfile/kpropertiesdialog.cpp:1693
 msgid ""
 "Enable this option to mark the file as executable. This only makes sense for "
 "programs and scripts. It is required when you want to execute them."
@@ -3043,35 +3434,35 @@ msgstr ""
 "Povolte tuto možnost k označení souboru jako spustitelného. Toto dává smysl "
 "pouze pro programy nebo skripty a je vyžadováno, pokud je přejete spustit."
 
-#: kfile/kpropertiesdialog.cpp:1693
+#: kfile/kpropertiesdialog.cpp:1700
 msgid "A&dvanced Permissions"
 msgstr "Po&kročilá oprávnění"
 
-#: kfile/kpropertiesdialog.cpp:1702
+#: kfile/kpropertiesdialog.cpp:1709
 msgid "Ownership"
 msgstr "Vlastnictví"
 
-#: kfile/kpropertiesdialog.cpp:1709
+#: kfile/kpropertiesdialog.cpp:1716
 msgid "User:"
 msgstr "Uživatel:"
 
-#: kfile/kpropertiesdialog.cpp:1781
+#: kfile/kpropertiesdialog.cpp:1788
 msgid "Group:"
 msgstr "Skupina:"
 
-#: kfile/kpropertiesdialog.cpp:1824
+#: kfile/kpropertiesdialog.cpp:1831
 msgid "Apply changes to all subfolders and their contents"
 msgstr "Aplikovat změny na všechny podsložky a jejich obsah"
 
-#: kfile/kpropertiesdialog.cpp:1863
+#: kfile/kpropertiesdialog.cpp:1870
 msgid "Advanced Permissions"
 msgstr "Pokročilá oprávnění"
 
-#: kfile/kpropertiesdialog.cpp:1881
+#: kfile/kpropertiesdialog.cpp:1888
 msgid "Class"
 msgstr "Třída"
 
-#: kfile/kpropertiesdialog.cpp:1886
+#: kfile/kpropertiesdialog.cpp:1893
 msgid ""
 "Show\n"
 "Entries"
@@ -3079,19 +3470,19 @@ msgstr ""
 "Zobrazení\n"
 "položek"
 
-#: kfile/kpropertiesdialog.cpp:1888
+#: kfile/kpropertiesdialog.cpp:1895
 msgid "Read"
 msgstr "Čtení"
 
-#: kfile/kpropertiesdialog.cpp:1893
+#: kfile/kpropertiesdialog.cpp:1900
 msgid "This flag allows viewing the content of the folder."
 msgstr "Tento příznak povoluje prohlížení složky."
 
-#: kfile/kpropertiesdialog.cpp:1895
+#: kfile/kpropertiesdialog.cpp:1902
 msgid "The Read flag allows viewing the content of the file."
 msgstr "Tento příznak povoluje prohlížení obsahu souboru."
 
-#: kfile/kpropertiesdialog.cpp:1899
+#: kfile/kpropertiesdialog.cpp:1906
 msgid ""
 "Write\n"
 "Entries"
@@ -3099,11 +3490,11 @@ msgstr ""
 "Zápis\n"
 "položek"
 
-#: kfile/kpropertiesdialog.cpp:1901
+#: kfile/kpropertiesdialog.cpp:1908
 msgid "Write"
 msgstr "Zápis"
 
-#: kfile/kpropertiesdialog.cpp:1906
+#: kfile/kpropertiesdialog.cpp:1913
 msgid ""
 "This flag allows adding, renaming and deleting of files. Note that deleting "
 "and renaming can be limited using the Sticky flag."
@@ -3111,32 +3502,32 @@ msgstr ""
 "Tento příznak povoluje přidávání, přejmenování a mazání souborů. Všimněte "
 "si, že mazání a přejmenování může být omezeno pomocí příznaku \"sticky\"."
 
-#: kfile/kpropertiesdialog.cpp:1909
+#: kfile/kpropertiesdialog.cpp:1916
 msgid "The Write flag allows modifying the content of the file."
 msgstr "Tento příznak povoluje změnu obsahu souboru."
 
-#: kfile/kpropertiesdialog.cpp:1914
+#: kfile/kpropertiesdialog.cpp:1921
 msgctxt "Enter folder"
 msgid "Enter"
 msgstr "Vstup"
 
-#: kfile/kpropertiesdialog.cpp:1915
+#: kfile/kpropertiesdialog.cpp:1922
 msgid "Enable this flag to allow entering the folder."
 msgstr "Tento příznak povoluje vstup do složky."
 
-#: kfile/kpropertiesdialog.cpp:1918
+#: kfile/kpropertiesdialog.cpp:1925
 msgid "Exec"
 msgstr "Vykonání"
 
-#: kfile/kpropertiesdialog.cpp:1919
+#: kfile/kpropertiesdialog.cpp:1926
 msgid "Enable this flag to allow executing the file as a program."
 msgstr "Tento příznak povoluje spouštění souboru jako programu."
 
-#: kfile/kpropertiesdialog.cpp:1929
+#: kfile/kpropertiesdialog.cpp:1936
 msgid "Special"
 msgstr "Speciální"
 
-#: kfile/kpropertiesdialog.cpp:1933
+#: kfile/kpropertiesdialog.cpp:1940
 msgid ""
 "Special flag. Valid for the whole folder, the exact meaning of the flag can "
 "be seen in the right hand column."
@@ -3144,30 +3535,30 @@ msgstr ""
 "Speciální příznak, platný pro celou složku. Vlastní význam lze vidět v "
 "pravém sloupci."
 
-#: kfile/kpropertiesdialog.cpp:1936
+#: kfile/kpropertiesdialog.cpp:1943
 msgid ""
 "Special flag. The exact meaning of the flag can be seen in the right hand "
 "column."
 msgstr "Speciální příznak; vlastní význam lze vidět v pravém sloupci."
 
-#: kfile/kpropertiesdialog.cpp:1940
+#: kfile/kpropertiesdialog.cpp:1947
 msgid "User"
 msgstr "Uživatel"
 
-#: kfile/kpropertiesdialog.cpp:1944
+#: kfile/kpropertiesdialog.cpp:1951
 msgid "Group"
 msgstr "Skupina"
 
-#: kfile/kpropertiesdialog.cpp:1948 kfile/kacleditwidget.cpp:62
+#: kfile/kpropertiesdialog.cpp:1955 kfile/kacleditwidget.cpp:62
 #: kfile/kacleditwidget.cpp:463
 msgid "Others"
 msgstr "Ostatní"
 
-#: kfile/kpropertiesdialog.cpp:1952
+#: kfile/kpropertiesdialog.cpp:1959
 msgid "Set UID"
 msgstr "Nastavit UID"
 
-#: kfile/kpropertiesdialog.cpp:1956
+#: kfile/kpropertiesdialog.cpp:1963
 msgid ""
 "If this flag is set, the owner of this folder will be the owner of all new "
 "files."
@@ -3175,7 +3566,7 @@ msgstr ""
 "Pokud je tento příznak nastaven, vlastník této složky bude vlastníkem všech "
 "nových souborů."
 
-#: kfile/kpropertiesdialog.cpp:1959
+#: kfile/kpropertiesdialog.cpp:1966
 msgid ""
 "If this file is an executable and the flag is set, it will be executed with "
 "the permissions of the owner."
@@ -3183,18 +3574,18 @@ msgstr ""
 "Pokud je tento soubor spustitelný a příznak je nastaven, bude soubor spuštěn "
 "s oprávněními vlastníka."
 
-#: kfile/kpropertiesdialog.cpp:1963
+#: kfile/kpropertiesdialog.cpp:1970
 msgid "Set GID"
 msgstr "Nastavit GID"
 
-#: kfile/kpropertiesdialog.cpp:1967
+#: kfile/kpropertiesdialog.cpp:1974
 msgid ""
 "If this flag is set, the group of this folder will be set for all new files."
 msgstr ""
 "Pokud je tento příznak nastaven, bude pro všechny nové soubory nastavena "
 "skupina této složky."
 
-#: kfile/kpropertiesdialog.cpp:1970
+#: kfile/kpropertiesdialog.cpp:1977
 msgid ""
 "If this file is an executable and the flag is set, it will be executed with "
 "the permissions of the group."
@@ -3202,12 +3593,12 @@ msgstr ""
 "Pokud je tento soubor spustitelný a příznak je nastaven, bude soubor spuštěn "
 "s oprávněními skupiny."
 
-#: kfile/kpropertiesdialog.cpp:1974
+#: kfile/kpropertiesdialog.cpp:1981
 msgctxt "File permission"
 msgid "Sticky"
 msgstr "Sticky"
 
-#: kfile/kpropertiesdialog.cpp:1978
+#: kfile/kpropertiesdialog.cpp:1985
 msgid ""
 "If the Sticky flag is set on a folder, only the owner and root can delete or "
 "rename files. Otherwise everybody with write permissions can do this."
@@ -3216,7 +3607,7 @@ msgstr ""
 "root budou moci mazat a přejmenovávat soubory. V opačném případě to může "
 "provést kdokoliv."
 
-#: kfile/kpropertiesdialog.cpp:1982
+#: kfile/kpropertiesdialog.cpp:1989
 msgid ""
 "The Sticky flag on a file is ignored on Linux, but may be used on some "
 "systems"
@@ -3224,85 +3615,85 @@ msgstr ""
 "Sticky příznak na souboru je v Linuxu ignorován, ale může být využíván v "
 "jiných systémech."
 
-#: kfile/kpropertiesdialog.cpp:2159
+#: kfile/kpropertiesdialog.cpp:2166
 msgid "Link"
 msgstr "Odkaz"
 
-#: kfile/kpropertiesdialog.cpp:2176
+#: kfile/kpropertiesdialog.cpp:2183
 msgid "Varying (No Change)"
 msgstr "Různé (beze změny)"
 
-#: kfile/kpropertiesdialog.cpp:2275
+#: kfile/kpropertiesdialog.cpp:2282
 msgid "This file uses advanced permissions"
 msgid_plural "These files use advanced permissions."
 msgstr[0] "Tento soubor používá pokročilá oprávnění."
 msgstr[1] "Tyto soubory používají pokročilá oprávnění."
 msgstr[2] "Tyto soubory používají pokročilá oprávnění."
 
-#: kfile/kpropertiesdialog.cpp:2296
+#: kfile/kpropertiesdialog.cpp:2303
 msgid "This folder uses advanced permissions."
 msgid_plural "These folders use advanced permissions."
 msgstr[0] "Tato složka používá pokročilá oprávnění."
 msgstr[1] "Tyto složky používají pokročilá oprávnění."
 msgstr[2] "Tyto složky používají pokročilá oprávnění."
 
-#: kfile/kpropertiesdialog.cpp:2312
+#: kfile/kpropertiesdialog.cpp:2319
 msgid "These files use advanced permissions."
 msgstr "Tyto soubory používají pokročilá oprávnění."
 
-#: kfile/kpropertiesdialog.cpp:2530
+#: kfile/kpropertiesdialog.cpp:2537
 msgid "U&RL"
 msgstr "U&RL"
 
-#: kfile/kpropertiesdialog.cpp:2537
+#: kfile/kpropertiesdialog.cpp:2544
 msgid "URL:"
 msgstr "URL:"
 
-#: kfile/kpropertiesdialog.cpp:2668
+#: kfile/kpropertiesdialog.cpp:2675
 msgid "De&vice"
 msgstr "Z&ařízení"
 
-#: kfile/kpropertiesdialog.cpp:2699
+#: kfile/kpropertiesdialog.cpp:2706
 msgid "Device (/dev/fd0):"
 msgstr "Zařízení (/dev/fd0):"
 
-#: kfile/kpropertiesdialog.cpp:2700
+#: kfile/kpropertiesdialog.cpp:2707
 msgid "Device:"
 msgstr "Zařízení:"
 
-#: kfile/kpropertiesdialog.cpp:2713
+#: kfile/kpropertiesdialog.cpp:2720
 msgid "Read only"
 msgstr "Pouze ke čtení"
 
-#: kfile/kpropertiesdialog.cpp:2717
+#: kfile/kpropertiesdialog.cpp:2724
 msgid "File system:"
 msgstr "Souborový systém:"
 
-#: kfile/kpropertiesdialog.cpp:2725
+#: kfile/kpropertiesdialog.cpp:2732
 msgid "Mount point (/mnt/floppy):"
 msgstr "Místo připojení (/mnt/floppy):"
 
-#: kfile/kpropertiesdialog.cpp:2726
+#: kfile/kpropertiesdialog.cpp:2733
 msgid "Mount point:"
 msgstr "Místo připojení:"
 
-#: kfile/kpropertiesdialog.cpp:2960
+#: kfile/kpropertiesdialog.cpp:2967
 msgid "&Application"
 msgstr "&Aplikace"
 
-#: kfile/kpropertiesdialog.cpp:3085
+#: kfile/kpropertiesdialog.cpp:3092
 msgid "Add File Type for %1"
 msgstr "Přidat typ souboru pro %1"
 
-#: kfile/kpropertiesdialog.cpp:3086
+#: kfile/kpropertiesdialog.cpp:3093
 msgid "Select one or more file types to add:"
 msgstr "Vyberte jeden nebo více typů souborů k přidání:"
 
-#: kfile/kpropertiesdialog.cpp:3223
+#: kfile/kpropertiesdialog.cpp:3230
 msgid "Only executables on local file systems are supported."
 msgstr "Jsou podporovány pouze programy na lokálním souborovém systému."
 
-#: kfile/kpropertiesdialog.cpp:3237
+#: kfile/kpropertiesdialog.cpp:3244
 msgid "Advanced Options for %1"
 msgstr "Pokročilé možnosti pro %1"
 
@@ -3484,473 +3875,6 @@ msgstr "*.png *.xpm *.svg *.svgz|Ikony (*.png *.xpm *.svg *.svgz)"
 msgid "Open"
 msgstr "Otevřít"
 
-#: kfile/knfotranslator.cpp:34
-msgctxt "@label"
-msgid "Modified"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:35
-msgctxt "@label"
-msgid "Owner"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:36
-msgctxt "@label"
-msgid "Permissions"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:37
-msgctxt "@label"
-msgid "Size"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:38
-msgctxt "@label"
-msgid "Total Size"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:39
-msgctxt "@label"
-msgid "Type"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:40
-msgctxt "@label"
-msgid "MIME Type"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:41
-msgctxt "@label"
-msgid "Comment"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:42
-msgctxt "@label creation date"
-msgid "Created"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:43
-msgctxt "@label file content size"
-msgid "Size"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:44
-msgctxt "@label file depends from"
-msgid "Depends"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:45
-msgctxt "@label"
-msgid "Description"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:46
-msgctxt "@label Software used to generate content"
-msgid "Generator"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:47
-msgctxt ""
-"@label see http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasPart"
-msgid "Has Part"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:48
-msgctxt ""
-"@label see http://www.semanticdesktop.org/ontologies/2007/01/19/"
-"nie#hasLogicalPart"
-msgid "Has Logical Part"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:49
-msgctxt "@label parent directory"
-msgid "Part of"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:50
-msgctxt "@label"
-msgid "Keyword"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:51
-msgctxt "@label modified date of file"
-msgid "Modified"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:52
-msgctxt "@label"
-msgid "Content"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:53
-msgctxt "@label"
-msgid "Related To"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:54
-msgctxt "@label"
-msgid "Subject"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:55
-msgctxt "@label music title"
-msgid "Title"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:56
-msgctxt "@label file URL"
-msgid "Location"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:57
-msgctxt "@label"
-msgid "Creator"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:58
-msgctxt "@label"
-msgid "Average Bitrate"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:59
-msgctxt "@label"
-msgid "Frame Rate"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:60
-msgctxt "@label"
-msgid "Channels"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:61
-msgctxt "@label number of characters"
-msgid "Characters"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:62
-msgctxt "@label"
-msgid "Codec"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:63
-msgctxt "@label"
-msgid "Color Depth"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:64
-msgctxt "@label"
-msgid "Color Count"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:65
-msgctxt "@label"
-msgid "Duration"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:66
-msgctxt "@label"
-msgid "Filename"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:67
-msgctxt "@label"
-msgid "Hash"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:68
-msgctxt "@label"
-msgid "Height"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:69
-msgctxt "@label"
-msgid "Bit Depth"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:70
-msgctxt "@label"
-msgid "Font"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:71
-msgctxt "@label"
-msgid "Font Family"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:72
-msgctxt "@label"
-msgid "Font Foundry"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:73
-msgctxt "@label"
-msgid "Interlace Mode"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:74
-msgctxt "@label number of lines"
-msgid "Lines"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:75
-msgctxt "@label"
-msgid "Programming Language"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:76
-msgctxt "@label"
-msgid "Sample Rate"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:77
-msgctxt "@label"
-msgid "Width"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:78
-msgctxt "@label number of words"
-msgid "Words"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:79
-msgctxt "@label"
-msgid "File Hash"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:80
-msgctxt "@label"
-msgid "Hash Algorithm"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:81
-msgctxt "@label"
-msgid "Bits Per Sample"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:82
-msgctxt "@label"
-msgid "Sample Count"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:83
-msgctxt "@label EXIF aperture value"
-msgid "Aperture"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:84
-msgctxt "@label EXIF"
-msgid "Exposure Bias Value"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:85
-msgctxt "@label EXIF"
-msgid "Exposure Time"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:86
-msgctxt "@label EXIF"
-msgid "Flash"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:87
-msgctxt "@label EXIF"
-msgid "Focal Length"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:88
-msgctxt "@label EXIF"
-msgid "Focal Length 35 mm"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:89
-msgctxt "@label EXIF"
-msgid "ISO Speed Ratings"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:90
-msgctxt "@label EXIF"
-msgid "Make"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:91
-msgctxt "@label EXIF"
-msgid "Metering Mode"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:92
-msgctxt "@label EXIF"
-msgid "Model"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:93
-msgctxt "@label EXIF"
-msgid "Orientation"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:94
-msgctxt "@label EXIF"
-msgid "White Balance"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:95
-msgctxt "@label EXIF"
-msgid "Bits Per Sample"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:96
-msgctxt "@label video director"
-msgid "Director"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:97
-msgctxt "@label music genre"
-msgid "Genre"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:98
-msgctxt "@label music album"
-msgid "Album"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:99
-msgctxt "@label"
-msgid "Performer"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:100
-msgctxt "@label"
-msgid "Release Date"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:101
-msgctxt "@label music track number"
-msgid "Track"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:102
-msgctxt "@label resource created time"
-msgid "Resource Created"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:103
-msgctxt "@label"
-msgid "Sub Resource"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:104
-msgctxt "@label resource last modified"
-msgid "Resource Modified"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:105
-msgctxt "@label"
-msgid "Numeric Rating"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:106
-msgctxt "@label"
-msgid "Copied From"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:107
-msgctxt "@label"
-msgid "First Usage"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:108
-msgctxt "@label"
-msgid "Last Usage"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:109
-msgctxt "@label"
-msgid "Usage Count"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:110
-msgctxt "@label"
-msgid "Unix File Group"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:111
-msgctxt "@label"
-msgid "Unix File Mode"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:112
-msgctxt "@label"
-msgid "Unix File Owner"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:113
-msgctxt "@label file type"
-msgid "Type"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:114
-msgctxt "@label Number of fuzzy translations"
-msgid "Fuzzy Translations"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:115
-msgctxt "@label Name of last translator"
-msgid "Last Translator"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:116
-msgctxt "@label Number of obsolete translations"
-msgid "Obsolete Translations"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:117
-msgctxt "@label"
-msgid "Translation Source Date"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:118
-msgctxt "@label Number of total translations"
-msgid "Total Translations"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:119
-msgctxt "@label Number of translated strings"
-msgid "Translated"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:120
-msgctxt "@label"
-msgid "Translation Date"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:121
-msgctxt "@label Number of untranslated strings"
-msgid "Untranslated"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:122
-msgctxt "@label"
-msgid "Font Weight"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:123
-msgctxt "@label"
-msgid "Font Slant"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:124
-msgctxt "@label"
-msgid "Font Width"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:125
-msgctxt "@label"
-msgid "Font Spacing"
-msgstr ""
-
-#: kfile/kfilemetainfowidget.cpp:150
-msgid "<Error>"
-msgstr "<Chyba>"
-
 #: kfile/kfiledialog.cpp:119
 msgid "*|All files"
 msgstr "*|Všechny soubory"
@@ -3969,7 +3893,7 @@ msgstr "Uložit jako"
 msgid "P&review"
 msgstr "Ná&hled"
 
-#: kfile/kfilemetadataprovider.cpp:104
+#: kfile/kfilemetadataprovider.cpp:57
 msgctxt "@item:intable"
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -4300,14 +4224,6 @@ msgstr ""
 "pouze jednou. Příčinu chyby je nutno co nejrychleji opravit, s největší "
 "pravděpodobností je to zaplněný disk."
 
-#: ../kioslave/metainfo/metainfo.cpp:37
-msgid "kio_metainfo"
-msgstr "kio_metainfo"
-
-#: ../kioslave/metainfo/metainfo.cpp:94
-msgid "No metainfo for %1"
-msgstr "Žádné meta informace pro %1"
-
 #: ../kioslave/file/file_unix.cpp:217
 msgid "Cannot copy file from %1 to %2. (Errno: %3)"
 msgstr "Nelze kopírovat soubor z %1 do %2 (chyba č. %3)."
@@ -4348,15 +4264,15 @@ msgstr "Není možné nalézt program \"mount\"."
 msgid "Could not find program \"umount\""
 msgstr "Není možné nalézt program \"umount\"."
 
-#: ../kioslave/ftp/ftp.cpp:336
+#: ../kioslave/ftp/ftp.cpp:333
 msgid "Opening connection to host %1"
 msgstr "Otevírání spojení k hostiteli %1"
 
-#: ../kioslave/ftp/ftp.cpp:351
+#: ../kioslave/ftp/ftp.cpp:348
 msgid "Connected to host %1"
 msgstr "Spojeno s hostitelem %1"
 
-#: ../kioslave/ftp/ftp.cpp:420
+#: ../kioslave/ftp/ftp.cpp:417
 msgid ""
 "%1.\n"
 "\n"
@@ -4366,11 +4282,11 @@ msgstr ""
 "\n"
 "Důvod: %2"
 
-#: ../kioslave/ftp/ftp.cpp:449
+#: ../kioslave/ftp/ftp.cpp:446
 msgid "Sending login information"
 msgstr "Posílání přihlašovacích informací"
 
-#: ../kioslave/ftp/ftp.cpp:512
+#: ../kioslave/ftp/ftp.cpp:509
 msgid ""
 "Message sent:\n"
 "Login using username=%1 and password=[hidden]\n"
@@ -4386,23 +4302,23 @@ msgstr ""
 "%2\n"
 "\n"
 
-#: ../kioslave/ftp/ftp.cpp:520
+#: ../kioslave/ftp/ftp.cpp:517
 msgid "You need to supply a username and a password to access this site."
 msgstr "Pro přístup k tomuto serveru potřebujete uživatelské jméno a heslo."
 
-#: ../kioslave/ftp/ftp.cpp:522
+#: ../kioslave/ftp/ftp.cpp:519
 msgid "Site:"
 msgstr "Server:"
 
-#: ../kioslave/ftp/ftp.cpp:523
+#: ../kioslave/ftp/ftp.cpp:520
 msgid "<b>%1</b>"
 msgstr "<b>%1</b>"
 
-#: ../kioslave/ftp/ftp.cpp:611
+#: ../kioslave/ftp/ftp.cpp:607
 msgid "Login OK"
 msgstr "Úspěšné přihlášení"
 
-#: ../kioslave/ftp/ftp.cpp:640
+#: ../kioslave/ftp/ftp.cpp:636
 msgid "Could not login to %1."
 msgstr "Není možné se přihlásit na %1."
 

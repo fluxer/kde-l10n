@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio4\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2022-03-07 17:13+0200\n"
+"POT-Creation-Date: 2022-05-12 03:36+0300\n"
 "PO-Revision-Date: 2012-12-12 15:49+0800\n"
 "Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
 "Language-Team: Chinese Traditional <kde-tw@googlegroups.com>\n"
@@ -420,7 +420,18 @@ msgstr "單一實體"
 msgid "Run Until Finished"
 msgstr "執行單元結束"
 
-#: kio/kdirlister.cpp:390 kio/renamedialog.cpp:415 kio/krun.cpp:1072
+#: metadata/kfilemetadata_ffmpeg.cpp:139 metadata/kfilemetadata_ffmpeg.cpp:180
+#: metadata/kfilemetadata_taglib.cpp:189 kio/kfilemetainfo.cpp:234
+msgctxt "kfilemetadata"
+msgid "%1 kb/s"
+msgstr ""
+
+#: metadata/kfilemetadata_taglib.cpp:198 kio/kfilemetainfo.cpp:235
+msgctxt "kfilemetadata"
+msgid "%1 Hz"
+msgstr ""
+
+#: kio/kdirlister.cpp:390 kio/renamedialog.cpp:415 kio/krun.cpp:1067
 #: kio/paste.cpp:319
 msgid ""
 "Malformed URL\n"
@@ -618,36 +629,20 @@ msgctxt "@title job"
 msgid "Unmounting"
 msgstr "卸載中"
 
-#: kio/job.cpp:1915 kio/copyjob.cpp:1390 kio/copyjob.cpp:1966
+#: kio/job.cpp:1893 kio/copyjob.cpp:1397 kio/copyjob.cpp:1979
 #: kio/global.cpp:640 kio/paste.cpp:101
 msgid "File Already Exists"
 msgstr "檔案已存在"
-
-#: kio/kimageio.cpp:136
-msgid "All Pictures"
-msgstr "所有圖片"
-
-#: kio/kdbusservicestarter.cpp:75
-msgid "No service implementing %1"
-msgstr "沒有服務實作 %1"
 
 #: kio/copyjob.cpp:1074 kio/global.cpp:650
 msgid "Folder Already Exists"
 msgstr "資料夾已存在"
 
-#: kio/copyjob.cpp:1390 kio/copyjob.cpp:1966
+#: kio/copyjob.cpp:1397 kio/copyjob.cpp:1979
 msgid "Already Exists as Folder"
 msgstr "已存在以此為名的資料夾"
 
-#: kio/kscan.cpp:50
-msgid "Acquire Image"
-msgstr "擷取影像"
-
-#: kio/kscan.cpp:99
-msgid "OCR Image"
-msgstr "OCR 影像"
-
-#: kio/netaccess.cpp:104
+#: kio/netaccess.cpp:102
 msgid "File '%1' is not readable"
 msgstr "檔案「%1」無法讀取"
 
@@ -2314,61 +2309,53 @@ msgstr "是(&Y)"
 msgid "&No"
 msgstr "否(&N)"
 
-#: kio/krun.cpp:117
-msgid ""
-"<qt>Unable to enter <b>%1</b>.\n"
-"You do not have access rights to this location.</qt>"
-msgstr ""
-"<qt>無法進入 <b>%1</b>。\n"
-"您沒有這個位置的存取權限。</qt>"
-
-#: kio/krun.cpp:142
+#: kio/krun.cpp:137
 msgid ""
 "<qt>The file <b>%1</b> is an executable program. For safety it will not be "
 "started.</qt>"
 msgstr "<qt>檔案 <b>%1</b> 是一個可執行的程式。為了安全將不會執行它。</qt>"
 
-#: kio/krun.cpp:165
+#: kio/krun.cpp:160
 msgid "Open with:"
 msgstr "開啟用："
 
-#: kio/krun.cpp:534
+#: kio/krun.cpp:529
 msgid "You are not authorized to execute this file."
 msgstr "您未獲授權去執行此檔案。"
 
-#: kio/krun.cpp:557
+#: kio/krun.cpp:552
 msgid "Launching %1"
 msgstr "裝載 %1 中"
 
-#: kio/krun.cpp:665
+#: kio/krun.cpp:660
 msgid "Error processing Exec field in %1"
 msgstr "處理 %1 中的 Exec 欄位時發生錯誤"
 
-#: kio/krun.cpp:851
+#: kio/krun.cpp:846
 msgctxt "Warning about executing unknown .desktop file"
 msgid "Warning"
 msgstr "警告"
 
-#: kio/krun.cpp:865
+#: kio/krun.cpp:860
 msgctxt "program name follows in a line edit below"
 msgid "This will start the program:"
 msgstr "這會啟動此程式："
 
-#: kio/krun.cpp:879
+#: kio/krun.cpp:874
 msgid "If you do not trust this program, click Cancel"
 msgstr "若您不信任此程式，請點擊「取消」"
 
-#: kio/krun.cpp:912
+#: kio/krun.cpp:907
 msgid "Unable to make the service %1 executable, aborting execution"
 msgstr "無法將服務 %1 設成可執行。動作中止"
 
-#: kio/krun.cpp:1094
+#: kio/krun.cpp:1089
 msgid ""
 "<qt>Unable to run the command specified. The file or folder <b>%1</b> does "
 "not exist.</qt>"
 msgstr "<qt>無法執行指定的命令。這個檔案或資料夾 <b>%1</b> 不存在。</qt>"
 
-#: kio/krun.cpp:1679
+#: kio/krun.cpp:1674
 msgid "Could not find the program '%1'"
 msgstr "找不到程式「%1」"
 
@@ -2392,37 +2379,37 @@ msgstr "編輯(&E)..."
 msgid "Click this button to display the familiar KDE mime type editor."
 msgstr "按這個按鈕來顯示熟悉的 KDE mime 類型編輯器。"
 
-#: kio/jobuidelegate.cpp:154 ../kfile/kdiroperator.cpp:793
+#: kio/jobuidelegate.cpp:149 ../kfile/kdiroperator.cpp:793
 msgid "Do you really want to delete this item?"
 msgid_plural "Do you really want to delete these %1 items?"
 msgstr[0] "您真的要刪除這 %1 個項目嗎？"
 
-#: kio/jobuidelegate.cpp:156 ../kfile/kdiroperator.cpp:795
+#: kio/jobuidelegate.cpp:151 ../kfile/kdiroperator.cpp:795
 msgid "Delete Files"
 msgstr "刪除檔案"
 
-#: kio/jobuidelegate.cpp:164
+#: kio/jobuidelegate.cpp:159
 msgctxt "@info"
 msgid ""
 "Do you want to permanently delete all items from Trash? This action cannot "
 "be undone."
 msgstr "您要從資源回收筒中永久刪除所有的項目嗎？此動作無法復原。"
 
-#: kio/jobuidelegate.cpp:166 ../kfile/kfileplacesview.cpp:643
+#: kio/jobuidelegate.cpp:161 ../kfile/kfileplacesview.cpp:643
 msgctxt "@action:button"
 msgid "Empty Trash"
 msgstr "清空資源回收桶"
 
-#: kio/jobuidelegate.cpp:175
+#: kio/jobuidelegate.cpp:170
 msgid "Do you really want to move this item to the trash?"
 msgid_plural "Do you really want to move these %1 items to the trash?"
 msgstr[0] "您真的要將這 %1 個項目移到資源回收筒嗎？"
 
-#: kio/jobuidelegate.cpp:177 ../kfile/kdiroperator.cpp:1778
+#: kio/jobuidelegate.cpp:172 ../kfile/kdiroperator.cpp:1778
 msgid "Move to Trash"
 msgstr "移至資源回收桶"
 
-#: kio/jobuidelegate.cpp:178
+#: kio/jobuidelegate.cpp:173
 msgctxt "Verb"
 msgid "&Trash"
 msgstr "丟到資源回收桶(&T)"
@@ -2512,44 +2499,444 @@ msgstr ""
 msgid "&Skip File"
 msgstr "略過檔案(&S)"
 
-#: kio/kfilemetainfo.cpp:151
-msgid "Row at top, column at left"
+#: kio/kfilemetainfo.cpp:240
+msgctxt "@label"
+msgid "Modified"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:155
-msgid "Row at top, column at right"
+#: kio/kfilemetainfo.cpp:241
+msgctxt "@label"
+msgid "Owner"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:159
-msgid "Row at bottom, column at right"
+#: kio/kfilemetainfo.cpp:242
+msgctxt "@label"
+msgid "Permissions"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:163
-msgid "Row at bottom, column at left"
+#: kio/kfilemetainfo.cpp:243
+msgctxt "@label"
+msgid "Size"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:167
-msgid "Row at left, column at top"
+#: kio/kfilemetainfo.cpp:244
+msgctxt "@label"
+msgid "Total Size"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:171
-msgid "Row at right, column at top"
+#: kio/kfilemetainfo.cpp:245
+msgctxt "@label"
+msgid "Type"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:175
-msgid "Row at right, column at bottom"
+#: kio/kfilemetainfo.cpp:246
+msgctxt "@label"
+msgid "MIME Type"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:179
-msgid "Row at left, column at bottom"
+#: kio/kfilemetainfo.cpp:248
+msgctxt "@label"
+msgid "Filename"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:219 kio/kfilemetainfo.cpp:223
-msgid "%1 per second"
+#: kio/kfilemetainfo.cpp:249
+msgctxt "@label file URL"
+msgid "URL"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:227
-msgid "%1 kHz"
+#: kio/kfilemetainfo.cpp:250
+msgctxt "@label"
+msgid "Width"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:251
+msgctxt "@label"
+msgid "Height"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:252
+msgctxt "@label"
+msgid "Average Bitrate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:253
+msgctxt "@label"
+msgid "Sample Rate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:254
+msgctxt "@label"
+msgid "Channels"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:255
+msgctxt "@label"
+msgid "Duration"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:256
+msgctxt "@label"
+msgid "Frame Rate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:257
+msgctxt "@label"
+msgid "Video Codec"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:258
+msgctxt "@label"
+msgid "Audio Codec"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:259
+msgctxt "@label"
+msgid "Subtitle Codec"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:260
+msgctxt "@label"
+msgid "Audio Bit Rate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:261
+msgctxt "@label"
+msgid "Video Bit Rate"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:262
+msgctxt "@label"
+msgid "Copyright"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:263
+msgctxt "@label"
+msgid "Comment"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:264
+msgctxt "@label music title"
+msgid "Title"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:265
+msgctxt "@label"
+msgid "Keyword"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:266
+msgctxt "@label"
+msgid "Description"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:267
+msgctxt "@label Software used to generate content"
+msgid "Generator"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:268
+msgctxt "@label modification date"
+msgid "Modified"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:269
+msgctxt "@label creation date"
+msgid "Created"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:270
+msgctxt "@label"
+msgid "Subject"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:271
+msgctxt "@label music album"
+msgid "Album"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:272
+msgctxt "@label music genre"
+msgid "Genre"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:273
+msgctxt "@label"
+msgid "Performer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:274
+msgctxt "@label music track number"
+msgid "Track"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:275
+msgctxt "@label music composer"
+msgid "Composer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:276
+msgctxt "@label"
+msgid "Encoder"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:277
+msgctxt "@label"
+msgid "Encoded By"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:278
+msgctxt "@label"
+msgid "Original Release Year"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:279
+msgctxt "@label"
+msgid "URI"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:280
+msgctxt "@label"
+msgid "Text Writer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:281
+msgctxt "@label"
+msgid "Publisher"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:282
+msgctxt "@label"
+msgid "Creator"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:283
+msgctxt "@label"
+msgid "Contributor"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:284
+msgctxt "@label EXIF"
+msgid "Manufacturer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:285
+msgctxt "@label EXIF"
+msgid "Model"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:286
+msgctxt "@label EXIF"
+msgid "Orientation"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:287
+msgctxt "@label music or image artist"
+msgid "Artist"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:288
+msgctxt "@label"
+msgid "GPS Latitude Reference"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:289
+msgctxt "@label"
+msgid "GPS Longitude Reference"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:290
+msgctxt "@label EXIF"
+msgid "Flash"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:291
+msgctxt "@label EXIF"
+msgid "Exposure Time"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:292
+msgctxt "@label EXIF"
+msgid "Exposure Bias Value"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:293
+msgctxt "@label EXIF"
+msgid "Exposure Mode"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:294
+msgctxt "@label EXIF aperture value"
+msgid "Aperture"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:295
+msgctxt "@label EXIF"
+msgid "Focal Length"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:296
+msgctxt "@label EXIF"
+msgid "Focal Length 35 mm"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:297
+msgctxt "@label EXIF"
+msgid "ISO Speed Ratings"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:298
+msgctxt "@label EXIF"
+msgid "Metering Mode"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:299
+msgctxt "@label EXIF"
+msgid "White Balance"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:301
+msgctxt "@label"
+msgid "Page Count"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:302
+msgctxt "@label"
+msgid "Creator E-Mail"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:303
+msgctxt "@label"
+msgid "Hash Value"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:304
+msgctxt "@label"
+msgid "Hash Algorithm"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:305
+msgctxt "@label"
+msgid "Country"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:306
+msgctxt "@label"
+msgid "Summary"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:307
+msgctxt "@label"
+msgid "Character Set"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:308
+msgctxt "@label number of lines"
+msgid "Lines"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:309
+msgctxt "@label number of words"
+msgid "Words"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:310
+msgctxt "@label"
+msgid "Character Count"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:311
+msgctxt "@label"
+msgid "Revision"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:312
+msgctxt "@label"
+msgid "Contact"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:313
+msgctxt "@label"
+msgid "Disclaimer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:314
+msgctxt "@label video director"
+msgid "Director"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:315
+msgctxt "@label"
+msgid "Conductor"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:316
+msgctxt "@label"
+msgid "Interpreted By"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:317
+msgctxt "@label"
+msgid "Beats Per Minute"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:318
+msgctxt "@label"
+msgid "Original Artist"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:319
+msgctxt "@label"
+msgid "Original Text Writer"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:320
+msgctxt "@label"
+msgid "Lyrics"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:321
+msgctxt "@label"
+msgid "Licensee"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:322
+msgctxt "@label"
+msgid "Musician Credits"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:323
+msgctxt "@label"
+msgid "Subtitle"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:324
+msgctxt "@label"
+msgid "Codec"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:325
+msgctxt "@label"
+msgid "Container Format"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:326
+msgctxt "@label"
+msgid "Grouping"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:327
+msgctxt "@label"
+msgid "Audio Bit Depth"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:328
+msgctxt "@label"
+msgid "Video Bit Depth"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:329
+msgctxt "@label"
+msgid "Aspect Ratio"
 msgstr ""
 
 #: kio/fileundomanager.cpp:119
@@ -2611,17 +2998,21 @@ msgstr ""
 msgid "Undo File Copy Confirmation"
 msgstr "確認復原檔案複製動作"
 
-#: kio/kfileitem.cpp:1138
+#: kio/kfileitem.cpp:1174
 msgid "(Symbolic Link to %1)"
 msgstr "（符號連結到 %1）"
 
-#: kio/kfileitem.cpp:1140
+#: kio/kfileitem.cpp:1176
 msgid "(%1, Link to %2)"
 msgstr "（%1，連結到 %2）"
 
-#: kio/kfileitem.cpp:1144
+#: kio/kfileitem.cpp:1180
 msgid " (Points to %1)"
 msgstr "（指向 %1）"
+
+#: kio/slavebase.cpp:889
+msgid "Authentication Dialog"
+msgstr ""
 
 #: kio/pastedialog.cpp:55
 msgid "Data format:"
@@ -2647,11 +3038,11 @@ msgstr ""
 "無法建立 io-slave:\n"
 "klauncher 回應: %1"
 
-#: kio/kdesktopfileactions.cpp:55
+#: kio/kdesktopfileactions.cpp:53
 msgid "The desktop entry file %1 has no Type=... entry."
 msgstr "桌面項目檔案 %1 中沒有 Type=... 項目。"
 
-#: kio/kdesktopfileactions.cpp:71
+#: kio/kdesktopfileactions.cpp:69
 msgid ""
 "The desktop entry of type\n"
 "%1\n"
@@ -2661,8 +3052,8 @@ msgstr ""
 "項目\n"
 "無法辨識。"
 
-#: kio/kdesktopfileactions.cpp:85 kio/kdesktopfileactions.cpp:159
-#: kio/kdesktopfileactions.cpp:260
+#: kio/kdesktopfileactions.cpp:83 kio/kdesktopfileactions.cpp:157
+#: kio/kdesktopfileactions.cpp:258
 msgid ""
 "The desktop entry file\n"
 "%1\n"
@@ -2672,7 +3063,7 @@ msgstr ""
 "%1\n"
 "為 FSDevice 類型，但沒有 Dev=... 項目。"
 
-#: kio/kdesktopfileactions.cpp:127
+#: kio/kdesktopfileactions.cpp:125
 msgid ""
 "The desktop entry file\n"
 "%1\n"
@@ -2682,106 +3073,106 @@ msgstr ""
 "%1\n"
 "為 Link 類型，但沒有 URL=... 項目。"
 
-#: kio/kdesktopfileactions.cpp:174
+#: kio/kdesktopfileactions.cpp:172
 msgid "Mount"
 msgstr "裝載"
 
-#: kio/kdesktopfileactions.cpp:180
+#: kio/kdesktopfileactions.cpp:178
 msgid "Unmount"
 msgstr "卸載"
 
-#: kfile/kpropertiesdialog.cpp:197 kfile/kpropertiesdialog.cpp:212
-#: kfile/kpropertiesdialog.cpp:224 kfile/kpropertiesdialog.cpp:239
-#: kfile/kpropertiesdialog.cpp:255
+#: kfile/kpropertiesdialog.cpp:198 kfile/kpropertiesdialog.cpp:213
+#: kfile/kpropertiesdialog.cpp:225 kfile/kpropertiesdialog.cpp:240
+#: kfile/kpropertiesdialog.cpp:256
 msgid "Properties for %1"
 msgstr "%1 的內容"
 
-#: kfile/kpropertiesdialog.cpp:222
+#: kfile/kpropertiesdialog.cpp:223
 msgid "Properties for 1 item"
 msgid_plural "Properties for %1 Selected Items"
 msgstr[0] "%1 個已選取項目的屬性"
 
-#: kfile/kpropertiesdialog.cpp:720
+#: kfile/kpropertiesdialog.cpp:727
 msgctxt "@title:tab File properties"
 msgid "&General"
 msgstr "一般(&G)"
 
-#: kfile/kpropertiesdialog.cpp:906
+#: kfile/kpropertiesdialog.cpp:913
 msgid "Type:"
 msgstr "類型："
 
-#: kfile/kpropertiesdialog.cpp:919
+#: kfile/kpropertiesdialog.cpp:926
 msgid "Create New File Type"
 msgstr "增加新的檔案類別"
 
-#: kfile/kpropertiesdialog.cpp:921
+#: kfile/kpropertiesdialog.cpp:928
 msgid "File Type Options"
 msgstr "檔案型態選項"
 
-#: kfile/kpropertiesdialog.cpp:928
+#: kfile/kpropertiesdialog.cpp:935
 msgid "Contents:"
 msgstr "內容："
 
-#: kfile/kpropertiesdialog.cpp:937 kfile/kurlrequesterdialog.cpp:58
+#: kfile/kpropertiesdialog.cpp:944 kfile/kurlrequesterdialog.cpp:58
 msgid "Location:"
 msgstr "位置："
 
-#: kfile/kpropertiesdialog.cpp:951
+#: kfile/kpropertiesdialog.cpp:958
 msgid "Size:"
 msgstr "大小："
 
-#: kfile/kpropertiesdialog.cpp:970
+#: kfile/kpropertiesdialog.cpp:977
 msgid "Calculate"
 msgstr "計算"
 
-#: kfile/kpropertiesdialog.cpp:971
+#: kfile/kpropertiesdialog.cpp:978
 msgid "Stop"
 msgstr "停止"
 
-#: kfile/kpropertiesdialog.cpp:981 kfile/kpropertiesdialog.cpp:1184
+#: kfile/kpropertiesdialog.cpp:988 kfile/kpropertiesdialog.cpp:1191
 msgid "Refresh"
 msgstr "更新"
 
-#: kfile/kpropertiesdialog.cpp:989
+#: kfile/kpropertiesdialog.cpp:996
 msgid "Points to:"
 msgstr "指向："
 
-#: kfile/kpropertiesdialog.cpp:1002
+#: kfile/kpropertiesdialog.cpp:1009
 msgid "Created:"
 msgstr "建立時間："
 
-#: kfile/kpropertiesdialog.cpp:1012
+#: kfile/kpropertiesdialog.cpp:1019
 msgid "Modified:"
 msgstr "修改時間："
 
-#: kfile/kpropertiesdialog.cpp:1022
+#: kfile/kpropertiesdialog.cpp:1029
 msgid "Accessed:"
 msgstr "存取時間："
 
-#: kfile/kpropertiesdialog.cpp:1043
+#: kfile/kpropertiesdialog.cpp:1050
 msgid "Mounted on:"
 msgstr "掛載點:"
 
-#: kfile/kpropertiesdialog.cpp:1051 kfile/kpropertiesdialog.cpp:2735
+#: kfile/kpropertiesdialog.cpp:1058 kfile/kpropertiesdialog.cpp:2742
 msgid "Device usage:"
 msgstr "裝置用法："
 
-#: kfile/kpropertiesdialog.cpp:1146 kfile/kpropertiesdialog.cpp:2863
+#: kfile/kpropertiesdialog.cpp:1153 kfile/kpropertiesdialog.cpp:2870
 msgctxt "Available space out of total partition size (percent used)"
 msgid "%1 free of %2 (%3% used)"
 msgstr "剩餘 %1，共 %2 (%3% 已使用)"
 
-#: kfile/kpropertiesdialog.cpp:1163 kfile/kpropertiesdialog.cpp:1179
+#: kfile/kpropertiesdialog.cpp:1170 kfile/kpropertiesdialog.cpp:1186
 msgid "1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 個檔案"
 
-#: kfile/kpropertiesdialog.cpp:1164 kfile/kpropertiesdialog.cpp:1180
+#: kfile/kpropertiesdialog.cpp:1171 kfile/kpropertiesdialog.cpp:1187
 msgid "1 sub-folder"
 msgid_plural "%1 sub-folders"
 msgstr[0] "%1 個子資料夾"
 
-#: kfile/kpropertiesdialog.cpp:1160
+#: kfile/kpropertiesdialog.cpp:1167
 msgid ""
 "Calculating... %1 (%2)\n"
 "%3, %4"
@@ -2789,106 +3180,106 @@ msgstr ""
 "計算中... %1 (%2)\n"
 "%3, %4"
 
-#: kfile/kpropertiesdialog.cpp:1193
+#: kfile/kpropertiesdialog.cpp:1200
 msgid "Calculating..."
 msgstr "計算中..."
 
-#: kfile/kpropertiesdialog.cpp:1228
+#: kfile/kpropertiesdialog.cpp:1235
 msgid "At least %1"
 msgstr "至少 %1"
 
-#: kfile/kpropertiesdialog.cpp:1265
+#: kfile/kpropertiesdialog.cpp:1272
 msgid "The new file name is empty."
 msgstr "新的檔案名稱是空的。"
 
-#: kfile/kpropertiesdialog.cpp:1441 kfile/kpropertiesdialog.cpp:2609
-#: kfile/kpropertiesdialog.cpp:2903 kfile/kpropertiesdialog.cpp:3154
+#: kfile/kpropertiesdialog.cpp:1448 kfile/kpropertiesdialog.cpp:2616
+#: kfile/kpropertiesdialog.cpp:2910 kfile/kpropertiesdialog.cpp:3161
 msgid ""
 "<qt>Could not save properties. You do not have sufficient access to write to "
 "<b>%1</b>.</qt>"
 msgstr "<qt>無法儲存內容。您沒有足夠的存取權來寫入 <b>%1</b>。</qt>"
 
-#: kfile/kpropertiesdialog.cpp:1516 kfile/kpropertiesdialog.cpp:1520
-#: kfile/kpropertiesdialog.cpp:1525
+#: kfile/kpropertiesdialog.cpp:1523 kfile/kpropertiesdialog.cpp:1527
+#: kfile/kpropertiesdialog.cpp:1532
 msgid "Forbidden"
 msgstr "被禁止"
 
-#: kfile/kpropertiesdialog.cpp:1517
+#: kfile/kpropertiesdialog.cpp:1524
 msgid "Can Read"
 msgstr "可讀取"
 
-#: kfile/kpropertiesdialog.cpp:1518
+#: kfile/kpropertiesdialog.cpp:1525
 msgid "Can Read & Write"
 msgstr "可讀取 & 寫入"
 
-#: kfile/kpropertiesdialog.cpp:1521
+#: kfile/kpropertiesdialog.cpp:1528
 msgid "Can View Content"
 msgstr "可檢視內容"
 
-#: kfile/kpropertiesdialog.cpp:1522
+#: kfile/kpropertiesdialog.cpp:1529
 msgid "Can View & Modify Content"
 msgstr "可以檢視 & 修改內容"
 
-#: kfile/kpropertiesdialog.cpp:1526
+#: kfile/kpropertiesdialog.cpp:1533
 msgid "Can View Content & Read"
 msgstr "可以檢視內容 & 讀取"
 
-#: kfile/kpropertiesdialog.cpp:1527
+#: kfile/kpropertiesdialog.cpp:1534
 msgid "Can View/Read & Modify/Write"
 msgstr "可以檢視/讀取 & 修改/寫入"
 
-#: kfile/kpropertiesdialog.cpp:1623
+#: kfile/kpropertiesdialog.cpp:1630
 msgid "&Permissions"
 msgstr "權限(&P)"
 
-#: kfile/kpropertiesdialog.cpp:1635 kfile/kpropertiesdialog.cpp:1873
+#: kfile/kpropertiesdialog.cpp:1642 kfile/kpropertiesdialog.cpp:1880
 msgid "Access Permissions"
 msgstr "存取權限"
 
-#: kfile/kpropertiesdialog.cpp:1643
+#: kfile/kpropertiesdialog.cpp:1650
 msgid "This file is a link and does not have permissions."
 msgid_plural "All files are links and do not have permissions."
 msgstr[0] "所有的檔案都是連結而沒有權限。"
 
-#: kfile/kpropertiesdialog.cpp:1647
+#: kfile/kpropertiesdialog.cpp:1654
 msgid "Only the owner can change permissions."
 msgstr "只有擁有者可以變更權限。"
 
-#: kfile/kpropertiesdialog.cpp:1650
+#: kfile/kpropertiesdialog.cpp:1657
 msgid "O&wner:"
 msgstr "擁有者(&W):"
 
-#: kfile/kpropertiesdialog.cpp:1656
+#: kfile/kpropertiesdialog.cpp:1663
 msgid "Specifies the actions that the owner is allowed to do."
 msgstr "指定擁有者被允許進行的動作。"
 
-#: kfile/kpropertiesdialog.cpp:1658
+#: kfile/kpropertiesdialog.cpp:1665
 msgid "Gro&up:"
 msgstr "群組(&U):"
 
-#: kfile/kpropertiesdialog.cpp:1664
+#: kfile/kpropertiesdialog.cpp:1671
 msgid "Specifies the actions that the members of the group are allowed to do."
 msgstr "指定群組的成員被允許進行的動作。"
 
-#: kfile/kpropertiesdialog.cpp:1666
+#: kfile/kpropertiesdialog.cpp:1673
 msgid "O&thers:"
 msgstr "其他(&T):"
 
-#: kfile/kpropertiesdialog.cpp:1672
+#: kfile/kpropertiesdialog.cpp:1679
 msgid ""
 "Specifies the actions that all users, who are neither owner nor in the "
 "group, are allowed to do."
 msgstr "指定所有既非擁有者也不在群組中的使用者被允許進行的動作。"
 
-#: kfile/kpropertiesdialog.cpp:1677
+#: kfile/kpropertiesdialog.cpp:1684
 msgid "Only own&er can rename and delete folder content"
 msgstr "只有擁有者可以重新命名與刪除資料夾內容(&E)"
 
-#: kfile/kpropertiesdialog.cpp:1678
+#: kfile/kpropertiesdialog.cpp:1685
 msgid "Is &executable"
 msgstr "是可執行檔(&E)"
 
-#: kfile/kpropertiesdialog.cpp:1682
+#: kfile/kpropertiesdialog.cpp:1689
 msgid ""
 "Enable this option to allow only the folder's owner to delete or rename the "
 "contained files and folders. Other users can only add new files, which "
@@ -2897,7 +3288,7 @@ msgstr ""
 "啟用此選項將指允許資料夾的擁有者可以刪除或重新命名包含的檔案與資料夾。其他的"
 "使用者只能加入新的檔案，但必須具有「編輯內容」的權限。"
 
-#: kfile/kpropertiesdialog.cpp:1686
+#: kfile/kpropertiesdialog.cpp:1693
 msgid ""
 "Enable this option to mark the file as executable. This only makes sense for "
 "programs and scripts. It is required when you want to execute them."
@@ -2905,35 +3296,35 @@ msgstr ""
 "啟用此選項會將檔案標示為可執行。這只對程式與命令稿有意義。當您要執行它們的時"
 "候，這是必須的。"
 
-#: kfile/kpropertiesdialog.cpp:1693
+#: kfile/kpropertiesdialog.cpp:1700
 msgid "A&dvanced Permissions"
 msgstr "進階的權限(&D)"
 
-#: kfile/kpropertiesdialog.cpp:1702
+#: kfile/kpropertiesdialog.cpp:1709
 msgid "Ownership"
 msgstr "擁有權"
 
-#: kfile/kpropertiesdialog.cpp:1709
+#: kfile/kpropertiesdialog.cpp:1716
 msgid "User:"
 msgstr "使用者："
 
-#: kfile/kpropertiesdialog.cpp:1781
+#: kfile/kpropertiesdialog.cpp:1788
 msgid "Group:"
 msgstr "群組："
 
-#: kfile/kpropertiesdialog.cpp:1824
+#: kfile/kpropertiesdialog.cpp:1831
 msgid "Apply changes to all subfolders and their contents"
 msgstr "套用改變到所有的子資料夾和它們的內容"
 
-#: kfile/kpropertiesdialog.cpp:1863
+#: kfile/kpropertiesdialog.cpp:1870
 msgid "Advanced Permissions"
 msgstr "進階的權限"
 
-#: kfile/kpropertiesdialog.cpp:1881
+#: kfile/kpropertiesdialog.cpp:1888
 msgid "Class"
 msgstr "類別"
 
-#: kfile/kpropertiesdialog.cpp:1886
+#: kfile/kpropertiesdialog.cpp:1893
 msgid ""
 "Show\n"
 "Entries"
@@ -2941,19 +3332,19 @@ msgstr ""
 "顯示\n"
 "項目"
 
-#: kfile/kpropertiesdialog.cpp:1888
+#: kfile/kpropertiesdialog.cpp:1895
 msgid "Read"
 msgstr "讀取"
 
-#: kfile/kpropertiesdialog.cpp:1893
+#: kfile/kpropertiesdialog.cpp:1900
 msgid "This flag allows viewing the content of the folder."
 msgstr "這個旗標允許檢視此資料夾的內容。"
 
-#: kfile/kpropertiesdialog.cpp:1895
+#: kfile/kpropertiesdialog.cpp:1902
 msgid "The Read flag allows viewing the content of the file."
 msgstr "讀取旗標允許檢視這個檔案的內容。"
 
-#: kfile/kpropertiesdialog.cpp:1899
+#: kfile/kpropertiesdialog.cpp:1906
 msgid ""
 "Write\n"
 "Entries"
@@ -2961,11 +3352,11 @@ msgstr ""
 "寫入\n"
 "項目"
 
-#: kfile/kpropertiesdialog.cpp:1901
+#: kfile/kpropertiesdialog.cpp:1908
 msgid "Write"
 msgstr "寫入"
 
-#: kfile/kpropertiesdialog.cpp:1906
+#: kfile/kpropertiesdialog.cpp:1913
 msgid ""
 "This flag allows adding, renaming and deleting of files. Note that deleting "
 "and renaming can be limited using the Sticky flag."
@@ -2973,94 +3364,94 @@ msgstr ""
 "這個旗標允許加入、重新命名與刪除檔案。注意刪除與重新命名可以使用相黏旗標來限"
 "制。"
 
-#: kfile/kpropertiesdialog.cpp:1909
+#: kfile/kpropertiesdialog.cpp:1916
 msgid "The Write flag allows modifying the content of the file."
 msgstr "寫入旗標允許修改這個檔案的內容。"
 
-#: kfile/kpropertiesdialog.cpp:1914
+#: kfile/kpropertiesdialog.cpp:1921
 msgctxt "Enter folder"
 msgid "Enter"
 msgstr "進入"
 
-#: kfile/kpropertiesdialog.cpp:1915
+#: kfile/kpropertiesdialog.cpp:1922
 msgid "Enable this flag to allow entering the folder."
 msgstr "啟用這個旗標已允許進入此資料夾。"
 
-#: kfile/kpropertiesdialog.cpp:1918
+#: kfile/kpropertiesdialog.cpp:1925
 msgid "Exec"
 msgstr "執行"
 
-#: kfile/kpropertiesdialog.cpp:1919
+#: kfile/kpropertiesdialog.cpp:1926
 msgid "Enable this flag to allow executing the file as a program."
 msgstr "啟用這個旗標將允許這檔案像程式一樣執行。"
 
-#: kfile/kpropertiesdialog.cpp:1929
+#: kfile/kpropertiesdialog.cpp:1936
 msgid "Special"
 msgstr "特殊屬性"
 
-#: kfile/kpropertiesdialog.cpp:1933
+#: kfile/kpropertiesdialog.cpp:1940
 msgid ""
 "Special flag. Valid for the whole folder, the exact meaning of the flag can "
 "be seen in the right hand column."
 msgstr ""
 "特殊的旗標。對整個資料夾都有效，這個旗標精確的意思可以在右手邊的欄位看到。"
 
-#: kfile/kpropertiesdialog.cpp:1936
+#: kfile/kpropertiesdialog.cpp:1943
 msgid ""
 "Special flag. The exact meaning of the flag can be seen in the right hand "
 "column."
 msgstr "特殊的旗標。這個旗標精確的意思可以在右手邊的欄位看到。"
 
-#: kfile/kpropertiesdialog.cpp:1940
+#: kfile/kpropertiesdialog.cpp:1947
 msgid "User"
 msgstr "使用者"
 
-#: kfile/kpropertiesdialog.cpp:1944
+#: kfile/kpropertiesdialog.cpp:1951
 msgid "Group"
 msgstr "群組"
 
-#: kfile/kpropertiesdialog.cpp:1948 kfile/kacleditwidget.cpp:62
+#: kfile/kpropertiesdialog.cpp:1955 kfile/kacleditwidget.cpp:62
 #: kfile/kacleditwidget.cpp:463
 msgid "Others"
 msgstr "其他"
 
-#: kfile/kpropertiesdialog.cpp:1952
+#: kfile/kpropertiesdialog.cpp:1959
 msgid "Set UID"
 msgstr "SUID"
 
-#: kfile/kpropertiesdialog.cpp:1956
+#: kfile/kpropertiesdialog.cpp:1963
 msgid ""
 "If this flag is set, the owner of this folder will be the owner of all new "
 "files."
 msgstr "如果設定這個旗標，此資料夾的擁有者將會成為所有新檔案的擁有者。"
 
-#: kfile/kpropertiesdialog.cpp:1959
+#: kfile/kpropertiesdialog.cpp:1966
 msgid ""
 "If this file is an executable and the flag is set, it will be executed with "
 "the permissions of the owner."
 msgstr "如果這個檔案是可執行檔並且設定這個旗標，它將會以擁有者的權限執行。"
 
-#: kfile/kpropertiesdialog.cpp:1963
+#: kfile/kpropertiesdialog.cpp:1970
 msgid "Set GID"
 msgstr "SGID"
 
-#: kfile/kpropertiesdialog.cpp:1967
+#: kfile/kpropertiesdialog.cpp:1974
 msgid ""
 "If this flag is set, the group of this folder will be set for all new files."
 msgstr "如果設定這個旗標，此資料夾的群組將會設定到所有新檔案。"
 
-#: kfile/kpropertiesdialog.cpp:1970
+#: kfile/kpropertiesdialog.cpp:1977
 msgid ""
 "If this file is an executable and the flag is set, it will be executed with "
 "the permissions of the group."
 msgstr "如果這個檔案是可執行檔並且設定這個旗標，它將會以群組的權限執行。"
 
-#: kfile/kpropertiesdialog.cpp:1974
+#: kfile/kpropertiesdialog.cpp:1981
 msgctxt "File permission"
 msgid "Sticky"
 msgstr "相黏"
 
-#: kfile/kpropertiesdialog.cpp:1978
+#: kfile/kpropertiesdialog.cpp:1985
 msgid ""
 "If the Sticky flag is set on a folder, only the owner and root can delete or "
 "rename files. Otherwise everybody with write permissions can do this."
@@ -3068,87 +3459,87 @@ msgstr ""
 "如果在資料夾上設定相黏旗標，只有擁有者和 root 可以刪除或重新命名檔案。否則任"
 "何具有寫入權限的人都可以進行此項動作。"
 
-#: kfile/kpropertiesdialog.cpp:1982
+#: kfile/kpropertiesdialog.cpp:1989
 msgid ""
 "The Sticky flag on a file is ignored on Linux, but may be used on some "
 "systems"
 msgstr "在檔案上的相黏旗標會被 Linux 忽略，但是可能會被某些系統使用"
 
-#: kfile/kpropertiesdialog.cpp:2159
+#: kfile/kpropertiesdialog.cpp:2166
 msgid "Link"
 msgstr "連結"
 
-#: kfile/kpropertiesdialog.cpp:2176
+#: kfile/kpropertiesdialog.cpp:2183
 msgid "Varying (No Change)"
 msgstr "變化（沒有改變）"
 
-#: kfile/kpropertiesdialog.cpp:2275
+#: kfile/kpropertiesdialog.cpp:2282
 msgid "This file uses advanced permissions"
 msgid_plural "These files use advanced permissions."
 msgstr[0] "這些檔案使用進階的權限。"
 
-#: kfile/kpropertiesdialog.cpp:2296
+#: kfile/kpropertiesdialog.cpp:2303
 msgid "This folder uses advanced permissions."
 msgid_plural "These folders use advanced permissions."
 msgstr[0] "這些資料夾使用進階的權限。"
 
-#: kfile/kpropertiesdialog.cpp:2312
+#: kfile/kpropertiesdialog.cpp:2319
 msgid "These files use advanced permissions."
 msgstr "這些檔案使用進階的權限。"
 
-#: kfile/kpropertiesdialog.cpp:2530
+#: kfile/kpropertiesdialog.cpp:2537
 msgid "U&RL"
 msgstr "URL(&R)"
 
-#: kfile/kpropertiesdialog.cpp:2537
+#: kfile/kpropertiesdialog.cpp:2544
 msgid "URL:"
 msgstr "URL："
 
-#: kfile/kpropertiesdialog.cpp:2668
+#: kfile/kpropertiesdialog.cpp:2675
 msgid "De&vice"
 msgstr "裝置(&V)"
 
-#: kfile/kpropertiesdialog.cpp:2699
+#: kfile/kpropertiesdialog.cpp:2706
 msgid "Device (/dev/fd0):"
 msgstr "裝置 (/dev/fd0)："
 
-#: kfile/kpropertiesdialog.cpp:2700
+#: kfile/kpropertiesdialog.cpp:2707
 msgid "Device:"
 msgstr "裝置："
 
-#: kfile/kpropertiesdialog.cpp:2713
+#: kfile/kpropertiesdialog.cpp:2720
 msgid "Read only"
 msgstr "唯讀"
 
-#: kfile/kpropertiesdialog.cpp:2717
+#: kfile/kpropertiesdialog.cpp:2724
 msgid "File system:"
 msgstr "檔案系統:"
 
-#: kfile/kpropertiesdialog.cpp:2725
+#: kfile/kpropertiesdialog.cpp:2732
 msgid "Mount point (/mnt/floppy):"
 msgstr "裝載點 (/mnt/floppy)："
 
-#: kfile/kpropertiesdialog.cpp:2726
+#: kfile/kpropertiesdialog.cpp:2733
 msgid "Mount point:"
 msgstr "裝載點："
 
-#: kfile/kpropertiesdialog.cpp:2960
+#: kfile/kpropertiesdialog.cpp:2967
 msgid "&Application"
 msgstr "應用程式(&A)"
 
-#: kfile/kpropertiesdialog.cpp:3085
+#: kfile/kpropertiesdialog.cpp:3092
 msgid "Add File Type for %1"
 msgstr "加入 %1 的檔案類型"
 
-#: kfile/kpropertiesdialog.cpp:3086
+#: kfile/kpropertiesdialog.cpp:3093
 msgid "Select one or more file types to add:"
 msgstr "選擇一個或多個要加入的檔案類型："
 
-#: kfile/kpropertiesdialog.cpp:3223
+#: kfile/kpropertiesdialog.cpp:3230
 msgid "Only executables on local file systems are supported."
 msgstr "只支援本地檔案系統的執行檔。"
 
-#: kfile/kpropertiesdialog.cpp:3237
+#: kfile/kpropertiesdialog.cpp:3244
 msgid "Advanced Options for %1"
 msgstr "%1 的進階選項"
 
@@ -3330,473 +3721,6 @@ msgstr "*.png *.xpm *.svg *.svgz|圖示檔案 (*.png *.xpm *.svg *.svgz)"
 msgid "Open"
 msgstr "開啟"
 
-#: kfile/knfotranslator.cpp:34
-msgctxt "@label"
-msgid "Modified"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:35
-msgctxt "@label"
-msgid "Owner"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:36
-msgctxt "@label"
-msgid "Permissions"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:37
-msgctxt "@label"
-msgid "Size"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:38
-msgctxt "@label"
-msgid "Total Size"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:39
-msgctxt "@label"
-msgid "Type"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:40
-msgctxt "@label"
-msgid "MIME Type"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:41
-msgctxt "@label"
-msgid "Comment"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:42
-msgctxt "@label creation date"
-msgid "Created"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:43
-msgctxt "@label file content size"
-msgid "Size"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:44
-msgctxt "@label file depends from"
-msgid "Depends"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:45
-msgctxt "@label"
-msgid "Description"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:46
-msgctxt "@label Software used to generate content"
-msgid "Generator"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:47
-msgctxt ""
-"@label see http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasPart"
-msgid "Has Part"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:48
-msgctxt ""
-"@label see http://www.semanticdesktop.org/ontologies/2007/01/19/"
-"nie#hasLogicalPart"
-msgid "Has Logical Part"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:49
-msgctxt "@label parent directory"
-msgid "Part of"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:50
-msgctxt "@label"
-msgid "Keyword"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:51
-msgctxt "@label modified date of file"
-msgid "Modified"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:52
-msgctxt "@label"
-msgid "Content"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:53
-msgctxt "@label"
-msgid "Related To"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:54
-msgctxt "@label"
-msgid "Subject"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:55
-msgctxt "@label music title"
-msgid "Title"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:56
-msgctxt "@label file URL"
-msgid "Location"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:57
-msgctxt "@label"
-msgid "Creator"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:58
-msgctxt "@label"
-msgid "Average Bitrate"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:59
-msgctxt "@label"
-msgid "Frame Rate"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:60
-msgctxt "@label"
-msgid "Channels"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:61
-msgctxt "@label number of characters"
-msgid "Characters"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:62
-msgctxt "@label"
-msgid "Codec"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:63
-msgctxt "@label"
-msgid "Color Depth"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:64
-msgctxt "@label"
-msgid "Color Count"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:65
-msgctxt "@label"
-msgid "Duration"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:66
-msgctxt "@label"
-msgid "Filename"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:67
-msgctxt "@label"
-msgid "Hash"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:68
-msgctxt "@label"
-msgid "Height"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:69
-msgctxt "@label"
-msgid "Bit Depth"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:70
-msgctxt "@label"
-msgid "Font"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:71
-msgctxt "@label"
-msgid "Font Family"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:72
-msgctxt "@label"
-msgid "Font Foundry"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:73
-msgctxt "@label"
-msgid "Interlace Mode"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:74
-msgctxt "@label number of lines"
-msgid "Lines"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:75
-msgctxt "@label"
-msgid "Programming Language"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:76
-msgctxt "@label"
-msgid "Sample Rate"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:77
-msgctxt "@label"
-msgid "Width"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:78
-msgctxt "@label number of words"
-msgid "Words"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:79
-msgctxt "@label"
-msgid "File Hash"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:80
-msgctxt "@label"
-msgid "Hash Algorithm"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:81
-msgctxt "@label"
-msgid "Bits Per Sample"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:82
-msgctxt "@label"
-msgid "Sample Count"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:83
-msgctxt "@label EXIF aperture value"
-msgid "Aperture"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:84
-msgctxt "@label EXIF"
-msgid "Exposure Bias Value"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:85
-msgctxt "@label EXIF"
-msgid "Exposure Time"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:86
-msgctxt "@label EXIF"
-msgid "Flash"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:87
-msgctxt "@label EXIF"
-msgid "Focal Length"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:88
-msgctxt "@label EXIF"
-msgid "Focal Length 35 mm"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:89
-msgctxt "@label EXIF"
-msgid "ISO Speed Ratings"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:90
-msgctxt "@label EXIF"
-msgid "Make"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:91
-msgctxt "@label EXIF"
-msgid "Metering Mode"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:92
-msgctxt "@label EXIF"
-msgid "Model"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:93
-msgctxt "@label EXIF"
-msgid "Orientation"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:94
-msgctxt "@label EXIF"
-msgid "White Balance"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:95
-msgctxt "@label EXIF"
-msgid "Bits Per Sample"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:96
-msgctxt "@label video director"
-msgid "Director"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:97
-msgctxt "@label music genre"
-msgid "Genre"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:98
-msgctxt "@label music album"
-msgid "Album"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:99
-msgctxt "@label"
-msgid "Performer"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:100
-msgctxt "@label"
-msgid "Release Date"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:101
-msgctxt "@label music track number"
-msgid "Track"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:102
-msgctxt "@label resource created time"
-msgid "Resource Created"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:103
-msgctxt "@label"
-msgid "Sub Resource"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:104
-msgctxt "@label resource last modified"
-msgid "Resource Modified"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:105
-msgctxt "@label"
-msgid "Numeric Rating"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:106
-msgctxt "@label"
-msgid "Copied From"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:107
-msgctxt "@label"
-msgid "First Usage"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:108
-msgctxt "@label"
-msgid "Last Usage"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:109
-msgctxt "@label"
-msgid "Usage Count"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:110
-msgctxt "@label"
-msgid "Unix File Group"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:111
-msgctxt "@label"
-msgid "Unix File Mode"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:112
-msgctxt "@label"
-msgid "Unix File Owner"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:113
-msgctxt "@label file type"
-msgid "Type"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:114
-msgctxt "@label Number of fuzzy translations"
-msgid "Fuzzy Translations"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:115
-msgctxt "@label Name of last translator"
-msgid "Last Translator"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:116
-msgctxt "@label Number of obsolete translations"
-msgid "Obsolete Translations"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:117
-msgctxt "@label"
-msgid "Translation Source Date"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:118
-msgctxt "@label Number of total translations"
-msgid "Total Translations"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:119
-msgctxt "@label Number of translated strings"
-msgid "Translated"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:120
-msgctxt "@label"
-msgid "Translation Date"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:121
-msgctxt "@label Number of untranslated strings"
-msgid "Untranslated"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:122
-msgctxt "@label"
-msgid "Font Weight"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:123
-msgctxt "@label"
-msgid "Font Slant"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:124
-msgctxt "@label"
-msgid "Font Width"
-msgstr ""
-
-#: kfile/knfotranslator.cpp:125
-msgctxt "@label"
-msgid "Font Spacing"
-msgstr ""
-
-#: kfile/kfilemetainfowidget.cpp:150
-msgid "<Error>"
-msgstr "<錯誤>"
-
 #: kfile/kfiledialog.cpp:119
 msgid "*|All files"
 msgstr "*|所有檔案"
@@ -3815,7 +3739,7 @@ msgstr "另存新檔"
 msgid "P&review"
 msgstr "預覽(&R)"
 
-#: kfile/kfilemetadataprovider.cpp:104
+#: kfile/kfilemetadataprovider.cpp:57
 msgctxt "@item:intable"
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -4141,14 +4065,6 @@ msgstr ""
 "無法儲存書籤於 %1。回報的錯誤為： %2。這個錯誤訊息將只會顯示一次。造成錯誤的"
 "原因需要盡速修正，大多數的情況可能是硬碟已經滿了。"
 
-#: ../kioslave/metainfo/metainfo.cpp:37
-msgid "kio_metainfo"
-msgstr "kio_metainfo"
-
-#: ../kioslave/metainfo/metainfo.cpp:94
-msgid "No metainfo for %1"
-msgstr "沒有 %1 的 meta 資訊"
-
 #: ../kioslave/file/file_unix.cpp:217
 msgid "Cannot copy file from %1 to %2. (Errno: %3)"
 msgstr "無法複製檔案從 %1 到 %2（錯誤代碼：%3）"
@@ -4189,15 +4105,15 @@ msgstr "找不到 mount 程式"
 msgid "Could not find program \"umount\""
 msgstr "找不到 umount 程式"
 
-#: ../kioslave/ftp/ftp.cpp:336
+#: ../kioslave/ftp/ftp.cpp:333
 msgid "Opening connection to host %1"
 msgstr "開啟連線到主機 %1"
 
-#: ../kioslave/ftp/ftp.cpp:351
+#: ../kioslave/ftp/ftp.cpp:348
 msgid "Connected to host %1"
 msgstr "連線到主機 %1"
 
-#: ../kioslave/ftp/ftp.cpp:420
+#: ../kioslave/ftp/ftp.cpp:417
 msgid ""
 "%1.\n"
 "\n"
@@ -4207,11 +4123,11 @@ msgstr ""
 "\n"
 "原因： %2"
 
-#: ../kioslave/ftp/ftp.cpp:449
+#: ../kioslave/ftp/ftp.cpp:446
 msgid "Sending login information"
 msgstr "送出登入資訊"
 
-#: ../kioslave/ftp/ftp.cpp:512
+#: ../kioslave/ftp/ftp.cpp:509
 msgid ""
 "Message sent:\n"
 "Login using username=%1 and password=[hidden]\n"
@@ -4227,23 +4143,23 @@ msgstr ""
 "%2\n"
 "\n"
 
-#: ../kioslave/ftp/ftp.cpp:520
+#: ../kioslave/ftp/ftp.cpp:517
 msgid "You need to supply a username and a password to access this site."
 msgstr "您必須提供一組使用者名稱和密碼來存取這個網站。"
 
-#: ../kioslave/ftp/ftp.cpp:522
+#: ../kioslave/ftp/ftp.cpp:519
 msgid "Site:"
 msgstr "網站:"
 
-#: ../kioslave/ftp/ftp.cpp:523
+#: ../kioslave/ftp/ftp.cpp:520
 msgid "<b>%1</b>"
 msgstr "<b>%1</b>"
 
-#: ../kioslave/ftp/ftp.cpp:611
+#: ../kioslave/ftp/ftp.cpp:607
 msgid "Login OK"
 msgstr "登入成功"
 
-#: ../kioslave/ftp/ftp.cpp:640
+#: ../kioslave/ftp/ftp.cpp:636
 msgid "Could not login to %1."
 msgstr "無法登入 %1。"
 
