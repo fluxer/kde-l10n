@@ -5,7 +5,6 @@ if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
     find_package(Gettext REQUIRED)
 
     include(KDE4Defaults)
-    include(MacroOptionalAddSubdirectory)
 
     if(NOT GETTEXT_MSGMERGE_EXECUTABLE)
         message(FATAL_ERROR "Please install the msgmerge binary")
@@ -16,4 +15,4 @@ endif()
 
 set(CURRENT_LANG en_GB)
 
-macro_optional_add_subdirectory( messages )
+add_subdirectory( messages )
