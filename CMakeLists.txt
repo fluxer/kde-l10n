@@ -3,15 +3,8 @@ project (kde-l10n)
 include(FeatureSummary)
 
 find_package(KDE4 4.22.0 REQUIRED)
-find_package(Gettext REQUIRED)
 
 include(KDE4Defaults)
-
-if(NOT GETTEXT_MSGMERGE_EXECUTABLE)
-    message(FATAL_ERROR "Please install the msgmerge binary")
-elseif(NOT GETTEXT_MSGFMT_EXECUTABLE)
-    message(FATAL_ERROR "Please install the msgfmt binary")
-endif()
 
 add_subdirectory( ar )
 add_subdirectory( ast )
@@ -74,7 +67,6 @@ add_subdirectory( sr@ijekavianlatin )
 add_subdirectory( sr@latin )
 add_subdirectory( sv )
 add_subdirectory( te )
-add_subdirectory( tg )
 add_subdirectory( tl )
 add_subdirectory( tr )
 add_subdirectory( ug )
