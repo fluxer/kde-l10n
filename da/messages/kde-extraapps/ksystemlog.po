@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksystemlog\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2022-05-12 03:36+0300\n"
+"POT-Creation-Date: 2022-11-25 02:25+0200\n"
 "PO-Revision-Date: 2009-05-16 23:33+0100\n"
 "Last-Translator: Jan Madsen <jan-portugal@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -309,7 +309,7 @@ msgstr ""
 #. i18n: file: src/loggerDialogBase.ui:34
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: rc.cpp:123 rc.cpp:376 src/modes/xsession/xsessionAnalyzer.h:55
-#: src/modes/kernel/kernelAnalyzer.h:60 src/modes/apache/apacheAnalyzer.h:55
+#: src/modes/kernel/kernelAnalyzer.h:61 src/modes/apache/apacheAnalyzer.h:55
 #: src/modes/acpid/acpidAnalyzer.h:51 src/modes/base/syslogAnalyzer.cpp:61
 #: src/modes/samba/sambaAnalyzer.h:58 src/modes/xorg/xorgAnalyzer.h:61
 #: src/modes/cups/cupsPdfAnalyzer.h:55 src/modes/cups/cupsAnalyzer.h:56
@@ -1758,7 +1758,7 @@ msgstr "Niveau:"
 msgid "Component:"
 msgstr "Komponent:"
 
-#: src/modes/kernel/kernelAnalyzer.h:58 src/modes/cron/cronAnalyzer.h:51
+#: src/modes/kernel/kernelAnalyzer.h:59 src/modes/cron/cronAnalyzer.h:51
 #: src/modes/apache/apacheAccessAnalyzer.h:53
 #: src/modes/apache/apacheAnalyzer.h:53 src/modes/acpid/acpidAnalyzer.h:49
 #: src/modes/base/syslogAnalyzer.cpp:58 src/modes/samba/sambaAnalyzer.h:54
@@ -1767,7 +1767,7 @@ msgstr "Komponent:"
 msgid "Date"
 msgstr "Dato"
 
-#: src/modes/kernel/kernelAnalyzer.h:59
+#: src/modes/kernel/kernelAnalyzer.h:60
 msgid "Component"
 msgstr "Komponent"
 
@@ -2607,82 +2607,94 @@ msgstr "Alarm"
 msgid "Emergency"
 msgstr "Nødstilfælde"
 
-#: src/lib/logViewExport.cpp:58
+#: src/lib/logViewExport.cpp:59
 msgid "Here are my logs:\n"
 msgstr "Her er mine logge:\n"
 
-#: src/lib/logViewExport.cpp:60 src/lib/logViewExport.cpp:74
+#: src/lib/logViewExport.cpp:61 src/lib/logViewExport.cpp:75
 msgid "---------------------------------------\n"
 msgstr "---------------------------------------\n"
 
-#: src/lib/logViewExport.cpp:78
+#: src/lib/logViewExport.cpp:79
 msgid ""
 "You have selected too many lines. Please only select important log lines."
 msgstr "Du har markeret for mange linjer. Markér kun vigtige loglinjer."
 
-#: src/lib/logViewExport.cpp:78
+#: src/lib/logViewExport.cpp:79
 msgid "Too Many Lines Selected"
 msgstr "For mange linjer markeret"
 
-#: src/lib/logViewExport.cpp:91
+#: src/lib/logViewExport.cpp:90
 msgid "Log Lines of my problem"
 msgstr "Loglinjer om mit problem"
 
-#: src/lib/logViewExport.cpp:214
+#: src/lib/logViewExport.cpp:213
 msgid "No items selected. Nothing copied to clipboard."
 msgstr "Ingen elementer markeret. Intet kopieret til udklipsholderen."
 
-#: src/lib/logViewExport.cpp:220
+#: src/lib/logViewExport.cpp:219
 msgid "1 log line copied to clipboard."
 msgid_plural "%1 log lines copied to clipboard."
 msgstr[0] "1 loglinje kopieret til udklipsholderen."
 msgstr[1] "%1 loglinjer kopieret til udklipsholderen."
 
-#: src/lib/logViewExport.cpp:234
+#: src/lib/logViewExport.cpp:233
 msgid "No items selected. Please select items to be able to save them."
 msgstr "Ingen elementer markeret. Markér elementer for at kunne gemme dem."
 
-#: src/lib/logViewExport.cpp:265
+#: src/lib/logViewExport.cpp:264
 msgid "1 log line saved to '%2'."
 msgid_plural "%1 log lines saved to '%2'."
 msgstr[0] "1 loglinje gemt til \"%2\"."
 msgstr[1] "%1 loglinjer gemt til \"%2\"."
 
-#: src/lib/logViewExport.cpp:268
+#: src/lib/logViewExport.cpp:267
 msgid "Unable to save file '%1': Permission Denied."
 msgstr "Kan ikke gemme filen \"%1\": Tilladelse nægtet."
 
-#: src/lib/logViewExport.cpp:269
+#: src/lib/logViewExport.cpp:268
 msgid "Unable to save file."
 msgstr "Kan ikke gemme fil."
 
-#: src/lib/localLogFileReader.cpp:115
+#: src/lib/localLogFileReader.cpp:116
 #: src/lib/processOutputLogFileReader.cpp:109
 msgid "This file is not valid. Please adjust it in the settings of KSystemLog."
 msgstr "Denne fil er ikke gyldig. Justér den i Ksystemlogs indstillinger."
 
-#: src/lib/localLogFileReader.cpp:116 src/lib/localLogFileReader.cpp:130
+#: src/lib/localLogFileReader.cpp:117 src/lib/localLogFileReader.cpp:131
 #: src/lib/processOutputLogFileReader.cpp:110
 msgid "File Does Not Exist"
 msgstr "Filen findes ikke"
 
-#: src/lib/localLogFileReader.cpp:129
+#: src/lib/localLogFileReader.cpp:130
 msgid "The file '%1' does not exist."
 msgstr "Filen \"%1\" findes ikke."
 
-#: src/lib/localLogFileReader.cpp:149
-msgid "Unable to uncompress the '%2' format of '%1'."
-msgstr "Kan ikke udpakke \"%2\"-formatet af \"%1\"."
+#: src/lib/localLogFileReader.cpp:151
+msgid "Compressed file format is not supported '%1'."
+msgstr ""
 
-#: src/lib/localLogFileReader.cpp:150
+#: src/lib/localLogFileReader.cpp:152 src/lib/localLogFileReader.cpp:160
+msgid "Unable to open Compressed File"
+msgstr ""
+
+#: src/lib/localLogFileReader.cpp:159
+msgid "Unable to open compressed file '%1': %2."
+msgstr ""
+
+#: src/lib/localLogFileReader.cpp:166
+msgid "Unable to uncompress '%1': '%2'."
+msgstr ""
+
+#: src/lib/localLogFileReader.cpp:167
 msgid "Unable to Uncompress File"
 msgstr "Kan ikke udpakke filen"
 
-#: src/lib/localLogFileReader.cpp:157
+#: src/lib/localLogFileReader.cpp:177
 msgid "You do not have sufficient permissions to read '%1'."
 msgstr "Du har ikke tilstrækkelige rettigheder til at læse \"%1\"."
 
-#: src/lib/localLogFileReader.cpp:158
+#: src/lib/localLogFileReader.cpp:178
 msgid "Insufficient Permissions"
 msgstr "Utilstrækkelige rettigheder"
 
