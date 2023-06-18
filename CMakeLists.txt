@@ -2,9 +2,7 @@ project (kde-l10n)
 
 include(FeatureSummary)
 
-find_package(KDE4 4.23.0 REQUIRED)
-
-include(KDE4Defaults)
+find_package(KDELibs4 4.23.0 REQUIRED)
 
 add_subdirectory( ar )
 add_subdirectory( ast )
