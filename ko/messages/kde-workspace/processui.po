@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: processui\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2022-11-25 02:25+0200\n"
+"POT-Creation-Date: 2023-08-10 00:42+0300\n"
 "PO-Revision-Date: 2012-10-16 02:05+0900\n"
 "Last-Translator: Park Shinjo <peremen@gmail.com>\n"
 "Language-Team: Korean <cho.sungjae@gmail.com>\n"
@@ -16,6 +16,660 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ProcessModel.cpp:62
+msgid "%1 K"
+msgstr "%1 K"
+
+#: ProcessModel.cpp:63
+msgid "%1 M"
+msgstr "%1 M"
+
+#: ProcessModel.cpp:64
+msgid "%1 G"
+msgstr "%1 G"
+
+#: ProcessModel.cpp:65
+msgid "%1 T"
+msgstr "%1 T"
+
+#: ProcessModel.cpp:66
+msgid "%1 P"
+msgstr "%1 P"
+
+#: ProcessModel.cpp:590
+msgid "- Process is doing some work."
+msgstr "- 프로세스가 작업 중입니다."
+
+#: ProcessModel.cpp:592
+msgid "- Process is waiting for something to happen."
+msgstr "- 프로세스가 무언가가 일어나기를 기다리고 있습니다."
+
+#: ProcessModel.cpp:594
+msgid ""
+"- Process has been stopped. It will not respond to user input at the moment."
+msgstr " - 프로세스가 중지되었습니다. 사용자 입력에 반응하지 않을 것입니다."
+
+#: ProcessModel.cpp:596
+msgid ""
+"- Process has finished and is now dead, but the parent process has not "
+"cleaned up."
+msgstr ""
+" - 프로세스가 끝났고 이제 죽었습니다. 그러나 부모 프로세스가 정리되지 않았습"
+"니다."
+
+#: ProcessModel.cpp:934
+msgid "The process name."
+msgstr "프로세스 이름입니다."
+
+#: ProcessModel.cpp:936
+msgid "The user who owns this process."
+msgstr "프로세스를 소유한 사용자입니다."
+
+#: ProcessModel.cpp:938
+msgid "The controlling terminal on which this process is running."
+msgstr "프로세스가 실행 중인 제어 터미널입니다."
+
+#: ProcessModel.cpp:940
+msgid ""
+"The priority with which this process is being run. For the normal scheduler, "
+"this ranges from 19 (very nice, least priority) to -19 (top priority)."
+msgstr ""
+"프로세스가 실행 중인 우선 순위입니다. 일반적인 스케줄러를 사용하면 가능한 범"
+"위는 19(최저 우선 순위)에서 -19(최고 우선 순위)입니다."
+
+#: ProcessModel.cpp:943
+msgid "The current CPU usage of the process."
+msgstr "현재 프로세스의 CPU 사용량입니다."
+
+#: ProcessModel.cpp:948
+msgid ""
+"The current total CPU usage of the process, divided by the %1 processor core "
+"in the machine."
+msgid_plural ""
+"The current total CPU usage of the process, divided by the %1 processor "
+"cores in the machine."
+msgstr[0] ""
+"현재 프로세스의 총 CPU 사용량을 시스템에 있는 CPU 코어 개수 %1개로 나눈 값입"
+"니다."
+
+#: ProcessModel.cpp:950
+msgid "The current total CPU usage of the process."
+msgstr "현재 프로세스의 CPU 사용량입니다."
+
+#: ProcessModel.cpp:952
+msgid ""
+"<qt>The total user and system time that this process has been running for, "
+"displayed as minutes:seconds."
+msgstr ""
+"<qt>이 프로세스가 실행된 총 사용자 및 시스템 시간의 합이며, 분:초 단위로 표시"
+"됩니다."
+
+#: ProcessModel.cpp:954
+msgid ""
+"<qt>This is the amount of virtual memory space that the process is using, "
+"included shared libraries, graphics memory, files on disk, and so on. This "
+"number is almost meaningless.</qt>"
+msgstr ""
+"<qt>공유 라이브러리, 그래픽 메모리, 디스크의 파일 등을 포함하는 프로세스가 사"
+"용하고 있는 가상 메모리의 크기입니다. 대개 이 숫자는 의미가 없습니다.</qt>"
+
+#: ProcessModel.cpp:956
+msgid ""
+"<qt>This is the amount of real physical memory that this process is using by "
+"itself, and approximates the Private memory usage of the process.<br>It does "
+"not include any swapped out memory, nor the code size of its shared "
+"libraries.<br>This is often the most useful figure to judge the memory use "
+"of a program.  See What's This for more information.</qt>"
+msgstr ""
+"<qt>프로세스 자신이 사용하고 있는 실제 물리적 메모리의 크기입니다. 프로세스에"
+"서 독점적으로 사용하는 메모리 크기와 거의 일치합니다.<br>이 크기는 스왑 영역"
+"으로 전환된 메모리나 공유 라이브러리 등을 포함하지 않습니다.<br>프로그램의 메"
+"모리 사용량을 알아보는 데 사용됩니다. 자세한 정보는 '이것에 대한 설명'을 참조"
+"하십시오.</qt>"
+
+#: ProcessModel.cpp:958
+msgid ""
+"<qt>This is approximately the amount of real physical memory that this "
+"process's shared libraries are using.<br>This memory is shared among all "
+"processes that use this library.</qt>"
+msgstr ""
+"<qt>프로세스의 공유 라이브러리가 사용하는 실제 물리적 메모리의 크기와 개략적"
+"으로 일치합니다. <br>이 메모리는 이 라이브러리를 사용하는 모든 프로세스가 공"
+"유합니다.</qt>"
+
+#: ProcessModel.cpp:960
+msgid "<qt>The command with which this process was launched.</qt>"
+msgstr "<qt>이 프로세스가 실행된 명령입니다.</qt>"
+
+#: ProcessModel.cpp:962
+msgid "<qt>The amount of pixmap memory that this process is using.</qt>"
+msgstr "<qt>이 프로세스가 사용 중인 픽스맵 메모리 크기입니다.</qt>"
+
+#: ProcessModel.cpp:964
+msgid "<qt>The title of any windows that this process is showing.</qt>"
+msgstr "<qt>이 프로세스가 보여 주는 임의의 창 제목입니다.</qt>"
+
+#: ProcessModel.cpp:966
+msgid "The unique Process ID that identifies this process."
+msgstr "이 프로세스를 구분하는 유일한 프로세스 ID입니다."
+
+#: ProcessModel.cpp:968
+msgid "The number of bytes read.  See What's This for more information."
+msgstr "읽은 바이트 수입니다. 자세한 정보는 '이것에 대한 설명'을 참조하십시오."
+
+#: ProcessModel.cpp:970
+msgid "The number of bytes written.  See What's This for more information."
+msgstr "쓴 바이트 수입니다. 자세한 정보는 '이것에 대한 설명'을 참조하십시오."
+
+#: ProcessModel.cpp:979
+msgid ""
+"<qt><i>Technical information: </i>The kernel process name is a maximum of 8 "
+"characters long, so the full command is examined.  If the first word in the "
+"full command line starts with the process name, the first word of the "
+"command line is shown, otherwise the process name is used."
+msgstr ""
+"<qt><i>기술 정보:</i> 커널 프로세스 이름은 최대 8글자까지이므로 전체 명령을 "
+"시험합니다. 전체 명령줄의 첫 단어가 프로세스 이름과 일치한다면 명령줄의 첫 단"
+"어가 표시되고, 그렇지 않으면 프로세스 이름이 사용됩니다."
+
+#: ProcessModel.cpp:981
+msgid ""
+"<qt>The user who owns this process.  If the effective, setuid etc user is "
+"different, the user who owns the process will be shown, followed by the "
+"effective user.  The ToolTip contains the full information.  "
+"<p><table><tr><td>Login Name/Group</td><td>The username of the Real User/"
+"Group who created this process</td></tr><tr><td>Effective User/Group</"
+"td><td>The process is running with privileges of the Effective User/Group.  "
+"This is shown if different from the real user.</td></tr><tr><td>Setuid User/"
+"Group</td><td>The saved username of the binary.  The process can escalate "
+"its Effective User/Group to the Setuid User/Group.</td></tr><tr><td>File "
+"System User/Group</td><td>Accesses to the filesystem are checked with the "
+"File System User/Group.  This is a Linux specific call. See setfsuid(2) for "
+"more information.</td></tr></table>"
+msgstr ""
+"<qt>현재 프로세스를 소유한 사용자입니다. setuid 등으로 효력이 있는 사용자가 "
+"바뀌었으면 실제 프로세스를 소유하는 사용자와 효력이 있는 사용자가 같이 표시됩"
+"니다. 풍선 도움말에는 전체 정보가 표시됩니다.<p><table><tr><td>로그인 이름/그"
+"룹</td><td>프로세스를 생성한 실제 사용자의 이름과 그룹</td></tr><tr><td>유효"
+"한 사용자/그룹</td><td>이 프로세스는 다음 사용자/그룹의 권한으로 실행됩니다. "
+"실제 사용자와 다른 경우 표시됩니다.</td></tr><tr><td>setuid 사용자/그룹</"
+"td><td>실행 파일에 저장된 사용자 이름입니다. 이 프로세스는 setuid로 지정한 사"
+"용자/그룹의 권한으로 상승될 수 있습니다.</td></tr><tr><td>파일 시스템 사용자/"
+"그룹</td><td>파일 시스템에 접근하는 사용자/그룹입니다. 리눅스에만 있는 시스"
+"템 호출로, setfsuid(2)를 참고하십시오.</td></tr></table>"
+
+#: ProcessModel.cpp:991
+msgid ""
+"<qt>This is the size of allocated address space - not memory, but address "
+"space. This value in practice means next to nothing. When a process requests "
+"a large memory block from the system but uses only a small part of it, the "
+"real usage will be low, VIRT will be high. <p><i>Technical information: </"
+"i>This is VmSize in proc/*/status and VIRT in top."
+msgstr ""
+"<qt>할당된 주소 공간의 크기입니다: 메모리가 아닌 주소 공간입니다. 실제로 이 "
+"값의 의미는 크지 않습니다. 프로세스가 큰 메모리 공간을 요청하고 시스템에서는 "
+"조금만 사용한다면, 실제 사용량은 낮고 VIRT 값은 클 것입니다.<p><i>기술 정보:"
+"</i>/proc/*/status의 VmSize, top의 VIRT입니다."
+
+#: ProcessModel.cpp:993
+msgid ""
+"<qt><i>Technical information: </i>This is an approximation of the Private "
+"memory usage, calculated as VmRSS - Shared, from /proc/*/statm.  This tends "
+"to underestimate the true Private memory usage of a process (by not "
+"including i/o backed memory pages), but is the best estimation that is fast "
+"to determine.  This is sometimes known as URSS (Unique Resident Set Size). "
+"For an individual process, see \"Detailed  Memory Information\" for a more "
+"accurate, but slower, calculation of the true Private memory usage."
+msgstr ""
+"<qt><i>기술 정보:</i> 이 값은 독점 메모리 사용량의 어림값이며, /proc/*/statm"
+"의 VmRSS - Shared로 계산됩니다. I/O로 인한 메모리 페이지를 포함하지 않기 때문"
+"에 프로세스의 독점 메모리 사용량을 실제보다 더 작게 계산할 수도 있지만, 가장 "
+"빠르게 추측할 수 있습니다. 이는 때때로 URSS(Unique Resident Set Size)라고 불"
+"립니다. 개별 프로세스에 대한 값을 보려면 \"자세한 메모리 정보\"를 누르십시"
+"오. 독점 메모리 사용량을 더 정확하지만 느리게 계산합니다."
+
+#: ProcessModel.cpp:995
+msgid "The CPU usage of a process and all of its threads."
+msgstr "현재 프로세스와 모든 스레드의 CPU 사용량입니다."
+
+#: ProcessModel.cpp:997
+msgid ""
+"<qt>The total system and user time that a process and all of its threads "
+"have been running on the CPU for. This can be greater than the wall clock "
+"time if the process has been across multiple CPU cores."
+msgstr ""
+"<qt>현재 CPU에서 실행된 프로세스 및 모든 연관된 스레드의 총 시스템 및 사용자 "
+"시간입니다. 만약 프로세스가 여러 CPU 코어로 나뉘어 실행되었으면 wall 시간보"
+"다 더 클 수도 있습니다."
+
+#: ProcessModel.cpp:999
+msgid ""
+"<qt><i>Technical information: </i>This is an approximation of the Shared "
+"memory, called SHR in top.  It is the number of pages that are backed by a "
+"file (see kernel Documentation/filesystems/proc.txt).  For an individual "
+"process, see \"Detailed Memory Information\" for a more accurate, but "
+"slower, calculation of the true Shared memory usage."
+msgstr ""
+"<qt><i>기술 정보:</i> top에서 SHR로 불리는 공유 메모리입니다. 파일 기반 페이"
+"지 개수입니다. (커널 문서의 Documentation/filesystems/proc.txt를 참고하십시"
+"오) 개별 프로세스에 대한 값을 보려면 \"자세한 메모리 정보\"를 누르십시오. 공"
+"유 메모리 사용량을 더 정확하지만 느리게 계산합니다."
+
+#: ProcessModel.cpp:1001
+msgid "<qt><i>Technical information: </i>This is from /proc/*/cmdline"
+msgstr "<qt><i>기술 정보:</i> /proc/*/cmdline의 정보입니다"
+
+#: ProcessModel.cpp:1003
+msgid ""
+"<qt><i>Technical information: </i>This is the amount of memory used by the "
+"Xorg process for images for this process.  This is memory used in addition "
+"to Memory and Shared Memory.<br><i>Technical information: </i>This only "
+"counts the pixmap memory, and does not include resource memory used by "
+"fonts, cursors, glyphsets etc.  See the <code>xrestop</code> program for a "
+"more detailed breakdown."
+msgstr ""
+"<qt><i>기술 정보:</i> Xorg 프로세스가 이 프로세스를 위해 사용하는 이미지 메모"
+"리의 양입니다. 프로세스의 독점 및 공유 메모리 이외에도 추가적으로 사용됩니다."
+"<br><i>기술 정보:</i> 이 사용량은 픽스맵 메모리만 계산하였습니다. 글꼴, 커"
+"서, 글리프 모음 등 자원 메모리는 계산되지 않았습니다. 자세한 정보를 보려면 "
+"<code>xrestop</code> 프로그램을 사용하십시오."
+
+#: ProcessModel.cpp:1005
+msgid ""
+"<qt><i>Technical information: </i>For each X11 window, the X11 property "
+"_NET_WM_PID is used to map the window to a PID.  If a process' windows are "
+"not shown, then that application incorrectly is not setting _NET_WM_PID."
+msgstr ""
+"<qt><i>기술 정보:</i> 각각 X11 창에 대해서 _NET_WM_PID X11 속성은 창의 프로세"
+"스 ID입니다. 프로세스의 창이 없다면 프로그램에서 _NET_WM_PID를 올바르게 설정"
+"하지 않았습니다."
+
+#: ProcessModel.cpp:1007
+msgid ""
+"<qt><i>Technical information: </i>This is the Process ID.  A multi-threaded "
+"application is treated a single process, with all threads sharing the same "
+"PID.  The CPU usage etc will be the total, accumulated, CPU usage of all the "
+"threads."
+msgstr ""
+"<qt><i>기술 정보:</i> 프로세스 ID입니다. 다중 스레드 프로그램은 같은 PID를 가"
+"지는 하나의 프로세스로 취급됩니다. CPU 사용량 등은 모든 스레드의 값을 합쳐셔 "
+"표시됩니다."
+
+#: ProcessModel.cpp:1010
+msgid ""
+"<qt>This column shows the IO statistics for each process. The tooltip "
+"provides the following information:<br><table><tr><td>Characters Read</"
+"td><td>The number of bytes which this task has caused to be read from "
+"storage. This is simply the sum of bytes which this process passed to read() "
+"and pread(). It includes things like tty IO and it is unaffected by whether "
+"or not actual physical disk IO was required (the read might have been "
+"satisfied from pagecache).</td></tr><tr><td>Characters Written</td><td>The "
+"number of bytes which this task has caused, or shall cause to be written to "
+"disk. Similar caveats apply here as with Characters Read.</td></"
+"tr><tr><td>Read Syscalls</td><td>The number of read I/O operations, i.e. "
+"syscalls like read() and pread().</td></tr><tr><td>Write Syscalls</"
+"td><td>The number of write I/O operations, i.e. syscalls like write() and "
+"pwrite().</td></tr><tr><td>Actual Bytes Read</td><td>The number of bytes "
+"which this process really did cause to be fetched from the storage layer. "
+"Done at the submit_bio() level, so it is accurate for block-backed "
+"filesystems. This may not give sensible values for NFS and CIFS filesystems."
+"</td></tr><tr><td>Actual Bytes Written</td><td>Attempt to count the number "
+"of bytes which this process caused to be sent to the storage layer. This is "
+"done at page-dirtying time.</td></table><p>The number in brackets shows the "
+"rate at which each value is changing, determined from taking the difference "
+"between the previous value and the new value, and dividing by the update "
+"interval.<p><i>Technical information: </i>This data is collected from /proc/"
+"*/io and is documented further in Documentation/accounting and Documentation/"
+"filesystems/proc.txt in the kernel source."
+msgstr ""
+"<qt>이 열은 각각 프로세스의 IO 통계를 표시합니다. 풍선 도움말은 다음 정보를 "
+"포함합니다:<br><table><tr><td>읽은 글자 수</td><td>이 작업이 실행되는 동안 저"
+"장 장치에서 읽어온 바이트 수를 표시합니다. read() 및 pread()를 통해 읽어 온 "
+"바이트 수의 합입니다. TTY 입출력과 같은 실제 디스크에 접근하지 않는 데이터도 "
+"포함되며, 캐시에 저장되어서 실제 디스크에 접근했는지 여부와 상관없이 증가합니"
+"다.</td></tr><tr><td>쓴 글자 수</td><td>이 작업이 디스크에 쓴 바이트 수 및 디"
+"스크에 쓰여질 바이트 수입니다. 읽은 글자 수와 같은 한계가 있습니다.</td></"
+"tr><tr><td>읽기 시스템 호출</td><td>read() 및 pread()와 같은 읽기 시스템 호출"
+"을 실행한 횟수입니다.</td></tr><tr><td>쓰기 시스템 호출</td><td>write()와 "
+"pwrite()와 같은 쓰기 시스템 호출을 실행한 횟수입니다.</td></tr><tr><td>실제 "
+"읽은 바이트 수</td><td>프로세스가 실제 저장 장치에 접근하여 데이터를 읽어 온 "
+"바이트 수입니다. submit_bio() 단계에서 결정되므로, 블록 기반 파일시스템에 대"
+"해서만 유효합니다. NFS 및 CIFS 파일 시스템에서 정확하지 않을 수도 있습니다.</"
+"td></tr><tr><td>실제 쓴 바이트 수</td><td>프로세스가 실제 저장 장치에 접근하"
+"여 데이터를 쓴 바이트 수입니다. 더러운 페이지를 처리하는 시간에 결정됩니다.</"
+"td></table><p>괄호 속에 써 있는 숫자는 이전 값과 현재 값의 차이를 업데이트 주"
+"기로 나눈 값의 변화량입니다.<p><i>기술 정보:</i> 이 데이터는 /proc/*/io에서 "
+"수집되며 커널 소스 트리의 Documentation/accounting 및 Documentation/"
+"filesystems/proc.txt 파일에 자세한 정보가 있습니다."
+
+#: ProcessModel.cpp:1097
+msgid "Login Name: %1<br/>"
+msgstr "로그인 이름: %1<br />"
+
+#: ProcessModel.cpp:1101
+msgid "This user is not recognized for some reason."
+msgstr "몇몇 이유로 이 사용자는 인식되지 않습니다."
+
+#: ProcessModel.cpp:1104
+msgid "<b>%1</b><br/>"
+msgstr "<b>%1</b><br />"
+
+#: ProcessModel.cpp:1105
+msgid "Login Name: %1 (uid: %2)<br/>"
+msgstr "로그인 이름: %1 (UID: %2)<br />"
+
+#: ProcessModel.cpp:1107
+msgid "  Room Number: %1<br/>"
+msgstr "  방 번호: %1<br />"
+
+#: ProcessModel.cpp:1109
+msgid "  Work Phone: %1<br/>"
+msgstr "  직장 전화번호: %1<br />"
+
+#: ProcessModel.cpp:1116
+msgid "Effective User: %1<br/>"
+msgstr "영향받는 사용자: %1<br />"
+
+#: ProcessModel.cpp:1118
+msgid "Setuid User: %1<br/>"
+msgstr "SetUID 사용자: %1<br />"
+
+#: ProcessModel.cpp:1120
+msgid "File System User: %1<br/>"
+msgstr "파일 시스템 사용자: %1<br />"
+
+#: ProcessModel.cpp:1124
+msgid "Group: %1"
+msgstr "그룹: %1"
+
+#: ProcessModel.cpp:1129
+msgid "<br/>Effective Group: %1"
+msgstr "<br />영향받는 그룹: %1"
+
+#: ProcessModel.cpp:1131
+msgid "<br/>Setuid Group: %1"
+msgstr "<br />SetUID 그룹: %1"
+
+#: ProcessModel.cpp:1133
+msgid "<br/>File System Group: %1"
+msgstr "<br />파일 시스템 그룹: %1"
+
+#: ProcessModel.cpp:1140
+msgctxt "Short description of a process. PID, name, user"
+msgid "<numid>%1</numid>: %2, owned by user %3"
+msgstr "<numid>%1</numid>: %2, %3이(가) 소유함"
+
+#: ProcessModel.cpp:1147
+msgid "%1 (gid: <numid>%2</numid>)"
+msgstr "%1 (gid: <numid>%2</numid>)"
+
+#: ProcessModel.cpp:1168
+msgid "%1 (uid: %2)"
+msgstr "%1 (uid: %2)"
+
+#: ProcessModel.cpp:1206
+msgctxt "scheduler"
+msgid "Idle"
+msgstr "휴식"
+
+#: ProcessModel.cpp:1208
+msgctxt "scheduler"
+msgid "(Batch) %1"
+msgstr "(배치) %1"
+
+#: ProcessModel.cpp:1210
+msgctxt "Round robin scheduler"
+msgid "RR %1"
+msgstr "RR %1"
+
+#: ProcessModel.cpp:1213
+msgctxt "Real Time scheduler"
+msgid "RT"
+msgstr "RT"
+
+#: ProcessModel.cpp:1215
+msgctxt "First in first out scheduler"
+msgid "FIFO %1"
+msgstr "FIFO %1"
+
+#: ProcessModel.cpp:1217
+msgctxt "scheduler"
+msgid "(IA) %1"
+msgstr "(IA) %1"
+
+#: ProcessModel.cpp:1274 ProcessModel.cpp:1282 ProcessModel.cpp:1300
+#: ProcessModel.cpp:1308
+msgid "%1/s"
+msgstr "%1/초"
+
+#: ProcessModel.cpp:1341
+msgctxt "tooltip. name,pid "
+msgid "This process is being debugged by %1 (<numid>%2</numid>)"
+msgstr "이 프로세스는 %1이(가) 디버그하고 있습니다. (<numid>%2</numid>)"
+
+#: ProcessModel.cpp:1362
+msgid ""
+"<b>Init</b> is the parent of all other processes and cannot be killed.<br/>"
+msgstr "<b>Init</b>는 다른 모든 프로세스의 부모이고 죽일 수 없습니다.<br/>"
+
+#: ProcessModel.cpp:1364
+msgid ""
+"<b>KThreadd</b> manages kernel threads. The children processes run in the "
+"kernel, controlling hard disk access, etc.<br/>"
+msgstr ""
+"<b>KThreadd</b>는 커널 스레드를 관리합니다. 커널에서 실행되는 자식 프로세스"
+"는 하드 디스크 제어 등을 관리합니다.<br/>"
+
+#: ProcessModel.cpp:1366
+msgctxt "name column tooltip. first item is the name"
+msgid "<b>%1</b><br />Process ID: <numid>%2</numid>"
+msgstr "<b>%1</b><br />프로세스 ID: <numid>%2</numid><br />"
+
+#: ProcessModel.cpp:1371
+msgctxt "name column tooltip. first item is the name"
+msgid ""
+"<b>%1</b><br />Process ID: <numid>%2</numid><br />Parent: %3<br />Parent's "
+"ID: <numid>%4</numid>"
+msgstr ""
+"<b>%1</b><br />프로세스 ID: <numid>%2</numid><br />부모: %3<br />부모 ID: "
+"<numid>%4</numid>"
+
+#: ProcessModel.cpp:1373
+msgctxt "name column tooltip. first item is the name"
+msgid ""
+"<b>%1</b><br />Process ID: <numid>%2</numid><br />Parent's ID: <numid>%3</"
+"numid>"
+msgstr ""
+"<b>%1</b><br />프로세스 ID: <numid>%2</numid><br />부모 ID: <numid>%3</numid>"
+
+#: ProcessModel.cpp:1377 ProcessModel.cpp:1436
+msgid "<br/>Number of threads: %1"
+msgstr "<br/>스레드 개수: %1"
+
+#: ProcessModel.cpp:1379
+msgid "<br/>Command: %1"
+msgstr "<br />명령: %1"
+
+#: ProcessModel.cpp:1382
+msgid "<br />Running on: %1"
+msgstr "<br />다음에서 실행 중: %1"
+
+#: ProcessModel.cpp:1390
+msgid "<qt>This process was run with the following command:<br />%1"
+msgstr "<qt>이 프로세스는 다음 명령으로 실행되었습니다:<br />%1"
+
+#: ProcessModel.cpp:1392
+msgid "<br /><br />Running on: %1"
+msgstr "<br /><br />다음에서 실행 중: %1"
+
+#: ProcessModel.cpp:1407
+msgid "Nice level: %1 (%2)"
+msgstr "Nice 단계: %1 (%2)"
+
+#: ProcessModel.cpp:1411
+msgid "This is a real time process.<br>Scheduler priority: %1"
+msgstr "실시간 프로세스입니다.<br>스케줄러 우선 순위: %1"
+
+#: ProcessModel.cpp:1417
+msgid "<br/>Scheduler: %1"
+msgstr "<br />스케줄러: %1"
+
+#: ProcessModel.cpp:1425
+msgid ""
+"<qt><p style='white-space:pre'>Process status: %1 %2<br />User CPU usage: "
+"%3%<br />System CPU usage: %4%"
+msgstr ""
+"<qt><p style='white-space:pre'>프로세스 상태: %1 %2<br />사용자 CPU 사용량: "
+"%3%<br />시스템 CPU 사용량: %4%"
+
+#: ProcessModel.cpp:1438
+msgid ""
+"<br />Number of children: %1<br />Total User CPU usage: %2%<br />Total "
+"System CPU usage: %3%<br />Total CPU usage: %4%"
+msgstr ""
+"<br />자식 수: %1<br />총 사용자 CPU 사용량: %2%<br />총 시스템 CPU 사용량: "
+"%3%<br />총 CPU 사용량: %4%"
+
+#: ProcessModel.cpp:1447
+msgid "<br /><br />CPU time spent running as user: %1 seconds"
+msgstr "<br /><br />사용자로 실행한 CPU 시간: %1초"
+
+#: ProcessModel.cpp:1451
+msgid "<br />CPU time spent running in kernel: %1 seconds"
+msgstr "<br />커널에서 사용한 CPU 시간: %1초"
+
+#: ProcessModel.cpp:1455
+msgid "<br />Nice level: %1 (%2)"
+msgstr "<br />Nice 단계: %1 (%2)"
+
+#: ProcessModel.cpp:1469
+msgid "Memory usage: %1 out of %2  (%3 %)<br />"
+msgstr "메모리 사용량: %2 중 %1 (%3 %)<br />"
+
+#: ProcessModel.cpp:1471
+msgid "Memory usage: %1<br />"
+msgstr "메모리 사용량: %1<br />"
+
+#: ProcessModel.cpp:1474
+msgid "RSS Memory usage: %1 out of %2  (%3 %)"
+msgstr "RSS 메모리 사용량: %2 중 %1 (%3 %)"
+
+#: ProcessModel.cpp:1476
+msgid "RSS Memory usage: %1"
+msgstr "RSS 메모리 사용량: %1"
+
+#: ProcessModel.cpp:1482
+msgid ""
+"Your system does not seem to have this information available to be read."
+msgstr "시스템에서 이 정보를 읽을 수 없습니다."
+
+#: ProcessModel.cpp:1486
+msgid "Shared library memory usage: %1 out of %2  (%3 %)"
+msgstr "공유 라이브러리 메모리 사용량: %2 중 %1 (%3 %)"
+
+#: ProcessModel.cpp:1488
+msgid "Shared library memory usage: %1"
+msgstr "공유 라이브러리 메모리 사용량: %1"
+
+#: ProcessModel.cpp:1496
+msgid ""
+"Characters read: %1 (%2 KiB/s)<br>Characters written: %3 (%4 KiB/s)<br>Read "
+"syscalls: %5 (%6 s⁻¹)<br>Write syscalls: %7 (%8 s⁻¹)<br>Actual bytes read: "
+"%9 (%10 KiB/s)<br>Actual bytes written: %11 (%12 KiB/s)"
+msgstr ""
+"읽은 글자: %1 (%2 KiB/s)<br>쓴 글자: %3 (%4 KiB/s)<br>읽기 시스템 호출: %5 "
+"(%6 s⁻¹)<br>쓰기 시스템 호출: %7 (%8 s⁻¹)<br>실제 읽은 바이트: %9 (%10 KiB/"
+"s)<br>실제 쓴 바이트: %11 (%12 KiB/s)"
+
+#: ProcessModel.cpp:1786
+msgctxt "process heading"
+msgid "Name"
+msgstr "이름"
+
+#: ProcessModel.cpp:1787
+msgctxt "process heading"
+msgid "Username"
+msgstr "사용자 이름"
+
+#: ProcessModel.cpp:1788
+msgctxt "process heading"
+msgid "PID"
+msgstr "PID"
+
+#: ProcessModel.cpp:1789
+msgctxt "process heading"
+msgid "TTY"
+msgstr "TTY"
+
+#: ProcessModel.cpp:1790
+msgctxt "process heading"
+msgid "Niceness"
+msgstr "Nice 값"
+
+#: ProcessModel.cpp:1792
+#, no-c-format
+msgctxt "process heading"
+msgid "CPU %"
+msgstr "CPU %"
+
+#: ProcessModel.cpp:1793
+msgctxt "process heading"
+msgid "CPU Time"
+msgstr "CPU 시간"
+
+#: ProcessModel.cpp:1794
+msgctxt "process heading"
+msgid "IO Read"
+msgstr "IO 읽기"
+
+#: ProcessModel.cpp:1795
+msgctxt "process heading"
+msgid "IO Write"
+msgstr "IO 쓰기"
+
+#: ProcessModel.cpp:1796
+msgctxt "process heading"
+msgid "Virtual Size"
+msgstr "가상 크기"
+
+#: ProcessModel.cpp:1797
+msgctxt "process heading"
+msgid "Memory"
+msgstr "메모리"
+
+#: ProcessModel.cpp:1798
+msgctxt "process heading"
+msgid "Shared Mem"
+msgstr "공유 메모리"
+
+#: ProcessModel.cpp:1799
+msgctxt "process heading"
+msgid "Command"
+msgstr "명령"
+
+#: ProcessModel.cpp:1801
+msgctxt "process heading"
+msgid "X11 Memory"
+msgstr "X11 메모리"
+
+#: ProcessModel.cpp:1802
+msgctxt "process heading"
+msgid "Window Title"
+msgstr "창 제목"
+
+#: ProcessModel.cpp:1921
+msgid "%1%"
+msgstr "%1%"
+
+#: ReniceDlg.cpp:39
+msgid "Set Priority"
+msgstr "우선 순위 설정"
+
+#: ReniceDlg.cpp:57
+msgctxt "Scheduler"
+msgid "Interactive"
+msgstr "인터랙티브"
 
 #: ksysguardprocesslist.cpp:155 ksysguardprocesslist.cpp:395
 msgid "Set Priority..."
@@ -187,7 +841,7 @@ msgid "Show Tooltips"
 msgstr "풍선 도움말 보이기"
 
 #: ksysguardprocesslist.cpp:1012
-msgid "You do not have the permission to crenice the process."
+msgid "You do not have the permission to renice the process."
 msgstr ""
 
 #: ksysguardprocesslist.cpp:1015
@@ -251,659 +905,14 @@ msgstr[0] "프로세스 %1개 강제로 죽이기"
 msgid "Kill"
 msgstr "죽이기"
 
-#: ProcessModel.cpp:62
-msgid "%1 K"
-msgstr "%1 K"
-
-#: ProcessModel.cpp:63
-msgid "%1 M"
-msgstr "%1 M"
-
-#: ProcessModel.cpp:64
-msgid "%1 G"
-msgstr "%1 G"
-
-#: ProcessModel.cpp:65
-msgid "%1 T"
-msgstr "%1 T"
-
-#: ProcessModel.cpp:66
-msgid "%1 P"
-msgstr "%1 P"
-
-#: ProcessModel.cpp:590
-msgid "- Process is doing some work."
-msgstr "- 프로세스가 작업 중입니다."
-
-#: ProcessModel.cpp:592
-msgid "- Process is waiting for something to happen."
-msgstr "- 프로세스가 무언가가 일어나기를 기다리고 있습니다."
-
-#: ProcessModel.cpp:594
-msgid ""
-"- Process has been stopped. It will not respond to user input at the moment."
-msgstr " - 프로세스가 중지되었습니다. 사용자 입력에 반응하지 않을 것입니다."
-
-#: ProcessModel.cpp:596
-msgid ""
-"- Process has finished and is now dead, but the parent process has not "
-"cleaned up."
-msgstr ""
-" - 프로세스가 끝났고 이제 죽었습니다. 그러나 부모 프로세스가 정리되지 않았습"
-"니다."
-
-#: ProcessModel.cpp:945
-msgid "The process name."
-msgstr "프로세스 이름입니다."
-
-#: ProcessModel.cpp:947
-msgid "The user who owns this process."
-msgstr "프로세스를 소유한 사용자입니다."
-
-#: ProcessModel.cpp:949
-msgid "The controlling terminal on which this process is running."
-msgstr "프로세스가 실행 중인 제어 터미널입니다."
-
-#: ProcessModel.cpp:951
-msgid ""
-"The priority with which this process is being run. For the normal scheduler, "
-"this ranges from 19 (very nice, least priority) to -19 (top priority)."
-msgstr ""
-"프로세스가 실행 중인 우선 순위입니다. 일반적인 스케줄러를 사용하면 가능한 범"
-"위는 19(최저 우선 순위)에서 -19(최고 우선 순위)입니다."
-
-#: ProcessModel.cpp:954
-msgid "The current CPU usage of the process."
-msgstr "현재 프로세스의 CPU 사용량입니다."
-
-#: ProcessModel.cpp:959
-msgid ""
-"The current total CPU usage of the process, divided by the %1 processor core "
-"in the machine."
-msgid_plural ""
-"The current total CPU usage of the process, divided by the %1 processor "
-"cores in the machine."
-msgstr[0] ""
-"현재 프로세스의 총 CPU 사용량을 시스템에 있는 CPU 코어 개수 %1개로 나눈 값입"
-"니다."
-
-#: ProcessModel.cpp:961
-msgid "The current total CPU usage of the process."
-msgstr "현재 프로세스의 CPU 사용량입니다."
-
-#: ProcessModel.cpp:963
-msgid ""
-"<qt>The total user and system time that this process has been running for, "
-"displayed as minutes:seconds."
-msgstr ""
-"<qt>이 프로세스가 실행된 총 사용자 및 시스템 시간의 합이며, 분:초 단위로 표시"
-"됩니다."
-
-#: ProcessModel.cpp:965
-msgid ""
-"<qt>This is the amount of virtual memory space that the process is using, "
-"included shared libraries, graphics memory, files on disk, and so on. This "
-"number is almost meaningless.</qt>"
-msgstr ""
-"<qt>공유 라이브러리, 그래픽 메모리, 디스크의 파일 등을 포함하는 프로세스가 사"
-"용하고 있는 가상 메모리의 크기입니다. 대개 이 숫자는 의미가 없습니다.</qt>"
-
-#: ProcessModel.cpp:967
-msgid ""
-"<qt>This is the amount of real physical memory that this process is using by "
-"itself, and approximates the Private memory usage of the process.<br>It does "
-"not include any swapped out memory, nor the code size of its shared "
-"libraries.<br>This is often the most useful figure to judge the memory use "
-"of a program.  See What's This for more information.</qt>"
-msgstr ""
-"<qt>프로세스 자신이 사용하고 있는 실제 물리적 메모리의 크기입니다. 프로세스에"
-"서 독점적으로 사용하는 메모리 크기와 거의 일치합니다.<br>이 크기는 스왑 영역"
-"으로 전환된 메모리나 공유 라이브러리 등을 포함하지 않습니다.<br>프로그램의 메"
-"모리 사용량을 알아보는 데 사용됩니다. 자세한 정보는 '이것에 대한 설명'을 참조"
-"하십시오.</qt>"
-
-#: ProcessModel.cpp:969
-msgid ""
-"<qt>This is approximately the amount of real physical memory that this "
-"process's shared libraries are using.<br>This memory is shared among all "
-"processes that use this library.</qt>"
-msgstr ""
-"<qt>프로세스의 공유 라이브러리가 사용하는 실제 물리적 메모리의 크기와 개략적"
-"으로 일치합니다. <br>이 메모리는 이 라이브러리를 사용하는 모든 프로세스가 공"
-"유합니다.</qt>"
-
-#: ProcessModel.cpp:971
-msgid "<qt>The command with which this process was launched.</qt>"
-msgstr "<qt>이 프로세스가 실행된 명령입니다.</qt>"
-
-#: ProcessModel.cpp:973
-msgid "<qt>The amount of pixmap memory that this process is using.</qt>"
-msgstr "<qt>이 프로세스가 사용 중인 픽스맵 메모리 크기입니다.</qt>"
-
-#: ProcessModel.cpp:975
-msgid "<qt>The title of any windows that this process is showing.</qt>"
-msgstr "<qt>이 프로세스가 보여 주는 임의의 창 제목입니다.</qt>"
-
-#: ProcessModel.cpp:977
-msgid "The unique Process ID that identifies this process."
-msgstr "이 프로세스를 구분하는 유일한 프로세스 ID입니다."
-
-#: ProcessModel.cpp:979
-msgid "The number of bytes read.  See What's This for more information."
-msgstr "읽은 바이트 수입니다. 자세한 정보는 '이것에 대한 설명'을 참조하십시오."
-
-#: ProcessModel.cpp:981
-msgid "The number of bytes written.  See What's This for more information."
-msgstr "쓴 바이트 수입니다. 자세한 정보는 '이것에 대한 설명'을 참조하십시오."
-
-#: ProcessModel.cpp:990
-msgid ""
-"<qt><i>Technical information: </i>The kernel process name is a maximum of 8 "
-"characters long, so the full command is examined.  If the first word in the "
-"full command line starts with the process name, the first word of the "
-"command line is shown, otherwise the process name is used."
-msgstr ""
-"<qt><i>기술 정보:</i> 커널 프로세스 이름은 최대 8글자까지이므로 전체 명령을 "
-"시험합니다. 전체 명령줄의 첫 단어가 프로세스 이름과 일치한다면 명령줄의 첫 단"
-"어가 표시되고, 그렇지 않으면 프로세스 이름이 사용됩니다."
-
-#: ProcessModel.cpp:992
-msgid ""
-"<qt>The user who owns this process.  If the effective, setuid etc user is "
-"different, the user who owns the process will be shown, followed by the "
-"effective user.  The ToolTip contains the full information.  "
-"<p><table><tr><td>Login Name/Group</td><td>The username of the Real User/"
-"Group who created this process</td></tr><tr><td>Effective User/Group</"
-"td><td>The process is running with privileges of the Effective User/Group.  "
-"This is shown if different from the real user.</td></tr><tr><td>Setuid User/"
-"Group</td><td>The saved username of the binary.  The process can escalate "
-"its Effective User/Group to the Setuid User/Group.</td></tr><tr><td>File "
-"System User/Group</td><td>Accesses to the filesystem are checked with the "
-"File System User/Group.  This is a Linux specific call. See setfsuid(2) for "
-"more information.</td></tr></table>"
-msgstr ""
-"<qt>현재 프로세스를 소유한 사용자입니다. setuid 등으로 효력이 있는 사용자가 "
-"바뀌었으면 실제 프로세스를 소유하는 사용자와 효력이 있는 사용자가 같이 표시됩"
-"니다. 풍선 도움말에는 전체 정보가 표시됩니다.<p><table><tr><td>로그인 이름/그"
-"룹</td><td>프로세스를 생성한 실제 사용자의 이름과 그룹</td></tr><tr><td>유효"
-"한 사용자/그룹</td><td>이 프로세스는 다음 사용자/그룹의 권한으로 실행됩니다. "
-"실제 사용자와 다른 경우 표시됩니다.</td></tr><tr><td>setuid 사용자/그룹</"
-"td><td>실행 파일에 저장된 사용자 이름입니다. 이 프로세스는 setuid로 지정한 사"
-"용자/그룹의 권한으로 상승될 수 있습니다.</td></tr><tr><td>파일 시스템 사용자/"
-"그룹</td><td>파일 시스템에 접근하는 사용자/그룹입니다. 리눅스에만 있는 시스"
-"템 호출로, setfsuid(2)를 참고하십시오.</td></tr></table>"
-
-#: ProcessModel.cpp:1002
-msgid ""
-"<qt>This is the size of allocated address space - not memory, but address "
-"space. This value in practice means next to nothing. When a process requests "
-"a large memory block from the system but uses only a small part of it, the "
-"real usage will be low, VIRT will be high. <p><i>Technical information: </"
-"i>This is VmSize in proc/*/status and VIRT in top."
-msgstr ""
-"<qt>할당된 주소 공간의 크기입니다: 메모리가 아닌 주소 공간입니다. 실제로 이 "
-"값의 의미는 크지 않습니다. 프로세스가 큰 메모리 공간을 요청하고 시스템에서는 "
-"조금만 사용한다면, 실제 사용량은 낮고 VIRT 값은 클 것입니다.<p><i>기술 정보:"
-"</i>/proc/*/status의 VmSize, top의 VIRT입니다."
-
-#: ProcessModel.cpp:1004
-msgid ""
-"<qt><i>Technical information: </i>This is an approximation of the Private "
-"memory usage, calculated as VmRSS - Shared, from /proc/*/statm.  This tends "
-"to underestimate the true Private memory usage of a process (by not "
-"including i/o backed memory pages), but is the best estimation that is fast "
-"to determine.  This is sometimes known as URSS (Unique Resident Set Size). "
-"For an individual process, see \"Detailed  Memory Information\" for a more "
-"accurate, but slower, calculation of the true Private memory usage."
-msgstr ""
-"<qt><i>기술 정보:</i> 이 값은 독점 메모리 사용량의 어림값이며, /proc/*/statm"
-"의 VmRSS - Shared로 계산됩니다. I/O로 인한 메모리 페이지를 포함하지 않기 때문"
-"에 프로세스의 독점 메모리 사용량을 실제보다 더 작게 계산할 수도 있지만, 가장 "
-"빠르게 추측할 수 있습니다. 이는 때때로 URSS(Unique Resident Set Size)라고 불"
-"립니다. 개별 프로세스에 대한 값을 보려면 \"자세한 메모리 정보\"를 누르십시"
-"오. 독점 메모리 사용량을 더 정확하지만 느리게 계산합니다."
-
-#: ProcessModel.cpp:1006
-msgid "The CPU usage of a process and all of its threads."
-msgstr "현재 프로세스와 모든 스레드의 CPU 사용량입니다."
-
-#: ProcessModel.cpp:1008
-msgid ""
-"<qt>The total system and user time that a process and all of its threads "
-"have been running on the CPU for. This can be greater than the wall clock "
-"time if the process has been across multiple CPU cores."
-msgstr ""
-"<qt>현재 CPU에서 실행된 프로세스 및 모든 연관된 스레드의 총 시스템 및 사용자 "
-"시간입니다. 만약 프로세스가 여러 CPU 코어로 나뉘어 실행되었으면 wall 시간보"
-"다 더 클 수도 있습니다."
-
-#: ProcessModel.cpp:1010
-msgid ""
-"<qt><i>Technical information: </i>This is an approximation of the Shared "
-"memory, called SHR in top.  It is the number of pages that are backed by a "
-"file (see kernel Documentation/filesystems/proc.txt).  For an individual "
-"process, see \"Detailed Memory Information\" for a more accurate, but "
-"slower, calculation of the true Shared memory usage."
-msgstr ""
-"<qt><i>기술 정보:</i> top에서 SHR로 불리는 공유 메모리입니다. 파일 기반 페이"
-"지 개수입니다. (커널 문서의 Documentation/filesystems/proc.txt를 참고하십시"
-"오) 개별 프로세스에 대한 값을 보려면 \"자세한 메모리 정보\"를 누르십시오. 공"
-"유 메모리 사용량을 더 정확하지만 느리게 계산합니다."
-
-#: ProcessModel.cpp:1012
-msgid "<qt><i>Technical information: </i>This is from /proc/*/cmdline"
-msgstr "<qt><i>기술 정보:</i> /proc/*/cmdline의 정보입니다"
-
-#: ProcessModel.cpp:1014
-msgid ""
-"<qt><i>Technical information: </i>This is the amount of memory used by the "
-"Xorg process for images for this process.  This is memory used in addition "
-"to Memory and Shared Memory.<br><i>Technical information: </i>This only "
-"counts the pixmap memory, and does not include resource memory used by "
-"fonts, cursors, glyphsets etc.  See the <code>xrestop</code> program for a "
-"more detailed breakdown."
-msgstr ""
-"<qt><i>기술 정보:</i> Xorg 프로세스가 이 프로세스를 위해 사용하는 이미지 메모"
-"리의 양입니다. 프로세스의 독점 및 공유 메모리 이외에도 추가적으로 사용됩니다."
-"<br><i>기술 정보:</i> 이 사용량은 픽스맵 메모리만 계산하였습니다. 글꼴, 커"
-"서, 글리프 모음 등 자원 메모리는 계산되지 않았습니다. 자세한 정보를 보려면 "
-"<code>xrestop</code> 프로그램을 사용하십시오."
-
-#: ProcessModel.cpp:1016
-msgid ""
-"<qt><i>Technical information: </i>For each X11 window, the X11 property "
-"_NET_WM_PID is used to map the window to a PID.  If a process' windows are "
-"not shown, then that application incorrectly is not setting _NET_WM_PID."
-msgstr ""
-"<qt><i>기술 정보:</i> 각각 X11 창에 대해서 _NET_WM_PID X11 속성은 창의 프로세"
-"스 ID입니다. 프로세스의 창이 없다면 프로그램에서 _NET_WM_PID를 올바르게 설정"
-"하지 않았습니다."
-
-#: ProcessModel.cpp:1018
-msgid ""
-"<qt><i>Technical information: </i>This is the Process ID.  A multi-threaded "
-"application is treated a single process, with all threads sharing the same "
-"PID.  The CPU usage etc will be the total, accumulated, CPU usage of all the "
-"threads."
-msgstr ""
-"<qt><i>기술 정보:</i> 프로세스 ID입니다. 다중 스레드 프로그램은 같은 PID를 가"
-"지는 하나의 프로세스로 취급됩니다. CPU 사용량 등은 모든 스레드의 값을 합쳐셔 "
-"표시됩니다."
-
-#: ProcessModel.cpp:1021
-msgid ""
-"<qt>This column shows the IO statistics for each process. The tooltip "
-"provides the following information:<br><table><tr><td>Characters Read</"
-"td><td>The number of bytes which this task has caused to be read from "
-"storage. This is simply the sum of bytes which this process passed to read() "
-"and pread(). It includes things like tty IO and it is unaffected by whether "
-"or not actual physical disk IO was required (the read might have been "
-"satisfied from pagecache).</td></tr><tr><td>Characters Written</td><td>The "
-"number of bytes which this task has caused, or shall cause to be written to "
-"disk. Similar caveats apply here as with Characters Read.</td></"
-"tr><tr><td>Read Syscalls</td><td>The number of read I/O operations, i.e. "
-"syscalls like read() and pread().</td></tr><tr><td>Write Syscalls</"
-"td><td>The number of write I/O operations, i.e. syscalls like write() and "
-"pwrite().</td></tr><tr><td>Actual Bytes Read</td><td>The number of bytes "
-"which this process really did cause to be fetched from the storage layer. "
-"Done at the submit_bio() level, so it is accurate for block-backed "
-"filesystems. This may not give sensible values for NFS and CIFS filesystems."
-"</td></tr><tr><td>Actual Bytes Written</td><td>Attempt to count the number "
-"of bytes which this process caused to be sent to the storage layer. This is "
-"done at page-dirtying time.</td></table><p>The number in brackets shows the "
-"rate at which each value is changing, determined from taking the difference "
-"between the previous value and the new value, and dividing by the update "
-"interval.<p><i>Technical information: </i>This data is collected from /proc/"
-"*/io and is documented further in Documentation/accounting and Documentation/"
-"filesystems/proc.txt in the kernel source."
-msgstr ""
-"<qt>이 열은 각각 프로세스의 IO 통계를 표시합니다. 풍선 도움말은 다음 정보를 "
-"포함합니다:<br><table><tr><td>읽은 글자 수</td><td>이 작업이 실행되는 동안 저"
-"장 장치에서 읽어온 바이트 수를 표시합니다. read() 및 pread()를 통해 읽어 온 "
-"바이트 수의 합입니다. TTY 입출력과 같은 실제 디스크에 접근하지 않는 데이터도 "
-"포함되며, 캐시에 저장되어서 실제 디스크에 접근했는지 여부와 상관없이 증가합니"
-"다.</td></tr><tr><td>쓴 글자 수</td><td>이 작업이 디스크에 쓴 바이트 수 및 디"
-"스크에 쓰여질 바이트 수입니다. 읽은 글자 수와 같은 한계가 있습니다.</td></"
-"tr><tr><td>읽기 시스템 호출</td><td>read() 및 pread()와 같은 읽기 시스템 호출"
-"을 실행한 횟수입니다.</td></tr><tr><td>쓰기 시스템 호출</td><td>write()와 "
-"pwrite()와 같은 쓰기 시스템 호출을 실행한 횟수입니다.</td></tr><tr><td>실제 "
-"읽은 바이트 수</td><td>프로세스가 실제 저장 장치에 접근하여 데이터를 읽어 온 "
-"바이트 수입니다. submit_bio() 단계에서 결정되므로, 블록 기반 파일시스템에 대"
-"해서만 유효합니다. NFS 및 CIFS 파일 시스템에서 정확하지 않을 수도 있습니다.</"
-"td></tr><tr><td>실제 쓴 바이트 수</td><td>프로세스가 실제 저장 장치에 접근하"
-"여 데이터를 쓴 바이트 수입니다. 더러운 페이지를 처리하는 시간에 결정됩니다.</"
-"td></table><p>괄호 속에 써 있는 숫자는 이전 값과 현재 값의 차이를 업데이트 주"
-"기로 나눈 값의 변화량입니다.<p><i>기술 정보:</i> 이 데이터는 /proc/*/io에서 "
-"수집되며 커널 소스 트리의 Documentation/accounting 및 Documentation/"
-"filesystems/proc.txt 파일에 자세한 정보가 있습니다."
-
-#: ProcessModel.cpp:1108
-msgid "Login Name: %1<br/>"
-msgstr "로그인 이름: %1<br />"
-
-#: ProcessModel.cpp:1112
-msgid "This user is not recognized for some reason."
-msgstr "몇몇 이유로 이 사용자는 인식되지 않습니다."
-
-#: ProcessModel.cpp:1115
-msgid "<b>%1</b><br/>"
-msgstr "<b>%1</b><br />"
-
-#: ProcessModel.cpp:1116
-msgid "Login Name: %1 (uid: %2)<br/>"
-msgstr "로그인 이름: %1 (UID: %2)<br />"
-
-#: ProcessModel.cpp:1118
-msgid "  Room Number: %1<br/>"
-msgstr "  방 번호: %1<br />"
-
-#: ProcessModel.cpp:1120
-msgid "  Work Phone: %1<br/>"
-msgstr "  직장 전화번호: %1<br />"
-
-#: ProcessModel.cpp:1127
-msgid "Effective User: %1<br/>"
-msgstr "영향받는 사용자: %1<br />"
-
-#: ProcessModel.cpp:1129
-msgid "Setuid User: %1<br/>"
-msgstr "SetUID 사용자: %1<br />"
-
-#: ProcessModel.cpp:1131
-msgid "File System User: %1<br/>"
-msgstr "파일 시스템 사용자: %1<br />"
-
-#: ProcessModel.cpp:1135
-msgid "Group: %1"
-msgstr "그룹: %1"
-
-#: ProcessModel.cpp:1140
-msgid "<br/>Effective Group: %1"
-msgstr "<br />영향받는 그룹: %1"
-
-#: ProcessModel.cpp:1142
-msgid "<br/>Setuid Group: %1"
-msgstr "<br />SetUID 그룹: %1"
-
-#: ProcessModel.cpp:1144
-msgid "<br/>File System Group: %1"
-msgstr "<br />파일 시스템 그룹: %1"
-
-#: ProcessModel.cpp:1151
-msgctxt "Short description of a process. PID, name, user"
-msgid "<numid>%1</numid>: %2, owned by user %3"
-msgstr "<numid>%1</numid>: %2, %3이(가) 소유함"
-
-#: ProcessModel.cpp:1158
-msgid "%1 (gid: <numid>%2</numid>)"
-msgstr "%1 (gid: <numid>%2</numid>)"
-
-#: ProcessModel.cpp:1179
-msgid "%1 (uid: %2)"
-msgstr "%1 (uid: %2)"
-
-#: ProcessModel.cpp:1217
-msgctxt "scheduler"
-msgid "Idle"
-msgstr "휴식"
-
-#: ProcessModel.cpp:1219
-msgctxt "scheduler"
-msgid "(Batch) %1"
-msgstr "(배치) %1"
-
-#: ProcessModel.cpp:1221
-msgctxt "Round robin scheduler"
-msgid "RR %1"
-msgstr "RR %1"
-
-#: ProcessModel.cpp:1224
-msgctxt "Real Time scheduler"
-msgid "RT"
-msgstr "RT"
-
-#: ProcessModel.cpp:1226
-msgctxt "First in first out scheduler"
-msgid "FIFO %1"
-msgstr "FIFO %1"
-
-#: ProcessModel.cpp:1228
-msgctxt "scheduler"
-msgid "(IA) %1"
-msgstr "(IA) %1"
-
-#: ProcessModel.cpp:1285 ProcessModel.cpp:1293 ProcessModel.cpp:1311
-#: ProcessModel.cpp:1319
-msgid "%1/s"
-msgstr "%1/초"
-
-#: ProcessModel.cpp:1352
-msgctxt "tooltip. name,pid "
-msgid "This process is being debugged by %1 (<numid>%2</numid>)"
-msgstr "이 프로세스는 %1이(가) 디버그하고 있습니다. (<numid>%2</numid>)"
-
-#: ProcessModel.cpp:1373
-msgid ""
-"<b>Init</b> is the parent of all other processes and cannot be killed.<br/>"
-msgstr "<b>Init</b>는 다른 모든 프로세스의 부모이고 죽일 수 없습니다.<br/>"
-
-#: ProcessModel.cpp:1375
-msgid ""
-"<b>KThreadd</b> manages kernel threads. The children processes run in the "
-"kernel, controlling hard disk access, etc.<br/>"
-msgstr ""
-"<b>KThreadd</b>는 커널 스레드를 관리합니다. 커널에서 실행되는 자식 프로세스"
-"는 하드 디스크 제어 등을 관리합니다.<br/>"
-
-#: ProcessModel.cpp:1377
-msgctxt "name column tooltip. first item is the name"
-msgid "<b>%1</b><br />Process ID: <numid>%2</numid>"
-msgstr "<b>%1</b><br />프로세스 ID: <numid>%2</numid><br />"
-
-#: ProcessModel.cpp:1382
-msgctxt "name column tooltip. first item is the name"
-msgid ""
-"<b>%1</b><br />Process ID: <numid>%2</numid><br />Parent: %3<br />Parent's "
-"ID: <numid>%4</numid>"
-msgstr ""
-"<b>%1</b><br />프로세스 ID: <numid>%2</numid><br />부모: %3<br />부모 ID: "
-"<numid>%4</numid>"
-
-#: ProcessModel.cpp:1384
-msgctxt "name column tooltip. first item is the name"
-msgid ""
-"<b>%1</b><br />Process ID: <numid>%2</numid><br />Parent's ID: <numid>%3</"
-"numid>"
-msgstr ""
-"<b>%1</b><br />프로세스 ID: <numid>%2</numid><br />부모 ID: <numid>%3</numid>"
-
-#: ProcessModel.cpp:1388 ProcessModel.cpp:1447
-msgid "<br/>Number of threads: %1"
-msgstr "<br/>스레드 개수: %1"
-
-#: ProcessModel.cpp:1390
-msgid "<br/>Command: %1"
-msgstr "<br />명령: %1"
-
-#: ProcessModel.cpp:1393
-msgid "<br />Running on: %1"
-msgstr "<br />다음에서 실행 중: %1"
-
-#: ProcessModel.cpp:1401
-msgid "<qt>This process was run with the following command:<br />%1"
-msgstr "<qt>이 프로세스는 다음 명령으로 실행되었습니다:<br />%1"
-
-#: ProcessModel.cpp:1403
-msgid "<br /><br />Running on: %1"
-msgstr "<br /><br />다음에서 실행 중: %1"
-
-#: ProcessModel.cpp:1418
-msgid "Nice level: %1 (%2)"
-msgstr "Nice 단계: %1 (%2)"
-
-#: ProcessModel.cpp:1422
-msgid "This is a real time process.<br>Scheduler priority: %1"
-msgstr "실시간 프로세스입니다.<br>스케줄러 우선 순위: %1"
-
-#: ProcessModel.cpp:1428
-msgid "<br/>Scheduler: %1"
-msgstr "<br />스케줄러: %1"
-
-#: ProcessModel.cpp:1436
-msgid ""
-"<qt><p style='white-space:pre'>Process status: %1 %2<br />User CPU usage: "
-"%3%<br />System CPU usage: %4%"
-msgstr ""
-"<qt><p style='white-space:pre'>프로세스 상태: %1 %2<br />사용자 CPU 사용량: "
-"%3%<br />시스템 CPU 사용량: %4%"
-
-#: ProcessModel.cpp:1449
-msgid ""
-"<br />Number of children: %1<br />Total User CPU usage: %2%<br />Total "
-"System CPU usage: %3%<br />Total CPU usage: %4%"
-msgstr ""
-"<br />자식 수: %1<br />총 사용자 CPU 사용량: %2%<br />총 시스템 CPU 사용량: "
-"%3%<br />총 CPU 사용량: %4%"
-
-#: ProcessModel.cpp:1458
-msgid "<br /><br />CPU time spent running as user: %1 seconds"
-msgstr "<br /><br />사용자로 실행한 CPU 시간: %1초"
-
-#: ProcessModel.cpp:1462
-msgid "<br />CPU time spent running in kernel: %1 seconds"
-msgstr "<br />커널에서 사용한 CPU 시간: %1초"
-
-#: ProcessModel.cpp:1466
-msgid "<br />Nice level: %1 (%2)"
-msgstr "<br />Nice 단계: %1 (%2)"
-
-#: ProcessModel.cpp:1480
-msgid "Memory usage: %1 out of %2  (%3 %)<br />"
-msgstr "메모리 사용량: %2 중 %1 (%3 %)<br />"
-
-#: ProcessModel.cpp:1482
-msgid "Memory usage: %1<br />"
-msgstr "메모리 사용량: %1<br />"
-
-#: ProcessModel.cpp:1485
-msgid "RSS Memory usage: %1 out of %2  (%3 %)"
-msgstr "RSS 메모리 사용량: %2 중 %1 (%3 %)"
-
-#: ProcessModel.cpp:1487
-msgid "RSS Memory usage: %1"
-msgstr "RSS 메모리 사용량: %1"
-
-#: ProcessModel.cpp:1493
-msgid ""
-"Your system does not seem to have this information available to be read."
-msgstr "시스템에서 이 정보를 읽을 수 없습니다."
-
-#: ProcessModel.cpp:1497
-msgid "Shared library memory usage: %1 out of %2  (%3 %)"
-msgstr "공유 라이브러리 메모리 사용량: %2 중 %1 (%3 %)"
-
-#: ProcessModel.cpp:1499
-msgid "Shared library memory usage: %1"
-msgstr "공유 라이브러리 메모리 사용량: %1"
-
-#: ProcessModel.cpp:1507
-msgid ""
-"Characters read: %1 (%2 KiB/s)<br>Characters written: %3 (%4 KiB/s)<br>Read "
-"syscalls: %5 (%6 s⁻¹)<br>Write syscalls: %7 (%8 s⁻¹)<br>Actual bytes read: "
-"%9 (%10 KiB/s)<br>Actual bytes written: %11 (%12 KiB/s)"
-msgstr ""
-"읽은 글자: %1 (%2 KiB/s)<br>쓴 글자: %3 (%4 KiB/s)<br>읽기 시스템 호출: %5 "
-"(%6 s⁻¹)<br>쓰기 시스템 호출: %7 (%8 s⁻¹)<br>실제 읽은 바이트: %9 (%10 KiB/"
-"s)<br>실제 쓴 바이트: %11 (%12 KiB/s)"
-
-#: ProcessModel.cpp:1797
-msgctxt "process heading"
-msgid "Name"
-msgstr "이름"
-
-#: ProcessModel.cpp:1798
-msgctxt "process heading"
-msgid "Username"
-msgstr "사용자 이름"
-
-#: ProcessModel.cpp:1799
-msgctxt "process heading"
-msgid "PID"
-msgstr "PID"
-
-#: ProcessModel.cpp:1800
-msgctxt "process heading"
-msgid "TTY"
-msgstr "TTY"
-
-#: ProcessModel.cpp:1801
-msgctxt "process heading"
-msgid "Niceness"
-msgstr "Nice 값"
-
-#: ProcessModel.cpp:1803
-#, no-c-format
-msgctxt "process heading"
-msgid "CPU %"
-msgstr "CPU %"
-
-#: ProcessModel.cpp:1804
-msgctxt "process heading"
-msgid "CPU Time"
-msgstr "CPU 시간"
-
-#: ProcessModel.cpp:1805
-msgctxt "process heading"
-msgid "IO Read"
-msgstr "IO 읽기"
-
-#: ProcessModel.cpp:1806
-msgctxt "process heading"
-msgid "IO Write"
-msgstr "IO 쓰기"
-
-#: ProcessModel.cpp:1807
-msgctxt "process heading"
-msgid "Virtual Size"
-msgstr "가상 크기"
-
-#: ProcessModel.cpp:1808
-msgctxt "process heading"
-msgid "Memory"
-msgstr "메모리"
-
-#: ProcessModel.cpp:1809
-msgctxt "process heading"
-msgid "Shared Mem"
-msgstr "공유 메모리"
-
-#: ProcessModel.cpp:1810
-msgctxt "process heading"
-msgid "Command"
-msgstr "명령"
-
-#: ProcessModel.cpp:1812
-msgctxt "process heading"
-msgid "X11 Memory"
-msgstr "X11 메모리"
-
-#: ProcessModel.cpp:1813
-msgctxt "process heading"
-msgid "Window Title"
-msgstr "창 제목"
-
-#: ProcessModel.cpp:1932
-msgid "%1%"
-msgstr "%1%"
-
 #. i18n: file: ProcessWidgetUI.ui:39
 #. i18n: ectx: property (whatsThis), widget (QPushButton, btnKillProcess)
 #: rc.cpp:3
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -921,8 +930,8 @@ msgid ""
 msgstr ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1087,8 +1096,8 @@ msgstr "CPU 스케줄러"
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioNormal)
 #: rc.cpp:68
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1096,8 +1105,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The standard time-sharing "
 "scheduler for processes without special requirements.</p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1109,8 +1118,8 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioNormal)
 #: rc.cpp:74
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1130,8 +1139,8 @@ msgid ""
 "process is ready to run, but denied to run by the scheduler. This ensures "
 "fair progress among all Normal processes.</span></p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1159,8 +1168,8 @@ msgstr "일반"
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioBatch)
 #: rc.cpp:84
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1169,8 +1178,8 @@ msgid ""
 "interactive processes.  Process is mildly disfavored in scheduling decisions."
 "</p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1183,8 +1192,8 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioBatch)
 #: rc.cpp:90
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1204,8 +1213,8 @@ msgid ""
 "policy without interactivity causing extra preemptions (between the "
 "workload's tasks).</span></p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1233,8 +1242,8 @@ msgstr "배치"
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioRR)
 #: rc.cpp:100
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1243,8 +1252,8 @@ msgid ""
 "runnable.  Higher priority than Normal or Batch.  Has Timeslicing.</p></"
 "body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1257,8 +1266,8 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioRR)
 #: rc.cpp:106
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1268,13 +1277,13 @@ msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Round Robin</span> is a simple enhancement of <span style=\" "
-"font-weight:600;\">FIFO</span>.  Everything described below for <span style="
-"\" font-weight:600;\">FIFO</span> also applies to <span style=\" font-"
+"font-weight:600;\">FIFO</span>.  Everything described below for <span "
+"style=\" font-weight:600;\">FIFO</span> also applies to <span style=\" font-"
 "weight:600;\">Round Robin</span>, except that each process is only allowed "
 "to run for a maximum time quantum.</p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1299,8 +1308,8 @@ msgstr "라운드 로빈"
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioFIFO)
 #: rc.cpp:116
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1309,8 +1318,8 @@ msgid ""
 "runnable.  Higher priority than Normal or Batch.  No timeslicing.</p></"
 "body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1323,8 +1332,8 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioFIFO)
 #: rc.cpp:122
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1338,8 +1347,8 @@ msgid ""
 "\">Normal</span> or <span style=\" font-weight:600;\">Batch</span> process.</"
 "p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1369,12 +1378,3 @@ msgstr "낮은 우선 순위"
 #: rc.cpp:135
 msgid "High Priority"
 msgstr "높은 우선 순위"
-
-#: ReniceDlg.cpp:39
-msgid "Set Priority"
-msgstr "우선 순위 설정"
-
-#: ReniceDlg.cpp:57
-msgctxt "Scheduler"
-msgid "Interactive"
-msgstr "인터랙티브"

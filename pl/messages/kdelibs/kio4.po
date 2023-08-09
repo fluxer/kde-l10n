@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio4\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2022-12-06 00:42+0200\n"
+"POT-Creation-Date: 2023-08-10 00:42+0300\n"
 "PO-Revision-Date: 2014-11-01 10:28+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -439,19 +439,19 @@ msgstr "Pojedyncza instancja"
 msgid "Run Until Finished"
 msgstr "Uruchomione do końca"
 
-#: metadata/kfilemetadata_ffmpeg.cpp:92 metadata/kfilemetadata_ffmpeg.cpp:133
-#: metadata/kfilemetadata_taglib.cpp:132 kio/kfilemetainfo.cpp:257
+#: metadata/kfilemetadata_ffmpeg.cpp:91 metadata/kfilemetadata_ffmpeg.cpp:143
+#: metadata/kfilemetadata_taglib.cpp:133 kio/kfilemetainfo.cpp:259
 msgctxt "kfilemetadata"
 msgid "%1 kb/s"
 msgstr ""
 
-#: metadata/kfilemetadata_taglib.cpp:141 kio/kfilemetainfo.cpp:258
+#: metadata/kfilemetadata_taglib.cpp:142 kio/kfilemetainfo.cpp:260
 msgctxt "kfilemetadata"
 msgid "%1 Hz"
 msgstr ""
 
-#: kio/kdirlister.cpp:390 kio/renamedialog.cpp:415 kio/krun.cpp:1064
-#: kio/paste.cpp:235
+#: kio/kdirlister.cpp:418 kio/renamedialog.cpp:415 kio/krun.cpp:1038
+#: kio/paste.cpp:229
 msgid ""
 "Malformed URL\n"
 "%1"
@@ -459,7 +459,7 @@ msgstr ""
 "Nieprawidłowy URL\n"
 "%1"
 
-#: kio/kdirlister.cpp:400
+#: kio/kdirlister.cpp:422
 msgid ""
 "URL cannot be listed\n"
 "%1"
@@ -589,6 +589,10 @@ msgstr "Nowszy element o nazwie '%1' już istnieje."
 msgid "Rename:"
 msgstr "Zmień nazwę:"
 
+#: kio/khttp.cpp:650
+msgid "User name or password is empty"
+msgstr ""
+
 #: kio/job.cpp:116
 msgctxt "@title job"
 msgid "Moving"
@@ -614,7 +618,8 @@ msgctxt "@title job"
 msgid "Creating directory"
 msgstr "Tworzenie katalogów"
 
-#: kio/job.cpp:131 kio/fileundomanager.cpp:120
+#: kio/job.cpp:131 kio/fileundomanager.cpp:120 kfile/kfiledialog.cpp:319
+#: kfile/kfiledialog.cpp:333
 msgid "Directory"
 msgstr "Katalog"
 
@@ -637,34 +642,24 @@ msgctxt "@title job"
 msgid "Transferring"
 msgstr "Przenoszenie"
 
-#: kio/job.cpp:154
-msgctxt "@title job"
-msgid "Mounting"
-msgstr "Montowanie"
-
-#: kio/job.cpp:155
-msgid "Device"
-msgstr "Urządzenie"
-
-#: kio/job.cpp:156 kio/job.cpp:162
-msgid "Mountpoint"
-msgstr "Punkt montowania"
-
-#: kio/job.cpp:161
-msgctxt "@title job"
-msgid "Unmounting"
-msgstr "Odmontowanie"
-
-#: kio/job.cpp:1823 kio/copyjob.cpp:1394 kio/copyjob.cpp:1976
-#: kio/global.cpp:638 kio/paste.cpp:86
+#: kio/job.cpp:1657 kio/copyjob.cpp:1354 kio/copyjob.cpp:1907
+#: kio/global.cpp:552 kio/paste.cpp:86
 msgid "File Already Exists"
 msgstr "Plik już istnieje"
 
-#: kio/copyjob.cpp:1071 kio/global.cpp:648
+#: kio/kautomount.cpp:87 kio/kautomount.cpp:102 kio/kautomount.cpp:108
+msgid "Could not mount device."
+msgstr ""
+
+#: kio/kautomount.cpp:170 kio/kautomount.cpp:185 kio/kautomount.cpp:191
+msgid "Could not unmount device."
+msgstr ""
+
+#: kio/copyjob.cpp:1040 kio/global.cpp:562
 msgid "Folder Already Exists"
 msgstr "Katalog już istnieje"
 
-#: kio/copyjob.cpp:1394 kio/copyjob.cpp:1976
+#: kio/copyjob.cpp:1354 kio/copyjob.cpp:1907
 msgid "Already Exists as Folder"
 msgstr "Istnieje już jako katalog"
 
@@ -681,7 +676,7 @@ msgstr "Dzi&ałania"
 msgid "&Open with %1"
 msgstr "&Otwórz za pomocą %1"
 
-#: kio/kfileitemactions.cpp:518 ../kfile/kfilewidget.cpp:1938
+#: kio/kfileitemactions.cpp:518 ../kfile/kfilewidget.cpp:1951
 msgid "&Open"
 msgstr "&Otwórz"
 
@@ -709,102 +704,95 @@ msgctxt "@item:inmenu Open With, %1 is application name"
 msgid "%1"
 msgstr "%1"
 
-#: kio/kdirmodel.cpp:976
+#: kio/kdirmodel.cpp:915
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Nazwa"
 
-#: kio/kdirmodel.cpp:978
+#: kio/kdirmodel.cpp:917
 msgctxt "@title:column"
 msgid "Size"
 msgstr "Rozmiar"
 
-#: kio/kdirmodel.cpp:980
+#: kio/kdirmodel.cpp:919
 msgctxt "@title:column"
 msgid "Date"
 msgstr "Data"
 
-#: kio/kdirmodel.cpp:982
+#: kio/kdirmodel.cpp:921
 msgctxt "@title:column"
 msgid "Permissions"
 msgstr "Prawa dostępu"
 
-#: kio/kdirmodel.cpp:984
+#: kio/kdirmodel.cpp:923
 msgctxt "@title:column"
 msgid "Owner"
 msgstr "Właściciel"
 
-#: kio/kdirmodel.cpp:986
+#: kio/kdirmodel.cpp:925
 msgctxt "@title:column"
 msgid "Group"
 msgstr "Grupa"
 
-#: kio/kdirmodel.cpp:988
+#: kio/kdirmodel.cpp:927
 msgctxt "@title:column"
 msgid "Type"
 msgstr "Rodzaj"
 
-#: kio/global.cpp:90
-msgid "1 day %2"
-msgid_plural "%1 days %2"
-msgstr[0] "%1 dzień %2"
-msgstr[1] "%1 dni %2"
-msgstr[2] "%1 dni %2"
-
-#: kio/global.cpp:99 kio/global.cpp:116
+#: kio/global.cpp:90 kio/global.cpp:107
 msgid "%1 Item"
 msgid_plural "%1 Items"
 msgstr[0] "%1 element"
 msgstr[1] "%1 elementy"
 msgstr[2] "%1 elementów"
 
-#: kio/global.cpp:103
+#: kio/global.cpp:94
 msgid "1 Folder"
 msgid_plural "%1 Folders"
 msgstr[0] "1 katalog"
 msgstr[1] "%1 katalogi"
 msgstr[2] "%1 katalogów"
 
-#: kio/global.cpp:104
+#: kio/global.cpp:95
 msgid "1 File"
 msgid_plural "%1 Files"
 msgstr[0] "%1 plik"
 msgstr[1] "%1 pliki"
 msgstr[2] "%1 plików"
 
-#: kio/global.cpp:107
+#: kio/global.cpp:98
 msgctxt "folders, files (size)"
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: kio/global.cpp:108
+#: kio/global.cpp:99
 msgctxt "folders, files"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: kio/global.cpp:110
+#: kio/global.cpp:101
 msgctxt "files (size)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kio/global.cpp:117
+#: kio/global.cpp:108
 msgctxt "items: folders, files (size)"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kio/global.cpp:148
+#: kio/global.cpp:139
 msgid "Could not read %1."
 msgstr "Nie można czytać %1."
 
-#: kio/global.cpp:151
+#: kio/global.cpp:142
 msgid "Could not write to %1."
 msgstr "Nie można pisać do %1."
 
-#: kio/global.cpp:154
+#: kio/global.cpp:145
 msgid "Could not start process %1."
 msgstr "Nie można uruchomić procesu %1."
 
-#: kio/global.cpp:157
+#: kio/global.cpp:148
 #, fuzzy
 msgid ""
 "Internal Error\n"
@@ -815,51 +803,43 @@ msgstr ""
 "Proszę zgłosić błąd na stronie http://bugs.kde.org\n"
 "%1"
 
-#: kio/global.cpp:160
+#: kio/global.cpp:151
 msgid "Malformed URL %1."
 msgstr "Błędny URL %1."
 
-#: kio/global.cpp:163
-msgid "The protocol %1 is not supported."
-msgstr "Protokół %1 nie jest obsługiwany."
-
-#: kio/global.cpp:166
-msgid "The protocol %1 is only a filter protocol."
-msgstr "Protokół %1 jest jedynie protokołem filtrującym."
-
-#: kio/global.cpp:173
+#: kio/global.cpp:158
 msgid "%1 is a folder, but a file was expected."
 msgstr "%1 jest katalogiem, a wymagany jest plik."
 
-#: kio/global.cpp:176
+#: kio/global.cpp:161
 msgid "%1 is a file, but a folder was expected."
 msgstr "%1 jest plikiem, a wymagany jest katalog."
 
-#: kio/global.cpp:179
+#: kio/global.cpp:164
 msgid "The file or folder %1 does not exist."
 msgstr "Plik lub katalog %1 nie istnieje."
 
-#: kio/global.cpp:182
+#: kio/global.cpp:167
 msgid "A file named %1 already exists."
 msgstr "Plik o nazwie %1 już istnieje."
 
-#: kio/global.cpp:185
+#: kio/global.cpp:170
 msgid "A folder named %1 already exists."
 msgstr "Katalog o nazwie %1 już istnieje."
 
-#: kio/global.cpp:188
+#: kio/global.cpp:173
 msgid "No hostname specified."
 msgstr "Nie podano serwera."
 
-#: kio/global.cpp:188
+#: kio/global.cpp:173
 msgid "Unknown host %1"
 msgstr "Nieznany serwer %1"
 
-#: kio/global.cpp:191
+#: kio/global.cpp:176
 msgid "Access denied to %1."
 msgstr "Brak dostępu do %1."
 
-#: kio/global.cpp:194
+#: kio/global.cpp:179
 msgid ""
 "Access denied.\n"
 "Could not write to %1."
@@ -867,119 +847,83 @@ msgstr ""
 "Brak dostępu.\n"
 "Nie można pisać do %1."
 
-#: kio/global.cpp:197
+#: kio/global.cpp:182
 msgid "Could not enter folder %1."
 msgstr "Nie można wejść do katalogu %1."
 
-#: kio/global.cpp:200
-msgid "The protocol %1 does not implement a folder service."
-msgstr "Protokół %1 nie obsługuje katalogów."
-
-#: kio/global.cpp:203
+#: kio/global.cpp:185
 msgid "Found a cyclic link in %1."
 msgstr "Wykryto zapętlony odnośnik w %1."
 
-#: kio/global.cpp:209
-msgid "Found a cyclic link while copying %1."
-msgstr "Podczas kopiowania znaleziono zapętlony odnośnik %1."
-
-#: kio/global.cpp:212
-msgid "Could not create socket for accessing %1."
-msgstr "Nie można utworzyć gniazdka z dostępem do %1."
-
-#: kio/global.cpp:215
+#: kio/global.cpp:191
 msgid "Could not connect to host %1."
 msgstr "Nie można połączyć się z serwerem %1."
 
-#: kio/global.cpp:218
+#: kio/global.cpp:194
 msgid "Connection to host %1 is broken."
 msgstr "Połączenie z serwerem %1 zostało przerwane."
 
-#: kio/global.cpp:221
-msgid "The protocol %1 is not a filter protocol."
-msgstr "Protokół %1 nie jest protokołem filtrującym."
-
-#: kio/global.cpp:224
-msgid ""
-"Could not mount device.\n"
-"The reported error was:\n"
-"%1"
-msgstr ""
-"Nie można zamontować urządzenia.\n"
-"Otrzymany komunikat błędu:\n"
-"%1"
-
-#: kio/global.cpp:227
-msgid ""
-"Could not unmount device.\n"
-"The reported error was:\n"
-"%1"
-msgstr ""
-"Nie można odmontować urządzenia.\n"
-"Otrzymany komunikat błędu:\n"
-"%1"
-
-#: kio/global.cpp:230
+#: kio/global.cpp:197
 msgid "Could not read file %1."
 msgstr "Nie można czytać pliku %1."
 
-#: kio/global.cpp:233
+#: kio/global.cpp:200
 msgid "Could not write to file %1."
 msgstr "Nie można pisać do pliku %1."
 
-#: kio/global.cpp:236
+#: kio/global.cpp:203
 msgid "Could not bind %1."
 msgstr "Nie można dołączyć %1."
 
-#: kio/global.cpp:239
+#: kio/global.cpp:206
 msgid "Could not listen %1."
 msgstr "Nie można nasłuchiwać z %1."
 
-#: kio/global.cpp:242
+#: kio/global.cpp:209
 msgid "Could not accept %1."
 msgstr "Nie można zaakceptować %1."
 
-#: kio/global.cpp:248
+#: kio/global.cpp:215
 msgid "Could not access %1."
 msgstr "Brak dostępu do %1."
 
-#: kio/global.cpp:251
+#: kio/global.cpp:218
 msgid "Could not terminate listing %1."
 msgstr "Nie można zakończyć nasłuchu z %1."
 
-#: kio/global.cpp:254
+#: kio/global.cpp:221
 msgid "Could not make folder %1."
 msgstr "Nie można utworzyć katalogu %1."
 
-#: kio/global.cpp:257
+#: kio/global.cpp:224
 msgid "Could not remove folder %1."
 msgstr "Nie można usunąć katalogu %1."
 
-#: kio/global.cpp:260
+#: kio/global.cpp:227
 msgid "Could not resume file %1."
 msgstr "Nie można wznowić pobierania pliku %1."
 
-#: kio/global.cpp:263
+#: kio/global.cpp:230
 msgid "Could not rename file %1."
 msgstr "Nie można zmienić nazwy pliku %1."
 
-#: kio/global.cpp:266
+#: kio/global.cpp:233
 msgid "Could not change permissions for %1."
 msgstr "Nie można zmienić praw do %1."
 
-#: kio/global.cpp:269
+#: kio/global.cpp:236
 msgid "Could not change ownership for %1."
 msgstr "Nie można zmienić właściciela %1."
 
-#: kio/global.cpp:272
+#: kio/global.cpp:239
 msgid "Could not delete file %1."
 msgstr "Nie można usunąć pliku %1."
 
-#: kio/global.cpp:275
+#: kio/global.cpp:242
 msgid "The process for the %1 protocol died unexpectedly."
 msgstr "Proces dla protokołu %1 nieoczekiwanie zakończył działanie."
 
-#: kio/global.cpp:278
+#: kio/global.cpp:245
 msgid ""
 "Error. Out of memory.\n"
 "%1"
@@ -987,7 +931,7 @@ msgstr ""
 "Błąd. Brak pamięci.\n"
 "%1"
 
-#: kio/global.cpp:281
+#: kio/global.cpp:248
 msgid ""
 "Unknown proxy host\n"
 "%1"
@@ -995,19 +939,11 @@ msgstr ""
 "Nieznany serwer pośredniczący\n"
 "%1"
 
-#: kio/global.cpp:284
+#: kio/global.cpp:251
 msgid "Authorization failed, %1 authentication not supported"
 msgstr "Błąd autoryzacji, uwierzytelnianie %1 jest nieobsługiwane"
 
-#: kio/global.cpp:287
-msgid ""
-"User canceled action\n"
-"%1"
-msgstr ""
-"Użytkownik anulował operację\n"
-"%1"
-
-#: kio/global.cpp:290
+#: kio/global.cpp:254
 msgid ""
 "Internal error in server\n"
 "%1"
@@ -1015,7 +951,7 @@ msgstr ""
 "Błąd wewnętrzny serwera\n"
 "%1"
 
-#: kio/global.cpp:293
+#: kio/global.cpp:257
 msgid ""
 "Timeout on server\n"
 "%1"
@@ -1023,7 +959,7 @@ msgstr ""
 "Przekroczony czas operacji na serwerze\n"
 "%1"
 
-#: kio/global.cpp:296
+#: kio/global.cpp:260
 msgid ""
 "Unknown error\n"
 "%1"
@@ -1031,15 +967,7 @@ msgstr ""
 "Nieznany błąd\n"
 "%1"
 
-#: kio/global.cpp:299
-msgid ""
-"Unknown interrupt\n"
-"%1"
-msgstr ""
-"Nieznane przerwanie\n"
-"%1"
-
-#: kio/global.cpp:310
+#: kio/global.cpp:263
 msgid ""
 "Could not delete original file %1.\n"
 "Please check permissions."
@@ -1047,7 +975,7 @@ msgstr ""
 "Nie można usunąć oryginalnego pliku %1.\n"
 "Proszę sprawdzić uprawnienia."
 
-#: kio/global.cpp:313
+#: kio/global.cpp:266
 msgid ""
 "Could not delete partial file %1.\n"
 "Please check permissions."
@@ -1055,7 +983,7 @@ msgstr ""
 "Nie można usunąć częściowego pliku %1.\n"
 "Proszę sprawdzić uprawnienia."
 
-#: kio/global.cpp:316
+#: kio/global.cpp:269
 msgid ""
 "Could not rename original file %1.\n"
 "Please check permissions."
@@ -1063,7 +991,7 @@ msgstr ""
 "Nie można zmienić nazwy oryginalnego pliku %1.\n"
 "Proszę sprawdzić uprawnienia."
 
-#: kio/global.cpp:319
+#: kio/global.cpp:272
 msgid ""
 "Could not rename partial file %1.\n"
 "Please check permissions."
@@ -1071,7 +999,7 @@ msgstr ""
 "Nie można zmienić nazwy częściowego pliku %1.\n"
 "Proszę sprawdzić uprawnienia."
 
-#: kio/global.cpp:322
+#: kio/global.cpp:275
 msgid ""
 "Could not create symlink %1.\n"
 "Please check permissions."
@@ -1079,7 +1007,7 @@ msgstr ""
 "Nie można utworzyć odnośnika symbolicznego %1.\n"
 "Proszę sprawdzić uprawnienia."
 
-#: kio/global.cpp:328
+#: kio/global.cpp:281
 msgid ""
 "Could not write file %1.\n"
 "Disk full."
@@ -1087,7 +1015,7 @@ msgstr ""
 "Nie można zapisać pliku %1.\n"
 "Pełny dysk."
 
-#: kio/global.cpp:331
+#: kio/global.cpp:284
 msgid ""
 "The source and destination are the same file.\n"
 "%1"
@@ -1095,11 +1023,13 @@ msgstr ""
 "Pliki źródłowy i docelowy są takie same.\n"
 "%1"
 
-#: kio/global.cpp:337
-msgid "%1 is required by the server, but is not available."
-msgstr "Serwer wymaga %1, który nie jest dostępny."
+#: kio/global.cpp:290
+msgid ""
+"The server cannot handle the request\n"
+"%1"
+msgstr ""
 
-#: kio/global.cpp:340
+#: kio/global.cpp:293
 #, fuzzy
 msgid ""
 "Unknown error code %1\n"
@@ -1110,128 +1040,112 @@ msgstr ""
 "%2\n"
 "Proszę zgłosić błąd na stronie http://bugs.kde.org."
 
-#: kio/global.cpp:350
-msgid "Opening connections is not supported with the protocol %1."
-msgstr "Nawiązywanie połączeń nie jest obsługiwane przez protokół %1."
-
-#: kio/global.cpp:352
-msgid "Closing connections is not supported with the protocol %1."
-msgstr "Zamykanie połączeń nie jest obsługiwane przez protokół %1."
-
-#: kio/global.cpp:354
+#: kio/global.cpp:303
 msgid "Accessing files is not supported with the protocol %1."
 msgstr "Protokół %1 nie pozwala na dostęp do plików."
 
-#: kio/global.cpp:356
+#: kio/global.cpp:305
 msgid "Writing to %1 is not supported."
 msgstr "Zapisywanie do %1 nie jest obsługiwane."
 
-#: kio/global.cpp:358
+#: kio/global.cpp:307
 msgid "There are no special actions available for protocol %1."
 msgstr "Brak specjalnych operacji dostępnych dla protokołu %1."
 
-#: kio/global.cpp:360
+#: kio/global.cpp:309
 msgid "Listing folders is not supported for protocol %1."
 msgstr ""
 "Wyświetlanie zawartości katalogów nie jest obsługiwane przez protokół %1."
 
-#: kio/global.cpp:362
+#: kio/global.cpp:311
 msgid "Retrieving data from %1 is not supported."
 msgstr "Pobieranie danych z %1 nie jest obsługiwane."
 
-#: kio/global.cpp:364
+#: kio/global.cpp:313
 msgid "Retrieving mime type information from %1 is not supported."
 msgstr "Pobieranie informacji o typie MIME z %1 nie jest obsługiwane."
 
-#: kio/global.cpp:366
+#: kio/global.cpp:315
 msgid "Renaming or moving files within %1 is not supported."
 msgstr "Zmiana nazwy lub przenoszenie plików w %1 nie jest obsługiwane."
 
-#: kio/global.cpp:368
+#: kio/global.cpp:317
 msgid "Creating symlinks is not supported with protocol %1."
 msgstr ""
 "Tworzenie dowiązań symbolicznych nie jest obsługiwane przez protokół %1."
 
-#: kio/global.cpp:370
+#: kio/global.cpp:319
 msgid "Copying files within %1 is not supported."
 msgstr "Kopiowanie plików w %1 nie jest obsługiwane."
 
-#: kio/global.cpp:372
+#: kio/global.cpp:321
 msgid "Deleting files from %1 is not supported."
 msgstr "Usuwanie plików z %1 nie jest obsługiwane."
 
-#: kio/global.cpp:374
+#: kio/global.cpp:323
 msgid "Creating folders is not supported with protocol %1."
 msgstr "Tworzenie katalogów nie jest obsługiwane przez protokół %1."
 
-#: kio/global.cpp:376
+#: kio/global.cpp:325
 msgid "Changing the attributes of files is not supported with protocol %1."
 msgstr "Zmiana atrybutów plików nie jest obsługiwana przez protokół %1."
 
-#: kio/global.cpp:378
+#: kio/global.cpp:327
 msgid "Changing the ownership of files is not supported with protocol %1."
 msgstr "Zmiana właściciela plików nie jest obsługiwana przez protokół %1."
 
-#: kio/global.cpp:380
-msgid "Using sub-URLs with %1 is not supported."
-msgstr "Używanie podadresów w %1 nie jest obsługiwane."
-
-#: kio/global.cpp:382
-msgid "Opening files is not supported with protocol %1."
-msgstr "Otwieranie plików nie jest obsługiwane przez protokół %1."
-
-#: kio/global.cpp:384
+#: kio/global.cpp:329
 msgid "Protocol %1 does not support action %2."
 msgstr "Protokół %1 nie obsługuje działania %2."
 
-#: kio/global.cpp:404
+#: kio/global.cpp:348
 msgctxt "@info url"
 msgid "(unknown)"
 msgstr "(nieznany)"
 
-#: kio/global.cpp:412
+#: kio/global.cpp:355
 msgctxt "@info %1 error name, %2 description"
 msgid "<qt><p><b>%1</b></p><p>%2</p></qt>"
 msgstr "<qt><p><b>%1</b></p><p>%2</p></qt>"
 
-#: kio/global.cpp:416
+#: kio/global.cpp:359
 msgid "<b>Technical reason</b>: "
 msgstr "<b>Przyczyny</b>: "
 
-#: kio/global.cpp:418
+#: kio/global.cpp:361
 msgid "<b>Details of the request</b>:"
 msgstr "<b>Szczegóły żądania</b>:"
 
-#: kio/global.cpp:419
+#: kio/global.cpp:362
 msgid "<li>URL: %1</li>"
 msgstr "<li>URL: %1</li>"
 
-#: kio/global.cpp:421
+#: kio/global.cpp:364
 msgid "<li>Protocol: %1</li>"
 msgstr "<li>Protokół: %1</li>"
 
-#: kio/global.cpp:423
+#: kio/global.cpp:366
 msgid "<li>Date and time: %1</li>"
 msgstr "<li>Data i czas: %1</li>"
 
-#: kio/global.cpp:424
+#: kio/global.cpp:367
 msgid "<li>Additional information: %1</li>"
 msgstr "<li>Dodatkowe informacje: %1</li>"
 
-#: kio/global.cpp:427
+#: kio/global.cpp:370
 msgid "<b>Possible causes</b>:"
 msgstr "<b>Możliwe przyczyny</b>:"
 
-#: kio/global.cpp:432
+#: kio/global.cpp:375
 msgid "<b>Possible solutions</b>:"
 msgstr "<b>Możliwe rozwiązania</b>:"
 
-#: kio/global.cpp:465
+#: kio/global.cpp:408
 msgctxt "@info protocol"
 msgid "(unknown)"
 msgstr "(nieznany)"
 
-#: kio/global.cpp:475
+#: kio/global.cpp:417
 msgid ""
 "Contact your appropriate computer support system, whether the system "
 "administrator, or technical support group for further assistance."
@@ -1239,15 +1153,15 @@ msgstr ""
 "Skontaktuj się z obsługą komputera, administratorem systemu lub pomocą "
 "techniczną."
 
-#: kio/global.cpp:478
+#: kio/global.cpp:420
 msgid "Contact the administrator of the server for further assistance."
 msgstr "Skontaktuj się z administratorem serwera."
 
-#: kio/global.cpp:481
+#: kio/global.cpp:423
 msgid "Check your access permissions on this resource."
 msgstr "Sprawdź prawa dostępu do zasobu."
 
-#: kio/global.cpp:482
+#: kio/global.cpp:424
 msgid ""
 "Your access permissions may be inadequate to perform the requested operation "
 "on this resource."
@@ -1255,14 +1169,14 @@ msgstr ""
 "Twoje prawa dostępu mogą być niewystarczające do wykonania żądanej operacji "
 "na tym zasobie."
 
-#: kio/global.cpp:484
+#: kio/global.cpp:426
 msgid ""
 "The file may be in use (and thus locked) by another user or application."
 msgstr ""
 "Plik może być używany (i zablokowany do użytku) przez innego użytkownika lub "
 "program."
 
-#: kio/global.cpp:486
+#: kio/global.cpp:428
 msgid ""
 "Check to make sure that no other application or user is using the file or "
 "has locked the file."
@@ -1270,15 +1184,15 @@ msgstr ""
 "Sprawdź, czy żaden program i żaden użytkownik nie używa oraz nie blokuje "
 "pliku."
 
-#: kio/global.cpp:488
+#: kio/global.cpp:430
 msgid "Although unlikely, a hardware error may have occurred."
 msgstr "Możliwe, choć mało prawdopodobne, że wystąpił błąd sprzętowy."
 
-#: kio/global.cpp:490
+#: kio/global.cpp:432
 msgid "You may have encountered a bug in the program."
 msgstr "Być może natrafiłeś na błąd w programie."
 
-#: kio/global.cpp:491
+#: kio/global.cpp:433
 msgid ""
 "This is most likely to be caused by a bug in the program. Please consider "
 "submitting a full bug report as detailed below."
@@ -1286,7 +1200,7 @@ msgstr ""
 "Najprawdopodobniej natrafiłeś na błąd w programie. Jeśli możesz, wyślij "
 "raport o błędzie zgodnie z poniższą instrukcją."
 
-#: kio/global.cpp:493
+#: kio/global.cpp:435
 msgid ""
 "Update your software to the latest version. Your distribution should provide "
 "tools to update your software."
@@ -1294,7 +1208,7 @@ msgstr ""
 "Uaktualnij program do najnowszej wersji. Twoja dystrybucja powinna zawierać "
 "narzędzia do uaktualniania programów."
 
-#: kio/global.cpp:495
+#: kio/global.cpp:437
 #, fuzzy
 msgid ""
 "When all else fails, please consider helping the the maintainers of this "
@@ -1308,16 +1222,16 @@ msgstr ""
 "Jeśli wszystko zawiedzie, rozważ wysłanie szczegółowego raportu o błędzie do "
 "Zespołu KDE lub autora tego programu. Jeśli program został dostarczony przez "
 "osoby spoza KDE, skontaktuj się bezpośrednio z nimi. W przeciwnym razie "
-"najpierw sprawdź, czy podobny błąd nie został już zgłoszony w <a href="
-"\"http://bugs.kde.org/\">Bazie błędów KDE</a>. Jeśli nie, podaj w raporcie "
-"wszystkie szczegóły wymienione poniżej, wraz z innymi informacjami, które "
-"uważasz za użyteczne."
+"najpierw sprawdź, czy podobny błąd nie został już zgłoszony w <a "
+"href=\"http://bugs.kde.org/\">Bazie błędów KDE</a>. Jeśli nie, podaj w "
+"raporcie wszystkie szczegóły wymienione poniżej, wraz z innymi informacjami, "
+"które uważasz za użyteczne."
 
-#: kio/global.cpp:503
+#: kio/global.cpp:445
 msgid "There may have been a problem with your network connection."
 msgstr "Mogły być problemy z połączeniem sieciowym."
 
-#: kio/global.cpp:506
+#: kio/global.cpp:448
 msgid ""
 "There may have been a problem with your network configuration. If you have "
 "been accessing the Internet with no problems recently, this is unlikely."
@@ -1325,7 +1239,7 @@ msgstr ""
 "Mogły być problemy z ustawieniami sieci. Jest to jednak mało prawdopodobne, "
 "jeśli ostatnio bez problemów korzystałeś z Internetu."
 
-#: kio/global.cpp:509
+#: kio/global.cpp:451
 msgid ""
 "There may have been a problem at some point along the network path between "
 "the server and this computer."
@@ -1333,39 +1247,39 @@ msgstr ""
 "Być może problemy pojawiły się gdzieś w sieci, między serwerem a twoim "
 "komputerem."
 
-#: kio/global.cpp:511
+#: kio/global.cpp:453
 msgid "Try again, either now or at a later time."
 msgstr "Spróbuj jeszcze raz, teraz albo później."
 
-#: kio/global.cpp:512
+#: kio/global.cpp:454
 msgid "A protocol error or incompatibility may have occurred."
 msgstr "Prawdopodobnie nastąpił błąd w protokole lub niekompatybilność."
 
-#: kio/global.cpp:513
+#: kio/global.cpp:455
 msgid "Ensure that the resource exists, and try again."
 msgstr "Sprawdź, czy zasób istnieje i spróbuj jeszcze raz."
 
-#: kio/global.cpp:514
+#: kio/global.cpp:456
 msgid "The specified resource may not exist."
 msgstr "Możliwe, że podany zasób nie istnieje."
 
-#: kio/global.cpp:515
+#: kio/global.cpp:457
 msgid "You may have incorrectly typed the location."
 msgstr "Prawdopodobnie podano błędne położenie."
 
-#: kio/global.cpp:516
+#: kio/global.cpp:458
 msgid "Double-check that you have entered the correct location and try again."
 msgstr "Upewnij się, że wpisane jest poprawne położenie i spróbuj ponownie."
 
-#: kio/global.cpp:518
+#: kio/global.cpp:460
 msgid "Check your network connection status."
 msgstr "Sprawdź swoje połączenie sieciowe."
 
-#: kio/global.cpp:522
+#: kio/global.cpp:464
 msgid "Cannot Open Resource For Reading"
 msgstr "Nie można otworzyć zasobu do odczytu"
 
-#: kio/global.cpp:523
+#: kio/global.cpp:465
 msgid ""
 "This means that the contents of the requested file or folder <strong>%1</"
 "strong> could not be retrieved, as read access could not be obtained."
@@ -1373,15 +1287,15 @@ msgstr ""
 "Oznacza to, że zawartość żądanego pliku lub katalogu <strong>%1</strong> nie "
 "może zostać pobrana z powodu braku praw do odczytu."
 
-#: kio/global.cpp:526
+#: kio/global.cpp:468
 msgid "You may not have permissions to read the file or open the folder."
 msgstr "Możesz nie mieć praw do odczytania pliku lub katalogu."
 
-#: kio/global.cpp:532
+#: kio/global.cpp:474
 msgid "Cannot Open Resource For Writing"
 msgstr "Nie można otworzyć zasobu do zapisu"
 
-#: kio/global.cpp:533
+#: kio/global.cpp:475
 msgid ""
 "This means that the file, <strong>%1</strong>, could not be written to as "
 "requested, because access with permission to write could not be obtained."
@@ -1389,15 +1303,15 @@ msgstr ""
 "Może to oznaczać, że plik <strong>%1</strong> nie może zostać zapisany z "
 "powodu braku praw do zapisu."
 
-#: kio/global.cpp:541
+#: kio/global.cpp:483
 msgid "Cannot Initiate the %1 Protocol"
 msgstr "Nie można zainicjalizować protokołu %1"
 
-#: kio/global.cpp:542
+#: kio/global.cpp:484
 msgid "Unable to Launch Process"
 msgstr "Nie można uruchomić procesu"
 
-#: kio/global.cpp:543
+#: kio/global.cpp:485
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol could not be started. This is usually due to technical "
@@ -1406,7 +1320,7 @@ msgstr ""
 "Program na twoim komputerze, obsługujący protokół <strong>%1</strong> nie "
 "uruchomił się. Dzieje się tak zazwyczaj z przyczyn technicznych."
 
-#: kio/global.cpp:546
+#: kio/global.cpp:488
 #, fuzzy
 msgid ""
 "The program which provides compatibility with this protocol may not have "
@@ -1417,11 +1331,11 @@ msgstr ""
 "uaktualniony przy okazji ostatniego uaktualnienia KDE. Wówczas stara wersja "
 "programu nie współpracuje z nowym protokołem i nie uruchamia się."
 
-#: kio/global.cpp:554
+#: kio/global.cpp:496
 msgid "Internal Error"
 msgstr "Błąd wewnętrzny"
 
-#: kio/global.cpp:555
+#: kio/global.cpp:497
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol has reported an internal error."
@@ -1429,11 +1343,11 @@ msgstr ""
 "Program zapewniający dostęp do protokołu<strong>%1</strong> zgłosił błąd "
 "wewnętrzny."
 
-#: kio/global.cpp:563
+#: kio/global.cpp:505
 msgid "Improperly Formatted URL"
 msgstr "Nieprawidłowo sformatowany URL"
 
-#: kio/global.cpp:564
+#: kio/global.cpp:506
 msgid ""
 "The <strong>U</strong>niform <strong>R</strong>esource <strong>L</"
 "strong>ocator (URL) that you entered was not properly formatted. The format "
@@ -1446,75 +1360,11 @@ msgstr ""
 "<blockquote><strong>protokół://użytkownik@hasło:www.przykład.org:port/"
 "katalog/plik.rozszerzenie?pytanie=wartość</strong></blockquote>"
 
-#: kio/global.cpp:573
-msgid "Unsupported Protocol %1"
-msgstr "Nieobsługiwany protokół %1"
-
-#: kio/global.cpp:574
-#, fuzzy
-msgid ""
-"The protocol <strong>%1</strong> is not supported by the programs currently "
-"installed on this computer."
-msgstr ""
-"Protokół <strong>%1</strong> nie jest obsługiwany przez programy KDE "
-"zainstalowane na tym komputerze."
-
-#: kio/global.cpp:577
-msgid "The requested protocol may not be supported."
-msgstr "Żądany protokół może nie być obsługiwany."
-
-#: kio/global.cpp:578
-msgid ""
-"The versions of the %1 protocol supported by this computer and the server "
-"may be incompatible."
-msgstr "Wersje protokołu %1 na tym komputerze i na serwerze mogą być różne."
-
-#: kio/global.cpp:580
-#, fuzzy
-msgid ""
-"You may perform a search on the Internet for a program (called a kioslave or "
-"ioslave) which supports this protocol. Places to search include <a href="
-"\"http://kde-apps.org/\">http://kde-apps.org/</a> and <a href=\"http://"
-"freshmeat.net/\">http://freshmeat.net/</a>."
-msgstr ""
-"Możesz poszukać w Internecie programu KDE (zwanego kioslave lub ioslave), "
-"obsługującego ten protokół. Najbardziej użyteczne adresy to <a href=\"http://"
-"kde-apps.org/\">http://kde-apps.org/</a> i <a href=\"http://freshmeat.net/"
-"\">http://freshmeat.net/</a>."
-
-#: kio/global.cpp:589
-msgid "URL Does Not Refer to a Resource."
-msgstr "URL nie odnosi się do zasobu."
-
-#: kio/global.cpp:590
-msgid "Protocol is a Filter Protocol"
-msgstr "Protokół jest protokołem filtrującym"
-
-#: kio/global.cpp:591
-msgid ""
-"The <strong>U</strong>niform <strong>R</strong>esource <strong>L</"
-"strong>ocator (URL) that you entered did not refer to a specific resource."
-msgstr ""
-"Podany <strong>U</strong>niform <strong>R</strong>esource <strong>L</"
-"strong>ocation (URL) nie odnosi się do żadnego zasobu."
-
-#: kio/global.cpp:594
-#, fuzzy
-msgid ""
-"The Desktop is able to communicate through a protocol within a protocol; the "
-"protocol specified is only for use in such situations, however this is not "
-"one of these situations. This is a rare event, and is likely to indicate a "
-"programming error."
-msgstr ""
-"KDE może komunikować się, używając protokołu wewnątrz protokołu; wybrany "
-"protokół jest przeznaczony jedynie do takich sytuacji, innych niż aktualna. "
-"Najprawdopodobniej oznacza to błąd w programie."
-
-#: kio/global.cpp:602
+#: kio/global.cpp:516
 msgid "Unsupported Action: %1"
 msgstr "Nieobsługiwana akcja: %1"
 
-#: kio/global.cpp:603
+#: kio/global.cpp:517
 #, fuzzy
 msgid ""
 "The requested action is not supported by the Desktop program which is "
@@ -1523,7 +1373,7 @@ msgstr ""
 "Podana akcja nie jest obsługiwana przez program KDE implementujący protokół "
 "<strong>%1</strong>."
 
-#: kio/global.cpp:606
+#: kio/global.cpp:520
 #, fuzzy
 msgid ""
 "This error is very much dependent on the Desktop program. The additional "
@@ -1533,62 +1383,62 @@ msgstr ""
 "Błąd zależy od programu KDE. Dodatkowe szczegóły dostarczą ci więcej "
 "informacji, niż jest dostępne dla architektury wejścia/wyjścia KDE."
 
-#: kio/global.cpp:609
+#: kio/global.cpp:523
 msgid "Attempt to find another way to accomplish the same outcome."
 msgstr "Spróbuj znaleźć inną metodę osiągnięcia tego samego wyniku."
 
-#: kio/global.cpp:614
+#: kio/global.cpp:528
 msgid "File Expected"
 msgstr "Oczekiwany plik"
 
-#: kio/global.cpp:615
+#: kio/global.cpp:529
 msgid ""
 "The request expected a file, however the folder <strong>%1</strong> was "
 "found instead."
 msgstr "Żądano pliku, ale zwrócony został katalog <strong>%1</strong>."
 
-#: kio/global.cpp:617
+#: kio/global.cpp:531
 msgid "This may be an error on the server side."
 msgstr "Być może jest to błąd serwera."
 
-#: kio/global.cpp:622
+#: kio/global.cpp:536
 msgid "Folder Expected"
 msgstr "Oczekiwano katalogu"
 
-#: kio/global.cpp:623
+#: kio/global.cpp:537
 msgid ""
 "The request expected a folder, however the file <strong>%1</strong> was "
 "found instead."
 msgstr "Żądano katalogu, ale zwrócony został plik <strong>%1</strong>."
 
-#: kio/global.cpp:630
+#: kio/global.cpp:544
 msgid "File or Folder Does Not Exist"
 msgstr "Plik lub katalog nie istnieje"
 
-#: kio/global.cpp:631
+#: kio/global.cpp:545
 msgid "The specified file or folder <strong>%1</strong> does not exist."
 msgstr "Podany plik lub katalog <strong>%1</strong> nie istnieje."
 
-#: kio/global.cpp:639
+#: kio/global.cpp:553
 msgid ""
 "The requested file could not be created because a file with the same name "
 "already exists."
 msgstr ""
 "Żądany plik nie został utworzony, ponieważ plik o tej nazwie już istnieje."
 
-#: kio/global.cpp:641
+#: kio/global.cpp:555
 msgid "Try moving the current file out of the way first, and then try again."
 msgstr "Spróbuj przenieść poprzedni plik w inne miejsce i spróbuj jeszcze raz."
 
-#: kio/global.cpp:643
+#: kio/global.cpp:557
 msgid "Delete the current file and try again."
 msgstr "Usuń poprzedni plik i spróbuj jeszcze raz."
 
-#: kio/global.cpp:644
+#: kio/global.cpp:558
 msgid "Choose an alternate filename for the new file."
 msgstr "Wybierz inną nazwę dla nowego pliku."
 
-#: kio/global.cpp:649
+#: kio/global.cpp:563
 msgid ""
 "The requested folder could not be created because a folder with the same "
 "name already exists."
@@ -1596,24 +1446,24 @@ msgstr ""
 "Żądany katalog nie został utworzony, ponieważ katalog o tej nazwie już "
 "istnieje."
 
-#: kio/global.cpp:651
+#: kio/global.cpp:565
 msgid "Try moving the current folder out of the way first, and then try again."
 msgstr ""
 "Spróbuj przenieść katalog bieżący w inne miejsce i spróbuj jeszcze raz."
 
-#: kio/global.cpp:653
+#: kio/global.cpp:567
 msgid "Delete the current folder and try again."
 msgstr "Usuń katalog bieżący i spróbuj jeszcze raz."
 
-#: kio/global.cpp:654
+#: kio/global.cpp:568
 msgid "Choose an alternate name for the new folder."
 msgstr "Wybierz inną nazwę dla nowego katalogu."
 
-#: kio/global.cpp:658
+#: kio/global.cpp:572
 msgid "Unknown Host"
 msgstr "Nieznany serwer"
 
-#: kio/global.cpp:659
+#: kio/global.cpp:573
 msgid ""
 "An unknown host error indicates that the server with the requested name, "
 "<strong>%1</strong>, could not be located on the Internet."
@@ -1621,49 +1471,49 @@ msgstr ""
 "Błąd \"Nieznany serwer\" oznacza, że serwer o podanej nazwie <strong>%1</"
 "strong> nie został znaleziony w Internecie."
 
-#: kio/global.cpp:662
+#: kio/global.cpp:576
 msgid ""
 "The name that you typed, %1, may not exist: it may be incorrectly typed."
 msgstr "Podana nazwa, %1, może być błędnie wpisana."
 
-#: kio/global.cpp:669
+#: kio/global.cpp:583
 msgid "Access Denied"
 msgstr "Brak dostępu"
 
-#: kio/global.cpp:670
+#: kio/global.cpp:584
 msgid "Access was denied to the specified resource, <strong>%1</strong>."
 msgstr "Brak dostępu do zasobu <strong>%1</strong>."
 
-#: kio/global.cpp:672 kio/global.cpp:888
+#: kio/global.cpp:586 kio/global.cpp:719
 msgid "You may have supplied incorrect authentication details or none at all."
 msgstr "Być może podano nieprawidłowe szczegóły uwierzytelnienia."
 
-#: kio/global.cpp:674 kio/global.cpp:890
+#: kio/global.cpp:588 kio/global.cpp:721
 msgid "Your account may not have permission to access the specified resource."
 msgstr "Możesz nie mieć praw dostępu do tego zasobu."
 
-#: kio/global.cpp:676 kio/global.cpp:892 kio/global.cpp:904
+#: kio/global.cpp:590 kio/global.cpp:723 kio/global.cpp:735
 msgid ""
 "Retry the request and ensure your authentication details are entered "
 "correctly."
 msgstr ""
 "Ponów żądanie i sprawdź, czy dane uwierzytelnienia są podane poprawnie."
 
-#: kio/global.cpp:682
+#: kio/global.cpp:596
 msgid "Write Access Denied"
 msgstr "Brak praw do zapisu"
 
-#: kio/global.cpp:683
+#: kio/global.cpp:597
 msgid ""
 "This means that an attempt to write to the file <strong>%1</strong> was "
 "rejected."
 msgstr "Próba zapisu do pliku <strong>%1</strong> została odrzucona."
 
-#: kio/global.cpp:690
+#: kio/global.cpp:604
 msgid "Unable to Enter Folder"
 msgstr "Nie można wejść do katalogu"
 
-#: kio/global.cpp:691
+#: kio/global.cpp:605
 msgid ""
 "This means that an attempt to enter (in other words, to open) the requested "
 "folder <strong>%1</strong> was rejected."
@@ -1671,29 +1521,11 @@ msgstr ""
 "Oznacza to, że próba otwarcia (wejścia do) żądanego katalogu <strong>%1</"
 "strong> została odrzucona."
 
-#: kio/global.cpp:699
-msgid "Folder Listing Unavailable"
-msgstr "Pokazanie zawartości katalogu jest niedostępne"
-
-#: kio/global.cpp:700
-msgid "Protocol %1 is not a Filesystem"
-msgstr "Protokół %1 nie jest systemem plików"
-
-#: kio/global.cpp:701
-#, fuzzy
-msgid ""
-"This means that a request was made which requires determining the contents "
-"of the folder, and the Desktop program supporting this protocol is unable to "
-"do so."
-msgstr ""
-"Oznacza to, że żądanie wymagało ustalenia zawartości katalogu, ale program "
-"KDE, obsługujący ten protokół, nie może tego zrobić."
-
-#: kio/global.cpp:709
+#: kio/global.cpp:613
 msgid "Cyclic Link Detected"
 msgstr "Wykryto zapętlone dowiązanie"
 
-#: kio/global.cpp:710
+#: kio/global.cpp:614
 #, fuzzy
 msgid ""
 "UNIX environments are commonly able to link a file or folder to a separate "
@@ -1706,74 +1538,36 @@ msgstr ""
 "dowiązanie lub ciąg dowiązań, powodujące nieskończoną pętlę - tj. plik był "
 "ostatecznie dowiązaniem do siebie."
 
-#: kio/global.cpp:714 kio/global.cpp:736
+#: kio/global.cpp:618
 msgid ""
 "Delete one part of the loop in order that it does not cause an infinite "
 "loop, and try again."
 msgstr ""
 "Usuń część pętli, by przerwać pętlę nieskończoną, a następnie ponów próbę."
 
-#: kio/global.cpp:723
+#: kio/global.cpp:627
 msgid "Request Aborted By User"
 msgstr "Żądanie przerwane przez użytkownika"
 
-#: kio/global.cpp:724 kio/global.cpp:1025
+#: kio/global.cpp:628
 msgid "The request was not completed because it was aborted."
 msgstr "Żądanie nie zostało zrealizowane, ponieważ je przerwano."
 
-#: kio/global.cpp:726 kio/global.cpp:920 kio/global.cpp:1027
+#: kio/global.cpp:630 kio/global.cpp:751
 msgid "Retry the request."
 msgstr "Powtórz żądanie."
 
-#: kio/global.cpp:730
-msgid "Cyclic Link Detected During Copy"
-msgstr "Podczas kopiowania wykryto zapętlone dowiązanie"
-
-#: kio/global.cpp:731
-#, fuzzy
-msgid ""
-"UNIX environments are commonly able to link a file or folder to a separate "
-"name and/or location. During the requested copy operation, Detected a link "
-"or series of links that results in an infinite loop - i.e. the file was "
-"(perhaps in a roundabout way) linked to itself."
-msgstr ""
-"W środowiskach uniksowych można zwykle tworzyć dowiązania do plików i "
-"katalogów pod inną nazwą i/lub w innym katalogu. Podczas operacji kopiowania "
-"KDE wykryło takie dowiązanie lub ciąg dowiązań, powodujące nieskończoną "
-"pętlę - tj. plik był ostatecznie dowiązaniem do siebie."
-
-#: kio/global.cpp:741
-msgid "Could Not Create Network Connection"
-msgstr "Nie można utworzyć połączenia sieciowego"
-
-#: kio/global.cpp:742
-msgid "Could Not Create Socket"
-msgstr "Nie można utworzyć gniazdka"
-
-#: kio/global.cpp:743
-msgid ""
-"This is a fairly technical error in which a required device for network "
-"communications (a socket) could not be created."
-msgstr ""
-"Nie można było utworzyć urządzenia do komunikacji sieciowej (gniazdka)."
-
-#: kio/global.cpp:745 kio/global.cpp:858 kio/global.cpp:869 kio/global.cpp:878
-msgid ""
-"The network connection may be incorrectly configured, or the network "
-"interface may not be enabled."
-msgstr "Sieć może być nieprawidłowo ustawiona lub wyłączona."
-
-#: kio/global.cpp:751
+#: kio/global.cpp:634
 msgid "Connection to Server Refused"
 msgstr "Połączenie z serwerem odrzucone"
 
-#: kio/global.cpp:752
+#: kio/global.cpp:635
 msgid ""
 "The server <strong>%1</strong> refused to allow this computer to make a "
 "connection."
 msgstr "Serwer <strong>%1</strong> odrzucił próbę połączenia z tego komputera."
 
-#: kio/global.cpp:754
+#: kio/global.cpp:637
 msgid ""
 "The server, while currently connected to the Internet, may not be configured "
 "to allow requests."
@@ -1781,7 +1575,7 @@ msgstr ""
 "Serwer, choć podłączony do Internetu, może nie być ustawiony na przyjmowanie "
 "żądań."
 
-#: kio/global.cpp:756
+#: kio/global.cpp:639
 msgid ""
 "The server, while currently connected to the Internet, may not be running "
 "the requested service (%1)."
@@ -1789,7 +1583,7 @@ msgstr ""
 "Serwer, choć podłączony do Internetu, może nie udostępniać żądanej usługi "
 "(%1)."
 
-#: kio/global.cpp:758
+#: kio/global.cpp:641
 msgid ""
 "A network firewall (a device which restricts Internet requests), either "
 "protecting your network or the network of the server, may have intervened, "
@@ -1799,11 +1593,11 @@ msgstr ""
 "zabezpieczająca Twoją sieć, albo sieć serwera, mogła zablokować Twoje "
 "żądanie."
 
-#: kio/global.cpp:765
+#: kio/global.cpp:648
 msgid "Connection to Server Closed Unexpectedly"
 msgstr "Połączenie z serwerem zostało niespodziewanie zakończone"
 
-#: kio/global.cpp:766
+#: kio/global.cpp:649
 msgid ""
 "Although a connection was established to <strong>%1</strong>, the connection "
 "was closed at an unexpected point in the communication."
@@ -1811,7 +1605,7 @@ msgstr ""
 "Chociaż połączenie z <strong>%1</strong> zostało nawiązane, przerwano je "
 "później w nieoczekiwanym miejscu."
 
-#: kio/global.cpp:769
+#: kio/global.cpp:652
 msgid ""
 "A protocol error may have occurred, causing the server to close the "
 "connection as a response to the error."
@@ -1819,127 +1613,11 @@ msgstr ""
 "Być może wystąpił błąd w protokole, a serwer przerwał połączenie w reakcji "
 "na ten błąd."
 
-#: kio/global.cpp:775
-msgid "URL Resource Invalid"
-msgstr "Błędny URL"
-
-#: kio/global.cpp:776
-msgid "Protocol %1 is not a Filter Protocol"
-msgstr "Protokół %1 nie jest protokołem filtrującym"
-
-#: kio/global.cpp:777
-msgid ""
-"The <strong>U</strong>niform <strong>R</strong>esource <strong>L</"
-"strong>ocator (URL) that you entered did not refer to a valid mechanism of "
-"accessing the specific resource, <strong>%1%2</strong>."
-msgstr ""
-"<strong>U</strong>niform <strong>R</strong>esource <strong>L</strong>ocation "
-"(URL, Ujednolicony Adres Zasobu), podany przez Ciebie, zawiera nieznaną "
-"metodę dostępu do podanego zasobu, <strong>%1%2</strong>."
-
-#: kio/global.cpp:782
-#, fuzzy
-msgid ""
-"The Desktop is able to communicate through a protocol within a protocol. "
-"This request specified a protocol be used as such, however this protocol is "
-"not capable of such an action. This is a rare event, and is likely to "
-"indicate a programming error."
-msgstr ""
-"KDE może komunikować się, używając protokołu wewnątrz protokołu, jednak "
-"wybrany protokół nie jest przeznaczony jedynie do takich sytuacji. "
-"Najprawdopodobniej oznacza to błąd w programie."
-
-#: kio/global.cpp:790
-msgid "Unable to Initialize Input/Output Device"
-msgstr "Nie można zainicjalizować urządzenia wejścia/wyjścia"
-
-#: kio/global.cpp:791
-msgid "Could Not Mount Device"
-msgstr "Nie można zamontować urządzenia"
-
-#: kio/global.cpp:792
-msgid ""
-"The requested device could not be initialized (\"mounted\"). The reported "
-"error was: <strong>%1</strong>"
-msgstr ""
-"Podane urządzenie nie mogło zostać podłączone (\"zamontowane\"). Zwrócony "
-"błąd: <strong>%1</strong>"
-
-#: kio/global.cpp:795
-msgid ""
-"The device may not be ready, for example there may be no media in a "
-"removable media device (i.e. no CD-ROM in a CD drive), or in the case of a "
-"peripheral/portable device, the device may not be correctly connected."
-msgstr ""
-"Urządzenie może nie być gotowe, np. nie ma płyty w napędzie CD-ROM lub "
-"dyskietki w stacji dysków. Być może urządzenie peryferyjne nie jest "
-"poprawnie podłączone fizycznie."
-
-#: kio/global.cpp:799
-msgid ""
-"You may not have permissions to initialize (\"mount\") the device. On UNIX "
-"systems, often system administrator privileges are required to initialize a "
-"device."
-msgstr ""
-"Być może nie masz praw do podłączania (\"montowania\") tego urządzenia. W "
-"systemach uniksowych do podłączania urządzeń często wymagane są prawa "
-"administratora."
-
-#: kio/global.cpp:803
-msgid ""
-"Check that the device is ready; removable drives must contain media, and "
-"portable devices must be connected and powered on.; and try again."
-msgstr ""
-"Sprawdź, czy urządzenie jest gotowe (stacje dysków muszą zawierać dyskietki, "
-"napędy CD-ROM - płyty, zaś urządzenia zewnętrzne muszą być poprawnie "
-"podłączone i włączone) i spróbuj jeszcze raz."
-
-#: kio/global.cpp:809
-msgid "Unable to Uninitialize Input/Output Device"
-msgstr "Nie można zainicjalizować urządzenia wejścia/wyjścia"
-
-#: kio/global.cpp:810
-msgid "Could Not Unmount Device"
-msgstr "Nie można odmontować urządzenia"
-
-#: kio/global.cpp:811
-msgid ""
-"The requested device could not be uninitialized (\"unmounted\"). The "
-"reported error was: <strong>%1</strong>"
-msgstr ""
-"Podane urządzenie nie mogło zostać odłączone (\"odmontowane\"). Zwrócony "
-"błąd: <strong>%1</strong>"
-
-#: kio/global.cpp:814
-msgid ""
-"The device may be busy, that is, still in use by another application or "
-"user. Even such things as having an open browser window on a location on "
-"this device may cause the device to remain in use."
-msgstr ""
-"Urządzenie może być zajęte, tj. nadal używane przez inny program lub innego "
-"użytkownika. Nawet okno przeglądarki, otwarte na katalogu na tym urządzeniu, "
-"może powodować, że urządzenie jest zajęte."
-
-#: kio/global.cpp:818
-msgid ""
-"You may not have permissions to uninitialize (\"unmount\") the device. On "
-"UNIX systems, system administrator privileges are often required to "
-"uninitialize a device."
-msgstr ""
-"Być może nie masz praw do odłączania (\"odmontowywania\") tego urządzenia. W "
-"systemach uniksowych do odłączania urządzeń często wymagane są prawa "
-"administratora."
-
-#: kio/global.cpp:822
-msgid "Check that no applications are accessing the device, and try again."
-msgstr ""
-"Sprawdź, czy żadne programy nie korzystają z urządzenia i spróbuj ponownie."
-
-#: kio/global.cpp:827
+#: kio/global.cpp:658
 msgid "Cannot Read From Resource"
 msgstr "Nie można czytać z zasobu"
 
-#: kio/global.cpp:828
+#: kio/global.cpp:659
 msgid ""
 "This means that although the resource, <strong>%1</strong>, was able to be "
 "opened, an error occurred while reading the contents of the resource."
@@ -1947,15 +1625,15 @@ msgstr ""
 "Oznacza to, że chociaż zasób <strong>%1</strong> został otwarty, podczas "
 "próby czytania z niego wystąpił błąd."
 
-#: kio/global.cpp:831
+#: kio/global.cpp:662
 msgid "You may not have permissions to read from the resource."
 msgstr "Brak praw do zapisu do czytania z tego zasobu."
 
-#: kio/global.cpp:840
+#: kio/global.cpp:671
 msgid "Cannot Write to Resource"
 msgstr "Nie można pisać do zasobu"
 
-#: kio/global.cpp:841
+#: kio/global.cpp:672
 msgid ""
 "This means that although the resource, <strong>%1</strong>, was able to be "
 "opened, an error occurred while writing to the resource."
@@ -1963,19 +1641,19 @@ msgstr ""
 "Oznacza to, że chociaż zasób <strong>%1</strong> został otwarty, podczas "
 "próby pisania do niego wystąpił błąd."
 
-#: kio/global.cpp:844
+#: kio/global.cpp:675
 msgid "You may not have permissions to write to the resource."
 msgstr "Być może nie masz prawa pisania do tego zasobu."
 
-#: kio/global.cpp:853 kio/global.cpp:864
+#: kio/global.cpp:684 kio/global.cpp:695
 msgid "Could Not Listen for Network Connections"
 msgstr "Nie można nasłuchiwać"
 
-#: kio/global.cpp:854
+#: kio/global.cpp:685
 msgid "Could Not Bind"
 msgstr "Nie można przyłączyć"
 
-#: kio/global.cpp:855 kio/global.cpp:866
+#: kio/global.cpp:686 kio/global.cpp:697
 msgid ""
 "This is a fairly technical error in which a required device for network "
 "communications (a socket) could not be established to listen for incoming "
@@ -1984,15 +1662,21 @@ msgstr ""
 "Techniczny błąd oznaczający, że urządzenie wymagane do połączeń sieciowych "
 "nie mogło nasłuchiwać, oczekując na przychodzące połączenia sieciowe."
 
-#: kio/global.cpp:865
+#: kio/global.cpp:689 kio/global.cpp:700 kio/global.cpp:709
+msgid ""
+"The network connection may be incorrectly configured, or the network "
+"interface may not be enabled."
+msgstr "Sieć może być nieprawidłowo ustawiona lub wyłączona."
+
+#: kio/global.cpp:696
 msgid "Could Not Listen"
 msgstr "Nie można nasłuchiwać"
 
-#: kio/global.cpp:875
+#: kio/global.cpp:706
 msgid "Could Not Accept Network Connection"
 msgstr "Nie można przyjąć połączenia sieciowego"
 
-#: kio/global.cpp:876
+#: kio/global.cpp:707
 msgid ""
 "This is a fairly technical error in which an error occurred while attempting "
 "to accept an incoming network connection."
@@ -2000,86 +1684,88 @@ msgstr ""
 "Techniczny błąd, oznaczający, że nie powiodło się przyjęcie połączenia "
 "sieciowego z zewnątrz."
 
-#: kio/global.cpp:880
+#: kio/global.cpp:711
 msgid "You may not have permissions to accept the connection."
 msgstr "Możesz nie mieć praw do przyjęcia tego połączenia."
 
-#: kio/global.cpp:885
+#: kio/global.cpp:716
 msgid "Could Not Login: %1"
 msgstr "Nie można się zalogować: %1"
 
-#: kio/global.cpp:886
+#: kio/global.cpp:717
 msgid ""
 "An attempt to login to perform the requested operation was unsuccessful."
 msgstr "Próba zalogowania, by wykonać żądaną operację, nie powiodła się."
 
-#: kio/global.cpp:897
+#: kio/global.cpp:728
 msgid "Could Not Determine Resource Status"
 msgstr "Nie można ustalić stanu zasobu"
 
-#: kio/global.cpp:898
+#: kio/global.cpp:729
 msgid "Could Not Stat Resource"
 msgstr "Nie można pobrać statusu zasobu"
 
-#: kio/global.cpp:899
+#: kio/global.cpp:730
 msgid ""
-"An attempt to determine information about the status of the resource <strong>"
-"%1</strong>, such as the resource name, type, size, etc., was unsuccessful."
+"An attempt to determine information about the status of the resource "
+"<strong>%1</strong>, such as the resource name, type, size, etc., was "
+"unsuccessful."
 msgstr ""
 "Próba uzyskania informacji o stanie zasobu <strong>%1</strong> (np. o jego "
 "nazwie, typie, rozmiarze itd.) nie powiodła się."
 
-#: kio/global.cpp:902
+#: kio/global.cpp:733
 msgid "The specified resource may not have existed or may not be accessible."
 msgstr "Wybrany zasób nie istnieje lub nie jest dostępny."
 
-#. i18n( "Could not terminate listing %1" ).arg( errorText );
-#: kio/global.cpp:910
+#: kio/global.cpp:740
 msgid "Could Not Cancel Listing"
 msgstr "Nie można anulować listy"
 
-#: kio/global.cpp:911
-msgid "FIXME: Document this"
-msgstr "UWAGA: Brak dokumentacji"
+#: kio/global.cpp:741
+msgid ""
+"This is a fairly technical error in which an error occurred while attempting "
+"to list directory."
+msgstr ""
 
-#: kio/global.cpp:915
+#: kio/global.cpp:746
 msgid "Could Not Create Folder"
 msgstr "Nie można utworzyć katalogu"
 
-#: kio/global.cpp:916
+#: kio/global.cpp:747
 msgid "An attempt to create the requested folder failed."
 msgstr "Próba utworzenia żądanego katalogu nie powiodła się."
 
-#: kio/global.cpp:917
+#: kio/global.cpp:748
 msgid "The location where the folder was to be created may not exist."
 msgstr "Być może miejsce, gdzie miał zostać utworzony katalog nie istnieje."
 
-#: kio/global.cpp:924
+#: kio/global.cpp:755
 msgid "Could Not Remove Folder"
 msgstr "Nie można usunąć katalogu"
 
-#: kio/global.cpp:925
+#: kio/global.cpp:756
 msgid "An attempt to remove the specified folder, <strong>%1</strong>, failed."
 msgstr ""
 "Próba usunięcia podanego katalogu, <strong>%1</strong>, nie powiodła się."
 
-#: kio/global.cpp:927
+#: kio/global.cpp:758
 msgid "The specified folder may not exist."
 msgstr "Podany katalog może nie istnieć."
 
-#: kio/global.cpp:928
+#: kio/global.cpp:759
 msgid "The specified folder may not be empty."
 msgstr "Podany katalog może nie być pusty."
 
-#: kio/global.cpp:931
+#: kio/global.cpp:762
 msgid "Ensure that the folder exists and is empty, and try again."
 msgstr "Upewnij się, że katalog istnieje oraz jest pusty i spróbuj ponownie."
 
-#: kio/global.cpp:936
+#: kio/global.cpp:767
 msgid "Could Not Resume File Transfer"
 msgstr "Nie można wznowić transferu"
 
-#: kio/global.cpp:937
+#: kio/global.cpp:768
 msgid ""
 "The specified request asked that the transfer of file <strong>%1</strong> be "
 "resumed at a certain point of the transfer. This was not possible."
@@ -2087,68 +1773,68 @@ msgstr ""
 "Żądanie wznowienia transferu pliku <strong>%1</strong> nie mogło zostać "
 "zrealizowane."
 
-#: kio/global.cpp:940
+#: kio/global.cpp:771
 msgid "The protocol, or the server, may not support file resuming."
 msgstr "Protokół lub serwer nie pozwala na wznowienie transferu."
 
-#: kio/global.cpp:942
+#: kio/global.cpp:773
 msgid "Retry the request without attempting to resume transfer."
 msgstr "Powtórz żądanie bez próby wznowienia transferu."
 
-#: kio/global.cpp:947
+#: kio/global.cpp:778
 msgid "Could Not Rename Resource"
 msgstr "Nie można zmienić nazwy zasobu"
 
-#: kio/global.cpp:948
+#: kio/global.cpp:779
 msgid "An attempt to rename the specified resource <strong>%1</strong> failed."
 msgstr "Próba zmiany nazwy zasobu <strong>%1</strong> nie powiodła się."
 
-#: kio/global.cpp:956
+#: kio/global.cpp:787
 msgid "Could Not Alter Permissions of Resource"
 msgstr "Nie można zmienić praw do zasobu"
 
-#: kio/global.cpp:957
+#: kio/global.cpp:788
 msgid ""
 "An attempt to alter the permissions on the specified resource <strong>%1</"
 "strong> failed."
 msgstr "Próba zmiany praw zasobu <strong>%1</strong> nie powiodła się."
 
-#: kio/global.cpp:964
+#: kio/global.cpp:795
 msgid "Could Not Change Ownership of Resource"
 msgstr "Nie można zmienić właściciela zasobu"
 
-#: kio/global.cpp:965
+#: kio/global.cpp:796
 msgid ""
 "An attempt to change the ownership of the specified resource <strong>%1</"
 "strong> failed."
 msgstr ""
 "Próba zmiany właściciela danego zasobu <strong>%1</strong> nie powiodła się."
 
-#: kio/global.cpp:972
+#: kio/global.cpp:803
 msgid "Could Not Delete Resource"
 msgstr "Nie można usunąć zasobu"
 
-#: kio/global.cpp:973
+#: kio/global.cpp:804
 msgid "An attempt to delete the specified resource <strong>%1</strong> failed."
 msgstr "Próba usunięcia podanego  zasobu <strong>%1</strong> nie powiodła się."
 
-#: kio/global.cpp:980
+#: kio/global.cpp:811
 msgid "Unexpected Program Termination"
 msgstr "Niespodziewane zakończenie programu"
 
-#: kio/global.cpp:981
+#: kio/global.cpp:812
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol has unexpectedly terminated."
 msgstr ""
-"Program na twoim komputerze, odpowiadający za dostęp do protokołu <strong>"
-"%1</strong>, nieoczekiwanie zakończył działanie."
+"Program na twoim komputerze, odpowiadający za dostęp do protokołu "
+"<strong>%1</strong>, nieoczekiwanie zakończył działanie."
 
-#: kio/global.cpp:989
+#: kio/global.cpp:820
 msgid "Out of Memory"
 msgstr "Brak pamięci"
 
-#: kio/global.cpp:990
+#: kio/global.cpp:821
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol could not obtain the memory required to continue."
@@ -2156,11 +1842,11 @@ msgstr ""
 "Programowi na twoim komputerze, odpowiadającemu za dostęp do protokołu "
 "<strong>%1</strong>, zabrakło pamięci niezbędnej do kontynuowania pracy."
 
-#: kio/global.cpp:998
+#: kio/global.cpp:829
 msgid "Unknown Proxy Host"
 msgstr "Nieznany serwer pośredniczący (proxy)"
 
-#: kio/global.cpp:999
+#: kio/global.cpp:830
 msgid ""
 "While retrieving information about the specified proxy host, <strong>%1</"
 "strong>, an Unknown Host error was encountered. An unknown host error "
@@ -2170,7 +1856,7 @@ msgstr ""
 "strong> wystąpił błąd \"Nieznany adres\". Błąd ten oznacza, że w Internecie "
 "nie znaleziono komputera o podanej nazwie."
 
-#: kio/global.cpp:1003
+#: kio/global.cpp:834
 msgid ""
 "There may have been a problem with your network configuration, specifically "
 "your proxy's hostname. If you have been accessing the Internet with no "
@@ -2180,15 +1866,15 @@ msgstr ""
 "serwera pośredniczącego. Jeśli jednak ostatnio korzystałeś z Internetu bez "
 "problemów, jest to mało prawdopodobne."
 
-#: kio/global.cpp:1007
+#: kio/global.cpp:838
 msgid "Double-check your proxy settings and try again."
 msgstr "Sprawdź ustawienia serwera pośredniczącego i ponów próbę."
 
-#: kio/global.cpp:1012
+#: kio/global.cpp:843
 msgid "Authentication Failed: Method %1 Not Supported"
 msgstr "Błąd uwierzytelnienia: metoda %1 nie jest obsługiwana"
 
-#: kio/global.cpp:1014
+#: kio/global.cpp:845
 #, fuzzy
 msgid ""
 "Although you may have supplied the correct authentication details, the "
@@ -2199,7 +1885,7 @@ msgstr ""
 "ono ponieważ metoda, używana przez ten serwer, nie jest obsługiwana przez "
 "program KDE, realizujący protokół %1."
 
-#: kio/global.cpp:1018
+#: kio/global.cpp:849
 #, fuzzy
 msgid ""
 "Please file a bug at <a href=\"%1\">%2/</a> to inform the team working on it "
@@ -2209,15 +1895,11 @@ msgstr ""
 "\">http://bugs.kde.org/</a>, informując Zespół KDE o nieobsługiwanej "
 "metodzie uwierzytelnienia."
 
-#: kio/global.cpp:1024
-msgid "Request Aborted"
-msgstr "Żądanie przerwane"
-
-#: kio/global.cpp:1031
+#: kio/global.cpp:855
 msgid "Internal Error in Server"
 msgstr "Wewnętrzny błąd serwera"
 
-#: kio/global.cpp:1032
+#: kio/global.cpp:856
 msgid ""
 "The program on the server which provides access to the <strong>%1</strong> "
 "protocol has reported an internal error: %2."
@@ -2225,7 +1907,7 @@ msgstr ""
 "Program na serwerze, zapewniający dostęp do protokołu <strong>%1</strong>, "
 "zwrócił błąd wewnętrzny: %2."
 
-#: kio/global.cpp:1035
+#: kio/global.cpp:859
 msgid ""
 "This is most likely to be caused by a bug in the server program. Please "
 "consider submitting a full bug report as detailed below."
@@ -2233,12 +1915,12 @@ msgstr ""
 "Najprawdopodobniej jest to spowodowane błędem programu na serwerze. Proszę "
 "rozważyć wysłanie pełnej informacji o błędzie według poniższych instrukcji."
 
-#: kio/global.cpp:1038
+#: kio/global.cpp:862
 msgid "Contact the administrator of the server to advise them of the problem."
 msgstr ""
 "Skontaktuj się z administratorem serwera, by poinformować go o problemie."
 
-#: kio/global.cpp:1040
+#: kio/global.cpp:864
 msgid ""
 "If you know who the authors of the server software are, submit the bug "
 "report directly to them."
@@ -2246,11 +1928,11 @@ msgstr ""
 "Jeśli znasz autorów oprogramowania dla tego serwera, wyślij raport o błędzie "
 "bezpośrednio do nich."
 
-#: kio/global.cpp:1045
+#: kio/global.cpp:869
 msgid "Timeout Error"
 msgstr "Czas minął"
 
-#: kio/global.cpp:1046
+#: kio/global.cpp:870
 #, fuzzy
 msgid ""
 "Although contact was made with the server, a response was not received "
@@ -2268,15 +1950,15 @@ msgstr ""
 "te ustawienia można zmienić w Ustawieniach systemowych KDE, wybierając Sieć-"
 ">Ustawienia->Połączenie."
 
-#: kio/global.cpp:1057
+#: kio/global.cpp:881
 msgid "The server was too busy responding to other requests to respond."
 msgstr "Serwer był zbyt zajęty, realizując inne żądania."
 
-#: kio/global.cpp:1063
+#: kio/global.cpp:887
 msgid "Unknown Error"
 msgstr "Nieznany błąd"
 
-#: kio/global.cpp:1064
+#: kio/global.cpp:888
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol has reported an unknown error: %2."
@@ -2284,23 +1966,11 @@ msgstr ""
 "Program na twoim komputerze, umożliwiający dostęp do protokołu <strong>%1</"
 "strong>, zwrócił nieznany błąd: %2."
 
-#: kio/global.cpp:1072
-msgid "Unknown Interruption"
-msgstr "Nieznane przerwanie"
-
-#: kio/global.cpp:1073
-msgid ""
-"The program on your computer which provides access to the <strong>%1</"
-"strong> protocol has reported an interruption of an unknown type: %2."
-msgstr ""
-"Program na twoim komputerze, umożliwiający dostęp do protokołu <strong>%1</"
-"strong>, zwrócił przerwanie nieznanego typu %2."
-
-#: kio/global.cpp:1081
+#: kio/global.cpp:896
 msgid "Could Not Delete Original File"
 msgstr "Nie można usunąć oryginalnego pliku"
 
-#: kio/global.cpp:1082
+#: kio/global.cpp:897
 msgid ""
 "The requested operation required the deleting of the original file, most "
 "likely at the end of a file move operation. The original file <strong>%1</"
@@ -2310,11 +1980,11 @@ msgstr ""
 "operacji przenoszenia pliku). Niestety, oryginalnego pliku <strong>%1</"
 "strong> nie można było usunąć."
 
-#: kio/global.cpp:1091
+#: kio/global.cpp:906
 msgid "Could Not Delete Temporary File"
 msgstr "Nie można usunąć pliku tymczasowego"
 
-#: kio/global.cpp:1092
+#: kio/global.cpp:907
 msgid ""
 "The requested operation required the creation of a temporary file in which "
 "to save the new file while being downloaded. This temporary file <strong>%1</"
@@ -2324,58 +1994,58 @@ msgstr ""
 "byłoby zapisanie ściąganego pliku. Niestety, pliku tymczasowego <strong>%1</"
 "strong> nie udało się utworzyć."
 
-#: kio/global.cpp:1101
+#: kio/global.cpp:916
 msgid "Could Not Rename Original File"
 msgstr "Nie można zmienić nazwy pliku"
 
-#: kio/global.cpp:1102
+#: kio/global.cpp:917
 msgid ""
-"The requested operation required the renaming of the original file <strong>"
-"%1</strong>, however it could not be renamed."
+"The requested operation required the renaming of the original file "
+"<strong>%1</strong>, however it could not be renamed."
 msgstr ""
 "Żądana operacja wymagała zmiany nazwy oryginalnego pliku <strong>%1</"
 "strong>. Niestety, nie udało się zmienić tej nazwy."
 
-#: kio/global.cpp:1110
+#: kio/global.cpp:925
 msgid "Could Not Rename Temporary File"
 msgstr "Nie można zmienić nazwy pliku tymczasowego"
 
-#: kio/global.cpp:1111
+#: kio/global.cpp:926
 msgid ""
-"The requested operation required the creation of a temporary file <strong>"
-"%1</strong>, however it could not be created."
+"The requested operation required the creation of a temporary file "
+"<strong>%1</strong>, however it could not be created."
 msgstr ""
 "Żądana operacja wymagała utworzenia tymczasowego pliku <strong>%1</strong>, "
 "ale nie udało się go utworzyć."
 
-#: kio/global.cpp:1119
+#: kio/global.cpp:934
 msgid "Could Not Create Link"
 msgstr "Nie można utworzyć dowiązania"
 
-#: kio/global.cpp:1120
+#: kio/global.cpp:935
 msgid "Could Not Create Symbolic Link"
 msgstr "Nie można utworzyć dowiązania symbolicznego"
 
-#: kio/global.cpp:1121
+#: kio/global.cpp:936
 msgid "The requested symbolic link %1 could not be created."
 msgstr "Nie można utworzyć żądanego dowiązania symbolicznego %1."
 
-#: kio/global.cpp:1128
+#: kio/global.cpp:943
 msgid "No Content"
 msgstr "Brak treści"
 
-#: kio/global.cpp:1133
+#: kio/global.cpp:948
 msgid "Disk Full"
 msgstr "Dysk pełny"
 
-#: kio/global.cpp:1134
+#: kio/global.cpp:949
 msgid ""
 "The requested file <strong>%1</strong> could not be written to as there is "
 "inadequate disk space."
 msgstr ""
 "Nie można zapisać żądanego pliku <strong>%1</strong> z powodu braku miejsca."
 
-#: kio/global.cpp:1136
+#: kio/global.cpp:951
 msgid ""
 "Free up enough disk space by 1) deleting unwanted and temporary files; 2) "
 "archiving files to removable media storage such as CD-Recordable discs; or "
@@ -2385,11 +2055,11 @@ msgstr ""
 "tymczasowych plików; 2) zarchiwizowanie części danych na innych nośnikach "
 "danych (np. płytach CD); lub 3) zainstalowanie dodatkowego dysku."
 
-#: kio/global.cpp:1143
+#: kio/global.cpp:958
 msgid "Source and Destination Files Identical"
 msgstr "Pliki źródłowy i docelowy są tym samym plikiem"
 
-#: kio/global.cpp:1144
+#: kio/global.cpp:959
 msgid ""
 "The operation could not be completed because the source and destination "
 "files are the same file."
@@ -2397,19 +2067,19 @@ msgstr ""
 "Operacja nie mogła zostać wykonana, ponieważ pliki źródłowy i docelowy są "
 "tym samym plikiem."
 
-#: kio/global.cpp:1146
+#: kio/global.cpp:961
 msgid "Choose a different filename for the destination file."
 msgstr "Wybierz inną nazwę pliku docelowego."
 
-#: kio/global.cpp:1157
+#: kio/global.cpp:972
 msgid "Undocumented Error"
 msgstr "Nieudokumentowany błąd"
 
-#: kio/slavebase.h:242 kio/slavebase.h:262
+#: kio/slavebase.h:218 kio/slavebase.h:238
 msgid "&Yes"
 msgstr "&Tak"
 
-#: kio/slavebase.h:243 kio/slavebase.h:263
+#: kio/slavebase.h:219 kio/slavebase.h:239
 msgid "&No"
 msgstr "&Nie"
 
@@ -2433,29 +2103,29 @@ msgstr "Nie masz praw do uruchomienia tego pliku."
 msgid "Launching %1"
 msgstr "Uruchamianie %1"
 
-#: kio/krun.cpp:658
+#: kio/krun.cpp:648
 msgid "Error processing Exec field in %1"
 msgstr "Błąd przetwarzania pola Exec w %1"
 
-#: kio/krun.cpp:844
+#: kio/krun.cpp:834
 msgctxt "Warning about executing unknown .desktop file"
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
-#: kio/krun.cpp:858
+#: kio/krun.cpp:848
 msgctxt "program name follows in a line edit below"
 msgid "This will start the program:"
 msgstr "To uruchomi program:"
 
-#: kio/krun.cpp:872
+#: kio/krun.cpp:862
 msgid "If you do not trust this program, click Cancel"
 msgstr "Jeśli nie ufasz temu programowi, kliknij Anuluj"
 
-#: kio/krun.cpp:905
+#: kio/krun.cpp:895
 msgid "Unable to make the service %1 executable, aborting execution"
 msgstr "Nie można uruchomić usługi %1 (błąd podczas zmiany uprawnień)"
 
-#: kio/krun.cpp:1086
+#: kio/krun.cpp:1060
 msgid ""
 "<qt>Unable to run the command specified. The file or folder <b>%1</b> does "
 "not exist.</qt>"
@@ -2463,7 +2133,7 @@ msgstr ""
 "<qt>Nie można uruchomić polecenia. Plik lub katalog <b>%1</b> nie istnieje.</"
 "qt>"
 
-#: kio/krun.cpp:1676
+#: kio/krun.cpp:1646
 msgid "Could not find the program '%1'"
 msgstr "Nie można znaleźć programu '%1'"
 
@@ -2487,41 +2157,41 @@ msgstr "&Edycja..."
 msgid "Click this button to display the familiar KDE mime type editor."
 msgstr "Kliknij ten przycisk, by włączyć edytor typów MIME KDE."
 
-#: kio/jobuidelegate.cpp:149 ../kfile/kdiroperator.cpp:791
+#: kio/jobuidelegate.cpp:134 ../kfile/kdiroperator.cpp:777
 msgid "Do you really want to delete this item?"
 msgid_plural "Do you really want to delete these %1 items?"
 msgstr[0] "Czy na pewno usunąć ten %1 element?"
 msgstr[1] "Czy na pewno usunąć te %1 elementy?"
 msgstr[2] "Czy na pewno usunąć tych %1 elementów?"
 
-#: kio/jobuidelegate.cpp:151 ../kfile/kdiroperator.cpp:793
+#: kio/jobuidelegate.cpp:136 ../kfile/kdiroperator.cpp:779
 msgid "Delete Files"
 msgstr "Usuń pliki"
 
-#: kio/jobuidelegate.cpp:159
+#: kio/jobuidelegate.cpp:144
 msgctxt "@info"
 msgid ""
 "Do you want to permanently delete all items from Trash? This action cannot "
 "be undone."
 msgstr "Czy usunąć wszystkie pliki z Kosza? Nie można cofnąć tej akcji."
 
-#: kio/jobuidelegate.cpp:161 ../kfile/kfileplacesview.cpp:644
+#: kio/jobuidelegate.cpp:146 ../kfile/kfileplacesview.cpp:644
 msgctxt "@action:button"
 msgid "Empty Trash"
 msgstr "Opróżnij kosz"
 
-#: kio/jobuidelegate.cpp:170
+#: kio/jobuidelegate.cpp:155
 msgid "Do you really want to move this item to the trash?"
 msgid_plural "Do you really want to move these %1 items to the trash?"
 msgstr[0] "Czy na pewno przenieść ten %1 element do kosza?"
 msgstr[1] "Czy na pewno przenieść te %1 elementy do kosza?"
 msgstr[2] "Czy na pewno przenieść tych %1 elementów do kosza?"
 
-#: kio/jobuidelegate.cpp:172 ../kfile/kdiroperator.cpp:1768
+#: kio/jobuidelegate.cpp:157 ../kfile/kdiroperator.cpp:1747
 msgid "Move to Trash"
 msgstr "Przenieś do kosza"
 
-#: kio/jobuidelegate.cpp:173
+#: kio/jobuidelegate.cpp:158
 msgctxt "Verb"
 msgid "&Trash"
 msgstr "Do &kosza"
@@ -2555,25 +2225,25 @@ msgstr ""
 "format danych nie ma teraz zastosowania. Proszę ponownie skopiować to, co "
 "było do wklejenia."
 
-#: kio/paste.cpp:263
+#: kio/paste.cpp:257
 msgid "&Paste File"
 msgid_plural "&Paste %1 Files"
 msgstr[0] "&Wklej %1 plik"
 msgstr[1] "&Wklej %1 pliki"
 msgstr[2] "&Wklej %1 plików"
 
-#: kio/paste.cpp:265
+#: kio/paste.cpp:259
 msgid "&Paste URL"
 msgid_plural "&Paste %1 URLs"
 msgstr[0] "&Wklej %1 URL"
 msgstr[1] "&Wklej %1 URL-e"
 msgstr[2] "&Wklej %1 URL-i"
 
-#: kio/paste.cpp:267
+#: kio/paste.cpp:261
 msgid "&Paste Clipboard Contents"
 msgstr "&Wklej zawartość schowka"
 
-#: kio/kfileitemdelegate.cpp:213
+#: kio/kfileitemdelegate.cpp:210
 msgctxt "Items in a folder"
 msgid "1 item"
 msgid_plural "%1 items"
@@ -2581,16 +2251,28 @@ msgstr[0] "%1 elem."
 msgstr[1] "%1 elem."
 msgstr[2] "%1 elem."
 
-#: kio/kfileitemdelegate.cpp:269 kio/kfileitemdelegate.cpp:273
+#: kio/kfileitemdelegate.cpp:266 kio/kfileitemdelegate.cpp:270
 msgctxt "@info mimetype"
 msgid "Unknown"
 msgstr "Nieznany"
 
-#: kio/slaveinterface.cpp:371
+#: kio/slaveinterface.cpp:279
+msgid "Unknown protocol '%1'."
+msgstr "Nieznany protokół '%1'."
+
+#: kio/slaveinterface.cpp:286
+msgid "Can not find io-slave for protocol '%1'."
+msgstr "Nie można odnaleźć io-slave dla protokołu '%1'."
+
+#: kio/slaveinterface.cpp:303
+msgid "Can not start io-slave for protocol '%1'."
+msgstr ""
+
+#: kio/slaveinterface.cpp:591
 msgid "&Details"
 msgstr "&Szczegóły"
 
-#: kio/slaveinterface.cpp:375
+#: kio/slaveinterface.cpp:595
 msgid "Co&ntinue"
 msgstr "Ko&ntynuuj"
 
@@ -2606,452 +2288,452 @@ msgstr ""
 msgid "&Skip File"
 msgstr "Po&miń plik"
 
-#: kio/kfilemetainfo.cpp:263
-msgctxt "@label"
-msgid "Modified"
-msgstr ""
-
-#: kio/kfilemetainfo.cpp:264
-msgctxt "@label"
-msgid "Owner"
-msgstr ""
-
-#: kio/kfilemetainfo.cpp:265
-msgctxt "@label"
-msgid "Permissions"
-msgstr ""
-
 #: kio/kfilemetainfo.cpp:266
 msgctxt "@label"
-msgid "Size"
+msgid "Modified"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:267
 msgctxt "@label"
-msgid "Total Size"
+msgid "Owner"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:268
 msgctxt "@label"
-msgid "Type"
+msgid "Permissions"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:269
 msgctxt "@label"
-msgid "MIME Type"
+msgid "Size"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:270
+msgctxt "@label"
+msgid "Total Size"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:271
 msgctxt "@label"
-msgid "Filename"
+msgid "Type"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:272
-msgctxt "@label file URL"
-msgid "URL"
-msgstr ""
-
-#: kio/kfilemetainfo.cpp:273
 msgctxt "@label"
-msgid "Width"
+msgid "MIME Type"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:274
 msgctxt "@label"
-msgid "Height"
+msgid "Filename"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:275
-msgctxt "@label"
-msgid "Average Bitrate"
+msgctxt "@label file URL"
+msgid "URL"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:276
 msgctxt "@label"
-msgid "Sample Rate"
+msgid "Width"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:277
 msgctxt "@label"
-msgid "Channels"
+msgid "Height"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:278
 msgctxt "@label"
-msgid "Duration"
+msgid "Average Bitrate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:279
 msgctxt "@label"
-msgid "Frame Rate"
+msgid "Sample Rate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:280
 msgctxt "@label"
-msgid "Video Codec"
+msgid "Channels"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:281
 msgctxt "@label"
-msgid "Audio Codec"
+msgid "Duration"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:282
 msgctxt "@label"
-msgid "Subtitle Codec"
+msgid "Frame Rate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:283
 msgctxt "@label"
-msgid "Audio Bit Rate"
+msgid "Video Codec"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:284
 msgctxt "@label"
-msgid "Video Bit Rate"
+msgid "Audio Codec"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:285
 msgctxt "@label"
-msgid "Page Count"
+msgid "Subtitle Codec"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:286
 msgctxt "@label"
-msgid "Copyright"
+msgid "Audio Bit Rate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:287
 msgctxt "@label"
-msgid "Comment"
+msgid "Video Bit Rate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:288
-msgctxt "@label music title"
-msgid "Title"
+msgctxt "@label"
+msgid "Page Count"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:289
 msgctxt "@label"
-msgid "Keyword"
+msgid "Copyright"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:290
 msgctxt "@label"
-msgid "Description"
+msgid "Comment"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:291
+msgctxt "@label music title"
+msgid "Title"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:292
+msgctxt "@label"
+msgid "Keyword"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:293
+msgctxt "@label"
+msgid "Description"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:294
 msgctxt "@label Software used to generate content"
 msgid "Generator"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:292
+#: kio/kfilemetainfo.cpp:295
 msgctxt "@label modification date"
 msgid "Modified"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:293
+#: kio/kfilemetainfo.cpp:296
 msgctxt "@label creation date"
 msgid "Created"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:294
+#: kio/kfilemetainfo.cpp:297
 msgctxt "@label"
 msgid "Subject"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:295
+#: kio/kfilemetainfo.cpp:298
 msgctxt "@label music album"
 msgid "Album"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:296
+#: kio/kfilemetainfo.cpp:299
 msgctxt "@label music genre"
 msgid "Genre"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:297
+#: kio/kfilemetainfo.cpp:300
 msgctxt "@label"
 msgid "Performer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:298
+#: kio/kfilemetainfo.cpp:301
 msgctxt "@label music track number"
 msgid "Track"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:299
+#: kio/kfilemetainfo.cpp:302
 msgctxt "@label music composer"
 msgid "Composer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:300
+#: kio/kfilemetainfo.cpp:303
 msgctxt "@label"
 msgid "Encoder"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:301
+#: kio/kfilemetainfo.cpp:304
 msgctxt "@label"
 msgid "Encoded By"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:302
+#: kio/kfilemetainfo.cpp:305
 msgctxt "@label"
 msgid "Original Release Year"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:303
+#: kio/kfilemetainfo.cpp:306
 msgctxt "@label"
 msgid "URI"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:304
+#: kio/kfilemetainfo.cpp:307
 msgctxt "@label"
 msgid "Text Writer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:305
+#: kio/kfilemetainfo.cpp:308
 msgctxt "@label"
 msgid "Publisher"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:306
+#: kio/kfilemetainfo.cpp:309
 msgctxt "@label"
 msgid "Creator"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:307
+#: kio/kfilemetainfo.cpp:310
 msgctxt "@label"
 msgid "Contributor"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:308
+#: kio/kfilemetainfo.cpp:311
 msgctxt "@label EXIF"
 msgid "Manufacturer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:309
+#: kio/kfilemetainfo.cpp:312
 msgctxt "@label EXIF"
 msgid "Model"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:310
+#: kio/kfilemetainfo.cpp:313
 msgctxt "@label EXIF"
 msgid "Orientation"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:311
+#: kio/kfilemetainfo.cpp:314
 msgctxt "@label music or image artist"
 msgid "Artist"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:312
+#: kio/kfilemetainfo.cpp:315
 msgctxt "@label"
 msgid "GPS Latitude Reference"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:313
+#: kio/kfilemetainfo.cpp:316
 msgctxt "@label"
 msgid "GPS Longitude Reference"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:314
+#: kio/kfilemetainfo.cpp:317
 msgctxt "@label EXIF"
 msgid "Flash"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:315
+#: kio/kfilemetainfo.cpp:318
 msgctxt "@label EXIF"
 msgid "Exposure Time"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:316
+#: kio/kfilemetainfo.cpp:319
 msgctxt "@label EXIF"
 msgid "Exposure Bias Value"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:317
+#: kio/kfilemetainfo.cpp:320
 msgctxt "@label EXIF"
 msgid "Exposure Mode"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:318
+#: kio/kfilemetainfo.cpp:321
 msgctxt "@label EXIF aperture value"
 msgid "Aperture"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:319
+#: kio/kfilemetainfo.cpp:322
 msgctxt "@label EXIF"
 msgid "Focal Length"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:320
+#: kio/kfilemetainfo.cpp:323
 msgctxt "@label EXIF"
 msgid "Focal Length 35 mm"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:321
+#: kio/kfilemetainfo.cpp:324
 msgctxt "@label EXIF"
 msgid "ISO Speed Ratings"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:322
+#: kio/kfilemetainfo.cpp:325
 msgctxt "@label EXIF"
 msgid "Metering Mode"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:323
+#: kio/kfilemetainfo.cpp:326
 msgctxt "@label EXIF"
 msgid "White Balance"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:324
+#: kio/kfilemetainfo.cpp:327
 msgctxt "@label"
 msgid "Family"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:326
+#: kio/kfilemetainfo.cpp:329
 msgctxt "@label"
 msgid "Creator E-Mail"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:327
+#: kio/kfilemetainfo.cpp:330
 msgctxt "@label"
 msgid "Hash Value"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:328
+#: kio/kfilemetainfo.cpp:331
 msgctxt "@label"
 msgid "Hash Algorithm"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:329
+#: kio/kfilemetainfo.cpp:332
 msgctxt "@label"
 msgid "Country"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:330
+#: kio/kfilemetainfo.cpp:333
 msgctxt "@label"
 msgid "Summary"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:331
+#: kio/kfilemetainfo.cpp:334
 msgctxt "@label"
 msgid "Character Set"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:332
+#: kio/kfilemetainfo.cpp:335
 msgctxt "@label number of lines"
 msgid "Lines"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:333
+#: kio/kfilemetainfo.cpp:336
 msgctxt "@label number of words"
 msgid "Words"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:334
+#: kio/kfilemetainfo.cpp:337
 msgctxt "@label"
 msgid "Character Count"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:335
+#: kio/kfilemetainfo.cpp:338
 msgctxt "@label"
 msgid "Revision"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:336
+#: kio/kfilemetainfo.cpp:339
 msgctxt "@label"
 msgid "Contact"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:337
+#: kio/kfilemetainfo.cpp:340
 msgctxt "@label"
 msgid "Disclaimer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:338
+#: kio/kfilemetainfo.cpp:341
 msgctxt "@label video director"
 msgid "Director"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:339
+#: kio/kfilemetainfo.cpp:342
 msgctxt "@label"
 msgid "Conductor"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:340
+#: kio/kfilemetainfo.cpp:343
 msgctxt "@label"
 msgid "Interpreted By"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:341
+#: kio/kfilemetainfo.cpp:344
 msgctxt "@label"
 msgid "Beats Per Minute"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:342
+#: kio/kfilemetainfo.cpp:345
 msgctxt "@label"
 msgid "Original Artist"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:343
+#: kio/kfilemetainfo.cpp:346
 msgctxt "@label"
 msgid "Original Text Writer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:344
+#: kio/kfilemetainfo.cpp:347
 msgctxt "@label"
 msgid "Lyrics"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:345
+#: kio/kfilemetainfo.cpp:348
 msgctxt "@label"
 msgid "Licensee"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:346
+#: kio/kfilemetainfo.cpp:349
 msgctxt "@label"
 msgid "Musician Credits"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:347
+#: kio/kfilemetainfo.cpp:350
 msgctxt "@label"
 msgid "Subtitle"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:348
+#: kio/kfilemetainfo.cpp:351
 msgctxt "@label"
 msgid "Codec"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:349
+#: kio/kfilemetainfo.cpp:352
 msgctxt "@label"
 msgid "Container Format"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:350
+#: kio/kfilemetainfo.cpp:353
 msgctxt "@label"
 msgid "Grouping"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:351
+#: kio/kfilemetainfo.cpp:354
 msgctxt "@label"
 msgid "Audio Bit Depth"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:352
+#: kio/kfilemetainfo.cpp:355
 msgctxt "@label"
 msgid "Video Bit Depth"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:353
+#: kio/kfilemetainfo.cpp:356
 msgctxt "@label"
 msgid "Aspect Ratio"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:354
+#: kio/kfilemetainfo.cpp:357
 msgctxt "@label"
 msgid "Foundry"
 msgstr ""
@@ -3116,33 +2798,25 @@ msgstr ""
 msgid "Undo File Copy Confirmation"
 msgstr "Potwierdzenie cofnięcia kopiowania pliku"
 
-#: kio/kfileitem.cpp:1142
+#: kio/kfileitem.cpp:979
 msgid "(Symbolic Link to %1)"
 msgstr "(Symboliczny odnośnik do %1)"
 
-#: kio/kfileitem.cpp:1144
+#: kio/kfileitem.cpp:981
 msgid "(%1, Link to %2)"
 msgstr "(%1, dowiązanie do %2)"
 
-#: kio/kfileitem.cpp:1148
+#: kio/kfileitem.cpp:984
 msgid " (Points to %1)"
 msgstr " (Wskazuje na: %1)"
 
-#: kio/slavebase.cpp:834
+#: kio/slavebase.cpp:693
 msgid "Authentication Dialog"
 msgstr ""
 
 #: kio/pastedialog.cpp:55
 msgid "Data format:"
 msgstr "Format danych:"
-
-#: kio/slave.cpp:403
-msgid "Unknown protocol '%1'."
-msgstr "Nieznany protokół '%1'."
-
-#: kio/slave.cpp:412
-msgid "Can not find io-slave for protocol '%1'."
-msgstr "Nie można odnaleźć io-slave dla protokołu '%1'."
 
 #: kio/kdesktopfileactions.cpp:53
 msgid "The desktop entry file %1 has no Type=... entry."
@@ -3157,8 +2831,8 @@ msgstr ""
 "Rodzaj %1\n"
 "elementu pulpitu jest nieznany."
 
-#: kio/kdesktopfileactions.cpp:83 kio/kdesktopfileactions.cpp:157
-#: kio/kdesktopfileactions.cpp:258
+#: kio/kdesktopfileactions.cpp:83 kio/kdesktopfileactions.cpp:154
+#: kio/kdesktopfileactions.cpp:255
 msgid ""
 "The desktop entry file\n"
 "%1\n"
@@ -3168,7 +2842,7 @@ msgstr ""
 "%1\n"
 "opisuje urządzenie, ale nie zawiera pozycji Dev=..."
 
-#: kio/kdesktopfileactions.cpp:125
+#: kio/kdesktopfileactions.cpp:122
 msgid ""
 "The desktop entry file\n"
 "%1\n"
@@ -3178,65 +2852,65 @@ msgstr ""
 "%1\n"
 "opisuje odnośnik, ale nie zawiera pozycji URL=..."
 
-#: kio/kdesktopfileactions.cpp:172
+#: kio/kdesktopfileactions.cpp:169
 msgid "Mount"
 msgstr "Montuj"
 
-#: kio/kdesktopfileactions.cpp:178
+#: kio/kdesktopfileactions.cpp:175
 msgid "Unmount"
 msgstr "Odmontuj"
 
-#: kfile/kpropertiesdialog.cpp:195 kfile/kpropertiesdialog.cpp:210
-#: kfile/kpropertiesdialog.cpp:222 kfile/kpropertiesdialog.cpp:237
-#: kfile/kpropertiesdialog.cpp:253
+#: kfile/kpropertiesdialog.cpp:280 kfile/kpropertiesdialog.cpp:295
+#: kfile/kpropertiesdialog.cpp:307 kfile/kpropertiesdialog.cpp:323
+#: kfile/kpropertiesdialog.cpp:339
 msgid "Properties for %1"
 msgstr "Właściwości dla %1"
 
-#: kfile/kpropertiesdialog.cpp:220
+#: kfile/kpropertiesdialog.cpp:305
 msgid "Properties for 1 item"
 msgid_plural "Properties for %1 Selected Items"
 msgstr[0] "Właściwości %1 elementu"
 msgstr[1] "Właściwości %1 elementów"
 msgstr[2] "Właściwości %1 elementów"
 
-#: kfile/kpropertiesdialog.cpp:724
+#: kfile/kpropertiesdialog.cpp:720
 msgctxt "@title:tab File properties"
 msgid "&General"
 msgstr "&Ogólne"
 
-#: kfile/kpropertiesdialog.cpp:910
+#: kfile/kpropertiesdialog.cpp:912
 msgid "Type:"
 msgstr "Typ:"
 
-#: kfile/kpropertiesdialog.cpp:923
+#: kfile/kpropertiesdialog.cpp:925
 msgid "Create New File Type"
 msgstr "Utwórz nowy typ pliku"
 
-#: kfile/kpropertiesdialog.cpp:925
+#: kfile/kpropertiesdialog.cpp:927
 msgid "File Type Options"
 msgstr "Opcje typu pliku"
 
-#: kfile/kpropertiesdialog.cpp:932
+#: kfile/kpropertiesdialog.cpp:934
 msgid "Contents:"
 msgstr "Zawartość:"
 
-#: kfile/kpropertiesdialog.cpp:941 kfile/kurlrequesterdialog.cpp:58
+#: kfile/kpropertiesdialog.cpp:942 kfile/kurlrequesterdialog.cpp:58
 msgid "Location:"
 msgstr "Położenie:"
 
-#: kfile/kpropertiesdialog.cpp:955
+#: kfile/kpropertiesdialog.cpp:957
 msgid "Size:"
 msgstr "Rozmiar:"
 
-#: kfile/kpropertiesdialog.cpp:974
+#: kfile/kpropertiesdialog.cpp:975
 msgid "Calculate"
 msgstr "Oblicz"
 
-#: kfile/kpropertiesdialog.cpp:975
+#: kfile/kpropertiesdialog.cpp:976
 msgid "Stop"
 msgstr "Zatrzymaj"
 
-#: kfile/kpropertiesdialog.cpp:985 kfile/kpropertiesdialog.cpp:1188
+#: kfile/kpropertiesdialog.cpp:985 kfile/kpropertiesdialog.cpp:1185
 msgid "Refresh"
 msgstr "Odśwież"
 
@@ -3244,46 +2918,46 @@ msgstr "Odśwież"
 msgid "Points to:"
 msgstr "Wskazuje na:"
 
-#: kfile/kpropertiesdialog.cpp:1006
+#: kfile/kpropertiesdialog.cpp:1005
 msgid "Created:"
 msgstr "Utworzony:"
 
-#: kfile/kpropertiesdialog.cpp:1016
+#: kfile/kpropertiesdialog.cpp:1014
 msgid "Modified:"
 msgstr "Zmodyfikowany:"
 
-#: kfile/kpropertiesdialog.cpp:1026
+#: kfile/kpropertiesdialog.cpp:1023
 msgid "Accessed:"
 msgstr "Ostatnio otworzony:"
 
-#: kfile/kpropertiesdialog.cpp:1047
+#: kfile/kpropertiesdialog.cpp:1042
 msgid "Mounted on:"
 msgstr "Punkt montowania:"
 
-#: kfile/kpropertiesdialog.cpp:1055 kfile/kpropertiesdialog.cpp:2713
+#: kfile/kpropertiesdialog.cpp:1050 kfile/kpropertiesdialog.cpp:2796
 msgid "Device usage:"
 msgstr "Użycie urządzenia:"
 
-#: kfile/kpropertiesdialog.cpp:1150 kfile/kpropertiesdialog.cpp:2841
+#: kfile/kpropertiesdialog.cpp:1145 kfile/kpropertiesdialog.cpp:2918
 msgctxt "Available space out of total partition size (percent used)"
 msgid "%1 free of %2 (%3% used)"
 msgstr "%1 wolnego z %2 (użyte %3%)"
 
-#: kfile/kpropertiesdialog.cpp:1167 kfile/kpropertiesdialog.cpp:1183
+#: kfile/kpropertiesdialog.cpp:1163 kfile/kpropertiesdialog.cpp:1180
 msgid "1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 plik"
 msgstr[1] "%1 pliki"
 msgstr[2] "%1 plików"
 
-#: kfile/kpropertiesdialog.cpp:1168 kfile/kpropertiesdialog.cpp:1184
+#: kfile/kpropertiesdialog.cpp:1164 kfile/kpropertiesdialog.cpp:1181
 msgid "1 sub-folder"
 msgid_plural "%1 sub-folders"
 msgstr[0] "%1 katalog"
 msgstr[1] "%1 katalogi"
 msgstr[2] "%1 katalogów"
 
-#: kfile/kpropertiesdialog.cpp:1164
+#: kfile/kpropertiesdialog.cpp:1160
 msgid ""
 "Calculating... %1 (%2)\n"
 "%3, %4"
@@ -3291,20 +2965,20 @@ msgstr ""
 "Obliczanie... %1 (%2)\n"
 "%3, %4"
 
-#: kfile/kpropertiesdialog.cpp:1197
+#: kfile/kpropertiesdialog.cpp:1194
 msgid "Calculating..."
 msgstr "Obliczanie..."
 
-#: kfile/kpropertiesdialog.cpp:1232
+#: kfile/kpropertiesdialog.cpp:1231
 msgid "At least %1"
 msgstr "Przynajmniej %1"
 
-#: kfile/kpropertiesdialog.cpp:1269
+#: kfile/kpropertiesdialog.cpp:1268
 msgid "The new file name is empty."
 msgstr "Nowa nazwa pliku jest pusta."
 
-#: kfile/kpropertiesdialog.cpp:1442 kfile/kpropertiesdialog.cpp:2587
-#: kfile/kpropertiesdialog.cpp:2881 kfile/kpropertiesdialog.cpp:3132
+#: kfile/kpropertiesdialog.cpp:1449 kfile/kpropertiesdialog.cpp:2689
+#: kfile/kpropertiesdialog.cpp:2961 kfile/kpropertiesdialog.cpp:3209
 msgid ""
 "<qt>Could not save properties. You do not have sufficient access to write to "
 "<b>%1</b>.</qt>"
@@ -3312,75 +2986,75 @@ msgstr ""
 "<qt>Nie można zapisać właściwości. Brak odpowiednich uprawnień do zapisu <b> "
 "%1</b>.</qt>"
 
-#: kfile/kpropertiesdialog.cpp:1517 kfile/kpropertiesdialog.cpp:1521
-#: kfile/kpropertiesdialog.cpp:1526
+#: kfile/kpropertiesdialog.cpp:1522 kfile/kpropertiesdialog.cpp:1528
+#: kfile/kpropertiesdialog.cpp:1535
 msgid "Forbidden"
 msgstr "Zabronione"
 
-#: kfile/kpropertiesdialog.cpp:1518
+#: kfile/kpropertiesdialog.cpp:1523
 msgid "Can Read"
 msgstr "Prawo do odczytu"
 
-#: kfile/kpropertiesdialog.cpp:1519
+#: kfile/kpropertiesdialog.cpp:1524
 msgid "Can Read & Write"
 msgstr "Prawo do zapisu i odczytu"
 
-#: kfile/kpropertiesdialog.cpp:1522
+#: kfile/kpropertiesdialog.cpp:1529
 msgid "Can View Content"
 msgstr "Może zobaczyć zawartość"
 
-#: kfile/kpropertiesdialog.cpp:1523
+#: kfile/kpropertiesdialog.cpp:1530
 msgid "Can View & Modify Content"
 msgstr "Może oglądać i zmieniać zawartość"
 
-#: kfile/kpropertiesdialog.cpp:1527
+#: kfile/kpropertiesdialog.cpp:1536
 msgid "Can View Content & Read"
 msgstr "Może oglądać zawartość i czytać"
 
-#: kfile/kpropertiesdialog.cpp:1528
+#: kfile/kpropertiesdialog.cpp:1537
 msgid "Can View/Read & Modify/Write"
 msgstr "Może oglądać/czytać i zmieniać/zapisywać"
 
-#: kfile/kpropertiesdialog.cpp:1624
+#: kfile/kpropertiesdialog.cpp:1637
 msgid "&Permissions"
 msgstr "&Prawa dostępu"
 
-#: kfile/kpropertiesdialog.cpp:1636 kfile/kpropertiesdialog.cpp:1853
+#: kfile/kpropertiesdialog.cpp:1649 kfile/kpropertiesdialog.cpp:1867
 msgid "Access Permissions"
 msgstr "Prawa dostępu"
 
-#: kfile/kpropertiesdialog.cpp:1644
+#: kfile/kpropertiesdialog.cpp:1657
 msgid "This file is a link and does not have permissions."
 msgid_plural "All files are links and do not have permissions."
 msgstr[0] "Ten plik jest dowiązaniem i nie ma praw dostępu."
 msgstr[1] "Wszystkie pliki są dowiązaniami i nie mają praw dostępu."
 msgstr[2] "Wszystkie pliki są dowiązaniami i nie mają praw dostępu."
 
-#: kfile/kpropertiesdialog.cpp:1648
+#: kfile/kpropertiesdialog.cpp:1661
 msgid "Only the owner can change permissions."
 msgstr "Tylko właściciel może zmienić prawa."
 
-#: kfile/kpropertiesdialog.cpp:1651
+#: kfile/kpropertiesdialog.cpp:1665
 msgid "O&wner:"
 msgstr "&Właściciel:"
 
-#: kfile/kpropertiesdialog.cpp:1657
+#: kfile/kpropertiesdialog.cpp:1671
 msgid "Specifies the actions that the owner is allowed to do."
 msgstr "Określa akcje jakie może wykonywać właściciel."
 
-#: kfile/kpropertiesdialog.cpp:1659
+#: kfile/kpropertiesdialog.cpp:1673
 msgid "Gro&up:"
 msgstr "Gr&upa:"
 
-#: kfile/kpropertiesdialog.cpp:1665
+#: kfile/kpropertiesdialog.cpp:1679
 msgid "Specifies the actions that the members of the group are allowed to do."
 msgstr "Określa działania jakie mogą podejmować członkowie grupy."
 
-#: kfile/kpropertiesdialog.cpp:1667
+#: kfile/kpropertiesdialog.cpp:1681
 msgid "O&thers:"
 msgstr "I&nni:"
 
-#: kfile/kpropertiesdialog.cpp:1673
+#: kfile/kpropertiesdialog.cpp:1687
 msgid ""
 "Specifies the actions that all users, who are neither owner nor in the "
 "group, are allowed to do."
@@ -3388,15 +3062,15 @@ msgstr ""
 "Określa działania jakie mogą podejmować użytkownicy nie będący ani "
 "właścicielami, ani członkami grupy."
 
-#: kfile/kpropertiesdialog.cpp:1678
+#: kfile/kpropertiesdialog.cpp:1692
 msgid "Only own&er can rename and delete folder content"
 msgstr "Tylko właścici&el może zmienić nazwę lub zmienić zawartość katalogu"
 
-#: kfile/kpropertiesdialog.cpp:1679
+#: kfile/kpropertiesdialog.cpp:1693
 msgid "Is &executable"
 msgstr "Wy&konywalny"
 
-#: kfile/kpropertiesdialog.cpp:1683
+#: kfile/kpropertiesdialog.cpp:1697
 msgid ""
 "Enable this option to allow only the folder's owner to delete or rename the "
 "contained files and folders. Other users can only add new files, which "
@@ -3406,7 +3080,7 @@ msgstr ""
 "plików i katalogów w nim zawartych. Inni użytkownicy mogą tylko dodawać nowe "
 "pliki co wymaga uprawnień do modyfikacji zawartości."
 
-#: kfile/kpropertiesdialog.cpp:1687
+#: kfile/kpropertiesdialog.cpp:1701
 msgid ""
 "Enable this option to mark the file as executable. This only makes sense for "
 "programs and scripts. It is required when you want to execute them."
@@ -3414,35 +3088,35 @@ msgstr ""
 "Zaznacz opcję, żeby oznaczyć plik jako wykonywalny. Ma to sens jedynie dla "
 "programów lub skryptów. Wymagane jeśli chcesz je wykonać."
 
-#: kfile/kpropertiesdialog.cpp:1694
+#: kfile/kpropertiesdialog.cpp:1708
 msgid "A&dvanced Permissions"
 msgstr "Za&awansowane prawa dostępu"
 
-#: kfile/kpropertiesdialog.cpp:1703
+#: kfile/kpropertiesdialog.cpp:1716
 msgid "Ownership"
 msgstr "Właściciel"
 
-#: kfile/kpropertiesdialog.cpp:1710
+#: kfile/kpropertiesdialog.cpp:1723
 msgid "User:"
 msgstr "Użytkownik:"
 
-#: kfile/kpropertiesdialog.cpp:1761
+#: kfile/kpropertiesdialog.cpp:1775
 msgid "Group:"
 msgstr "Grupa:"
 
-#: kfile/kpropertiesdialog.cpp:1804
+#: kfile/kpropertiesdialog.cpp:1816
 msgid "Apply changes to all subfolders and their contents"
 msgstr "Zastosuj zmiany do wszystkich podkatalogów i ich zawartości"
 
-#: kfile/kpropertiesdialog.cpp:1843
+#: kfile/kpropertiesdialog.cpp:1857
 msgid "Advanced Permissions"
 msgstr "Zaawansowane prawa dostępu"
 
-#: kfile/kpropertiesdialog.cpp:1861
+#: kfile/kpropertiesdialog.cpp:1875
 msgid "Class"
 msgstr "Klasa"
 
-#: kfile/kpropertiesdialog.cpp:1866
+#: kfile/kpropertiesdialog.cpp:1880
 msgid ""
 "Show\n"
 "Entries"
@@ -3450,19 +3124,19 @@ msgstr ""
 "Wyświetlaj\n"
 "pozycje"
 
-#: kfile/kpropertiesdialog.cpp:1868
+#: kfile/kpropertiesdialog.cpp:1882
 msgid "Read"
 msgstr "Odczyt"
 
-#: kfile/kpropertiesdialog.cpp:1873
+#: kfile/kpropertiesdialog.cpp:1888
 msgid "This flag allows viewing the content of the folder."
 msgstr "To prawo pozwala na oglądanie zawartości katalogu."
 
-#: kfile/kpropertiesdialog.cpp:1875
+#: kfile/kpropertiesdialog.cpp:1890
 msgid "The Read flag allows viewing the content of the file."
 msgstr "Prawo Odczyt pozwala na oglądanie zawartości pliku."
 
-#: kfile/kpropertiesdialog.cpp:1879
+#: kfile/kpropertiesdialog.cpp:1895
 msgid ""
 "Write\n"
 "Entries"
@@ -3470,11 +3144,11 @@ msgstr ""
 "Zapisz\n"
 "pozycje"
 
-#: kfile/kpropertiesdialog.cpp:1881
+#: kfile/kpropertiesdialog.cpp:1897
 msgid "Write"
 msgstr "Zapis"
 
-#: kfile/kpropertiesdialog.cpp:1886
+#: kfile/kpropertiesdialog.cpp:1902
 msgid ""
 "This flag allows adding, renaming and deleting of files. Note that deleting "
 "and renaming can be limited using the Sticky flag."
@@ -3483,32 +3157,32 @@ msgstr ""
 "Pamiętaj, że usuwanie i zmienianie nazw może być ograniczone przy użyciu "
 "SUID."
 
-#: kfile/kpropertiesdialog.cpp:1889
+#: kfile/kpropertiesdialog.cpp:1905
 msgid "The Write flag allows modifying the content of the file."
 msgstr "Prawo do zapisu pozwala na zmienianie zawartości pliku."
 
-#: kfile/kpropertiesdialog.cpp:1894
+#: kfile/kpropertiesdialog.cpp:1911
 msgctxt "Enter folder"
 msgid "Enter"
 msgstr "Otwórz"
 
-#: kfile/kpropertiesdialog.cpp:1895
+#: kfile/kpropertiesdialog.cpp:1912
 msgid "Enable this flag to allow entering the folder."
 msgstr "Ustaw prawa tak, żeby pozwolić na wchodzenie do katalogu."
 
-#: kfile/kpropertiesdialog.cpp:1898
+#: kfile/kpropertiesdialog.cpp:1914
 msgid "Exec"
 msgstr "Uruchomienie"
 
-#: kfile/kpropertiesdialog.cpp:1899
+#: kfile/kpropertiesdialog.cpp:1915
 msgid "Enable this flag to allow executing the file as a program."
 msgstr "Ustal prawa, by pozwolić na wykonywanie pliku jako programu."
 
-#: kfile/kpropertiesdialog.cpp:1909
+#: kfile/kpropertiesdialog.cpp:1925
 msgid "Special"
 msgstr "Specjalny"
 
-#: kfile/kpropertiesdialog.cpp:1913
+#: kfile/kpropertiesdialog.cpp:1929
 msgid ""
 "Special flag. Valid for the whole folder, the exact meaning of the flag can "
 "be seen in the right hand column."
@@ -3516,7 +3190,7 @@ msgstr ""
 "Specjalne prawo. Ważne dla całego katalogu, dokładne znaczenie prawa "
 "widocznego w kolumnie po prawej stronie."
 
-#: kfile/kpropertiesdialog.cpp:1916
+#: kfile/kpropertiesdialog.cpp:1932
 msgid ""
 "Special flag. The exact meaning of the flag can be seen in the right hand "
 "column."
@@ -3524,24 +3198,24 @@ msgstr ""
 "Specjalne prawo. Dokładne znaczenie prawa widocznego w kolumnie po prawej "
 "stronie."
 
-#: kfile/kpropertiesdialog.cpp:1920
+#: kfile/kpropertiesdialog.cpp:1937
 msgid "User"
 msgstr "Użytkownik"
 
-#: kfile/kpropertiesdialog.cpp:1924
+#: kfile/kpropertiesdialog.cpp:1941
 msgid "Group"
 msgstr "Grupa"
 
-#: kfile/kpropertiesdialog.cpp:1928 kfile/kacleditwidget.cpp:59
-#: kfile/kacleditwidget.cpp:429
+#: kfile/kpropertiesdialog.cpp:1945 kfile/kacleditwidget.cpp:59
+#: kfile/kacleditwidget.cpp:445
 msgid "Others"
 msgstr "Inni"
 
-#: kfile/kpropertiesdialog.cpp:1932
+#: kfile/kpropertiesdialog.cpp:1949
 msgid "Set UID"
 msgstr "Ustaw UID"
 
-#: kfile/kpropertiesdialog.cpp:1936
+#: kfile/kpropertiesdialog.cpp:1953
 msgid ""
 "If this flag is set, the owner of this folder will be the owner of all new "
 "files."
@@ -3549,7 +3223,7 @@ msgstr ""
 "Jeśli to prawo jest ustawione, właściciel katalogu będzie właścicielem "
 "wszystkich nowych plików."
 
-#: kfile/kpropertiesdialog.cpp:1939
+#: kfile/kpropertiesdialog.cpp:1956
 msgid ""
 "If this file is an executable and the flag is set, it will be executed with "
 "the permissions of the owner."
@@ -3557,18 +3231,18 @@ msgstr ""
 "Jeśli plik jest wykonywalny i prawo jest ustawione, plik zostanie wykonany z "
 "prawami właściciela."
 
-#: kfile/kpropertiesdialog.cpp:1943
+#: kfile/kpropertiesdialog.cpp:1961
 msgid "Set GID"
 msgstr "Ustaw GID"
 
-#: kfile/kpropertiesdialog.cpp:1947
+#: kfile/kpropertiesdialog.cpp:1965
 msgid ""
 "If this flag is set, the group of this folder will be set for all new files."
 msgstr ""
 "Jeśli to prawo jest ustawione, grupa tego katalogu będzie ustawiona dla "
 "wszystkich nowych plików."
 
-#: kfile/kpropertiesdialog.cpp:1950
+#: kfile/kpropertiesdialog.cpp:1968
 msgid ""
 "If this file is an executable and the flag is set, it will be executed with "
 "the permissions of the group."
@@ -3576,12 +3250,12 @@ msgstr ""
 "Jeśli ten plik jest wykonywalny i prawo jest ustawione, plik zostanie "
 "wykonany z prawami grupy."
 
-#: kfile/kpropertiesdialog.cpp:1954
+#: kfile/kpropertiesdialog.cpp:1973
 msgctxt "File permission"
 msgid "Sticky"
 msgstr "Bit lepkości"
 
-#: kfile/kpropertiesdialog.cpp:1958
+#: kfile/kpropertiesdialog.cpp:1977
 msgid ""
 "If the Sticky flag is set on a folder, only the owner and root can delete or "
 "rename files. Otherwise everybody with write permissions can do this."
@@ -3590,7 +3264,7 @@ msgstr ""
 "(root) mogą usunąć pliki lub zmienić ich nazwy. W innym wypadku może to "
 "zrobić każdy z prawem do zapisu."
 
-#: kfile/kpropertiesdialog.cpp:1962
+#: kfile/kpropertiesdialog.cpp:1981
 msgid ""
 "The Sticky flag on a file is ignored on Linux, but may be used on some "
 "systems"
@@ -3598,97 +3272,89 @@ msgstr ""
 "SUID dla pliku jest ignorowane w Linuksie, ale może być użyteczne w innych "
 "systemach operacyjnych"
 
-#: kfile/kpropertiesdialog.cpp:2143
+#: kfile/kpropertiesdialog.cpp:2184
 msgid "Link"
 msgstr "Dowiązanie"
 
-#: kfile/kpropertiesdialog.cpp:2160
+#: kfile/kpropertiesdialog.cpp:2203
 msgid "Varying (No Change)"
 msgstr "Różne (bez zmian)"
 
-#: kfile/kpropertiesdialog.cpp:2259
+#: kfile/kpropertiesdialog.cpp:2326
 msgid "This file uses advanced permissions"
 msgid_plural "These files use advanced permissions."
 msgstr[0] "Ten plik używa zaawansowanych praw dostępu."
 msgstr[1] "Te pliki używają zaawansowanych praw dostępu."
 msgstr[2] "Te pliki używają zaawansowanych praw dostępu."
 
-#: kfile/kpropertiesdialog.cpp:2280
+#: kfile/kpropertiesdialog.cpp:2351
 msgid "This folder uses advanced permissions."
 msgid_plural "These folders use advanced permissions."
 msgstr[0] "Ten katalog używa zaawansowanych praw dostępu."
 msgstr[1] "Te katalogi używają zaawansowanych praw dostępu."
 msgstr[2] "Te katalogi używają zaawansowanych praw dostępu."
 
-#: kfile/kpropertiesdialog.cpp:2296
+#: kfile/kpropertiesdialog.cpp:2369
 msgid "These files use advanced permissions."
 msgstr "Te pliki używają zaawansowanych praw."
 
-#: kfile/kpropertiesdialog.cpp:2508
+#: kfile/kpropertiesdialog.cpp:2607
 msgid "U&RL"
 msgstr "U&RL"
 
-#: kfile/kpropertiesdialog.cpp:2515 ../kioslave/http/http.cpp:586
+#: kfile/kpropertiesdialog.cpp:2614 ../kioslave/http/http.cpp:625
 msgid "URL:"
 msgstr "URL:"
 
-#: kfile/kpropertiesdialog.cpp:2646
+#: kfile/kpropertiesdialog.cpp:2744
 msgid "De&vice"
 msgstr "Urzą&dzenie"
 
-#: kfile/kpropertiesdialog.cpp:2677
-msgid "Device (/dev/fd0):"
-msgstr "Urządzenie (/dev/fd0):"
-
-#: kfile/kpropertiesdialog.cpp:2678
+#: kfile/kpropertiesdialog.cpp:2770
 msgid "Device:"
 msgstr "Urządzenie:"
 
-#: kfile/kpropertiesdialog.cpp:2691
+#: kfile/kpropertiesdialog.cpp:2777
+msgid "Enter device..."
+msgstr ""
+
+#: kfile/kpropertiesdialog.cpp:2783
 msgid "Read only"
 msgstr "Tylko do odczytu"
 
-#: kfile/kpropertiesdialog.cpp:2695
-msgid "File system:"
-msgstr "System plików:"
-
-#: kfile/kpropertiesdialog.cpp:2703
-msgid "Mount point (/mnt/floppy):"
-msgstr "Punkt montowania (/mnt/floppy):"
-
-#: kfile/kpropertiesdialog.cpp:2704
+#: kfile/kpropertiesdialog.cpp:2787
 msgid "Mount point:"
 msgstr "Punkt montowania:"
 
-#: kfile/kpropertiesdialog.cpp:2938
+#: kfile/kpropertiesdialog.cpp:3020
 msgid "&Application"
 msgstr "&Program"
 
-#: kfile/kpropertiesdialog.cpp:3063
+#: kfile/kpropertiesdialog.cpp:3143
 msgid "Add File Type for %1"
 msgstr "Dodaj typ pliku dla %1"
 
-#: kfile/kpropertiesdialog.cpp:3064
+#: kfile/kpropertiesdialog.cpp:3144
 msgid "Select one or more file types to add:"
 msgstr "Wybierz jeden lub więcej typów plików do dodania:"
 
-#: kfile/kpropertiesdialog.cpp:3201
+#: kfile/kpropertiesdialog.cpp:3280
 msgid "Only executables on local file systems are supported."
 msgstr "Obsługiwane są jedynie lokalne pliki wykonywalne."
 
-#: kfile/kpropertiesdialog.cpp:3215
+#: kfile/kpropertiesdialog.cpp:3294
 msgid "Advanced Options for %1"
 msgstr "Zaawansowane opcje dla %1"
 
-#: kfile/kacleditwidget.cpp:57 kfile/kacleditwidget.cpp:419
+#: kfile/kacleditwidget.cpp:57 kfile/kacleditwidget.cpp:435
 msgid "Owner"
 msgstr "Właściciel"
 
-#: kfile/kacleditwidget.cpp:58 kfile/kacleditwidget.cpp:424
+#: kfile/kacleditwidget.cpp:58 kfile/kacleditwidget.cpp:440
 msgid "Owning Group"
 msgstr "Grupa właścicielska"
 
-#: kfile/kacleditwidget.cpp:60 kfile/kacleditwidget.cpp:434
+#: kfile/kacleditwidget.cpp:60 kfile/kacleditwidget.cpp:450
 msgid "Mask"
 msgstr "Maska"
 
@@ -3700,79 +3366,79 @@ msgstr "Nazwany użytkownik"
 msgid "Named Group"
 msgstr "Nazwana grupa"
 
-#: kfile/kacleditwidget.cpp:94 ../kfile/kfileplacesview.cpp:584
+#: kfile/kacleditwidget.cpp:95 ../kfile/kfileplacesview.cpp:584
 #: ../kfile/kfileplacesview.cpp:605 ../kfile/kfileplacesview.cpp:612
 msgid "Add Entry..."
 msgstr "Dodaj wpis..."
 
-#: kfile/kacleditwidget.cpp:98
+#: kfile/kacleditwidget.cpp:99
 msgid "Edit Entry..."
 msgstr "Zmień wpis..."
 
-#: kfile/kacleditwidget.cpp:102
+#: kfile/kacleditwidget.cpp:103
 msgid "Delete Entry"
 msgstr "Usuń wpis"
 
-#: kfile/kacleditwidget.cpp:272
+#: kfile/kacleditwidget.cpp:289
 msgid " (Default)"
 msgstr " (domyślne)"
 
-#: kfile/kacleditwidget.cpp:396
+#: kfile/kacleditwidget.cpp:412
 msgid "Edit ACL Entry"
 msgstr "Zmień wpis ACL"
 
-#: kfile/kacleditwidget.cpp:404
+#: kfile/kacleditwidget.cpp:420
 msgid "Entry Type"
 msgstr "Rodzaj wpisu"
 
-#: kfile/kacleditwidget.cpp:410
+#: kfile/kacleditwidget.cpp:426
 msgid "Default for new files in this folder"
 msgstr "Domyślny dla nowych plików w tym katalogu"
 
-#: kfile/kacleditwidget.cpp:439
+#: kfile/kacleditwidget.cpp:455
 msgid "Named user"
 msgstr "Nazwany użytkownik"
 
-#: kfile/kacleditwidget.cpp:444
+#: kfile/kacleditwidget.cpp:460
 msgid "Named group"
 msgstr "Nazwana grupa"
 
-#: kfile/kacleditwidget.cpp:464
+#: kfile/kacleditwidget.cpp:480
 msgid "User: "
 msgstr "Użytkownik: "
 
-#: kfile/kacleditwidget.cpp:470
+#: kfile/kacleditwidget.cpp:486
 msgid "Group: "
 msgstr "Grupa: "
 
-#: kfile/kacleditwidget.cpp:594
+#: kfile/kacleditwidget.cpp:610
 msgid "Type"
 msgstr "Rodzaj"
 
-#: kfile/kacleditwidget.cpp:595
+#: kfile/kacleditwidget.cpp:611
 msgid "Name"
 msgstr "Nazwa"
 
-#: kfile/kacleditwidget.cpp:596
+#: kfile/kacleditwidget.cpp:612
 msgctxt "read permission"
 msgid "r"
 msgstr "r"
 
-#: kfile/kacleditwidget.cpp:597
+#: kfile/kacleditwidget.cpp:613
 msgctxt "write permission"
 msgid "w"
 msgstr "w"
 
-#: kfile/kacleditwidget.cpp:598
+#: kfile/kacleditwidget.cpp:614
 msgctxt "execute permission"
 msgid "x"
 msgstr "x"
 
-#: kfile/kacleditwidget.cpp:599
+#: kfile/kacleditwidget.cpp:615
 msgid "Effective"
 msgstr "Efektywne"
 
-#: kfile/kurlrequester.cpp:261
+#: kfile/kurlrequester.cpp:262
 msgid "Open file dialog"
 msgstr "Okno dialogowe wyboru pliku"
 
@@ -3849,30 +3515,21 @@ msgid "*.png *.xpm *.svg *.svgz|Icon Files (*.png *.xpm *.svg *.svgz)"
 msgstr "*.png *.xpm *.svg *.svgz|Pliki ikon (*.png *.xpm *.svg *.svgz)"
 
 #: kfile/kicondialog.cpp:653 kfile/kurlrequesterdialog.cpp:128
-#: kfile/kfiledialog.cpp:466 kfile/kfiledialog.cpp:476
-#: kfile/kfiledialog.cpp:497 kfile/kfiledialog.cpp:521
-#: kfile/kfiledialog.cpp:531 kfile/kfiledialog.cpp:557
-#: kfile/kfiledialog.cpp:589 kfile/kfiledialog.cpp:644
-#: kfile/kencodingfiledialog.cpp:106 kfile/kencodingfiledialog.cpp:124
-#: kfile/kencodingfiledialog.cpp:139 kfile/kencodingfiledialog.cpp:157
+#: kfile/kfiledialog.cpp:236 kfile/kfiledialog.cpp:254
+#: kfile/kfiledialog.cpp:270 kfile/kfiledialog.cpp:283
+#: kfile/kfiledialog.cpp:298 kfile/kfiledialog.cpp:347
+#: kfile/kencodingfiledialog.cpp:104 kfile/kencodingfiledialog.cpp:123
+#: kfile/kencodingfiledialog.cpp:140 kfile/kencodingfiledialog.cpp:159
 msgid "Open"
 msgstr "Otwórz"
 
-#: kfile/kfiledialog.cpp:120
-msgid "*|All files"
-msgstr "*|Wszystkie pliki"
-
-#: kfile/kfiledialog.cpp:343 ../kfile/kfilefiltercombo.cpp:185
-msgid "All Supported Files"
-msgstr "Wszystkie obsługiwane pliki"
-
-#: kfile/kfiledialog.cpp:715 kfile/kfiledialog.cpp:734
-#: kfile/kfiledialog.cpp:762 kfile/kfiledialog.cpp:796
-#: kfile/kencodingfiledialog.cpp:177 kfile/kencodingfiledialog.cpp:198
+#: kfile/kfiledialog.cpp:390 kfile/kfiledialog.cpp:416
+#: kfile/kfiledialog.cpp:437 kfile/kencodingfiledialog.cpp:179
+#: kfile/kencodingfiledialog.cpp:198
 msgid "Save As"
 msgstr "Zapisz jako"
 
-#: kfile/kpreviewprops.cpp:50
+#: kfile/kpreviewprops.cpp:38
 msgid "P&review"
 msgstr "Pod&gląd"
 
@@ -3884,15 +3541,15 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: kfile/kopenwithdialog.cpp:268
+#: kfile/kopenwithdialog.cpp:265
 msgid "Known Applications"
 msgstr "Znane programy"
 
-#: kfile/kopenwithdialog.cpp:482
+#: kfile/kopenwithdialog.cpp:481
 msgid "Open With"
 msgstr "Otwórz za pomocą"
 
-#: kfile/kopenwithdialog.cpp:487
+#: kfile/kopenwithdialog.cpp:485
 msgid ""
 "<qt>Select the program that should be used to open <b>%1</b>. If the program "
 "is not listed, enter the name or click the browse button.</qt>"
@@ -3901,15 +3558,15 @@ msgstr ""
 "nie jest zamieszczony na liście, proszę wpisać jego nazwę lub wcisnąć "
 "przycisk przeglądania.</qt>"
 
-#: kfile/kopenwithdialog.cpp:493
+#: kfile/kopenwithdialog.cpp:490
 msgid "Choose the name of the program with which to open the selected files."
 msgstr "Wybierz program do otwarcia wybranych plików."
 
-#: kfile/kopenwithdialog.cpp:520
+#: kfile/kopenwithdialog.cpp:522
 msgid "Choose Application for %1"
 msgstr "Wybierz program dla %1"
 
-#: kfile/kopenwithdialog.cpp:521
+#: kfile/kopenwithdialog.cpp:523
 msgid ""
 "<qt>Select the program for the file type: <b>%1</b>. If the program is not "
 "listed, enter the name or click the browse button.</qt>"
@@ -3917,11 +3574,11 @@ msgstr ""
 "<qt>Proszę wybrać program dla typu pliku: <b>%1</b>. Jeżeli program nie jest "
 "na liście, proszę wpisać jego nazwę lub wcisnąć przycisk przeglądania.</qt>"
 
-#: kfile/kopenwithdialog.cpp:536
+#: kfile/kopenwithdialog.cpp:539
 msgid "Choose Application"
 msgstr "Wybierz program"
 
-#: kfile/kopenwithdialog.cpp:537
+#: kfile/kopenwithdialog.cpp:540
 msgid ""
 "<qt>Select a program. If the program is not listed, enter the name or click "
 "the browse button.</qt>"
@@ -3929,7 +3586,7 @@ msgstr ""
 "<qt>Proszę wybrać program. Jeżeli programu nie ma na liście, proszę wpisać "
 "jego nazwę lub wcisnąć przycisk przeglądania.</qt>"
 
-#: kfile/kopenwithdialog.cpp:591
+#: kfile/kopenwithdialog.cpp:595
 msgid ""
 "Following the command, you can have several place holders which will be "
 "replaced with the actual values when the actual program is run:\n"
@@ -3957,19 +3614,19 @@ msgstr ""
 "%m - mała ikona\n"
 "%c - komentarz"
 
-#: kfile/kopenwithdialog.cpp:626
+#: kfile/kopenwithdialog.cpp:629
 msgid "Run in &terminal"
 msgstr "Uruchom w &terminalu"
 
-#: kfile/kopenwithdialog.cpp:641
+#: kfile/kopenwithdialog.cpp:644
 msgid "&Do not close when command exits"
 msgstr "&Nie zamykaj po zakończeniu polecenia"
 
-#: kfile/kopenwithdialog.cpp:658
+#: kfile/kopenwithdialog.cpp:661
 msgid "&Remember application association for this type of file"
 msgstr "&Zapamiętaj program skojarzony z tym typem pliku"
 
-#: kfile/kopenwithdialog.cpp:803
+#: kfile/kopenwithdialog.cpp:791
 msgid ""
 "Could not extract executable name from '%1', please type a valid program "
 "name."
@@ -3977,26 +3634,26 @@ msgstr ""
 "Nie można znaleźć nazwy pliku wykonywalnego w \"%1\". Proszę podać poprawną "
 "nazwę programu."
 
-#: kfile/kopenwithdialog.cpp:853
+#: kfile/kopenwithdialog.cpp:841
 msgid "'%1' not found, please type a valid program name."
 msgstr "Nie można znaleźć '%1'. Proszę podać poprawną nazwę programu."
 
-#: kfile/kmetaprops.cpp:57
+#: kfile/kmetaprops.cpp:53
 msgctxt "@title:window"
 msgid "Configure Shown Data"
 msgstr "Ustawienia pokazywanych danych"
 
-#: kfile/kmetaprops.cpp:62
+#: kfile/kmetaprops.cpp:58
 msgctxt "@label::textbox"
 msgid "Select which data should be shown:"
 msgstr "Ustawienia widocznych danych:"
 
-#: kfile/kmetaprops.cpp:120
+#: kfile/kmetaprops.cpp:117
 msgctxt "@action:button"
 msgid "Configure..."
 msgstr "Ustawienia..."
 
-#: kfile/kmetaprops.cpp:130
+#: kfile/kmetaprops.cpp:129
 msgctxt "@title:tab"
 msgid "Information"
 msgstr "Informacje"
@@ -4005,39 +3662,39 @@ msgstr "Informacje"
 msgid "Encoding:"
 msgstr "Kodowanie:"
 
-#: bookmarks/kbookmarkmenu.cc:262
+#: bookmarks/kbookmarkmenu.cc:277
 msgid "Add Bookmark Here"
 msgstr "Dodaj zakładkę"
 
-#: bookmarks/kbookmarkmenu.cc:267
+#: bookmarks/kbookmarkmenu.cc:283
 msgid "Open Folder in Bookmark Editor"
 msgstr "Otwórz katalog w edytorze zakładek"
 
-#: bookmarks/kbookmarkmenu.cc:270
+#: bookmarks/kbookmarkmenu.cc:286
 msgid "Delete Folder"
 msgstr "Usuń katalog"
 
-#: bookmarks/kbookmarkmenu.cc:276 ../kfile/kdiroperator.cpp:1877
+#: bookmarks/kbookmarkmenu.cc:291 ../kfile/kdiroperator.cpp:1844
 msgid "Properties"
 msgstr "Właściwości"
 
-#: bookmarks/kbookmarkmenu.cc:281
+#: bookmarks/kbookmarkmenu.cc:296
 msgid "Copy Link Address"
 msgstr "Kopiuj adres odnośnika"
 
-#: bookmarks/kbookmarkmenu.cc:284
+#: bookmarks/kbookmarkmenu.cc:299
 msgid "Delete Bookmark"
 msgstr "Usuń zakładkę"
 
-#: bookmarks/kbookmarkmenu.cc:290 bookmarks/kbookmarkmenu.cc:443
+#: bookmarks/kbookmarkmenu.cc:305 bookmarks/kbookmarkmenu.cc:458
 msgid "Open Folder in Tabs"
 msgstr "Otwórz katalog w zakładkach"
 
-#: bookmarks/kbookmarkmenu.cc:315
+#: bookmarks/kbookmarkmenu.cc:329
 msgid "Cannot add bookmark with empty URL."
 msgstr "Nie można dodać zakładki bez URL."
 
-#: bookmarks/kbookmarkmenu.cc:347
+#: bookmarks/kbookmarkmenu.cc:359
 msgid ""
 "Are you sure you wish to remove the bookmark folder\n"
 "\"%1\"?"
@@ -4045,7 +3702,7 @@ msgstr ""
 "Czy na pewno chcesz usunąć katalog zakładek\n"
 "\"%1\"?"
 
-#: bookmarks/kbookmarkmenu.cc:348
+#: bookmarks/kbookmarkmenu.cc:360
 msgid ""
 "Are you sure you wish to remove the bookmark\n"
 "\"%1\"?"
@@ -4053,120 +3710,119 @@ msgstr ""
 "Czy na pewno chcesz usunąć zakładkę\n"
 "\"%1\"?"
 
-#: bookmarks/kbookmarkmenu.cc:349
+#: bookmarks/kbookmarkmenu.cc:361
 msgid "Bookmark Folder Deletion"
 msgstr "Usunięcie katalogu zakładek"
 
-#: bookmarks/kbookmarkmenu.cc:350
+#: bookmarks/kbookmarkmenu.cc:362
 msgid "Bookmark Deletion"
 msgstr "Usunięcie zakładki"
 
-#: bookmarks/kbookmarkmenu.cc:447
+#: bookmarks/kbookmarkmenu.cc:462
 msgid "Open all bookmarks in this folder as a new tab."
 msgstr "Otwórz wszystkie zakładki z tego katalogu jako nową kartę."
 
-#: bookmarks/kbookmarkmenu.cc:460
+#: bookmarks/kbookmarkmenu.cc:476
 msgid "Bookmark Tabs as Folder..."
 msgstr "Katalog zakładek z kart..."
 
-#: bookmarks/kbookmarkmenu.cc:464
+#: bookmarks/kbookmarkmenu.cc:480
 msgid "Add a folder of bookmarks for all open tabs."
 msgstr "Dodaj katalog zakładek dla wszystkich otwartych kart."
 
-#: bookmarks/kbookmarkmenu.cc:497
+#: bookmarks/kbookmarkmenu.cc:517
 msgid "Edit your bookmark collection in a separate window"
 msgstr "Modyfikuj swój zbiór zakładek w osobnym oknie"
 
-#: bookmarks/kbookmarkmenu.cc:506
+#: bookmarks/kbookmarkmenu.cc:527
 msgid "New Bookmark Folder..."
 msgstr "Nowy katalog &zakładek..."
 
-#: bookmarks/kbookmarkmenu.cc:508
+#: bookmarks/kbookmarkmenu.cc:529
 msgid "Create a new bookmark folder in this menu"
 msgstr "Utwórz nowy katalog zakładek w tym menu"
 
-#: bookmarks/kbookmarkdialog.cc:41
+#: bookmarks/kbookmarkdialog.cc:79
 msgctxt "@action:button"
 msgid "Update"
 msgstr "Uaktualnienie"
 
-#: bookmarks/kbookmarkdialog.cc:42
+#: bookmarks/kbookmarkdialog.cc:80
 msgctxt "@title:window"
 msgid "Bookmark Properties"
 msgstr "Właściwości zakładki"
 
-#: bookmarks/kbookmarkdialog.cc:70 bookmarks/kbookmarkdialog.cc:102
+#: bookmarks/kbookmarkdialog.cc:109 bookmarks/kbookmarkdialog.cc:143
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Dodaj"
 
-#: bookmarks/kbookmarkdialog.cc:71
+#: bookmarks/kbookmarkdialog.cc:110
 msgctxt "@title:window"
 msgid "Add Bookmark"
 msgstr "Dodaj zakładkę"
 
-#: bookmarks/kbookmarkdialog.cc:72 bookmarks/kbookmarkdialog.cc:104
-#: bookmarks/kbookmarkdialog.cc:131
+#: bookmarks/kbookmarkdialog.cc:111 bookmarks/kbookmarkdialog.cc:145
+#: bookmarks/kbookmarkdialog.cc:175
 msgctxt "@action:button"
 msgid "&New Folder..."
 msgstr "&Nowy katalog..."
 
-#: bookmarks/kbookmarkdialog.cc:103
+#: bookmarks/kbookmarkdialog.cc:144
 msgctxt "@title:window"
 msgid "Add Bookmarks"
 msgstr "Dodaj zakładki"
 
-#: bookmarks/kbookmarkdialog.cc:132 ../kfile/kdirselectdialog.cpp:264
+#: bookmarks/kbookmarkdialog.cc:176
 msgctxt "@title:window"
 msgid "Select Folder"
 msgstr "Wybierz katalog"
 
-#: bookmarks/kbookmarkdialog.cc:159 ../kfile/knewfilemenu.cpp:1019
-#: ../kfile/kdirselectdialog.cpp:133
+#: bookmarks/kbookmarkdialog.cc:206 ../kfile/knewfilemenu.cpp:1019
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Nowy katalog"
 
-#: bookmarks/kbookmarkdialog.cc:292
+#: bookmarks/kbookmarkdialog.cc:335
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Nazwa:"
 
-#: bookmarks/kbookmarkdialog.cc:297
+#: bookmarks/kbookmarkdialog.cc:340
 msgctxt "@label:textbox"
 msgid "Location:"
 msgstr "Położenie:"
 
-#: bookmarks/kbookmarkdialog.cc:302
+#: bookmarks/kbookmarkdialog.cc:345
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Komentarz:"
 
-#: bookmarks/kbookmarkdialog.cc:331
+#: bookmarks/kbookmarkdialog.cc:377
 msgctxt "@title:window"
 msgid "Create New Bookmark Folder"
 msgstr "Utwórz nowy katalog zakładek"
 
-#: bookmarks/kbookmarkdialog.cc:332
+#: bookmarks/kbookmarkdialog.cc:378
 msgctxt "@title:window"
 msgid "Create New Bookmark Folder in %1"
 msgstr "Utwórz nowy katalog zakładek w %1"
 
-#: bookmarks/kbookmarkdialog.cc:335
+#: bookmarks/kbookmarkdialog.cc:381
 msgctxt "@label:textbox"
 msgid "New folder:"
 msgstr "Nowy katalog:"
 
-#: bookmarks/kbookmarkdialog.cc:374
+#: bookmarks/kbookmarkdialog.cc:420
 msgctxt "name of the container of all browser bookmarks"
 msgid "Bookmarks"
 msgstr "Zakładki"
 
-#: bookmarks/kbookmark.cc:308
+#: bookmarks/kbookmark.cc:295
 msgid "--- separator ---"
 msgstr "--- separator ---"
 
-#: bookmarks/kbookmarkmanager.cc:433
+#: bookmarks/kbookmarkmanager.cc:373
 msgid ""
 "Unable to save bookmarks in %1. Reported error was: %2. This error message "
 "will only be shown once. The cause of the error needs to be fixed as quickly "
@@ -4176,19 +3832,19 @@ msgstr ""
 "zostanie pokazany tylko raz. Przyczyna błędu powinna być naprawiona tak "
 "szybko jak to tylko możliwe - jest to najprawdopodobniej pełen dysk twardy."
 
-#: ../kioslave/http/http.cpp:585
+#: ../kioslave/http/http.cpp:624
 msgid "You need to supply a username and a password to access this URL."
 msgstr ""
 
-#: ../kioslave/http/http.cpp:587 ../kioslave/ftp/ftp.cpp:517
+#: ../kioslave/http/http.cpp:626 ../kioslave/ftp/ftp.cpp:500
 msgid "<b>%1</b>"
 msgstr "<b>%1</b>"
 
-#: ../kioslave/file/file_unix.cpp:216
+#: ../kioslave/file/file_unix.cpp:217
 msgid "Cannot copy file from %1 to %2. (Errno: %3)"
 msgstr "Nie można skopiować pliku z %1 do %2. (Błąd: %3)"
 
-#: ../kioslave/file/file_unix.cpp:285 ../kioslave/file/file.cpp:702
+#: ../kioslave/file/file_unix.cpp:290 ../kioslave/file/file.cpp:548
 msgid ""
 "Could not change permissions for\n"
 "%1"
@@ -4196,43 +3852,31 @@ msgstr ""
 "Nie można zmienić praw do\n"
 "%1"
 
-#: ../kioslave/file/file_unix.cpp:328
+#: ../kioslave/file/file_unix.cpp:338
 msgid "No media in device for %1"
 msgstr "Brak nośnika w urządzeniu %1"
 
-#: ../kioslave/file/file_unix.cpp:573
+#: ../kioslave/file/file_unix.cpp:566
 msgid "Could not get user id for given user name %1"
 msgstr "Nie można pobrać identyfikatora użytkownika dla danej nazwy %1"
 
-#: ../kioslave/file/file_unix.cpp:586
+#: ../kioslave/file/file_unix.cpp:576
 msgid "Could not get group id for given group name %1"
 msgstr "Nie można pobrać identyfikatora grupy dla danej nazwy %1"
 
-#: ../kioslave/file/file.cpp:188
+#: ../kioslave/file/file.cpp:192
 msgid "Setting ACL for %1"
 msgstr "Ustawianie ACL dla %1"
 
-#: ../kioslave/file/file.cpp:877 ../kioslave/file/file.cpp:937
-msgid "Could not find program \"kdesudo\""
-msgstr ""
-
-#: ../kioslave/file/file.cpp:883
-msgid "Could not find program \"mount\""
-msgstr "Nie można znaleźć programu \"mount\""
-
-#: ../kioslave/file/file.cpp:943
-msgid "Could not find program \"umount\""
-msgstr "Nie można znaleźć programu \"umount\""
-
-#: ../kioslave/ftp/ftp.cpp:330
+#: ../kioslave/ftp/ftp.cpp:324
 msgid "Opening connection to host %1"
 msgstr "Otwarcie połączenia z serwerem %1"
 
-#: ../kioslave/ftp/ftp.cpp:345
+#: ../kioslave/ftp/ftp.cpp:339
 msgid "Connected to host %1"
 msgstr "Połączenie z serwerem %1"
 
-#: ../kioslave/ftp/ftp.cpp:414
+#: ../kioslave/ftp/ftp.cpp:407
 msgid ""
 "%1.\n"
 "\n"
@@ -4242,11 +3886,11 @@ msgstr ""
 "\n"
 "Przyczyna: %2"
 
-#: ../kioslave/ftp/ftp.cpp:443
+#: ../kioslave/ftp/ftp.cpp:436
 msgid "Sending login information"
 msgstr "Próba zalogowania się"
 
-#: ../kioslave/ftp/ftp.cpp:506
+#: ../kioslave/ftp/ftp.cpp:489
 msgid ""
 "Message sent:\n"
 "Login using username=%1 and password=[hidden]\n"
@@ -4262,64 +3906,64 @@ msgstr ""
 "%2\n"
 "\n"
 
-#: ../kioslave/ftp/ftp.cpp:514
+#: ../kioslave/ftp/ftp.cpp:497
 msgid "You need to supply a username and a password to access this site."
 msgstr ""
 "Trzeba podać nazwę użytkownika i hasło, by uzyskać dostęp do tej witryny."
 
-#: ../kioslave/ftp/ftp.cpp:516
+#: ../kioslave/ftp/ftp.cpp:499
 msgid "Site:"
 msgstr "Witryna:"
 
-#: ../kioslave/ftp/ftp.cpp:604
+#: ../kioslave/ftp/ftp.cpp:587
 msgid "Login OK"
 msgstr "Logowanie w porządku"
 
-#: ../kioslave/ftp/ftp.cpp:633
+#: ../kioslave/ftp/ftp.cpp:613
 msgid "Could not login to %1."
 msgstr "Nie można się zalogować do %1."
 
-#: ../kfile/kurlnavigator.cpp:426
+#: ../kfile/kurlnavigator.cpp:416
 msgid "Copy"
 msgstr "Kopiuj"
 
-#: ../kfile/kurlnavigator.cpp:430
+#: ../kfile/kurlnavigator.cpp:420
 msgid "Paste"
 msgstr "Wklej"
 
-#: ../kfile/kurlnavigator.cpp:437
+#: ../kfile/kurlnavigator.cpp:427
 msgid "Edit"
 msgstr "Edytuj"
 
-#: ../kfile/kurlnavigator.cpp:440
+#: ../kfile/kurlnavigator.cpp:430
 msgid "Navigate"
 msgstr "Nawiguj"
 
-#: ../kfile/kurlnavigator.cpp:455
+#: ../kfile/kurlnavigator.cpp:445
 msgid "Show Full Path"
 msgstr "Pokaż pełną ścieżkę"
 
-#: ../kfile/kurlnavigator.cpp:695
+#: ../kfile/kurlnavigator.cpp:685
 msgid "Custom Path"
 msgstr "Własna ścieżka"
 
-#: ../kfile/kdiroperator.cpp:745 ../kfile/kdirselectdialog.cpp:157
+#: ../kfile/kdiroperator.cpp:731
 msgid "A file or folder named %1 already exists."
 msgstr "Plik lub katalog o nazwie %1 już istnieje."
 
-#: ../kfile/kdiroperator.cpp:747 ../kfile/kdirselectdialog.cpp:161
+#: ../kfile/kdiroperator.cpp:733
 msgid "You do not have permission to create that folder."
 msgstr "Nie masz praw do utworzenia tego katalogu."
 
-#: ../kfile/kdiroperator.cpp:762
+#: ../kfile/kdiroperator.cpp:748
 msgid "You did not select a file to delete."
 msgstr "Nie wybrano pliku do usunięcia."
 
-#: ../kfile/kdiroperator.cpp:763
+#: ../kfile/kdiroperator.cpp:749
 msgid "Nothing to Delete"
 msgstr "Nie ma czego usuwać"
 
-#: ../kfile/kdiroperator.cpp:784
+#: ../kfile/kdiroperator.cpp:770
 msgid ""
 "<qt>Do you really want to delete\n"
 " <b>'%1'</b>?</qt>"
@@ -4327,19 +3971,19 @@ msgstr ""
 "<qt>Czy na pewno chcesz usunąć\n"
 " <b>'%1'</b>?</qt>"
 
-#: ../kfile/kdiroperator.cpp:786
+#: ../kfile/kdiroperator.cpp:772
 msgid "Delete File"
 msgstr "Usuń plik"
 
-#: ../kfile/kdiroperator.cpp:824
+#: ../kfile/kdiroperator.cpp:810
 msgid "You did not select a file to trash."
 msgstr "Nie wybrałeś pliku do wyrzucenia do kosza."
 
-#: ../kfile/kdiroperator.cpp:825
+#: ../kfile/kdiroperator.cpp:811
 msgid "Nothing to Trash"
 msgstr "Nie ma czego wyrzucić do kosza"
 
-#: ../kfile/kdiroperator.cpp:842
+#: ../kfile/kdiroperator.cpp:828
 msgid ""
 "<qt>Do you really want to trash\n"
 " <b>'%1'</b>?</qt>"
@@ -4347,135 +3991,131 @@ msgstr ""
 "<qt>Czy na pewno chcesz wyrzucić do kosza\n"
 " <b>'%1'</b>?</qt>"
 
-#: ../kfile/kdiroperator.cpp:844
+#: ../kfile/kdiroperator.cpp:830
 msgid "Trash File"
 msgstr "Wyrzucanie pliku do kosza"
 
-#: ../kfile/kdiroperator.cpp:845 ../kfile/kdiroperator.cpp:852
+#: ../kfile/kdiroperator.cpp:831 ../kfile/kdiroperator.cpp:838
 msgctxt "to trash"
 msgid "&Trash"
 msgstr "&Kosz"
 
-#: ../kfile/kdiroperator.cpp:849
+#: ../kfile/kdiroperator.cpp:835
 msgid "translators: not called for n == 1"
 msgid_plural "Do you really want to trash these %1 items?"
 msgstr[0] "Czy na pewno chcesz wyrzucić do kosza %1 element?"
 msgstr[1] "Czy na pewno chcesz wyrzucić do kosza %1 elementy?"
 msgstr[2] "Czy na pewno chcesz wyrzucić do kosza %1 elementów?"
 
-#: ../kfile/kdiroperator.cpp:851
+#: ../kfile/kdiroperator.cpp:837
 msgid "Trash Files"
 msgstr "Wyrzucanie plików do kosza"
 
-#: ../kfile/kdiroperator.cpp:983 ../kfile/kdiroperator.cpp:1120
+#: ../kfile/kdiroperator.cpp:969 ../kfile/kdiroperator.cpp:1106
 msgid "The specified folder does not exist or was not readable."
 msgstr "Wybrany katalog nie istnieje lub brak praw do odczytu."
 
-#: ../kfile/kdiroperator.cpp:1746
+#: ../kfile/kdiroperator.cpp:1725
 msgid "Menu"
 msgstr "Menu"
 
-#: ../kfile/kdiroperator.cpp:1750
+#: ../kfile/kdiroperator.cpp:1729
 msgid "Parent Folder"
 msgstr "Katalog nadrzędny"
 
-#: ../kfile/kdiroperator.cpp:1757
+#: ../kfile/kdiroperator.cpp:1736
 msgid "Home Folder"
 msgstr "Katalog domowy"
 
-#: ../kfile/kdiroperator.cpp:1760
+#: ../kfile/kdiroperator.cpp:1739
 msgid "Reload"
 msgstr "Wczytaj ponownie"
 
-#: ../kfile/kdiroperator.cpp:1763
+#: ../kfile/kdiroperator.cpp:1742
 msgid "New Folder..."
 msgstr "Nowy katalog..."
 
-#: ../kfile/kdiroperator.cpp:1774
+#: ../kfile/kdiroperator.cpp:1753
 msgid "Delete"
 msgstr "Usuń"
 
-#: ../kfile/kdiroperator.cpp:1781
+#: ../kfile/kdiroperator.cpp:1760
 msgid "Sorting"
 msgstr "Szeregowanie"
 
-#: ../kfile/kdiroperator.cpp:1784
+#: ../kfile/kdiroperator.cpp:1763
 msgid "By Name"
 msgstr "Według nazwy"
 
-#: ../kfile/kdiroperator.cpp:1788
+#: ../kfile/kdiroperator.cpp:1767
 msgid "By Size"
 msgstr "Według rozmiaru"
 
-#: ../kfile/kdiroperator.cpp:1792
+#: ../kfile/kdiroperator.cpp:1771
 msgid "By Date"
 msgstr "Według daty"
 
-#: ../kfile/kdiroperator.cpp:1796
+#: ../kfile/kdiroperator.cpp:1775
 msgid "By Type"
 msgstr "Według rodzaju"
 
-#: ../kfile/kdiroperator.cpp:1800
+#: ../kfile/kdiroperator.cpp:1779
 msgid "Descending"
 msgstr "Malejąco"
 
-#: ../kfile/kdiroperator.cpp:1804
+#: ../kfile/kdiroperator.cpp:1783
 msgid "Folders First"
 msgstr "Najpierw katalogi"
 
-#: ../kfile/kdiroperator.cpp:1814
+#: ../kfile/kdiroperator.cpp:1793
 msgid "Icon Position"
 msgstr "Położenie ikony"
 
-#: ../kfile/kdiroperator.cpp:1817
+#: ../kfile/kdiroperator.cpp:1796
 msgid "Next to File Name"
 msgstr "Obok nazwy pliku"
 
-#: ../kfile/kdiroperator.cpp:1821
+#: ../kfile/kdiroperator.cpp:1800
 msgid "Above File Name"
 msgstr "Nad nazwą pliku"
 
-#: ../kfile/kdiroperator.cpp:1832
+#: ../kfile/kdiroperator.cpp:1811
 msgid "Short View"
 msgstr "Widok skrócony"
 
-#: ../kfile/kdiroperator.cpp:1837
+#: ../kfile/kdiroperator.cpp:1816
 msgid "Detailed View"
 msgstr "Widok szczegółowy"
 
-#: ../kfile/kdiroperator.cpp:1842
-msgid "Tree View"
-msgstr "Widok drzewa"
-
-#: ../kfile/kdiroperator.cpp:1847
-msgid "Detailed Tree View"
-msgstr "Widok szczegółowy drzewa"
-
-#: ../kfile/kdiroperator.cpp:1858
+#: ../kfile/kdiroperator.cpp:1825
 msgid "Show Hidden Files"
 msgstr "Wyświetlaj ukryte pliki"
 
-#: ../kfile/kdiroperator.cpp:1862
+#: ../kfile/kdiroperator.cpp:1829
 msgid "Show Aside Preview"
 msgstr "Pokaż podgląd z boku"
 
-#: ../kfile/kdiroperator.cpp:1868
+#: ../kfile/kdiroperator.cpp:1835
 msgid "Show Preview"
 msgstr "Pokaż podgląd"
 
-#: ../kfile/kdiroperator.cpp:1872
+#: ../kfile/kdiroperator.cpp:1839
 msgid "Open File Manager"
 msgstr "Otwórz do zarządzania plikami"
 
-#: ../kfile/kdiroperator.cpp:1884
+#: ../kfile/kdiroperator.cpp:1851
 msgid "&View"
 msgstr "&Widok"
 
-#: ../kfile/kfilefiltercombo.cpp:36 ../kfile/kfilewidget.cpp:1772
+#: ../kfile/kfilefiltercombo.cpp:36 ../kfile/kfilewidget.cpp:1784
 msgid "*|All Files"
 msgstr "*|Wszystkie pliki"
 
-#: ../kfile/kfilefiltercombo.cpp:194
+#: ../kfile/kfilefiltercombo.cpp:184
+msgid "All Supported Files"
+msgstr "Wszystkie obsługiwane pliki"
+
+#: ../kfile/kfilefiltercombo.cpp:193
 msgid "All Files"
 msgstr "Wszystkie pliki"
 
@@ -4573,15 +4213,23 @@ msgstr "Można zaznaczyć tylko jeden plik"
 msgid "More than one file provided"
 msgstr "Dostarczono więcej niż jeden plik"
 
-#: ../kfile/kfilewidget.cpp:915
+#: ../kfile/kfilewidget.cpp:917
+msgid "You can only select local directories"
+msgstr ""
+
+#: ../kfile/kfilewidget.cpp:918
+msgid "Remote directories not accepted"
+msgstr ""
+
+#: ../kfile/kfilewidget.cpp:924
 msgid "You can only select local files"
 msgstr "Można wybrać tylko pliki lokalne"
 
-#: ../kfile/kfilewidget.cpp:916
+#: ../kfile/kfilewidget.cpp:925
 msgid "Remote files not accepted"
 msgstr "Zdalne pliki odrzucone"
 
-#: ../kfile/kfilewidget.cpp:934
+#: ../kfile/kfilewidget.cpp:944
 msgid ""
 "More than one folder has been selected and this dialog does not accept "
 "folders, so it is not possible to decide which one to enter. Please select "
@@ -4590,11 +4238,11 @@ msgstr ""
 "Wybrano więcej niż jeden katalog, a to okno dialogowe nie obsługuje tylko "
 "jeden. Proszę wybrać tylko jeden katalog."
 
-#: ../kfile/kfilewidget.cpp:934
+#: ../kfile/kfilewidget.cpp:944
 msgid "More than one folder provided"
 msgstr "Dostarczono więcej niż jeden katalog"
 
-#: ../kfile/kfilewidget.cpp:942
+#: ../kfile/kfilewidget.cpp:952
 msgid ""
 "At least one folder and one file has been selected. Selected files will be "
 "ignored and the selected folder will be listed"
@@ -4602,23 +4250,31 @@ msgstr ""
 "Wybrano co najmniej jeden plik i katalog. Wybrane pliki zostaną zignorowane, "
 "a zawartość wybranego katalogu będzie pokazana"
 
-#: ../kfile/kfilewidget.cpp:942
+#: ../kfile/kfilewidget.cpp:952
 msgid "Files and folders selected"
 msgstr "Zaznaczono pliki i katalogi"
 
-#: ../kfile/kfilewidget.cpp:957
+#: ../kfile/kfilewidget.cpp:968
+msgid "The directory \"%1\" could not be found"
+msgstr ""
+
+#: ../kfile/kfilewidget.cpp:968
+msgid "Cannot open directory"
+msgstr ""
+
+#: ../kfile/kfilewidget.cpp:971
 msgid "The file \"%1\" could not be found"
 msgstr "Nie można znaleźć pliku \"%1\""
 
-#: ../kfile/kfilewidget.cpp:957
+#: ../kfile/kfilewidget.cpp:971
 msgid "Cannot open file"
 msgstr "Nie można otworzyć pliku"
 
-#: ../kfile/kfilewidget.cpp:1237
+#: ../kfile/kfilewidget.cpp:1249
 msgid "This is the name to save the file as."
 msgstr "To jest nazwa, pod jaką zostanie zapisany plik."
 
-#: ../kfile/kfilewidget.cpp:1242
+#: ../kfile/kfilewidget.cpp:1254
 msgid ""
 "This is the list of files to open. More than one file can be specified by "
 "listing several files, separated by spaces."
@@ -4626,24 +4282,24 @@ msgstr ""
 "To jest lista plików do otwarcia. Można podać kilka plików, rozdzielając "
 "nazwy je spacjami."
 
-#: ../kfile/kfilewidget.cpp:1249
+#: ../kfile/kfilewidget.cpp:1261
 msgid "This is the name of the file to open."
 msgstr "To jest nazwa pliku do otwarcia."
 
-#: ../kfile/kfilewidget.cpp:1263
+#: ../kfile/kfilewidget.cpp:1275
 msgctxt "@title:window"
 msgid "Places"
 msgstr "Miejsca"
 
-#: ../kfile/kfilewidget.cpp:1451
+#: ../kfile/kfilewidget.cpp:1463
 msgid "The file \"%1\" already exists. Do you wish to overwrite it?"
 msgstr "Plik \"%1\" już istnieje. Czy chcesz go zastąpić?"
 
-#: ../kfile/kfilewidget.cpp:1452
+#: ../kfile/kfilewidget.cpp:1464
 msgid "Overwrite File?"
 msgstr "Zastąpić plik?"
 
-#: ../kfile/kfilewidget.cpp:1583
+#: ../kfile/kfilewidget.cpp:1595
 msgid ""
 "The chosen filenames do not\n"
 "appear to be valid."
@@ -4651,47 +4307,47 @@ msgstr ""
 "Wybrane nazwy plików\n"
 "nie wyglądają na poprawne."
 
-#: ../kfile/kfilewidget.cpp:1585
+#: ../kfile/kfilewidget.cpp:1597
 msgid "Invalid Filenames"
 msgstr "Nieprawidłowe nazwy plików"
 
-#: ../kfile/kfilewidget.cpp:1665
+#: ../kfile/kfilewidget.cpp:1677
 msgid "You can only select local files."
 msgstr "Można wybrać tylko pliki lokalne."
 
-#: ../kfile/kfilewidget.cpp:1666
+#: ../kfile/kfilewidget.cpp:1678
 msgid "Remote Files Not Accepted"
 msgstr "Zdalne pliki odrzucone"
 
-#: ../kfile/kfilewidget.cpp:1769
+#: ../kfile/kfilewidget.cpp:1781
 msgid "*|All Folders"
 msgstr "*|Wszystkie katalogi"
 
-#: ../kfile/kfilewidget.cpp:2023
+#: ../kfile/kfilewidget.cpp:2036
 msgid "Icon size: %1 pixels (standard size)"
 msgstr "Wielkość ikon: %1 pikseli (rozmiar standardowy)"
 
-#: ../kfile/kfilewidget.cpp:2026
+#: ../kfile/kfilewidget.cpp:2039
 msgid "Icon size: %1 pixels"
 msgstr "Wielkość ikon: %1 pikseli"
 
-#: ../kfile/kfilewidget.cpp:2144
+#: ../kfile/kfilewidget.cpp:2157
 msgid "Automatically select filename e&xtension (%1)"
 msgstr "Automatycznie wybierz &rozszerzenie nazwy pliku (%1)"
 
-#: ../kfile/kfilewidget.cpp:2145
+#: ../kfile/kfilewidget.cpp:2158
 msgid "the extension <b>%1</b>"
 msgstr "rozszerzenie <b>%1</b>"
 
-#: ../kfile/kfilewidget.cpp:2153
+#: ../kfile/kfilewidget.cpp:2166
 msgid "Automatically select filename e&xtension"
 msgstr "Automatycznie wybierz &rozszerzenie nazwy pliku"
 
-#: ../kfile/kfilewidget.cpp:2154
+#: ../kfile/kfilewidget.cpp:2167
 msgid "a suitable extension"
 msgstr "odpowiadające rozszerzenie"
 
-#: ../kfile/kfilewidget.cpp:2164
+#: ../kfile/kfilewidget.cpp:2177
 msgid ""
 "This option enables some convenient features for saving files with "
 "extensions:<br /><ol><li>Any extension specified in the <b>%1</b> text area "
@@ -4717,11 +4373,11 @@ msgstr ""
 "li></ol> Jeśli nie jesteś pewien, włącz opcję, w ten sposób pliki będą "
 "łatwiejsze do zarządzania."
 
-#: ../kfile/kfilewidget.cpp:2470
+#: ../kfile/kfilewidget.cpp:2492
 msgid "Bookmarks"
 msgstr "Zakładki"
 
-#: ../kfile/kfilewidget.cpp:2474
+#: ../kfile/kfilewidget.cpp:2496
 msgid ""
 "<qt>This button allows you to bookmark specific locations. Click on this "
 "button to open the bookmark menu where you may add, edit or select a "
@@ -4818,10 +4474,6 @@ msgstr ""
 "Utwórz nowy katalog w:\n"
 "%1"
 
-#: ../kfile/kfiletreeview.cpp:187
-msgid "Show Hidden Folders"
-msgstr "Pokaż ukryte katalogi"
-
 #: ../kfile/kurlnavigatortogglebutton.cpp:94
 msgid "Click for Location Navigation"
 msgstr "Naciśnij, aby przechodzić po położeniach"
@@ -4856,95 +4508,51 @@ msgctxt "@info"
 msgid "Do you really want to empty the Trash? All items will be deleted."
 msgstr "Czy na pewno opróżnić kosz? Wszystkie elementy zostaną skasowane."
 
-#: ../kfile/kdirselectdialog.cpp:129
-msgctxt "folder name"
-msgid "New Folder"
-msgstr "Nowy katalog"
-
-#: ../kfile/kdirselectdialog.cpp:134
-msgctxt "@label:textbox"
-msgid ""
-"Create new folder in:\n"
-"%1"
-msgstr ""
-"Utwórz nowy katalog w:\n"
-"%1"
-
-#: ../kfile/kdirselectdialog.cpp:266
-msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "Nowy katalog..."
-
-#: ../kfile/kdirselectdialog.cpp:306
-msgctxt "@action:inmenu"
-msgid "New Folder..."
-msgstr "Nowy katalog..."
-
-#: ../kfile/kdirselectdialog.cpp:313
-msgctxt "@action:inmenu"
-msgid "Move to Trash"
-msgstr "Przenieś do kosza"
-
-#: ../kfile/kdirselectdialog.cpp:320
-msgctxt "@action:inmenu"
-msgid "Delete"
-msgstr "Usuń"
-
-#: ../kfile/kdirselectdialog.cpp:329
-msgctxt "@option:check"
-msgid "Show Hidden Folders"
-msgstr "Pokaż ukryte katalogi"
-
-#: ../kfile/kdirselectdialog.cpp:336
-msgctxt "@action:inmenu"
-msgid "Properties"
-msgstr "Właściwości"
-
-#: ../kfile/kfileplacesmodel.cpp:115
+#: ../kfile/kfileplacesmodel.cpp:100
 msgctxt "KFile System Bookmarks"
 msgid "Home"
 msgstr "Katalog domowy"
 
-#: ../kfile/kfileplacesmodel.cpp:118
+#: ../kfile/kfileplacesmodel.cpp:103
 msgctxt "KFile System Bookmarks"
 msgid "Network"
 msgstr "Sieć"
 
-#: ../kfile/kfileplacesmodel.cpp:121
+#: ../kfile/kfileplacesmodel.cpp:106
 msgctxt "KFile System Bookmarks"
 msgid "Root"
 msgstr "Katalog główny"
 
-#: ../kfile/kfileplacesmodel.cpp:124
+#: ../kfile/kfileplacesmodel.cpp:109
 msgctxt "KFile System Bookmarks"
 msgid "Trash"
 msgstr "Kosz"
 
-#: ../kfile/kfileplacesmodel.cpp:751
+#: ../kfile/kfileplacesmodel.cpp:728
 msgid "&Release '%1'"
 msgstr "O&dmontuj '%1'"
 
-#: ../kfile/kfileplacesmodel.cpp:753
+#: ../kfile/kfileplacesmodel.cpp:730
 msgid "&Safely Remove '%1'"
 msgstr "Usuń &bezpiecznie '%1'"
 
-#: ../kfile/kfileplacesmodel.cpp:756
+#: ../kfile/kfileplacesmodel.cpp:733
 msgid "&Unmount '%1'"
 msgstr "Odmont&uj '%1'"
 
-#: ../kfile/kfileplacesmodel.cpp:777
+#: ../kfile/kfileplacesmodel.cpp:754
 msgid "&Eject '%1'"
 msgstr "W&ysuń '%1'"
 
-#: ../kfile/kfileplacesmodel.cpp:811
+#: ../kfile/kfileplacesmodel.cpp:788
 msgid "The device '%1' is not a disk and cannot be ejected."
 msgstr "Urządzenie '%1' to nie dysk i nie można go wysunąć."
 
-#: ../kfile/kfileplacesmodel.cpp:847
+#: ../kfile/kfileplacesmodel.cpp:826
 msgid "An error occurred while accessing '%1', the system responded: %2"
 msgstr "Błąd podczas próby uzyskania dostępu do '%1', system zgłosił: %2"
 
-#: ../kfile/kfileplacesmodel.cpp:851
+#: ../kfile/kfileplacesmodel.cpp:830
 msgid "An error occurred while accessing '%1'"
 msgstr "Błąd podczas próby uzyskania dostępu do '%1'"
 

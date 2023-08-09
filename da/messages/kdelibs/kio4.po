@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio4\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2022-12-06 00:42+0200\n"
+"POT-Creation-Date: 2023-08-10 00:42+0300\n"
 "PO-Revision-Date: 2014-04-16 19:03+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -432,19 +432,19 @@ msgstr "Enkelt udgaver"
 msgid "Run Until Finished"
 msgstr "Kør indtil det er færdigt"
 
-#: metadata/kfilemetadata_ffmpeg.cpp:92 metadata/kfilemetadata_ffmpeg.cpp:133
-#: metadata/kfilemetadata_taglib.cpp:132 kio/kfilemetainfo.cpp:257
+#: metadata/kfilemetadata_ffmpeg.cpp:91 metadata/kfilemetadata_ffmpeg.cpp:143
+#: metadata/kfilemetadata_taglib.cpp:133 kio/kfilemetainfo.cpp:259
 msgctxt "kfilemetadata"
 msgid "%1 kb/s"
 msgstr ""
 
-#: metadata/kfilemetadata_taglib.cpp:141 kio/kfilemetainfo.cpp:258
+#: metadata/kfilemetadata_taglib.cpp:142 kio/kfilemetainfo.cpp:260
 msgctxt "kfilemetadata"
 msgid "%1 Hz"
 msgstr ""
 
-#: kio/kdirlister.cpp:390 kio/renamedialog.cpp:415 kio/krun.cpp:1064
-#: kio/paste.cpp:235
+#: kio/kdirlister.cpp:418 kio/renamedialog.cpp:415 kio/krun.cpp:1038
+#: kio/paste.cpp:229
 msgid ""
 "Malformed URL\n"
 "%1"
@@ -452,7 +452,7 @@ msgstr ""
 "Misdannet URL\n"
 "%1"
 
-#: kio/kdirlister.cpp:400
+#: kio/kdirlister.cpp:422
 msgid ""
 "URL cannot be listed\n"
 "%1"
@@ -581,6 +581,10 @@ msgstr "Et nyere element med navnet \"%1\" findes allerede."
 msgid "Rename:"
 msgstr "Omdøb:"
 
+#: kio/khttp.cpp:650
+msgid "User name or password is empty"
+msgstr ""
+
 #: kio/job.cpp:116
 msgctxt "@title job"
 msgid "Moving"
@@ -606,7 +610,8 @@ msgctxt "@title job"
 msgid "Creating directory"
 msgstr "Opretter mappe"
 
-#: kio/job.cpp:131 kio/fileundomanager.cpp:120
+#: kio/job.cpp:131 kio/fileundomanager.cpp:120 kfile/kfiledialog.cpp:319
+#: kfile/kfiledialog.cpp:333
 msgid "Directory"
 msgstr "Mappe"
 
@@ -629,34 +634,24 @@ msgctxt "@title job"
 msgid "Transferring"
 msgstr "Overfører"
 
-#: kio/job.cpp:154
-msgctxt "@title job"
-msgid "Mounting"
-msgstr "Monterer"
-
-#: kio/job.cpp:155
-msgid "Device"
-msgstr "Enhed"
-
-#: kio/job.cpp:156 kio/job.cpp:162
-msgid "Mountpoint"
-msgstr "Monteringspunkt"
-
-#: kio/job.cpp:161
-msgctxt "@title job"
-msgid "Unmounting"
-msgstr "Afmonterer"
-
-#: kio/job.cpp:1823 kio/copyjob.cpp:1394 kio/copyjob.cpp:1976
-#: kio/global.cpp:638 kio/paste.cpp:86
+#: kio/job.cpp:1657 kio/copyjob.cpp:1354 kio/copyjob.cpp:1907
+#: kio/global.cpp:552 kio/paste.cpp:86
 msgid "File Already Exists"
 msgstr "Filen eksisterer allerede"
 
-#: kio/copyjob.cpp:1071 kio/global.cpp:648
+#: kio/kautomount.cpp:87 kio/kautomount.cpp:102 kio/kautomount.cpp:108
+msgid "Could not mount device."
+msgstr ""
+
+#: kio/kautomount.cpp:170 kio/kautomount.cpp:185 kio/kautomount.cpp:191
+msgid "Could not unmount device."
+msgstr ""
+
+#: kio/copyjob.cpp:1040 kio/global.cpp:562
 msgid "Folder Already Exists"
 msgstr "Mappen findes allerede"
 
-#: kio/copyjob.cpp:1394 kio/copyjob.cpp:1976
+#: kio/copyjob.cpp:1354 kio/copyjob.cpp:1907
 msgid "Already Exists as Folder"
 msgstr "Findes allerede som en mappe"
 
@@ -673,7 +668,7 @@ msgstr "H&andlinger"
 msgid "&Open with %1"
 msgstr "Å&bn med %1"
 
-#: kio/kfileitemactions.cpp:518 ../kfile/kfilewidget.cpp:1938
+#: kio/kfileitemactions.cpp:518 ../kfile/kfilewidget.cpp:1951
 msgid "&Open"
 msgstr "Å&bn"
 
@@ -701,98 +696,92 @@ msgctxt "@item:inmenu Open With, %1 is application name"
 msgid "%1"
 msgstr "%1"
 
-#: kio/kdirmodel.cpp:976
+#: kio/kdirmodel.cpp:915
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Navn"
 
-#: kio/kdirmodel.cpp:978
+#: kio/kdirmodel.cpp:917
 msgctxt "@title:column"
 msgid "Size"
 msgstr "Størrelse"
 
-#: kio/kdirmodel.cpp:980
+#: kio/kdirmodel.cpp:919
 msgctxt "@title:column"
 msgid "Date"
 msgstr "Dato"
 
-#: kio/kdirmodel.cpp:982
+#: kio/kdirmodel.cpp:921
 msgctxt "@title:column"
 msgid "Permissions"
 msgstr "Rettigheder"
 
-#: kio/kdirmodel.cpp:984
+#: kio/kdirmodel.cpp:923
 msgctxt "@title:column"
 msgid "Owner"
 msgstr "Ejer"
 
-#: kio/kdirmodel.cpp:986
+#: kio/kdirmodel.cpp:925
 msgctxt "@title:column"
 msgid "Group"
 msgstr "Gruppe"
 
-#: kio/kdirmodel.cpp:988
+#: kio/kdirmodel.cpp:927
 msgctxt "@title:column"
 msgid "Type"
 msgstr "Type"
 
-#: kio/global.cpp:90
-msgid "1 day %2"
-msgid_plural "%1 days %2"
-msgstr[0] "1 dag %2"
-msgstr[1] "%1 dage %2"
-
-#: kio/global.cpp:99 kio/global.cpp:116
+#: kio/global.cpp:90 kio/global.cpp:107
 msgid "%1 Item"
 msgid_plural "%1 Items"
 msgstr[0] "%1 element"
 msgstr[1] "%1 elementer"
 
-#: kio/global.cpp:103
+#: kio/global.cpp:94
 msgid "1 Folder"
 msgid_plural "%1 Folders"
 msgstr[0] "1 mappe"
 msgstr[1] "%1 mapper"
 
-#: kio/global.cpp:104
+#: kio/global.cpp:95
 msgid "1 File"
 msgid_plural "%1 Files"
 msgstr[0] "1 fil"
 msgstr[1] "%1 filer"
 
-#: kio/global.cpp:107
+#: kio/global.cpp:98
 msgctxt "folders, files (size)"
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: kio/global.cpp:108
+#: kio/global.cpp:99
 msgctxt "folders, files"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: kio/global.cpp:110
+#: kio/global.cpp:101
 msgctxt "files (size)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: kio/global.cpp:117
+#: kio/global.cpp:108
 msgctxt "items: folders, files (size)"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kio/global.cpp:148
+#: kio/global.cpp:139
 msgid "Could not read %1."
 msgstr "Kunne ikke læse %1."
 
-#: kio/global.cpp:151
+#: kio/global.cpp:142
 msgid "Could not write to %1."
 msgstr "Kunne ikke skrive til %1."
 
-#: kio/global.cpp:154
+#: kio/global.cpp:145
 msgid "Could not start process %1."
 msgstr "Kunne ikke starte processen %1."
 
-#: kio/global.cpp:157
+#: kio/global.cpp:148
 #, fuzzy
 msgid ""
 "Internal Error\n"
@@ -803,51 +792,43 @@ msgstr ""
 "Send venligst en fejlrapport på http://bugs.kde.org\n"
 "%1"
 
-#: kio/global.cpp:160
+#: kio/global.cpp:151
 msgid "Malformed URL %1."
 msgstr "Forkert URL %1."
 
-#: kio/global.cpp:163
-msgid "The protocol %1 is not supported."
-msgstr "Protokollen %1 er ikke understøttet."
-
-#: kio/global.cpp:166
-msgid "The protocol %1 is only a filter protocol."
-msgstr "Protokollen %1 er kun en filterprotokol."
-
-#: kio/global.cpp:173
+#: kio/global.cpp:158
 msgid "%1 is a folder, but a file was expected."
 msgstr "%1 er en mappe, men jeg forventede en fil."
 
-#: kio/global.cpp:176
+#: kio/global.cpp:161
 msgid "%1 is a file, but a folder was expected."
 msgstr "%1 er en fil, men jeg forventede en mappe."
 
-#: kio/global.cpp:179
+#: kio/global.cpp:164
 msgid "The file or folder %1 does not exist."
 msgstr "Filen eller mappen %1 eksisterer ikke."
 
-#: kio/global.cpp:182
+#: kio/global.cpp:167
 msgid "A file named %1 already exists."
 msgstr "En fil ved navn %1 findes allerede."
 
-#: kio/global.cpp:185
+#: kio/global.cpp:170
 msgid "A folder named %1 already exists."
 msgstr "En mappe ved navn %1 eksisterer allerede."
 
-#: kio/global.cpp:188
+#: kio/global.cpp:173
 msgid "No hostname specified."
 msgstr "Intet værtsnavn angivet."
 
-#: kio/global.cpp:188
+#: kio/global.cpp:173
 msgid "Unknown host %1"
 msgstr "Ukendt vært %1"
 
-#: kio/global.cpp:191
+#: kio/global.cpp:176
 msgid "Access denied to %1."
 msgstr "Adgang nægtet til %1."
 
-#: kio/global.cpp:194
+#: kio/global.cpp:179
 msgid ""
 "Access denied.\n"
 "Could not write to %1."
@@ -855,119 +836,83 @@ msgstr ""
 "Adgang nægtet.\n"
 "Kunne ikke skrive til %1."
 
-#: kio/global.cpp:197
+#: kio/global.cpp:182
 msgid "Could not enter folder %1."
 msgstr "Kunne ikke få tilgang til mappen %1."
 
-#: kio/global.cpp:200
-msgid "The protocol %1 does not implement a folder service."
-msgstr "Protokollen %1 implementerer ikke en mappetjeneste."
-
-#: kio/global.cpp:203
+#: kio/global.cpp:185
 msgid "Found a cyclic link in %1."
 msgstr "Fandt et cyklisk link i %1."
 
-#: kio/global.cpp:209
-msgid "Found a cyclic link while copying %1."
-msgstr "Fandt et cyklisk link under kopiering af %1."
-
-#: kio/global.cpp:212
-msgid "Could not create socket for accessing %1."
-msgstr "Kunne ikke oprette sokkel for adgang til %1."
-
-#: kio/global.cpp:215
+#: kio/global.cpp:191
 msgid "Could not connect to host %1."
 msgstr "Kunne ikke forbinde til værten %1."
 
-#: kio/global.cpp:218
+#: kio/global.cpp:194
 msgid "Connection to host %1 is broken."
 msgstr "Forbindelsen til værten %1 er afbrudt."
 
-#: kio/global.cpp:221
-msgid "The protocol %1 is not a filter protocol."
-msgstr "Protokollen %1 er ikke en filterprotokol."
-
-#: kio/global.cpp:224
-msgid ""
-"Could not mount device.\n"
-"The reported error was:\n"
-"%1"
-msgstr ""
-"Kunne ikke montere enheden.\n"
-"Den rapporterede fejl var:\n"
-"%1"
-
-#: kio/global.cpp:227
-msgid ""
-"Could not unmount device.\n"
-"The reported error was:\n"
-"%1"
-msgstr ""
-"Kunne ikke afmontere enheden.\n"
-"Den rapporterede fejl var:\n"
-"%1"
-
-#: kio/global.cpp:230
+#: kio/global.cpp:197
 msgid "Could not read file %1."
 msgstr "Kunne ikke læse filen %1."
 
-#: kio/global.cpp:233
+#: kio/global.cpp:200
 msgid "Could not write to file %1."
 msgstr "Kunne ikke skrive til filen %1."
 
-#: kio/global.cpp:236
+#: kio/global.cpp:203
 msgid "Could not bind %1."
 msgstr "Kunne ikke binde %1."
 
-#: kio/global.cpp:239
+#: kio/global.cpp:206
 msgid "Could not listen %1."
 msgstr "Kunne ikke lytte til %1."
 
-#: kio/global.cpp:242
+#: kio/global.cpp:209
 msgid "Could not accept %1."
 msgstr "Kunne ikke acceptere %1."
 
-#: kio/global.cpp:248
+#: kio/global.cpp:215
 msgid "Could not access %1."
 msgstr "Kunne ikke få adgang til %1."
 
-#: kio/global.cpp:251
+#: kio/global.cpp:218
 msgid "Could not terminate listing %1."
 msgstr "Kunne ikke afslutte listning %1."
 
-#: kio/global.cpp:254
+#: kio/global.cpp:221
 msgid "Could not make folder %1."
 msgstr "Kunne ikke oprette mappen %1."
 
-#: kio/global.cpp:257
+#: kio/global.cpp:224
 msgid "Could not remove folder %1."
 msgstr "Kunne ikke omdøbe mappen %1."
 
-#: kio/global.cpp:260
+#: kio/global.cpp:227
 msgid "Could not resume file %1."
 msgstr "Kunne ikke genoptage filen %1."
 
-#: kio/global.cpp:263
+#: kio/global.cpp:230
 msgid "Could not rename file %1."
 msgstr "Kunne ikke omdøbe filen %1."
 
-#: kio/global.cpp:266
+#: kio/global.cpp:233
 msgid "Could not change permissions for %1."
 msgstr "Kunne ikke ændre rettigheder for %1."
 
-#: kio/global.cpp:269
+#: kio/global.cpp:236
 msgid "Could not change ownership for %1."
 msgstr "Kunne ikke ændre ejerskab for %1."
 
-#: kio/global.cpp:272
+#: kio/global.cpp:239
 msgid "Could not delete file %1."
 msgstr "Kunne ikke slette filen %1."
 
-#: kio/global.cpp:275
+#: kio/global.cpp:242
 msgid "The process for the %1 protocol died unexpectedly."
 msgstr "Processen for protokollen %1 døde uventet."
 
-#: kio/global.cpp:278
+#: kio/global.cpp:245
 msgid ""
 "Error. Out of memory.\n"
 "%1"
@@ -975,7 +920,7 @@ msgstr ""
 "Fejl. Ikke nok hukommelse.\n"
 "%1"
 
-#: kio/global.cpp:281
+#: kio/global.cpp:248
 msgid ""
 "Unknown proxy host\n"
 "%1"
@@ -983,19 +928,11 @@ msgstr ""
 "Ukendt proxyvært\n"
 "%1"
 
-#: kio/global.cpp:284
+#: kio/global.cpp:251
 msgid "Authorization failed, %1 authentication not supported"
 msgstr "Godkendelse mislykkedes, %1-godkendelse ikke understøttet"
 
-#: kio/global.cpp:287
-msgid ""
-"User canceled action\n"
-"%1"
-msgstr ""
-"Brugeren annullerede handlingen\n"
-"%1"
-
-#: kio/global.cpp:290
+#: kio/global.cpp:254
 msgid ""
 "Internal error in server\n"
 "%1"
@@ -1003,7 +940,7 @@ msgstr ""
 "Intern fejl i serveren\n"
 "%1"
 
-#: kio/global.cpp:293
+#: kio/global.cpp:257
 msgid ""
 "Timeout on server\n"
 "%1"
@@ -1011,7 +948,7 @@ msgstr ""
 "Tiden løb ud på serveren\n"
 "%1"
 
-#: kio/global.cpp:296
+#: kio/global.cpp:260
 msgid ""
 "Unknown error\n"
 "%1"
@@ -1019,15 +956,7 @@ msgstr ""
 "Ukendt fejl\n"
 "%1"
 
-#: kio/global.cpp:299
-msgid ""
-"Unknown interrupt\n"
-"%1"
-msgstr ""
-"Ukendt interrupt\n"
-"%1"
-
-#: kio/global.cpp:310
+#: kio/global.cpp:263
 msgid ""
 "Could not delete original file %1.\n"
 "Please check permissions."
@@ -1035,7 +964,7 @@ msgstr ""
 "Kunne ikke slette oprindelig fil %1.\n"
 "Tjek rettighederne."
 
-#: kio/global.cpp:313
+#: kio/global.cpp:266
 msgid ""
 "Could not delete partial file %1.\n"
 "Please check permissions."
@@ -1043,7 +972,7 @@ msgstr ""
 "Kunne ikke slette delvis fil %1.\n"
 "Tjek rettighederne."
 
-#: kio/global.cpp:316
+#: kio/global.cpp:269
 msgid ""
 "Could not rename original file %1.\n"
 "Please check permissions."
@@ -1051,7 +980,7 @@ msgstr ""
 "Kunne ikke omdøbe oprindelig fil %1.\n"
 "Tjek rettighederne."
 
-#: kio/global.cpp:319
+#: kio/global.cpp:272
 msgid ""
 "Could not rename partial file %1.\n"
 "Please check permissions."
@@ -1059,7 +988,7 @@ msgstr ""
 "Kunne ikke omdøbe delvis fil %1.\n"
 "Tjek rettighederne."
 
-#: kio/global.cpp:322
+#: kio/global.cpp:275
 msgid ""
 "Could not create symlink %1.\n"
 "Please check permissions."
@@ -1067,7 +996,7 @@ msgstr ""
 "Kunne ikke oprette symlink %1.\n"
 "Tjek rettighederne."
 
-#: kio/global.cpp:328
+#: kio/global.cpp:281
 msgid ""
 "Could not write file %1.\n"
 "Disk full."
@@ -1075,7 +1004,7 @@ msgstr ""
 "Kunne ikke skrive filen %1\n"
 "Disken er fuld."
 
-#: kio/global.cpp:331
+#: kio/global.cpp:284
 msgid ""
 "The source and destination are the same file.\n"
 "%1"
@@ -1083,11 +1012,13 @@ msgstr ""
 "Kilden og destinationen er den samme fil.\n"
 "%1"
 
-#: kio/global.cpp:337
-msgid "%1 is required by the server, but is not available."
-msgstr "%1 kræves af serveren, men er ikke tilgængelig."
+#: kio/global.cpp:290
+msgid ""
+"The server cannot handle the request\n"
+"%1"
+msgstr ""
 
-#: kio/global.cpp:340
+#: kio/global.cpp:293
 #, fuzzy
 msgid ""
 "Unknown error code %1\n"
@@ -1098,126 +1029,110 @@ msgstr ""
 "%2\n"
 "Send venligst en fejlrapport på http://bugs.kde.org."
 
-#: kio/global.cpp:350
-msgid "Opening connections is not supported with the protocol %1."
-msgstr "Åbning af forbindelser er ikke understøttet med protokollen %1."
-
-#: kio/global.cpp:352
-msgid "Closing connections is not supported with the protocol %1."
-msgstr "Lukning af forbindelser er ikke understøttet med protokollen %1."
-
-#: kio/global.cpp:354
+#: kio/global.cpp:303
 msgid "Accessing files is not supported with the protocol %1."
 msgstr "Adgang til filer er ikke understøttet med protokollen %1."
 
-#: kio/global.cpp:356
+#: kio/global.cpp:305
 msgid "Writing to %1 is not supported."
 msgstr "Skrivning til %1 er ikke understøttet."
 
-#: kio/global.cpp:358
+#: kio/global.cpp:307
 msgid "There are no special actions available for protocol %1."
 msgstr "Der er ingen specielle handlinger tilgængelige for protokollen %1."
 
-#: kio/global.cpp:360
+#: kio/global.cpp:309
 msgid "Listing folders is not supported for protocol %1."
 msgstr "Listning af mapper er ikke understøttet for protokollen %1."
 
-#: kio/global.cpp:362
+#: kio/global.cpp:311
 msgid "Retrieving data from %1 is not supported."
 msgstr "Hentning af data fra %1 er ikke understøttet."
 
-#: kio/global.cpp:364
+#: kio/global.cpp:313
 msgid "Retrieving mime type information from %1 is not supported."
 msgstr "Hentning mimetype-information fra %1 er ikke understøttet."
 
-#: kio/global.cpp:366
+#: kio/global.cpp:315
 msgid "Renaming or moving files within %1 is not supported."
 msgstr "Omdøbning og flytning af filer inden for %1 er ikke understøttet."
 
-#: kio/global.cpp:368
+#: kio/global.cpp:317
 msgid "Creating symlinks is not supported with protocol %1."
 msgstr "Oprettelse af symlinks er ikke understøttet med protokollen %1."
 
-#: kio/global.cpp:370
+#: kio/global.cpp:319
 msgid "Copying files within %1 is not supported."
 msgstr "Kopiering af filer inden for %1 er ikke understøttet."
 
-#: kio/global.cpp:372
+#: kio/global.cpp:321
 msgid "Deleting files from %1 is not supported."
 msgstr "Sletning af filer fra %1 er ikke understøttet."
 
-#: kio/global.cpp:374
+#: kio/global.cpp:323
 msgid "Creating folders is not supported with protocol %1."
 msgstr "Oprettelse af mapper er ikke understøttet med protokollen %1."
 
-#: kio/global.cpp:376
+#: kio/global.cpp:325
 msgid "Changing the attributes of files is not supported with protocol %1."
 msgstr "Ændring af filers attributter er ikke understøttet med protokollen %1."
 
-#: kio/global.cpp:378
+#: kio/global.cpp:327
 msgid "Changing the ownership of files is not supported with protocol %1."
 msgstr "Ændring af filers ejerskab er ikke understøttet med protokollen %1."
 
-#: kio/global.cpp:380
-msgid "Using sub-URLs with %1 is not supported."
-msgstr "Brug af under-URL'er med %1 er ikke understøttet."
-
-#: kio/global.cpp:382
-msgid "Opening files is not supported with protocol %1."
-msgstr "Åbning af filer er ikke understøttet med protokollen %1."
-
-#: kio/global.cpp:384
+#: kio/global.cpp:329
 msgid "Protocol %1 does not support action %2."
 msgstr "Protokollen %1 understøtter ikke handlingen %2."
 
-#: kio/global.cpp:404
+#: kio/global.cpp:348
 msgctxt "@info url"
 msgid "(unknown)"
 msgstr "(ukendt)"
 
-#: kio/global.cpp:412
+#: kio/global.cpp:355
 msgctxt "@info %1 error name, %2 description"
 msgid "<qt><p><b>%1</b></p><p>%2</p></qt>"
 msgstr "<qt><p><b>%1</b></p><p>%2</p></qt>"
 
-#: kio/global.cpp:416
+#: kio/global.cpp:359
 msgid "<b>Technical reason</b>: "
 msgstr "<b>Teknisk årsag</b>: "
 
-#: kio/global.cpp:418
+#: kio/global.cpp:361
 msgid "<b>Details of the request</b>:"
 msgstr "<b>Forespørgslens detaljer</b>:"
 
-#: kio/global.cpp:419
+#: kio/global.cpp:362
 msgid "<li>URL: %1</li>"
 msgstr "<li>URL: %1</li>"
 
-#: kio/global.cpp:421
+#: kio/global.cpp:364
 msgid "<li>Protocol: %1</li>"
 msgstr "<li>Protokol: %1</li>"
 
-#: kio/global.cpp:423
+#: kio/global.cpp:366
 msgid "<li>Date and time: %1</li>"
 msgstr "<li>Dato og tid: %1</li>"
 
-#: kio/global.cpp:424
+#: kio/global.cpp:367
 msgid "<li>Additional information: %1</li>"
 msgstr "<li>Yderligere information: %1</li>"
 
-#: kio/global.cpp:427
+#: kio/global.cpp:370
 msgid "<b>Possible causes</b>:"
 msgstr "<b>Mulige årsager</b>:"
 
-#: kio/global.cpp:432
+#: kio/global.cpp:375
 msgid "<b>Possible solutions</b>:"
 msgstr "<b>Mulige løsninger</b>:"
 
-#: kio/global.cpp:465
+#: kio/global.cpp:408
 msgctxt "@info protocol"
 msgid "(unknown)"
 msgstr "(ukendt)"
 
-#: kio/global.cpp:475
+#: kio/global.cpp:417
 msgid ""
 "Contact your appropriate computer support system, whether the system "
 "administrator, or technical support group for further assistance."
@@ -1225,15 +1140,15 @@ msgstr ""
 "Kontakt det passende computersupportsystem, om det måtte være "
 "systemadministratoren eller en teknisk supportgruppe, for yderligere hjælp."
 
-#: kio/global.cpp:478
+#: kio/global.cpp:420
 msgid "Contact the administrator of the server for further assistance."
 msgstr "Kontakt serverens administrator for yderligere hjælp."
 
-#: kio/global.cpp:481
+#: kio/global.cpp:423
 msgid "Check your access permissions on this resource."
 msgstr "Undersøg dine adgangsrettigheder på denne ressource."
 
-#: kio/global.cpp:482
+#: kio/global.cpp:424
 msgid ""
 "Your access permissions may be inadequate to perform the requested operation "
 "on this resource."
@@ -1241,14 +1156,14 @@ msgstr ""
 "Dine adgangsrettigheder er måske ikke tilstrækkelige til at udføre den "
 "anmodede operation på denne ressource."
 
-#: kio/global.cpp:484
+#: kio/global.cpp:426
 msgid ""
 "The file may be in use (and thus locked) by another user or application."
 msgstr ""
 "Filen er måske i brug (og derfor låst) af en anden bruger eller et andet "
 "program."
 
-#: kio/global.cpp:486
+#: kio/global.cpp:428
 msgid ""
 "Check to make sure that no other application or user is using the file or "
 "has locked the file."
@@ -1256,16 +1171,16 @@ msgstr ""
 "Undersøg om et andet program eller en anden bruger anvender filen eller har "
 "låst filen."
 
-#: kio/global.cpp:488
+#: kio/global.cpp:430
 msgid "Although unlikely, a hardware error may have occurred."
 msgstr ""
 "Selv om det ikke er sandsynligt, kan der være opstået et hardwareproblem."
 
-#: kio/global.cpp:490
+#: kio/global.cpp:432
 msgid "You may have encountered a bug in the program."
 msgstr "Du er måske stødt på en fejl i programmet."
 
-#: kio/global.cpp:491
+#: kio/global.cpp:433
 msgid ""
 "This is most likely to be caused by a bug in the program. Please consider "
 "submitting a full bug report as detailed below."
@@ -1273,7 +1188,7 @@ msgstr ""
 "Dette er højst sandsynligt på grund af en fejl i programmet. Overvej at "
 "indsende en fuldstændig fejlrapport som beskrevet nedenfor."
 
-#: kio/global.cpp:493
+#: kio/global.cpp:435
 msgid ""
 "Update your software to the latest version. Your distribution should provide "
 "tools to update your software."
@@ -1281,7 +1196,7 @@ msgstr ""
 "Opdatér dit program til den nyeste udgave. Din distribution har sikkert "
 "værktøjer til at opdatere dine programmer."
 
-#: kio/global.cpp:495
+#: kio/global.cpp:437
 #, fuzzy
 msgid ""
 "When all else fails, please consider helping the the maintainers of this "
@@ -1301,11 +1216,11 @@ msgstr ""
 "detaljerne givet ovenfor og inkludér dem i din fejlrapport sammen med alle "
 "de detaljer som du tror vil hjælpe."
 
-#: kio/global.cpp:503
+#: kio/global.cpp:445
 msgid "There may have been a problem with your network connection."
 msgstr "Der har måske været et problem med din netværksforbindelse."
 
-#: kio/global.cpp:506
+#: kio/global.cpp:448
 msgid ""
 "There may have been a problem with your network configuration. If you have "
 "been accessing the Internet with no problems recently, this is unlikely."
@@ -1314,7 +1229,7 @@ msgstr ""
 "haft adgang til internettet uden problemer for nyligt, er dette ikke "
 "sandsynligt."
 
-#: kio/global.cpp:509
+#: kio/global.cpp:451
 msgid ""
 "There may have been a problem at some point along the network path between "
 "the server and this computer."
@@ -1322,39 +1237,39 @@ msgstr ""
 "Der har måske været et problem på et eller andet punkt langs netværksstien "
 "mellem serveren og denne computer."
 
-#: kio/global.cpp:511
+#: kio/global.cpp:453
 msgid "Try again, either now or at a later time."
 msgstr "Prøv igen, enten nu eller på et senere tidspunkt."
 
-#: kio/global.cpp:512
+#: kio/global.cpp:454
 msgid "A protocol error or incompatibility may have occurred."
 msgstr "Der er opstået en protokolfejl eller en inkompatibilitet."
 
-#: kio/global.cpp:513
+#: kio/global.cpp:455
 msgid "Ensure that the resource exists, and try again."
 msgstr "Sørg for at ressourcen eksisterer og prøv igen."
 
-#: kio/global.cpp:514
+#: kio/global.cpp:456
 msgid "The specified resource may not exist."
 msgstr "Den angivne ressource eksisterer måske ikke."
 
-#: kio/global.cpp:515
+#: kio/global.cpp:457
 msgid "You may have incorrectly typed the location."
 msgstr "Du har måske indtastet placeringen forkert."
 
-#: kio/global.cpp:516
+#: kio/global.cpp:458
 msgid "Double-check that you have entered the correct location and try again."
 msgstr "Dobbelttjek at du har indtastet den rigtige adresse og prøv igen."
 
-#: kio/global.cpp:518
+#: kio/global.cpp:460
 msgid "Check your network connection status."
 msgstr "Tjek status for din netværksforbindelse."
 
-#: kio/global.cpp:522
+#: kio/global.cpp:464
 msgid "Cannot Open Resource For Reading"
 msgstr "Kan ikke åbne ressource til læsning."
 
-#: kio/global.cpp:523
+#: kio/global.cpp:465
 msgid ""
 "This means that the contents of the requested file or folder <strong>%1</"
 "strong> could not be retrieved, as read access could not be obtained."
@@ -1362,15 +1277,15 @@ msgstr ""
 "Dette betyder at indholdet af den ønskede fil eller mappe \"%1\" ikke kunne "
 "hentes idet der ikke kunne opnås læseadgang."
 
-#: kio/global.cpp:526
+#: kio/global.cpp:468
 msgid "You may not have permissions to read the file or open the folder."
 msgstr "Du har måske ikke rettigheder til at læse filen eller åbne mappen."
 
-#: kio/global.cpp:532
+#: kio/global.cpp:474
 msgid "Cannot Open Resource For Writing"
 msgstr "Kan ikke åbne ressource til skrivning"
 
-#: kio/global.cpp:533
+#: kio/global.cpp:475
 msgid ""
 "This means that the file, <strong>%1</strong>, could not be written to as "
 "requested, because access with permission to write could not be obtained."
@@ -1378,15 +1293,15 @@ msgstr ""
 "Dette betyder at filen \"%1\" ikke kunne skrives som anmodet idet der ikke "
 "kunne opnås skriveadgang."
 
-#: kio/global.cpp:541
+#: kio/global.cpp:483
 msgid "Cannot Initiate the %1 Protocol"
 msgstr "Kan ikke initiere %1-protokollen."
 
-#: kio/global.cpp:542
+#: kio/global.cpp:484
 msgid "Unable to Launch Process"
 msgstr "Kan ikke starte proces"
 
-#: kio/global.cpp:543
+#: kio/global.cpp:485
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol could not be started. This is usually due to technical "
@@ -1395,7 +1310,7 @@ msgstr ""
 "Programmet på din computer som sørger for adgang til <strong>%1</strong>-"
 "protokollen kunne ikke startes. Dette er sædvanligvis af tekniske årsager."
 
-#: kio/global.cpp:546
+#: kio/global.cpp:488
 #, fuzzy
 msgid ""
 "The program which provides compatibility with this protocol may not have "
@@ -1407,11 +1322,11 @@ msgstr ""
 "programmet til at være inkompatibelt med den aktuelle version så det ikke "
 "vil starte."
 
-#: kio/global.cpp:554
+#: kio/global.cpp:496
 msgid "Internal Error"
 msgstr "Intern fejl"
 
-#: kio/global.cpp:555
+#: kio/global.cpp:497
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol has reported an internal error."
@@ -1419,11 +1334,11 @@ msgstr ""
 "Programmet på din computer som sørger for adgang til <strong>%1</strong>-"
 "protokollen har rapporteret en intern fejl."
 
-#: kio/global.cpp:563
+#: kio/global.cpp:505
 msgid "Improperly Formatted URL"
 msgstr "Forkert formateret URL"
 
-#: kio/global.cpp:564
+#: kio/global.cpp:506
 msgid ""
 "The <strong>U</strong>niform <strong>R</strong>esource <strong>L</"
 "strong>ocator (URL) that you entered was not properly formatted. The format "
@@ -1437,78 +1352,11 @@ msgstr ""
 "adgangskode@www.eksempel.dk:port/mappe/filnavn.endelse?forespørgsel=værdi</"
 "strong></blockquote>"
 
-#: kio/global.cpp:573
-msgid "Unsupported Protocol %1"
-msgstr "Ikke-understøttet protokol %1"
-
-#: kio/global.cpp:574
-#, fuzzy
-msgid ""
-"The protocol <strong>%1</strong> is not supported by the programs currently "
-"installed on this computer."
-msgstr ""
-"Protokollen <strong>%1</strong> er ikke understøttet af de KDE-programmersom "
-"for øjeblikket er installeret på denne computer."
-
-#: kio/global.cpp:577
-msgid "The requested protocol may not be supported."
-msgstr "Den forespurgte protokol er måske ikke understøttet."
-
-#: kio/global.cpp:578
-msgid ""
-"The versions of the %1 protocol supported by this computer and the server "
-"may be incompatible."
-msgstr ""
-"Versionerne af %1-protokollen understøttet af denne computer og serveren er "
-"måske inkompatible."
-
-#: kio/global.cpp:580
-#, fuzzy
-msgid ""
-"You may perform a search on the Internet for a program (called a kioslave or "
-"ioslave) which supports this protocol. Places to search include <a href="
-"\"http://kde-apps.org/\">http://kde-apps.org/</a> and <a href=\"http://"
-"freshmeat.net/\">http://freshmeat.net/</a>."
-msgstr ""
-"Du kan lave en søgning på internettet efter et KDE-program (kaldet en "
-"kioslave eller ioslave) som understøtter denne protokol. Steder at søge på "
-"er bl.a. <a href=\"http://kde-apps.org/\">http://kde-apps.org/</a> og <a "
-"href=\"http://freshmeat.net/\">http://freshmeat.net/</a>."
-
-#: kio/global.cpp:589
-msgid "URL Does Not Refer to a Resource."
-msgstr "URL refererer ikke til en ressource."
-
-#: kio/global.cpp:590
-msgid "Protocol is a Filter Protocol"
-msgstr "Protokol er en filterprotokol"
-
-#: kio/global.cpp:591
-msgid ""
-"The <strong>U</strong>niform <strong>R</strong>esource <strong>L</"
-"strong>ocator (URL) that you entered did not refer to a specific resource."
-msgstr ""
-"Den URL (<strong>U</strong>niversal <strong>R</strong>esource <strong>L</"
-"strong>ocator) som du indtastede refererede ikke til en specifik ressource."
-
-#: kio/global.cpp:594
-#, fuzzy
-msgid ""
-"The Desktop is able to communicate through a protocol within a protocol; the "
-"protocol specified is only for use in such situations, however this is not "
-"one of these situations. This is a rare event, and is likely to indicate a "
-"programming error."
-msgstr ""
-"KDE er i stand til at kommunikere gennem en protokol inden for en protokol; "
-"protokollen der angives er kun til brug for sådanne situationer, men dette "
-"er imidlertid ikke en af disse situationer. Det er en sjælden begivenhed og "
-"indikerer sandsynligvis en programmeringsfejl."
-
-#: kio/global.cpp:602
+#: kio/global.cpp:516
 msgid "Unsupported Action: %1"
 msgstr "Ikke-understøttet handling: %1"
 
-#: kio/global.cpp:603
+#: kio/global.cpp:517
 #, fuzzy
 msgid ""
 "The requested action is not supported by the Desktop program which is "
@@ -1517,7 +1365,7 @@ msgstr ""
 "Den forespurgte handling er ikke understøttet af KDE-programmet som "
 "implementerer <strong>%1</strong>-protokollen."
 
-#: kio/global.cpp:606
+#: kio/global.cpp:520
 #, fuzzy
 msgid ""
 "This error is very much dependent on the Desktop program. The additional "
@@ -1528,15 +1376,15 @@ msgstr ""
 "give dig mere information end det der er tilgængeligt for KDE's input/output-"
 "arkitektur."
 
-#: kio/global.cpp:609
+#: kio/global.cpp:523
 msgid "Attempt to find another way to accomplish the same outcome."
 msgstr "Forsøg på at finde en anden måde at komme til det samme resultat."
 
-#: kio/global.cpp:614
+#: kio/global.cpp:528
 msgid "File Expected"
 msgstr "Fil forventet"
 
-#: kio/global.cpp:615
+#: kio/global.cpp:529
 msgid ""
 "The request expected a file, however the folder <strong>%1</strong> was "
 "found instead."
@@ -1544,15 +1392,15 @@ msgstr ""
 "Forespørgslen forventede en fil, det var imidlertid mappen <strong>%1</"
 "strong> der blev fundet i stedet for."
 
-#: kio/global.cpp:617
+#: kio/global.cpp:531
 msgid "This may be an error on the server side."
 msgstr "Dette er muligvis en fejl på serversiden."
 
-#: kio/global.cpp:622
+#: kio/global.cpp:536
 msgid "Folder Expected"
 msgstr "Mappe forventet"
 
-#: kio/global.cpp:623
+#: kio/global.cpp:537
 msgid ""
 "The request expected a folder, however the file <strong>%1</strong> was "
 "found instead."
@@ -1560,15 +1408,15 @@ msgstr ""
 "Forespørgslen forventede en mappe, det var imidlertid filen <strong>%1</"
 "strong> der blev fundet i stedet for."
 
-#: kio/global.cpp:630
+#: kio/global.cpp:544
 msgid "File or Folder Does Not Exist"
 msgstr "Filen eller mappen eksisterer ikke."
 
-#: kio/global.cpp:631
+#: kio/global.cpp:545
 msgid "The specified file or folder <strong>%1</strong> does not exist."
 msgstr "Den angivne fil eller mappe <strong>%1</strong> findes ikke."
 
-#: kio/global.cpp:639
+#: kio/global.cpp:553
 msgid ""
 "The requested file could not be created because a file with the same name "
 "already exists."
@@ -1576,19 +1424,19 @@ msgstr ""
 "Den forespurgte fil kunne ikke oprettes fordi en fil med det samme navn "
 "allerede eksisterer."
 
-#: kio/global.cpp:641
+#: kio/global.cpp:555
 msgid "Try moving the current file out of the way first, and then try again."
 msgstr "Prøv først at flytte den aktuelle fil til side, og prøv så igen."
 
-#: kio/global.cpp:643
+#: kio/global.cpp:557
 msgid "Delete the current file and try again."
 msgstr "Slet den aktuelle fil og prøv igen."
 
-#: kio/global.cpp:644
+#: kio/global.cpp:558
 msgid "Choose an alternate filename for the new file."
 msgstr "Vælg et andet navn for den nye fil."
 
-#: kio/global.cpp:649
+#: kio/global.cpp:563
 msgid ""
 "The requested folder could not be created because a folder with the same "
 "name already exists."
@@ -1596,53 +1444,53 @@ msgstr ""
 "Den forespurgte mappe kunne ikke oprettes fordi en mappe med det samme navn "
 "allerede eksisterer."
 
-#: kio/global.cpp:651
+#: kio/global.cpp:565
 msgid "Try moving the current folder out of the way first, and then try again."
 msgstr "Prøv først at flytte den aktuelle mappe til side, og prøv så igen."
 
-#: kio/global.cpp:653
+#: kio/global.cpp:567
 msgid "Delete the current folder and try again."
 msgstr "Slet den aktuelle mappe og prøv igen."
 
-#: kio/global.cpp:654
+#: kio/global.cpp:568
 msgid "Choose an alternate name for the new folder."
 msgstr "Vælg et andet navn for den nye mappe."
 
-#: kio/global.cpp:658
+#: kio/global.cpp:572
 msgid "Unknown Host"
 msgstr "Ukendt vært"
 
-#: kio/global.cpp:659
+#: kio/global.cpp:573
 msgid ""
 "An unknown host error indicates that the server with the requested name, "
 "<strong>%1</strong>, could not be located on the Internet."
 msgstr ""
-"En ukendt værtsfejl indikerer at serveren med det forespurgte navn <strong>"
-"%1</strong> ikke kunne findes på internettet."
+"En ukendt værtsfejl indikerer at serveren med det forespurgte navn "
+"<strong>%1</strong> ikke kunne findes på internettet."
 
-#: kio/global.cpp:662
+#: kio/global.cpp:576
 msgid ""
 "The name that you typed, %1, may not exist: it may be incorrectly typed."
 msgstr ""
 "Det navn du skrev, %1, eksisterer måske ikke: det er måske indtastet forkert."
 
-#: kio/global.cpp:669
+#: kio/global.cpp:583
 msgid "Access Denied"
 msgstr "Adgang nægtet"
 
-#: kio/global.cpp:670
+#: kio/global.cpp:584
 msgid "Access was denied to the specified resource, <strong>%1</strong>."
 msgstr "Adgang blev nægtet til den angivne ressource <strong>%1</strong>."
 
-#: kio/global.cpp:672 kio/global.cpp:888
+#: kio/global.cpp:586 kio/global.cpp:719
 msgid "You may have supplied incorrect authentication details or none at all."
 msgstr "Du har måske givet forkerte godkendelsesdetaljer eller slet ingen."
 
-#: kio/global.cpp:674 kio/global.cpp:890
+#: kio/global.cpp:588 kio/global.cpp:721
 msgid "Your account may not have permission to access the specified resource."
 msgstr "Din konto har måske ikke adgangsrettigheder til den angivne ressource."
 
-#: kio/global.cpp:676 kio/global.cpp:892 kio/global.cpp:904
+#: kio/global.cpp:590 kio/global.cpp:723 kio/global.cpp:735
 msgid ""
 "Retry the request and ensure your authentication details are entered "
 "correctly."
@@ -1650,11 +1498,11 @@ msgstr ""
 "Prøv forespørgslen igen og sørg for at dine godkendelsesdetaljer er "
 "indtastet rigtigt."
 
-#: kio/global.cpp:682
+#: kio/global.cpp:596
 msgid "Write Access Denied"
 msgstr "Skriveadgang nægtet"
 
-#: kio/global.cpp:683
+#: kio/global.cpp:597
 msgid ""
 "This means that an attempt to write to the file <strong>%1</strong> was "
 "rejected."
@@ -1662,11 +1510,11 @@ msgstr ""
 "Dette betyder at et forsøg på at skrive til filen <strong>%1</strong> blev "
 "afslået."
 
-#: kio/global.cpp:690
+#: kio/global.cpp:604
 msgid "Unable to Enter Folder"
 msgstr "Kan ikke gå ind i mappe"
 
-#: kio/global.cpp:691
+#: kio/global.cpp:605
 msgid ""
 "This means that an attempt to enter (in other words, to open) the requested "
 "folder <strong>%1</strong> was rejected."
@@ -1674,30 +1522,11 @@ msgstr ""
 "Dette betyder at et forsøg på at åbne den forespurgte mappe <strong>%1</"
 "strong> blev afslået."
 
-#: kio/global.cpp:699
-msgid "Folder Listing Unavailable"
-msgstr "Beskrivelse af mappe utilgængelig"
-
-#: kio/global.cpp:700
-msgid "Protocol %1 is not a Filesystem"
-msgstr "Protokol %1 er ikke et filsystem"
-
-#: kio/global.cpp:701
-#, fuzzy
-msgid ""
-"This means that a request was made which requires determining the contents "
-"of the folder, and the Desktop program supporting this protocol is unable to "
-"do so."
-msgstr ""
-"Dette betyder at en forespørgsel blev lavet for at afgøre indholdet af "
-"mappen og at KDE-programmet der understøtter denne protokol ikke er i stand "
-"til at gøre det."
-
-#: kio/global.cpp:709
+#: kio/global.cpp:613
 msgid "Cyclic Link Detected"
 msgstr "Cyklisk link detekteret"
 
-#: kio/global.cpp:710
+#: kio/global.cpp:614
 #, fuzzy
 msgid ""
 "UNIX environments are commonly able to link a file or folder to a separate "
@@ -1710,71 +1539,30 @@ msgstr ""
 "af links der resulterede i en uendelig løkke - dvs. at filen var (måske på "
 "en indirekte måde) linket til sig selv."
 
-#: kio/global.cpp:714 kio/global.cpp:736
+#: kio/global.cpp:618
 msgid ""
 "Delete one part of the loop in order that it does not cause an infinite "
 "loop, and try again."
 msgstr ""
 "Slet en del af løkken så den ikke forårsager en uendelig løkke og prøv igen."
 
-#: kio/global.cpp:723
+#: kio/global.cpp:627
 msgid "Request Aborted By User"
 msgstr "Forespørgsel annulleret af bruger"
 
-#: kio/global.cpp:724 kio/global.cpp:1025
+#: kio/global.cpp:628
 msgid "The request was not completed because it was aborted."
 msgstr "Forespørgslen blev ikke gjort færdig da den blev afbrudt."
 
-#: kio/global.cpp:726 kio/global.cpp:920 kio/global.cpp:1027
+#: kio/global.cpp:630 kio/global.cpp:751
 msgid "Retry the request."
 msgstr "Prøv forespørgslen igen."
 
-#: kio/global.cpp:730
-msgid "Cyclic Link Detected During Copy"
-msgstr "Cyklisk link detekteret ved kopiering"
-
-#: kio/global.cpp:731
-#, fuzzy
-msgid ""
-"UNIX environments are commonly able to link a file or folder to a separate "
-"name and/or location. During the requested copy operation, Detected a link "
-"or series of links that results in an infinite loop - i.e. the file was "
-"(perhaps in a roundabout way) linked to itself."
-msgstr ""
-"UNIX-miljøer er i almindelighed i stand til at linke en fil eller mappe til "
-"et separat navn og/eller placering. Under den anmodede kopiering detekterede "
-"KDE et link eller en serie af links der resulterede i en uendelig løkke - "
-"dvs. at filen var (måske på en indirekte måde) linket til sig selv."
-
-#: kio/global.cpp:741
-msgid "Could Not Create Network Connection"
-msgstr "Kunne ikke oprette netværksforbindelse"
-
-#: kio/global.cpp:742
-msgid "Could Not Create Socket"
-msgstr "Kunne ikke oprette sokkel"
-
-#: kio/global.cpp:743
-msgid ""
-"This is a fairly technical error in which a required device for network "
-"communications (a socket) could not be created."
-msgstr ""
-"Dette er en ret teknisk fejl om at en krævet enhed til "
-"netværkskommunikationer (en sokkel) ikke kunne oprettes."
-
-#: kio/global.cpp:745 kio/global.cpp:858 kio/global.cpp:869 kio/global.cpp:878
-msgid ""
-"The network connection may be incorrectly configured, or the network "
-"interface may not be enabled."
-msgstr ""
-"Netværksforbindelsen er måske forkert indstillet eller netværksgrænsefladen "
-"er måske ikke aktiveret."
-
-#: kio/global.cpp:751
+#: kio/global.cpp:634
 msgid "Connection to Server Refused"
 msgstr "Forbindelse til server afslået"
 
-#: kio/global.cpp:752
+#: kio/global.cpp:635
 msgid ""
 "The server <strong>%1</strong> refused to allow this computer to make a "
 "connection."
@@ -1782,7 +1570,7 @@ msgstr ""
 "Serveren <strong>%1</strong> afslog at lade denne computer oprette en "
 "forbindelse."
 
-#: kio/global.cpp:754
+#: kio/global.cpp:637
 msgid ""
 "The server, while currently connected to the Internet, may not be configured "
 "to allow requests."
@@ -1790,7 +1578,7 @@ msgstr ""
 "Serveren der godt nok er forbundet rigtigt til internettet er måske ikke "
 "indstillet til at tillade forespørgsler."
 
-#: kio/global.cpp:756
+#: kio/global.cpp:639
 msgid ""
 "The server, while currently connected to the Internet, may not be running "
 "the requested service (%1)."
@@ -1798,7 +1586,7 @@ msgstr ""
 "Serveren der godt nok er forbundet rigtigt til internettet kører måske ikke "
 "den forespurgte service (%1)."
 
-#: kio/global.cpp:758
+#: kio/global.cpp:641
 msgid ""
 "A network firewall (a device which restricts Internet requests), either "
 "protecting your network or the network of the server, may have intervened, "
@@ -1808,11 +1596,11 @@ msgstr ""
 "beskytter dit netværk eller serverens netværk er måske gået ind og har "
 "forhindret denne forespørgsel."
 
-#: kio/global.cpp:765
+#: kio/global.cpp:648
 msgid "Connection to Server Closed Unexpectedly"
 msgstr "Forbindelse til server lukkede uventet"
 
-#: kio/global.cpp:766
+#: kio/global.cpp:649
 msgid ""
 "Although a connection was established to <strong>%1</strong>, the connection "
 "was closed at an unexpected point in the communication."
@@ -1820,7 +1608,7 @@ msgstr ""
 "Selv om en forbindelse blev etableret til <strong>%1</strong>, blev "
 "forbindelsen lukket på et uventet sted i kommunikationen."
 
-#: kio/global.cpp:769
+#: kio/global.cpp:652
 msgid ""
 "A protocol error may have occurred, causing the server to close the "
 "connection as a response to the error."
@@ -1828,127 +1616,11 @@ msgstr ""
 "En protokolfejl er måske opstået og har forårsaget at serveren har lukket "
 "forbindelsen som reaktion på fejlen."
 
-#: kio/global.cpp:775
-msgid "URL Resource Invalid"
-msgstr "URL-ressource ugyldig"
-
-#: kio/global.cpp:776
-msgid "Protocol %1 is not a Filter Protocol"
-msgstr "Protokol %1 er ikke en filterprotokol"
-
-#: kio/global.cpp:777
-msgid ""
-"The <strong>U</strong>niform <strong>R</strong>esource <strong>L</"
-"strong>ocator (URL) that you entered did not refer to a valid mechanism of "
-"accessing the specific resource, <strong>%1%2</strong>."
-msgstr ""
-"Den URL (<strong>U</strong>niversal <strong>R</strong>esource <strong>L</"
-"strong>ocator) som du indtastede refererede ikke til en gyldig mekanisme til "
-"at få adgang til den specifikke ressource <strong>%1%2</strong>."
-
-#: kio/global.cpp:782
-#, fuzzy
-msgid ""
-"The Desktop is able to communicate through a protocol within a protocol. "
-"This request specified a protocol be used as such, however this protocol is "
-"not capable of such an action. This is a rare event, and is likely to "
-"indicate a programming error."
-msgstr ""
-"KDE er i stand til at kommunikere gennem en protokol inden for en protokol. "
-"Denne anmodning angav en protokol til brug for sådanne situationer, men "
-"denne protokol er imidlertid ikke i stand til at udføre en sådan handling. "
-"Dette er en sjælden begivenhed og indikerer sandsynligvis en "
-"programmeringsfejl."
-
-#: kio/global.cpp:790
-msgid "Unable to Initialize Input/Output Device"
-msgstr "Kan ikke initialisere input/output-enhed"
-
-#: kio/global.cpp:791
-msgid "Could Not Mount Device"
-msgstr "Kunne ikke montere enhed"
-
-#: kio/global.cpp:792
-msgid ""
-"The requested device could not be initialized (\"mounted\"). The reported "
-"error was: <strong>%1</strong>"
-msgstr ""
-"Den forespurgte enhed kunne ikke blive initialiseret (\"monteret\"). Den "
-"rapporterede fejl var: <strong>%1</strong>"
-
-#: kio/global.cpp:795
-msgid ""
-"The device may not be ready, for example there may be no media in a "
-"removable media device (i.e. no CD-ROM in a CD drive), or in the case of a "
-"peripheral/portable device, the device may not be correctly connected."
-msgstr ""
-"Enheden er måske ikke klar. Det kan f.eks. være fordi der ikke er noget "
-"medie i en flytbar medie-enhed (f.eks. ingen cd-rom i et cd-drev), eller i "
-"tilfælde af en perifer/bærbar enhed er enheden måske ikke forbundet korrekt."
-
-#: kio/global.cpp:799
-msgid ""
-"You may not have permissions to initialize (\"mount\") the device. On UNIX "
-"systems, often system administrator privileges are required to initialize a "
-"device."
-msgstr ""
-"Du har måske ikke rettigheder til at initialisere (\"montere\") enheden. På "
-"UNIX-systemer kræver det ofte systemadministratorprivilegier at initialisere "
-"en enhed."
-
-#: kio/global.cpp:803
-msgid ""
-"Check that the device is ready; removable drives must contain media, and "
-"portable devices must be connected and powered on.; and try again."
-msgstr ""
-"Undersøg om enheden er parat; drev der kan fjernes skal indeholde medier, og "
-"bærbare enheder skal være forbundet med strøm på. Prøv så igen."
-
-#: kio/global.cpp:809
-msgid "Unable to Uninitialize Input/Output Device"
-msgstr "Kan ikke deinitialisere input/output-enhed"
-
-#: kio/global.cpp:810
-msgid "Could Not Unmount Device"
-msgstr "Kunne ikke afmontere enhed"
-
-#: kio/global.cpp:811
-msgid ""
-"The requested device could not be uninitialized (\"unmounted\"). The "
-"reported error was: <strong>%1</strong>"
-msgstr ""
-"Den forespurgte enhed kunne ikke blive deinitialiseret (\"afmonteret\"). Den "
-"rapporterede fejl var: <strong>%1</strong>"
-
-#: kio/global.cpp:814
-msgid ""
-"The device may be busy, that is, still in use by another application or "
-"user. Even such things as having an open browser window on a location on "
-"this device may cause the device to remain in use."
-msgstr ""
-"Enheden er måske optaget, dvs. at den bruges af et andet program eller en "
-"anden bruger. Selv sådanne ting som at have et åbent filhåndteringsvindue på "
-"et placering på denne enhed kan få enheden til at være i brug."
-
-#: kio/global.cpp:818
-msgid ""
-"You may not have permissions to uninitialize (\"unmount\") the device. On "
-"UNIX systems, system administrator privileges are often required to "
-"uninitialize a device."
-msgstr ""
-"Du har måske ikke rettigheder til at deinitialisere (\"afmontere\") enheden. "
-"På UNIX-systemer kræver det ofte systemadministratorprivilegier at "
-"deinitialisere en enhed."
-
-#: kio/global.cpp:822
-msgid "Check that no applications are accessing the device, and try again."
-msgstr "Undersøg om et andet program bruger enheden, og prøv så igen."
-
-#: kio/global.cpp:827
+#: kio/global.cpp:658
 msgid "Cannot Read From Resource"
 msgstr "Kan ikke læse fra ressource"
 
-#: kio/global.cpp:828
+#: kio/global.cpp:659
 msgid ""
 "This means that although the resource, <strong>%1</strong>, was able to be "
 "opened, an error occurred while reading the contents of the resource."
@@ -1956,15 +1628,15 @@ msgstr ""
 "Dette betyder at skønt ressourcen <strong>%1</strong> kunne åbnes, opstod "
 "der en fejl ved forsøg på at læse dens indhold."
 
-#: kio/global.cpp:831
+#: kio/global.cpp:662
 msgid "You may not have permissions to read from the resource."
 msgstr "Du har måske ikke rettigheder til at læse fra ressourcen."
 
-#: kio/global.cpp:840
+#: kio/global.cpp:671
 msgid "Cannot Write to Resource"
 msgstr "Kan ikke skrive til ressource"
 
-#: kio/global.cpp:841
+#: kio/global.cpp:672
 msgid ""
 "This means that although the resource, <strong>%1</strong>, was able to be "
 "opened, an error occurred while writing to the resource."
@@ -1972,19 +1644,19 @@ msgstr ""
 "Dette betyder at skønt ressourcen <strong>%1</strong> kunne åbnes, opstod "
 "der en fejl ved forsøg på at skrive til den."
 
-#: kio/global.cpp:844
+#: kio/global.cpp:675
 msgid "You may not have permissions to write to the resource."
 msgstr "Du har måske ikke rettigheder til at skrive til ressourcen."
 
-#: kio/global.cpp:853 kio/global.cpp:864
+#: kio/global.cpp:684 kio/global.cpp:695
 msgid "Could Not Listen for Network Connections"
 msgstr "Kunne ikke lytte efter netværksforbindelser"
 
-#: kio/global.cpp:854
+#: kio/global.cpp:685
 msgid "Could Not Bind"
 msgstr "Kunne ikke binde"
 
-#: kio/global.cpp:855 kio/global.cpp:866
+#: kio/global.cpp:686 kio/global.cpp:697
 msgid ""
 "This is a fairly technical error in which a required device for network "
 "communications (a socket) could not be established to listen for incoming "
@@ -1994,15 +1666,23 @@ msgstr ""
 "netværkskommunikationer (en sokkel) ikke kunne blive etableret til at lytte "
 "efter indkommende netværksforbindelser."
 
-#: kio/global.cpp:865
+#: kio/global.cpp:689 kio/global.cpp:700 kio/global.cpp:709
+msgid ""
+"The network connection may be incorrectly configured, or the network "
+"interface may not be enabled."
+msgstr ""
+"Netværksforbindelsen er måske forkert indstillet eller netværksgrænsefladen "
+"er måske ikke aktiveret."
+
+#: kio/global.cpp:696
 msgid "Could Not Listen"
 msgstr "Kunne ikke lytte"
 
-#: kio/global.cpp:875
+#: kio/global.cpp:706
 msgid "Could Not Accept Network Connection"
 msgstr "Kunne ikke acceptere netværksforbindelse"
 
-#: kio/global.cpp:876
+#: kio/global.cpp:707
 msgid ""
 "This is a fairly technical error in which an error occurred while attempting "
 "to accept an incoming network connection."
@@ -2010,86 +1690,88 @@ msgstr ""
 "Dette er en ret teknisk fejl hvor der opstod en fejl ved forsøget på at "
 "acceptere end indkommende netværksforbindelse."
 
-#: kio/global.cpp:880
+#: kio/global.cpp:711
 msgid "You may not have permissions to accept the connection."
 msgstr "Du har måske ikke rettigheder til at acceptere forbindelsen."
 
-#: kio/global.cpp:885
+#: kio/global.cpp:716
 msgid "Could Not Login: %1"
 msgstr "Kunne ikke logge på: %1"
 
-#: kio/global.cpp:886
+#: kio/global.cpp:717
 msgid ""
 "An attempt to login to perform the requested operation was unsuccessful."
 msgstr ""
 "Et forsøg på at logge på for at udføre den forespurgte operation mislykkedes."
 
-#: kio/global.cpp:897
+#: kio/global.cpp:728
 msgid "Could Not Determine Resource Status"
 msgstr "Kunne ikke afgøre ressourcestatus"
 
-#: kio/global.cpp:898
+#: kio/global.cpp:729
 msgid "Could Not Stat Resource"
 msgstr "Kunne ikke stat ressource"
 
-#: kio/global.cpp:899
+#: kio/global.cpp:730
 msgid ""
-"An attempt to determine information about the status of the resource <strong>"
-"%1</strong>, such as the resource name, type, size, etc., was unsuccessful."
+"An attempt to determine information about the status of the resource "
+"<strong>%1</strong>, such as the resource name, type, size, etc., was "
+"unsuccessful."
 msgstr ""
 "Et forsøg på at bestemme informationer om status for ressourcen <strong>%1</"
 "strong>, såsom ressourcens navn, type, størrelse osv., lykkedes ikke."
 
-#: kio/global.cpp:902
+#: kio/global.cpp:733
 msgid "The specified resource may not have existed or may not be accessible."
 msgstr "Den valgte ressource eksisterede måske ikke eller adgang var umulig."
 
-#. i18n( "Could not terminate listing %1" ).arg( errorText );
-#: kio/global.cpp:910
+#: kio/global.cpp:740
 msgid "Could Not Cancel Listing"
 msgstr "Kunne ikke annullere listning"
 
-#: kio/global.cpp:911
-msgid "FIXME: Document this"
-msgstr "FIXME: Dokumentér dette"
+#: kio/global.cpp:741
+msgid ""
+"This is a fairly technical error in which an error occurred while attempting "
+"to list directory."
+msgstr ""
 
-#: kio/global.cpp:915
+#: kio/global.cpp:746
 msgid "Could Not Create Folder"
 msgstr "Kunne ikke oprette mappe"
 
-#: kio/global.cpp:916
+#: kio/global.cpp:747
 msgid "An attempt to create the requested folder failed."
 msgstr "Et forsøg på at oprette den forespurgte mappe mislykkedes."
 
-#: kio/global.cpp:917
+#: kio/global.cpp:748
 msgid "The location where the folder was to be created may not exist."
 msgstr "Placeringen hvor mappen skulle oprettes eksisterer måske ikke."
 
-#: kio/global.cpp:924
+#: kio/global.cpp:755
 msgid "Could Not Remove Folder"
 msgstr "Kunne ikke fjerne mappe"
 
-#: kio/global.cpp:925
+#: kio/global.cpp:756
 msgid "An attempt to remove the specified folder, <strong>%1</strong>, failed."
 msgstr "Et forsøg på at fjerne mappen <strong>%1</strong> mislykkedes."
 
-#: kio/global.cpp:927
+#: kio/global.cpp:758
 msgid "The specified folder may not exist."
 msgstr "Den angivne mappe eksisterer måske ikke."
 
-#: kio/global.cpp:928
+#: kio/global.cpp:759
 msgid "The specified folder may not be empty."
 msgstr "Den angivne mappe er måske ikke tom."
 
-#: kio/global.cpp:931
+#: kio/global.cpp:762
 msgid "Ensure that the folder exists and is empty, and try again."
 msgstr "Sørg for at mappen eksisterer og er tom. Prøv så igen."
 
-#: kio/global.cpp:936
+#: kio/global.cpp:767
 msgid "Could Not Resume File Transfer"
 msgstr "Kunne ikke genoptage filoverførsel"
 
-#: kio/global.cpp:937
+#: kio/global.cpp:768
 msgid ""
 "The specified request asked that the transfer of file <strong>%1</strong> be "
 "resumed at a certain point of the transfer. This was not possible."
@@ -2097,30 +1779,30 @@ msgstr ""
 "Den angivne forespørgsel bad om at overførslen af filen <strong>%1</strong> "
 "skulle genoptages på et vist punkt i overførslen. Dette var ikke muligt."
 
-#: kio/global.cpp:940
+#: kio/global.cpp:771
 msgid "The protocol, or the server, may not support file resuming."
 msgstr ""
 "Protokollen eller serveren understøtter måske ikke genoptagelse af "
 "filoverførsel."
 
-#: kio/global.cpp:942
+#: kio/global.cpp:773
 msgid "Retry the request without attempting to resume transfer."
 msgstr "Prøv forespørgslen igen uden at bede om at få overførslen genoptaget."
 
-#: kio/global.cpp:947
+#: kio/global.cpp:778
 msgid "Could Not Rename Resource"
 msgstr "Kunne ikke omdøbe ressourcen"
 
-#: kio/global.cpp:948
+#: kio/global.cpp:779
 msgid "An attempt to rename the specified resource <strong>%1</strong> failed."
 msgstr ""
 "Et forsøg på at omdøbe den angivne ressource <strong>%1</strong> mislykkedes."
 
-#: kio/global.cpp:956
+#: kio/global.cpp:787
 msgid "Could Not Alter Permissions of Resource"
 msgstr "Kunne ikke ændre rettigheder for ressourcen"
 
-#: kio/global.cpp:957
+#: kio/global.cpp:788
 msgid ""
 "An attempt to alter the permissions on the specified resource <strong>%1</"
 "strong> failed."
@@ -2128,11 +1810,11 @@ msgstr ""
 "Et forsøg på at ændre rettigheder for den angivne ressource <strong>%1</"
 "strong> mislykkedes."
 
-#: kio/global.cpp:964
+#: kio/global.cpp:795
 msgid "Could Not Change Ownership of Resource"
 msgstr "Kunne ikke ændre ejerskab for ressourcen"
 
-#: kio/global.cpp:965
+#: kio/global.cpp:796
 msgid ""
 "An attempt to change the ownership of the specified resource <strong>%1</"
 "strong> failed."
@@ -2140,20 +1822,20 @@ msgstr ""
 "Et forsøg på at ændre ejerskab for den angivne ressource <strong>%1</strong> "
 "mislykkedes."
 
-#: kio/global.cpp:972
+#: kio/global.cpp:803
 msgid "Could Not Delete Resource"
 msgstr "Kunne ikke slette ressourcen"
 
-#: kio/global.cpp:973
+#: kio/global.cpp:804
 msgid "An attempt to delete the specified resource <strong>%1</strong> failed."
 msgstr ""
 "Et forsøg på at slette den angivne ressource <strong>%1</strong> mislykkedes."
 
-#: kio/global.cpp:980
+#: kio/global.cpp:811
 msgid "Unexpected Program Termination"
 msgstr "Uventet programterminering"
 
-#: kio/global.cpp:981
+#: kio/global.cpp:812
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol has unexpectedly terminated."
@@ -2161,11 +1843,11 @@ msgstr ""
 "Programmet på din computer som sørger for adgang til <strong>%1</strong>-"
 "protokollen har termineret uventet."
 
-#: kio/global.cpp:989
+#: kio/global.cpp:820
 msgid "Out of Memory"
 msgstr "Løb tør for hukommelse"
 
-#: kio/global.cpp:990
+#: kio/global.cpp:821
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol could not obtain the memory required to continue."
@@ -2173,11 +1855,11 @@ msgstr ""
 "Programmet på din computer som sørger for adgang til <strong>%1</strong>-"
 "protokollen kunne ikke opnå den nødvendige hukommelse til at fortsætte."
 
-#: kio/global.cpp:998
+#: kio/global.cpp:829
 msgid "Unknown Proxy Host"
 msgstr "Ukendt proxyvært"
 
-#: kio/global.cpp:999
+#: kio/global.cpp:830
 msgid ""
 "While retrieving information about the specified proxy host, <strong>%1</"
 "strong>, an Unknown Host error was encountered. An unknown host error "
@@ -2187,7 +1869,7 @@ msgstr ""
 "angivne proxyvært <strong>%1</strong>. En \"ukendt vært\"-fejl indikerer at "
 "det forspurgte navn ikke kunne findes på internettet."
 
-#: kio/global.cpp:1003
+#: kio/global.cpp:834
 msgid ""
 "There may have been a problem with your network configuration, specifically "
 "your proxy's hostname. If you have been accessing the Internet with no "
@@ -2197,15 +1879,15 @@ msgstr ""
 "med din proxys værtsnavn. Hvis du for nyligt har haft adgang til internettet "
 "uden problemer, er dette ikke sandsynligt."
 
-#: kio/global.cpp:1007
+#: kio/global.cpp:838
 msgid "Double-check your proxy settings and try again."
 msgstr "Dobbelttjek dine proxy-indstillinger og prøv igen."
 
-#: kio/global.cpp:1012
+#: kio/global.cpp:843
 msgid "Authentication Failed: Method %1 Not Supported"
 msgstr "Godkendelse mislykkedes: metode %1 ikke understøttet"
 
-#: kio/global.cpp:1014
+#: kio/global.cpp:845
 #, fuzzy
 msgid ""
 "Although you may have supplied the correct authentication details, the "
@@ -2216,7 +1898,7 @@ msgstr ""
 "godkendelsen fordi den metode som serveren bruger ikke er understøttet af "
 "det KDE-program der implementerer protokollen %1."
 
-#: kio/global.cpp:1018
+#: kio/global.cpp:849
 #, fuzzy
 msgid ""
 "Please file a bug at <a href=\"%1\">%2/</a> to inform the team working on it "
@@ -2226,15 +1908,11 @@ msgstr ""
 "bugs.kde.org/</a> for at informere KDE-holdet om den ikke-understøttede "
 "godkendelsesmetode."
 
-#: kio/global.cpp:1024
-msgid "Request Aborted"
-msgstr "Forespørgsel afbrudt"
-
-#: kio/global.cpp:1031
+#: kio/global.cpp:855
 msgid "Internal Error in Server"
 msgstr "Intern fejl i server"
 
-#: kio/global.cpp:1032
+#: kio/global.cpp:856
 msgid ""
 "The program on the server which provides access to the <strong>%1</strong> "
 "protocol has reported an internal error: %2."
@@ -2242,7 +1920,7 @@ msgstr ""
 "Programmet på serveren som sørger for adgang til <strong>%1</strong>-"
 "protokollen har rapporteret en indre fejl: %2."
 
-#: kio/global.cpp:1035
+#: kio/global.cpp:859
 msgid ""
 "This is most likely to be caused by a bug in the server program. Please "
 "consider submitting a full bug report as detailed below."
@@ -2250,12 +1928,12 @@ msgstr ""
 "Dette er højst sandsynligt på grund af en fejl i serverprogrammet. Overvej "
 "at indsende en fuldstændig fejlrapport som beskrevet nedenfor."
 
-#: kio/global.cpp:1038
+#: kio/global.cpp:862
 msgid "Contact the administrator of the server to advise them of the problem."
 msgstr ""
 "Kontakt serverens administrator for at fortælle vedkommende om problemet."
 
-#: kio/global.cpp:1040
+#: kio/global.cpp:864
 msgid ""
 "If you know who the authors of the server software are, submit the bug "
 "report directly to them."
@@ -2263,11 +1941,11 @@ msgstr ""
 "Hvis du ved hvem udviklerne af serverprogrammet er, så indsend fejlrapporten "
 "direkte til dem."
 
-#: kio/global.cpp:1045
+#: kio/global.cpp:869
 msgid "Timeout Error"
 msgstr "Timeout-fejl"
 
-#: kio/global.cpp:1046
+#: kio/global.cpp:870
 #, fuzzy
 msgid ""
 "Although contact was made with the server, a response was not received "
@@ -2286,16 +1964,16 @@ msgstr ""
 "tidsudløb-indstillinger i KDE's Systemindstillinger, ved at vælge "
 "Netværksindstillinger -> Forbindelsesindstillinger."
 
-#: kio/global.cpp:1057
+#: kio/global.cpp:881
 msgid "The server was too busy responding to other requests to respond."
 msgstr ""
 "Serveren havde for travlt med at svare på andre forespørgsler til at svare."
 
-#: kio/global.cpp:1063
+#: kio/global.cpp:887
 msgid "Unknown Error"
 msgstr "Ukendt fejl"
 
-#: kio/global.cpp:1064
+#: kio/global.cpp:888
 msgid ""
 "The program on your computer which provides access to the <strong>%1</"
 "strong> protocol has reported an unknown error: %2."
@@ -2303,23 +1981,11 @@ msgstr ""
 "Programmet på din computer som sørger for adgang til <strong>%1</strong>-"
 "protokollen har rapporteret en ukendt fejl: %2."
 
-#: kio/global.cpp:1072
-msgid "Unknown Interruption"
-msgstr "Ukendt interrupt"
-
-#: kio/global.cpp:1073
-msgid ""
-"The program on your computer which provides access to the <strong>%1</"
-"strong> protocol has reported an interruption of an unknown type: %2."
-msgstr ""
-"Programmet på din computer som sørger for adgang til <strong>%1</strong>-"
-"protokollen har rapporteret et interrupt af ukendt type: %2."
-
-#: kio/global.cpp:1081
+#: kio/global.cpp:896
 msgid "Could Not Delete Original File"
 msgstr "Kunne ikke slette den oprindelige fil"
 
-#: kio/global.cpp:1082
+#: kio/global.cpp:897
 msgid ""
 "The requested operation required the deleting of the original file, most "
 "likely at the end of a file move operation. The original file <strong>%1</"
@@ -2329,11 +1995,11 @@ msgstr ""
 "sandsynligt ved slutningen af en 'flyt fil'-operation. Den oprindelige fil "
 "<strong>%1</strong> kunne ikke slettes."
 
-#: kio/global.cpp:1091
+#: kio/global.cpp:906
 msgid "Could Not Delete Temporary File"
 msgstr "Kunne ikke slette midlertidig fil"
 
-#: kio/global.cpp:1092
+#: kio/global.cpp:907
 msgid ""
 "The requested operation required the creation of a temporary file in which "
 "to save the new file while being downloaded. This temporary file <strong>%1</"
@@ -2343,51 +2009,51 @@ msgstr ""
 "den nye fil skulle gemmes mens den blev downloadet. Denne midlertidige fil "
 "<strong>%1</strong> kunne ikke slettes."
 
-#: kio/global.cpp:1101
+#: kio/global.cpp:916
 msgid "Could Not Rename Original File"
 msgstr "Kunne ikke omdøbe oprindelig fil"
 
-#: kio/global.cpp:1102
+#: kio/global.cpp:917
 msgid ""
-"The requested operation required the renaming of the original file <strong>"
-"%1</strong>, however it could not be renamed."
+"The requested operation required the renaming of the original file "
+"<strong>%1</strong>, however it could not be renamed."
 msgstr ""
 "Den forespurgte operation krævede at den oprindelige fil <strong>%1</strong> "
 "blev omdøbt. Dette var imidlertid ikke muligt."
 
-#: kio/global.cpp:1110
+#: kio/global.cpp:925
 msgid "Could Not Rename Temporary File"
 msgstr "Kunne ikke omdøbe midlertidig fil"
 
-#: kio/global.cpp:1111
+#: kio/global.cpp:926
 msgid ""
-"The requested operation required the creation of a temporary file <strong>"
-"%1</strong>, however it could not be created."
+"The requested operation required the creation of a temporary file "
+"<strong>%1</strong>, however it could not be created."
 msgstr ""
-"Den forespurgte operation krævede oprettelse af en midlertidig fil <strong>"
-"%1</strong>. Den kunne imidlertid ikke oprettes."
+"Den forespurgte operation krævede oprettelse af en midlertidig fil "
+"<strong>%1</strong>. Den kunne imidlertid ikke oprettes."
 
-#: kio/global.cpp:1119
+#: kio/global.cpp:934
 msgid "Could Not Create Link"
 msgstr "Kunne ikke oprette link"
 
-#: kio/global.cpp:1120
+#: kio/global.cpp:935
 msgid "Could Not Create Symbolic Link"
 msgstr "Kunne ikke oprette symbolsk link"
 
-#: kio/global.cpp:1121
+#: kio/global.cpp:936
 msgid "The requested symbolic link %1 could not be created."
 msgstr "Det forespurgte symbolske link %1 kunne ikke oprettes."
 
-#: kio/global.cpp:1128
+#: kio/global.cpp:943
 msgid "No Content"
 msgstr "Intet indhold"
 
-#: kio/global.cpp:1133
+#: kio/global.cpp:948
 msgid "Disk Full"
 msgstr "Disk fuld"
 
-#: kio/global.cpp:1134
+#: kio/global.cpp:949
 msgid ""
 "The requested file <strong>%1</strong> could not be written to as there is "
 "inadequate disk space."
@@ -2395,7 +2061,7 @@ msgstr ""
 "Der kunne ikke skrives til den forespurgte fil <strong>%1</strong> da der "
 "ikke er nok diskplads."
 
-#: kio/global.cpp:1136
+#: kio/global.cpp:951
 msgid ""
 "Free up enough disk space by 1) deleting unwanted and temporary files; 2) "
 "archiving files to removable media storage such as CD-Recordable discs; or "
@@ -2405,11 +2071,11 @@ msgstr ""
 "at arkivere filer til flytbare medier såsom skrivbare cd'er; eller 3) anskaf "
 "mere lagerplads."
 
-#: kio/global.cpp:1143
+#: kio/global.cpp:958
 msgid "Source and Destination Files Identical"
 msgstr "Kilde- og destinationsfiler er identiske"
 
-#: kio/global.cpp:1144
+#: kio/global.cpp:959
 msgid ""
 "The operation could not be completed because the source and destination "
 "files are the same file."
@@ -2417,19 +2083,19 @@ msgstr ""
 "Operationen kunne ikke gøres færdig fordi kilde- og destinationsfilen er den "
 "samme fil."
 
-#: kio/global.cpp:1146
+#: kio/global.cpp:961
 msgid "Choose a different filename for the destination file."
 msgstr "Vælg et andet filnavn for destinationsfilen."
 
-#: kio/global.cpp:1157
+#: kio/global.cpp:972
 msgid "Undocumented Error"
 msgstr "Udokumenteret fejl"
 
-#: kio/slavebase.h:242 kio/slavebase.h:262
+#: kio/slavebase.h:218 kio/slavebase.h:238
 msgid "&Yes"
 msgstr "&Ja"
 
-#: kio/slavebase.h:243 kio/slavebase.h:263
+#: kio/slavebase.h:219 kio/slavebase.h:239
 msgid "&No"
 msgstr "&Nej"
 
@@ -2453,29 +2119,29 @@ msgstr "Du er ikke godkendt til at køre denne fil."
 msgid "Launching %1"
 msgstr "Starter %1"
 
-#: kio/krun.cpp:658
+#: kio/krun.cpp:648
 msgid "Error processing Exec field in %1"
 msgstr "Fejl under behandling af Exec-felt i %1"
 
-#: kio/krun.cpp:844
+#: kio/krun.cpp:834
 msgctxt "Warning about executing unknown .desktop file"
 msgid "Warning"
 msgstr "Advarsel"
 
-#: kio/krun.cpp:858
+#: kio/krun.cpp:848
 msgctxt "program name follows in a line edit below"
 msgid "This will start the program:"
 msgstr "Dette vil starte programmet:"
 
-#: kio/krun.cpp:872
+#: kio/krun.cpp:862
 msgid "If you do not trust this program, click Cancel"
 msgstr "Hvis du ikke har tillid til dette program, så tryk på Annullér"
 
-#: kio/krun.cpp:905
+#: kio/krun.cpp:895
 msgid "Unable to make the service %1 executable, aborting execution"
 msgstr "Kan ikke gøre tjenesten %1 kørbar, afbryder kørsel"
 
-#: kio/krun.cpp:1086
+#: kio/krun.cpp:1060
 msgid ""
 "<qt>Unable to run the command specified. The file or folder <b>%1</b> does "
 "not exist.</qt>"
@@ -2483,7 +2149,7 @@ msgstr ""
 "<qt>Kan ikke køre den angivne kommando. Filen eller mappen <b>%1</b> "
 "eksisterer ikke.</qt>"
 
-#: kio/krun.cpp:1676
+#: kio/krun.cpp:1646
 msgid "Could not find the program '%1'"
 msgstr "Kunne ikke finde programmet \"%1\""
 
@@ -2507,17 +2173,17 @@ msgstr "R&edigér..."
 msgid "Click this button to display the familiar KDE mime type editor."
 msgstr "Klik på denne knap for at vise den sædvanlige KDE editor af mimetyper."
 
-#: kio/jobuidelegate.cpp:149 ../kfile/kdiroperator.cpp:791
+#: kio/jobuidelegate.cpp:134 ../kfile/kdiroperator.cpp:777
 msgid "Do you really want to delete this item?"
 msgid_plural "Do you really want to delete these %1 items?"
 msgstr[0] "Vil du slette dette element?"
 msgstr[1] "Vil du slette disse %1 elementer?"
 
-#: kio/jobuidelegate.cpp:151 ../kfile/kdiroperator.cpp:793
+#: kio/jobuidelegate.cpp:136 ../kfile/kdiroperator.cpp:779
 msgid "Delete Files"
 msgstr "Slet filer"
 
-#: kio/jobuidelegate.cpp:159
+#: kio/jobuidelegate.cpp:144
 msgctxt "@info"
 msgid ""
 "Do you want to permanently delete all items from Trash? This action cannot "
@@ -2526,22 +2192,22 @@ msgstr ""
 "Vil du slette alle elementer fra Affald permanent? Denne handling kan ikke "
 "fortrydes."
 
-#: kio/jobuidelegate.cpp:161 ../kfile/kfileplacesview.cpp:644
+#: kio/jobuidelegate.cpp:146 ../kfile/kfileplacesview.cpp:644
 msgctxt "@action:button"
 msgid "Empty Trash"
 msgstr "Tøm affald"
 
-#: kio/jobuidelegate.cpp:170
+#: kio/jobuidelegate.cpp:155
 msgid "Do you really want to move this item to the trash?"
 msgid_plural "Do you really want to move these %1 items to the trash?"
 msgstr[0] "Vil du flytte dette element til affald?"
 msgstr[1] "Vil du flytte disse %1 elementer til affald?"
 
-#: kio/jobuidelegate.cpp:172 ../kfile/kdiroperator.cpp:1768
+#: kio/jobuidelegate.cpp:157 ../kfile/kdiroperator.cpp:1747
 msgid "Move to Trash"
 msgstr "Flyt til affald"
 
-#: kio/jobuidelegate.cpp:173
+#: kio/jobuidelegate.cpp:158
 msgctxt "Verb"
 msgid "&Trash"
 msgstr "&Flyt til affald"
@@ -2574,39 +2240,51 @@ msgstr ""
 "Udklipsholderen er ændret siden du brugte \"indsæt\". Det valgte dataformat "
 "er ikke gyldigt længere. Kopiér det du vil indsætte igen."
 
-#: kio/paste.cpp:263
+#: kio/paste.cpp:257
 msgid "&Paste File"
 msgid_plural "&Paste %1 Files"
 msgstr[0] "&Indsæt fil"
 msgstr[1] "&Indsæt %1 filer"
 
-#: kio/paste.cpp:265
+#: kio/paste.cpp:259
 msgid "&Paste URL"
 msgid_plural "&Paste %1 URLs"
 msgstr[0] "&Indsæt URL"
 msgstr[1] "&Indsæt %1 URL'er"
 
-#: kio/paste.cpp:267
+#: kio/paste.cpp:261
 msgid "&Paste Clipboard Contents"
 msgstr "&Indsæt udklipsholderens indhold"
 
-#: kio/kfileitemdelegate.cpp:213
+#: kio/kfileitemdelegate.cpp:210
 msgctxt "Items in a folder"
 msgid "1 item"
 msgid_plural "%1 items"
 msgstr[0] "1 element"
 msgstr[1] "%1 elementer"
 
-#: kio/kfileitemdelegate.cpp:269 kio/kfileitemdelegate.cpp:273
+#: kio/kfileitemdelegate.cpp:266 kio/kfileitemdelegate.cpp:270
 msgctxt "@info mimetype"
 msgid "Unknown"
 msgstr "Ukendt"
 
-#: kio/slaveinterface.cpp:371
+#: kio/slaveinterface.cpp:279
+msgid "Unknown protocol '%1'."
+msgstr "Ukendt protokol \"%1\"."
+
+#: kio/slaveinterface.cpp:286
+msgid "Can not find io-slave for protocol '%1'."
+msgstr "Kan ikke finde io-slave for protokol \"%1\"."
+
+#: kio/slaveinterface.cpp:303
+msgid "Can not start io-slave for protocol '%1'."
+msgstr ""
+
+#: kio/slaveinterface.cpp:591
 msgid "&Details"
 msgstr "&Detaljer"
 
-#: kio/slaveinterface.cpp:375
+#: kio/slaveinterface.cpp:595
 msgid "Co&ntinue"
 msgstr "&Fortsæt"
 
@@ -2622,452 +2300,452 @@ msgstr ""
 msgid "&Skip File"
 msgstr "&Skip fil"
 
-#: kio/kfilemetainfo.cpp:263
-msgctxt "@label"
-msgid "Modified"
-msgstr ""
-
-#: kio/kfilemetainfo.cpp:264
-msgctxt "@label"
-msgid "Owner"
-msgstr ""
-
-#: kio/kfilemetainfo.cpp:265
-msgctxt "@label"
-msgid "Permissions"
-msgstr ""
-
 #: kio/kfilemetainfo.cpp:266
 msgctxt "@label"
-msgid "Size"
+msgid "Modified"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:267
 msgctxt "@label"
-msgid "Total Size"
+msgid "Owner"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:268
 msgctxt "@label"
-msgid "Type"
+msgid "Permissions"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:269
 msgctxt "@label"
-msgid "MIME Type"
+msgid "Size"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:270
+msgctxt "@label"
+msgid "Total Size"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:271
 msgctxt "@label"
-msgid "Filename"
+msgid "Type"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:272
-msgctxt "@label file URL"
-msgid "URL"
-msgstr ""
-
-#: kio/kfilemetainfo.cpp:273
 msgctxt "@label"
-msgid "Width"
+msgid "MIME Type"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:274
 msgctxt "@label"
-msgid "Height"
+msgid "Filename"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:275
-msgctxt "@label"
-msgid "Average Bitrate"
+msgctxt "@label file URL"
+msgid "URL"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:276
 msgctxt "@label"
-msgid "Sample Rate"
+msgid "Width"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:277
 msgctxt "@label"
-msgid "Channels"
+msgid "Height"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:278
 msgctxt "@label"
-msgid "Duration"
+msgid "Average Bitrate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:279
 msgctxt "@label"
-msgid "Frame Rate"
+msgid "Sample Rate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:280
 msgctxt "@label"
-msgid "Video Codec"
+msgid "Channels"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:281
 msgctxt "@label"
-msgid "Audio Codec"
+msgid "Duration"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:282
 msgctxt "@label"
-msgid "Subtitle Codec"
+msgid "Frame Rate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:283
 msgctxt "@label"
-msgid "Audio Bit Rate"
+msgid "Video Codec"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:284
 msgctxt "@label"
-msgid "Video Bit Rate"
+msgid "Audio Codec"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:285
 msgctxt "@label"
-msgid "Page Count"
+msgid "Subtitle Codec"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:286
 msgctxt "@label"
-msgid "Copyright"
+msgid "Audio Bit Rate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:287
 msgctxt "@label"
-msgid "Comment"
+msgid "Video Bit Rate"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:288
-msgctxt "@label music title"
-msgid "Title"
+msgctxt "@label"
+msgid "Page Count"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:289
 msgctxt "@label"
-msgid "Keyword"
+msgid "Copyright"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:290
 msgctxt "@label"
-msgid "Description"
+msgid "Comment"
 msgstr ""
 
 #: kio/kfilemetainfo.cpp:291
+msgctxt "@label music title"
+msgid "Title"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:292
+msgctxt "@label"
+msgid "Keyword"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:293
+msgctxt "@label"
+msgid "Description"
+msgstr ""
+
+#: kio/kfilemetainfo.cpp:294
 msgctxt "@label Software used to generate content"
 msgid "Generator"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:292
+#: kio/kfilemetainfo.cpp:295
 msgctxt "@label modification date"
 msgid "Modified"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:293
+#: kio/kfilemetainfo.cpp:296
 msgctxt "@label creation date"
 msgid "Created"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:294
+#: kio/kfilemetainfo.cpp:297
 msgctxt "@label"
 msgid "Subject"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:295
+#: kio/kfilemetainfo.cpp:298
 msgctxt "@label music album"
 msgid "Album"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:296
+#: kio/kfilemetainfo.cpp:299
 msgctxt "@label music genre"
 msgid "Genre"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:297
+#: kio/kfilemetainfo.cpp:300
 msgctxt "@label"
 msgid "Performer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:298
+#: kio/kfilemetainfo.cpp:301
 msgctxt "@label music track number"
 msgid "Track"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:299
+#: kio/kfilemetainfo.cpp:302
 msgctxt "@label music composer"
 msgid "Composer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:300
+#: kio/kfilemetainfo.cpp:303
 msgctxt "@label"
 msgid "Encoder"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:301
+#: kio/kfilemetainfo.cpp:304
 msgctxt "@label"
 msgid "Encoded By"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:302
+#: kio/kfilemetainfo.cpp:305
 msgctxt "@label"
 msgid "Original Release Year"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:303
+#: kio/kfilemetainfo.cpp:306
 msgctxt "@label"
 msgid "URI"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:304
+#: kio/kfilemetainfo.cpp:307
 msgctxt "@label"
 msgid "Text Writer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:305
+#: kio/kfilemetainfo.cpp:308
 msgctxt "@label"
 msgid "Publisher"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:306
+#: kio/kfilemetainfo.cpp:309
 msgctxt "@label"
 msgid "Creator"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:307
+#: kio/kfilemetainfo.cpp:310
 msgctxt "@label"
 msgid "Contributor"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:308
+#: kio/kfilemetainfo.cpp:311
 msgctxt "@label EXIF"
 msgid "Manufacturer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:309
+#: kio/kfilemetainfo.cpp:312
 msgctxt "@label EXIF"
 msgid "Model"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:310
+#: kio/kfilemetainfo.cpp:313
 msgctxt "@label EXIF"
 msgid "Orientation"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:311
+#: kio/kfilemetainfo.cpp:314
 msgctxt "@label music or image artist"
 msgid "Artist"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:312
+#: kio/kfilemetainfo.cpp:315
 msgctxt "@label"
 msgid "GPS Latitude Reference"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:313
+#: kio/kfilemetainfo.cpp:316
 msgctxt "@label"
 msgid "GPS Longitude Reference"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:314
+#: kio/kfilemetainfo.cpp:317
 msgctxt "@label EXIF"
 msgid "Flash"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:315
+#: kio/kfilemetainfo.cpp:318
 msgctxt "@label EXIF"
 msgid "Exposure Time"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:316
+#: kio/kfilemetainfo.cpp:319
 msgctxt "@label EXIF"
 msgid "Exposure Bias Value"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:317
+#: kio/kfilemetainfo.cpp:320
 msgctxt "@label EXIF"
 msgid "Exposure Mode"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:318
+#: kio/kfilemetainfo.cpp:321
 msgctxt "@label EXIF aperture value"
 msgid "Aperture"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:319
+#: kio/kfilemetainfo.cpp:322
 msgctxt "@label EXIF"
 msgid "Focal Length"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:320
+#: kio/kfilemetainfo.cpp:323
 msgctxt "@label EXIF"
 msgid "Focal Length 35 mm"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:321
+#: kio/kfilemetainfo.cpp:324
 msgctxt "@label EXIF"
 msgid "ISO Speed Ratings"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:322
+#: kio/kfilemetainfo.cpp:325
 msgctxt "@label EXIF"
 msgid "Metering Mode"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:323
+#: kio/kfilemetainfo.cpp:326
 msgctxt "@label EXIF"
 msgid "White Balance"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:324
+#: kio/kfilemetainfo.cpp:327
 msgctxt "@label"
 msgid "Family"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:326
+#: kio/kfilemetainfo.cpp:329
 msgctxt "@label"
 msgid "Creator E-Mail"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:327
+#: kio/kfilemetainfo.cpp:330
 msgctxt "@label"
 msgid "Hash Value"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:328
+#: kio/kfilemetainfo.cpp:331
 msgctxt "@label"
 msgid "Hash Algorithm"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:329
+#: kio/kfilemetainfo.cpp:332
 msgctxt "@label"
 msgid "Country"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:330
+#: kio/kfilemetainfo.cpp:333
 msgctxt "@label"
 msgid "Summary"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:331
+#: kio/kfilemetainfo.cpp:334
 msgctxt "@label"
 msgid "Character Set"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:332
+#: kio/kfilemetainfo.cpp:335
 msgctxt "@label number of lines"
 msgid "Lines"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:333
+#: kio/kfilemetainfo.cpp:336
 msgctxt "@label number of words"
 msgid "Words"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:334
+#: kio/kfilemetainfo.cpp:337
 msgctxt "@label"
 msgid "Character Count"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:335
+#: kio/kfilemetainfo.cpp:338
 msgctxt "@label"
 msgid "Revision"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:336
+#: kio/kfilemetainfo.cpp:339
 msgctxt "@label"
 msgid "Contact"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:337
+#: kio/kfilemetainfo.cpp:340
 msgctxt "@label"
 msgid "Disclaimer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:338
+#: kio/kfilemetainfo.cpp:341
 msgctxt "@label video director"
 msgid "Director"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:339
+#: kio/kfilemetainfo.cpp:342
 msgctxt "@label"
 msgid "Conductor"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:340
+#: kio/kfilemetainfo.cpp:343
 msgctxt "@label"
 msgid "Interpreted By"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:341
+#: kio/kfilemetainfo.cpp:344
 msgctxt "@label"
 msgid "Beats Per Minute"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:342
+#: kio/kfilemetainfo.cpp:345
 msgctxt "@label"
 msgid "Original Artist"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:343
+#: kio/kfilemetainfo.cpp:346
 msgctxt "@label"
 msgid "Original Text Writer"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:344
+#: kio/kfilemetainfo.cpp:347
 msgctxt "@label"
 msgid "Lyrics"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:345
+#: kio/kfilemetainfo.cpp:348
 msgctxt "@label"
 msgid "Licensee"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:346
+#: kio/kfilemetainfo.cpp:349
 msgctxt "@label"
 msgid "Musician Credits"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:347
+#: kio/kfilemetainfo.cpp:350
 msgctxt "@label"
 msgid "Subtitle"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:348
+#: kio/kfilemetainfo.cpp:351
 msgctxt "@label"
 msgid "Codec"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:349
+#: kio/kfilemetainfo.cpp:352
 msgctxt "@label"
 msgid "Container Format"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:350
+#: kio/kfilemetainfo.cpp:353
 msgctxt "@label"
 msgid "Grouping"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:351
+#: kio/kfilemetainfo.cpp:354
 msgctxt "@label"
 msgid "Audio Bit Depth"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:352
+#: kio/kfilemetainfo.cpp:355
 msgctxt "@label"
 msgid "Video Bit Depth"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:353
+#: kio/kfilemetainfo.cpp:356
 msgctxt "@label"
 msgid "Aspect Ratio"
 msgstr ""
 
-#: kio/kfilemetainfo.cpp:354
+#: kio/kfilemetainfo.cpp:357
 msgctxt "@label"
 msgid "Foundry"
 msgstr ""
@@ -3132,33 +2810,25 @@ msgstr ""
 msgid "Undo File Copy Confirmation"
 msgstr "Bekræft fortrydelse af filkopiering"
 
-#: kio/kfileitem.cpp:1142
+#: kio/kfileitem.cpp:979
 msgid "(Symbolic Link to %1)"
 msgstr "(Symbolsk link til %1)"
 
-#: kio/kfileitem.cpp:1144
+#: kio/kfileitem.cpp:981
 msgid "(%1, Link to %2)"
 msgstr "(%1, link til %2)"
 
-#: kio/kfileitem.cpp:1148
+#: kio/kfileitem.cpp:984
 msgid " (Points to %1)"
 msgstr "(Peger på %1)"
 
-#: kio/slavebase.cpp:834
+#: kio/slavebase.cpp:693
 msgid "Authentication Dialog"
 msgstr ""
 
 #: kio/pastedialog.cpp:55
 msgid "Data format:"
 msgstr "Dataformat:"
-
-#: kio/slave.cpp:403
-msgid "Unknown protocol '%1'."
-msgstr "Ukendt protokol \"%1\"."
-
-#: kio/slave.cpp:412
-msgid "Can not find io-slave for protocol '%1'."
-msgstr "Kan ikke finde io-slave for protokol \"%1\"."
 
 #: kio/kdesktopfileactions.cpp:53
 msgid "The desktop entry file %1 has no Type=... entry."
@@ -3174,8 +2844,8 @@ msgstr ""
 "%1\n"
 "er ukendt."
 
-#: kio/kdesktopfileactions.cpp:83 kio/kdesktopfileactions.cpp:157
-#: kio/kdesktopfileactions.cpp:258
+#: kio/kdesktopfileactions.cpp:83 kio/kdesktopfileactions.cpp:154
+#: kio/kdesktopfileactions.cpp:255
 msgid ""
 "The desktop entry file\n"
 "%1\n"
@@ -3185,7 +2855,7 @@ msgstr ""
 "%1\n"
 "er af typen FSDevice, men har ingen \"Dev=...\"-linje."
 
-#: kio/kdesktopfileactions.cpp:125
+#: kio/kdesktopfileactions.cpp:122
 msgid ""
 "The desktop entry file\n"
 "%1\n"
@@ -3195,64 +2865,64 @@ msgstr ""
 "%1\n"
 "er af typen Link, men har ingen \"URL=...\"-linje."
 
-#: kio/kdesktopfileactions.cpp:172
+#: kio/kdesktopfileactions.cpp:169
 msgid "Mount"
 msgstr "Montér"
 
-#: kio/kdesktopfileactions.cpp:178
+#: kio/kdesktopfileactions.cpp:175
 msgid "Unmount"
 msgstr "Afmontér"
 
-#: kfile/kpropertiesdialog.cpp:195 kfile/kpropertiesdialog.cpp:210
-#: kfile/kpropertiesdialog.cpp:222 kfile/kpropertiesdialog.cpp:237
-#: kfile/kpropertiesdialog.cpp:253
+#: kfile/kpropertiesdialog.cpp:280 kfile/kpropertiesdialog.cpp:295
+#: kfile/kpropertiesdialog.cpp:307 kfile/kpropertiesdialog.cpp:323
+#: kfile/kpropertiesdialog.cpp:339
 msgid "Properties for %1"
 msgstr "Egenskaber for %1"
 
-#: kfile/kpropertiesdialog.cpp:220
+#: kfile/kpropertiesdialog.cpp:305
 msgid "Properties for 1 item"
 msgid_plural "Properties for %1 Selected Items"
 msgstr[0] "Egenskaber for 1 element"
 msgstr[1] "Egenskaber for %1 markerede elementer"
 
-#: kfile/kpropertiesdialog.cpp:724
+#: kfile/kpropertiesdialog.cpp:720
 msgctxt "@title:tab File properties"
 msgid "&General"
 msgstr "&Generelt"
 
-#: kfile/kpropertiesdialog.cpp:910
+#: kfile/kpropertiesdialog.cpp:912
 msgid "Type:"
 msgstr "Type:"
 
-#: kfile/kpropertiesdialog.cpp:923
+#: kfile/kpropertiesdialog.cpp:925
 msgid "Create New File Type"
 msgstr "Opret ny filtype"
 
-#: kfile/kpropertiesdialog.cpp:925
+#: kfile/kpropertiesdialog.cpp:927
 msgid "File Type Options"
 msgstr "Indstillinger for filtype"
 
-#: kfile/kpropertiesdialog.cpp:932
+#: kfile/kpropertiesdialog.cpp:934
 msgid "Contents:"
 msgstr "Indhold:"
 
-#: kfile/kpropertiesdialog.cpp:941 kfile/kurlrequesterdialog.cpp:58
+#: kfile/kpropertiesdialog.cpp:942 kfile/kurlrequesterdialog.cpp:58
 msgid "Location:"
 msgstr "Placering:"
 
-#: kfile/kpropertiesdialog.cpp:955
+#: kfile/kpropertiesdialog.cpp:957
 msgid "Size:"
 msgstr "Størrelse:"
 
-#: kfile/kpropertiesdialog.cpp:974
+#: kfile/kpropertiesdialog.cpp:975
 msgid "Calculate"
 msgstr "Beregn"
 
-#: kfile/kpropertiesdialog.cpp:975
+#: kfile/kpropertiesdialog.cpp:976
 msgid "Stop"
 msgstr "Stop"
 
-#: kfile/kpropertiesdialog.cpp:985 kfile/kpropertiesdialog.cpp:1188
+#: kfile/kpropertiesdialog.cpp:985 kfile/kpropertiesdialog.cpp:1185
 msgid "Refresh"
 msgstr "Genopfrisk"
 
@@ -3260,44 +2930,44 @@ msgstr "Genopfrisk"
 msgid "Points to:"
 msgstr "Peger på:"
 
-#: kfile/kpropertiesdialog.cpp:1006
+#: kfile/kpropertiesdialog.cpp:1005
 msgid "Created:"
 msgstr "Oprettet:"
 
-#: kfile/kpropertiesdialog.cpp:1016
+#: kfile/kpropertiesdialog.cpp:1014
 msgid "Modified:"
 msgstr "Ændret:"
 
-#: kfile/kpropertiesdialog.cpp:1026
+#: kfile/kpropertiesdialog.cpp:1023
 msgid "Accessed:"
 msgstr "Brugt:"
 
-#: kfile/kpropertiesdialog.cpp:1047
+#: kfile/kpropertiesdialog.cpp:1042
 msgid "Mounted on:"
 msgstr "Monteret på:"
 
-#: kfile/kpropertiesdialog.cpp:1055 kfile/kpropertiesdialog.cpp:2713
+#: kfile/kpropertiesdialog.cpp:1050 kfile/kpropertiesdialog.cpp:2796
 msgid "Device usage:"
 msgstr "Brug af enhed:"
 
-#: kfile/kpropertiesdialog.cpp:1150 kfile/kpropertiesdialog.cpp:2841
+#: kfile/kpropertiesdialog.cpp:1145 kfile/kpropertiesdialog.cpp:2918
 msgctxt "Available space out of total partition size (percent used)"
 msgid "%1 free of %2 (%3% used)"
 msgstr "%1 ledig ud af %2 (%3% brugt)"
 
-#: kfile/kpropertiesdialog.cpp:1167 kfile/kpropertiesdialog.cpp:1183
+#: kfile/kpropertiesdialog.cpp:1163 kfile/kpropertiesdialog.cpp:1180
 msgid "1 file"
 msgid_plural "%1 files"
 msgstr[0] "1 fil"
 msgstr[1] "%1 filer"
 
-#: kfile/kpropertiesdialog.cpp:1168 kfile/kpropertiesdialog.cpp:1184
+#: kfile/kpropertiesdialog.cpp:1164 kfile/kpropertiesdialog.cpp:1181
 msgid "1 sub-folder"
 msgid_plural "%1 sub-folders"
 msgstr[0] "1 undermappe"
 msgstr[1] "%1 undermapper"
 
-#: kfile/kpropertiesdialog.cpp:1164
+#: kfile/kpropertiesdialog.cpp:1160
 msgid ""
 "Calculating... %1 (%2)\n"
 "%3, %4"
@@ -3305,20 +2975,20 @@ msgstr ""
 "Beregner... %1 (%2)\n"
 "%3, %4"
 
-#: kfile/kpropertiesdialog.cpp:1197
+#: kfile/kpropertiesdialog.cpp:1194
 msgid "Calculating..."
 msgstr "Beregner..."
 
-#: kfile/kpropertiesdialog.cpp:1232
+#: kfile/kpropertiesdialog.cpp:1231
 msgid "At least %1"
 msgstr "Mindst %1"
 
-#: kfile/kpropertiesdialog.cpp:1269
+#: kfile/kpropertiesdialog.cpp:1268
 msgid "The new file name is empty."
 msgstr "Det nye filnavn er tomt."
 
-#: kfile/kpropertiesdialog.cpp:1442 kfile/kpropertiesdialog.cpp:2587
-#: kfile/kpropertiesdialog.cpp:2881 kfile/kpropertiesdialog.cpp:3132
+#: kfile/kpropertiesdialog.cpp:1449 kfile/kpropertiesdialog.cpp:2689
+#: kfile/kpropertiesdialog.cpp:2961 kfile/kpropertiesdialog.cpp:3209
 msgid ""
 "<qt>Could not save properties. You do not have sufficient access to write to "
 "<b>%1</b>.</qt>"
@@ -3326,74 +2996,74 @@ msgstr ""
 "<qt>Kunne ikke gemme egenskaber. Du har ikke rettigheder til at skrive til "
 "<b>%1</b>.</qt>"
 
-#: kfile/kpropertiesdialog.cpp:1517 kfile/kpropertiesdialog.cpp:1521
-#: kfile/kpropertiesdialog.cpp:1526
+#: kfile/kpropertiesdialog.cpp:1522 kfile/kpropertiesdialog.cpp:1528
+#: kfile/kpropertiesdialog.cpp:1535
 msgid "Forbidden"
 msgstr "Forbudt"
 
-#: kfile/kpropertiesdialog.cpp:1518
+#: kfile/kpropertiesdialog.cpp:1523
 msgid "Can Read"
 msgstr "Kan læse"
 
-#: kfile/kpropertiesdialog.cpp:1519
+#: kfile/kpropertiesdialog.cpp:1524
 msgid "Can Read & Write"
 msgstr "Kan læse og skrive"
 
-#: kfile/kpropertiesdialog.cpp:1522
+#: kfile/kpropertiesdialog.cpp:1529
 msgid "Can View Content"
 msgstr "Kan se indhold"
 
-#: kfile/kpropertiesdialog.cpp:1523
+#: kfile/kpropertiesdialog.cpp:1530
 msgid "Can View & Modify Content"
 msgstr "Kan se og ændre indhold"
 
-#: kfile/kpropertiesdialog.cpp:1527
+#: kfile/kpropertiesdialog.cpp:1536
 msgid "Can View Content & Read"
 msgstr "Kan se indhold og læse"
 
-#: kfile/kpropertiesdialog.cpp:1528
+#: kfile/kpropertiesdialog.cpp:1537
 msgid "Can View/Read & Modify/Write"
 msgstr "Kan se/læse og ændre/skrive"
 
-#: kfile/kpropertiesdialog.cpp:1624
+#: kfile/kpropertiesdialog.cpp:1637
 msgid "&Permissions"
 msgstr "&Rettigheder"
 
-#: kfile/kpropertiesdialog.cpp:1636 kfile/kpropertiesdialog.cpp:1853
+#: kfile/kpropertiesdialog.cpp:1649 kfile/kpropertiesdialog.cpp:1867
 msgid "Access Permissions"
 msgstr "Adgangsrettigheder"
 
-#: kfile/kpropertiesdialog.cpp:1644
+#: kfile/kpropertiesdialog.cpp:1657
 msgid "This file is a link and does not have permissions."
 msgid_plural "All files are links and do not have permissions."
 msgstr[0] "Denne file er et link og har ingen rettigheder."
 msgstr[1] "Alle filer er links og har ingen rettigheder."
 
-#: kfile/kpropertiesdialog.cpp:1648
+#: kfile/kpropertiesdialog.cpp:1661
 msgid "Only the owner can change permissions."
 msgstr "Kun ejeren kan ændre rettigheder."
 
-#: kfile/kpropertiesdialog.cpp:1651
+#: kfile/kpropertiesdialog.cpp:1665
 msgid "O&wner:"
 msgstr "E&jer:"
 
-#: kfile/kpropertiesdialog.cpp:1657
+#: kfile/kpropertiesdialog.cpp:1671
 msgid "Specifies the actions that the owner is allowed to do."
 msgstr "Angiver de handlinger som ejeren har lov til at udføre."
 
-#: kfile/kpropertiesdialog.cpp:1659
+#: kfile/kpropertiesdialog.cpp:1673
 msgid "Gro&up:"
 msgstr "Gr&uppe:"
 
-#: kfile/kpropertiesdialog.cpp:1665
+#: kfile/kpropertiesdialog.cpp:1679
 msgid "Specifies the actions that the members of the group are allowed to do."
 msgstr "Angiver de handlinger som medlemmer af gruppen har lov til at udføre."
 
-#: kfile/kpropertiesdialog.cpp:1667
+#: kfile/kpropertiesdialog.cpp:1681
 msgid "O&thers:"
 msgstr "&Andre:"
 
-#: kfile/kpropertiesdialog.cpp:1673
+#: kfile/kpropertiesdialog.cpp:1687
 msgid ""
 "Specifies the actions that all users, who are neither owner nor in the "
 "group, are allowed to do."
@@ -3401,15 +3071,15 @@ msgstr ""
 "Angiver de handlinger som alle brugere, som hverken er ejere eller i gruppen "
 "har lov til at udføre."
 
-#: kfile/kpropertiesdialog.cpp:1678
+#: kfile/kpropertiesdialog.cpp:1692
 msgid "Only own&er can rename and delete folder content"
 msgstr "Kun e&jeren kan omdøbe og slette mappeindhold"
 
-#: kfile/kpropertiesdialog.cpp:1679
+#: kfile/kpropertiesdialog.cpp:1693
 msgid "Is &executable"
 msgstr "&Er kørbar"
 
-#: kfile/kpropertiesdialog.cpp:1683
+#: kfile/kpropertiesdialog.cpp:1697
 msgid ""
 "Enable this option to allow only the folder's owner to delete or rename the "
 "contained files and folders. Other users can only add new files, which "
@@ -3419,7 +3089,7 @@ msgstr ""
 "indeholdte filer og mapper. Andre brugere kan kun tilføje nye filer, hvilket "
 "kræver \"Ændr indhold\"-rettigheder."
 
-#: kfile/kpropertiesdialog.cpp:1687
+#: kfile/kpropertiesdialog.cpp:1701
 msgid ""
 "Enable this option to mark the file as executable. This only makes sense for "
 "programs and scripts. It is required when you want to execute them."
@@ -3427,35 +3097,35 @@ msgstr ""
 "Aktivér dette for at markere filen som kørbar. Dette giver kun mening for "
 "programmer og scripts. Det er påkrævet hvis du vil køre dem."
 
-#: kfile/kpropertiesdialog.cpp:1694
+#: kfile/kpropertiesdialog.cpp:1708
 msgid "A&dvanced Permissions"
 msgstr "A&vancerede rettigheder"
 
-#: kfile/kpropertiesdialog.cpp:1703
+#: kfile/kpropertiesdialog.cpp:1716
 msgid "Ownership"
 msgstr "Ejerskab"
 
-#: kfile/kpropertiesdialog.cpp:1710
+#: kfile/kpropertiesdialog.cpp:1723
 msgid "User:"
 msgstr "Bruger:"
 
-#: kfile/kpropertiesdialog.cpp:1761
+#: kfile/kpropertiesdialog.cpp:1775
 msgid "Group:"
 msgstr "Gruppe:"
 
-#: kfile/kpropertiesdialog.cpp:1804
+#: kfile/kpropertiesdialog.cpp:1816
 msgid "Apply changes to all subfolders and their contents"
 msgstr "Anvend ændringer på alle undermapper og deres indhold"
 
-#: kfile/kpropertiesdialog.cpp:1843
+#: kfile/kpropertiesdialog.cpp:1857
 msgid "Advanced Permissions"
 msgstr "Avancerede rettigheder"
 
-#: kfile/kpropertiesdialog.cpp:1861
+#: kfile/kpropertiesdialog.cpp:1875
 msgid "Class"
 msgstr "Klasse"
 
-#: kfile/kpropertiesdialog.cpp:1866
+#: kfile/kpropertiesdialog.cpp:1880
 msgid ""
 "Show\n"
 "Entries"
@@ -3463,19 +3133,19 @@ msgstr ""
 "Vis\n"
 "indgange"
 
-#: kfile/kpropertiesdialog.cpp:1868
+#: kfile/kpropertiesdialog.cpp:1882
 msgid "Read"
 msgstr "Læs"
 
-#: kfile/kpropertiesdialog.cpp:1873
+#: kfile/kpropertiesdialog.cpp:1888
 msgid "This flag allows viewing the content of the folder."
 msgstr "Dette flag tillader visning af indholdet af mappen."
 
-#: kfile/kpropertiesdialog.cpp:1875
+#: kfile/kpropertiesdialog.cpp:1890
 msgid "The Read flag allows viewing the content of the file."
 msgstr "Det røde flag tillader visning af indholdet af filen."
 
-#: kfile/kpropertiesdialog.cpp:1879
+#: kfile/kpropertiesdialog.cpp:1895
 msgid ""
 "Write\n"
 "Entries"
@@ -3483,11 +3153,11 @@ msgstr ""
 "Skriv\n"
 "indgange"
 
-#: kfile/kpropertiesdialog.cpp:1881
+#: kfile/kpropertiesdialog.cpp:1897
 msgid "Write"
 msgstr "Skriv"
 
-#: kfile/kpropertiesdialog.cpp:1886
+#: kfile/kpropertiesdialog.cpp:1902
 msgid ""
 "This flag allows adding, renaming and deleting of files. Note that deleting "
 "and renaming can be limited using the Sticky flag."
@@ -3495,32 +3165,32 @@ msgstr ""
 "Dette flag tillader tilføjelse, navneændring og sletning af filer. Bemærk at "
 "sletning og navneændring kan begrænses ved brug af klæbrigt flag."
 
-#: kfile/kpropertiesdialog.cpp:1889
+#: kfile/kpropertiesdialog.cpp:1905
 msgid "The Write flag allows modifying the content of the file."
 msgstr "Skriveflaget tillader ændring af indholdet af filen."
 
-#: kfile/kpropertiesdialog.cpp:1894
+#: kfile/kpropertiesdialog.cpp:1911
 msgctxt "Enter folder"
 msgid "Enter"
 msgstr "Få tilgang til"
 
-#: kfile/kpropertiesdialog.cpp:1895
+#: kfile/kpropertiesdialog.cpp:1912
 msgid "Enable this flag to allow entering the folder."
 msgstr "Aktivér dette flag for at tillade at gå ind i mappen."
 
-#: kfile/kpropertiesdialog.cpp:1898
+#: kfile/kpropertiesdialog.cpp:1914
 msgid "Exec"
 msgstr "Exec"
 
-#: kfile/kpropertiesdialog.cpp:1899
+#: kfile/kpropertiesdialog.cpp:1915
 msgid "Enable this flag to allow executing the file as a program."
 msgstr "Aktivér dette flag for at tillade at køre filen som et program."
 
-#: kfile/kpropertiesdialog.cpp:1909
+#: kfile/kpropertiesdialog.cpp:1925
 msgid "Special"
 msgstr "Speciel"
 
-#: kfile/kpropertiesdialog.cpp:1913
+#: kfile/kpropertiesdialog.cpp:1929
 msgid ""
 "Special flag. Valid for the whole folder, the exact meaning of the flag can "
 "be seen in the right hand column."
@@ -3528,31 +3198,31 @@ msgstr ""
 "Specielt flag. Gyldigt for hele mappen, den nøjagtige betydning af flaget "
 "kan ses i den højre kolonne."
 
-#: kfile/kpropertiesdialog.cpp:1916
+#: kfile/kpropertiesdialog.cpp:1932
 msgid ""
 "Special flag. The exact meaning of the flag can be seen in the right hand "
 "column."
 msgstr ""
 "Specielt flag. Den nøjagtige betydning af flaget kan ses i højre kolonne."
 
-#: kfile/kpropertiesdialog.cpp:1920
+#: kfile/kpropertiesdialog.cpp:1937
 msgid "User"
 msgstr "Bruger"
 
-#: kfile/kpropertiesdialog.cpp:1924
+#: kfile/kpropertiesdialog.cpp:1941
 msgid "Group"
 msgstr "Gruppe"
 
-#: kfile/kpropertiesdialog.cpp:1928 kfile/kacleditwidget.cpp:59
-#: kfile/kacleditwidget.cpp:429
+#: kfile/kpropertiesdialog.cpp:1945 kfile/kacleditwidget.cpp:59
+#: kfile/kacleditwidget.cpp:445
 msgid "Others"
 msgstr "Andre"
 
-#: kfile/kpropertiesdialog.cpp:1932
+#: kfile/kpropertiesdialog.cpp:1949
 msgid "Set UID"
 msgstr "Sæt UID"
 
-#: kfile/kpropertiesdialog.cpp:1936
+#: kfile/kpropertiesdialog.cpp:1953
 msgid ""
 "If this flag is set, the owner of this folder will be the owner of all new "
 "files."
@@ -3560,7 +3230,7 @@ msgstr ""
 "Hvis dette flag er sat, vil ejeren af denne mappe blive ejeren af alle nye "
 "filer."
 
-#: kfile/kpropertiesdialog.cpp:1939
+#: kfile/kpropertiesdialog.cpp:1956
 msgid ""
 "If this file is an executable and the flag is set, it will be executed with "
 "the permissions of the owner."
@@ -3568,18 +3238,18 @@ msgstr ""
 "Hvis denne fil er kørbar og flaget er sat, vil den blive kørt med ejerens "
 "rettigheder."
 
-#: kfile/kpropertiesdialog.cpp:1943
+#: kfile/kpropertiesdialog.cpp:1961
 msgid "Set GID"
 msgstr "Sæt GID"
 
-#: kfile/kpropertiesdialog.cpp:1947
+#: kfile/kpropertiesdialog.cpp:1965
 msgid ""
 "If this flag is set, the group of this folder will be set for all new files."
 msgstr ""
 "Hvis dette flag er sat, vil gruppen for denne mappe blive sat for alle nye "
 "filer."
 
-#: kfile/kpropertiesdialog.cpp:1950
+#: kfile/kpropertiesdialog.cpp:1968
 msgid ""
 "If this file is an executable and the flag is set, it will be executed with "
 "the permissions of the group."
@@ -3587,12 +3257,12 @@ msgstr ""
 "Hvis denne fil er en kørbar fil og flaget er sat, vil den blive kørt med "
 "gruppens rettigheder."
 
-#: kfile/kpropertiesdialog.cpp:1954
+#: kfile/kpropertiesdialog.cpp:1973
 msgctxt "File permission"
 msgid "Sticky"
 msgstr "Klæbrig"
 
-#: kfile/kpropertiesdialog.cpp:1958
+#: kfile/kpropertiesdialog.cpp:1977
 msgid ""
 "If the Sticky flag is set on a folder, only the owner and root can delete or "
 "rename files. Otherwise everybody with write permissions can do this."
@@ -3601,7 +3271,7 @@ msgstr ""
 "kan slette eller omdøbe filer. Ellers er det alle der har skriverettighed "
 "der kan gøre dette."
 
-#: kfile/kpropertiesdialog.cpp:1962
+#: kfile/kpropertiesdialog.cpp:1981
 msgid ""
 "The Sticky flag on a file is ignored on Linux, but may be used on some "
 "systems"
@@ -3609,95 +3279,87 @@ msgstr ""
 "Det klæbrige flag for en file ignoreres af Linux, men bruges muligvis på "
 "visse andre systemer"
 
-#: kfile/kpropertiesdialog.cpp:2143
+#: kfile/kpropertiesdialog.cpp:2184
 msgid "Link"
 msgstr "Link"
 
-#: kfile/kpropertiesdialog.cpp:2160
+#: kfile/kpropertiesdialog.cpp:2203
 msgid "Varying (No Change)"
 msgstr "Varierer (Ingen ændring)"
 
-#: kfile/kpropertiesdialog.cpp:2259
+#: kfile/kpropertiesdialog.cpp:2326
 msgid "This file uses advanced permissions"
 msgid_plural "These files use advanced permissions."
 msgstr[0] "Denne fil bruger avancerede rettigheder"
 msgstr[1] "Disse filer bruger avancerede rettigheder."
 
-#: kfile/kpropertiesdialog.cpp:2280
+#: kfile/kpropertiesdialog.cpp:2351
 msgid "This folder uses advanced permissions."
 msgid_plural "These folders use advanced permissions."
 msgstr[0] "Denne mappe bruger avancerede rettigheder."
 msgstr[1] "Disse mapper bruger avancerede rettigheder."
 
-#: kfile/kpropertiesdialog.cpp:2296
+#: kfile/kpropertiesdialog.cpp:2369
 msgid "These files use advanced permissions."
 msgstr "Disse filer bruger avancerede rettigheder."
 
-#: kfile/kpropertiesdialog.cpp:2508
+#: kfile/kpropertiesdialog.cpp:2607
 msgid "U&RL"
 msgstr "U&RL"
 
-#: kfile/kpropertiesdialog.cpp:2515 ../kioslave/http/http.cpp:586
+#: kfile/kpropertiesdialog.cpp:2614 ../kioslave/http/http.cpp:625
 msgid "URL:"
 msgstr "URL:"
 
-#: kfile/kpropertiesdialog.cpp:2646
+#: kfile/kpropertiesdialog.cpp:2744
 msgid "De&vice"
 msgstr "En&hed"
 
-#: kfile/kpropertiesdialog.cpp:2677
-msgid "Device (/dev/fd0):"
-msgstr "Enhed (/dev/fd0):"
-
-#: kfile/kpropertiesdialog.cpp:2678
+#: kfile/kpropertiesdialog.cpp:2770
 msgid "Device:"
 msgstr "Enhed:"
 
-#: kfile/kpropertiesdialog.cpp:2691
+#: kfile/kpropertiesdialog.cpp:2777
+msgid "Enter device..."
+msgstr ""
+
+#: kfile/kpropertiesdialog.cpp:2783
 msgid "Read only"
 msgstr "Læs-kun"
 
-#: kfile/kpropertiesdialog.cpp:2695
-msgid "File system:"
-msgstr "Filsystemer:"
-
-#: kfile/kpropertiesdialog.cpp:2703
-msgid "Mount point (/mnt/floppy):"
-msgstr "Monteringspunkt (/mnt/floppy):"
-
-#: kfile/kpropertiesdialog.cpp:2704
+#: kfile/kpropertiesdialog.cpp:2787
 msgid "Mount point:"
 msgstr "Monteringspunkt:"
 
-#: kfile/kpropertiesdialog.cpp:2938
+#: kfile/kpropertiesdialog.cpp:3020
 msgid "&Application"
 msgstr "&Program"
 
-#: kfile/kpropertiesdialog.cpp:3063
+#: kfile/kpropertiesdialog.cpp:3143
 msgid "Add File Type for %1"
 msgstr "Tilføj filtype for %1"
 
-#: kfile/kpropertiesdialog.cpp:3064
+#: kfile/kpropertiesdialog.cpp:3144
 msgid "Select one or more file types to add:"
 msgstr "Vælg en eller flere filtyper at tilføje:"
 
-#: kfile/kpropertiesdialog.cpp:3201
+#: kfile/kpropertiesdialog.cpp:3280
 msgid "Only executables on local file systems are supported."
 msgstr "Kun kørbare filer på lokale filsystemer er understøttet."
 
-#: kfile/kpropertiesdialog.cpp:3215
+#: kfile/kpropertiesdialog.cpp:3294
 msgid "Advanced Options for %1"
 msgstr "Avancerede tilvalg for %1"
 
-#: kfile/kacleditwidget.cpp:57 kfile/kacleditwidget.cpp:419
+#: kfile/kacleditwidget.cpp:57 kfile/kacleditwidget.cpp:435
 msgid "Owner"
 msgstr "Ejer"
 
-#: kfile/kacleditwidget.cpp:58 kfile/kacleditwidget.cpp:424
+#: kfile/kacleditwidget.cpp:58 kfile/kacleditwidget.cpp:440
 msgid "Owning Group"
 msgstr "Ejergruppe"
 
-#: kfile/kacleditwidget.cpp:60 kfile/kacleditwidget.cpp:434
+#: kfile/kacleditwidget.cpp:60 kfile/kacleditwidget.cpp:450
 msgid "Mask"
 msgstr "Maske"
 
@@ -3709,79 +3371,79 @@ msgstr "Navngiven bruger"
 msgid "Named Group"
 msgstr "Navngiven gruppe"
 
-#: kfile/kacleditwidget.cpp:94 ../kfile/kfileplacesview.cpp:584
+#: kfile/kacleditwidget.cpp:95 ../kfile/kfileplacesview.cpp:584
 #: ../kfile/kfileplacesview.cpp:605 ../kfile/kfileplacesview.cpp:612
 msgid "Add Entry..."
 msgstr "Tilføj indgang..."
 
-#: kfile/kacleditwidget.cpp:98
+#: kfile/kacleditwidget.cpp:99
 msgid "Edit Entry..."
 msgstr "Redigér indgang..."
 
-#: kfile/kacleditwidget.cpp:102
+#: kfile/kacleditwidget.cpp:103
 msgid "Delete Entry"
 msgstr "Slet indgang"
 
-#: kfile/kacleditwidget.cpp:272
+#: kfile/kacleditwidget.cpp:289
 msgid " (Default)"
 msgstr " (Standard)"
 
-#: kfile/kacleditwidget.cpp:396
+#: kfile/kacleditwidget.cpp:412
 msgid "Edit ACL Entry"
 msgstr "Redigér ACL-indgang"
 
-#: kfile/kacleditwidget.cpp:404
+#: kfile/kacleditwidget.cpp:420
 msgid "Entry Type"
 msgstr "Indgangstype"
 
-#: kfile/kacleditwidget.cpp:410
+#: kfile/kacleditwidget.cpp:426
 msgid "Default for new files in this folder"
 msgstr "Standard for nye filer i denne mappe"
 
-#: kfile/kacleditwidget.cpp:439
+#: kfile/kacleditwidget.cpp:455
 msgid "Named user"
 msgstr "Navngiven bruger"
 
-#: kfile/kacleditwidget.cpp:444
+#: kfile/kacleditwidget.cpp:460
 msgid "Named group"
 msgstr "Navngiven gruppe"
 
-#: kfile/kacleditwidget.cpp:464
+#: kfile/kacleditwidget.cpp:480
 msgid "User: "
 msgstr "Bruger:"
 
-#: kfile/kacleditwidget.cpp:470
+#: kfile/kacleditwidget.cpp:486
 msgid "Group: "
 msgstr "Gruppe:"
 
-#: kfile/kacleditwidget.cpp:594
+#: kfile/kacleditwidget.cpp:610
 msgid "Type"
 msgstr "Type"
 
-#: kfile/kacleditwidget.cpp:595
+#: kfile/kacleditwidget.cpp:611
 msgid "Name"
 msgstr "Navn"
 
-#: kfile/kacleditwidget.cpp:596
+#: kfile/kacleditwidget.cpp:612
 msgctxt "read permission"
 msgid "r"
 msgstr "r"
 
-#: kfile/kacleditwidget.cpp:597
+#: kfile/kacleditwidget.cpp:613
 msgctxt "write permission"
 msgid "w"
 msgstr "w"
 
-#: kfile/kacleditwidget.cpp:598
+#: kfile/kacleditwidget.cpp:614
 msgctxt "execute permission"
 msgid "x"
 msgstr "x"
 
-#: kfile/kacleditwidget.cpp:599
+#: kfile/kacleditwidget.cpp:615
 msgid "Effective"
 msgstr "Effektiv"
 
-#: kfile/kurlrequester.cpp:261
+#: kfile/kurlrequester.cpp:262
 msgid "Open file dialog"
 msgstr "Åbn fildialog"
 
@@ -3858,30 +3520,21 @@ msgid "*.png *.xpm *.svg *.svgz|Icon Files (*.png *.xpm *.svg *.svgz)"
 msgstr "*.png *.xpm *.svg *.svgz|Ikon-filer (*.png *.xpm *.svg *.svgz)"
 
 #: kfile/kicondialog.cpp:653 kfile/kurlrequesterdialog.cpp:128
-#: kfile/kfiledialog.cpp:466 kfile/kfiledialog.cpp:476
-#: kfile/kfiledialog.cpp:497 kfile/kfiledialog.cpp:521
-#: kfile/kfiledialog.cpp:531 kfile/kfiledialog.cpp:557
-#: kfile/kfiledialog.cpp:589 kfile/kfiledialog.cpp:644
-#: kfile/kencodingfiledialog.cpp:106 kfile/kencodingfiledialog.cpp:124
-#: kfile/kencodingfiledialog.cpp:139 kfile/kencodingfiledialog.cpp:157
+#: kfile/kfiledialog.cpp:236 kfile/kfiledialog.cpp:254
+#: kfile/kfiledialog.cpp:270 kfile/kfiledialog.cpp:283
+#: kfile/kfiledialog.cpp:298 kfile/kfiledialog.cpp:347
+#: kfile/kencodingfiledialog.cpp:104 kfile/kencodingfiledialog.cpp:123
+#: kfile/kencodingfiledialog.cpp:140 kfile/kencodingfiledialog.cpp:159
 msgid "Open"
 msgstr "Åbn"
 
-#: kfile/kfiledialog.cpp:120
-msgid "*|All files"
-msgstr "*|Alle filer"
-
-#: kfile/kfiledialog.cpp:343 ../kfile/kfilefiltercombo.cpp:185
-msgid "All Supported Files"
-msgstr "Alle understøttede filer"
-
-#: kfile/kfiledialog.cpp:715 kfile/kfiledialog.cpp:734
-#: kfile/kfiledialog.cpp:762 kfile/kfiledialog.cpp:796
-#: kfile/kencodingfiledialog.cpp:177 kfile/kencodingfiledialog.cpp:198
+#: kfile/kfiledialog.cpp:390 kfile/kfiledialog.cpp:416
+#: kfile/kfiledialog.cpp:437 kfile/kencodingfiledialog.cpp:179
+#: kfile/kencodingfiledialog.cpp:198
 msgid "Save As"
 msgstr "Gem som"
 
-#: kfile/kpreviewprops.cpp:50
+#: kfile/kpreviewprops.cpp:38
 msgid "P&review"
 msgstr "&Miniature"
 
@@ -3892,15 +3545,15 @@ msgid_plural "%1 items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kfile/kopenwithdialog.cpp:268
+#: kfile/kopenwithdialog.cpp:265
 msgid "Known Applications"
 msgstr "Kendte programmer"
 
-#: kfile/kopenwithdialog.cpp:482
+#: kfile/kopenwithdialog.cpp:481
 msgid "Open With"
 msgstr "Åbn med"
 
-#: kfile/kopenwithdialog.cpp:487
+#: kfile/kopenwithdialog.cpp:485
 msgid ""
 "<qt>Select the program that should be used to open <b>%1</b>. If the program "
 "is not listed, enter the name or click the browse button.</qt>"
@@ -3908,15 +3561,15 @@ msgstr ""
 "<qt>Vælg det program der skal bruges til at åbne <b>%1</b>. Hvis programmet "
 "ikke er anført, så indtast navnet eller klik på knappen Gennemse.</qt>"
 
-#: kfile/kopenwithdialog.cpp:493
+#: kfile/kopenwithdialog.cpp:490
 msgid "Choose the name of the program with which to open the selected files."
 msgstr "Vælg navnet på det program som de udvalgte filer skal åbnes med."
 
-#: kfile/kopenwithdialog.cpp:520
+#: kfile/kopenwithdialog.cpp:522
 msgid "Choose Application for %1"
 msgstr "Vælg program til %1"
 
-#: kfile/kopenwithdialog.cpp:521
+#: kfile/kopenwithdialog.cpp:523
 msgid ""
 "<qt>Select the program for the file type: <b>%1</b>. If the program is not "
 "listed, enter the name or click the browse button.</qt>"
@@ -3925,11 +3578,11 @@ msgstr ""
 "programmet ikke er anført, så indtast navnet eller klik på knappen Gennemse."
 "</qt>"
 
-#: kfile/kopenwithdialog.cpp:536
+#: kfile/kopenwithdialog.cpp:539
 msgid "Choose Application"
 msgstr "Vælg program"
 
-#: kfile/kopenwithdialog.cpp:537
+#: kfile/kopenwithdialog.cpp:540
 msgid ""
 "<qt>Select a program. If the program is not listed, enter the name or click "
 "the browse button.</qt>"
@@ -3937,7 +3590,7 @@ msgstr ""
 "<qt>Vælg et program. Hvis programmet ikke er anført, så indtast navnet eller "
 "klik på knappen Gennemse.</qt>"
 
-#: kfile/kopenwithdialog.cpp:591
+#: kfile/kopenwithdialog.cpp:595
 msgid ""
 "Following the command, you can have several place holders which will be "
 "replaced with the actual values when the actual program is run:\n"
@@ -3965,19 +3618,19 @@ msgstr ""
 "%m - mini-ikonet\n"
 "%c - kommentaren"
 
-#: kfile/kopenwithdialog.cpp:626
+#: kfile/kopenwithdialog.cpp:629
 msgid "Run in &terminal"
 msgstr "Kør i &terminal"
 
-#: kfile/kopenwithdialog.cpp:641
+#: kfile/kopenwithdialog.cpp:644
 msgid "&Do not close when command exits"
 msgstr "&Luk ikke når kommando afslutter"
 
-#: kfile/kopenwithdialog.cpp:658
+#: kfile/kopenwithdialog.cpp:661
 msgid "&Remember application association for this type of file"
 msgstr "&Husk programassociation for denne type fil"
 
-#: kfile/kopenwithdialog.cpp:803
+#: kfile/kopenwithdialog.cpp:791
 msgid ""
 "Could not extract executable name from '%1', please type a valid program "
 "name."
@@ -3985,26 +3638,26 @@ msgstr ""
 "Kunne ikke udtrække navnet på kørbar fil fra \"%1\", angiv venligst et "
 "gyldigt programnavn."
 
-#: kfile/kopenwithdialog.cpp:853
+#: kfile/kopenwithdialog.cpp:841
 msgid "'%1' not found, please type a valid program name."
 msgstr "\"%1\" blev ikke fundet, indtast et gyldigt programnavn."
 
-#: kfile/kmetaprops.cpp:57
+#: kfile/kmetaprops.cpp:53
 msgctxt "@title:window"
 msgid "Configure Shown Data"
 msgstr "Indstil viste data"
 
-#: kfile/kmetaprops.cpp:62
+#: kfile/kmetaprops.cpp:58
 msgctxt "@label::textbox"
 msgid "Select which data should be shown:"
 msgstr "Vælg hvilke data der skal vises:"
 
-#: kfile/kmetaprops.cpp:120
+#: kfile/kmetaprops.cpp:117
 msgctxt "@action:button"
 msgid "Configure..."
 msgstr "Indstil..."
 
-#: kfile/kmetaprops.cpp:130
+#: kfile/kmetaprops.cpp:129
 msgctxt "@title:tab"
 msgid "Information"
 msgstr "Information"
@@ -4013,39 +3666,39 @@ msgstr "Information"
 msgid "Encoding:"
 msgstr "Tegnsæt:"
 
-#: bookmarks/kbookmarkmenu.cc:262
+#: bookmarks/kbookmarkmenu.cc:277
 msgid "Add Bookmark Here"
 msgstr "Tilføj bogmærke her"
 
-#: bookmarks/kbookmarkmenu.cc:267
+#: bookmarks/kbookmarkmenu.cc:283
 msgid "Open Folder in Bookmark Editor"
 msgstr "Åbn mappe i bogmærke-editor"
 
-#: bookmarks/kbookmarkmenu.cc:270
+#: bookmarks/kbookmarkmenu.cc:286
 msgid "Delete Folder"
 msgstr "Slet mappe"
 
-#: bookmarks/kbookmarkmenu.cc:276 ../kfile/kdiroperator.cpp:1877
+#: bookmarks/kbookmarkmenu.cc:291 ../kfile/kdiroperator.cpp:1844
 msgid "Properties"
 msgstr "Egenskaber"
 
-#: bookmarks/kbookmarkmenu.cc:281
+#: bookmarks/kbookmarkmenu.cc:296
 msgid "Copy Link Address"
 msgstr "Kopiér linkadresse"
 
-#: bookmarks/kbookmarkmenu.cc:284
+#: bookmarks/kbookmarkmenu.cc:299
 msgid "Delete Bookmark"
 msgstr "Slet bogmærke"
 
-#: bookmarks/kbookmarkmenu.cc:290 bookmarks/kbookmarkmenu.cc:443
+#: bookmarks/kbookmarkmenu.cc:305 bookmarks/kbookmarkmenu.cc:458
 msgid "Open Folder in Tabs"
 msgstr "Åbn mappe i faneblade"
 
-#: bookmarks/kbookmarkmenu.cc:315
+#: bookmarks/kbookmarkmenu.cc:329
 msgid "Cannot add bookmark with empty URL."
 msgstr "Kan ikke tilføje bogmærke med tom URL."
 
-#: bookmarks/kbookmarkmenu.cc:347
+#: bookmarks/kbookmarkmenu.cc:359
 msgid ""
 "Are you sure you wish to remove the bookmark folder\n"
 "\"%1\"?"
@@ -4053,7 +3706,7 @@ msgstr ""
 "Vil du virkelig fjerne fjerne bogmærkemappen\n"
 "\"%1\"?"
 
-#: bookmarks/kbookmarkmenu.cc:348
+#: bookmarks/kbookmarkmenu.cc:360
 msgid ""
 "Are you sure you wish to remove the bookmark\n"
 "\"%1\"?"
@@ -4061,120 +3714,119 @@ msgstr ""
 "Vil du virkelig fjerne bogmærket\n"
 "\"%1\"?"
 
-#: bookmarks/kbookmarkmenu.cc:349
+#: bookmarks/kbookmarkmenu.cc:361
 msgid "Bookmark Folder Deletion"
 msgstr "Sletning af bogmærkemappe"
 
-#: bookmarks/kbookmarkmenu.cc:350
+#: bookmarks/kbookmarkmenu.cc:362
 msgid "Bookmark Deletion"
 msgstr "Sletning af bogmærke"
 
-#: bookmarks/kbookmarkmenu.cc:447
+#: bookmarks/kbookmarkmenu.cc:462
 msgid "Open all bookmarks in this folder as a new tab."
 msgstr "Åbn alle bogmærker i denne mappe som nyt faneblad."
 
-#: bookmarks/kbookmarkmenu.cc:460
+#: bookmarks/kbookmarkmenu.cc:476
 msgid "Bookmark Tabs as Folder..."
 msgstr "Tilføj bogmærkemappe med faneblade..."
 
-#: bookmarks/kbookmarkmenu.cc:464
+#: bookmarks/kbookmarkmenu.cc:480
 msgid "Add a folder of bookmarks for all open tabs."
 msgstr "Tilføj en mappe med bogmærker for alle åbne faneblade."
 
-#: bookmarks/kbookmarkmenu.cc:497
+#: bookmarks/kbookmarkmenu.cc:517
 msgid "Edit your bookmark collection in a separate window"
 msgstr "Redigér din bogmærkesamling i et separat vindue"
 
-#: bookmarks/kbookmarkmenu.cc:506
+#: bookmarks/kbookmarkmenu.cc:527
 msgid "New Bookmark Folder..."
 msgstr "Ny bogmærkemappe..."
 
-#: bookmarks/kbookmarkmenu.cc:508
+#: bookmarks/kbookmarkmenu.cc:529
 msgid "Create a new bookmark folder in this menu"
 msgstr "Lav en ny bogmærkemappe i denne menu"
 
-#: bookmarks/kbookmarkdialog.cc:41
+#: bookmarks/kbookmarkdialog.cc:79
 msgctxt "@action:button"
 msgid "Update"
 msgstr "Opdatér"
 
-#: bookmarks/kbookmarkdialog.cc:42
+#: bookmarks/kbookmarkdialog.cc:80
 msgctxt "@title:window"
 msgid "Bookmark Properties"
 msgstr "Bogmærkeegenskaber"
 
-#: bookmarks/kbookmarkdialog.cc:70 bookmarks/kbookmarkdialog.cc:102
+#: bookmarks/kbookmarkdialog.cc:109 bookmarks/kbookmarkdialog.cc:143
 msgctxt "@action:button"
 msgid "Add"
 msgstr "Tilføj"
 
-#: bookmarks/kbookmarkdialog.cc:71
+#: bookmarks/kbookmarkdialog.cc:110
 msgctxt "@title:window"
 msgid "Add Bookmark"
 msgstr "Tilføj bogmærke"
 
-#: bookmarks/kbookmarkdialog.cc:72 bookmarks/kbookmarkdialog.cc:104
-#: bookmarks/kbookmarkdialog.cc:131
+#: bookmarks/kbookmarkdialog.cc:111 bookmarks/kbookmarkdialog.cc:145
+#: bookmarks/kbookmarkdialog.cc:175
 msgctxt "@action:button"
 msgid "&New Folder..."
 msgstr "&Ny mappe..."
 
-#: bookmarks/kbookmarkdialog.cc:103
+#: bookmarks/kbookmarkdialog.cc:144
 msgctxt "@title:window"
 msgid "Add Bookmarks"
 msgstr "Tilføj bogmærker"
 
-#: bookmarks/kbookmarkdialog.cc:132 ../kfile/kdirselectdialog.cpp:264
+#: bookmarks/kbookmarkdialog.cc:176
 msgctxt "@title:window"
 msgid "Select Folder"
 msgstr "Vælg mappe"
 
-#: bookmarks/kbookmarkdialog.cc:159 ../kfile/knewfilemenu.cpp:1019
-#: ../kfile/kdirselectdialog.cpp:133
+#: bookmarks/kbookmarkdialog.cc:206 ../kfile/knewfilemenu.cpp:1019
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Ny mappe"
 
-#: bookmarks/kbookmarkdialog.cc:292
+#: bookmarks/kbookmarkdialog.cc:335
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Navn:"
 
-#: bookmarks/kbookmarkdialog.cc:297
+#: bookmarks/kbookmarkdialog.cc:340
 msgctxt "@label:textbox"
 msgid "Location:"
 msgstr "Placering:"
 
-#: bookmarks/kbookmarkdialog.cc:302
+#: bookmarks/kbookmarkdialog.cc:345
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Kommentar:"
 
-#: bookmarks/kbookmarkdialog.cc:331
+#: bookmarks/kbookmarkdialog.cc:377
 msgctxt "@title:window"
 msgid "Create New Bookmark Folder"
 msgstr "Opret ny bogmærkemappe"
 
-#: bookmarks/kbookmarkdialog.cc:332
+#: bookmarks/kbookmarkdialog.cc:378
 msgctxt "@title:window"
 msgid "Create New Bookmark Folder in %1"
 msgstr "Opret ny bogmærkemappe i %1"
 
-#: bookmarks/kbookmarkdialog.cc:335
+#: bookmarks/kbookmarkdialog.cc:381
 msgctxt "@label:textbox"
 msgid "New folder:"
 msgstr "Ny mappe:"
 
-#: bookmarks/kbookmarkdialog.cc:374
+#: bookmarks/kbookmarkdialog.cc:420
 msgctxt "name of the container of all browser bookmarks"
 msgid "Bookmarks"
 msgstr "Bogmærker"
 
-#: bookmarks/kbookmark.cc:308
+#: bookmarks/kbookmark.cc:295
 msgid "--- separator ---"
 msgstr "--- adskiller ---"
 
-#: bookmarks/kbookmarkmanager.cc:433
+#: bookmarks/kbookmarkmanager.cc:373
 msgid ""
 "Unable to save bookmarks in %1. Reported error was: %2. This error message "
 "will only be shown once. The cause of the error needs to be fixed as quickly "
@@ -4184,19 +3836,19 @@ msgstr ""
 "fejlmeddelelse vil kun blive vist én gang. Grunden til fejlen skal rettes så "
 "hurtigt som muligt, det mest sandsynlige er en fuld harddisk"
 
-#: ../kioslave/http/http.cpp:585
+#: ../kioslave/http/http.cpp:624
 msgid "You need to supply a username and a password to access this URL."
 msgstr ""
 
-#: ../kioslave/http/http.cpp:587 ../kioslave/ftp/ftp.cpp:517
+#: ../kioslave/http/http.cpp:626 ../kioslave/ftp/ftp.cpp:500
 msgid "<b>%1</b>"
 msgstr "<b>%1</b>"
 
-#: ../kioslave/file/file_unix.cpp:216
+#: ../kioslave/file/file_unix.cpp:217
 msgid "Cannot copy file from %1 to %2. (Errno: %3)"
 msgstr "Kan ikke kopiere fil fra %1 til %2. (Errno: %3)"
 
-#: ../kioslave/file/file_unix.cpp:285 ../kioslave/file/file.cpp:702
+#: ../kioslave/file/file_unix.cpp:290 ../kioslave/file/file.cpp:548
 msgid ""
 "Could not change permissions for\n"
 "%1"
@@ -4204,43 +3856,31 @@ msgstr ""
 "Kunne ikke ændre rettigheder for\n"
 "%1"
 
-#: ../kioslave/file/file_unix.cpp:328
+#: ../kioslave/file/file_unix.cpp:338
 msgid "No media in device for %1"
 msgstr "Intet medie i enheden for %1"
 
-#: ../kioslave/file/file_unix.cpp:573
+#: ../kioslave/file/file_unix.cpp:566
 msgid "Could not get user id for given user name %1"
 msgstr "Kunne ikke få user-id for det givne brugernavn %1"
 
-#: ../kioslave/file/file_unix.cpp:586
+#: ../kioslave/file/file_unix.cpp:576
 msgid "Could not get group id for given group name %1"
 msgstr "Kunne ikke få gruppe-id for det givne gruppenavn %1"
 
-#: ../kioslave/file/file.cpp:188
+#: ../kioslave/file/file.cpp:192
 msgid "Setting ACL for %1"
 msgstr "Sætter ACL for %1"
 
-#: ../kioslave/file/file.cpp:877 ../kioslave/file/file.cpp:937
-msgid "Could not find program \"kdesudo\""
-msgstr ""
-
-#: ../kioslave/file/file.cpp:883
-msgid "Could not find program \"mount\""
-msgstr "Kunne ikke finde programmet \"mount\""
-
-#: ../kioslave/file/file.cpp:943
-msgid "Could not find program \"umount\""
-msgstr "Kunne ikke finde programmet \"umount\""
-
-#: ../kioslave/ftp/ftp.cpp:330
+#: ../kioslave/ftp/ftp.cpp:324
 msgid "Opening connection to host %1"
 msgstr "Åbner forbindelse til værten %1"
 
-#: ../kioslave/ftp/ftp.cpp:345
+#: ../kioslave/ftp/ftp.cpp:339
 msgid "Connected to host %1"
 msgstr "Forbundet til værten %1"
 
-#: ../kioslave/ftp/ftp.cpp:414
+#: ../kioslave/ftp/ftp.cpp:407
 msgid ""
 "%1.\n"
 "\n"
@@ -4250,11 +3890,11 @@ msgstr ""
 "\n"
 "Grund: %2"
 
-#: ../kioslave/ftp/ftp.cpp:443
+#: ../kioslave/ftp/ftp.cpp:436
 msgid "Sending login information"
 msgstr "Sender login-information"
 
-#: ../kioslave/ftp/ftp.cpp:506
+#: ../kioslave/ftp/ftp.cpp:489
 msgid ""
 "Message sent:\n"
 "Login using username=%1 and password=[hidden]\n"
@@ -4270,65 +3910,65 @@ msgstr ""
 "%2\n"
 "\n"
 
-#: ../kioslave/ftp/ftp.cpp:514
+#: ../kioslave/ftp/ftp.cpp:497
 msgid "You need to supply a username and a password to access this site."
 msgstr ""
 "Du skal angive et brugernavn og en adgangskode for at få adgang til denne "
 "side."
 
-#: ../kioslave/ftp/ftp.cpp:516
+#: ../kioslave/ftp/ftp.cpp:499
 msgid "Site:"
 msgstr "Side:"
 
-#: ../kioslave/ftp/ftp.cpp:604
+#: ../kioslave/ftp/ftp.cpp:587
 msgid "Login OK"
 msgstr "Loggede på o.k."
 
-#: ../kioslave/ftp/ftp.cpp:633
+#: ../kioslave/ftp/ftp.cpp:613
 msgid "Could not login to %1."
 msgstr "Kunne ikke logge på %1"
 
-#: ../kfile/kurlnavigator.cpp:426
+#: ../kfile/kurlnavigator.cpp:416
 msgid "Copy"
 msgstr "Kopiér"
 
-#: ../kfile/kurlnavigator.cpp:430
+#: ../kfile/kurlnavigator.cpp:420
 msgid "Paste"
 msgstr "Indsæt"
 
-#: ../kfile/kurlnavigator.cpp:437
+#: ../kfile/kurlnavigator.cpp:427
 msgid "Edit"
 msgstr "Redigér"
 
-#: ../kfile/kurlnavigator.cpp:440
+#: ../kfile/kurlnavigator.cpp:430
 msgid "Navigate"
 msgstr "Navigér"
 
-#: ../kfile/kurlnavigator.cpp:455
+#: ../kfile/kurlnavigator.cpp:445
 msgid "Show Full Path"
 msgstr "Vis fuld sti"
 
-#: ../kfile/kurlnavigator.cpp:695
+#: ../kfile/kurlnavigator.cpp:685
 msgid "Custom Path"
 msgstr "Brugerdefineret sti"
 
-#: ../kfile/kdiroperator.cpp:745 ../kfile/kdirselectdialog.cpp:157
+#: ../kfile/kdiroperator.cpp:731
 msgid "A file or folder named %1 already exists."
 msgstr "En fil eller mappe ved navn %1 eksisterer allerede."
 
-#: ../kfile/kdiroperator.cpp:747 ../kfile/kdirselectdialog.cpp:161
+#: ../kfile/kdiroperator.cpp:733
 msgid "You do not have permission to create that folder."
 msgstr "Du har ikke rettigheder til at oprette den mappe."
 
-#: ../kfile/kdiroperator.cpp:762
+#: ../kfile/kdiroperator.cpp:748
 msgid "You did not select a file to delete."
 msgstr "Du valgte ikke en fil at slette."
 
-#: ../kfile/kdiroperator.cpp:763
+#: ../kfile/kdiroperator.cpp:749
 msgid "Nothing to Delete"
 msgstr "Intet at slette"
 
-#: ../kfile/kdiroperator.cpp:784
+#: ../kfile/kdiroperator.cpp:770
 msgid ""
 "<qt>Do you really want to delete\n"
 " <b>'%1'</b>?</qt>"
@@ -4336,19 +3976,19 @@ msgstr ""
 "<qt>Vil du virkelig slette\n"
 " <b>\"%1\"</b>?</qt>"
 
-#: ../kfile/kdiroperator.cpp:786
+#: ../kfile/kdiroperator.cpp:772
 msgid "Delete File"
 msgstr "Slet fil"
 
-#: ../kfile/kdiroperator.cpp:824
+#: ../kfile/kdiroperator.cpp:810
 msgid "You did not select a file to trash."
 msgstr "Du valgte ikke en fil at putte i affald."
 
-#: ../kfile/kdiroperator.cpp:825
+#: ../kfile/kdiroperator.cpp:811
 msgid "Nothing to Trash"
 msgstr "Intet at putte i affald"
 
-#: ../kfile/kdiroperator.cpp:842
+#: ../kfile/kdiroperator.cpp:828
 msgid ""
 "<qt>Do you really want to trash\n"
 " <b>'%1'</b>?</qt>"
@@ -4356,134 +3996,130 @@ msgstr ""
 "<qt>Vil du virkelig flytte\n"
 " <b>\"%1\"</b> til affald?</qt>"
 
-#: ../kfile/kdiroperator.cpp:844
+#: ../kfile/kdiroperator.cpp:830
 msgid "Trash File"
 msgstr "Flyt fil til affald"
 
-#: ../kfile/kdiroperator.cpp:845 ../kfile/kdiroperator.cpp:852
+#: ../kfile/kdiroperator.cpp:831 ../kfile/kdiroperator.cpp:838
 msgctxt "to trash"
 msgid "&Trash"
 msgstr "&Flyt til affald"
 
-#: ../kfile/kdiroperator.cpp:849
+#: ../kfile/kdiroperator.cpp:835
 msgid "translators: not called for n == 1"
 msgid_plural "Do you really want to trash these %1 items?"
 msgstr[0] "Vil du slette dette punkt?"
 msgstr[1] "Vil du flytte disse %1 elementer til affald?"
 
-#: ../kfile/kdiroperator.cpp:851
+#: ../kfile/kdiroperator.cpp:837
 msgid "Trash Files"
 msgstr "Affaldsfiler"
 
-#: ../kfile/kdiroperator.cpp:983 ../kfile/kdiroperator.cpp:1120
+#: ../kfile/kdiroperator.cpp:969 ../kfile/kdiroperator.cpp:1106
 msgid "The specified folder does not exist or was not readable."
 msgstr "Den valgte mappe eksisterer ikke eller kunne ikke læses."
 
-#: ../kfile/kdiroperator.cpp:1746
+#: ../kfile/kdiroperator.cpp:1725
 msgid "Menu"
 msgstr "Menu"
 
-#: ../kfile/kdiroperator.cpp:1750
+#: ../kfile/kdiroperator.cpp:1729
 msgid "Parent Folder"
 msgstr "Overmappe"
 
-#: ../kfile/kdiroperator.cpp:1757
+#: ../kfile/kdiroperator.cpp:1736
 msgid "Home Folder"
 msgstr "Hjemmemappe"
 
-#: ../kfile/kdiroperator.cpp:1760
+#: ../kfile/kdiroperator.cpp:1739
 msgid "Reload"
 msgstr "Genindlæs"
 
-#: ../kfile/kdiroperator.cpp:1763
+#: ../kfile/kdiroperator.cpp:1742
 msgid "New Folder..."
 msgstr "Ny mappe..."
 
-#: ../kfile/kdiroperator.cpp:1774
+#: ../kfile/kdiroperator.cpp:1753
 msgid "Delete"
 msgstr "Slet"
 
-#: ../kfile/kdiroperator.cpp:1781
+#: ../kfile/kdiroperator.cpp:1760
 msgid "Sorting"
 msgstr "Sortering"
 
-#: ../kfile/kdiroperator.cpp:1784
+#: ../kfile/kdiroperator.cpp:1763
 msgid "By Name"
 msgstr "Efter navn"
 
-#: ../kfile/kdiroperator.cpp:1788
+#: ../kfile/kdiroperator.cpp:1767
 msgid "By Size"
 msgstr "Efter størrelse"
 
-#: ../kfile/kdiroperator.cpp:1792
+#: ../kfile/kdiroperator.cpp:1771
 msgid "By Date"
 msgstr "Efter dato"
 
-#: ../kfile/kdiroperator.cpp:1796
+#: ../kfile/kdiroperator.cpp:1775
 msgid "By Type"
 msgstr "Efter type"
 
-#: ../kfile/kdiroperator.cpp:1800
+#: ../kfile/kdiroperator.cpp:1779
 msgid "Descending"
 msgstr "Nedadgående"
 
-#: ../kfile/kdiroperator.cpp:1804
+#: ../kfile/kdiroperator.cpp:1783
 msgid "Folders First"
 msgstr "Mapper først"
 
-#: ../kfile/kdiroperator.cpp:1814
+#: ../kfile/kdiroperator.cpp:1793
 msgid "Icon Position"
 msgstr "Ikonplacering"
 
-#: ../kfile/kdiroperator.cpp:1817
+#: ../kfile/kdiroperator.cpp:1796
 msgid "Next to File Name"
 msgstr "Ved siden af filnavn"
 
-#: ../kfile/kdiroperator.cpp:1821
+#: ../kfile/kdiroperator.cpp:1800
 msgid "Above File Name"
 msgstr "Over filnavn"
 
-#: ../kfile/kdiroperator.cpp:1832
+#: ../kfile/kdiroperator.cpp:1811
 msgid "Short View"
 msgstr "Kort visning"
 
-#: ../kfile/kdiroperator.cpp:1837
+#: ../kfile/kdiroperator.cpp:1816
 msgid "Detailed View"
 msgstr "Detaljeret visning"
 
-#: ../kfile/kdiroperator.cpp:1842
-msgid "Tree View"
-msgstr "Trævisning"
-
-#: ../kfile/kdiroperator.cpp:1847
-msgid "Detailed Tree View"
-msgstr "Detaljeret trævisning"
-
-#: ../kfile/kdiroperator.cpp:1858
+#: ../kfile/kdiroperator.cpp:1825
 msgid "Show Hidden Files"
 msgstr "Vis skjulte filer"
 
-#: ../kfile/kdiroperator.cpp:1862
+#: ../kfile/kdiroperator.cpp:1829
 msgid "Show Aside Preview"
 msgstr "Vis forhåndsvisning ved siden af"
 
-#: ../kfile/kdiroperator.cpp:1868
+#: ../kfile/kdiroperator.cpp:1835
 msgid "Show Preview"
 msgstr "Se forhåndsvisning"
 
-#: ../kfile/kdiroperator.cpp:1872
+#: ../kfile/kdiroperator.cpp:1839
 msgid "Open File Manager"
 msgstr "Åbn filhåndtering"
 
-#: ../kfile/kdiroperator.cpp:1884
+#: ../kfile/kdiroperator.cpp:1851
 msgid "&View"
 msgstr "&Vis"
 
-#: ../kfile/kfilefiltercombo.cpp:36 ../kfile/kfilewidget.cpp:1772
+#: ../kfile/kfilefiltercombo.cpp:36 ../kfile/kfilewidget.cpp:1784
 msgid "*|All Files"
 msgstr "*|Alle filer"
 
-#: ../kfile/kfilefiltercombo.cpp:194
+#: ../kfile/kfilefiltercombo.cpp:184
+msgid "All Supported Files"
+msgstr "Alle understøttede filer"
+
+#: ../kfile/kfilefiltercombo.cpp:193
 msgid "All Files"
 msgstr "Alle filer"
 
@@ -4589,15 +4225,23 @@ msgstr "Du kan kun vælge én fil"
 msgid "More than one file provided"
 msgstr "Mere end én fil angivet"
 
-#: ../kfile/kfilewidget.cpp:915
+#: ../kfile/kfilewidget.cpp:917
+msgid "You can only select local directories"
+msgstr ""
+
+#: ../kfile/kfilewidget.cpp:918
+msgid "Remote directories not accepted"
+msgstr ""
+
+#: ../kfile/kfilewidget.cpp:924
 msgid "You can only select local files"
 msgstr "Du kan kun vælge lokale filer"
 
-#: ../kfile/kfilewidget.cpp:916
+#: ../kfile/kfilewidget.cpp:925
 msgid "Remote files not accepted"
 msgstr "Eksterne filer accepteres ikke"
 
-#: ../kfile/kfilewidget.cpp:934
+#: ../kfile/kfilewidget.cpp:944
 msgid ""
 "More than one folder has been selected and this dialog does not accept "
 "folders, so it is not possible to decide which one to enter. Please select "
@@ -4607,11 +4251,11 @@ msgstr ""
 "så det er ikke muligt at afgøre hvilken der skal åbnes. Vælg kun én mappe "
 "for at liste dens indhold."
 
-#: ../kfile/kfilewidget.cpp:934
+#: ../kfile/kfilewidget.cpp:944
 msgid "More than one folder provided"
 msgstr "Mere end én mappe angivet"
 
-#: ../kfile/kfilewidget.cpp:942
+#: ../kfile/kfilewidget.cpp:952
 msgid ""
 "At least one folder and one file has been selected. Selected files will be "
 "ignored and the selected folder will be listed"
@@ -4619,23 +4263,31 @@ msgstr ""
 "Mindst én mappe og én fil er blevet valgt. Valgte filer vil blive ignoreret "
 "og den valgte mappes indhold vil blive vist"
 
-#: ../kfile/kfilewidget.cpp:942
+#: ../kfile/kfilewidget.cpp:952
 msgid "Files and folders selected"
 msgstr "Filer og mapper valgt"
 
-#: ../kfile/kfilewidget.cpp:957
+#: ../kfile/kfilewidget.cpp:968
+msgid "The directory \"%1\" could not be found"
+msgstr ""
+
+#: ../kfile/kfilewidget.cpp:968
+msgid "Cannot open directory"
+msgstr ""
+
+#: ../kfile/kfilewidget.cpp:971
 msgid "The file \"%1\" could not be found"
 msgstr "Filen \"%1\" kunne ikke findes"
 
-#: ../kfile/kfilewidget.cpp:957
+#: ../kfile/kfilewidget.cpp:971
 msgid "Cannot open file"
 msgstr "Kan ikke åbne fil"
 
-#: ../kfile/kfilewidget.cpp:1237
+#: ../kfile/kfilewidget.cpp:1249
 msgid "This is the name to save the file as."
 msgstr "Dette er navnet med hvilket filen skal gemmes."
 
-#: ../kfile/kfilewidget.cpp:1242
+#: ../kfile/kfilewidget.cpp:1254
 msgid ""
 "This is the list of files to open. More than one file can be specified by "
 "listing several files, separated by spaces."
@@ -4643,24 +4295,24 @@ msgstr ""
 "Dette er listen over filer der skal åbnes. Du kan angive flere filer ved at "
 "liste flere filer adskilt af mellemrum."
 
-#: ../kfile/kfilewidget.cpp:1249
+#: ../kfile/kfilewidget.cpp:1261
 msgid "This is the name of the file to open."
 msgstr "Dette er navnet på den fil der skal åbnes."
 
-#: ../kfile/kfilewidget.cpp:1263
+#: ../kfile/kfilewidget.cpp:1275
 msgctxt "@title:window"
 msgid "Places"
 msgstr "Steder"
 
-#: ../kfile/kfilewidget.cpp:1451
+#: ../kfile/kfilewidget.cpp:1463
 msgid "The file \"%1\" already exists. Do you wish to overwrite it?"
 msgstr "Filen \"%1\" findes allerede. Vil du overskrive den?"
 
-#: ../kfile/kfilewidget.cpp:1452
+#: ../kfile/kfilewidget.cpp:1464
 msgid "Overwrite File?"
 msgstr "Overskriv fil?"
 
-#: ../kfile/kfilewidget.cpp:1583
+#: ../kfile/kfilewidget.cpp:1595
 msgid ""
 "The chosen filenames do not\n"
 "appear to be valid."
@@ -4668,47 +4320,47 @@ msgstr ""
 "De valgte filnavne lader ikke\n"
 "til at være gyldige."
 
-#: ../kfile/kfilewidget.cpp:1585
+#: ../kfile/kfilewidget.cpp:1597
 msgid "Invalid Filenames"
 msgstr "Ugyldige filnavne"
 
-#: ../kfile/kfilewidget.cpp:1665
+#: ../kfile/kfilewidget.cpp:1677
 msgid "You can only select local files."
 msgstr "Du kan kun vælge lokale filer."
 
-#: ../kfile/kfilewidget.cpp:1666
+#: ../kfile/kfilewidget.cpp:1678
 msgid "Remote Files Not Accepted"
 msgstr "Eksterne filer ikke accepteret"
 
-#: ../kfile/kfilewidget.cpp:1769
+#: ../kfile/kfilewidget.cpp:1781
 msgid "*|All Folders"
 msgstr "*|alle mapper"
 
-#: ../kfile/kfilewidget.cpp:2023
+#: ../kfile/kfilewidget.cpp:2036
 msgid "Icon size: %1 pixels (standard size)"
 msgstr "Ikonstørrelse: %1 pixel (standardstørrelse)"
 
-#: ../kfile/kfilewidget.cpp:2026
+#: ../kfile/kfilewidget.cpp:2039
 msgid "Icon size: %1 pixels"
 msgstr "Ikonstørrelse: %1 pixel"
 
-#: ../kfile/kfilewidget.cpp:2144
+#: ../kfile/kfilewidget.cpp:2157
 msgid "Automatically select filename e&xtension (%1)"
 msgstr "Vælg filnavnee&ndelse automatisk (%1)"
 
-#: ../kfile/kfilewidget.cpp:2145
+#: ../kfile/kfilewidget.cpp:2158
 msgid "the extension <b>%1</b>"
 msgstr "endelsen <b>%1</b>"
 
-#: ../kfile/kfilewidget.cpp:2153
+#: ../kfile/kfilewidget.cpp:2166
 msgid "Automatically select filename e&xtension"
 msgstr "Vælg filnavnee&ndelse automatisk"
 
-#: ../kfile/kfilewidget.cpp:2154
+#: ../kfile/kfilewidget.cpp:2167
 msgid "a suitable extension"
 msgstr "en passende endelse"
 
-#: ../kfile/kfilewidget.cpp:2164
+#: ../kfile/kfilewidget.cpp:2177
 msgid ""
 "This option enables some convenient features for saving files with "
 "extensions:<br /><ol><li>Any extension specified in the <b>%1</b> text area "
@@ -4734,11 +4386,11 @@ msgstr ""
 "(punktummet vil automatisk blive fjernet).</li></ol>Hvis du er usikker, så "
 "behold dette slået til da det gør dine filer nemmere at håndtere."
 
-#: ../kfile/kfilewidget.cpp:2470
+#: ../kfile/kfilewidget.cpp:2492
 msgid "Bookmarks"
 msgstr "Bogmærker"
 
-#: ../kfile/kfilewidget.cpp:2474
+#: ../kfile/kfilewidget.cpp:2496
 msgid ""
 "<qt>This button allows you to bookmark specific locations. Click on this "
 "button to open the bookmark menu where you may add, edit or select a "
@@ -4835,10 +4487,6 @@ msgstr ""
 "Opret ny mappe i:\n"
 "%1"
 
-#: ../kfile/kfiletreeview.cpp:187
-msgid "Show Hidden Folders"
-msgstr "Vis skjulte mapper"
-
 #: ../kfile/kurlnavigatortogglebutton.cpp:94
 msgid "Click for Location Navigation"
 msgstr "Klik for placeringsnavigation"
@@ -4873,95 +4521,51 @@ msgctxt "@info"
 msgid "Do you really want to empty the Trash? All items will be deleted."
 msgstr "Vil du tømme affaldet? Alle elementer vil blive slettet."
 
-#: ../kfile/kdirselectdialog.cpp:129
-msgctxt "folder name"
-msgid "New Folder"
-msgstr "Ny mappe"
-
-#: ../kfile/kdirselectdialog.cpp:134
-msgctxt "@label:textbox"
-msgid ""
-"Create new folder in:\n"
-"%1"
-msgstr ""
-"Opret ny mappe i:\n"
-"%1"
-
-#: ../kfile/kdirselectdialog.cpp:266
-msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "Ny mappe..."
-
-#: ../kfile/kdirselectdialog.cpp:306
-msgctxt "@action:inmenu"
-msgid "New Folder..."
-msgstr "Ny mappe..."
-
-#: ../kfile/kdirselectdialog.cpp:313
-msgctxt "@action:inmenu"
-msgid "Move to Trash"
-msgstr "Flyt til affald"
-
-#: ../kfile/kdirselectdialog.cpp:320
-msgctxt "@action:inmenu"
-msgid "Delete"
-msgstr "Slet"
-
-#: ../kfile/kdirselectdialog.cpp:329
-msgctxt "@option:check"
-msgid "Show Hidden Folders"
-msgstr "Vis skjulte mapper"
-
-#: ../kfile/kdirselectdialog.cpp:336
-msgctxt "@action:inmenu"
-msgid "Properties"
-msgstr "Egenskaber"
-
-#: ../kfile/kfileplacesmodel.cpp:115
+#: ../kfile/kfileplacesmodel.cpp:100
 msgctxt "KFile System Bookmarks"
 msgid "Home"
 msgstr "Hjemmemappe"
 
-#: ../kfile/kfileplacesmodel.cpp:118
+#: ../kfile/kfileplacesmodel.cpp:103
 msgctxt "KFile System Bookmarks"
 msgid "Network"
 msgstr "Netværk"
 
-#: ../kfile/kfileplacesmodel.cpp:121
+#: ../kfile/kfileplacesmodel.cpp:106
 msgctxt "KFile System Bookmarks"
 msgid "Root"
 msgstr "Root"
 
-#: ../kfile/kfileplacesmodel.cpp:124
+#: ../kfile/kfileplacesmodel.cpp:109
 msgctxt "KFile System Bookmarks"
 msgid "Trash"
 msgstr "Affald"
 
-#: ../kfile/kfileplacesmodel.cpp:751
+#: ../kfile/kfileplacesmodel.cpp:728
 msgid "&Release '%1'"
 msgstr "F&rigiv \"%1\""
 
-#: ../kfile/kfileplacesmodel.cpp:753
+#: ../kfile/kfileplacesmodel.cpp:730
 msgid "&Safely Remove '%1'"
 msgstr "Fjern \"%1\" &sikkert"
 
-#: ../kfile/kfileplacesmodel.cpp:756
+#: ../kfile/kfileplacesmodel.cpp:733
 msgid "&Unmount '%1'"
 msgstr "&Afmontér \"%1\""
 
-#: ../kfile/kfileplacesmodel.cpp:777
+#: ../kfile/kfileplacesmodel.cpp:754
 msgid "&Eject '%1'"
 msgstr "&Skub \"%1\" ud"
 
-#: ../kfile/kfileplacesmodel.cpp:811
+#: ../kfile/kfileplacesmodel.cpp:788
 msgid "The device '%1' is not a disk and cannot be ejected."
 msgstr "Enheden \"%1\" er ikke en disk og kan ikke skubbes ud."
 
-#: ../kfile/kfileplacesmodel.cpp:847
+#: ../kfile/kfileplacesmodel.cpp:826
 msgid "An error occurred while accessing '%1', the system responded: %2"
 msgstr "Der opstod en fejl under tilgang til \"%1\", systemet svarede med: %2"
 
-#: ../kfile/kfileplacesmodel.cpp:851
+#: ../kfile/kfileplacesmodel.cpp:830
 msgid "An error occurred while accessing '%1'"
 msgstr "En fejl opstod under tilgang til \"%1\""
 

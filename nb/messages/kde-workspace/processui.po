@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: processui\n"
 "Report-Msgid-Bugs-To: xakepa10@gmail.com\n"
-"POT-Creation-Date: 2022-11-25 02:25+0200\n"
+"POT-Creation-Date: 2023-08-10 00:42+0300\n"
 "PO-Revision-Date: 2011-03-26 19:12+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -18,6 +18,674 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+
+#: ProcessModel.cpp:62
+msgid "%1 K"
+msgstr "%1 K"
+
+#: ProcessModel.cpp:63
+msgid "%1 M"
+msgstr "%1 M"
+
+#: ProcessModel.cpp:64
+msgid "%1 G"
+msgstr "%1 G"
+
+#: ProcessModel.cpp:65
+msgid "%1 T"
+msgstr "%1 T"
+
+#: ProcessModel.cpp:66
+msgid "%1 P"
+msgstr "%1 P"
+
+#: ProcessModel.cpp:590
+msgid "- Process is doing some work."
+msgstr " – Prosessen arbeider."
+
+#: ProcessModel.cpp:592
+msgid "- Process is waiting for something to happen."
+msgstr " – Prosessen venter på at noe skal hende."
+
+#: ProcessModel.cpp:594
+msgid ""
+"- Process has been stopped. It will not respond to user input at the moment."
+msgstr ""
+"– Prosessen er stoppet. I øyeblikket kan den ikke svare på bruker-inndata."
+
+#: ProcessModel.cpp:596
+msgid ""
+"- Process has finished and is now dead, but the parent process has not "
+"cleaned up."
+msgstr ""
+" – Prosessen er ferdig og er nå død, men morprosessen har ikke ryddet opp."
+
+#: ProcessModel.cpp:934
+msgid "The process name."
+msgstr "Prosessnavnet."
+
+#: ProcessModel.cpp:936
+msgid "The user who owns this process."
+msgstr "Brukeren som eier denne prosessen."
+
+#: ProcessModel.cpp:938
+msgid "The controlling terminal on which this process is running."
+msgstr "Den styrende terminalen som denne prosessen kjører på.."
+
+#: ProcessModel.cpp:940
+msgid ""
+"The priority with which this process is being run. For the normal scheduler, "
+"this ranges from 19 (very nice, least priority) to -19 (top priority)."
+msgstr ""
+"Prioriteten som denne prosessen kjører med.  For den normale fordeleren går "
+"dette fra 19 (svært snill, laveste prioritet) til -19 (høyeste prioritet)."
+
+#: ProcessModel.cpp:943
+msgid "The current CPU usage of the process."
+msgstr "Nåværende prosessorbruk for prosessen."
+
+#: ProcessModel.cpp:948
+msgid ""
+"The current total CPU usage of the process, divided by the %1 processor core "
+"in the machine."
+msgid_plural ""
+"The current total CPU usage of the process, divided by the %1 processor "
+"cores in the machine."
+msgstr[0] "Prosessens prosessorforbruk, delt på %1 prosessorkjerne i maskinen."
+msgstr[1] ""
+"Prosessens prosessorforbruk, delt på %1 prosessorkjerner i maskinen."
+
+#: ProcessModel.cpp:950
+msgid "The current total CPU usage of the process."
+msgstr "Nåværende total prosessorbruk for prosessen."
+
+#: ProcessModel.cpp:952
+msgid ""
+"<qt>The total user and system time that this process has been running for, "
+"displayed as minutes:seconds."
+msgstr ""
+"<qt>Total bruker- og systemtid som denne prosessen har brukt, vist som "
+"minutter:sekunder."
+
+#: ProcessModel.cpp:954
+msgid ""
+"<qt>This is the amount of virtual memory space that the process is using, "
+"included shared libraries, graphics memory, files on disk, and so on. This "
+"number is almost meaningless.</qt>"
+msgstr ""
+"<qt>Dette er mengden virtuelt minne som prosessen bruker, medregnet delte "
+"biblioteker, grafikkminne, filer på disk osv. Dette tallet er nesten "
+"meningsløst.</qt>"
+
+#: ProcessModel.cpp:956
+msgid ""
+"<qt>This is the amount of real physical memory that this process is using by "
+"itself, and approximates the Private memory usage of the process.<br>It does "
+"not include any swapped out memory, nor the code size of its shared "
+"libraries.<br>This is often the most useful figure to judge the memory use "
+"of a program.  See What's This for more information.</qt>"
+msgstr ""
+"<qt>Dette er mengden virkelig fysisk minne som denne prosessen bruker selv, "
+"og er en tilnærming til prosessens private minnebruk.<br/>Det tar ikke med "
+"plass i veksleminnet, heller ikke kodestørrelsen for delte biblioteker. <br/"
+">Dette er ofte det nyttigste tallet en kan bruke til å anslå minnebruken til "
+"et program. Se Hva er dette for mer informasjon.</qt>"
+
+#: ProcessModel.cpp:958
+msgid ""
+"<qt>This is approximately the amount of real physical memory that this "
+"process's shared libraries are using.<br>This memory is shared among all "
+"processes that use this library.</qt>"
+msgstr ""
+"<qt>Dette er omtrent mengden virkelig fysisk minne som denne prosessens "
+"delte biblioteker bruker.<br/> Alle prosesser som bruker dette biblioteket "
+"deler dette minnet.</qt>"
+
+#: ProcessModel.cpp:960
+msgid "<qt>The command with which this process was launched.</qt>"
+msgstr "<qt>Kommandoen som startet denne prosessen.</qt>"
+
+#: ProcessModel.cpp:962
+msgid "<qt>The amount of pixmap memory that this process is using.</qt>"
+msgstr "<qt>Hvor mye pixmap-minne denne prosessen bruker.</qt>"
+
+#: ProcessModel.cpp:964
+msgid "<qt>The title of any windows that this process is showing.</qt>"
+msgstr "<qt>Tittelen på vinduer som denne prosessen viser, om noen.</qt>"
+
+#: ProcessModel.cpp:966
+msgid "The unique Process ID that identifies this process."
+msgstr "Den entydige prosess-IDen som identifiserer denne prosessen."
+
+#: ProcessModel.cpp:968
+msgid "The number of bytes read.  See What's This for more information."
+msgstr "Antall byte lest. Se Hva er dette for mere informasjon."
+
+#: ProcessModel.cpp:970
+msgid "The number of bytes written.  See What's This for more information."
+msgstr "Antall byte skrevet. Se Hva er dette for mere informasjon."
+
+#: ProcessModel.cpp:979
+msgid ""
+"<qt><i>Technical information: </i>The kernel process name is a maximum of 8 "
+"characters long, so the full command is examined.  If the first word in the "
+"full command line starts with the process name, the first word of the "
+"command line is shown, otherwise the process name is used."
+msgstr ""
+"<qt><i>Teknisk informasjon: </i> Kjerneprosessnavnet er høyst 8 tegn langt, "
+"så hele kommandoen  blir undersøkt. Hvis det første ordet på kommandolinja "
+"begynner med prosessnavnet, så vises det første ordet på kommandolinja, "
+"ellers brukes prosessnavnet."
+
+#: ProcessModel.cpp:981
+msgid ""
+"<qt>The user who owns this process.  If the effective, setuid etc user is "
+"different, the user who owns the process will be shown, followed by the "
+"effective user.  The ToolTip contains the full information.  "
+"<p><table><tr><td>Login Name/Group</td><td>The username of the Real User/"
+"Group who created this process</td></tr><tr><td>Effective User/Group</"
+"td><td>The process is running with privileges of the Effective User/Group.  "
+"This is shown if different from the real user.</td></tr><tr><td>Setuid User/"
+"Group</td><td>The saved username of the binary.  The process can escalate "
+"its Effective User/Group to the Setuid User/Group.</td></tr><tr><td>File "
+"System User/Group</td><td>Accesses to the filesystem are checked with the "
+"File System User/Group.  This is a Linux specific call. See setfsuid(2) for "
+"more information.</td></tr></table>"
+msgstr ""
+"<qt>Brukeren som eier denne prosessen. Hvis den effektive, setuid osv. "
+"brukeren er en annen, så vil den som eier prosessen bli vist, fulgt av den "
+"effektive brukeren. Verktøytipset inneholder fullstendig informasjon. "
+"<p><table><tr><td>Login-navn/gruppe</td><td>B rukernavn for den virkelige "
+"bruker/gruppe som startet denne prosessen/td></tr><tr><td>Effektiv bruker/"
+"gruppe</td><td>Prosessen kjører med privilegier til den effektive brukeren/"
+"gruppa . Dette blir vist hvis det ikke er det samme som virkelig bruker.</"
+"td></tr><tr><td>Setuid bruker/gruppe</td><td>Programmets lagrede brukernavn. "
+"Prosessen kan øke sin effektive bruker/gruppe til setuid bruker/gruppe.</"
+"td></tr><tr><td>Filsystem bruker/gruppe</td><td>Tilgang til filsystemet "
+"sjekkes med filsystem buker/gruppe. Dette er et systemkall spesifikt for "
+"Linux. Se setfsuid(2) for mer informasjon.</td></tr></table>"
+
+#: ProcessModel.cpp:991
+msgid ""
+"<qt>This is the size of allocated address space - not memory, but address "
+"space. This value in practice means next to nothing. When a process requests "
+"a large memory block from the system but uses only a small part of it, the "
+"real usage will be low, VIRT will be high. <p><i>Technical information: </"
+"i>This is VmSize in proc/*/status and VIRT in top."
+msgstr ""
+"<qt>Dette er størrelsen av det tilordnede adresserommet – ikke minne, men "
+"adresserom. Denne verdien betyre nesten ingenting i praksis. Når en prosess "
+"ber om en stor minneblokk fra systemet men bruker bare en liten del av det, "
+"så blir reell bruk lav og VIR høy. <p><i>Teknisk informasjon: </i> Dette er "
+"VmSize i proc/*/status og VIRT i top."
+
+#: ProcessModel.cpp:993
+msgid ""
+"<qt><i>Technical information: </i>This is an approximation of the Private "
+"memory usage, calculated as VmRSS - Shared, from /proc/*/statm.  This tends "
+"to underestimate the true Private memory usage of a process (by not "
+"including i/o backed memory pages), but is the best estimation that is fast "
+"to determine.  This is sometimes known as URSS (Unique Resident Set Size). "
+"For an individual process, see \"Detailed  Memory Information\" for a more "
+"accurate, but slower, calculation of the true Private memory usage."
+msgstr ""
+"<qt><i>Teknisk informasjon </i> Dette er en tilnærmet Privat minnebruk,  "
+"beregnet som VmRSS – Shared, fra /proc/*/statm. Dette har en tendens til å "
+"undervurdere den «virkelige» minnebruken tkil en prosess (ved å utelate "
+"minnesider for i/u-backing), men det er det beste estimatet som kan "
+"bestemmes fort. Dette kalles noen ganger URSS – Unique Resident Set Size. "
+"For en enkelt prosess finnes en nøyaktigere. men langsommere beregning av "
+"faktisk minnebruk i «Detaljert minneinformasjon»."
+
+#: ProcessModel.cpp:995
+msgid "The CPU usage of a process and all of its threads."
+msgstr "Prosessor-bruk for en prosess og alle dens tråder."
+
+#: ProcessModel.cpp:997
+msgid ""
+"<qt>The total system and user time that a process and all of its threads "
+"have been running on the CPU for. This can be greater than the wall clock "
+"time if the process has been across multiple CPU cores."
+msgstr ""
+"<qt>Total system- og brukertid som en prosess og alle dens tråder har brukt "
+"på prosessoren. Dette kan være mer enn klokketiden hvis prosessen har kjørt "
+"på flere prosessorkjerner."
+
+#: ProcessModel.cpp:999
+msgid ""
+"<qt><i>Technical information: </i>This is an approximation of the Shared "
+"memory, called SHR in top.  It is the number of pages that are backed by a "
+"file (see kernel Documentation/filesystems/proc.txt).  For an individual "
+"process, see \"Detailed Memory Information\" for a more accurate, but "
+"slower, calculation of the true Shared memory usage."
+msgstr ""
+"<qt><i>Teknisk informasjon: </i> Dette er tilnærmet mengde delt minne, kalt "
+"SHR i top. Det er antall sider som har har en fil bak seg (se kernel "
+"Documentation/filesystems/proc.txt).  For en enkelt prosess finnes en "
+"nøyaktigere. men langsommere beregning av faktisk brukt delt minne i "
+"«Detaljert minneinformasjon»."
+
+#: ProcessModel.cpp:1001
+msgid "<qt><i>Technical information: </i>This is from /proc/*/cmdline"
+msgstr "<qt><i>Teknisk informasjon: </i>Dette er fra /proc/*/cmdline"
+
+#: ProcessModel.cpp:1003
+msgid ""
+"<qt><i>Technical information: </i>This is the amount of memory used by the "
+"Xorg process for images for this process.  This is memory used in addition "
+"to Memory and Shared Memory.<br><i>Technical information: </i>This only "
+"counts the pixmap memory, and does not include resource memory used by "
+"fonts, cursors, glyphsets etc.  See the <code>xrestop</code> program for a "
+"more detailed breakdown."
+msgstr ""
+"<qt><i>Teknisk informasjon:</i>Dette er hvor mye minne Xorg-prosessen bruker "
+"til bilder for denne prosessen. Dette er brukt minne i tillegg til Minne og "
+"Delt minne.<br><i>Teknisk informasjon:</i> Dette teller bare opp pixmap-"
+"minnet og tar ikke med minneressurser brukt til skrifter, markører, tegnsett "
+"osv. Se <code>xrestop</code>-programmet for en mer detaljert oppdeling."
+
+#: ProcessModel.cpp:1005
+msgid ""
+"<qt><i>Technical information: </i>For each X11 window, the X11 property "
+"_NET_WM_PID is used to map the window to a PID.  If a process' windows are "
+"not shown, then that application incorrectly is not setting _NET_WM_PID."
+msgstr ""
+"<qt><i>Teknisk informasjon: </i> For hvert X11-vindu brukes X11-egenskapen "
+"_NET_WM_PID til å tilordne en PID til vinduet. Hvis vinduer i en prosess "
+"ikke vises, så gir ikke det programmet _NET_WM_PID en verdi, og det er feil."
+
+#: ProcessModel.cpp:1007
+msgid ""
+"<qt><i>Technical information: </i>This is the Process ID.  A multi-threaded "
+"application is treated a single process, with all threads sharing the same "
+"PID.  The CPU usage etc will be the total, accumulated, CPU usage of all the "
+"threads."
+msgstr ""
+"<qt><i>Teknisk informasjon </i> Dette er prosess-ID-en. En prosess med flere "
+"tråder behandles som en enkelt prosess, hvor alle tråder har samme PID. "
+"prosessorbruk osv. blir den totale akkumulerte bruken for alle trådene."
+
+#: ProcessModel.cpp:1010
+msgid ""
+"<qt>This column shows the IO statistics for each process. The tooltip "
+"provides the following information:<br><table><tr><td>Characters Read</"
+"td><td>The number of bytes which this task has caused to be read from "
+"storage. This is simply the sum of bytes which this process passed to read() "
+"and pread(). It includes things like tty IO and it is unaffected by whether "
+"or not actual physical disk IO was required (the read might have been "
+"satisfied from pagecache).</td></tr><tr><td>Characters Written</td><td>The "
+"number of bytes which this task has caused, or shall cause to be written to "
+"disk. Similar caveats apply here as with Characters Read.</td></"
+"tr><tr><td>Read Syscalls</td><td>The number of read I/O operations, i.e. "
+"syscalls like read() and pread().</td></tr><tr><td>Write Syscalls</"
+"td><td>The number of write I/O operations, i.e. syscalls like write() and "
+"pwrite().</td></tr><tr><td>Actual Bytes Read</td><td>The number of bytes "
+"which this process really did cause to be fetched from the storage layer. "
+"Done at the submit_bio() level, so it is accurate for block-backed "
+"filesystems. This may not give sensible values for NFS and CIFS filesystems."
+"</td></tr><tr><td>Actual Bytes Written</td><td>Attempt to count the number "
+"of bytes which this process caused to be sent to the storage layer. This is "
+"done at page-dirtying time.</td></table><p>The number in brackets shows the "
+"rate at which each value is changing, determined from taking the difference "
+"between the previous value and the new value, and dividing by the update "
+"interval.<p><i>Technical information: </i>This data is collected from /proc/"
+"*/io and is documented further in Documentation/accounting and Documentation/"
+"filesystems/proc.txt in the kernel source."
+msgstr ""
+"<qt>Denne kolonnen viser I/U-statistikk for hver prosess. Verktøytipset gir "
+"følgende informasjon:<br/><table><tr><td>Tegn lest</td><td>Antall byte som "
+"er lest fra lager fror denne oppgaven. Dette er ganske enkelt summen av "
+"antall byte som prosessen har sendt til read() og pread(). Det tar mmed "
+"slikt som tty I/U og påvirkes ikke om virkelig disktilgang var nødvendig "
+"(det kan hende bytene ble hentet fra minnemellomlager).</td></"
+"tr><tr><td>Tegn skrevet</td><td>Antall byte som denne oppgaven har sendt "
+"eller skal til å sende til diskskriving. Samme betraktninger gjelder her som "
+"for Tegn lest.</td></tr><tr><td>Lese-syskall</td><td>Antall leseoperasjoner, "
+"dvs. systemkall som read() og pread().</td></tr><tr><td>Skrive-syskall</"
+"td><td>Antall skrive-handlinger, dvs. systemkall som write() og pwrite().</"
+"td></tr><tr><td>Byte faktisk lest</td><td>Antall byte som denne prosessen "
+"faktisk gjorde at ble hentet frra lagringsnivået. Dette gjøres på  "
+"submit_bio()-nivået, så det er nøyaktig for filsystemer på blokkenheter. Det "
+"gir kanskje ikke fornuftige verdier ffor NFS- og CIFS-filsystemer.</td></"
+"tr><tr><td>Byte faktisk skrevet</td><td>Forøker å telle antall byte som "
+"denne prosessen får sendt til lagringsnivået. Dette gjøres når en side "
+"merkes berørt.</td></table><p>Tallet i firkantparentes viser hvor fort hver "
+"verdi endrer seg; dette bestemmes ved å finne forskjellen mellom gammel og "
+"ny verdi og dele på oppdateringsintervallet.<p><i>Teknisk informasjon: </"
+"i>Dissse dataene samles fra /proc/*/io og er dokumentert videre i "
+"Documentation/accounting og Documentation/filesystems/proc.txt i kildekoden "
+"for kjernen."
+
+#: ProcessModel.cpp:1097
+msgid "Login Name: %1<br/>"
+msgstr "Login-navn: %1<br/>"
+
+#: ProcessModel.cpp:1101
+msgid "This user is not recognized for some reason."
+msgstr "Av en eller annen grunn kjennes ikke denne brukeren."
+
+#: ProcessModel.cpp:1104
+msgid "<b>%1</b><br/>"
+msgstr "<b>%1</b><br/>"
+
+#: ProcessModel.cpp:1105
+msgid "Login Name: %1 (uid: %2)<br/>"
+msgstr "Login-navn: %1 (uid: %2)<br/>"
+
+#: ProcessModel.cpp:1107
+msgid "  Room Number: %1<br/>"
+msgstr "  Romnummer: %1<br/>"
+
+#: ProcessModel.cpp:1109
+msgid "  Work Phone: %1<br/>"
+msgstr " jobbtelefon: %1<br />"
+
+#: ProcessModel.cpp:1116
+msgid "Effective User: %1<br/>"
+msgstr "Effektiv bruker: %1<br />"
+
+#: ProcessModel.cpp:1118
+msgid "Setuid User: %1<br/>"
+msgstr "Setuid-bruker:%1<br />"
+
+#: ProcessModel.cpp:1120
+msgid "File System User: %1<br/>"
+msgstr "Filsystembruker: %1<br />"
+
+#: ProcessModel.cpp:1124
+msgid "Group: %1"
+msgstr "Gruppe: %1"
+
+#: ProcessModel.cpp:1129
+msgid "<br/>Effective Group: %1"
+msgstr "<br />Effektiv gruppe: %1"
+
+#: ProcessModel.cpp:1131
+msgid "<br/>Setuid Group: %1"
+msgstr "<br />Setuid gruppe: %1"
+
+#: ProcessModel.cpp:1133
+msgid "<br/>File System Group: %1"
+msgstr "<br />Filsystemgruppe: %1"
+
+#: ProcessModel.cpp:1140
+msgctxt "Short description of a process. PID, name, user"
+msgid "<numid>%1</numid>: %2, owned by user %3"
+msgstr "<numid>%1</numid>: %2, eid av bruker %3"
+
+#: ProcessModel.cpp:1147
+msgid "%1 (gid: <numid>%2</numid>)"
+msgstr "%1 (gid: <numid>%2</numid>)"
+
+#: ProcessModel.cpp:1168
+msgid "%1 (uid: %2)"
+msgstr "%1 (uid: %2)"
+
+#: ProcessModel.cpp:1206
+msgctxt "scheduler"
+msgid "Idle"
+msgstr "Tomgang"
+
+#: ProcessModel.cpp:1208
+msgctxt "scheduler"
+msgid "(Batch) %1"
+msgstr "(Satsvis) %1"
+
+#: ProcessModel.cpp:1210
+msgctxt "Round robin scheduler"
+msgid "RR %1"
+msgstr "RR %1"
+
+#: ProcessModel.cpp:1213
+msgctxt "Real Time scheduler"
+msgid "RT"
+msgstr "RT"
+
+#: ProcessModel.cpp:1215
+msgctxt "First in first out scheduler"
+msgid "FIFO %1"
+msgstr "FIFO %1"
+
+#: ProcessModel.cpp:1217
+msgctxt "scheduler"
+msgid "(IA) %1"
+msgstr "(IA) %1"
+
+#: ProcessModel.cpp:1274 ProcessModel.cpp:1282 ProcessModel.cpp:1300
+#: ProcessModel.cpp:1308
+msgid "%1/s"
+msgstr "%1/s"
+
+#: ProcessModel.cpp:1341
+msgctxt "tooltip. name,pid "
+msgid "This process is being debugged by %1 (<numid>%2</numid>)"
+msgstr "Denne prosessen blir feilsøkt av %1 (<numid>%2</numid>)"
+
+#: ProcessModel.cpp:1362
+msgid ""
+"<b>Init</b> is the parent of all other processes and cannot be killed.<br/>"
+msgstr ""
+"<b>Init</b> er morprosess til alle andre prosesser og kan ikke drepes.<br />"
+
+#: ProcessModel.cpp:1364
+msgid ""
+"<b>KThreadd</b> manages kernel threads. The children processes run in the "
+"kernel, controlling hard disk access, etc.<br/>"
+msgstr ""
+"<b>KThreadd</b> håndterer kjernetråder. Dens barneprosesser kjører i kjernen "
+"og styrer harddisk-tilgang osv.<br />"
+
+#: ProcessModel.cpp:1366
+msgctxt "name column tooltip. first item is the name"
+msgid "<b>%1</b><br />Process ID: <numid>%2</numid>"
+msgstr "<b>%1</b><br />Prosess-ID:<numid>%2</numid>"
+
+#: ProcessModel.cpp:1371
+msgctxt "name column tooltip. first item is the name"
+msgid ""
+"<b>%1</b><br />Process ID: <numid>%2</numid><br />Parent: %3<br />Parent's "
+"ID: <numid>%4</numid>"
+msgstr ""
+"<b>%1</b><br />Prosess-ID:<numid>%2</numid><br />Morprosess: %3<br /"
+">Morprosessens ID: <numid>%4</numid>"
+
+#: ProcessModel.cpp:1373
+msgctxt "name column tooltip. first item is the name"
+msgid ""
+"<b>%1</b><br />Process ID: <numid>%2</numid><br />Parent's ID: <numid>%3</"
+"numid>"
+msgstr ""
+"<b>%1</b><br />Prosess-ID:<numid>%2</numid><br />Morprosessens ID:"
+"<numid> %3</numid>"
+
+#: ProcessModel.cpp:1377 ProcessModel.cpp:1436
+msgid "<br/>Number of threads: %1"
+msgstr "<br />Antall tråder: %1"
+
+#: ProcessModel.cpp:1379
+msgid "<br/>Command: %1"
+msgstr "<br />Kommando: %1"
+
+#: ProcessModel.cpp:1382
+msgid "<br />Running on: %1"
+msgstr "<br />Kjører på: %1"
+
+#: ProcessModel.cpp:1390
+msgid "<qt>This process was run with the following command:<br />%1"
+msgstr "<qt>Denne prosessen ble kjørt med følgende kommando:<br />%1"
+
+#: ProcessModel.cpp:1392
+msgid "<br /><br />Running on: %1"
+msgstr "<br /><br />Kjører på: %1"
+
+#: ProcessModel.cpp:1407
+msgid "Nice level: %1 (%2)"
+msgstr "Snillverdi: %1 (%2)"
+
+#: ProcessModel.cpp:1411
+msgid "This is a real time process.<br>Scheduler priority: %1"
+msgstr "Dette er en sanntidsprosess.<br>Fordelerprioritet: %1"
+
+#: ProcessModel.cpp:1417
+msgid "<br/>Scheduler: %1"
+msgstr "<br />Fordeler: %1"
+
+#: ProcessModel.cpp:1425
+msgid ""
+"<qt><p style='white-space:pre'>Process status: %1 %2<br />User CPU usage: "
+"%3%<br />System CPU usage: %4%"
+msgstr ""
+"<qt><p style='white-space:pre'>Prosess-status: %1 %2<br />Brukeres "
+"prosessorforbruk: %3%<br /> Systemets prosessorforbruk: %4%"
+
+#: ProcessModel.cpp:1438
+msgid ""
+"<br />Number of children: %1<br />Total User CPU usage: %2%<br />Total "
+"System CPU usage: %3%<br />Total CPU usage: %4%"
+msgstr ""
+"<br />Antall barneprosesser: %1<br />Totalt brukeres prosessorforbruk: "
+"%2%<br />Totalt system-prosessorforbruk:%3%<br />Total prosessorforbruk:%4%"
+
+#: ProcessModel.cpp:1447
+msgid "<br /><br />CPU time spent running as user: %1 seconds"
+msgstr "<br /><br />Prossessortid brukt som bruker: %1 sekunder"
+
+#: ProcessModel.cpp:1451
+msgid "<br />CPU time spent running in kernel: %1 seconds"
+msgstr "<br />Prosessortid brukt i kjernen: %1 sekunder"
+
+#: ProcessModel.cpp:1455
+msgid "<br />Nice level: %1 (%2)"
+msgstr "<br />Snillverdi: %1 (%2)"
+
+#: ProcessModel.cpp:1469
+msgid "Memory usage: %1 out of %2  (%3 %)<br />"
+msgstr "Minnebruk: %1 av %2  (%3 %)<br />"
+
+#: ProcessModel.cpp:1471
+msgid "Memory usage: %1<br />"
+msgstr "Minnebruk: %1<br />"
+
+#: ProcessModel.cpp:1474
+msgid "RSS Memory usage: %1 out of %2  (%3 %)"
+msgstr "RSS-minnebruk: %1 av %2  (%3 %)"
+
+#: ProcessModel.cpp:1476
+msgid "RSS Memory usage: %1"
+msgstr "RSS-minnebruk: %1"
+
+#: ProcessModel.cpp:1482
+msgid ""
+"Your system does not seem to have this information available to be read."
+msgstr ""
+"Det ser ikke  ut til at systemet har denne informasjonen så vi kan lese den."
+
+#: ProcessModel.cpp:1486
+msgid "Shared library memory usage: %1 out of %2  (%3 %)"
+msgstr "Minnebruk for delt bibliotek: %1 av %2  (%3 %)"
+
+#: ProcessModel.cpp:1488
+msgid "Shared library memory usage: %1"
+msgstr "Minnebruk for delt bibliotek: %1"
+
+#: ProcessModel.cpp:1496
+msgid ""
+"Characters read: %1 (%2 KiB/s)<br>Characters written: %3 (%4 KiB/s)<br>Read "
+"syscalls: %5 (%6 s⁻¹)<br>Write syscalls: %7 (%8 s⁻¹)<br>Actual bytes read: "
+"%9 (%10 KiB/s)<br>Actual bytes written: %11 (%12 KiB/s)"
+msgstr ""
+"Tegn lest: %1 (%2 KiB/s)<br/>Tegn skirevet: %3 (%4 KiB/s)<br/>Lese-"
+"syskall: %5 (%6  s⁻¹)<br/> Skrive-syskall: %7 (%8 s⁻¹)<br/>Byte faktisk lest "
+"%9 (%10 KiB/s)<br/>Byte faktisk skrevet: %11 (%12 KiB/s)"
+
+#: ProcessModel.cpp:1786
+msgctxt "process heading"
+msgid "Name"
+msgstr "Navn"
+
+#: ProcessModel.cpp:1787
+msgctxt "process heading"
+msgid "Username"
+msgstr "Brukernavn"
+
+#: ProcessModel.cpp:1788
+msgctxt "process heading"
+msgid "PID"
+msgstr "PID"
+
+#: ProcessModel.cpp:1789
+msgctxt "process heading"
+msgid "TTY"
+msgstr "TTY"
+
+#: ProcessModel.cpp:1790
+msgctxt "process heading"
+msgid "Niceness"
+msgstr "Snillverdi"
+
+#: ProcessModel.cpp:1792
+#, no-c-format
+msgctxt "process heading"
+msgid "CPU %"
+msgstr "Prosessor %"
+
+#: ProcessModel.cpp:1793
+msgctxt "process heading"
+msgid "CPU Time"
+msgstr "Prosessortid"
+
+#: ProcessModel.cpp:1794
+msgctxt "process heading"
+msgid "IO Read"
+msgstr "IU Lese"
+
+#: ProcessModel.cpp:1795
+msgctxt "process heading"
+msgid "IO Write"
+msgstr "IU Skrive"
+
+#: ProcessModel.cpp:1796
+msgctxt "process heading"
+msgid "Virtual Size"
+msgstr "Virtuell størrelse"
+
+#: ProcessModel.cpp:1797
+msgctxt "process heading"
+msgid "Memory"
+msgstr "Minne"
+
+#: ProcessModel.cpp:1798
+msgctxt "process heading"
+msgid "Shared Mem"
+msgstr "Delt minne"
+
+#: ProcessModel.cpp:1799
+msgctxt "process heading"
+msgid "Command"
+msgstr "Kommando"
+
+#: ProcessModel.cpp:1801
+msgctxt "process heading"
+msgid "X11 Memory"
+msgstr "X11-minne"
+
+#: ProcessModel.cpp:1802
+msgctxt "process heading"
+msgid "Window Title"
+msgstr "Vindustittel"
+
+#: ProcessModel.cpp:1921
+msgid "%1%"
+msgstr "%1%"
+
+#: ReniceDlg.cpp:39
+msgid "Set Priority"
+msgstr "Oppgi prioritet"
+
+#: ReniceDlg.cpp:57
+msgctxt "Scheduler"
+msgid "Interactive"
+msgstr "Interaktiv"
 
 #: ksysguardprocesslist.cpp:155 ksysguardprocesslist.cpp:395
 msgid "Set Priority..."
@@ -193,7 +861,7 @@ msgid "Show Tooltips"
 msgstr "Vis verktøytips"
 
 #: ksysguardprocesslist.cpp:1012
-msgid "You do not have the permission to crenice the process."
+msgid "You do not have the permission to renice the process."
 msgstr ""
 
 #: ksysguardprocesslist.cpp:1015
@@ -266,673 +934,14 @@ msgstr[1] "Drep %1 prosesser med makt"
 msgid "Kill"
 msgstr "Drep"
 
-#: ProcessModel.cpp:62
-msgid "%1 K"
-msgstr "%1 K"
-
-#: ProcessModel.cpp:63
-msgid "%1 M"
-msgstr "%1 M"
-
-#: ProcessModel.cpp:64
-msgid "%1 G"
-msgstr "%1 G"
-
-#: ProcessModel.cpp:65
-msgid "%1 T"
-msgstr "%1 T"
-
-#: ProcessModel.cpp:66
-msgid "%1 P"
-msgstr "%1 P"
-
-#: ProcessModel.cpp:590
-msgid "- Process is doing some work."
-msgstr " – Prosessen arbeider."
-
-#: ProcessModel.cpp:592
-msgid "- Process is waiting for something to happen."
-msgstr " – Prosessen venter på at noe skal hende."
-
-#: ProcessModel.cpp:594
-msgid ""
-"- Process has been stopped. It will not respond to user input at the moment."
-msgstr ""
-"– Prosessen er stoppet. I øyeblikket kan den ikke svare på bruker-inndata."
-
-#: ProcessModel.cpp:596
-msgid ""
-"- Process has finished and is now dead, but the parent process has not "
-"cleaned up."
-msgstr ""
-" – Prosessen er ferdig og er nå død, men morprosessen har ikke ryddet opp."
-
-#: ProcessModel.cpp:945
-msgid "The process name."
-msgstr "Prosessnavnet."
-
-#: ProcessModel.cpp:947
-msgid "The user who owns this process."
-msgstr "Brukeren som eier denne prosessen."
-
-#: ProcessModel.cpp:949
-msgid "The controlling terminal on which this process is running."
-msgstr "Den styrende terminalen som denne prosessen kjører på.."
-
-#: ProcessModel.cpp:951
-msgid ""
-"The priority with which this process is being run. For the normal scheduler, "
-"this ranges from 19 (very nice, least priority) to -19 (top priority)."
-msgstr ""
-"Prioriteten som denne prosessen kjører med.  For den normale fordeleren går "
-"dette fra 19 (svært snill, laveste prioritet) til -19 (høyeste prioritet)."
-
-#: ProcessModel.cpp:954
-msgid "The current CPU usage of the process."
-msgstr "Nåværende prosessorbruk for prosessen."
-
-#: ProcessModel.cpp:959
-msgid ""
-"The current total CPU usage of the process, divided by the %1 processor core "
-"in the machine."
-msgid_plural ""
-"The current total CPU usage of the process, divided by the %1 processor "
-"cores in the machine."
-msgstr[0] "Prosessens prosessorforbruk, delt på %1 prosessorkjerne i maskinen."
-msgstr[1] ""
-"Prosessens prosessorforbruk, delt på %1 prosessorkjerner i maskinen."
-
-#: ProcessModel.cpp:961
-msgid "The current total CPU usage of the process."
-msgstr "Nåværende total prosessorbruk for prosessen."
-
-#: ProcessModel.cpp:963
-msgid ""
-"<qt>The total user and system time that this process has been running for, "
-"displayed as minutes:seconds."
-msgstr ""
-"<qt>Total bruker- og systemtid som denne prosessen har brukt, vist som "
-"minutter:sekunder."
-
-#: ProcessModel.cpp:965
-msgid ""
-"<qt>This is the amount of virtual memory space that the process is using, "
-"included shared libraries, graphics memory, files on disk, and so on. This "
-"number is almost meaningless.</qt>"
-msgstr ""
-"<qt>Dette er mengden virtuelt minne som prosessen bruker, medregnet delte "
-"biblioteker, grafikkminne, filer på disk osv. Dette tallet er nesten "
-"meningsløst.</qt>"
-
-#: ProcessModel.cpp:967
-msgid ""
-"<qt>This is the amount of real physical memory that this process is using by "
-"itself, and approximates the Private memory usage of the process.<br>It does "
-"not include any swapped out memory, nor the code size of its shared "
-"libraries.<br>This is often the most useful figure to judge the memory use "
-"of a program.  See What's This for more information.</qt>"
-msgstr ""
-"<qt>Dette er mengden virkelig fysisk minne som denne prosessen bruker selv, "
-"og er en tilnærming til prosessens private minnebruk.<br/>Det tar ikke med "
-"plass i veksleminnet, heller ikke kodestørrelsen for delte biblioteker. <br/"
-">Dette er ofte det nyttigste tallet en kan bruke til å anslå minnebruken til "
-"et program. Se Hva er dette for mer informasjon.</qt>"
-
-#: ProcessModel.cpp:969
-msgid ""
-"<qt>This is approximately the amount of real physical memory that this "
-"process's shared libraries are using.<br>This memory is shared among all "
-"processes that use this library.</qt>"
-msgstr ""
-"<qt>Dette er omtrent mengden virkelig fysisk minne som denne prosessens "
-"delte biblioteker bruker.<br/> Alle prosesser som bruker dette biblioteket "
-"deler dette minnet.</qt>"
-
-#: ProcessModel.cpp:971
-msgid "<qt>The command with which this process was launched.</qt>"
-msgstr "<qt>Kommandoen som startet denne prosessen.</qt>"
-
-#: ProcessModel.cpp:973
-msgid "<qt>The amount of pixmap memory that this process is using.</qt>"
-msgstr "<qt>Hvor mye pixmap-minne denne prosessen bruker.</qt>"
-
-#: ProcessModel.cpp:975
-msgid "<qt>The title of any windows that this process is showing.</qt>"
-msgstr "<qt>Tittelen på vinduer som denne prosessen viser, om noen.</qt>"
-
-#: ProcessModel.cpp:977
-msgid "The unique Process ID that identifies this process."
-msgstr "Den entydige prosess-IDen som identifiserer denne prosessen."
-
-#: ProcessModel.cpp:979
-msgid "The number of bytes read.  See What's This for more information."
-msgstr "Antall byte lest. Se Hva er dette for mere informasjon."
-
-#: ProcessModel.cpp:981
-msgid "The number of bytes written.  See What's This for more information."
-msgstr "Antall byte skrevet. Se Hva er dette for mere informasjon."
-
-#: ProcessModel.cpp:990
-msgid ""
-"<qt><i>Technical information: </i>The kernel process name is a maximum of 8 "
-"characters long, so the full command is examined.  If the first word in the "
-"full command line starts with the process name, the first word of the "
-"command line is shown, otherwise the process name is used."
-msgstr ""
-"<qt><i>Teknisk informasjon: </i> Kjerneprosessnavnet er høyst 8 tegn langt, "
-"så hele kommandoen  blir undersøkt. Hvis det første ordet på kommandolinja "
-"begynner med prosessnavnet, så vises det første ordet på kommandolinja, "
-"ellers brukes prosessnavnet."
-
-#: ProcessModel.cpp:992
-msgid ""
-"<qt>The user who owns this process.  If the effective, setuid etc user is "
-"different, the user who owns the process will be shown, followed by the "
-"effective user.  The ToolTip contains the full information.  "
-"<p><table><tr><td>Login Name/Group</td><td>The username of the Real User/"
-"Group who created this process</td></tr><tr><td>Effective User/Group</"
-"td><td>The process is running with privileges of the Effective User/Group.  "
-"This is shown if different from the real user.</td></tr><tr><td>Setuid User/"
-"Group</td><td>The saved username of the binary.  The process can escalate "
-"its Effective User/Group to the Setuid User/Group.</td></tr><tr><td>File "
-"System User/Group</td><td>Accesses to the filesystem are checked with the "
-"File System User/Group.  This is a Linux specific call. See setfsuid(2) for "
-"more information.</td></tr></table>"
-msgstr ""
-"<qt>Brukeren som eier denne prosessen. Hvis den effektive, setuid osv. "
-"brukeren er en annen, så vil den som eier prosessen bli vist, fulgt av den "
-"effektive brukeren. Verktøytipset inneholder fullstendig informasjon. "
-"<p><table><tr><td>Login-navn/gruppe</td><td>B rukernavn for den virkelige "
-"bruker/gruppe som startet denne prosessen/td></tr><tr><td>Effektiv bruker/"
-"gruppe</td><td>Prosessen kjører med privilegier til den effektive brukeren/"
-"gruppa . Dette blir vist hvis det ikke er det samme som virkelig bruker.</"
-"td></tr><tr><td>Setuid bruker/gruppe</td><td>Programmets lagrede brukernavn. "
-"Prosessen kan øke sin effektive bruker/gruppe til setuid bruker/gruppe.</"
-"td></tr><tr><td>Filsystem bruker/gruppe</td><td>Tilgang til filsystemet "
-"sjekkes med filsystem buker/gruppe. Dette er et systemkall spesifikt for "
-"Linux. Se setfsuid(2) for mer informasjon.</td></tr></table>"
-
-#: ProcessModel.cpp:1002
-msgid ""
-"<qt>This is the size of allocated address space - not memory, but address "
-"space. This value in practice means next to nothing. When a process requests "
-"a large memory block from the system but uses only a small part of it, the "
-"real usage will be low, VIRT will be high. <p><i>Technical information: </"
-"i>This is VmSize in proc/*/status and VIRT in top."
-msgstr ""
-"<qt>Dette er størrelsen av det tilordnede adresserommet – ikke minne, men "
-"adresserom. Denne verdien betyre nesten ingenting i praksis. Når en prosess "
-"ber om en stor minneblokk fra systemet men bruker bare en liten del av det, "
-"så blir reell bruk lav og VIR høy. <p><i>Teknisk informasjon: </i> Dette er "
-"VmSize i proc/*/status og VIRT i top."
-
-#: ProcessModel.cpp:1004
-msgid ""
-"<qt><i>Technical information: </i>This is an approximation of the Private "
-"memory usage, calculated as VmRSS - Shared, from /proc/*/statm.  This tends "
-"to underestimate the true Private memory usage of a process (by not "
-"including i/o backed memory pages), but is the best estimation that is fast "
-"to determine.  This is sometimes known as URSS (Unique Resident Set Size). "
-"For an individual process, see \"Detailed  Memory Information\" for a more "
-"accurate, but slower, calculation of the true Private memory usage."
-msgstr ""
-"<qt><i>Teknisk informasjon </i> Dette er en tilnærmet Privat minnebruk,  "
-"beregnet som VmRSS – Shared, fra /proc/*/statm. Dette har en tendens til å "
-"undervurdere den «virkelige» minnebruken tkil en prosess (ved å utelate "
-"minnesider for i/u-backing), men det er det beste estimatet som kan "
-"bestemmes fort. Dette kalles noen ganger URSS – Unique Resident Set Size. "
-"For en enkelt prosess finnes en nøyaktigere. men langsommere beregning av "
-"faktisk minnebruk i «Detaljert minneinformasjon»."
-
-#: ProcessModel.cpp:1006
-msgid "The CPU usage of a process and all of its threads."
-msgstr "Prosessor-bruk for en prosess og alle dens tråder."
-
-#: ProcessModel.cpp:1008
-msgid ""
-"<qt>The total system and user time that a process and all of its threads "
-"have been running on the CPU for. This can be greater than the wall clock "
-"time if the process has been across multiple CPU cores."
-msgstr ""
-"<qt>Total system- og brukertid som en prosess og alle dens tråder har brukt "
-"på prosessoren. Dette kan være mer enn klokketiden hvis prosessen har kjørt "
-"på flere prosessorkjerner."
-
-#: ProcessModel.cpp:1010
-msgid ""
-"<qt><i>Technical information: </i>This is an approximation of the Shared "
-"memory, called SHR in top.  It is the number of pages that are backed by a "
-"file (see kernel Documentation/filesystems/proc.txt).  For an individual "
-"process, see \"Detailed Memory Information\" for a more accurate, but "
-"slower, calculation of the true Shared memory usage."
-msgstr ""
-"<qt><i>Teknisk informasjon: </i> Dette er tilnærmet mengde delt minne, kalt "
-"SHR i top. Det er antall sider som har har en fil bak seg (se kernel "
-"Documentation/filesystems/proc.txt).  For en enkelt prosess finnes en "
-"nøyaktigere. men langsommere beregning av faktisk brukt delt minne i "
-"«Detaljert minneinformasjon»."
-
-#: ProcessModel.cpp:1012
-msgid "<qt><i>Technical information: </i>This is from /proc/*/cmdline"
-msgstr "<qt><i>Teknisk informasjon: </i>Dette er fra /proc/*/cmdline"
-
-#: ProcessModel.cpp:1014
-msgid ""
-"<qt><i>Technical information: </i>This is the amount of memory used by the "
-"Xorg process for images for this process.  This is memory used in addition "
-"to Memory and Shared Memory.<br><i>Technical information: </i>This only "
-"counts the pixmap memory, and does not include resource memory used by "
-"fonts, cursors, glyphsets etc.  See the <code>xrestop</code> program for a "
-"more detailed breakdown."
-msgstr ""
-"<qt><i>Teknisk informasjon:</i>Dette er hvor mye minne Xorg-prosessen bruker "
-"til bilder for denne prosessen. Dette er brukt minne i tillegg til Minne og "
-"Delt minne.<br><i>Teknisk informasjon:</i> Dette teller bare opp pixmap-"
-"minnet og tar ikke med minneressurser brukt til skrifter, markører, tegnsett "
-"osv. Se <code>xrestop</code>-programmet for en mer detaljert oppdeling."
-
-#: ProcessModel.cpp:1016
-msgid ""
-"<qt><i>Technical information: </i>For each X11 window, the X11 property "
-"_NET_WM_PID is used to map the window to a PID.  If a process' windows are "
-"not shown, then that application incorrectly is not setting _NET_WM_PID."
-msgstr ""
-"<qt><i>Teknisk informasjon: </i> For hvert X11-vindu brukes X11-egenskapen "
-"_NET_WM_PID til å tilordne en PID til vinduet. Hvis vinduer i en prosess "
-"ikke vises, så gir ikke det programmet _NET_WM_PID en verdi, og det er feil."
-
-#: ProcessModel.cpp:1018
-msgid ""
-"<qt><i>Technical information: </i>This is the Process ID.  A multi-threaded "
-"application is treated a single process, with all threads sharing the same "
-"PID.  The CPU usage etc will be the total, accumulated, CPU usage of all the "
-"threads."
-msgstr ""
-"<qt><i>Teknisk informasjon </i> Dette er prosess-ID-en. En prosess med flere "
-"tråder behandles som en enkelt prosess, hvor alle tråder har samme PID. "
-"prosessorbruk osv. blir den totale akkumulerte bruken for alle trådene."
-
-#: ProcessModel.cpp:1021
-msgid ""
-"<qt>This column shows the IO statistics for each process. The tooltip "
-"provides the following information:<br><table><tr><td>Characters Read</"
-"td><td>The number of bytes which this task has caused to be read from "
-"storage. This is simply the sum of bytes which this process passed to read() "
-"and pread(). It includes things like tty IO and it is unaffected by whether "
-"or not actual physical disk IO was required (the read might have been "
-"satisfied from pagecache).</td></tr><tr><td>Characters Written</td><td>The "
-"number of bytes which this task has caused, or shall cause to be written to "
-"disk. Similar caveats apply here as with Characters Read.</td></"
-"tr><tr><td>Read Syscalls</td><td>The number of read I/O operations, i.e. "
-"syscalls like read() and pread().</td></tr><tr><td>Write Syscalls</"
-"td><td>The number of write I/O operations, i.e. syscalls like write() and "
-"pwrite().</td></tr><tr><td>Actual Bytes Read</td><td>The number of bytes "
-"which this process really did cause to be fetched from the storage layer. "
-"Done at the submit_bio() level, so it is accurate for block-backed "
-"filesystems. This may not give sensible values for NFS and CIFS filesystems."
-"</td></tr><tr><td>Actual Bytes Written</td><td>Attempt to count the number "
-"of bytes which this process caused to be sent to the storage layer. This is "
-"done at page-dirtying time.</td></table><p>The number in brackets shows the "
-"rate at which each value is changing, determined from taking the difference "
-"between the previous value and the new value, and dividing by the update "
-"interval.<p><i>Technical information: </i>This data is collected from /proc/"
-"*/io and is documented further in Documentation/accounting and Documentation/"
-"filesystems/proc.txt in the kernel source."
-msgstr ""
-"<qt>Denne kolonnen viser I/U-statistikk for hver prosess. Verktøytipset gir "
-"følgende informasjon:<br/><table><tr><td>Tegn lest</td><td>Antall byte som "
-"er lest fra lager fror denne oppgaven. Dette er ganske enkelt summen av "
-"antall byte som prosessen har sendt til read() og pread(). Det tar mmed "
-"slikt som tty I/U og påvirkes ikke om virkelig disktilgang var nødvendig "
-"(det kan hende bytene ble hentet fra minnemellomlager).</td></"
-"tr><tr><td>Tegn skrevet</td><td>Antall byte som denne oppgaven har sendt "
-"eller skal til å sende til diskskriving. Samme betraktninger gjelder her som "
-"for Tegn lest.</td></tr><tr><td>Lese-syskall</td><td>Antall leseoperasjoner, "
-"dvs. systemkall som read() og pread().</td></tr><tr><td>Skrive-syskall</"
-"td><td>Antall skrive-handlinger, dvs. systemkall som write() og pwrite().</"
-"td></tr><tr><td>Byte faktisk lest</td><td>Antall byte som denne prosessen "
-"faktisk gjorde at ble hentet frra lagringsnivået. Dette gjøres på  "
-"submit_bio()-nivået, så det er nøyaktig for filsystemer på blokkenheter. Det "
-"gir kanskje ikke fornuftige verdier ffor NFS- og CIFS-filsystemer.</td></"
-"tr><tr><td>Byte faktisk skrevet</td><td>Forøker å telle antall byte som "
-"denne prosessen får sendt til lagringsnivået. Dette gjøres når en side "
-"merkes berørt.</td></table><p>Tallet i firkantparentes viser hvor fort hver "
-"verdi endrer seg; dette bestemmes ved å finne forskjellen mellom gammel og "
-"ny verdi og dele på oppdateringsintervallet.<p><i>Teknisk informasjon: </"
-"i>Dissse dataene samles fra /proc/*/io og er dokumentert videre i "
-"Documentation/accounting og Documentation/filesystems/proc.txt i kildekoden "
-"for kjernen."
-
-#: ProcessModel.cpp:1108
-msgid "Login Name: %1<br/>"
-msgstr "Login-navn: %1<br/>"
-
-#: ProcessModel.cpp:1112
-msgid "This user is not recognized for some reason."
-msgstr "Av en eller annen grunn kjennes ikke denne brukeren."
-
-#: ProcessModel.cpp:1115
-msgid "<b>%1</b><br/>"
-msgstr "<b>%1</b><br/>"
-
-#: ProcessModel.cpp:1116
-msgid "Login Name: %1 (uid: %2)<br/>"
-msgstr "Login-navn: %1 (uid: %2)<br/>"
-
-#: ProcessModel.cpp:1118
-msgid "  Room Number: %1<br/>"
-msgstr "  Romnummer: %1<br/>"
-
-#: ProcessModel.cpp:1120
-msgid "  Work Phone: %1<br/>"
-msgstr " jobbtelefon: %1<br />"
-
-#: ProcessModel.cpp:1127
-msgid "Effective User: %1<br/>"
-msgstr "Effektiv bruker: %1<br />"
-
-#: ProcessModel.cpp:1129
-msgid "Setuid User: %1<br/>"
-msgstr "Setuid-bruker:%1<br />"
-
-#: ProcessModel.cpp:1131
-msgid "File System User: %1<br/>"
-msgstr "Filsystembruker: %1<br />"
-
-#: ProcessModel.cpp:1135
-msgid "Group: %1"
-msgstr "Gruppe: %1"
-
-#: ProcessModel.cpp:1140
-msgid "<br/>Effective Group: %1"
-msgstr "<br />Effektiv gruppe: %1"
-
-#: ProcessModel.cpp:1142
-msgid "<br/>Setuid Group: %1"
-msgstr "<br />Setuid gruppe: %1"
-
-#: ProcessModel.cpp:1144
-msgid "<br/>File System Group: %1"
-msgstr "<br />Filsystemgruppe: %1"
-
-#: ProcessModel.cpp:1151
-msgctxt "Short description of a process. PID, name, user"
-msgid "<numid>%1</numid>: %2, owned by user %3"
-msgstr "<numid>%1</numid>: %2, eid av bruker %3"
-
-#: ProcessModel.cpp:1158
-msgid "%1 (gid: <numid>%2</numid>)"
-msgstr "%1 (gid: <numid>%2</numid>)"
-
-#: ProcessModel.cpp:1179
-msgid "%1 (uid: %2)"
-msgstr "%1 (uid: %2)"
-
-#: ProcessModel.cpp:1217
-msgctxt "scheduler"
-msgid "Idle"
-msgstr "Tomgang"
-
-#: ProcessModel.cpp:1219
-msgctxt "scheduler"
-msgid "(Batch) %1"
-msgstr "(Satsvis) %1"
-
-#: ProcessModel.cpp:1221
-msgctxt "Round robin scheduler"
-msgid "RR %1"
-msgstr "RR %1"
-
-#: ProcessModel.cpp:1224
-msgctxt "Real Time scheduler"
-msgid "RT"
-msgstr "RT"
-
-#: ProcessModel.cpp:1226
-msgctxt "First in first out scheduler"
-msgid "FIFO %1"
-msgstr "FIFO %1"
-
-#: ProcessModel.cpp:1228
-msgctxt "scheduler"
-msgid "(IA) %1"
-msgstr "(IA) %1"
-
-#: ProcessModel.cpp:1285 ProcessModel.cpp:1293 ProcessModel.cpp:1311
-#: ProcessModel.cpp:1319
-msgid "%1/s"
-msgstr "%1/s"
-
-#: ProcessModel.cpp:1352
-msgctxt "tooltip. name,pid "
-msgid "This process is being debugged by %1 (<numid>%2</numid>)"
-msgstr "Denne prosessen blir feilsøkt av %1 (<numid>%2</numid>)"
-
-#: ProcessModel.cpp:1373
-msgid ""
-"<b>Init</b> is the parent of all other processes and cannot be killed.<br/>"
-msgstr ""
-"<b>Init</b> er morprosess til alle andre prosesser og kan ikke drepes.<br />"
-
-#: ProcessModel.cpp:1375
-msgid ""
-"<b>KThreadd</b> manages kernel threads. The children processes run in the "
-"kernel, controlling hard disk access, etc.<br/>"
-msgstr ""
-"<b>KThreadd</b> håndterer kjernetråder. Dens barneprosesser kjører i kjernen "
-"og styrer harddisk-tilgang osv.<br />"
-
-#: ProcessModel.cpp:1377
-msgctxt "name column tooltip. first item is the name"
-msgid "<b>%1</b><br />Process ID: <numid>%2</numid>"
-msgstr "<b>%1</b><br />Prosess-ID:<numid>%2</numid>"
-
-#: ProcessModel.cpp:1382
-msgctxt "name column tooltip. first item is the name"
-msgid ""
-"<b>%1</b><br />Process ID: <numid>%2</numid><br />Parent: %3<br />Parent's "
-"ID: <numid>%4</numid>"
-msgstr ""
-"<b>%1</b><br />Prosess-ID:<numid>%2</numid><br />Morprosess: %3<br /"
-">Morprosessens ID: <numid>%4</numid>"
-
-#: ProcessModel.cpp:1384
-msgctxt "name column tooltip. first item is the name"
-msgid ""
-"<b>%1</b><br />Process ID: <numid>%2</numid><br />Parent's ID: <numid>%3</"
-"numid>"
-msgstr ""
-"<b>%1</b><br />Prosess-ID:<numid>%2</numid><br />Morprosessens ID:"
-"<numid> %3</numid>"
-
-#: ProcessModel.cpp:1388 ProcessModel.cpp:1447
-msgid "<br/>Number of threads: %1"
-msgstr "<br />Antall tråder: %1"
-
-#: ProcessModel.cpp:1390
-msgid "<br/>Command: %1"
-msgstr "<br />Kommando: %1"
-
-#: ProcessModel.cpp:1393
-msgid "<br />Running on: %1"
-msgstr "<br />Kjører på: %1"
-
-#: ProcessModel.cpp:1401
-msgid "<qt>This process was run with the following command:<br />%1"
-msgstr "<qt>Denne prosessen ble kjørt med følgende kommando:<br />%1"
-
-#: ProcessModel.cpp:1403
-msgid "<br /><br />Running on: %1"
-msgstr "<br /><br />Kjører på: %1"
-
-#: ProcessModel.cpp:1418
-msgid "Nice level: %1 (%2)"
-msgstr "Snillverdi: %1 (%2)"
-
-#: ProcessModel.cpp:1422
-msgid "This is a real time process.<br>Scheduler priority: %1"
-msgstr "Dette er en sanntidsprosess.<br>Fordelerprioritet: %1"
-
-#: ProcessModel.cpp:1428
-msgid "<br/>Scheduler: %1"
-msgstr "<br />Fordeler: %1"
-
-#: ProcessModel.cpp:1436
-msgid ""
-"<qt><p style='white-space:pre'>Process status: %1 %2<br />User CPU usage: "
-"%3%<br />System CPU usage: %4%"
-msgstr ""
-"<qt><p style='white-space:pre'>Prosess-status: %1 %2<br />Brukeres "
-"prosessorforbruk: %3%<br /> Systemets prosessorforbruk: %4%"
-
-#: ProcessModel.cpp:1449
-msgid ""
-"<br />Number of children: %1<br />Total User CPU usage: %2%<br />Total "
-"System CPU usage: %3%<br />Total CPU usage: %4%"
-msgstr ""
-"<br />Antall barneprosesser: %1<br />Totalt brukeres prosessorforbruk: "
-"%2%<br />Totalt system-prosessorforbruk:%3%<br />Total prosessorforbruk:%4%"
-
-#: ProcessModel.cpp:1458
-msgid "<br /><br />CPU time spent running as user: %1 seconds"
-msgstr "<br /><br />Prossessortid brukt som bruker: %1 sekunder"
-
-#: ProcessModel.cpp:1462
-msgid "<br />CPU time spent running in kernel: %1 seconds"
-msgstr "<br />Prosessortid brukt i kjernen: %1 sekunder"
-
-#: ProcessModel.cpp:1466
-msgid "<br />Nice level: %1 (%2)"
-msgstr "<br />Snillverdi: %1 (%2)"
-
-#: ProcessModel.cpp:1480
-msgid "Memory usage: %1 out of %2  (%3 %)<br />"
-msgstr "Minnebruk: %1 av %2  (%3 %)<br />"
-
-#: ProcessModel.cpp:1482
-msgid "Memory usage: %1<br />"
-msgstr "Minnebruk: %1<br />"
-
-#: ProcessModel.cpp:1485
-msgid "RSS Memory usage: %1 out of %2  (%3 %)"
-msgstr "RSS-minnebruk: %1 av %2  (%3 %)"
-
-#: ProcessModel.cpp:1487
-msgid "RSS Memory usage: %1"
-msgstr "RSS-minnebruk: %1"
-
-#: ProcessModel.cpp:1493
-msgid ""
-"Your system does not seem to have this information available to be read."
-msgstr ""
-"Det ser ikke  ut til at systemet har denne informasjonen så vi kan lese den."
-
-#: ProcessModel.cpp:1497
-msgid "Shared library memory usage: %1 out of %2  (%3 %)"
-msgstr "Minnebruk for delt bibliotek: %1 av %2  (%3 %)"
-
-#: ProcessModel.cpp:1499
-msgid "Shared library memory usage: %1"
-msgstr "Minnebruk for delt bibliotek: %1"
-
-#: ProcessModel.cpp:1507
-msgid ""
-"Characters read: %1 (%2 KiB/s)<br>Characters written: %3 (%4 KiB/s)<br>Read "
-"syscalls: %5 (%6 s⁻¹)<br>Write syscalls: %7 (%8 s⁻¹)<br>Actual bytes read: "
-"%9 (%10 KiB/s)<br>Actual bytes written: %11 (%12 KiB/s)"
-msgstr ""
-"Tegn lest: %1 (%2 KiB/s)<br/>Tegn skirevet: %3 (%4 KiB/s)<br/>Lese-"
-"syskall: %5 (%6  s⁻¹)<br/> Skrive-syskall: %7 (%8 s⁻¹)<br/>Byte faktisk lest "
-"%9 (%10 KiB/s)<br/>Byte faktisk skrevet: %11 (%12 KiB/s)"
-
-#: ProcessModel.cpp:1797
-msgctxt "process heading"
-msgid "Name"
-msgstr "Navn"
-
-#: ProcessModel.cpp:1798
-msgctxt "process heading"
-msgid "Username"
-msgstr "Brukernavn"
-
-#: ProcessModel.cpp:1799
-msgctxt "process heading"
-msgid "PID"
-msgstr "PID"
-
-#: ProcessModel.cpp:1800
-msgctxt "process heading"
-msgid "TTY"
-msgstr "TTY"
-
-#: ProcessModel.cpp:1801
-msgctxt "process heading"
-msgid "Niceness"
-msgstr "Snillverdi"
-
-#: ProcessModel.cpp:1803
-#, no-c-format
-msgctxt "process heading"
-msgid "CPU %"
-msgstr "Prosessor %"
-
-#: ProcessModel.cpp:1804
-msgctxt "process heading"
-msgid "CPU Time"
-msgstr "Prosessortid"
-
-#: ProcessModel.cpp:1805
-msgctxt "process heading"
-msgid "IO Read"
-msgstr "IU Lese"
-
-#: ProcessModel.cpp:1806
-msgctxt "process heading"
-msgid "IO Write"
-msgstr "IU Skrive"
-
-#: ProcessModel.cpp:1807
-msgctxt "process heading"
-msgid "Virtual Size"
-msgstr "Virtuell størrelse"
-
-#: ProcessModel.cpp:1808
-msgctxt "process heading"
-msgid "Memory"
-msgstr "Minne"
-
-#: ProcessModel.cpp:1809
-msgctxt "process heading"
-msgid "Shared Mem"
-msgstr "Delt minne"
-
-#: ProcessModel.cpp:1810
-msgctxt "process heading"
-msgid "Command"
-msgstr "Kommando"
-
-#: ProcessModel.cpp:1812
-msgctxt "process heading"
-msgid "X11 Memory"
-msgstr "X11-minne"
-
-#: ProcessModel.cpp:1813
-msgctxt "process heading"
-msgid "Window Title"
-msgstr "Vindustittel"
-
-#: ProcessModel.cpp:1932
-msgid "%1%"
-msgstr "%1%"
-
 #. i18n: file: ProcessWidgetUI.ui:39
 #. i18n: ectx: property (whatsThis), widget (QPushButton, btnKillProcess)
 #: rc.cpp:3
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -950,8 +959,8 @@ msgid ""
 msgstr ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'DejaVu Sans'; font-size:8pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -962,10 +971,10 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:"
 "italic;\">Teknisk informasjon: </span><br />SIGTERM-signalet sendes til  den "
 "gitte prosessen. Hvis det ikke er tilstrekkelige privilegier til dette  blir "
-"det sm standard bedt om et passord.<br />Ved å kjøre programmet <span style="
-"\" font-family:'Courier New,courier';\">polkit-kde-authorization</span> kan "
-"du gi noen (eller alle) brukere tillatelse til å drepe hvilken som helst "
-"prosess,  uten å kreve et passord. </p></body></html>"
+"det sm standard bedt om et passord.<br />Ved å kjøre programmet <span "
+"style=\" font-family:'Courier New,courier';\">polkit-kde-authorization</"
+"span> kan du gi noen (eller alle) brukere tillatelse til å drepe hvilken som "
+"helst prosess,  uten å kreve et passord. </p></body></html>"
 
 #. i18n: file: ProcessWidgetUI.ui:42
 #. i18n: ectx: property (text), widget (QPushButton, btnKillProcess)
@@ -1118,8 +1127,8 @@ msgstr "Prosessor-fordeler"
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioNormal)
 #: rc.cpp:68
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1127,8 +1136,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">The standard time-sharing "
 "scheduler for processes without special requirements.</p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1140,8 +1149,8 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioNormal)
 #: rc.cpp:74
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1161,8 +1170,8 @@ msgid ""
 "process is ready to run, but denied to run by the scheduler. This ensures "
 "fair progress among all Normal processes.</span></p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1193,8 +1202,8 @@ msgstr "Normal"
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioBatch)
 #: rc.cpp:84
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1203,8 +1212,8 @@ msgid ""
 "interactive processes.  Process is mildly disfavored in scheduling decisions."
 "</p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1217,8 +1226,8 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioBatch)
 #: rc.cpp:90
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1238,8 +1247,8 @@ msgid ""
 "policy without interactivity causing extra preemptions (between the "
 "workload's tasks).</span></p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1269,8 +1278,8 @@ msgstr "Batch"
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioRR)
 #: rc.cpp:100
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1279,8 +1288,8 @@ msgid ""
 "runnable.  Higher priority than Normal or Batch.  Has Timeslicing.</p></"
 "body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1293,8 +1302,8 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioRR)
 #: rc.cpp:106
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1304,13 +1313,13 @@ msgid ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "weight:600;\">Round Robin</span> is a simple enhancement of <span style=\" "
-"font-weight:600;\">FIFO</span>.  Everything described below for <span style="
-"\" font-weight:600;\">FIFO</span> also applies to <span style=\" font-"
+"font-weight:600;\">FIFO</span>.  Everything described below for <span "
+"style=\" font-weight:600;\">FIFO</span> also applies to <span style=\" font-"
 "weight:600;\">Round Robin</span>, except that each process is only allowed "
 "to run for a maximum time quantum.</p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1335,8 +1344,8 @@ msgstr "Rundebord"
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioFIFO)
 #: rc.cpp:116
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1345,8 +1354,8 @@ msgid ""
 "runnable.  Higher priority than Normal or Batch.  No timeslicing.</p></"
 "body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1359,8 +1368,8 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QRadioButton, radioFIFO)
 #: rc.cpp:122
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1374,8 +1383,8 @@ msgid ""
 "\">Normal</span> or <span style=\" font-weight:600;\">Batch</span> process.</"
 "p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+"css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal;\">\n"
@@ -1406,12 +1415,3 @@ msgstr "Lav prioritet"
 #: rc.cpp:135
 msgid "High Priority"
 msgstr "Høy prioritet"
-
-#: ReniceDlg.cpp:39
-msgid "Set Priority"
-msgstr "Oppgi prioritet"
-
-#: ReniceDlg.cpp:57
-msgctxt "Scheduler"
-msgid "Interactive"
-msgstr "Interaktiv"
